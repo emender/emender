@@ -1,5 +1,10 @@
 2014-08-13  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* src/common/getopt.lua:
+	Added getopt module.
+
+2014-08-13  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* src/selftest/luaVersionChecker.lua:
 	Added checker for Lua version.
 
