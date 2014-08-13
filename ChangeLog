@@ -1,0 +1,13 @@
+2014-08-13  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* src/selftest/luaVersionChecker.lua:
+	Added checker for Lua version.
+
+2014-08-13  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* ChangeLog: created.
+
+2014-08-13  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	Initial commit.
+
