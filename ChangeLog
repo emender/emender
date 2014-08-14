@@ -1,5 +1,10 @@
 2014-08-14  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* src/common/asserts.lua:
+	Added module with assertions (to be updated).
+
+2014-08-14  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* test_dry_run_cli_1.sh:
 	* test_dry_run_cli_2.sh:
 	* test_help_cli_1.sh:
