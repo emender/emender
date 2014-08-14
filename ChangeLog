@@ -1,5 +1,15 @@
 2014-08-14  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* test_dry_run_cli_1.sh:
+	* test_dry_run_cli_2.sh:
+	* test_help_cli_1.sh:
+	* test_help_cli_2.sh:
+	* test_version_cli_1.sh:
+	* test_version_cli_2.sh:
+	Basic checks for CLI options.
+
+2014-08-14  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* emend:
 	Added Emender entry point.
 
