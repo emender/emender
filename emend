@@ -1,0 +1,23 @@
+#!/usr/bin/env lua
+
+local luaVersionChecker = require "src/selftest/luaVersionChecker"
+local getopt = require "src/common/getopt"
+local core = require "src/core"
+
+function main(arg)
+    luaVersionChecker.checkLuaVersion()
+    options = getopt.getopt(arg, "")
+    if core.isHelpOptionUsed(options) then
+        core.showHelp()
+        os.exit(0)
+    elseif core.isVersionOptionUsed(options) then
+        core.showVersion()
+        os.exit(0)
+    elseif core.isDryRunOptionUsed(options) then
+        core.performDryRun();
+    end
+end
+
+main(arg)
+
+

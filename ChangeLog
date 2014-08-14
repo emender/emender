@@ -1,5 +1,10 @@
 2014-08-14  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* emend:
+	Added Emender entry point.
+
+2014-08-14  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* src/core.lua:
 	Added 1st version of core module.
 
