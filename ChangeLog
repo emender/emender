@@ -1,5 +1,10 @@
 2014-08-18  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* src/help.lua:
+	Added help module.
+
+2014-08-18  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* src/common/string.lua:
 	Added module for string handling.
 
