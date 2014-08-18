@@ -1,5 +1,15 @@
 2014-08-18  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* examples/dry_run_1.sh:
+	* examples/dry_run_2.sh:
+	* examples/show_help_1.sh:
+	* examples/show_help_2.sh:
+	* examples/show_version_cli_1.sh:
+	* examples/show_version_cli_2.sh:
+	Added license to this six scripts.
+
+2014-08-18  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* examples/dry_run_verbose_1.sh:
 	* examples/dry_run_verbose_2.sh:
 	* examples/show_license_1.sh:
