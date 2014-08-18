@@ -1,5 +1,10 @@
 2014-08-18  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* emend:
+	Better handling of modules.
+
+2014-08-18  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* src/core.lua:
 	Added support for getting basic test metadatas.
 

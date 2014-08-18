@@ -1,23 +1,66 @@
 #!/usr/bin/env lua
 
-local luaVersionChecker = require "src/selftest/luaVersionChecker"
-local getopt = require "src/common/getopt"
-local core = require "src/core"
+local luaVersionChecker = nil
+local getopt = nil
+local core = nil
+local help = nil
+local license = nil
+local version = nil
+
+function getScriptDirectory()
+    local scriptSrc = debug.getinfo(1).short_src
+    local scriptNameIndex = string.len(scriptSrc) - string.len("emend")
+    return string.sub(scriptSrc, 1, scriptNameIndex)
+end
+
+--
+-- Alter the content of "package.path" to contain the relative path
+-- to "emend" script, because we need to be able to load other modules
+-- properly even in case this script is called from a different directory.
+--
+-- For example the following commands should work:
+-- ./emend -h
+-- ../emend -h
+-- emend/emend -h
+-- /home/bender/emend/emend -h
+--
+function alterPackagePath()
+    local scriptDirectory = getScriptDirectory()
+    package.path = package.path .. ";" ..scriptDirectory.."?.lua"
+end
+
+--
+-- Load all relevant modules
+--
+function loadModules()
+    alterPackagePath()
+    luaVersionChecker = require("src/selftest/luaVersionChecker")
+    getopt = require("src/common/getopt")
+    core = require("src/core")
+    help = require("src/help")
+    license = require("src/license")
+    version = require("src/version")
+    require("src/common/string")
+end
 
 function main(arg)
+    loadModules()
     luaVersionChecker.checkLuaVersion()
-    options = getopt.getopt(arg, "")
+    local options = getopt.getopt(arg, "")
+    local verboseOperations = core.isVerboseOptionUsed(options)
+
     if core.isHelpOptionUsed(options) then
-        core.showHelp()
-        os.exit(0)
+        help.showHelp()
     elseif core.isVersionOptionUsed(options) then
-        core.showVersion()
-        os.exit(0)
+        version.showVersion()
+    elseif core.isLicenseOptionUsed(options) then
+        license.showLicense()
     elseif core.isDryRunOptionUsed(options) then
-        core.performDryRun();
+        core.performDryRun(verboseOperations)
+    else
+        print("No option given")
     end
 end
 
 main(arg)
-
 
