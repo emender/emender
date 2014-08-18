@@ -1,3 +1,13 @@
+2014-08-18  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* renamed test_dry_run_cli_1.sh -> examples/dry_run_1.sh:
+	* renamed test_dry_run_cli_2.sh -> examples/dry_run_2.sh:
+	* renamed test_help_cli_1.sh -> examples/show_help_1.sh:
+	* renamed test_help_cli_2.sh -> examples/show_help_2.sh:
+	* renamed test_version_cli_1.sh -> examples/show_version_cli_1.sh:
+	* renamed test_version_cli_2.sh -> examples/show_version_cli_2.sh:
+	Moved that files to the right directory.
+
 2014-08-14  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* tests/test1.lua:
