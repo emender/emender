@@ -1,5 +1,15 @@
 2014-08-18  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* src/common/string.lua:
+	Added module for string handling.
+
+2014-08-18  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* src/common/asserts.lua:
+	Added license.
+
+2014-08-18  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* tests/Test1.lua:
 	Renamed, added license.
 	* tests/Test2.lua:
