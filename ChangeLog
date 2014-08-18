@@ -1,5 +1,10 @@
 2014-08-18  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* src/version.lua:
+	Added version module.
+
+2014-08-18  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* src/license.lua:
 	Added license module.
 
