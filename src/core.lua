@@ -72,13 +72,13 @@ end
 function core.printTestInfo(scriptDirectory, filename, verboseOperation)
     local testName = core.updateTestName(filename)
     if testName then
-        if _ENV[testName] then
+        if _G[testName] then
             print("Warning: test " .. testName .. " might overwrite core functionality!")
             print("You'd need to rename it")
         end
         dofile(scriptDirectory .. "tests/" .. filename)
         -- if test is properly loaded
-        local test = _ENV[testName]
+        local test = _G[testName]
         if test then
             print("Test: " .. testName)
             if verboseOperation then

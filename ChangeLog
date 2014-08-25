@@ -1,5 +1,10 @@
 2014-08-25  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* src/core.lua:
+	Fixed to be compatible with Lua < 5.2.
+
+2014-08-25  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* README:
 	Added (empty ATM) README file.
 
