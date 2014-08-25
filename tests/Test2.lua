@@ -18,8 +18,9 @@ Test2 = {
     -- required field
     metadata = {
         description = "This is the second test",
-        author = "Pavel Tisnovsky",
-        email = "ptisnovs@redhat.com",
+        authors = "Pavel Tisnovsky",
+        emails = "ptisnovs@redhat.com",
+        changed = "2014-08-25",
         tags = {"XMLcheck", "BasicTest", "SmokeTest"},
     },
     -- any other values are arbitrary

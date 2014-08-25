@@ -18,8 +18,9 @@ Test1 = {
     -- required field
     metadata = {
         description = "Check that docunit core works correctly.",
-        author = "Pavel Tisnovsky",
-        email = "ptisnovs@redhat.com",
+        authors = "Pavel Tisnovsky",
+        emails = "ptisnovs@redhat.com",
+        changed = "2014-08-25",
         tags = {"XMLcheck", "BasicTest", "SmokeTest"},
     },
     -- any other values are arbitrary

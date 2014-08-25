@@ -1,5 +1,11 @@
 2014-08-25  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* tests/Test1.lua:
+	* tests/Test2.lua:
+	Added proper metadata.
+
+2014-08-25  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* src/core.lua:
 	Fixed to be compatible with Lua < 5.2.
 
