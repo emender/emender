@@ -1,0 +1,77 @@
+=head1 NAME
+
+emend - a command-line interface for Emender
+
+=head1 SYNOPSIS
+
+B<emend> [B<-clsv>] [I<file>...]
+
+B<emend> B<-h>|B<-V>
+
+=head1 DESCRIPTION
+
+The B<emend> utility runs tests stored in the local file system and prints
+a detailed report to standard output. By default, the utility looks for
+tests in the F<test> directory, but you can specify individual tests on the
+command line.
+
+=head1 OPTIONS
+
+=over
+
+=item B<-l>, B<--list>
+
+Prints a list of available tests to standard output and exits. By default,
+the B<emend> utility prints only the test name along with its brief
+description. To print additional information such as the author or last
+modification date, use this command-line option in conjunction with the
+B<-v> option.
+
+=item B<-s>, B<--summary>
+
+Suppresses detailed test results and prints only a brief summary with the
+ratio of passed to executed tests. To print a summary with the ratio of
+passed to executed test cases for each individual test, use this
+command-line option in conjunction with the B<-v> option.
+
+=item B<-c>, B<--color>
+
+Enables colored output.
+
+=item B<-v>, B<--verbose>
+
+Enables verbose mode.
+
+=item B<-h>, B<--help>
+
+Displays usage information and exits.
+
+=item B<-V>, B<--version>
+
+Displays version information and exits.
+
+=back
+
+=head1 EXIT STATUS
+
+If any of the tests fail, the B<emend> command returns a non-zero value.
+
+=head1 SEE ALSO
+
+B<emender>(3), B<lua>(1)
+
+=head1 BUGS
+
+To report a bug or submit a patch, please, file a new issue at
+L<https://github.com/emender/emender/issues>.
+
+=head1 COPYRIGHT
+
+Copyright (C) 2014 Pavel Tisnovsky, Jaromir Hradilek
+
+This program is free software; see the source for copying conditions. It is
+distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+PARTICULAR PURPOSE.
+
+=cut
