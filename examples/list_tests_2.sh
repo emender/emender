@@ -16,5 +16,5 @@
 # along with Emender.  If not, see <http://www.gnu.org/licenses/>.
 #
 
-../emend --dry-run
+../emend --list
 
