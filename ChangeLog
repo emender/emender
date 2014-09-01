@@ -1,5 +1,10 @@
 2014-09-01  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* src/selftest/toolsChecker.lua:
+	Added 1st version of tools checker.
+
+2014-09-01  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* src/common/logger.lua:
 	Added 1st version of logger module.
 
