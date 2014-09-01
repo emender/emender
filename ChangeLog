@@ -1,5 +1,10 @@
 2014-09-01  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* src/common/logger.lua:
+	Added 1st version of logger module.
+
+2014-09-01  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* tests/Test1.lua:
 	* tests/Test2.lua:
 	Updated to match new test calling conventions.
