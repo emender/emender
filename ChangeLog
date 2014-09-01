@@ -1,5 +1,11 @@
 2014-09-01  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* tests/Test1.lua:
+	* tests/Test2.lua:
+	Updated to match new test calling conventions.
+
+2014-09-01  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* examples/list_tests_1.sh:
 	* examples/list_tests_2.sh:
 	* examples/list_tests_verbose_1.sh:

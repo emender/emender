@@ -26,28 +26,37 @@ Test1 = {
     -- any other values are arbitrary
     val = 42}
 
-function Test1:testA()
-    print("Test1:testA()")
+function Test1.testA()
+    print("\tTest1.testA()")
 end
 
-function Test1:testB()
-    print("Test1:testB()")
+function Test1.testB()
+    print("\tTest1.testB()")
 end
 
-function Test1:xyzzy()
-    print(self.val)
+function Test1.xyzzy()
+    print("\t" .. Test1.val)
 end
 
-function Test1:foo()
+function Test1.foo()
     print("This method should not be called from the tool core!")
 end
 
-function Test1:bar()
+function Test1.bar()
     self:foo()
 end
 
-function Test1:testLocalValue()
-    print("Test1:testLocalValue()")
-    print(self.val)
+function Test1.testReadLocalValue()
+    print("\t" .. Test1.val)
+end
+
+function Test1.testCallOtherFunction()
+    Test1.xyzzy()
+end
+
+function Test1.testReadWriteLocalValue()
+    print("\tOld value: " .. Test1.val)
+    Test1.val = 6502
+    print("\tNew value: " .. Test1.val)
 end
 
