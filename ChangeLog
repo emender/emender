@@ -1,7 +1,13 @@
 2014-09-02  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* tests/TestAssertionIsFalse.lua:
+	* tests/TestAssertionIsTrue.lua:
+	Added tests that check is_true and is_false assertions.
+
+2014-09-02  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* src/common/asserts.lua:
-	Updated assertions is_true() and is_false.
+	Updated assertions is_true and is_false.
 
 2014-09-01  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
