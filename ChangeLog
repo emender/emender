@@ -1,5 +1,11 @@
 2014-09-02  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* tests/TestAssertionIsEqual.lua:
+	* tests/TestAssertionIsntEqual.lua:
+	Added tests that check is_equal and isnt_equal assertions.
+
+2014-09-02  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* src/common/asserts.lua:
 	Added new assertions: is_equal and isnt_equal.
 
