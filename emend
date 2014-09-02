@@ -1,11 +1,14 @@
 #!/usr/bin/env lua
 
 local luaVersionChecker = nil
+local toolsChecker = nil
 local getopt = nil
 local core = nil
 local help = nil
 local license = nil
 local version = nil
+local asserts = nil
+local logger = nil
 
 function getScriptDirectory()
     local scriptSrc = debug.getinfo(1).short_src
@@ -35,30 +38,39 @@ end
 function loadModules()
     alterPackagePath()
     luaVersionChecker = require("src/selftest/luaVersionChecker")
+    toolsChecker = require("src/selftest/toolsChecker")
     getopt = require("src/common/getopt")
     core = require("src/core")
     help = require("src/help")
     license = require("src/license")
     version = require("src/version")
+    asserts = require("src/common/asserts")
+    logger = require("src/common/logger")
     require("src/common/string")
 end
 
 function main(arg)
     loadModules()
     luaVersionChecker.checkLuaVersion()
+    core.asserts = asserts
+
+    toolsChecker.performCheck()
     local options = getopt.getopt(arg, "")
     local verboseOperations = core.isVerboseOptionUsed(options)
+    local colorOutput = core.isColorOutputOptionUsed(options)
+
+    logger.setColorOutput(colorOutput)
 
     if core.isHelpOptionUsed(options) then
-        help.showHelp()
+        help.showHelp(colorOutput)
     elseif core.isVersionOptionUsed(options) then
-        version.showVersion()
+        version.showVersion(colorOutput)
     elseif core.isLicenseOptionUsed(options) then
-        license.showLicense()
-    elseif core.isDryRunOptionUsed(options) then
-        core.performDryRun(verboseOperations)
+        license.showLicense(colorOutput)
+    elseif core.isTestListOptionUsed(options) then
+        core.performTestList(verboseOperations, colorOutput)
     else
-        print("No option given")
+        core.runTests(verboseOperations, colorOutput)
     end
 end
 
