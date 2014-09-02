@@ -68,3 +68,61 @@ function is_false(expression, explanation)
     end
 end
 
+
+
+--
+-- The is_equal() function allows you to test whether two values are equal.
+--
+-- It takes the following form:
+--     is_equal(current_value, expected_value, explanation)  
+--
+-- The function accepts three arguments:
+--     the current value, the expected value, and a brief explanation of the test.
+--
+function is_equal(current_value, expected_value, explanation)
+    if current_value == nil then
+        report_error_in_test_structure("Current value is not specified!")
+        return
+    end
+    if expected_value == nil then
+        report_error_in_test_structure("Expected value is not specified!")
+        return
+    end
+    if explanation == nil then
+        report_error_in_test_structure("Explanation is not specified!")
+        return
+    end
+    if current_value ~= expected_value then
+        report_error(explanation)
+    end
+end
+
+
+
+--
+-- The isnt_equal() function allows you to test whether two values are not equal.
+--
+-- It takes the following form:
+--     isnt_equal(current_value, expected_value, explanation)  
+--
+-- The function accepts three arguments:
+--     the current value, the expected value, and a brief explanation of the test.
+--
+function isnt_equal(current_value, expected_value, explanation)
+    if current_value == nil then
+        report_error_in_test_structure("Current value is not specified!")
+        return
+    end
+    if expected_value == nil then
+        report_error_in_test_structure("Expected value is not specified!")
+        return
+    end
+    if explanation == nil then
+        report_error_in_test_structure("Explanation is not specified!")
+        return
+    end
+    if current_value == expected_value then
+        report_error(explanation)
+    end
+end
+
