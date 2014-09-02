@@ -14,35 +14,57 @@
 -- along with Emender.  If not, see <http://www.gnu.org/licenses/>.
 --
 
+
+
+--
+-- Module containing all assertion functions.
+--
+
 function report_error(message)
-    print(message)
+    error("Assertion error: " .. message)
 end
 
 function report_error_in_test_structure(message)
-    error(message)
+    error("Test structure error: " .. message)
 end
 
-function is_true(expression, description)
+
+
+--
+-- The is_true() function allows you to test whether an expression evaluates to true.
+-- The function accepts two arguments: an expression and a brief explanation of the test.
+--
+function is_true(expression, explanation)
     if expression == nil then
         report_error_in_test_structure("Expression is not specified!")
+        return
     end
-    if description == nil then
-        report_error_in_test_structure("Description is not specified!")
+    if explanation == nil then
+        report_error_in_test_structure("Explanation is not specified!")
+        return
     end
     if not expression then
-        report_error(description)
+        report_error(explanation)
     end
 end
 
-function is_not_true(expression, description)
+
+
+--
+-- The is_false() function allows you to test whether an expression evaluates to false.
+-- The function accepts two arguments: an expression and a brief explanation of the test.
+--
+function is_false(expression, explanation)
     if expression == nil then
         report_error_in_test_structure("Expression is not specified!")
+        return
     end
-    if description == nil then
-        report_error_in_test_structure("Description is not specified!")
+    if explanation == nil then
+        report_error_in_test_structure("Explanation is not specified!")
+        return
     end
     if expression then
-        report_error(description)
+        report_error(explanation)
     end
 end
 
