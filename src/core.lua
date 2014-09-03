@@ -133,6 +133,31 @@ end
 
 
 
+function core.printTestMetadata(metadata)
+    local description = metadata["description"]
+    print("    Description: " .. description)
+    local authors = metadata["authors"]
+    print("    Authors: " .. authors)
+end
+
+function core.printListOfTestFunctionNames(testFunctions)
+    print("    Test functions:")
+    for i, testFunction in ipairs(testFunctions) do
+        print("        " .. testFunction)
+    end
+end
+
+function core.printTestRequiredTool(requiresAttribute)
+    print("    Required external tools:")
+    if not requiresAttribute then
+        print("        none")
+    else
+        for i, requires in ipairs(requiresAttribute) do
+            print("        " .. requires)
+        end
+    end
+end
+
 --
 --
 --
@@ -141,15 +166,13 @@ function core.printDetailedTestInfo(test, testName)
     if not metadata then
         print("Test " .. test .. " does not contain metadata, needs to be fixed!")
     end
-    local description = metadata["description"]
-    print("    Description: " .. description)
-    local authors = metadata["authors"]
-    print("    Authors: " .. authors)
+    core.printTestMetadata(metadata)
+
+    local requiresAttribute = test["requires"]
+    core.printTestRequiredTool(requiresAttribute)
+
     local testFunctions = core.getListOfTestFunctionNames(testName)
-    print("    Test functions: ")
-    for i, testFunction in ipairs(testFunctions) do
-        print("        " .. testFunction)
-    end
+    core.printListOfTestFunctionNames(testFunctions)
 end
 
 
