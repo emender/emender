@@ -1,5 +1,10 @@
 2014-09-03  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* src/common/asserts.lua:
+	Added tests that check does_match and doesnt_equal assertions.
+
+2014-09-03  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* src/core.lua:
 	Handling of "requires" attribute in test list.
 

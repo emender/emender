@@ -126,3 +126,61 @@ function isnt_equal(current_value, expected_value, explanation)
     end
 end
 
+
+
+--
+-- The does_match() function allows you to test whether a value matches a regular expression.
+--
+-- It takes the following form:
+--     does_match(current_value, pattern, explanation)  
+--
+-- This function accepts three arguments: a value, a regular expression,
+-- and a brief explanation of the test.
+--
+function does_match(current_value, pattern, explanation)
+    if current_value == nil then
+        report_error_in_test_structure("Current value is not specified!")
+        return
+    end
+    if pattern == nil then
+        report_error_in_test_structure("Pattern is not specified!")
+        return
+    end
+    if explanation == nil then
+        report_error_in_test_structure("Explanation is not specified!")
+        return
+    end
+    if string.match(current_value, pattern) == nil then
+        report_error(explanation)
+    end
+end
+
+
+
+--
+-- The doesnt_match() function allows you to test whether a value does not match a regular expression.
+--
+-- It takes the following form:
+--     doesnt_match(value, pattern, explanation)  
+--
+-- This function accepts three arguments: a value, a regular expression,
+-- and a brief explanation of the test.
+--
+function doesnt_match(current_value, pattern, explanation)
+    if current_value == nil then
+        report_error_in_test_structure("Current value is not specified!")
+        return
+    end
+    if pattern == nil then
+        report_error_in_test_structure("Pattern is not specified!")
+        return
+    end
+    if explanation == nil then
+        report_error_in_test_structure("Explanation is not specified!")
+        return
+    end
+    if string.match(current_value, pattern) ~= nil then
+        report_error(explanation)
+    end
+end
+
