@@ -6,7 +6,7 @@ emend - a command-line interface for Emender
 
 B<emend> [B<-clsv>] [I<file>...]
 
-B<emend> B<-h>|B<-V>
+B<emend> B<-h>|B<-V>|B<-L>
 
 =head1 DESCRIPTION
 
@@ -49,6 +49,10 @@ Displays usage information and exits.
 =item B<-V>, B<--version>
 
 Displays version information and exits.
+
+=item B<-L>, B<--license>
+
+Displays the license and exits.
 
 =back
 
