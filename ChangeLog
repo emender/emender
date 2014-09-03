@@ -1,5 +1,11 @@
 2014-09-03  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* tests/TestRequires1.lua:
+	* tests/TestRequires2.lua:
+	Added tests that check "requires" attrbiute.
+
+2014-09-03  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* src/help.lua:
 	Updated help file.
 
