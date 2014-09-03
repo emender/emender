@@ -18,33 +18,18 @@ local help = {
 }
 
 function help.showHelp()
-    print([[Emender version 0.0.1
+    print([[
+Usage: emend [-clsv] [FILE...]
+       emend [-c] -h|-V|-L
 
-    Usage: emend [-clsv] [file...]
-           emend [-c] -h|-V|-L
-
-    Options:
-        -l, --list
-         Prints a list of available tests to standard output and exits.
-
-        -s, --summary
-         Supress detailed test results and prints only a brief summary.
-
-        -c, --color
-         Enables colored output.
-
-        -v, --verbose
-         Enables verbose mode.
-
-        -h, --help
-         Displays usage information and exits.
-
-        -V, --version
-         Displays version information and exits.
-
-        -L, --license
-         Displays license text and exits.
-    ]])
+-l, --list          list available tests and exit
+-s, --summary       suppress detailed test results and print only summaries
+-c, --color         enable colored output
+-v, --verbose       enable verbose mode
+-h, --help          display this help and exit
+-V, --version       display version information and exit
+-L, --license       display the license and exit
+]])
 end
 
 return help
