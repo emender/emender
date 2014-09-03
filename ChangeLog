@@ -1,8 +1,13 @@
+2014-09-03  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* src/common/logger.lua:
+	Added licence text.
+
 2014-09-02  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* emend:
 	* src/core.lua:
-	Add ability to list and run all tests.
+	Added ability to list and run all tests.
 
 2014-09-02  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
