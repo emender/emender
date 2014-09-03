@@ -1,9 +1,6 @@
 Emender
 =======
 
-> **emend** verb [T] — to revise and correct a piece of writing before it
-> is printed
-
 In many respects, typical product documentation is similar to computer
 software: it has source code, follows a certain life cycle, and has high
 quality requirements. And just like modern software, it is often quite complex
@@ -12,6 +9,9 @@ typically written in a semantic markup language makes it possible to parse the
 documents and automate some tasks authors would otherwise have to perform
 manually.
 
+> **emend** verb [T] — to revise and correct a piece of writing before it
+> is printed
+>
 > **emender** noun [C] — one who emends
 
 **Emender** is a test automation framework tailored specifically for product
@@ -33,7 +33,7 @@ Example Usage
 
 To run all tests located in the **./test/** directory and print the results to
 standard output, type the following at a shell prompt:
-  
+
     $ emend
 
 To run only a selected test, specify it on the command line as follows:
