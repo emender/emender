@@ -30,7 +30,7 @@ emender - the core library for Emender
 
     -- Verify that the answer is a number:
     function SampleTest.testType()
-        is_of_type(SampleTest.answer, number, "The answer is a number")
+        is_type(SampleTest.answer, number, "The answer is a number")
     end
 
     -- Verify that the answer is 42:
@@ -180,9 +180,9 @@ it reports it as B<failed>.
 Replace I<expression> with a valid Lua expression and I<explanation> with a
 short description of the test.
 
-=item B<isnt_true>(I<expression>, I<explanation>)
+=item B<is_false>(I<expression>, I<explanation>)
 
-The C<isnt_true()> function tests whether a certain expression evaluates to
+The C<is_false()> function tests whether a certain expression evaluates to
 C<false>. If it does, the function reports the test as B<passed>, otherwise
 it reports it as B<failed>.
 
@@ -198,60 +198,60 @@ otherwise it reports it as B<failed>.
 Replace I<value> with the value to test, I<expected_value> with the
 expected value, and I<explanation> with a short description of the test.
 
-=item B<isnt_equal>(I<value>, I<expected_value>, I<explanation>)
+=item B<is_unequal>(I<value>, I<expected_value>, I<explanation>)
 
-The C<isnt_equal()> function compares two values and tests whether these
+The C<is_unequal()> function compares two values and tests whether these
 values are different. If they are, the function reports the test as
 B<passed>, otherwise it reports it as B<failed>.
 
 Replace I<value> with the value to test, I<expected_value> with the
 expected value, and I<explanation> with a short description of the test.
 
-=item B<does_match>(I<value>, I<pattern>, I<explanation>)
+=item B<is_like>(I<value>, I<pattern>, I<explanation>)
 
-The C<does_match()> function tests whether a certain value matches a Lua
+The C<is_like()> function tests whether a certain value matches a Lua
 pattern. If it does, the function reports the test as B<passed>, otherwise
 it reports it as B<failed>.
 
 Replace I<value> with the value to test, I<pattern> with the pattern, and
 I<explanation> with a short description of the test.
 
-=item B<doesnt_match>(I<value>, I<pattern>, I<explanation>)
+=item B<is_unlike>(I<value>, I<pattern>, I<explanation>)
 
-The C<doesnt_match()> function tests whether a certain value does not match
+The C<is_unlike()> function tests whether a certain value does not match
 a Lua pattern. If it does not, the function reports the test as B<passed>,
 otherwise it reports it as B<failed>.
 
 Replace I<value> with the value to test, I<pattern> with the pattern, and
 I<explanation> with a short description of the test.
 
-=item B<is_of_type>(I<value>, I<type>, I<explanation>)
+=item B<is_type>(I<value>, I<type>, I<explanation>)
 
-The C<is_of_type()> function tests whether a certain value is of a
+The C<is_type()> function tests whether a certain value is of a
 particular type. If it is, the function reports the test as B<passed>,
 otherwise it reports it as B<failed>.
 
 Replace I<value> with the value to test, I<type> with the expected data
 type, and I<explanation> with a short description of the test.
 
-=item B<isnt_of_type>(I<value>, I<type>, I<explanation>)
+=item B<is_not_type>(I<value>, I<type>, I<explanation>)
 
-The C<isnt_of_type()> function tests whether a certain value is not of a
+The C<is_not_type()> function tests whether a certain value is not of a
 particular type. If it is not, the function reports the test as B<passed>,
 otherwise it reports it as B<failed>.
 
 Replace I<value> with the value to test, I<type> with the expected data
 type, and I<explanation> with a short description of the test.
 
-=item B<passed>(I<explanation>)
+=item B<pass>(I<explanation>)
 
-The C<passed()> function reports the test as B<passed>.
+The C<pass()> function reports the test as B<passed>.
 
 Replace I<explanation> with a short description of the test.
 
-=item B<failed>(I<explanation>)
+=item B<fail>(I<explanation>)
 
-The C<failed()> function reports the test as B<failed>.
+The C<fail()> function reports the test as B<failed>.
 
 Replace I<explanation> with a short description of the test.
 
