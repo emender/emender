@@ -4,39 +4,39 @@ emender - the core library for Emender
 
 =head1 SYNOPSIS
 
-    -- Define a new test class:
-    SampleTest = {
-        -- Provide information about the test:
-        metadata = {
-            description = "A sample test.",
-            authors = "John Doe",
-            emails = "john@example.com",
-            changed = "2014-07-31",
-            tags = {"Sanity", "Basic"},
-        },
-        -- List external dependencies:
-        requires = {"curl", "xmllint"}
-    }
+  -- Define a new test class:
+  SampleTest = {
+      -- Provide information about the test:
+      metadata = {
+          description = "A sample test.",
+          authors = "John Doe",
+          emails = "john@example.com",
+          changed = "2014-07-31",
+          tags = {"Sanity", "Basic"},
+      },
+      -- List external dependencies:
+      requires = {"curl", "xmllint"}
+  }
 
-    -- Set up the test:
-    function SampleTest.setUp()
-        ExampleTest.answer = 42
-    end
+  -- Set up the test:
+  function SampleTest.setUp()
+      ExampleTest.answer = 42
+  end
 
-    -- Clean up after the test:
-    function SampleTest.tearDown()
-        -- Nothing to do here
-    end
+  -- Clean up after the test:
+  function SampleTest.tearDown()
+      -- Nothing to do here
+  end
 
-    -- Verify that the answer is a number:
-    function SampleTest.testType()
-        is_type(SampleTest.answer, number, "The answer is a number")
-    end
+  -- Verify that the answer is a number:
+  function SampleTest.testType()
+      is_type(SampleTest.answer, number, "The answer is a number")
+  end
 
-    -- Verify that the answer is 42:
-    function SampleTest.testEquality()
-        is_equal(SampleTest.answer, 42, "The answer is 42")
-    end
+  -- Verify that the answer is 42:
+  function SampleTest.testEquality()
+      is_equal(SampleTest.answer, 42, "The answer is 42")
+  end
 
 =head1 DESCRIPTION
 
@@ -160,7 +160,7 @@ method named C<testPackageNames> as part of the C<CheckPackages> test,
 type:
 
   function CheckPackages.testPackageNames()
-    -- test method implementation
+      -- test method implementation
   end
 
 =back
@@ -178,7 +178,10 @@ C<true>. If it does, the function reports the test as B<passed>, otherwise
 it reports it as B<failed>.
 
 Replace I<expression> with a valid Lua expression and I<explanation> with a
-short description of the test.
+short description of the test. For example, to test if a variable named
+C<result> is greater than 42, type:
+
+  is_true(result > 42, "The value is greater than 42")
 
 =item B<is_false>(I<expression>, I<explanation>)
 
@@ -187,7 +190,10 @@ C<false>. If it does, the function reports the test as B<passed>, otherwise
 it reports it as B<failed>.
 
 Replace I<expression> with a valid Lua expression and I<explanation> with a
-short description of the test.
+short description of the test. For example, to test if a variable named
+C<result> is less than or equal to 42, type:
+
+  is_false(result > 42, "Tha value is not greater than 42")
 
 =item B<is_equal>(I<value>, I<expected_value>, I<explanation>)
 
@@ -197,6 +203,9 @@ otherwise it reports it as B<failed>.
 
 Replace I<value> with the value to test, I<expected_value> with the
 expected value, and I<explanation> with a short description of the test.
+For example, to test if a variable named C<result> is equal to 42, type:
+
+  is_equal(result, 42, "The value is equal to 42")
 
 =item B<is_unequal>(I<value>, I<expected_value>, I<explanation>)
 
@@ -206,6 +215,10 @@ B<passed>, otherwise it reports it as B<failed>.
 
 Replace I<value> with the value to test, I<expected_value> with the
 expected value, and I<explanation> with a short description of the test.
+For example, to test if a variable named C<result> is of a value other than
+42, type:
+
+  is_unequal(result, 42, "The value is not equal to 42")
 
 =item B<is_like>(I<value>, I<pattern>, I<explanation>)
 
@@ -214,25 +227,34 @@ pattern. If it does, the function reports the test as B<passed>, otherwise
 it reports it as B<failed>.
 
 Replace I<value> with the value to test, I<pattern> with the pattern, and
-I<explanation> with a short description of the test.
+I<explanation> with a short description of the test. For example, to test
+if a variable named C<result> contains a date, type:
+
+  is_like(result, "^%d%d%d%d-%d%d-%d%d$", "The value represents a date.")
 
 =item B<is_unlike>(I<value>, I<pattern>, I<explanation>)
 
-The C<is_unlike()> function tests whether a certain value does not match
-a Lua pattern. If it does not, the function reports the test as B<passed>,
+The C<is_unlike()> function tests whether a certain value does not match a
+Lua pattern. If it does not, the function reports the test as B<passed>,
 otherwise it reports it as B<failed>.
 
 Replace I<value> with the value to test, I<pattern> with the pattern, and
-I<explanation> with a short description of the test.
+I<explanation> with a short description of the test. For example, to test
+if a variable named C<result> does not contain letters, type:
+
+  is_unlike(result, "%a", "The value does not contain letters.")
 
 =item B<is_type>(I<value>, I<type>, I<explanation>)
 
-The C<is_type()> function tests whether a certain value is of a
-particular type. If it is, the function reports the test as B<passed>,
-otherwise it reports it as B<failed>.
+The C<is_type()> function tests whether a certain value is of a particular
+type. If it is, the function reports the test as B<passed>, otherwise it
+reports it as B<failed>.
 
 Replace I<value> with the value to test, I<type> with the expected data
-type, and I<explanation> with a short description of the test.
+type, and I<explanation> with a short description of the test. For example,
+to test if a variable named C<result> contains a number, type:
+
+  is_type(result, "number", "The value is a number")
 
 =item B<is_not_type>(I<value>, I<type>, I<explanation>)
 
@@ -241,19 +263,27 @@ particular type. If it is not, the function reports the test as B<passed>,
 otherwise it reports it as B<failed>.
 
 Replace I<value> with the value to test, I<type> with the expected data
-type, and I<explanation> with a short description of the test.
+type, and I<explanation> with a short description of the test. For example,
+to test if a variable named C<result> contains a value that is not a
+number, type:
+
+  is_not_type(result, "number", "The value is not a number")
 
 =item B<pass>(I<explanation>)
 
 The C<pass()> function reports the test as B<passed>.
 
-Replace I<explanation> with a short description of the test.
+Replace I<explanation> with a short description of the test. For example:
+
+  pass("The value is on the list of allowed values.")
 
 =item B<fail>(I<explanation>)
 
 The C<fail()> function reports the test as B<failed>.
 
-Replace I<explanation> with a short description of the test.
+Replace I<explanation> with a short description of the test. For example:
+
+  fail("The value is not on the list of allowed values.")
 
 =back
 
