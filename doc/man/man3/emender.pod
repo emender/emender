@@ -193,7 +193,7 @@ Replace I<expression> with a valid Lua expression and I<explanation> with a
 short description of the test. For example, to test if a variable named
 C<result> is less than or equal to 42, type:
 
-  is_false(result > 42, "Tha value is not greater than 42")
+  is_false(result > 42, "The value is not greater than 42")
 
 =item B<is_equal>(I<value>, I<expected_value>, I<explanation>)
 
