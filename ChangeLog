@@ -1,7 +1,12 @@
 2014-09-04  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* tests/TestAssertionIsLike.lua:
+	Added new test to check is_like assertion.
+
+2014-09-04  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* tests/TestAssertionIsntEqual.lua -> tests/TestAssertionIsUnequal.lua:
-	Renamed to match official documentation.
+	Renamed and updated to match official documentation.
 
 2014-09-04  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
