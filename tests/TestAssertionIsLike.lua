@@ -57,7 +57,7 @@ function TestAssertionIsLike.testNegative1()
     is_like()
 end
 
-function TestAssertionIsLike.testNegative1()
+function TestAssertionIsLike.testNegative2()
     is_like(nil)
 end
 
