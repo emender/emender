@@ -1,3 +1,9 @@
+2014-09-04  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* src/common/asserts.lua:
+	Renamed assertion functions to match official documentation.
+	Updated comments too.
+
 2014-09-03  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* src/common/asserts.lua:

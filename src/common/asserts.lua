@@ -31,8 +31,13 @@ end
 
 
 --
--- The is_true() function allows you to test whether an expression evaluates to true.
--- The function accepts two arguments: an expression and a brief explanation of the test.
+-- The is_true() function tests whether a certain expression evaluates to true.
+-- If it does, the function reports the test as passed, otherwise it reports it as failed.
+--
+-- Replace expression with a valid Lua expression and explanation with a short description
+-- of the test. For example, to test if a variable named result is greater than 42, type:
+--
+--  is_true(result > 42, "The value is greater than 42")
 --
 function is_true(expression, explanation)
     if expression == nil then
@@ -51,8 +56,13 @@ end
 
 
 --
--- The is_false() function allows you to test whether an expression evaluates to false.
--- The function accepts two arguments: an expression and a brief explanation of the test.
+-- The is_false() function tests whether a certain expression evaluates to false.
+-- If it does, the function reports the test as passed, otherwise it reports it as failed.
+--
+-- Replace expression with a valid Lua expression and explanation with a short description
+-- of the test. For example, to test if a variable named result is less than or equal to 42, type:
+--
+--  is_false(result > 42, "The value is not greater than 42")
 --
 function is_false(expression, explanation)
     if expression == nil then
@@ -71,13 +81,14 @@ end
 
 
 --
--- The is_equal() function allows you to test whether two values are equal.
+-- The is_equal() function compares two values and tests whether these values are equal.
+-- If they are, the function reports the test as passed, otherwise it reports it as failed.
 --
--- It takes the following form:
---     is_equal(current_value, expected_value, explanation)  
+-- Replace value with the value to test, expected_value with the expected value,
+-- and explanation with a short description of the test. For example, to test if a variable
+-- named result is equal to 42, type:
 --
--- The function accepts three arguments:
---     the current value, the expected value, and a brief explanation of the test.
+--  is_equal(result, 42, "The value is equal to 42")
 --
 function is_equal(current_value, expected_value, explanation)
     if current_value == nil then
@@ -100,15 +111,16 @@ end
 
 
 --
--- The isnt_equal() function allows you to test whether two values are not equal.
+-- The is_unequal() function compares two values and tests whether these values are different.
+-- If they are, the function reports the test as passed, otherwise it reports it as failed.
 --
--- It takes the following form:
---     isnt_equal(current_value, expected_value, explanation)  
+-- Replace value with the value to test, expected_value with the expected value, and explanation
+-- with a short description of the test. For example, to test if a variable named result is of
+-- a value other than 42, type:
 --
--- The function accepts three arguments:
---     the current value, the expected value, and a brief explanation of the test.
+--  is_unequal(result, 42, "The value is not equal to 42")
 --
-function isnt_equal(current_value, expected_value, explanation)
+function is_unequal(current_value, expected_value, explanation)
     if current_value == nil then
         report_error_in_test_structure("Current value is not specified!")
         return
@@ -129,15 +141,16 @@ end
 
 
 --
--- The does_match() function allows you to test whether a value matches a regular expression.
+-- The is_like() function tests whether a certain value matches a Lua pattern.
+-- If it does, the function reports the test as passed, otherwise it reports it as failed.
 --
--- It takes the following form:
---     does_match(current_value, pattern, explanation)  
+-- Replace value with the value to test, pattern with the pattern, and explanation with
+-- a short description of the test. For example, to test if a variable named result
+-- contains a date, type:
 --
--- This function accepts three arguments: a value, a regular expression,
--- and a brief explanation of the test.
+--  is_like(result, "^%d%d%d%d-%d%d-%d%d$", "The value represents a date.")
 --
-function does_match(current_value, pattern, explanation)
+function is_like(current_value, pattern, explanation)
     if current_value == nil then
         report_error_in_test_structure("Current value is not specified!")
         return
@@ -158,15 +171,16 @@ end
 
 
 --
--- The doesnt_match() function allows you to test whether a value does not match a regular expression.
+-- The is_unlike() function tests whether a certain value does not match a Lua pattern.
+-- If it does not, the function reports the test as passed, otherwise it reports it as failed.
 --
--- It takes the following form:
---     doesnt_match(value, pattern, explanation)  
+-- Replace value with the value to test, pattern with the pattern, and explanation with
+-- a short description of the test. For example, to test if a variable named result does
+-- not contain letters, type:
 --
--- This function accepts three arguments: a value, a regular expression,
--- and a brief explanation of the test.
+--  is_unlike(result, "%a", "The value does not contain letters.")
 --
-function doesnt_match(current_value, pattern, explanation)
+function is_unlike(current_value, pattern, explanation)
     if current_value == nil then
         report_error_in_test_structure("Current value is not specified!")
         return
