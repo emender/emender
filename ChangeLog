@@ -1,5 +1,10 @@
 2014-09-05  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* src/common/table.lua:
+	Table utils module.
+
+2014-09-05  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* emend:
 	* src/core.lua:
 	Added support for running selected test(s) only.
