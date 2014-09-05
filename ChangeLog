@@ -1,7 +1,12 @@
 2014-09-05  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* tests/TestAssertionIsNotType.lua:
+	Added new test to check is_not_type assertion.
+
+2014-09-05  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* tests/TestAssertionIsType.lua:
-	Added new tests to check is_type assertion.
+	Added new test to check is_type assertion.
 
 2014-09-04  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
