@@ -198,3 +198,67 @@ function is_unlike(current_value, pattern, explanation)
     end
 end
 
+
+
+--
+-- The is_type() function tests whether a certain value is of a particular type.
+-- If it is, the function reports the test as passed, otherwise it reports it as failed.
+--
+-- Replace value with the value to test, type with the expected data type, and explanation
+-- with a short description of the test. For example, to test if a variable named result
+-- contains a number, type:
+--
+--  is_type(result, "number", "The value is a number")
+--
+function is_type(value, expected_type, explanation)
+    -- commented out because it's possible to have a value set to nil
+    --if value == nil then
+    --    report_error_in_test_structure("Value is not specified!")
+    --    return
+    --end
+    if expected_type == nil then
+        report_error_in_test_structure("Type is not specified!")
+        return
+    end
+    if explanation == nil then
+        report_error_in_test_structure("Explanation is not specified!")
+        return
+    end
+    if type(value) ~= expected_type then
+        report_error(explanation)
+    end
+end
+
+
+
+--
+-- The is_not_type() function tests whether a certain value is not of a particular type.
+-- If it is not, the function reports the test as passed, otherwise it reports it as failed.
+--
+-- Replace value with the value to test, type with the expected data type, and explanation
+-- with a short description of the test. For example, to test if a variable named result
+-- contains a value that is not a number, type:
+--
+--  is_not_type(result, "number", "The value is not a number")
+--
+function is_not_type(value, expected_type, explanation)
+    -- commented out because it's possible to have a value set to nil
+    --if value == nil then
+    --    report_error_in_test_structure("Value is not specified!")
+    --    return
+    --end
+    if expected_type == nil then
+        report_error_in_test_structure("Type is not specified!")
+        return
+    end
+    if explanation == nil then
+        report_error_in_test_structure("Explanation is not specified!")
+        return
+    end
+    if type(value) == expected_type then
+        report_error(explanation)
+    end
+end
+
+
+

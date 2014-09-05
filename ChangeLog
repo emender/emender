@@ -1,5 +1,10 @@
 2014-09-05  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* src/common/asserts.lua:
+	Added support for two new assertions: is_type() and is_not_type().
+
+2014-09-05  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* tests/TestAssertionIsNotType.lua:
 	Added new test to check is_not_type assertion.
 
