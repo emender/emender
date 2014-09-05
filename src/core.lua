@@ -99,9 +99,17 @@ end
 --
 function core.updateTestName(filename)
     if filename:endsWith(".lua") then
+        -- try to find the last / in the path + filename
+        -- (might be empty)
+        local lastSlash = filename:find("/[^/]*$")
         local extensionIndex = filename:find(".lua", 1, true)
+        -- get only text name (w/o path and w/o extension)
         if extensionIndex then
-            return filename:substring(1, extensionIndex - 1)
+            if lastSlash then
+                return filename:substring(lastSlash+1, extensionIndex - 1)
+            else
+                return filename:substring(1, extensionIndex - 1)
+            end
         else
             return nil
         end
@@ -217,7 +225,15 @@ function core.runTest(scriptDirectory, filename, verboseOperation)
     local testName = core.updateTestName(filename)
     if testName then
         core.checkTestNameShadowing(testName)
-        dofile(scriptDirectory .. "tests/" .. filename)
+        if scriptDirectory then
+            --print(scriptDirectory .. "test/" .. filename)
+            --print(testName)
+            dofile(scriptDirectory .. "tests/" .. filename)
+        else
+            --print(filename)
+            --print(testName)
+            dofile(filename)
+        end
         local testFunctionNames = core.getListOfTestFunctionNames(testName)
         if testFunctionNames then
             print("Running test: " .. testName)
@@ -288,19 +304,32 @@ end
 --
 --
 --
-function core.runTests(verboseOperation)
+function core.runTests(verboseOperation, colorOutput, testsToRun)
     core.okTests = 0
     core.failedTests = 0
 
-    local scriptDirectory = getScriptDirectory()
-    local testList = getTestList()
-    for i, filename in ipairs(testList) do
-        local result = core.runTest(scriptDirectory, filename, verboseOperation)
-        if result ~= nil then
-            if result then
-                core.okTests = core.okTests + 1
-            else
-                core.failedTests = core.failedTests + 1
+    if testsToRun and #testsToRun > 0 then
+        for i, filename in ipairs(testsToRun) do
+            local result = core.runTest(nil, filename, verboseOperation)
+            if result ~= nil then
+                if result then
+                    core.okTests = core.okTests + 1
+                else
+                    core.failedTests = core.failedTests + 1
+                end
+            end
+        end
+    else
+        local scriptDirectory = getScriptDirectory()
+        local testList = getTestList()
+        for i, filename in ipairs(testList) do
+            local result = core.runTest(scriptDirectory, filename, verboseOperation)
+            if result ~= nil then
+                if result then
+                    core.okTests = core.okTests + 1
+                else
+                    core.failedTests = core.failedTests + 1
+                end
             end
         end
     end

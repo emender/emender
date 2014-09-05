@@ -49,15 +49,28 @@ function loadModules()
     require("src/common/string")
 end
 
+function getTestsToRun(arg)
+    local testList = {}
+
+    for i, argument in ipairs(arg) do
+        if argument:sub(1,1) ~= "-" then
+            table.insert(testList, argument)
+        end
+    end
+
+    return testList
+end
+
 function main(arg)
     loadModules()
     luaVersionChecker.checkLuaVersion()
     core.asserts = asserts
 
-    toolsChecker.performCheck()
+    --toolsChecker.performCheck()
     local options = getopt.getopt(arg, "")
     local verboseOperations = core.isVerboseOptionUsed(options)
     local colorOutput = core.isColorOutputOptionUsed(options)
+    local testsToRun = getTestsToRun(arg)
 
     logger.setColorOutput(colorOutput)
 
@@ -70,7 +83,7 @@ function main(arg)
     elseif core.isTestListOptionUsed(options) then
         core.performTestList(verboseOperations, colorOutput)
     else
-        core.runTests(verboseOperations, colorOutput)
+        core.runTests(verboseOperations, colorOutput, testsToRun)
     end
 end
 
