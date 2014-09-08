@@ -1,5 +1,10 @@
 2014-09-08  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* tests/TestSetUp.lua:
+	Added test that checks the "special" setUp() function.
+
+2014-09-08  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* src/core.lua:
 	Added support for setup and teardown functions/methods in tests.
 
