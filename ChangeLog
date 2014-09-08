@@ -1,5 +1,12 @@
 2014-09-08  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* tests/TestSetUpOnly.lua:
+	* tests/TestSetUpTearDown.lua:
+	* tests/TestTearDownOnly.lua:
+	More tests for setUp() and tearDown() functions.
+
+2014-09-08  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* src/core.lua:
 	Fixed silly typo.
 
