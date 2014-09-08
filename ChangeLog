@@ -1,3 +1,8 @@
+2014-09-08  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* src/core.lua:
+	Added support for setup and teardown functions/methods in tests.
+
 2014-09-05  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* src/common/table.lua:

@@ -140,6 +140,27 @@ function core.getListOfTestFunctionNames(testName)
 end
 
 
+function core.getTestFunction(testName, functionName)
+    local test = _G[testName]
+    if test then
+        local setupFunction = test[functionName]
+        if setupFunction and type(setupFunction) == "function" then
+            return setupFunction
+        else
+            return nil
+        end
+    else
+        return nil
+    end
+end
+
+function core.getSetupFunction(testName)
+    return core.getTestFunction(testName, "setUp")
+end
+
+function core.getTearDownFunction(testName)
+    return core.getTestFunction(testName, "tearDown")
+end
 
 function core.printTestMetadata(metadata)
     local description = metadata["description"]
@@ -234,9 +255,20 @@ function core.runTest(scriptDirectory, filename, verboseOperation)
             --print(testName)
             dofile(filename)
         end
+        local setupFunction = core.getSetupFunction(testName)
+        local tearDownFunction = core.getTearDownFunction(testName)
         local testFunctionNames = core.getListOfTestFunctionNames(testName)
-        if testFunctionNames then
+        if testFunctionNames or setupFunction or tearDownFunction then
             print("Running test: " .. testName)
+            if setupFunction then
+                print("    SetUp:")
+                local status, message = pcall(setupFunction)
+                if status then
+                    print("        OK")
+                else
+                    print("       " .. message)
+                end
+            end
             local okCnt = 0
             local errorCnt = 0
             for i,testFunctionName in ipairs(testFunctionNames) do
@@ -249,6 +281,15 @@ function core.runTest(scriptDirectory, filename, verboseOperation)
                 else
                     print("       " .. message)
                     errorCnt = errorCnt + 1
+                end
+            end
+            if tearDownFunction then
+                print("    TearDown:")
+                local status, message = pcall(tearDownFunctionthen)
+                if status then
+                    print("        OK")
+                else
+                    print("       " .. message)
                 end
             end
             print("Summary: " .. (okCnt+errorCnt) .. " tests, " .. okCnt .. " passes, " .. errorCnt .. " failures")
