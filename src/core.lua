@@ -285,7 +285,7 @@ function core.runTest(scriptDirectory, filename, verboseOperation)
             end
             if tearDownFunction then
                 print("    TearDown:")
-                local status, message = pcall(tearDownFunctionthen)
+                local status, message = pcall(tearDownFunction)
                 if status then
                     print("        OK")
                 else
