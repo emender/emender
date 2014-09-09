@@ -1,5 +1,12 @@
 2014-09-09  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* examples/run_test1_and_test2.sh:
+	* examples/run_test1_and_test2_.sh:
+	* examples/run_test1_only.sh:
+	Added three new example scripts.
+
+2014-09-09  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* examples/run_setup_teardown_tests.sh:
 	* examples/run_setup_tests.sh:
 	* examples/run_teardown_tests.sh:
