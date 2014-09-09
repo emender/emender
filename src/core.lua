@@ -225,7 +225,7 @@ function core.printTestInfo(scriptDirectory, filename, verboseOperation)
     local testName = core.updateTestName(filename)
     if testName then
         core.checkTestNameShadowing(testName)
-        dofile(scriptDirectory .. "tests/" .. filename)
+        dofile(scriptDirectory .. "test/" .. filename)
         -- if test is properly loaded
         local test = _G[testName]
         if test then
@@ -249,7 +249,7 @@ function core.runTest(scriptDirectory, filename, verboseOperation)
         if scriptDirectory then
             --print(scriptDirectory .. "test/" .. filename)
             --print(testName)
-            dofile(scriptDirectory .. "tests/" .. filename)
+            dofile(scriptDirectory .. "test/" .. filename)
         else
             --print(filename)
             --print(testName)

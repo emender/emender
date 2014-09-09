@@ -1,5 +1,27 @@
 2014-09-09  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* src/core.lua:
+	* tests/Test1.lua -> test/Test1.lua:
+	* tests/Test2.lua -> test/Test2.lua:
+	* tests/TestAssertionIsEqual.lua -> test/TestAssertionIsEqual.lua:
+	* tests/TestAssertionIsFalse.lua -> test/TestAssertionIsFalse.lua:
+	* tests/TestAssertionIsLike.lua -> test/TestAssertionIsLike.lua:
+	* tests/TestAssertionIsNotType.lua -> test/TestAssertionIsNotType.lua:
+	* tests/TestAssertionIsTrue.lua -> test/TestAssertionIsTrue.lua:
+	* tests/TestAssertionIsType.lua -> test/TestAssertionIsType.lua:
+	* tests/TestAssertionIsUnequal.lua -> test/TestAssertionIsUnequal.lua:
+	* tests/TestAssertionIsUnlike.lua -> test/TestAssertionIsUnlike.lua:
+	* tests/TestRequires1.lua -> test/TestRequires1.lua:
+	* tests/TestRequires2.lua -> test/TestRequires2.lua:
+	* tests/TestSetUp.lua -> test/TestSetUp.lua:
+	* tests/TestSetUpOnly.lua -> test/TestSetUpOnly.lua:
+	* tests/TestSetUpTearDown.lua -> test/TestSetUpTearDown.lua:
+	* tests/TestTearDown.lua -> test/TestTearDown.lua:
+	* tests/TestTearDownOnly.lua -> test/TestTearDownOnly.lua:
+	Tests needs to be stored in the "test" directory.
+
+2014-09-09  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* examples/run_test1_and_test2.sh:
 	* examples/run_test1_and_test2_.sh:
 	* examples/run_test1_only.sh:
