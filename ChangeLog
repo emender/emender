@@ -1,5 +1,10 @@
 2014-09-09  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* test/TestSetUpTearDownOnly.lua:
+	Added new test.
+
+2014-09-09  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* src/core.lua:
 	* tests/Test1.lua -> test/Test1.lua:
 	* tests/Test2.lua -> test/Test2.lua:
