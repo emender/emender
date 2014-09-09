@@ -1,5 +1,13 @@
 2014-09-09  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* examples/run_setup_teardown_tests.sh:
+	* examples/run_setup_tests.sh:
+	* examples/run_teardown_tests.sh:
+	Added example scripts that start all tests that check setUp and
+	tearDown functions.
+
+2014-09-09  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* examples/run_all_assertion_tests.sh:
 	* examples/run_all_tests.sh:
 	* examples/run_assertion_tests.sh:
