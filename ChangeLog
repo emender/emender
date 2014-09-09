@@ -1,3 +1,11 @@
+2014-09-09  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* examples/run_all_assertion_tests.sh:
+	* examples/run_all_tests.sh:
+	* examples/run_assertion_tests.sh:
+	* examples/run_assertion_type_tests.sh:
+	Added example scripts that start all tests that check assertions.
+
 2014-09-08  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* tests/TestSetUpOnly.lua:
