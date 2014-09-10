@@ -262,3 +262,26 @@ end
 
 
 
+--
+-- The pass() function reports the test as passed.
+--
+-- Replace explanation with a short description of the test. For example:
+--
+--  pass("The value is on the list of allowed values.")
+--
+function pass(explanation)
+    is_true(true, explanation)
+end
+
+
+
+--
+-- The fail() function reports the test as failed.
+--
+-- Replace explanation with a short description of the test. For example:
+--
+--  fail("The value is not on the list of allowed values.")
+-- 
+function fail(explanation)
+    is_true(false, explanation)
+end
