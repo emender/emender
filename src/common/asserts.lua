@@ -270,7 +270,14 @@ end
 --  pass("The value is on the list of allowed values.")
 --
 function pass(explanation)
-    is_true(true, explanation)
+    if explanation == nil then
+        report_error_in_test_structure("Explanation is a required argument.")
+        return
+    end
+    if type(explanation) ~= "string" then
+        report_error_in_test_structure("Explanation must be a string.")
+        return
+    end
 end
 
 
@@ -283,5 +290,13 @@ end
 --  fail("The value is not on the list of allowed values.")
 -- 
 function fail(explanation)
-    is_true(false, explanation)
+    if explanation == nil then
+        report_error_in_test_structure("Explanation is a required argument.")
+        return
+    end
+    if type(explanation) ~= "string" then
+        report_error_in_test_structure("Explanation must be a string.")
+        return
+    end
+    report_error(explanation)
 end
