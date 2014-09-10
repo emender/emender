@@ -26,26 +26,26 @@ TestAssertionPass = {
 }
 
 -- Verify that the function accepts a string as its argument:
-function TestAssertionPass.testString()
+function TestAssertionPass.testPositive1()
     pass("The pass() function expects a string as its argument.")
 end
 
 -- Verify that the function requires at least one argument:
-function TestAssertionPass.testEmpty()
+function TestAssertionPass.testNegative1()
     pass()
 end
 
 -- Verify that the function does not accept nil as an argument:
-function TestAssertionPass.testNil()
+function TestAssertionPass.testNegative2()
     pass(nil)
 end
 
 -- Verify that the function does not accept a boolean as an argument:
-function TestAssertionPass.testBoolean()
+function TestAssertionPass.testNegative3()
     pass(true)
 end
 
 -- Verify that the function does not accept a number as an argument:
-function TestAssertionPass.testNumber()
+function TestAssertionPass.testNegative4()
     pass(42)
 end
