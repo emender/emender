@@ -1,5 +1,11 @@
 2014-09-10  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* src/core.lua:
+	Fixed a bug - emend should look for the test in
+	"test" directory by default.
+
+2014-09-10  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* emend:
 	* src/common/getopt.lua:
 	* src/core.lua:

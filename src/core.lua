@@ -258,7 +258,7 @@ end
 --
 function getTestList()
     local scriptDirectory = getScriptDirectory()
-    local command = 'ls -1 '.. scriptDirectory .. "tests/*.lua"..'| xargs -n 1 basename'
+    local command = 'ls -1 '.. scriptDirectory .. "test/*.lua"..'| xargs -n 1 basename'
     local process = io.popen(command)
     local testList = process:lines()
     return putTestListIntoTable(testList)
