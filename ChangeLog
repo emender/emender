@@ -1,5 +1,10 @@
 2014-09-10  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* src/common/tracer.lua:
+	Added 1st version of tracer (debugging tool).
+
+2014-09-10  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* src/common/table.lua:
 	Added function to make shallow copy of given table.
 
