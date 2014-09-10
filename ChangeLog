@@ -1,6 +1,13 @@
 2014-09-10  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* emend:
+	* src/common/getopt.lua:
+	* src/core.lua:
+	Moved all CLI-related options to getopt module.
+
+2014-09-10  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* emend:
 	* src/help.lua:
 	Basic support for turn on tracing.
 

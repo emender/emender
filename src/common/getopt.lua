@@ -1,7 +1,9 @@
 local getopt = {
 }
 
--- taken from http://lua-users.org/wiki/AlternativeGetOpt
+
+
+-- This function is taken from http://lua-users.org/wiki/AlternativeGetOpt
 -- getopt, POSIX style command line argument parser
 -- param arg contains the command line arguments in a standard table.
 -- param options is a string with the letters that expect string values.
@@ -14,8 +16,7 @@ local getopt = {
 --   -cdaone ==> opts["c"]==true opts["d"]==true opts["a"]=="one"
 -- note POSIX demands the parser ends at the first non option
 --      this behavior isn't implemented.
-
-function getopt.getopt( arg, options )
+function getopt.getopt(arg, options)
   local tab = {}
   for k, v in ipairs(arg) do
     if string.sub( v, 1, 2) == "--" then
@@ -45,6 +46,80 @@ function getopt.getopt( arg, options )
   end
   return tab
 end
+
+
+
+--
+-- Check if -v or --verbose option is used on the CLI.
+--
+function getopt.isVerboseOptionUsed(options)
+    return options["v"] or options["verbose"]
+end
+
+
+
+--
+-- Check if -l or --list option is used on the CLI.
+--
+function getopt.isTestListOptionUsed(options)
+    return options["l"] or options["list"]
+end
+
+
+
+--
+-- Check if -h or --help option is used on the CLI.
+--
+function getopt.isHelpOptionUsed(options)
+    return options["h"] or options["help"]
+end
+
+
+
+--
+-- Check if -V or --version is used on the CLI.
+--
+function getopt.isVersionOptionUsed(options)
+    return options["V"] or options["version"]
+end
+
+
+
+--
+-- Check if -L or --license is used on the CLI.
+--
+function getopt.isLicenseOptionUsed(options)
+    return options["L"] or options["license"]
+end
+
+
+
+--
+-- Check if -c or --color is used on the CLI.
+--
+function getopt.isColorOutputOptionUsed(options)
+    return options["c"] or options["color"]
+end
+
+
+
+--
+-- Check if -s or --summary is used on the CLI.
+--
+function getopt.isSummaryOptionUsed(options)
+    return options["s"] or options["summary"]
+end
+
+
+
+--
+-- Check if -T or --trace is used on the CLI.
+--
+function getopt.isTraceOptionUsed(options)
+    return options["T"] or options["trace"]
+end
+
+
 
 return getopt
 

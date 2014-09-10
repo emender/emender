@@ -71,8 +71,9 @@ function main(arg)
 
     --toolsChecker.performCheck()
     local options = getopt.getopt(arg, "")
-    local verboseOperations = core.isVerboseOptionUsed(options)
-    local colorOutput = core.isColorOutputOptionUsed(options)
+    local verboseOperations = getopt.isVerboseOptionUsed(options)
+    local colorOutput = getopt.isColorOutputOptionUsed(options)
+    local tracingOn = getopt.isTraceOptionUsed(options)
     local testsToRun = getTestsToRun(arg)
 
     if tracingOn then
@@ -81,13 +82,13 @@ function main(arg)
 
     logger.setColorOutput(colorOutput)
 
-    if core.isHelpOptionUsed(options) then
+    if getopt.isHelpOptionUsed(options) then
         help.showHelp(colorOutput)
-    elseif core.isVersionOptionUsed(options) then
+    elseif getopt.isVersionOptionUsed(options) then
         version.showVersion(colorOutput)
-    elseif core.isLicenseOptionUsed(options) then
+    elseif getopt.isLicenseOptionUsed(options) then
         license.showLicense(colorOutput)
-    elseif core.isTestListOptionUsed(options) then
+    elseif getopt.isTestListOptionUsed(options) then
         core.performTestList(verboseOperations, colorOutput)
     else
         core.runTests(verboseOperations, colorOutput, testsToRun)
