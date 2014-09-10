@@ -1,5 +1,11 @@
 2014-09-10  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* emend:
+	* src/help.lua:
+	Basic support for turn on tracing.
+
+2014-09-10  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* src/common/tracer.lua:
 	Added 1st version of tracer (debugging tool).
 

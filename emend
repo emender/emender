@@ -9,6 +9,7 @@ local license = nil
 local version = nil
 local asserts = nil
 local logger = nil
+local tracer = nil
 
 function getScriptDirectory()
     local scriptSrc = debug.getinfo(1).short_src
@@ -46,7 +47,9 @@ function loadModules()
     version = require("src/version")
     asserts = require("src/common/asserts")
     logger = require("src/common/logger")
+    tracer = require("src/common/tracer")
     require("src/common/string")
+    require("src/common/table")
 end
 
 function getTestsToRun(arg)
@@ -71,6 +74,10 @@ function main(arg)
     local verboseOperations = core.isVerboseOptionUsed(options)
     local colorOutput = core.isColorOutputOptionUsed(options)
     local testsToRun = getTestsToRun(arg)
+
+    if tracingOn then
+        tracer.enable()
+    end
 
     logger.setColorOutput(colorOutput)
 

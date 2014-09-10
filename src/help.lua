@@ -29,6 +29,7 @@ Usage: emend [-clsv] [FILE...]
 -h, --help          display this help and exit
 -V, --version       display version information and exit
 -L, --license       display the license and exit
+-T, --trace         turn on tracing
 ]])
 end
 
