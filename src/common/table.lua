@@ -43,3 +43,18 @@ function table.hashTableSize(table)
     return i
 end
 
+
+
+--
+-- Make a shallow copy of the given table.
+-- (the behaviour is very different from the simple
+-- assignment local table1=table2)
+--
+function table.copy(src)
+    local dest = {}
+    for key, value in pairs(src) do
+        dest[key] = value
+    end
+    return dest
+end
+
