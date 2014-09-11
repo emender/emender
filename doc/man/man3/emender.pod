@@ -285,6 +285,16 @@ Replace I<explanation> with a short description of the test. For example:
 
   fail("The value is not on the list of allowed values.")
 
+=item B<warn>(I<message>)
+
+The C<warn()> function logs a message without reporting the test as
+B<passed> or B<failed>. You can use it to report less important issues or
+issues you are not sure about.
+
+Replace I<message> with a short message. For example:
+
+  warn("The sentence does not start with a capital letter.")
+
 =back
 
 =head1 SEE ALSO
