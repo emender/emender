@@ -1,0 +1,43 @@
+# emender.rnc - an XML schema for Emender (compact syntax)
+# Copyright (C) 2014 Jaromir Hradilek
+#
+# This file is part of Emender.
+#
+# Emender is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; version 3 of the License.
+#
+# Emender is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with Emender.  If not, see <http://www.gnu.org/licenses/>.
+
+default namespace = "http://emender.blackened.cz/1.0/"
+
+start = em.report
+em.report = element report { em.suite+ }
+em.suite =
+  element suite {
+    em.name.attribute, em.result.attribute, em.info, em.case+
+  }
+em.info =
+  element info {
+    em.description & em.authors & em.emails & em.modified & em.tags
+  }
+em.description = element description { text }
+em.authors = element authors { text }
+em.emails = element emails { text }
+em.modified = element modified { xsd:date }
+em.tags = element tags { em.tag* }
+em.tag = element tag { text }
+em.case =
+  element case { em.name.attribute, em.result.attribute, em.test+ }
+em.test = element test { em.result.attribute, text* }
+em.name.attribute = attribute name { text }
+em.result.attribute =
+  attribute result {
+    xsd:string "pass" | xsd:string "fail" | xsd:string "info"
+  }
