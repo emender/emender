@@ -1,3 +1,10 @@
+2014-09-11  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* examples/bad_option_1.sh:
+	* examples/bad_option_2.sh:
+	* examples/bad_option_3.sh:
+	Added examples with a bad/unknown CLI option(s).
+
 2014-09-10  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* src/core.lua:
