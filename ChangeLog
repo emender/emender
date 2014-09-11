@@ -1,5 +1,12 @@
 2014-09-11  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* examples/list_tests_1_trace.sh:
+	* examples/run_assertion_tests_trace.sh:
+	* examples/run_setup_teardown_tests_trace.sh:
+	Some examples to check tracer.
+
+2014-09-11  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* src/common/tracer.lua:
 	Fixed an issue in tracer (pcall+error pair).
 
