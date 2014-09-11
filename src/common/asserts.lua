@@ -1,6 +1,8 @@
---
+-- asserts.lua - a module containing all assertion functions
+-- Copyright (C) 2014 Pavel Tisnovsky, Jaromir Hradilek
+
 -- This file is part of Emender.
---
+
 -- Emender is free software: you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
 -- the Free Software Foundation; version 3 of the License.
@@ -12,13 +14,8 @@
 --
 -- You should have received a copy of the GNU General Public License
 -- along with Emender.  If not, see <http://www.gnu.org/licenses/>.
---
 
 
-
---
--- Module containing all assertion functions.
---
 
 function report_error(message)
     error("Assertion error: " .. message)
@@ -40,16 +37,23 @@ end
 --  is_true(result > 42, "The value is greater than 42")
 --
 function is_true(expression, explanation)
+    -- Verify that <expression> is specified:
     if expression == nil then
-        report_error_in_test_structure("Expression is not specified!")
+        report_error_in_test_structure("Expression is a required argument.")
         return
     end
-    if explanation == nil then
-        report_error_in_test_structure("Explanation is not specified!")
+
+    -- Verify that <expression> is a valid expression:
+    if type(expression) ~= "boolean" then
+        report_error_in_test_structure("Expression must evaluate to a Boolean.")
         return
     end
-    if not expression then
-        report_error(explanation)
+
+    -- Evaluate the expression:
+    if expression then
+        pass(explanation)
+    else
+        fail(explanation)
     end
 end
 
@@ -65,16 +69,23 @@ end
 --  is_false(result > 42, "The value is not greater than 42")
 --
 function is_false(expression, explanation)
+    -- Verify that <expression> is specified:
     if expression == nil then
-        report_error_in_test_structure("Expression is not specified!")
+        report_error_in_test_structure("Expression is a required argument.")
         return
     end
-    if explanation == nil then
-        report_error_in_test_structure("Explanation is not specified!")
+
+    -- Verify that <expression> is a valid expression:
+    if type(expression) ~= "boolean" then
+        report_error_in_test_structure("Expression must evaluate to a Boolean.")
         return
     end
+
+    -- Evaluate the expression:
     if expression then
-        report_error(explanation)
+        fail(explanation)
+    else
+        pass(explanation)
     end
 end
 
@@ -91,21 +102,20 @@ end
 --  is_equal(result, 42, "The value is equal to 42")
 --
 function is_equal(current_value, expected_value, explanation)
+    -- Verify that <current_value> is specified:
     if current_value == nil then
-        report_error_in_test_structure("Current value is not specified!")
+        report_error_in_test_structure("Current value a required argument.")
         return
     end
+
+    -- Verify that <expected_value> is specified:
     if expected_value == nil then
-        report_error_in_test_structure("Expected value is not specified!")
+        report_error_in_test_structure("Expected value is a required argument.")
         return
     end
-    if explanation == nil then
-        report_error_in_test_structure("Explanation is not specified!")
-        return
-    end
-    if current_value ~= expected_value then
-        report_error(explanation)
-    end
+
+    -- Compare the values:
+    is_true(current_value == expected_value, explanation)
 end
 
 
@@ -121,21 +131,20 @@ end
 --  is_unequal(result, 42, "The value is not equal to 42")
 --
 function is_unequal(current_value, expected_value, explanation)
+    -- Verify that <current_value> is specified:
     if current_value == nil then
-        report_error_in_test_structure("Current value is not specified!")
+        report_error_in_test_structure("Current value a required argument.")
         return
     end
+
+    -- Verify that <expected_value> is specified:
     if expected_value == nil then
-        report_error_in_test_structure("Expected value is not specified!")
+        report_error_in_test_structure("Expected value is a required argument.")
         return
     end
-    if explanation == nil then
-        report_error_in_test_structure("Explanation is not specified!")
-        return
-    end
-    if current_value == expected_value then
-        report_error(explanation)
-    end
+
+    -- Compare the values:
+    is_true(current_value ~= expected_value, explanation)
 end
 
 
@@ -151,21 +160,20 @@ end
 --  is_like(result, "^%d%d%d%d-%d%d-%d%d$", "The value represents a date.")
 --
 function is_like(current_value, pattern, explanation)
+    -- Verify that <current_value> is specified:
     if current_value == nil then
-        report_error_in_test_structure("Current value is not specified!")
+        report_error_in_test_structure("Current value is a required argument.")
         return
     end
+
+    -- Verify that <pattern> is specified:
     if pattern == nil then
-        report_error_in_test_structure("Pattern is not specified!")
+        report_error_in_test_structure("Pattern is a required argument.")
         return
     end
-    if explanation == nil then
-        report_error_in_test_structure("Explanation is not specified!")
-        return
-    end
-    if string.match(current_value, pattern) == nil then
-        report_error(explanation)
-    end
+
+    -- Compare the value with the pattern:
+    is_true(string.match(current_value, pattern) ~= nil, explanation)
 end
 
 
@@ -181,21 +189,20 @@ end
 --  is_unlike(result, "%a", "The value does not contain letters.")
 --
 function is_unlike(current_value, pattern, explanation)
+    -- Verify that <current_value> is specified:
     if current_value == nil then
-        report_error_in_test_structure("Current value is not specified!")
+        report_error_in_test_structure("Current value is a required argument.")
         return
     end
+
+    -- Verify that <pattern> is specified:
     if pattern == nil then
-        report_error_in_test_structure("Pattern is not specified!")
+        report_error_in_test_structure("Pattern is a required argument.")
         return
     end
-    if explanation == nil then
-        report_error_in_test_structure("Explanation is not specified!")
-        return
-    end
-    if string.match(current_value, pattern) ~= nil then
-        report_error(explanation)
-    end
+
+    -- Compare the value with the pattern:
+    is_true(string.match(current_value, pattern) == nil, explanation)
 end
 
 
@@ -211,22 +218,20 @@ end
 --  is_type(result, "number", "The value is a number")
 --
 function is_type(value, expected_type, explanation)
-    -- commented out because it's possible to have a value set to nil
-    --if value == nil then
-    --    report_error_in_test_structure("Value is not specified!")
-    --    return
-    --end
+    -- Verify that <expected_type> is specified:
     if expected_type == nil then
-        report_error_in_test_structure("Type is not specified!")
+        report_error_in_test_structure("Type is a required argument.")
         return
     end
-    if explanation == nil then
-        report_error_in_test_structure("Explanation is not specified!")
+
+    -- Verify that <expected_type> is a string:
+    if type(expected_type) ~= "string" then
+        report_error_in_test_structure("Expected type must be a string.")
         return
     end
-    if type(value) ~= expected_type then
-        report_error(explanation)
-    end
+
+    -- Compare the types:
+    is_true(type(value) == expected_type, explanation)
 end
 
 
@@ -242,22 +247,20 @@ end
 --  is_not_type(result, "number", "The value is not a number")
 --
 function is_not_type(value, expected_type, explanation)
-    -- commented out because it's possible to have a value set to nil
-    --if value == nil then
-    --    report_error_in_test_structure("Value is not specified!")
-    --    return
-    --end
+    -- Verify that <expected_type> is specified:
     if expected_type == nil then
-        report_error_in_test_structure("Type is not specified!")
+        report_error_in_test_structure("Type is a required argument.")
         return
     end
-    if explanation == nil then
-        report_error_in_test_structure("Explanation is not specified!")
+
+    -- Verify that <expected_type> is a string:
+    if type(expected_type) ~= "string" then
+        report_error_in_test_structure("Expected type must be a string.")
         return
     end
-    if type(value) == expected_type then
-        report_error(explanation)
-    end
+
+    -- Compare the types:
+    is_true(type(value) ~= expected_type, explanation)
 end
 
 
@@ -270,10 +273,13 @@ end
 --  pass("The value is on the list of allowed values.")
 --
 function pass(explanation)
+    -- Verify that <explanation> is specified:
     if explanation == nil then
         report_error_in_test_structure("Explanation is a required argument.")
         return
     end
+
+    -- Verify that <explanation> is a string:
     if type(explanation) ~= "string" then
         report_error_in_test_structure("Explanation must be a string.")
         return
@@ -288,15 +294,19 @@ end
 -- Replace explanation with a short description of the test. For example:
 --
 --  fail("The value is not on the list of allowed values.")
--- 
+--
 function fail(explanation)
+    -- Verify that <explanation> is specified:
     if explanation == nil then
         report_error_in_test_structure("Explanation is a required argument.")
         return
     end
+
+    -- Verify that <explanation> is a string:
     if type(explanation) ~= "string" then
         report_error_in_test_structure("Explanation must be a string.")
         return
     end
+
     report_error(explanation)
 end
