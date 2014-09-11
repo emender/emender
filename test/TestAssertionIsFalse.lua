@@ -61,3 +61,10 @@ function TestAssertionIsFalse.testNegative6()
     is_false(nil, "What's wrong?")
 end
 
+function TestAssertionIsFalse.testNegative7()
+    is_false(1==1, 42)
+end
+
+function TestAssertionIsFalse.testNegative8()
+    is_false(42, "42 is not a valid expression")
+end

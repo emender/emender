@@ -186,4 +186,6 @@ function TestAssertionIsType.testNegative30()
     is_type(nil, "boolean", "negative test")
 end
 
-
+function TestAssertionIsType.testNegative31()
+    is_type(nil, 42, "negative test")
+end

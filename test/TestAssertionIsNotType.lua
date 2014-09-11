@@ -174,3 +174,6 @@ function TestAssertionIsNotType.testNegative13()
     is_not_type(x, "nil", "negative test")
 end
 
+function TestAssertionIsNotType.testNegative14()
+    is_not_type(nil, 42, "negative test")
+end
