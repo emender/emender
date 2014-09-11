@@ -1,5 +1,10 @@
 2014-09-11  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* src/common/tracer.lua:
+	Fixed an issue in tracer (pcall+error pair).
+
+2014-09-11  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* emend:
 	* src/common/getopt.lua:
 	Added check for bad/unknown command line options.

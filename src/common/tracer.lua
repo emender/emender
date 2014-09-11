@@ -13,7 +13,7 @@ local tracer = {
 --
 -- Update trace level (for a bit nicer output).
 --
-function tracer.updateTraceLevel(event)
+function tracer.updateTraceLevel(debugInfo, event)
     if event == "call" then
         tracer.level = tracer.level + 1
     else
@@ -23,6 +23,10 @@ function tracer.updateTraceLevel(event)
         end
     end
 
+    -- we need to take care of pcall() + error() calls
+    if debugInfo.name == "error" and debugInfo.what == "C" then
+        tracer.level = tracer.level - 5
+    end
 end
 
 
@@ -64,7 +68,7 @@ function tracer.eventHandler(event)
     -- level == 3
     local debugInfo = debug.getinfo(2)
 
-    tracer.updateTraceLevel(event)
+    tracer.updateTraceLevel(debugInfo, event)
 
     -- 'what' attribute could have the following values:
     --    "Lua"  for regular Lua functions
