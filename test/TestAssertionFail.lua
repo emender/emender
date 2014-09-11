@@ -26,26 +26,26 @@ TestAssertionFail = {
 }
 
 -- Verify that the function accepts a string as its argument:
-function TestAssertionFail.testPositive1()
+function TestAssertionFail.testNegative1()
     fail("(expected) The fail() function expects a string as its argument.")
 end
 
 -- Verify that the function requires at least one argument:
-function TestAssertionFail.testNegative1()
+function TestAssertionFail.testNegative2()
     fail()
 end
 
 -- Verify that the function does not accept nil as an argument:
-function TestAssertionFail.testNegative2()
+function TestAssertionFail.testNegative3()
     fail(nil)
 end
 
 -- Verify that the function does not accept a boolean as an argument:
-function TestAssertionFail.testNegative3()
+function TestAssertionFail.testNegative4()
     fail(true)
 end
 
 -- Verify that the function does not accept a number as an argument:
-function TestAssertionFail.testNegative4()
+function TestAssertionFail.testNegative5()
     fail(42)
 end
