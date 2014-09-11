@@ -1,5 +1,11 @@
 2014-09-11  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* emend:
+	* src/common/getopt.lua:
+	Added check for bad/unknown command line options.
+
+2014-09-11  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* examples/bad_options_1.sh:
 	* examples/bad_options_2.sh:
 	* examples/bad_options_3.sh:

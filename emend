@@ -64,6 +64,24 @@ function getTestsToRun(arg)
     return testList
 end
 
+function checkForUnknownOptions(options)
+    local unknownOptions = getopt.getUnknownOptions(options)
+    local unknownOptionsCnt = table.hashTableSize(unknownOptions)
+    if unknownOptionsCnt > 0 then
+        local msg = ""
+        if unknownOptionsCnt == 1 then
+            msg = "option is"
+        else
+            msg = "options are"
+        end
+        print("Error - unknown " .. msg .. " used on the command line:")
+        for i,v in pairs(unknownOptions) do
+            print("    " .. i)
+        end
+        os.exit(1)
+    end
+end
+
 function main(arg)
     loadModules()
     luaVersionChecker.checkLuaVersion()
@@ -71,6 +89,9 @@ function main(arg)
 
     --toolsChecker.performCheck()
     local options = getopt.getopt(arg, "")
+
+    checkForUnknownOptions(options)
+
     local verboseOperations = getopt.isVerboseOptionUsed(options)
     local colorOutput = getopt.isColorOutputOptionUsed(options)
     local tracingOn = getopt.isTraceOptionUsed(options)

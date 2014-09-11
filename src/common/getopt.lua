@@ -121,5 +121,21 @@ end
 
 
 
+--
+-- Returns table that would contain all unknown command line options.
+--
+function getopt.getUnknownOptions(options)
+    local knownOptions = {"v", "verbose",   "l", "list",      "h", "help",
+                          "V", "version",   "L", "license",   "c", "color",
+                          "s", "summary",   "T", "trace"}
+    local unknownOptions = table.copy(options)
+    for _, knownOption in ipairs(knownOptions) do
+         unknownOptions[knownOption] = nil
+    end
+    return unknownOptions
+end
+
+
+
 return getopt
 
