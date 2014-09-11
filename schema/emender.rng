@@ -1,0 +1,134 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<!--
+  emender.rng - an XML schema for Emender
+  Copyright (C) 2014 Jaromir Hradilek
+
+  This file is part of Emender.
+
+  Emender is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation; version 3 of the License.
+  
+  Emender is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+  
+  You should have received a copy of the GNU General Public License
+  along with Emender.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
+         datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
+         ns="http://emender.blackened.cz/1.0/">
+
+  <start>
+    <ref name="em.report"/>
+  </start>
+
+  <define name="em.report">
+    <element name="report">
+      <oneOrMore>
+        <ref name="em.suite"/>
+      </oneOrMore>
+    </element>
+  </define>
+
+  <define name="em.suite">
+    <element name="suite">
+      <ref name="em.name.attribute"/>
+      <ref name="em.result.attribute"/>
+      <ref name="em.info"/>
+      <oneOrMore>
+        <ref name="em.case"/>
+      </oneOrMore>
+    </element>
+  </define>
+
+  <define name="em.info">
+    <element name="info">
+      <interleave>
+        <ref name="em.description"/>
+        <ref name="em.authors"/>
+        <ref name="em.emails"/>
+        <ref name="em.modified"/>
+        <ref name="em.tags"/>
+      </interleave>
+    </element>
+  </define>
+
+  <define name="em.description">
+    <element name="description">
+      <text/>
+    </element>
+  </define>
+
+  <define name="em.authors">
+    <element name="authors">
+      <text/>
+    </element>
+  </define>
+
+  <define name="em.emails">
+    <element name="emails">
+      <text/>
+    </element>
+  </define>
+
+  <define name="em.modified">
+    <element name="modified">
+      <data type="date"/>
+    </element>
+  </define>
+
+  <define name="em.tags">
+    <element name="tags">
+      <zeroOrMore>
+        <ref name="em.tag"/>
+      </zeroOrMore>
+    </element>
+  </define>
+
+  <define name="em.tag">
+    <element name="tag">
+      <text/>
+    </element>
+  </define>
+
+  <define name="em.case">
+    <element name="case">
+      <ref name="em.name.attribute"/>
+      <ref name="em.result.attribute"/>
+      <oneOrMore>
+        <ref name="em.test"/>
+      </oneOrMore>
+    </element>
+  </define>
+
+  <define name="em.test">
+    <element name="test">
+      <ref name="em.result.attribute"/>
+      <zeroOrMore>
+        <text/>
+      </zeroOrMore>
+    </element>
+  </define>
+
+  <define name="em.name.attribute">
+    <attribute name="name">
+      <text/>
+    </attribute>
+  </define>
+
+  <define name="em.result.attribute">
+    <attribute name="result">
+      <choice>
+        <value type="string">pass</value>
+        <value type="string">fail</value>
+        <value type="string">info</value>
+      </choice>
+    </attribute>
+  </define>
+
+</grammar>
