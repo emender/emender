@@ -1,3 +1,8 @@
+2014-09-12  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* src/common/tracer.lua:
+	Added missing licence section.
+
 2014-09-11  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* examples/list_tests_1_trace.sh:
