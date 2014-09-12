@@ -21,8 +21,10 @@ VERSION = 0.0.1
 SHELL   = /bin/sh
 INSTALL = /usr/bin/install -c
 POD2MAN = /usr/bin/pod2man
-SRCS    = $(addprefix doc/man/, man1/emend.pod man3/emender.pod)
-MANS    = $(addprefix doc/man/, man1/emend.1 man3/emender.3)
+SRCS    = $(addprefix doc/man/, man1/emend.pod man3/emender.pod \
+                                man5/emender_xml.pod)
+MANS    = $(addprefix doc/man/, man1/emend.1 man3/emender.3 \
+                                man5/emender_xml.5)
 DOCS    = AUTHOR ChangeLog COPYING INSTALL.md README.md
 
 # Target directories:
@@ -49,5 +51,10 @@ clean:
 
 %.3: %.pod
 	$(POD2MAN) --section=3 --center="Emender" \
+	                       --name="$(notdir $(basename $^))" \
+	                       --release="Version $(VERSION)" $^ $@
+
+%.5: %.pod
+	$(POD2MAN) --section=5 --center="Emender" \
 	                       --name="$(notdir $(basename $^))" \
 	                       --release="Version $(VERSION)" $^ $@
