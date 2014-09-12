@@ -1,8 +1,8 @@
-# emender.rnc - an XML schema for Emender (compact syntax)
+# emender.rng - a compact XML schema for Emender
 # Copyright (C) 2014 Jaromir Hradilek
-#
+
 # This file is part of Emender.
-#
+
 # Emender is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
 # the Free Software Foundation; version 3 of the License.
@@ -17,27 +17,55 @@
 
 default namespace = "http://emender.blackened.cz/1.0/"
 
-start = em.report
-em.report = element report { em.suite+ }
-em.suite =
-  element suite {
-    em.name.attribute, em.result.attribute, em.info, em.case+
-  }
-em.info =
-  element info {
-    em.description & em.authors & em.emails & em.modified & em.tags
-  }
-em.description = element description { text }
-em.authors = element authors { text }
-em.emails = element emails { text }
-em.modified = element modified { xsd:date }
-em.tags = element tags { em.tag* }
-em.tag = element tag { text }
-em.case =
-  element case { em.name.attribute, em.result.attribute, em.test+ }
-em.test = element test { em.result.attribute, text* }
-em.name.attribute = attribute name { text }
-em.result.attribute =
-  attribute result {
-    xsd:string "pass" | xsd:string "fail" | xsd:string "info"
-  }
+start = element.report
+element.report = element report {
+  element.suite+
+}
+element.suite = element suite {
+  attribute.name,
+  attribute.result,
+  element.info,
+  element.case+
+}
+element.info = element info {
+  element.description &
+  element.authors &
+  element.emails &
+  element.modified &
+  element.tags
+}
+element.description = element description {
+  text
+}
+element.authors = element authors {
+  text
+}
+element.emails = element emails {
+  text
+}
+element.modified = element modified {
+  xsd:date
+}
+element.tags = element tags {
+  element.tag*
+}
+element.tag = element tag {
+  text
+}
+element.case = element case {
+  attribute.name,
+  attribute.result,
+  element.test+
+}
+element.test = element test {
+  attribute.result,
+  text*
+}
+attribute.name = attribute name {
+  text
+}
+attribute.result = attribute result {
+  xsd:string "pass" |
+  xsd:string "fail" |
+  xsd:string "info"
+}
