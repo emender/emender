@@ -29,7 +29,8 @@ TestManPages = {
 function TestManPages.setUp()
     TestManPages.pages = {
         "doc/man/man1/emend.pod",
-        "doc/man/man3/emender.pod"
+        "doc/man/man3/emender.pod",
+        "doc/man/man5/emender_xml.pod"
     }
 end
 
