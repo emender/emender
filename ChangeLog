@@ -1,5 +1,11 @@
 2014-09-12  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* src/common/asserts.lua:
+	We need to show name of test, name of test function a source line
+	in case of (any) assertion error.
+
+2014-09-12  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* src/core.lua:
 	Removed unused function, added comments.
 

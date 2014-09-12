@@ -22,7 +22,7 @@ function report_error(message)
 end
 
 function report_error_in_test_structure(message)
-    error("Test structure error: " .. message)
+    error("Test structure error: " .. message, 3)
 end
 
 
@@ -310,3 +310,4 @@ function fail(explanation)
 
     report_error(explanation)
 end
+
