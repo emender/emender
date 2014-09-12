@@ -62,7 +62,7 @@ If any of the tests fail, the B<emend> command returns a non-zero value.
 
 =head1 SEE ALSO
 
-B<emender>(3), B<lua>(1)
+B<emender>(3), B<emender_xml>(5), B<lua>(1)
 
 =head1 BUGS
 
