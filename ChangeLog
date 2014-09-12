@@ -1,5 +1,10 @@
 2014-09-12  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* src/common/getopt.lua:
+	Added missing licence section.
+
+2014-09-12  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* src/common/tracer.lua:
 	pcall() and error() should be handled in special way.
 
