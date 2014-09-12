@@ -19,7 +19,8 @@
 
 
 local tracer = {
-    level=0
+    level=0,
+    pcall_level=0
 }
 
 
@@ -28,6 +29,7 @@ local tracer = {
 -- Update trace level (for a bit nicer output).
 --
 function tracer.updateTraceLevel(debugInfo, event)
+    -- decision between calling a function or returning from the function
     if event == "call" then
         tracer.level = tracer.level + 1
     else
@@ -36,17 +38,29 @@ function tracer.updateTraceLevel(debugInfo, event)
             tracer.level = 0
         end
     end
+end
 
-    -- we need to take care of pcall() + error() calls
-    if debugInfo.name == "error" and debugInfo.what == "C" then
-        tracer.level = tracer.level - 5
+
+
+--
+-- Call of pcall() function needs special handling, because
+-- error() would break normal call-return flow.
+-- (even better would be to use a user-defined stack instead of pcall_level)
+--
+function tracer.handlePcall(debugInfo, event)
+    if debugInfo.what == "C" and debugInfo.name == "pcall" then
+        if event == "call" then
+            tracer.pcall_level = tracer.level
+        else
+            tracer.level = tracer.pcall_level+1
+        end
     end
 end
 
 
 
 --
--- Format info about the Lua function call.
+-- Format information about the Lua function call.
 --
 function tracer.formatLuaCall(event, debugInfo)
     return event .. " " .. (debugInfo.name or "(unknown Lua)")
@@ -56,7 +70,7 @@ end
 
 
 --
--- Format info about C function call.
+-- Format information about C function call.
 --
 function tracer.formatCCall(event, debugInfo)
     return event .. " " .. (debugInfo.name or "(unknown C)") .. " [" .. debugInfo.what .. "]"
@@ -82,6 +96,7 @@ function tracer.eventHandler(event)
     -- level == 3
     local debugInfo = debug.getinfo(2)
 
+    tracer.handlePcall(debugInfo, event)
     tracer.updateTraceLevel(debugInfo, event)
 
     -- 'what' attribute could have the following values:
