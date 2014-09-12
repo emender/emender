@@ -23,18 +23,10 @@ local core = {
 
 
 --
---
---
-function core.showVersion()
-    print("Emender version 0.0.1")
-end
-
-
-
---
---
+-- Update filename containing the test to the proper test name.
 --
 function core.updateTestName(filename)
+    -- TODO: what to do with files w/o .lua extensions? simply ignore them?
     if filename:endsWith(".lua") then
         -- try to find the last / in the path + filename
         -- (might be empty)
@@ -42,12 +34,13 @@ function core.updateTestName(filename)
         local extensionIndex = filename:find(".lua", 1, true)
         -- get only text name (w/o path and w/o extension)
         if extensionIndex then
+            -- get rid of the path
             if lastSlash then
                 return filename:substring(lastSlash+1, extensionIndex - 1)
             else
                 return filename:substring(1, extensionIndex - 1)
             end
-        else
+        else -- extension not found (should not happen in real world)
             return nil
         end
     else
@@ -58,7 +51,12 @@ end
 
 
 --
+-- Ge list of references to all functions defined in given test (module);
+-- names of all returned functions start with "test"
+-- (functions with different names are considered as common functions
+-- and are not directly called by the test harness)
 --
+-- If test with given name does not exists, nil is returned.
 --
 function core.getListOfTestFunctionNames(testName)
     local testFunctionNames = {}
@@ -77,6 +75,14 @@ function core.getListOfTestFunctionNames(testName)
 end
 
 
+
+--
+-- Get reference to a function with given name.
+-- (used to get setUp() and tearDown() functions).
+--
+-- If function with given name does not exist, nil is returned instead.
+-- If test with given name does not exists, nil is returned.
+--
 function core.getTestFunction(testName, functionName)
     local test = _G[testName]
     if test then
@@ -91,10 +97,26 @@ function core.getTestFunction(testName, functionName)
     end
 end
 
+
+
+--
+-- Return reference to setUp() function if it exists.
+--
+-- If that function does not exist, nil is returned instead.
+-- If test with given name does not exists, nil is returned.
+--
 function core.getSetupFunction(testName)
     return core.getTestFunction(testName, "setUp")
 end
 
+
+
+--
+-- Return reference to tearDown() function if it exists.
+--
+-- If that function does not exist, nil is returned instead.
+-- If test with given name does not exists, nil is returned.
+--
 function core.getTearDownFunction(testName)
     return core.getTestFunction(testName, "tearDown")
 end

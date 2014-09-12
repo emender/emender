@@ -1,5 +1,10 @@
 2014-09-12  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* src/core.lua:
+	Removed unused function, added comments.
+
+2014-09-12  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* src/common/getopt.lua:
 	Added missing licence section.
 
