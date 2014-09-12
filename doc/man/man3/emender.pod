@@ -78,7 +78,8 @@ A string with a comma-separated list of email addresses.
 
 =item B<changed>
 
-A string with the date of last modification.
+A string with the date of last modification. The date must be in the
+B<I<YYYY>-I<MM>-I<DD>> format.
 
 =item B<tags>
 
