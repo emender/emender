@@ -2,6 +2,12 @@
 
 	* src/common/asserts.lua:
 	* src/core.lua:
+	Store and report given message in case of test failure.
+
+2014-09-17  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* src/common/asserts.lua:
+	* src/core.lua:
 	Updated text report format.
 
 2014-09-17  Pavel Tisnovsky  <ptisnovs@redhat.com>

@@ -310,5 +310,6 @@ function fail(explanation)
     end
 
     print("    FAILED  " .. explanation)
+    markTestFailure()
 end
 

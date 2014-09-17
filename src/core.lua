@@ -197,6 +197,18 @@ function core.printTestInfo(scriptDirectory, filename, verboseOperation)
 end
 
 
+local currentTestFailure
+
+
+
+--
+--
+--
+function markTestFailure()
+    currentTestFailure = true 
+end
+
+
 
 --
 --
