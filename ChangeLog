@@ -1,3 +1,9 @@
+2014-09-17  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* examples/run_test_pass_fail.sh:
+	* test/TestPassFail.lua:
+	Added test for checking pass() and fail() functions.
+
 2014-09-12  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* src/common/asserts.lua:
