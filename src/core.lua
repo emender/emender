@@ -206,24 +206,33 @@ function core.runTest(scriptDirectory, filename, verboseOperation)
     if testName then
         core.checkTestNameShadowing(testName)
         if scriptDirectory then
-            --print(scriptDirectory .. "test/" .. filename)
-            --print(testName)
+            if verboseOperation then
+                print("Script directory/filename: " .. scriptDirectory .. "test/" .. filename)
+                print("Test name: " ..testName)
+            end
             dofile(scriptDirectory .. "test/" .. filename)
         else
-            --print(filename)
-            --print(testName)
+            if verboseOperation then
+                print("Script filename: " .. filename .. "test/" .. filename)
+                print("Test name: " ..testName)
+            end
             dofile(filename)
         end
         local setupFunction = core.getSetupFunction(testName)
         local tearDownFunction = core.getTearDownFunction(testName)
         local testFunctionNames = core.getListOfTestFunctionNames(testName)
         if testFunctionNames or setupFunction or tearDownFunction then
-            print("Running test: " .. testName)
+            print(testName)
+            print()
             if setupFunction then
-                print("    SetUp:")
+                if verboseOperation then
+                    print("    SetUp:")
+                end
                 local status, message = pcall(setupFunction)
                 if status then
-                    print("        OK")
+                    if verboseOperation then
+                        print("        OK\n")
+                    end
                 else
                     print("       " .. message)
                 end
@@ -231,28 +240,42 @@ function core.runTest(scriptDirectory, filename, verboseOperation)
             local okCnt = 0
             local errorCnt = 0
             for i,testFunctionName in ipairs(testFunctionNames) do
-                print("    Running step: " .. testFunctionName)
+                print("  " .. testFunctionName .. "\n")
+                currentTestFailure = false
                 local testFunction = _G[testName][testFunctionName]
                 local status, message = pcall(testFunction)
-                if status then
-                    print("        OK")
+                if status and not currentTestFailure then
+                    if verboseOperation then
+                        print("        OK")
+                    end
                     okCnt = okCnt + 1
                 else
-                    print("       " .. message)
+                    if message then
+                        print("       " .. message)
+                    end
                     errorCnt = errorCnt + 1
                 end
+                print()
             end
             if tearDownFunction then
-                print("    TearDown:")
+                if verboseOperation then
+                    print("    TearDown:")
+                end
                 local status, message = pcall(tearDownFunction)
                 if status then
-                    print("        OK")
+                    if verboseOperation then
+                        print("        OK\n")
+                    end
                 else
                     print("       " .. message)
                 end
             end
-            print("Summary: " .. (okCnt+errorCnt) .. " tests, " .. okCnt .. " passes, " .. errorCnt .. " failures")
-            print("---------------------------------------")
+            print("  Summary:")
+            print()
+            print("    Total:  " .. (okCnt+errorCnt))
+            print("    Passed: " .. okCnt)
+            print("    Failed: " .. errorCnt)
+            print()
             return errorCnt == 0
         end
     end
@@ -333,9 +356,12 @@ function core.runTests(verboseOperation, colorOutput, testsToRun)
             end
         end
     end
-    print("Total tests: " .. (core.okTests + core.failedTests))
-    print("Passed: " .. core.okTests)
-    print("Failed: " .. core.failedTests)
+    print("Overall Results")
+    print()
+    print("  Total:  " .. (core.okTests + core.failedTests))
+    print("  Passed: " .. core.okTests)
+    print("  Failed: " .. core.failedTests)
+    print()
 end
 
 return core

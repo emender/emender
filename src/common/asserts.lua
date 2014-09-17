@@ -284,6 +284,7 @@ function pass(explanation)
         report_error_in_test_structure("Explanation must be a string.")
         return
     end
+    print("    PASSED  " .. explanation)
 end
 
 
@@ -308,6 +309,6 @@ function fail(explanation)
         return
     end
 
-    report_error(explanation)
+    print("    FAILED  " .. explanation)
 end
 
