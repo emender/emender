@@ -1,5 +1,18 @@
 2014-09-18  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* examples/check_bad_output_format_1.sh:
+	* examples/check_bad_output_format_2.sh:
+	* examples/check_bad_output_format_3.sh:
+	* examples/check_bad_output_format_4.sh:
+	* examples/check_bad_output_format_5.sh:
+	* examples/check_good_output_format_1.sh:
+	* examples/check_good_output_format_2.sh:
+	* examples/check_good_output_format_3.sh:
+	* examples/output_to_all_formats.sh:
+	Added checks for proper handling -o and --output command line options.
+
+2014-09-18  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* emend:
 	* src/common/getopt.lua:
 	Refactored and added support for handling -o and --output command line options.
