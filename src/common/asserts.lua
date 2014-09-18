@@ -266,6 +266,46 @@ end
 
 
 --
+-- The is_nil() function tests whether a certain value is nil. If it is, the function
+-- reports the test as passed, otherwise it reports it as failed.
+--
+-- Replace value with the value to test and explanation with a short description of the
+-- test. For example, to test if a variable named result is equal to nil, type:
+--
+--  is_nil(result, "The value is nil")
+--
+function is_nil(value, explanation)
+    -- Determine the type of the value:
+    if value == nil then
+        pass(explanation)
+    else
+        fail(explanation)
+    end
+end
+
+
+
+--
+-- The is_not_nil() function tests whether a certain value is not nil. If it is not, the
+-- function reports the test as passed, otherwise it reports it as failed.
+--
+-- Replace value with the value to test and explanation with a short description of the
+-- test. For example, to test if a variable named result is not nil, type:
+--
+--  is_not_nil(result, "The value is not nil.")
+--
+function is_not_nil(value, explanation)
+    -- Determine the type of the value:
+    if value ~= nil then
+        pass(explanation)
+    else
+        fail(explanation)
+    end
+end
+
+
+
+--
 -- The pass() function reports the test as passed.
 --
 -- Replace explanation with a short description of the test. For example:
