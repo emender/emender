@@ -270,6 +270,30 @@ number, type:
 
   is_not_type(result, "number", "The value is not a number")
 
+=item B<is_nil>(I<value>, I<explanation>)
+
+The C<is_nil()> function tests whether a certain value is C<nil>. If it is,
+the function reports the test as B<passed>, otherwise it reports it as
+B<failed>.
+
+Replace I<value> with the value to test and I<explanation> with a short
+description of the test. For example, to test if a variable named C<result>
+is equal to C<nil>, type:
+
+  is_nil(result, "The value is nil")
+
+=item B<is_not_nil>(I<value>, I<explanation>)
+
+The C<is_not_nil()> function tests whether a certain value is not C<nil>.
+If it is not, the function reports the test as B<passed>, otherwise it
+reports it as B<failed>.
+
+Replace I<value> with the value to test and I<explanation> with a short
+description of the test. For example, to test if a variable named C<result>
+is not C<nil>, type:
+
+  is_not_nil(result, "The value is not nil.")
+
 =item B<pass>(I<explanation>)
 
 The C<pass()> function reports the test as B<passed>.
