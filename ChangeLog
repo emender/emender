@@ -1,5 +1,11 @@
 2014-09-18  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* src/writers/abstractWriter.lua:
+	* src/writers/htmlWriter.lua:
+	Added HTML writer and the abstract writer.
+
+2014-09-18  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* emend:
 	* src/common/asserts.lua:
 	* src/common/getopt.lua:
