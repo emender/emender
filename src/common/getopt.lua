@@ -166,7 +166,8 @@ function getopt.recognizeOutputFormats(outputFileNames)
         end
         local extension = outputFileName:subs(1+extensionSeparator)
         if extension == "txt" or extension == "html" or extension == "xml" then
-            outputFiles[outputFileName] = extension
+            -- pair: file extension + handle
+            outputFiles[outputFileName] = {extension, nil}
         else
             print("The provided output file name '" .. outputFileName .. "' has wrong extension '".. extension .."'.")
             print("Supported extensions are: .txt, .html and .xml.")

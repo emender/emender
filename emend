@@ -10,6 +10,10 @@ local version = nil
 local asserts = nil
 local logger = nil
 local tracer = nil
+local abstractWriter = nil
+local htmlWriter = nil
+
+
 
 function getScriptDirectory()
     local scriptSrc = debug.getinfo(1).short_src
@@ -48,6 +52,8 @@ function loadModules()
     asserts = require("src/common/asserts")
     logger = require("src/common/logger")
     tracer = require("src/common/tracer")
+    abstractWriter = require("src/writers/abstractWriter")
+    htmlWriter = require("src/writers/htmlWriter")
     require("src/common/string")
     require("src/common/table")
 end
@@ -70,10 +76,18 @@ function checkForUnknownOptions(options)
     end
 end
 
+
+function registerWriters()
+    abstractWriter.writers["html"] = htmlWriter
+end
+
 function main(arg)
     loadModules()
     luaVersionChecker.checkLuaVersion()
     core.asserts = asserts
+    core.writer = abstractWriter
+
+    registerWriters()
 
     --toolsChecker.performCheck()
     local options = getopt.getopt(arg, "")
@@ -104,7 +118,7 @@ function main(arg)
     elseif getopt.isTestListOptionUsed(options) then
         core.performTestList(verboseOperations, colorOutput)
     else
-        core.runTests(verboseOperations, colorOutput, testsToRun)
+        core.runTests(verboseOperations, colorOutput, testsToRun, outputFiles)
     end
 end
 

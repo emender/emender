@@ -1,5 +1,13 @@
 2014-09-18  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* emend:
+	* src/common/asserts.lua:
+	* src/common/getopt.lua:
+	* src/core.lua:
+	Added support for various types of writers.
+
+2014-09-18  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* examples/check_bad_output_format_1.sh:
 	* examples/check_bad_output_format_2.sh:
 	* examples/check_bad_output_format_3.sh:

@@ -17,7 +17,8 @@
 local core = {
     asserts = nil,
     okTests = 0,
-    failedTests = 0
+    failedTests = 0,
+    writer = nil,
 }
 
 
@@ -200,6 +201,13 @@ end
 local currentTestFailure
 
 
+function printPassMessage(message)
+    core.writer.writeTestOk(message)
+end
+
+function printFailMessage(message)
+    core.writer.writeTestError(message)
+end
 
 --
 --
@@ -213,7 +221,7 @@ end
 --
 --
 --
-function core.runTest(scriptDirectory, filename, verboseOperation)
+function core.runTest(scriptDirectory, filename, verboseOperation, outputFiles)
     local testName = core.updateTestName(filename)
     if testName then
         core.checkTestNameShadowing(testName)
@@ -230,10 +238,12 @@ function core.runTest(scriptDirectory, filename, verboseOperation)
             end
             dofile(filename)
         end
+
         local setupFunction = core.getSetupFunction(testName)
         local tearDownFunction = core.getTearDownFunction(testName)
         local testFunctionNames = core.getListOfTestFunctionNames(testName)
         if testFunctionNames or setupFunction or tearDownFunction then
+            core.writer.writeTestName(testName)
             print(testName)
             print()
             if setupFunction then
@@ -252,6 +262,7 @@ function core.runTest(scriptDirectory, filename, verboseOperation)
             local okCnt = 0
             local errorCnt = 0
             for i,testFunctionName in ipairs(testFunctionNames) do
+                core.writer.writeTestFunctionName(testFunctionName)
                 print("  " .. testFunctionName .. "\n")
                 currentTestFailure = false
                 local testFunction = _G[testName][testFunctionName]
@@ -267,6 +278,7 @@ function core.runTest(scriptDirectory, filename, verboseOperation)
                     end
                     errorCnt = errorCnt + 1
                 end
+                core.writer.writeTestEnd()
                 print()
             end
             if tearDownFunction then
@@ -288,6 +300,7 @@ function core.runTest(scriptDirectory, filename, verboseOperation)
             print("    Passed: " .. okCnt)
             print("    Failed: " .. errorCnt)
             print()
+            core.writer.writeTestSummary(okCnt, errorCnt)
             return errorCnt == 0
         end
     end
@@ -335,17 +348,39 @@ function core.performTestList(verboseOperation)
 end
 
 
+function openOutputFiles(outputFiles)
+    for fileName, outputFile in pairs(outputFiles) do
+        local fout = io.open(fileName, "w")
+        if fout then
+            outputFile[2] = fout
+        else
+            print("Error: can not open file '" .. fileName .. "' for writing.")
+            os.exit(2)
+        end
+    end
+end
+
+function closeOutputFiles(outputFiles)
+    for _, outputFile in pairs(outputFiles) do
+        local fout = outputFile[2]
+        fout:close()
+    end
+end
 
 --
 --
 --
-function core.runTests(verboseOperation, colorOutput, testsToRun)
+function core.runTests(verboseOperation, colorOutput, testsToRun, outputFiles)
     core.okTests = 0
     core.failedTests = 0
 
+    openOutputFiles(outputFiles)
+    core.writer.outputFileStructs = outputFiles
+    core.writer.writeHeader()
+
     if testsToRun and #testsToRun > 0 then
         for i, filename in ipairs(testsToRun) do
-            local result = core.runTest(nil, filename, verboseOperation)
+            local result = core.runTest(nil, filename, verboseOperation, outputFiles)
             if result ~= nil then
                 if result then
                     core.okTests = core.okTests + 1
@@ -358,7 +393,7 @@ function core.runTests(verboseOperation, colorOutput, testsToRun)
         local scriptDirectory = getScriptDirectory()
         local testList = getTestList()
         for i, filename in ipairs(testList) do
-            local result = core.runTest(scriptDirectory, filename, verboseOperation)
+            local result = core.runTest(scriptDirectory, filename, verboseOperation, outputFiles)
             if result ~= nil then
                 if result then
                     core.okTests = core.okTests + 1
@@ -368,12 +403,11 @@ function core.runTests(verboseOperation, colorOutput, testsToRun)
             end
         end
     end
-    print("Overall Results")
-    print()
-    print("  Total:  " .. (core.okTests + core.failedTests))
-    print("  Passed: " .. core.okTests)
-    print("  Failed: " .. core.failedTests)
-    print()
+
+    core.writer.writeOverallResults(core.okTests, core.failedTests)
+    core.writer.writeFooter()
+
+    closeOutputFiles(outputFiles)
 end
 
 return core

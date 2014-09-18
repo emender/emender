@@ -285,6 +285,7 @@ function pass(explanation)
         return
     end
     print("    PASSED  " .. explanation)
+    printPassMessage(explanation)
 end
 
 
@@ -310,6 +311,7 @@ function fail(explanation)
     end
 
     print("    FAILED  " .. explanation)
+    printFailMessage(explanation)
     markTestFailure()
 end
 
