@@ -1,3 +1,9 @@
+2014-09-18  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* emend:
+	* src/common/getopt.lua:
+	Refactored and added support for handling -o and --output command line options.
+
 2014-09-17  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* src/common/asserts.lua:

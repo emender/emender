@@ -145,7 +145,7 @@ end
 function getopt.getUnknownOptions(options)
     local knownOptions = {"v", "verbose",   "l", "list",      "h", "help",
                           "V", "version",   "L", "license",   "c", "color",
-                          "s", "summary",   "T", "trace"}
+                          "s", "summary",   "T", "trace",     "o", "output"}
     local unknownOptions = table.copy(options)
     for _, knownOption in ipairs(knownOptions) do
          unknownOptions[knownOption] = nil
@@ -154,6 +154,53 @@ function getopt.getUnknownOptions(options)
 end
 
 
+
+function getopt.recognizeOutputFormats(outputFileNames)
+    local outputFiles = {}
+    for _, outputFileName in ipairs(outputFileNames) do
+        local extensionSeparator = outputFileName:find("%.[^%.]*$")
+        if not extensionSeparator or extensionSeparator == #outputFileName then
+            print("The provided output file name '" .. outputFileName .. "' has wrong format.")
+            print("Emender supports the following name format: 'filename.xml' 'filename.txt' and 'filename.html'.")
+            os.exit(1)
+        end
+        local extension = outputFileName:subs(1+extensionSeparator)
+        if extension == "txt" or extension == "html" or extension == "xml" then
+            outputFiles[outputFileName] = extension
+        else
+            print("The provided output file name '" .. outputFileName .. "' has wrong extension '".. extension .."'.")
+            print("Supported extensions are: .txt, .html and .xml.")
+            os.exit(1)
+        end
+    end
+    return outputFiles
+end
+
+function getopt.getTestsToRun(arg)
+    local testList = {}
+
+    for i, argument in ipairs(arg) do
+        if argument ~= "" and argument:sub(1,1) ~= "-" then
+            table.insert(testList, argument)
+        end
+    end
+
+    return testList
+end
+
+function getopt.getOutputFiles(arg)
+    local outputFiles = {}
+
+    for i = 1, #arg-1 do
+        if arg[i] == "-o" or arg[i] == "--output" then
+            table.insert(outputFiles, arg[i+1])
+            arg[i] = ""
+            arg[i+1] = ""
+        end
+    end
+
+    return outputFiles
+end
 
 return getopt
 

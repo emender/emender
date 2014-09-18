@@ -52,18 +52,6 @@ function loadModules()
     require("src/common/table")
 end
 
-function getTestsToRun(arg)
-    local testList = {}
-
-    for i, argument in ipairs(arg) do
-        if argument:sub(1,1) ~= "-" then
-            table.insert(testList, argument)
-        end
-    end
-
-    return testList
-end
-
 function checkForUnknownOptions(options)
     local unknownOptions = getopt.getUnknownOptions(options)
     local unknownOptionsCnt = table.hashTableSize(unknownOptions)
@@ -95,7 +83,11 @@ function main(arg)
     local verboseOperations = getopt.isVerboseOptionUsed(options)
     local colorOutput = getopt.isColorOutputOptionUsed(options)
     local tracingOn = getopt.isTraceOptionUsed(options)
-    local testsToRun = getTestsToRun(arg)
+
+    local outputFileNames = getopt.getOutputFiles(arg)
+    local testsToRun = getopt.getTestsToRun(arg)
+
+    local outputFiles = getopt.recognizeOutputFormats(outputFileNames)
 
     if tracingOn then
         tracer.enable()
