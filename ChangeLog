@@ -1,3 +1,8 @@
+2014-09-19  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* src/common/string.lua:
+	Added the trim() string function.
+
 2014-09-18  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* src/writers/abstractWriter.lua:

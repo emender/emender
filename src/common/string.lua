@@ -53,3 +53,15 @@ function string.substring(str, from, to)
     return string.sub(str, from, to)
 end
 
+--
+-- Implementation of classical trim() function
+-- known from other programming languages.
+--
+function string.trim(str)
+    if str:find("^%s*$") then -- string contains only whitespace(s)
+        return ""
+    else
+        return str:match("^%s*(.*%S)")
+    end
+end
+
