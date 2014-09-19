@@ -305,6 +305,66 @@ end
 
 
 
+-- The is_empty() function tests whether a certain table is empty. If it is, the
+-- function reports the test as passed, otherwise it reports it as failed.
+-- 
+-- Replace table with the table to test and explanation with a short description of
+-- the test. For example, to test if a table named results is empty, type:
+-- 
+--  is_empty(results, "The table is empty")
+function is_empty(table, explanation)
+    -- Verify that <table> is specified:
+    if table == nil then
+        report_error_in_test_structure("Table is a required argument.")
+        return
+    end
+
+    -- Verify that <table> is a table:
+    if type(table) ~= "table" then
+        report_error_in_test_structure("Table must be a table.")
+        return
+    end
+
+    -- Check the contents of the table:
+    if next(table) == nil then
+        pass(explanation)
+    else
+        fail(explanation)
+    end
+end
+
+
+-- The is_not_empty() function tests whether a certain table contains at least one
+-- item. If it does, the function reports the test as passed, otherwise it reports
+-- the test as failed.
+-- 
+-- Replace table with the table to test and explanation with a short description of
+-- the test. For example, to test if a table named result contains some items, type:
+-- 
+--  is_not_empty(results, "The table is not empty")
+function is_not_empty(table, explanation)
+    -- Verify that <table> is specified:
+    if table == nil then
+        report_error_in_test_structure("Table is a required argument.")
+        return
+    end
+
+    -- Verify that <table> is a table:
+    if type(table) ~= "table" then
+        report_error_in_test_structure("Table must be a table.")
+        return
+    end
+
+    -- Check the contents of the table:
+    if next(table) ~= nil then
+        pass(explanation)
+    else
+        fail(explanation)
+    end
+end
+
+
+
 --
 -- The pass() function reports the test as passed.
 --
