@@ -122,11 +122,20 @@ function core.getTearDownFunction(testName)
     return core.getTestFunction(testName, "tearDown")
 end
 
+
+
+--
+-- Print test metadata.
+--
 function core.printTestMetadata(metadata)
     local description = metadata["description"]
     print("    Description: " .. description)
     local authors = metadata["authors"]
-    print("    Authors: " .. authors)
+    print("    Authors:     " .. authors)
+    local emails = metadata["emails"]
+    print("    Emails:      " .. emails)
+    local changed = metadata["changed"]
+    print("    Changed:     " .. changed)
 end
 
 function core.printListOfTestFunctionNames(testFunctions)
@@ -147,6 +156,19 @@ function core.printTestRequiredTool(requiresAttribute)
     end
 end
 
+
+
+function core.printTestTags(tags)
+    print("    Tags bound to the test:")
+    if not tags then
+        print("        none")
+    else
+        for _, tag in ipairs(tags) do
+            print("        " .. tag)
+        end
+    end
+end
+
 --
 --
 --
@@ -156,6 +178,9 @@ function core.printDetailedTestInfo(test, testName)
         print("Test " .. test .. " does not contain metadata, needs to be fixed!")
     end
     core.printTestMetadata(metadata)
+
+    local tags = metadata["tags"]
+    core.printTestTags(tags)
 
     local requiresAttribute = test["requires"]
     core.printTestRequiredTool(requiresAttribute)
