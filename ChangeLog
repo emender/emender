@@ -1,5 +1,12 @@
 2014-09-19  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* src/common/logger.lua:
+	* src/common/string.lua:
+	* src/common/table.lua:
+	Added (c).
+
+2014-09-19  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* src/common/string.lua:
 	Added the trim() string function.
 
