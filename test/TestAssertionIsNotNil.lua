@@ -25,26 +25,37 @@ TestAssertionIsNotNil = {
     }
 }
 
+-- Verify that the function correctly recognizes a Boolean:
 function TestAssertionIsNotNil.testPositive1()
     is_not_nil(false, "false is not nil")
 end
 
+-- Verify that the function correctly recognizes a number:
 function TestAssertionIsNotNil.testPositive2()
     is_not_nil(0, "zero is not nil")
 end
 
+-- Verify that the function correctly recognizes a string:
 function TestAssertionIsNotNil.testPositive3()
     is_not_nil("", "string is not nil")
 end
 
+-- Verify that the function correctly recognizes a table:
+function TestAssertionIsNotNil.testPositive4()
+    is_not_nil({}, "table is not nil")
+end
+
+-- Verify that the function does not accept one argument:
 function TestAssertionIsNotNil.testNegative1()
     is_not_nil("the function expects two arguments")
 end
 
+-- Verify that the function does not accept zero arguments:
 function TestAssertionIsNotNil.testNegative2()
     is_not_nil()
 end
 
+-- Verify that the function correctly recognizes nil as its first argument:
 function TestAssertionIsNotNil.testNegative3()
     is_not_nil(nil, "(expected) nil is nil")
 end

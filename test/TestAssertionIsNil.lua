@@ -54,3 +54,8 @@ end
 function TestAssertionIsNil.testNegative5()
     is_nil("", "(expected) string is not nil")
 end
+
+-- Verify that the function correctly recognizes a table:
+function TestAssertionIsNil.testNegative6()
+    is_nil({}, "(expected) table is not nil")
+end
