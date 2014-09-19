@@ -231,7 +231,7 @@ Replace I<value> with the value to test, I<pattern> with the pattern, and
 I<explanation> with a short description of the test. For example, to test
 if a variable named C<result> contains a date, type:
 
-  is_like(result, "^%d%d%d%d-%d%d-%d%d$", "The value represents a date.")
+  is_like(result, "^%d%d%d%d-%d%d-%d%d$", "The value represents a date")
 
 =item B<is_unlike>(I<value>, I<pattern>, I<explanation>)
 
@@ -243,7 +243,7 @@ Replace I<value> with the value to test, I<pattern> with the pattern, and
 I<explanation> with a short description of the test. For example, to test
 if a variable named C<result> does not contain letters, type:
 
-  is_unlike(result, "%a", "The value does not contain letters.")
+  is_unlike(result, "%a", "The value does not contain letters")
 
 =item B<is_type>(I<value>, I<type>, I<explanation>)
 
@@ -292,7 +292,31 @@ Replace I<value> with the value to test and I<explanation> with a short
 description of the test. For example, to test if a variable named C<result>
 is not C<nil>, type:
 
-  is_not_nil(result, "The value is not nil.")
+  is_not_nil(result, "The value is not nil")
+
+=item B<is_empty>(I<table>, I<explanation>)
+
+The C<is_empty()> function tests whether a certain table is empty. If it
+is, the function reports the test as B<passed>, otherwise it reports it as
+B<failed>.
+
+Replace I<table> with the table to test and I<explanation> with a short
+description of the test. For example, to test if a table named C<results>
+is empty, type:
+
+  is_empty(results, "The table is empty")
+
+=item B<is_not_empty>(I<table>, I<explanation>)
+
+The C<is_not_empty()> function tests whether a certain table contains at
+least one item. If it does, the function reports the test as B<passed>,
+otherwise it reports the test as B<failed>.
+
+Replace I<table> with the table to test and I<explanation> with a short
+description of the test. For example, to test if a table named C<result>
+contains some items, type:
+
+  is_not_empty(results, "The table is not empty")
 
 =item B<pass>(I<explanation>)
 
@@ -300,7 +324,7 @@ The C<pass()> function reports the test as B<passed>.
 
 Replace I<explanation> with a short description of the test. For example:
 
-  pass("The value is on the list of allowed values.")
+  pass("The value is on the list of allowed values")
 
 =item B<fail>(I<explanation>)
 
@@ -308,7 +332,7 @@ The C<fail()> function reports the test as B<failed>.
 
 Replace I<explanation> with a short description of the test. For example:
 
-  fail("The value is not on the list of allowed values.")
+  fail("The value is not on the list of allowed values")
 
 =item B<warn>(I<message>)
 
@@ -318,7 +342,7 @@ issues you are not sure about.
 
 Replace I<message> with a short message. For example:
 
-  warn("The sentence does not start with a capital letter.")
+  warn("The sentence does not start with a capital letter")
 
 =back
 
