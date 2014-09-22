@@ -1,5 +1,10 @@
 2014-09-22  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* src/TestAssertionPass.lua:
+	Updated the test TestAssertionPass to check other improper cases.
+
+2014-09-22  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* test/TestAssertionFail.lua:
 	Updated the test TestAssertionFail to check other improper cases.
 
