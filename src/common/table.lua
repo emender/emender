@@ -59,3 +59,53 @@ function table.copy(src)
     return dest
 end
 
+
+
+--
+-- Performs a "deep" comparison of items stored in a table.
+-- (please note that this algorithm needs to be recursive)
+--
+function table.compare(src, dst)
+    -- 1st step - we would need to know type of source and destination
+    local srcType = type(src)
+    local destType = type(dst)
+
+    -- when both values are tables, perform deep comparison
+    if srcType == "table" and destType == "table" then
+
+        -- compare all pairs key:val from the source table with the
+        -- destination table
+        for key, val1 in pairs(src) do
+            -- try to find the value with the same key in the destination table
+            local val2 = dst[key]
+            if val2 == nil then
+                return false
+            end
+            -- values could be tables too!
+            if not table.compare(val1, val2) then
+                return false
+            end
+        end
+
+        -- compare all pairs key:val from the destination table with the
+        -- source table
+        for key, val1 in pairs(dst) do
+            -- try to find the value with the same key in the source table
+            local val2 = src[key]
+            if val2 == nil then
+                return false
+            end
+            -- values could be tables too!
+            if not table.compare(val1, val2) then
+                return false
+            end
+        end
+
+        -- if we are here -> tables/subtables are the same
+        return true
+    else
+        -- other values might be compared directly
+        return src == dst
+    end
+end
+

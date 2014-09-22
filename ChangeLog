@@ -1,5 +1,10 @@
 2014-09-22  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* src/common/table.lua:
+	Added function/method to perform deep comparison of two tables.
+
+2014-09-22  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* src/TestAssertionPass.lua:
 	Updated the test TestAssertionPass to check other improper cases.
 
