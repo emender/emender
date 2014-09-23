@@ -1,3 +1,8 @@
+2014-09-23  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* src/common/asserts.lua:
+	The function is_equal should compare tables properly.
+
 2014-09-22  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* src/common/table.lua:

@@ -115,7 +115,13 @@ function is_equal(current_value, expected_value, explanation)
     end
 
     -- Compare the values:
-    is_true(current_value == expected_value, explanation)
+    if type(current_value) == "table" and type(expected_value) == "table" then
+        -- we need to make deep comparison of items stored in tables
+        is_true(table.compare(current_value, expected_value), explanation)
+    else
+        -- for other types, it's perfectly ok to use the == operator
+        is_true(current_value == expected_value, explanation)
+    end
 end
 
 
