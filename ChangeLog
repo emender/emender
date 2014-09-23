@@ -1,5 +1,10 @@
 2014-09-23  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* src/TestAssertionFail.lua:
+	Minor fix.
+
+2014-09-23  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* src/TestAssertionIsEqual.lua:
 	Added more positive tests to check if is_equal works with tables.
 

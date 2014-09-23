@@ -1,7 +1,7 @@
 -- TestAssertionFail.lua - test the behavior of the asserts.fail() function
 -- Copyright (C) 2014 Jaromir Hradilek, Pavel Tisnovsky
 
--- This file is part of Emender
+-- This file is part of Emender.
 
 -- Emender is free software: you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
