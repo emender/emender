@@ -1,6 +1,11 @@
 2014-09-24  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* test/TestAssertionIsEqual.lua:
+	Additional negative tests added into TestAssertionIsEqual.
+
+2014-09-24  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* test/TestAssertionIsEqual.lua:
 	Added more tests into TestAssertionIsEqual.lua.
 
 2014-09-23  Pavel Tisnovsky  <ptisnovs@redhat.com>

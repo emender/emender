@@ -210,31 +210,204 @@ function TestAssertionIsEqual.testNegative01()
     is_equal(true, false, "(expected) negative equality test")
 end
 
-function TestAssertionIsEqual.testNegative2()
+--
+-- Verify that false!=true.
+--
+function TestAssertionIsEqual.testNegative02()
+    -- perform comparison
     is_equal(false, true, "(expected) negative equality test")
 end
 
-function TestAssertionIsEqual.testNegative3()
+--
+-- Verify that 1!=2.
+--
+function TestAssertionIsEqual.testNegative03()
+    -- perform comparison
     is_equal(1, 2, "(expected) integers are not the same")
 end
 
-function TestAssertionIsEqual.testNegative4()
+--
+-- Verify that 1.9!=2.0.
+--
+function TestAssertionIsEqual.testNegative04()
+    -- perform comparison
+    is_equal(1.9, 2.0, "(expected) integers are not the same")
+end
+
+--
+-- Compare two different strings.
+--
+function TestAssertionIsEqual.testNegative05()
+    -- perform comparison
     is_equal("x", "y", "(expected) strings are not the same")
 end
 
-function TestAssertionIsEqual.testNegative5()
+--
+-- Compare two different strings (first one is empty).
+--
+function TestAssertionIsEqual.testNegative06()
+    -- perform comparison
+    is_equal("", "y", "(expected) strings are not the same")
+end
+
+--
+-- Compare two different strings (first one contains special character).
+--
+function TestAssertionIsEqual.testNegative07()
+    -- perform comparison
+    is_equal("\n", "y", "(expected) strings are not the same")
+end
+
+--
+-- Verify that the function does not accept no arguments:
+--
+function TestAssertionIsEqual.testNegative08()
+    -- perform comparison
     is_equal()
 end
 
-function TestAssertionIsEqual.testNegative6()
+--
+-- Verify that the function does not accept only one argument:
+--
+function TestAssertionIsEqual.testNegative09()
+    -- perform comparison
     is_equal(1)
 end
 
-function TestAssertionIsEqual.testNegative7()
+--
+-- Verify that the function does not accept only two arguments:
+--
+function TestAssertionIsEqual.testNegative10()
+    -- perform comparison
     is_equal(1, 1)
 end
 
-function TestAssertionIsEqual.testNegative8()
+--
+-- Verify that if is never equals to nil.
+--
+function TestAssertionIsEqual.testNegative11()
+    -- perform comparison
     is_equal(nil, nil, "What's wrong?")
+end
+
+--
+-- Comparison of two tables.
+--
+function TestAssertionIsEqual.testNegative12()
+    -- perform comparison
+    is_equal({}, {1}, "negative equality test: two tables")
+end
+
+--
+-- Comparison of two tables.
+--
+function TestAssertionIsEqual.testNegative13()
+    -- perform comparison
+    is_equal({1,2}, {2,1}, "negative equality test: two tables, items are integers")
+end
+
+--
+-- Comparison of two tables.
+--
+function TestAssertionIsEqual.testNegative14()
+    -- perform comparison
+    is_equal({1,2,3,4}, {1,2,3,4,5,6,7}, "negative equality test: two tables, items are integers")
+end
+
+--
+-- Comparison of two tables.
+--
+function TestAssertionIsEqual.testNegative15()
+    -- perform comparison
+    is_equal({"x", "y"}, {"x", "z"}, "negative equality test: two tables, items are strings")
+end
+
+--
+-- Comparison of two nested tables.
+--
+function TestAssertionIsEqual.testNegative16()
+    -- perform comparison
+    is_equal({1,{2,3},4}, {1,{2,9999},4}, "negative equality test: two nested tables")
+end
+
+--
+-- Comparison of two nested tables.
+--
+function TestAssertionIsEqual.testNegative17()
+    -- perform comparison
+    is_equal({1,{2,{3}},4}, {1,{2,{}},4}, "negative equality test: two deeply nested tables")
+end
+
+--
+-- Comparison of two nested tables.
+--
+function TestAssertionIsEqual.testNegative18()
+    local table1 = {"a",{"b",{"c",{"d", {"e"}}}}}
+    local table2 = {"X",{"b",{"c",{"d", {"e"}}}}}
+    -- perform comparison
+    is_equal(table1, table2, "negative equality test: two deeply nested tables")
+end
+
+--
+-- Comparison of two hash tables.
+--
+function TestAssertionIsEqual.testNegative19()
+    local table1 = {}
+    local table2 = {}
+
+    -- fill in the first table
+    table1["first"]  = 1
+    table1["second"] = 2
+    table1["third"]  = 3
+
+    -- fill in second table
+    table2["first"]  = 10
+    table2["second"] = 20
+    table2["third"]  = 30
+
+    -- perform comparison
+    is_equal(table1, table2, "negative equality test: two hash tables")
+end
+
+--
+-- Comparison of two hash tables.
+--
+function TestAssertionIsEqual.testNegative20()
+    local table1 = {}
+    local table2 = {}
+
+    -- fill in the first table
+    table1["first"]  = "!"
+    table1["second"] = "@"
+    table1["third"]  = "#"
+
+    -- fill in second table
+    table2["first-"]  = "!"
+    table2["second-"] = "@"
+    table2["third-"]  = "#"
+
+    -- perform comparison
+    is_equal(table1, table2, "negative equality test: two hash tables")
+end
+
+--
+-- Comparison of two nested hash tables.
+--
+function TestAssertionIsEqual.testNegative21()
+    local table1 = {}
+    local table2 = {}
+
+    -- fill in the first table
+    table1["first"]  = {1,2,3}
+    table1["second"] = {4,5,6}
+    table1["third"]  = {7,8,9}
+
+    -- fill in second table
+    table2["first"]  = {"1","2","3"}
+    table2["second"] = {"2","5","6"}
+    table2["third"]  = {"3","8","9"}
+
+    -- perform comparison
+    is_equal(table1, table2, "negative equality test: two nested hash tables")
 end
 
