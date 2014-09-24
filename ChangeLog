@@ -1,5 +1,10 @@
 2014-09-24  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* src/common/asserts.lua:
+	Added missing comments.
+
+2014-09-24  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* test/TestAssertionIsEqual.lua:
 	Additional negative tests added into TestAssertionIsEqual.
 

@@ -21,6 +21,12 @@ function report_error(message)
     error("Assertion error: " .. message)
 end
 
+
+--
+-- Report a serious error in the test structure.
+-- This type of error is reported when some parameters are missing
+-- and/or have an improper type.
+--
 function report_error_in_test_structure(message)
     error("Test structure error: " .. message, 3)
 end
@@ -94,6 +100,7 @@ end
 --
 -- The is_equal() function compares two values and tests whether these values are equal.
 -- If they are, the function reports the test as passed, otherwise it reports it as failed.
+-- Please note that this function works for tables too, including nested tables.
 --
 -- Replace value with the value to test, expected_value with the expected value,
 -- and explanation with a short description of the test. For example, to test if a variable
@@ -129,6 +136,7 @@ end
 --
 -- The is_unequal() function compares two values and tests whether these values are different.
 -- If they are, the function reports the test as passed, otherwise it reports it as failed.
+-- Please note that this function works for tables too, including nested tables.
 --
 -- Replace value with the value to test, expected_value with the expected value, and explanation
 -- with a short description of the test. For example, to test if a variable named result is of
@@ -150,7 +158,14 @@ function is_unequal(current_value, expected_value, explanation)
     end
 
     -- Compare the values:
-    is_true(current_value ~= expected_value, explanation)
+    if type(current_value) == "table" and type(expected_value) == "table" then
+        -- we need to make deep comparison of items stored in tables
+        -- and then negate the result
+        is_false(table.compare(current_value, expected_value), explanation)
+    else
+        -- for other types, it's perfectly ok to use the ~= operator
+        is_true(current_value ~= expected_value, explanation)
+    end
 end
 
 
@@ -418,6 +433,7 @@ function fail(explanation)
 
     print("    FAILED  " .. explanation)
     printFailMessage(explanation)
+    -- test harness needs to be informed that the test fail
     markTestFailure()
 end
 
