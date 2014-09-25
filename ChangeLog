@@ -1,7 +1,7 @@
 2014-09-25  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* src/core.lua:
-	Added support of test result writers.
+	Added support for test result writers.
 
 2014-09-25  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
