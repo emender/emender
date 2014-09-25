@@ -16,9 +16,9 @@
 
 local core = {
     asserts = nil,
-    okTests = 0,
-    failedTests = 0,
     writer = nil,
+    messages = {},
+    results = {}
 }
 
 
@@ -227,11 +227,11 @@ local currentTestFailure
 
 
 function registerPassMessage(message)
-    core.writer.writeTestOk(message)
+    table.insert(core.messages, {"PASS", message})
 end
 
 function registerFailMessage(message)
-    core.writer.writeTestError(message)
+    table.insert(core.messages, {"FAIL", message})
 end
 
 --
@@ -249,6 +249,9 @@ end
 function core.runTest(scriptDirectory, filename, verboseOperation)
     local testName = core.updateTestName(filename)
     if testName then
+        local testResults = {}
+        testResults.name = testName
+
         core.checkTestNameShadowing(testName)
         if scriptDirectory then
             if verboseOperation then
@@ -269,7 +272,6 @@ function core.runTest(scriptDirectory, filename, verboseOperation)
         local testFunctionNames = core.getListOfTestFunctionNames(testName)
 
         if testFunctionNames or setupFunction or tearDownFunction then
-            core.writer.writeTestName(testName)
             print(testName)
             print()
             if setupFunction then
@@ -285,11 +287,17 @@ function core.runTest(scriptDirectory, filename, verboseOperation)
                     print("       " .. message)
                 end
             end
-            local okCnt = 0
-            local errorCnt = 0
+            local passCnt = 0
+            local failCnt = 0
+            local methods = {}
             for i,testFunctionName in ipairs(testFunctionNames) do
-                core.writer.writeTestFunctionName(testFunctionName)
+                local method = {}
+                method.name = testFunctionName
+                core.messages = {}
+                method.result = nil
+
                 print("  " .. testFunctionName .. "\n")
+
                 currentTestFailure = false
                 local testFunction = _G[testName][testFunctionName]
                 local status, message = pcall(testFunction)
@@ -297,15 +305,19 @@ function core.runTest(scriptDirectory, filename, verboseOperation)
                     if verboseOperation then
                         print("        OK")
                     end
-                    okCnt = okCnt + 1
+                    passCnt = passCnt + 1
+                    method.result = "OK"
                 else
                     if message then
                         print("       " .. message)
+                        table.insert(core.messages, {"ERROR", message})
                     end
-                    errorCnt = errorCnt + 1
+                    failCnt = failCnt + 1
+                    method.result = "FAIL"
                 end
-                core.writer.writeTestEnd()
                 print()
+                method.messages = table.copy(core.messages)
+                table.insert(methods, method)
             end
             if tearDownFunction then
                 if verboseOperation then
@@ -322,12 +334,16 @@ function core.runTest(scriptDirectory, filename, verboseOperation)
             end
             print("  Summary:")
             print()
-            print("    Total:  " .. (okCnt+errorCnt))
-            print("    Passed: " .. okCnt)
-            print("    Failed: " .. errorCnt)
+            print("    Total:  " .. (passCnt+failCnt))
+            print("    Passed: " .. passCnt)
+            print("    Failed: " .. failCnt)
             print()
-            core.writer.writeTestSummary(okCnt, errorCnt)
-            return errorCnt == 0
+            testResults.passCnt = passCnt
+            testResults.failCnt = failCnt
+            testResults.total   = passCnt + failCnt
+            testResults.methods = methods
+            table.insert(core.results.tests, testResults)
+            return failCnt == 0
         end
     end
     return nil
@@ -393,25 +409,24 @@ function closeOutputFiles(outputFiles)
     end
 end
 
+
+
 --
 --
 --
 function core.runTests(verboseOperation, colorOutput, testsToRun, outputFiles)
-    core.okTests = 0
-    core.failedTests = 0
-
-    openOutputFiles(outputFiles)
-    core.writer.outputFileStructs = outputFiles
-    core.writer.writeHeader()
+    core.results.passedTests = 0
+    core.results.failedTests = 0
+    core.results.tests = {}
 
     if testsToRun and #testsToRun > 0 then
         for i, filename in ipairs(testsToRun) do
-            local result = core.runTest(nil, filename, verboseOperation, outputFiles)
+            local result = core.runTest(nil, filename, verboseOperation)
             if result ~= nil then
                 if result then
-                    core.okTests = core.okTests + 1
+                    core.results.passedTests = core.results.passedTests + 1
                 else
-                    core.failedTests = core.failedTests + 1
+                    core.results.failedTests = core.results.failedTests + 1
                 end
             end
         end
@@ -419,21 +434,17 @@ function core.runTests(verboseOperation, colorOutput, testsToRun, outputFiles)
         local scriptDirectory = getScriptDirectory()
         local testList = getTestList()
         for i, filename in ipairs(testList) do
-            local result = core.runTest(scriptDirectory, filename, verboseOperation, outputFiles)
+            local result = core.runTest(scriptDirectory, filename, verboseOperation)
             if result ~= nil then
                 if result then
-                    core.okTests = core.okTests + 1
+                    core.results.passedTests = core.results.passedTests + 1
                 else
-                    core.failedTests = core.failedTests + 1
+                    core.results.failedTests = core.results.failedTests + 1
                 end
             end
         end
     end
 
-    core.writer.writeOverallResults(core.okTests, core.failedTests)
-    core.writer.writeFooter()
-
-    closeOutputFiles(outputFiles)
 end
 
 return core
