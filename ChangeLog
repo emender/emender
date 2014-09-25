@@ -1,3 +1,9 @@
+2014-09-25  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* src/common/asserts.lua:
+	* src/core.lua:
+	Functions used to register test messages should have proper names.
+
 2014-09-24  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* src/common/asserts.lua:

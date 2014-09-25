@@ -226,11 +226,11 @@ end
 local currentTestFailure
 
 
-function printPassMessage(message)
+function registerPassMessage(message)
     core.writer.writeTestOk(message)
 end
 
-function printFailMessage(message)
+function registerFailMessage(message)
     core.writer.writeTestError(message)
 end
 
@@ -246,7 +246,7 @@ end
 --
 --
 --
-function core.runTest(scriptDirectory, filename, verboseOperation, outputFiles)
+function core.runTest(scriptDirectory, filename, verboseOperation)
     local testName = core.updateTestName(filename)
     if testName then
         core.checkTestNameShadowing(testName)
@@ -267,6 +267,7 @@ function core.runTest(scriptDirectory, filename, verboseOperation, outputFiles)
         local setupFunction = core.getSetupFunction(testName)
         local tearDownFunction = core.getTearDownFunction(testName)
         local testFunctionNames = core.getListOfTestFunctionNames(testName)
+
         if testFunctionNames or setupFunction or tearDownFunction then
             core.writer.writeTestName(testName)
             print(testName)

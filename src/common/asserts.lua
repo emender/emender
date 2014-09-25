@@ -406,7 +406,7 @@ function pass(explanation)
         return
     end
     print("    PASSED  " .. explanation)
-    printPassMessage(explanation)
+    registerPassMessage(explanation)
 end
 
 
@@ -432,7 +432,7 @@ function fail(explanation)
     end
 
     print("    FAILED  " .. explanation)
-    printFailMessage(explanation)
+    registerFailMessage(explanation)
     -- test harness needs to be informed that the test fail
     markTestFailure()
 end
