@@ -1,5 +1,11 @@
 2014-09-25  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* src/writers/abstractWriter.lua:
+	* src/writers/htmlWriter.lua:
+	Changed API for writers.
+
+2014-09-25  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* src/core.lua:
 	All test results are stored in its own data structure that would
 	be used for exporting results into various formats.

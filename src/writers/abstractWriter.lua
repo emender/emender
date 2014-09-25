@@ -10,73 +10,84 @@ function abstractWriter.getWriterAndFout(outputFileStruct)
     return abstractWriter.writers[fileType], fout
 end
 
-function abstractWriter.writeHeader()
+function abstractWriter.writeHeader(results)
     for _, outputFileStruct in pairs(abstractWriter.outputFileStructs) do
         local writer, fout = abstractWriter.getWriterAndFout(outputFileStruct)
-        writer.writeHeader(fout)
+        writer.writeHeader(fout, results)
     end
 end
 
-function abstractWriter.writeFooter()
+function abstractWriter.writeFooter(results)
     for _, outputFileStruct in pairs(abstractWriter.outputFileStructs) do
         local writer, fout = abstractWriter.getWriterAndFout(outputFileStruct)
         writer.writeFooter(fout)
     end
 end
 
-function abstractWriter.writeOverallResults(okTests, failedTests)
+function abstractWriter.writeOverallResults(results)
+    local passedTests = results.passedTests
+    local failedTests = results.failedTests
+    local allTests = passedTests + failedTests
+
     print("Overall Results")
     print()
-    print("  Total:  " .. (okTests + failedTests))
-    print("  Passed: " .. okTests)
+    print("  Total:  " .. allTests)
+    print("  Passed: " .. passedTests)
     print("  Failed: " .. failedTests)
     print()
 
     for _, outputFileStruct in pairs(abstractWriter.outputFileStructs) do
         local writer, fout = abstractWriter.getWriterAndFout(outputFileStruct)
-        writer.writeOverallResults(fout, okTests, failedTests)
+        writer.writeOverallResults(fout, results, passedTests, failedTests)
     end
 end
 
-function abstractWriter.writeTestName(testName)
+function abstractWriter.writeTestName(results, testName)
     for _, outputFileStruct in pairs(abstractWriter.outputFileStructs) do
         local writer, fout = abstractWriter.getWriterAndFout(outputFileStruct)
-        writer.writeTestName(fout, testName)
+        writer.writeTestName(fout, results, testName)
     end
 end
 
-function abstractWriter.writeTestSummary(okCnt, errorCnt)
+function abstractWriter.writeTestSummary(results, testName, test)
     for _, outputFileStruct in pairs(abstractWriter.outputFileStructs) do
         local writer, fout = abstractWriter.getWriterAndFout(outputFileStruct)
-        writer.writeTestSummary(fout, okCnt, errorCnt)
+        writer.writeTestSummary(fout, results, testName, test)
     end
 end
 
-function abstractWriter.writeTestFunctionName(functionName)
+function abstractWriter.writeTestFunctionName(results, testName, functionName)
     for _, outputFileStruct in pairs(abstractWriter.outputFileStructs) do
         local writer, fout = abstractWriter.getWriterAndFout(outputFileStruct)
-        writer.writeTestFunctionName(fout, functionName)
+        writer.writeTestFunctionName(fout, results, testName, functionName)
     end
 end
 
-function abstractWriter.writeTestEnd()
+function abstractWriter.writeTestEnd(results, testName)
     for _, outputFileStruct in pairs(abstractWriter.outputFileStructs) do
         local writer, fout = abstractWriter.getWriterAndFout(outputFileStruct)
-        writer.writeTestEnd(fout)
+        writer.writeTestEnd(fout, results, testName)
     end
 end
 
-function abstractWriter.writeTestOk(message)
+function abstractWriter.writeTestPass(results, testName, testFunctionName, message)
     for _, outputFileStruct in pairs(abstractWriter.outputFileStructs) do
         local writer, fout = abstractWriter.getWriterAndFout(outputFileStruct)
-        writer.writeTestOk(fout, message)
+        writer.writeTestPass(fout, results, testName, testFunctionName, message)
     end
 end
 
-function abstractWriter.writeTestError(message)
+function abstractWriter.writeTestFail(results, testName, testFunctionName, message)
     for _, outputFileStruct in pairs(abstractWriter.outputFileStructs) do
         local writer, fout = abstractWriter.getWriterAndFout(outputFileStruct)
-        writer.writeTestError(fout, message)
+        writer.writeTestFail(fout, results, testName, testFunctionName, message)
+    end
+end
+
+function abstractWriter.writeTestError(results, testName, testFunctionName, message)
+    for _, outputFileStruct in pairs(abstractWriter.outputFileStructs) do
+        local writer, fout = abstractWriter.getWriterAndFout(outputFileStruct)
+        writer.writeTestError(fout, results, testName, testFunctionName, message)
     end
 end
 
