@@ -1,3 +1,8 @@
+2014-09-30  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* src/core.lua:
+	Add check that test could be loaded.
+
 2014-09-25  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* src/core.lua:

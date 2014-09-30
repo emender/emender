@@ -218,6 +218,10 @@ function core.printTestInfo(scriptDirectory, filename, verboseOperation)
             if verboseOperation then
                 core.printDetailedTestInfo(test, testName)
             end
+        else
+            print("Test '" .. testName .. "' can't be loaded or there's name mismatch")
+            print("(test name is different from the name of test file).")
+            print("Please check the content of file " .. filename)
         end
     end
 end
