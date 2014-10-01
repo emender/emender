@@ -427,28 +427,29 @@ function exportResults(outputFiles)
     for i,test in ipairs(results.tests) do
         local testName = test.name
         local methods = test.methods
-        core.writer.writeTestName(results, testName)
+        core.writer.writeSuiteStart(results, testName)
 
         for j,method in ipairs(methods) do
             local testFunctionName = method.name
-            core.writer.writeTestFunctionName(results, testName, testFunctionName)
+            core.writer.writeCaseStart(results, testName, testFunctionName)
             for _,message in ipairs(method.messages) do
                 local status = message[1]
                 if status == "PASS" then
                     core.writer.writeTestPass(results, testName, testFunctionName, message[2])
                 elseif status == "FAIL" then
                     core.writer.writeTestFail(results, testName, testFunctionName, message[2])
+                elseif status == "INFO" then
+                    core.writer.writeTestInfo(results, testName, testFunctionName, message[2])
                 elseif status == "ERROR" then
                     if message[2] then
                     core.writer.writeTestError(results, testName, testFunctionName, message[2])
                     end
                 end
             end
-            core.writer.writeTestEnd(results, testName)
+            core.writer.writeCaseEnd(results, testName)
         end
-        core.writer.writeTestSummary(results, testName, test)
+        core.writer.writeSuiteEnd(results, testName, test)
     end
-    core.writer.writeOverallResults(results)
     core.writer.writeFooter(results)
 
     closeOutputFiles(outputFiles)
