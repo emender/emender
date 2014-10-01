@@ -246,6 +246,28 @@ function markTestFailure()
 end
 
 
+--
+-- Dump all test results (very useful for debug purposes).
+--
+function dumpTestResults()
+    print("OK: " .. core.results.passedTests)
+    print("Failed: " .. core.results.failedTests)
+    for i,test in ipairs(core.results.tests) do
+        print(i, test.name)
+        local methods = test.methods
+        for j,method in ipairs(methods) do
+            print("", j, method.name)
+            for _,message in ipairs(method.messages) do
+                print("", "", "", message[1], message[2])
+            end
+            print("", "", method.result)
+        end
+        print("", "PASS ", test.passCnt)
+        print("", "FAIL ", test.failCnt)
+        print("", "TOTAL", test.total)
+        print()
+    end
+end
 
 --
 --

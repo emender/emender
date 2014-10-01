@@ -1,6 +1,12 @@
 2014-10-01  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* src/core.lua:
+	Added function to dump all results (used mainly for internal
+	checking).
+
+2014-10-01  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* src/core.lua:
 	* src/writers/abstractWriter.lua:
 	* src/writers/htmlWriter.lua:
 	Changed API for writers/reporters.
