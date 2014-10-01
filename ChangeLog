@@ -1,6 +1,12 @@
 2014-10-01  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* src/writers/htmlWriter.lua:
+	Fixed three issues: test result evaluation, percentage computation and
+	links to Bootstrap library.
+
+2014-10-01  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* src/writers/htmlWriter.lua:
 	Rewritten HTML writer to use new layout and design.
 
 2014-10-01  Pavel Tisnovsky  <ptisnovs@redhat.com>

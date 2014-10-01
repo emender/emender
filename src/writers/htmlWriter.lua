@@ -29,7 +29,7 @@ end
 
 function writeLeftTab(fout, results, failedTests)
     local testSuites = results.suites
-    local failed = failedTests >= 0
+    local failed = failedTests > 0
     for i, testSuite in ipairs(testSuites) do
         if i==1 then
             fout:write("          <li class=\"active\">\n")
@@ -57,9 +57,9 @@ function htmlWriter.writeHeader(fout, results)
     fout:write([[
 <html>
 <head>
-  <link href="http://file.brq.redhat.com/~rkratky/emender/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" />
-  <link href="http://file.brq.redhat.com/~rkratky/emender/bootstrap/bootstrap.vertical-tabs.css" rel="stylesheet" type="text/css" />
-  <link href="http://file.brq.redhat.com/~rkratky/emender/yoana.css" rel="stylesheet" type="text/css" />
+  <link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" />
+  <link href="bootstrap/bootstrap.vertical-tabs.css" rel="stylesheet" type="text/css" />
+  <link href="yoana.css" rel="stylesheet" type="text/css" />
   <title>Emender Test Suite</title>
 </head>
 <body>
@@ -239,9 +239,16 @@ function computeCasePercentages(testCase)
     local errors = testCase.errors
     local total  = pass + fail + info + errors
 
-    local passPerc = 100.0 * pass / total
-    local infoPerc = 100.0 * info / total
-    local failPerc = 100.0 * (fail+errors) / total
+    local passPerc = math.floor(100.0 * pass / total)
+    local infoPerc = math.floor(100.0 * info / total)
+    local failPerc = math.floor(100.0 * (fail+errors) / total)
+
+    if passPerc + infoPerc + failPerc > 100 then
+        passPerc = passPerc - 1
+    end
+    if passPerc + infoPerc + failPerc < 100 then
+        passPerc = passPerc + 1
+    end
 
     if passPerc ~= passPerc then passPerc = 0 end
     if infoPerc ~= infoPerc then infoPerc = 0 end
