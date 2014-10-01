@@ -87,7 +87,7 @@ The following is the formal definition of the B<suite> element:
       attribute.name,
       attribute.result,
       element.info,
-      element.case+
+      element.case*
   }
 
 =item B<info>
@@ -225,7 +225,7 @@ The following is the formal definition of the B<case> element:
   element.case = element case {
       attribute.name,
       attribute.result,
-      element.test+
+      element.test*
   }
 
 =item B<test>
