@@ -12,6 +12,7 @@ local logger = nil
 local tracer = nil
 local abstractWriter = nil
 local htmlWriter = nil
+local xmlWriter = nil
 
 
 
@@ -54,6 +55,7 @@ function loadModules()
     tracer = require("src/common/tracer")
     abstractWriter = require("src/writers/abstractWriter")
     htmlWriter = require("src/writers/htmlWriter")
+    xmlWriter = require("src/writers/xmlWriter")
     require("src/common/string")
     require("src/common/table")
 end
@@ -79,6 +81,7 @@ end
 
 function registerWriters()
     abstractWriter.writers["html"] = htmlWriter
+    abstractWriter.writers["xml"] = xmlWriter
 end
 
 function main(arg)
