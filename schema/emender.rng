@@ -40,9 +40,9 @@
       <ref name="attribute.name"/>
       <ref name="attribute.result"/>
       <ref name="element.info"/>
-      <oneOrMore>
+      <zeroOrMore>
         <ref name="element.case"/>
-      </oneOrMore>
+      </zeroOrMore>
     </element>
   </define>
 
@@ -100,9 +100,9 @@
     <element name="case">
       <ref name="attribute.name"/>
       <ref name="attribute.result"/>
-      <oneOrMore>
+      <zeroOrMore>
         <ref name="element.test"/>
-      </oneOrMore>
+      </zeroOrMore>
     </element>
   </define>
 

@@ -25,7 +25,7 @@ element.suite = element suite {
   attribute.name,
   attribute.result,
   element.info,
-  element.case+
+  element.case*
 }
 element.info = element info {
   element.description &
@@ -55,7 +55,7 @@ element.tag = element tag {
 element.case = element case {
   attribute.name,
   attribute.result,
-  element.test+
+  element.test*
 }
 element.test = element test {
   attribute.result,
