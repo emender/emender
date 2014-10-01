@@ -99,9 +99,15 @@ end
 function htmlWriter.writeSuiteStart(fout, testSuite)
     htmlWriter.testSuiteCounter = htmlWriter.testSuiteCounter + 1
     if htmlWriter.testSuiteCounter == 1 then
-        fout:write("          <div class=\"tab-pane active\" id=\"test" .. htmlWriter.testSuiteCounter .. "\">\n")
+        fout:write([[
+          <div class="tab-pane active" id="test]] .. htmlWriter.testSuiteCounter .. [[">
+            <h4>Test Results</h4>
+]])
     else
-        fout:write("          <div class=\"tab-pane\" id=\"test" .. htmlWriter.testSuiteCounter .. "\">\n")
+        fout:write([[
+          <div class="tab-pane" id="test]] .. htmlWriter.testSuiteCounter .. [[">
+            <h4>Test Results</h4>
+]])
     end
     fout:write("            <div class=\"row\">\n")
 
@@ -155,7 +161,7 @@ function htmlWriter.writeSuiteEnd(fout, testSuite)
             </div><!--row-->
             <div class="row">
               <div class="col-md-6 summary">
-                <h4>Summary:</h4>
+                <h4>Summary</h4>
                 <table class="test-results">
                   <tr>
                     <td>Passed:</td>
