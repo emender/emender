@@ -20,63 +20,63 @@ end
 function abstractWriter.writeFooter(results)
     for _, outputFileStruct in pairs(abstractWriter.outputFileStructs) do
         local writer, fout = abstractWriter.getWriterAndFout(outputFileStruct)
-        writer.writeFooter(fout)
+        writer.writeFooter(fout, results)
     end
 end
 
-function abstractWriter.writeSuiteStart(results, testName)
+function abstractWriter.writeSuiteStart(testSuite)
     for _, outputFileStruct in pairs(abstractWriter.outputFileStructs) do
         local writer, fout = abstractWriter.getWriterAndFout(outputFileStruct)
-        writer.writeSuiteStart(fout, results, testName)
+        writer.writeSuiteStart(fout, testSuite)
     end
 end
 
-function abstractWriter.writeSuiteEnd(results, testName, test)
+function abstractWriter.writeSuiteEnd(testSuite)
     for _, outputFileStruct in pairs(abstractWriter.outputFileStructs) do
         local writer, fout = abstractWriter.getWriterAndFout(outputFileStruct)
-        writer.writeSuiteEnd(fout, results, testName, test)
+        writer.writeSuiteEnd(fout, testSuite)
     end
 end
 
-function abstractWriter.writeCaseStart(results, testName, functionName)
+function abstractWriter.writeCaseStart(testCaseInfo)
     for _, outputFileStruct in pairs(abstractWriter.outputFileStructs) do
         local writer, fout = abstractWriter.getWriterAndFout(outputFileStruct)
-        writer.writeCaseStart(fout, results, testName, functionName)
+        writer.writeCaseStart(fout, testCaseInfo)
     end
 end
 
-function abstractWriter.writeCaseEnd(results, testName)
+function abstractWriter.writeCaseEnd(testCaseInfo)
     for _, outputFileStruct in pairs(abstractWriter.outputFileStructs) do
         local writer, fout = abstractWriter.getWriterAndFout(outputFileStruct)
-        writer.writeCaseEnd(fout, results, testName)
+        writer.writeCaseEnd(fout, testCaseInfo)
     end
 end
 
-function abstractWriter.writeTestPass(results, testName, testFunctionName, message)
+function abstractWriter.writeTestPass(testName, message)
     for _, outputFileStruct in pairs(abstractWriter.outputFileStructs) do
         local writer, fout = abstractWriter.getWriterAndFout(outputFileStruct)
-        writer.writeTestPass(fout, results, testName, testFunctionName, message)
+        writer.writeTestPass(fout, testName, message)
     end
 end
 
-function abstractWriter.writeTestFail(results, testName, testFunctionName, message)
+function abstractWriter.writeTestFail(testName, message)
     for _, outputFileStruct in pairs(abstractWriter.outputFileStructs) do
         local writer, fout = abstractWriter.getWriterAndFout(outputFileStruct)
-        writer.writeTestFail(fout, results, testName, testFunctionName, message)
+        writer.writeTestFail(fout, testName, message)
     end
 end
 
-function abstractWriter.writeTestInfo(results, testName, testFunctionName, message)
+function abstractWriter.writeTestInfo(testName, message)
     for _, outputFileStruct in pairs(abstractWriter.outputFileStructs) do
         local writer, fout = abstractWriter.getWriterAndFout(outputFileStruct)
-        writer.writeTestInfo(fout, results, testName, testFunctionName, message)
+        writer.writeTestInfo(fout, testName, message)
     end
 end
 
-function abstractWriter.writeTestError(results, testName, testFunctionName, message)
+function abstractWriter.writeTestError(testName, message)
     for _, outputFileStruct in pairs(abstractWriter.outputFileStructs) do
         local writer, fout = abstractWriter.getWriterAndFout(outputFileStruct)
-        writer.writeTestError(fout, results, testName, testFunctionName, message)
+        writer.writeTestError(fout, testName, message)
     end
 end
 

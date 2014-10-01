@@ -26,7 +26,7 @@ local core = {
 --
 -- Update filename containing the test to the proper test name.
 --
-function core.updateTestName(filename)
+function core.updateTestSuiteName(filename)
     -- TODO: what to do with files w/o .lua extensions? simply ignore them?
     if filename:endsWith(".lua") then
         -- try to find the last / in the path + filename
@@ -207,7 +207,7 @@ end
 --
 --
 function core.printTestInfo(scriptDirectory, filename, verboseOperation)
-    local testName = core.updateTestName(filename)
+    local testName = core.updateTestSuiteName(filename)
     if testName then
         core.checkTestNameShadowing(testName)
         dofile(scriptDirectory .. "test/" .. filename)
@@ -238,6 +238,10 @@ function registerFailMessage(message)
     table.insert(core.messages, {"FAIL", message})
 end
 
+function registerInfoMessage(message)
+    table.insert(core.messages, {"INFO", message})
+end
+
 --
 --
 --
@@ -252,7 +256,7 @@ end
 function dumpTestResults()
     print("OK: " .. core.results.passedTests)
     print("Failed: " .. core.results.failedTests)
-    for i,test in ipairs(core.results.tests) do
+    for i,test in ipairs(core.results.suites) do
         print(i, test.name)
         local methods = test.methods
         for j,method in ipairs(methods) do
@@ -269,36 +273,69 @@ function dumpTestResults()
     end
 end
 
+function fillInTestMetadata(testSuite, testSuiteName)
+    local test = _G[testSuiteName]
+    if not test then
+        return
+    end
+    local metadata = test["metadata"]
+    if metadata then
+        testSuite.description = metadata["description"] or "not set"
+        testSuite.authors = metadata["authors"] or "not set"
+        testSuite.emails = metadata["emails"] or "not set"
+        testSuite.modified = metadata["changed"] or "not set"
+        testSuite.tags = metadata["tags"] or "not set"
+    else
+        testSuite.description = "not set"
+        testSuite.authors = "not set"
+        testSuite.emails = "not set"
+        testSuite.modified = "not set"
+        testSuite.tags = "not set"
+    end
+end
+
+function filterMessages(messages, filter)
+    local cnt = 0
+    for _, message in ipairs(messages) do
+        if message[1] == filter then
+            cnt = cnt + 1
+        end
+    end
+    return cnt
+end
+
 --
 --
 --
 function core.runTest(scriptDirectory, filename, verboseOperation)
-    local testName = core.updateTestName(filename)
-    if testName then
-        local testResults = {}
-        testResults.name = testName
+    local testSuiteName = core.updateTestSuiteName(filename)
+    if testSuiteName then
+        local testSuite = {}
+        testSuite.name = testSuiteName
+        core.checkTestNameShadowing(testSuiteName)
 
-        core.checkTestNameShadowing(testName)
         if scriptDirectory then
             if verboseOperation then
                 print("Script directory/filename: " .. scriptDirectory .. "test/" .. filename)
-                print("Test name: " ..testName)
+                print("Test name: " ..testSuiteName)
             end
             dofile(scriptDirectory .. "test/" .. filename)
         else
             if verboseOperation then
-                print("Script filename: " .. filename .. "test/" .. filename)
-                print("Test name: " ..testName)
+                print("Script filename: " .. scriptDirectory .. "test/" .. filename)
+                print("Test name: " ..testSuiteName)
             end
             dofile(filename)
         end
 
-        local setupFunction = core.getSetupFunction(testName)
-        local tearDownFunction = core.getTearDownFunction(testName)
-        local testFunctionNames = core.getListOfTestFunctionNames(testName)
+        fillInTestMetadata(testSuite, testSuiteName)
+
+        local setupFunction = core.getSetupFunction(testSuiteName)
+        local tearDownFunction = core.getTearDownFunction(testSuiteName)
+        local testFunctionNames = core.getListOfTestFunctionNames(testSuiteName)
 
         if testFunctionNames or setupFunction or tearDownFunction then
-            print(testName)
+            print(testSuiteName)
             print()
             if setupFunction then
                 if verboseOperation then
@@ -315,17 +352,19 @@ function core.runTest(scriptDirectory, filename, verboseOperation)
             end
             local passCnt = 0
             local failCnt = 0
+            local errorCnt = 0
             local methods = {}
             for i,testFunctionName in ipairs(testFunctionNames) do
                 local method = {}
                 method.name = testFunctionName
+
                 core.messages = {}
                 method.result = nil
 
                 print("  " .. testFunctionName .. "\n")
 
                 currentTestFailure = false
-                local testFunction = _G[testName][testFunctionName]
+                local testFunction = _G[testSuiteName][testFunctionName]
                 local status, message = pcall(testFunction)
                 if status and not currentTestFailure then
                     if verboseOperation then
@@ -337,12 +376,19 @@ function core.runTest(scriptDirectory, filename, verboseOperation)
                     if message then
                         print("       " .. message)
                         table.insert(core.messages, {"ERROR", message})
+                        errorCnt = errorCnt + 1
+                        method.result = "ERROR"
+                    else
+                        failCnt = failCnt + 1
+                        method.result = "FAIL"
                     end
-                    failCnt = failCnt + 1
-                    method.result = "FAIL"
                 end
                 print()
                 method.messages = table.copy(core.messages)
+                method.pass = filterMessages(method.messages, "PASS")
+                method.fail = filterMessages(method.messages, "FAIL")
+                method.info = filterMessages(method.messages, "INFO")
+                method.errors = filterMessages(method.messages, "ERROR")
                 table.insert(methods, method)
             end
             if tearDownFunction then
@@ -360,16 +406,18 @@ function core.runTest(scriptDirectory, filename, verboseOperation)
             end
             print("  Summary:")
             print()
-            print("    Total:  " .. (passCnt+failCnt))
             print("    Passed: " .. passCnt)
             print("    Failed: " .. failCnt)
+            print("    Errors: " .. errorCnt)
+            print("    Total:  " .. (passCnt+failCnt+errorCnt))
             print()
-            testResults.passCnt = passCnt
-            testResults.failCnt = failCnt
-            testResults.total   = passCnt + failCnt
-            testResults.methods = methods
-            table.insert(core.results.tests, testResults)
-            return failCnt == 0
+            testSuite.passCount  = passCnt
+            testSuite.failCount  = failCnt
+            testSuite.errorCount = errorCnt
+            testSuite.total   = passCnt + failCnt + errorCnt
+            testSuite.methods = methods
+            table.insert(core.results.suites, testSuite)
+            return failCnt == 0 and errorCnt == 0
         end
     end
     return nil
@@ -446,31 +494,31 @@ function exportResults(outputFiles)
     core.writer.outputFileStructs = outputFiles
     core.writer.writeHeader(results)
 
-    for i,test in ipairs(results.tests) do
-        local testName = test.name
-        local methods = test.methods
-        core.writer.writeSuiteStart(results, testName)
+    for i,testSuite in ipairs(results.suites) do
+        local testName = testSuite.name
+        local testCases = testSuite.methods
+        core.writer.writeSuiteStart(testSuite)
 
-        for j,method in ipairs(methods) do
-            local testFunctionName = method.name
-            core.writer.writeCaseStart(results, testName, testFunctionName)
-            for _,message in ipairs(method.messages) do
+        for j,testCase in ipairs(testCases) do
+            core.writer.writeCaseStart(testCase)
+            for _,message in ipairs(testCase.messages) do
                 local status = message[1]
+                local messageText = message[2]
                 if status == "PASS" then
-                    core.writer.writeTestPass(results, testName, testFunctionName, message[2])
+                    core.writer.writeTestPass(testName, message)
                 elseif status == "FAIL" then
-                    core.writer.writeTestFail(results, testName, testFunctionName, message[2])
+                    core.writer.writeTestFail(testName, message)
                 elseif status == "INFO" then
-                    core.writer.writeTestInfo(results, testName, testFunctionName, message[2])
+                    core.writer.writeTestInfo(testName, message)
                 elseif status == "ERROR" then
-                    if message[2] then
-                    core.writer.writeTestError(results, testName, testFunctionName, message[2])
+                    if messageText then
+                        core.writer.writeTestError(testName, message)
                     end
                 end
             end
-            core.writer.writeCaseEnd(results, testName)
+            core.writer.writeCaseEnd(testCase)
         end
-        core.writer.writeSuiteEnd(results, testName, test)
+        core.writer.writeSuiteEnd(testSuite)
     end
     core.writer.writeFooter(results)
 
@@ -483,7 +531,7 @@ end
 function core.runTests(verboseOperation, colorOutput, testsToRun, outputFiles)
     core.results.passedTests = 0
     core.results.failedTests = 0
-    core.results.tests = {}
+    core.results.suites = {}
 
     if testsToRun and #testsToRun > 0 then
         for i, filename in ipairs(testsToRun) do
