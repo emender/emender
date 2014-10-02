@@ -140,11 +140,7 @@ end
 
 function getTags(testSuite)
     if type(testSuite.tags) == "table" then
-        local tagsStr = ""
-        for _,tag in ipairs(testSuite.tags) do
-             tagsStr = tagsStr .. tag .. " "
-        end
-        return tagsStr
+        return table.concat(testSuite.tags, ", ")
     else
         return testSuite.tags
     end
