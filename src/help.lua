@@ -22,6 +22,7 @@ function help.showHelp()
 Usage: emend [-clsv] [FILE...]
        emend [-c] -h|-V|-L
 
+-o, --output file   stores a detailed report to the file named "file" (.xml, .html and .txt files are supported)
 -l, --list          list available tests and exit
 -s, --summary       suppress detailed test results and print only summaries
 -c, --color         enable colored output

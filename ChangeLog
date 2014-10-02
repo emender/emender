@@ -1,5 +1,10 @@
 2014-10-02  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* src/help.lua:
+	Added help for -o and --output CLI options.
+
+2014-10-02  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* src/common/asserts.lua:
 	Fixed function that reports errors in the text structure.
 
