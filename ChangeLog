@@ -1,5 +1,10 @@
 2014-10-02  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* emend:
+	Register text writer.
+
+2014-10-02  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* src/help.lua:
 	Added help for -o and --output CLI options.
 
