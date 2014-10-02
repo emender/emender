@@ -28,7 +28,27 @@ end
 -- and/or have an improper type.
 --
 function report_error_in_test_structure(message)
-    error("Test structure error: " .. message, 3)
+    -- We need to acquire the exact name of the test function.
+    -- This is not trivial because this function is never called
+    -- from the test itself, so we need to figure out caller and
+    -- the "distance" between the test function and this function.
+    -- The given approach is a bit naive, but it works :)
+    local stackDepth = 3
+    if debug then
+        -- typical chain is:
+        -- test->is_true()->report_error_in_test_structure()
+        -- or
+        -- test->is_equal()->is_true()->report_error_in_test_structure()
+        -- we need to check the latter possibility
+        local debugInfo = debug.getinfo(3)
+        if debugInfo then
+            local callerSrc = debugInfo.short_src
+            if callerSrc and callerSrc:endsWith("asserts.lua") then
+                stackDepth = stackDepth + 2
+            end
+        end
+    end
+    error("Test structure error: " .. message, stackDepth)
 end
 
 

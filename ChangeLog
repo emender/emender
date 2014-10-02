@@ -1,5 +1,10 @@
 2014-10-02  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* src/common/asserts.lua:
+	Fixed function that reports errors in the text structure.
+
+2014-10-02  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* src/writers/htmlWriter.lua:
 	Added missing licence text to htmlWriter.lua.
 
