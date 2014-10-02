@@ -1,3 +1,8 @@
+2014-10-02  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* src/writers/textWriter.lua:
+	Added text writer.
+
 2014-10-01  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* src/writers/htmlWriter.lua:
