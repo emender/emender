@@ -44,7 +44,37 @@ function getTabBodyHeader()
 ]]
 end
 
-function writeLeftTab(fout, results, failedTests)
+function createGraph(fout, passedTests, failedTests)
+    fout:write([[
+<div id="status_graph" style="width:230px;height:230px;"></div>
+<script type="text/javascript">
+
+    // Fill series.
+    var d1 = [ [0, ]] .. passedTests .. [[ ] ];
+    var d2 = [ [0, ]] .. failedTests .. [[ ] ];
+
+    //Draw the graph.
+    var f = Flotr.draw($('status_graph'), [
+        {data:d1, label: 'Passed'},
+        {data:d2, label: 'Failed'}], {
+            HtmlText: false, 
+            grid: {
+                verticalLines: false, 
+                horizontalLines: false
+            },
+            xaxis: {showLabels: false},
+            yaxis: {showLabels: false}, 
+            pie: {show: true},
+            legend:{
+                position: 'ne',
+                backgroundColor: '#D2E8FF'
+            }
+    });
+</script>
+]])
+end
+
+function writeLeftTab(fout, results, passedTests, failedTests)
     local testSuites = results.suites
     local failed = failedTests > 0
     for i, testSuite in ipairs(testSuites) do
@@ -64,6 +94,7 @@ function writeLeftTab(fout, results, failedTests)
         fout:write("          </li>\n")
     end
     fout:write("        </ul>\n")
+    createGraph(fout, passedTests, failedTests)
     fout:write("      </div>\n")
 end
 
@@ -78,6 +109,15 @@ function htmlWriter.writeHeader(fout, results)
   <link href="bootstrap/bootstrap.vertical-tabs.css" rel="stylesheet" type="text/css" />
   <link href="yoana.css" rel="stylesheet" type="text/css" />
   <title>Emender Test Suite</title>
+        <script type="text/javascript" src="flotr/lib/prototype-1.6.0.2.js"></script>
+        
+        <!--[if IE]>
+            <script type="text/javascript" src="../flotr/lib/excanvas.js"></script>
+            <script type="text/javascript" src="../flotr/lib/base64.js"></script>
+        <![endif]-->
+        <script type="text/javascript" src="flotr/lib/canvas2image.js"></script>
+        <script type="text/javascript" src="flotr/lib/canvastext.js"></script>
+        <script type="text/javascript" src="flotr/flotr-0.2.0-alpha.js"></script>
 </head>
 <body>
   <div class="container-fluid main-container">
@@ -94,7 +134,7 @@ function htmlWriter.writeHeader(fout, results)
         <!-- Nav tabs -->
         <ul class="nav nav-tabs tabs-left">
 ]])
-    writeLeftTab(fout, results, failedTests)
+    writeLeftTab(fout, results, passedTests, failedTests)
     fout:write(getTabBodyHeader())
 end
 

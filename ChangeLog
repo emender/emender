@@ -1,5 +1,16 @@
 2014-10-02  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* files/flotr/flotr-0.2.0-alpha.js:
+	* files/flotr/lib/base64.js:
+	* files/flotr/lib/canvas2image.js:
+	* files/flotr/lib/canvastext.js:
+	* files/flotr/lib/excanvas.js:
+	* files/flotr/lib/prototype-1.6.0.2.js:
+	* src/writers/htmlWriter.lua:
+	Added support for rendering simple graph with overall results.
+
+2014-10-02  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* emend:
 	Register text writer.
 
