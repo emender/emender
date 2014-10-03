@@ -1,5 +1,11 @@
 2014-10-03  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* examples/check_tracer_many_test_errors.sh:
+	* examples/run_assertion_pass.sh:
+	Two more examples added.
+
+2014-10-03  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* emend:
 	Added function that prints Emender configuration.
 
