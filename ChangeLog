@@ -1,5 +1,10 @@
 2014-10-03  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* src/common/gendoc.lua:
+	Added stub for documentation generator.
+
+2014-10-03  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* src/common/fileio.lua:
 	Added licence text (I forget about that all the time :).
 
