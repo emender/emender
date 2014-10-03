@@ -1,3 +1,8 @@
+2014-10-03  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* src/common/fileio.lua:
+	Added module with functions for file I/O operations used elsewhere in the Emender.
+
 2014-10-02  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* files/flotr/flotr-0.2.0-alpha.js:
