@@ -80,6 +80,25 @@ function checkForUnknownOptions(options)
     end
 end
 
+function printConfiguration(outputFileNames, outputFiles, testsToRun)
+    print("Tests to run:")
+    for _, testToRun in ipairs(testsToRun) do
+        print("", testToRun)
+    end
+    print()
+
+    print("Output file names:")
+    for _, outputFileName in ipairs(outputFileNames) do
+        print("", outputFileName)
+    end
+    print()
+
+    print("Output files:")
+    for format, file in pairs(outputFiles) do
+        print("", format, file[1])
+    end
+    print()
+end
 
 function registerWriters()
     abstractWriter.writers["html"] = htmlWriter
@@ -111,6 +130,10 @@ function main(arg)
 
     if tracingOn then
         tracer.enable()
+    end
+
+    if verboseOperations then
+        printConfiguration(outputFileNames, outputFiles, testsToRun)
     end
 
     logger.setColorOutput(colorOutput)

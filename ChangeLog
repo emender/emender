@@ -1,5 +1,10 @@
 2014-10-03  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* emend:
+	Added function that prints Emender configuration.
+
+2014-10-03  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* src/common/gendoc.lua:
 	Added stub for documentation generator.
 
