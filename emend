@@ -10,6 +10,7 @@ local version = nil
 local asserts = nil
 local logger = nil
 local tracer = nil
+local gendoc = nil
 local abstractWriter = nil
 local htmlWriter = nil
 local xmlWriter = nil
@@ -54,10 +55,12 @@ function loadModules()
     asserts = require("src/common/asserts")
     logger = require("src/common/logger")
     tracer = require("src/common/tracer")
+    gendoc = require("src/common/gendoc")
     abstractWriter = require("src/writers/abstractWriter")
     htmlWriter = require("src/writers/htmlWriter")
     xmlWriter = require("src/writers/xmlWriter")
     textWriter = require("src/writers/textWriter")
+    require("src/common/fileio")
     require("src/common/string")
     require("src/common/table")
 end
