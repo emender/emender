@@ -1,5 +1,10 @@
 2014-10-06  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* src/selftest/luaVersionChecker.lua:
+	Added licence text.
+
+2014-10-06  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* src/writers/abstractWriter.lua:
 	Added licence text.
 
