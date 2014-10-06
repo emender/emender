@@ -1,5 +1,10 @@
 2014-10-06  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* src/core.lua:
+	Minor update.
+
+2014-10-06  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* src/selftest/toolsChecker.lua:
 	Added licence text.
 
