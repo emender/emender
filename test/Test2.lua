@@ -1,3 +1,5 @@
+-- Test2.lua - check that docunit core works correctly.
+-- Copyright (C) 2014 Pavel Tisnovsky
 --
 -- This file is part of Emender.
 --
@@ -17,7 +19,7 @@
 Test2 = {
     -- required field
     metadata = {
-        description = "This is the second test",
+        description = "Check that docunit core works correctly.",
         authors = "Pavel Tisnovsky",
         emails = "ptisnovs@redhat.com",
         changed = "2014-08-25",
@@ -26,27 +28,53 @@ Test2 = {
     -- any other values are arbitrary
     val = 42}
 
+--
+-- Comment bound to the function Test2.testA().
+--
 function Test2.testA()
-    print("\tTest2.testA()")
+    pass("The function Test2.testA() is called properly.")
 end
 
+--
+-- Comment bound to the function Test2.testB().
+--
 function Test2.testB()
-    print("\tTest2.testB()")
+    pass("The function Test2.testB() is called properly.")
 end
 
 function Test2.xyzzy()
-    print(self.val)
+    pass("The function Test2.xyzzy() is called from another function.")
 end
 
 function Test2.foo()
-    print("This method should not be called from the tool core!")
+    fail("This method should not be called from the tool core!")
 end
 
 function Test2.bar()
+    fail("This method should not be called from the tool core!")
     self:foo()
 end
 
-function Test2.testLocalValue()
-    print("\t" .. Test2.val)
+-- This is one line comment.
+function Test2.testReadLocalValue()
+    pass("Local variable bind to the test has the value " .. Test2.val)
+end
+
+--
+-- This
+-- is
+-- multiline
+-- comment.
+--
+function Test2.testCallOtherFunction()
+    Test2.xyzzy()
+end
+
+function Test2.testReadWriteLocalValue()
+    is_true(Test2.val == 42, "Old value is properly set to 42")
+    print("\tOld value: " .. Test2.val)
+    Test2.val = 6502
+    is_true(Test2.val == 6502, "New value is properly set to 42")
+    print("\tNew value: " .. Test2.val)
 end
 

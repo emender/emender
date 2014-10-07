@@ -1,3 +1,8 @@
+2014-10-07  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* test/Test2.lua:
+	Updated Test2.lua.
+
 2014-10-06  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* src/core.lua:
