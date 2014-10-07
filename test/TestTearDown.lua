@@ -1,3 +1,5 @@
+-- TestTearDown.lua - Check that docunit core works correctly
+-- Copyright (C) 2014 Pavel Tisnovsky
 --
 -- This file is part of Emender.
 --
@@ -26,14 +28,14 @@ TestTearDown = {
 }
 
 function TestTearDown.testA()
-    print("\tTestTearDown.testA()")
+    pass("TestTearDown.testA()")
 end
 
 function TestTearDown.testB()
-    print("\tTestTearDown.testB()")
+    pass("TestTearDown.testB()")
 end
 
 function TestTearDown.tearDown()
-    print("\tTearDown() function called")
+    pass("tearDown() function properly called.")
 end
 
