@@ -25,7 +25,10 @@ TestTearDownOnly = {
     }
 }
 
+--
+-- The only function defined in this test.
+--
 function TestTearDownOnly.tearDown()
-    print("\ttearDown() function called")
+    pass("tearDown() function properly called.")
 end
 

@@ -1,5 +1,10 @@
 2014-10-07  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* test/TestTearDownOnly.lua:
+	Updated the test TestTearDownOnly.
+
+2014-10-07  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* test/TestEmpty.lua:
 	Added new test TestEmpty into the project.
 
