@@ -1,6 +1,11 @@
 2014-10-07  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* test/TestTearDownOnly.lua:
+	Further improvements of TestTearDownOnly.lua.
+
+2014-10-07  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* test/TestTearDownOnly.lua:
 	Updated the test TestTearDownOnly.
 
 2014-10-07  Pavel Tisnovsky  <ptisnovs@redhat.com>
