@@ -1,3 +1,5 @@
+-- Test1.lua - check for basic Emender functionality
+-- Copyright (C) 2014 Pavel Tisnovsky
 --
 -- This file is part of Emender.
 --
@@ -26,14 +28,14 @@ TestSetUp = {
 }
 
 function TestSetUp.testA()
-    print("\tTestSetUp.testA()")
+    pass("TestSetUp.testA() function properly called.")
 end
 
 function TestSetUp.testB()
-    print("\tTestSetUp.testB()")
+    pass("TestSetUp.testB() function properly called.")
 end
 
 function TestSetUp.setUp()
-    print("\tsetUp() function called")
+    pass("setUp() function properly called.")
 end
 
