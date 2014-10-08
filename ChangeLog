@@ -1,5 +1,10 @@
 2014-10-08  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* test/Test100Passes1Fail.lua:
+	Added new test into common testcases.
+
+2014-10-08  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* test/TestSetUp.lua:
 	* test/TestSetUpOnly.lua:
 	* test/TestSetUpTearDownOnly.lua:
