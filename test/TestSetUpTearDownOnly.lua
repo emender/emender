@@ -1,3 +1,5 @@
+-- TestSetUpTearDownOnly - Check that docunit core works correctly - test contains setUp() and tearDown() functions only.
+-- Copyright (C) 2014 Pavel Tisnovsky
 --
 -- This file is part of Emender.
 --

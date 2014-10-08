@@ -26,6 +26,6 @@ TestSetUpOnly = {
 }
 
 function TestSetUpOnly.setUp()
-    print("\tsetUp() function called")
+    pass("setUp() function properly called.")
 end
 

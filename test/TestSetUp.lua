@@ -1,4 +1,4 @@
--- Test1.lua - check for basic Emender functionality
+-- TestSetUp.lua - check for basic Emender functionality
 -- Copyright (C) 2014 Pavel Tisnovsky
 --
 -- This file is part of Emender.

@@ -1,5 +1,12 @@
 2014-10-08  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* test/TestSetUp.lua:
+	* test/TestSetUpOnly.lua:
+	* test/TestSetUpTearDownOnly.lua:
+	Minor updates to more tests.
+
+2014-10-08  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* src/TestSetUp.lua:
 	Updated the test TestSetUp.
 
