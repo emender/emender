@@ -1,5 +1,10 @@
 2014-10-08  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* test/writers/htmlWriter.lua:
+	Fixed percentage computation.
+
+2014-10-08  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* test/Test100Failures1Pass.lua:
 	Added new test into common testcases.
 

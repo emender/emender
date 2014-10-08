@@ -188,8 +188,13 @@ function computeSuitePercantages(testSuite)
         passPerc = passPerc + 1
     end
 
-    if passPerc ~= passPerc then passPerc = 0 end
-    if failPerc ~= failPerc then failPerc = 0 end
+    if passPerc == 100 and failed > 0 then
+        passPerc = passPerc - 1
+        failPerc = failPerc + 1
+    end
+
+    if passPerc ~= passPerc   then passPerc = 0 end
+    if failPerc ~= failPerc   then failPerc = 0 end
     if errorPerc ~= errorPerc then errorPerc = 0 end
 
     return passPerc, failPerc, errorPerc
@@ -307,6 +312,11 @@ function computeCasePercentages(testCase)
     end
     if passPerc + infoPerc + failPerc < 100 then
         passPerc = passPerc + 1
+    end
+
+    if passPerc == 100 and fail > 0 then
+        passPerc = passPerc - 1
+        failPerc = failPerc + 1
     end
 
     if passPerc ~= passPerc then passPerc = 0 end
