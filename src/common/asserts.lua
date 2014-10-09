@@ -17,14 +17,21 @@
 
 
 
+--
+-- Function that could be called from the core (or possibly directly from the
+-- test) to report error. Please note that error is usually a bit different
+-- from the test failure reported via the fail() function.
+--
 function report_error(message)
+    -- to be caught by a pcall()
     error("Assertion error: " .. message)
 end
 
 
+
 --
 -- Report a serious error in the test structure.
--- This type of error is reported when some parameters are missing
+-- This type of error is reported when some required parameters are missing
 -- and/or have an improper type.
 --
 function report_error_in_test_structure(message)
@@ -32,8 +39,9 @@ function report_error_in_test_structure(message)
     -- This is not trivial because this function is never called
     -- from the test itself, so we need to figure out caller and
     -- the "distance" between the test function and this function.
-    -- The given approach is a bit naive, but it works :)
+    -- The given approach is a bit naive, but it seems to work :)
     local stackDepth = 3
+    -- perform this step only when debug module is available and loaded ATM
     if debug then
         -- typical chain is:
         -- test->is_true()->report_error_in_test_structure()
@@ -43,6 +51,7 @@ function report_error_in_test_structure(message)
         local debugInfo = debug.getinfo(3)
         if debugInfo then
             local callerSrc = debugInfo.short_src
+            -- check the caller
             if callerSrc and callerSrc:endsWith("asserts.lua") then
                 stackDepth = stackDepth + 2
             end
@@ -425,6 +434,8 @@ function pass(explanation)
         report_error_in_test_structure("Explanation must be a string.")
         return
     end
+
+    -- test structure is ok, let register status with its message
     print("    PASSED  " .. explanation)
     registerPassMessage(explanation)
 end
@@ -451,6 +462,7 @@ function fail(explanation)
         return
     end
 
+    -- test structure is ok, let register status with its message
     print("    FAILED  " .. explanation)
     registerFailMessage(explanation)
     -- test harness needs to be informed that the test fail
