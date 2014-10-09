@@ -1,5 +1,10 @@
 2014-10-09  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* test/TestComments.lua:
+	Added test for check the behaviour of docunit.
+
+2014-10-09  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* test/TestAssertionWarn.lua:
 	Added test to check the behaviour of warn() function.
 
