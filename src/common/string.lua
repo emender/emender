@@ -66,3 +66,59 @@ function string.trim(str)
     end
 end
 
+--
+-- Breaks lines at word boundaries, indents the text and aligns it along
+-- the left margin:
+--
+function string.alignLeft(str, width, indent, first_indent)
+    width = width or 75
+    indent = indent or 0
+    first_indent = first_indent or indent
+
+    local line_length = 0
+
+    local result = string.gsub(str, "(%s*)(%S+)",
+        function (space, word)
+            local word_length = string.len(word)
+            local space_length = string.len(space)
+
+            if line_length == 0 then
+                line_length = first_indent + word_length
+                return string.rep(" ", first_indent) .. word
+            end
+
+            if line_length + space_length + word_length > width then
+                line_length = indent + word_length
+                return "\n" .. string.rep(" ", indent) .. word
+            end
+
+            line_length = line_length + space_length + word_length
+
+            return space .. word
+        end
+    )
+
+    return result
+end
+
+--
+-- Breaks lines at word boundaries, indents the text and aligns it along
+-- the right margin:
+--
+function string.alignRight(str, width, indent, first_indent)
+    width = width or 75
+
+    local result= string.gsub(string.alignLeft(str), "([^\r\n]+)",
+        function (line)
+            local line_length = string.len(line)
+
+            if line_length < width then
+                return string.rep(" ", width - line_length) .. line
+            end
+
+            return line
+        end
+    )
+
+    return result
+end
