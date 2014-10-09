@@ -1,5 +1,10 @@
 2014-10-09  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* test/TestAssertionWarn.lua:
+	Added test to check the behaviour of warn() function.
+
+2014-10-09  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* src/common/asserts.lua:
 	Added comments in fileio module.
 
