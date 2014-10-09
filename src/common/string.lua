@@ -106,9 +106,7 @@ end
 -- the right margin:
 --
 function string.alignRight(str, width, indent, first_indent)
-    width = width or 75
-
-    local result= string.gsub(string.alignLeft(str), "([^\r\n]+)",
+    local result = string.gsub(string.alignLeft(str, width, indent, first_indent), "([^\r\n]+)",
         function (line)
             local line_length = string.len(line)
 
