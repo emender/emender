@@ -120,3 +120,22 @@ function string.alignRight(str, width, indent, first_indent)
 
     return result
 end
+
+--
+-- Breaks lines at word boundaries, indents the text and centers it:
+--
+function string.alignCenter(str, width, indent, first_indent)
+    local result = string.gsub(string.alignLeft(str, width, indent, first_indent), "([^\r\n]+)",
+        function (line)
+            local line_length = string.len(line)
+
+            if line_length < width then
+                return string.rep(" ", (width - line_length) / 2) .. line
+            end
+
+            return line
+        end
+    )
+
+    return result
+end
