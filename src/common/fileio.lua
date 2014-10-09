@@ -18,14 +18,15 @@
 
 
 --
--- Writes string into the text file.
+-- Writes a string into the text file.
 --
 -- Returns true if everything is ok, nil instead.
+-- (nil is evaluated as a false value in most cases)
 --
 function spit(fileName, content)
     local fout = io.open(fileName, "w")
 
-    -- if file could be opened
+    -- if file could be opened for writing into it
     if fout then
         fout:write(content)
 
@@ -34,8 +35,10 @@ function spit(fileName, content)
             return nil
         end
 
+        -- open & write & close seems to be ok
         return true
     end
+    -- file can't be opened
     return nil
 end
 
@@ -45,11 +48,12 @@ end
 -- Writes table of strings into the text file.
 --
 -- Returns true if everything is ok, nil instead.
+-- (nil is evaluated as a false value in most cases)
 --
 function spitTable(fileName, content)
     local fout = io.open(fileName, "w")
 
-    -- if file could be opened
+    -- if file could be opened for writing into it
     if fout then
         for _, line in ipairs(content) do
             fout:write(line)
@@ -61,8 +65,10 @@ function spitTable(fileName, content)
             return nil
         end
 
+        -- open & write & close seems to be ok
         return true
     end
+    -- file can't be opened
     return nil
 end
 
@@ -72,6 +78,7 @@ end
 -- Reads whole (presumably text) file into the string.
 --
 -- Returns string read from the file, or nil in case of any I/O error.
+-- (nil is evaluated as a false value in most cases)
 --
 function slurp(fileName)
     local fin = io.open(fileName, "r")
@@ -93,6 +100,7 @@ end
 --
 -- Returns table of strings read from the file, or nil
 -- in case of any I/O error.
+-- (nil is evaluated as a false value in most cases)
 --
 function slurpTable(fileName)
     local content = {}

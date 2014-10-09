@@ -1,5 +1,10 @@
 2014-10-09  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* src/common/fileio.lua:
+	Added comments in fileio module.
+
+2014-10-09  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* src/common/asserts.lua:
 	Added warn() function.
 
