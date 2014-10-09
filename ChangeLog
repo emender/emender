@@ -1,3 +1,8 @@
+2014-10-09  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* src/common/asserts.lua:
+	Added warn() function.
+
 2014-10-08  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* test/writers/htmlWriter.lua:

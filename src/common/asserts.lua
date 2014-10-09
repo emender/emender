@@ -457,3 +457,32 @@ function fail(explanation)
     markTestFailure()
 end
 
+
+
+--
+-- The warn() function logs a message without reporting the test as passed
+-- or failed. You can use it to report less important issues or issues you
+-- are not sure about.
+--
+-- Replace explanation with a short description of the test. For example:
+--
+--  warn("This might change in the future.")
+--
+function warn(explanation)
+    -- Verify that <explanation> is specified:
+    if explanation == nil then
+        report_error_in_test_structure("Explanation is a required argument.")
+        return
+    end
+
+    -- Verify that <explanation> is a string:
+    if type(explanation) ~= "string" then
+        report_error_in_test_structure("Explanation must be a string.")
+        return
+    end
+
+    -- test structure is ok, let register status with its message
+    print("    INFO  " .. explanation)
+    registerInfoMessage(explanation)
+end
+
