@@ -1,3 +1,9 @@
+2014-10-10  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* emend:
+	* src/core.lua:
+	Fixed test path resolver.
+
 2014-10-09  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* test/TestComments.lua:

@@ -24,6 +24,14 @@ function getScriptDirectory()
     return string.sub(scriptSrc, 1, scriptNameIndex)
 end
 
+function getCurrentDirectory()
+    local pwd = os.getenv("PWD")
+    if not pwd:endsWith("/") then
+        pwd = pwd .. "/"
+    end
+    return pwd
+end
+
 --
 -- Alter the content of "package.path" to contain the relative path
 -- to "emend" script, because we need to be able to load other modules

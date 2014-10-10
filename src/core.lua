@@ -445,8 +445,9 @@ end
 --
 --
 function getTestList()
-    local scriptDirectory = getScriptDirectory()
-    local command = 'ls -1 '.. scriptDirectory .. "test/*.lua"..'| xargs -n 1 basename'
+    --local scriptDirectory = getScriptDirectory()
+    local currentDirectory = getCurrentDirectory()
+    local command = 'ls -1 '.. currentDirectory .. "test/*.lua"..'| xargs -n 1 basename'
     local process = io.popen(command)
     local testList = process:lines()
     return putTestListIntoTable(testList)
@@ -547,10 +548,11 @@ function core.runTests(verboseOperation, colorOutput, testsToRun, outputFiles)
             end
         end
     else
-        local scriptDirectory = getScriptDirectory()
+        --local scriptDirectory = getScriptDirectory()
+        local currentDirectory = getCurrentDirectory()
         local testList = getTestList()
         for i, filename in ipairs(testList) do
-            local result = core.runTest(scriptDirectory, filename, verboseOperation)
+            local result = core.runTest(currentDirectory, filename, verboseOperation)
             if result ~= nil then
                 if result then
                     core.results.passedTests = core.results.passedTests + 1
