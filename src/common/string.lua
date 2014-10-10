@@ -139,3 +139,20 @@ function string.alignCenter(str, width, indent, first_indent)
 
     return result
 end
+
+--
+-- Aligns two strings along the left and right margin and fills the space
+-- between them with space characters:
+--
+function string.horizontalFill(left_str, right_str, width)
+    width = width or 75
+
+    local left_length = string.len(left_str)
+    local right_length = string.len(right_str)
+
+    if left_length + right_length < width then
+        return left_str .. string.rep(" ", width - left_length - right_length) .. right_str
+    end
+
+    return left_str .. right_str
+end
