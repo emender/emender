@@ -1,5 +1,10 @@
 2014-10-10  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* selfchecks/cleanup.sh:
+	Added cleanup script.
+
+2014-10-10  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* emend:
 	Added licence text.
 
