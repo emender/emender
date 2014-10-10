@@ -20,7 +20,7 @@ TestManPages = {
         description = "Verify that all manual pages are present and valid.",
         authors = "Jaromir Hradilek",
         emails = "jhradilek@redhat.com",
-        changed = "2014-09-11",
+        changed = "2014-10-10",
         tags = {"SmokeTest"}
     },
     requires = {"podlint"}
@@ -28,9 +28,9 @@ TestManPages = {
 
 function TestManPages.setUp()
     TestManPages.pages = {
-        "doc/man/man1/emend.pod",
-        "doc/man/man3/emender.pod",
-        "doc/man/man5/emender_xml.pod"
+        "doc/man/man1/emend.1.pod",
+        "doc/man/man3/emender.3.pod",
+        "doc/man/man5/emender_xml.5.pod"
     }
 end
 
@@ -49,10 +49,10 @@ end
 
 function TestManPages.testValidity()
     for i, name in ipairs(TestManPages.pages) do
-        local f = assert(io.popen("podlint " .. name .. " 2>/dev/null"))
-        local output = f:read("*a")
+        local f = assert(io.popen("podlint " .. name .. " 2>&1"))
+        local output = f:read("*a") or ""
         f:close()
 
-        is_not_type(output, "nil", "Manual page is valid: " .. name)
+        is_equal(output, "", "Manual page is valid: " .. name)
     end
 end
