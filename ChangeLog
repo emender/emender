@@ -1,5 +1,11 @@
 2014-10-10  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* selfchecks/show_version_1.in:
+	* selfchecks/show_version_2.in:
+	Added two self check messages.
+
+2014-10-10  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* selfchecks/selfcheck.sh:
 	Self check script.
 
