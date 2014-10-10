@@ -1,5 +1,10 @@
 2014-10-10  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* selfchecks/selfcheck.sh:
+	Self check script.
+
+2014-10-10  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* selfchecks/cleanup.sh:
 	Added cleanup script.
 
