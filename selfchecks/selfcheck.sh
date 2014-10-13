@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Emender selfcheck - it tries to run Emender using several command
+# Emender selfcheck - this script tries to run Emender using several command
 # line options and check if the output is the same as expected output.
 #
 # This file is part of Emender.
@@ -18,27 +18,40 @@
 # along with Emender.  If not, see <http://www.gnu.org/licenses/>.
 #
 
-# TODO - comments
 
+
+# Counters of all tests, passed tests and failed tests
 test_cnt=0
 pass_cnt=0
 fail_cnt=0
 
+
+
+# Run Emender by using various CLI options and export output
 function runTests {
     ../emend -V        > show_version_1.out
     ../emend --version > show_version_2.out
 }
 
+
+
+# Prepare log file containing all error messages
 function prepareErrorFile {
     echo -n "" > errors.txt
 }
 
+
+
+# Compare Emender output with the expected results
 function compareResults {
+    # loop over all .in files with expected results
     for expected_file_name in *.in
     do
+        # get only basename (without extension suffix and/or directory prefix)
         filename=$(basename "${expected_file_name}")
         filename="${filename%.*}"
         diff -u ${expected_file_name} ${filename}.out > ${filename}.diff
+        # check the diff output
         if [[ $? != 0 ]]
         then
             echo ${filename} >> errors.txt
@@ -52,6 +65,9 @@ function compareResults {
     done
 }
 
+
+
+# Print self check summary
 function printSummary {
     echo
     echo "Passed: ${pass_cnt}"
@@ -59,6 +75,9 @@ function printSummary {
     echo "Total:  ${test_cnt}"
 }
 
+
+
+# Run selfcheck
 function run {
     prepareErrorFile
     runTests
@@ -67,4 +86,7 @@ function run {
 }
 
 run
+
+# Only zero test failures means OK!
+exit ${fail_cnt}
 

@@ -1,5 +1,10 @@
 2014-10-13  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* selfchecks/selfcheck.sh:
+	Added comments to this script.
+
+2014-10-13  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* test/TestAssertionIsUnequal.lua:
 	Added (c).
 
