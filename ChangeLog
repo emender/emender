@@ -1,5 +1,10 @@
 2014-10-13  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* test/Test100Passes1Info.lua:
+	Added new test into common testcases.
+
+2014-10-13  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* src/common/gendoc.lua:
 	1st version of documentation generator.
 
