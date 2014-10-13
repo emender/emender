@@ -1,3 +1,8 @@
+2014-10-13  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* src/common/gendoc.lua:
+	1st version of documentation generator.
+
 2014-10-10  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* selfchecks/show_version_1.in:
