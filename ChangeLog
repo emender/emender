@@ -1,5 +1,10 @@
 2014-10-13  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* test/TestAssertionIsUnequal.lua:
+	Added (c).
+
+2014-10-13  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* test/Test100Passes1Info.lua:
 	Added new test into common testcases.
 
