@@ -337,9 +337,12 @@ function core.runTest(scriptDirectory, filename, verboseOperation)
         local testFunctionNames = core.getListOfTestFunctionNames(testSuiteName)
 
         if testFunctionNames or setupFunction or tearDownFunction then
-            print(testSuiteName)
-            print()
+            -- print an information about the test suite that are started
+            -- to the standard output
+            writeTestSuiteStart(io.stdout, testSuite, false)
             if setupFunction then
+                writeSetupStart(io.stdout, false)
+
                 if verboseOperation then
                     print("    SetUp:")
                 end
@@ -363,7 +366,7 @@ function core.runTest(scriptDirectory, filename, verboseOperation)
                 core.messages = {}
                 method.result = nil
 
-                print("  " .. testFunctionName .. "\n")
+                writeCaseStart(io.stdout, method, false)
 
                 currentTestFailure = false
                 local testFunction = _G[testSuiteName][testFunctionName]
@@ -385,7 +388,6 @@ function core.runTest(scriptDirectory, filename, verboseOperation)
                         method.result = "FAIL"
                     end
                 end
-                print()
                 method.messages = table.copy(core.messages)
                 method.pass = filterMessages(method.messages, "PASS")
                 method.fail = filterMessages(method.messages, "FAIL")
@@ -394,6 +396,7 @@ function core.runTest(scriptDirectory, filename, verboseOperation)
                 table.insert(methods, method)
             end
             if tearDownFunction then
+                writeTearDownStart(io.stdout, false)
                 if verboseOperation then
                     print("    TearDown:")
                 end
@@ -406,19 +409,22 @@ function core.runTest(scriptDirectory, filename, verboseOperation)
                     print("       " .. message)
                 end
             end
-            print("  Summary:")
-            print()
-            print("    Passed: " .. passCnt)
-            print("    Failed: " .. failCnt)
-            print("    Errors: " .. errorCnt)
-            print("    Total:  " .. (passCnt+failCnt+errorCnt))
-            print()
             testSuite.passCount  = passCnt
             testSuite.failCount  = failCnt
             testSuite.errorCount = errorCnt
             testSuite.total   = passCnt + failCnt + errorCnt
             testSuite.methods = methods
+
+            -- print an information about the test suite that just finished
+            -- to the standard output
+            writeTestSuiteEnd(io.stdout, testSuite, false)
+
+            -- store results into the core.results table; this table will
+            -- be used by various writers
             table.insert(core.results.suites, testSuite)
+
+            -- return true only when there are no tests that failed or
+            -- can not be run due to other error
             return failCnt == 0 and errorCnt == 0
         end
     end
@@ -563,6 +569,7 @@ function core.runTests(verboseOperation, colorOutput, testsToRun, outputFiles)
         end
     end
 
+    writeSummary(io.stdout, core.results, false)
     --dumpTestResults()
     exportResults(outputFiles)
 end
