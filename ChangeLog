@@ -1,5 +1,11 @@
 2014-10-14  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* emend:
+	* src/common/asserts.lua:
+	Refactored asserts.lua and emend to use commonTextWriter instead of dirty logger.
+
+2014-10-14  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* src/core.lua:
 	Refactored to use commonTextWriter instead of dirty logger.
 
