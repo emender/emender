@@ -1,5 +1,10 @@
 2014-10-14  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* src/writers/textWriter.lua:
+	Refactored to use commonTextWriter.
+
+2014-10-14  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* src/writers/commonTextWriter.lua:
 	Added commonTextWriter that will be used by textWriter and logger.
 
