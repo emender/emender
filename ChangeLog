@@ -1,5 +1,10 @@
 2014-10-14  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* src/selftest/luaVersionChecker.lua:
+	Added comments, minor fixes.
+
+2014-10-14  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* emend:
 	* src/common/asserts.lua:
 	Refactored asserts.lua and emend to use commonTextWriter instead of dirty logger.

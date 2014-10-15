@@ -17,7 +17,9 @@
 
 
 
--- Basic module structure.
+--
+-- Data structure that holds all exported variables and functions
+--
 local luaVersionChecker = {
     MINIMAL_MAJOR_VERSION = 5,
     MINIMAL_MINOR_VERSION = 1
@@ -28,6 +30,7 @@ local luaVersionChecker = {
 --
 -- Try to find a separator (dot) between Lua major version and minor version.
 -- If the separator can't be found, exception is thrown.
+-- TODO: check how this function works in case of LuaJIT
 --
 function luaVersionChecker.getIndexOfDotSeparator(versionString)
     -- % is the escape character in Lua patterns
@@ -44,8 +47,10 @@ end
 
 --
 -- Check the Lua major version.
+-- TODO: check how this function works in case of LuaJIT
 --
 function luaVersionChecker.checkMajorVersion(majorVersion)
+    -- check against the required major version
     if majorVersion < luaVersionChecker.MINIMAL_MAJOR_VERSION then
         error("Wrong Lua version " .. majorVersion .. ". " .. badVersionString)
     end
@@ -55,8 +60,11 @@ end
 
 --
 -- Check the Lua minor version.
+-- TODO: check how this function works in case of LuaJIT
 --
 function luaVersionChecker.checkMinorVersion(majorVersion, minorVersion)
+    -- check against the given minor version, but only in case the
+    -- major version is the same as the required version
     if majorVersionInt == luaVersionChecker.MINIMAL_MAJOR_VERSION and
        minorVersionInt < luaVersionChecker.MINIMAL_MINOR_VERSION then
         error("Wrong Lua version 5." .. minorVersionInt .. ". " .. badVersionString)
@@ -74,6 +82,7 @@ function luaVersionChecker.checkMajorAndMinorVersions(versionString)
                              luaVersionChecker.MINIMAL_MINOR_VERSION ..
                              " is required to use this tool."
 
+    -- find a separator (dot) between Lua major version and minor version.
     local dotIndex = luaVersionChecker.getIndexOfDotSeparator(versionString)
     -- the major version is placed after the "Lua " prefix
     local majorVersionStr = versionString:sub(5, dotIndex - 1)
@@ -103,10 +112,13 @@ end
 --
 function luaVersionChecker.checkLuaVersion()
     local versionString = _VERSION
+
+    -- something very bad happens
     if not versionString then
         error("Can not read _VERSION variable, that might mean that very old Lua is installed.")
     end
 
+    -- TODO: does it work in case of LuaJIT?
     local languageName = versionString:sub(1, 3)
     if languageName ~= "Lua" then
         error("Wrong language name: '" .. languageName .. "' ('Lua' name is expected)")
@@ -117,6 +129,8 @@ end
 
 
 
--- return the full structure if this module
+--
+-- Export the module API
+--
 return luaVersionChecker
 
