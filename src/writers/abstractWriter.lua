@@ -15,11 +15,22 @@
 -- You should have received a copy of the GNU General Public License  along
 -- with this program. If not, see <http://www.gnu.org/licenses/>.
 
+
+
+--
+-- Data structure that holds all exported variables and functions
+--
 local abstractWriter = {
     outputFileStructs = nil,
     writers = {}
 }
 
+
+
+--
+-- This function is to be called from the core only.
+-- Return writer and output file handle for the given output file structure.
+--
 function abstractWriter.getWriterAndFout(outputFileStruct)
     local fileType = outputFileStruct[1]
     local fout     = outputFileStruct[2]
@@ -27,76 +38,151 @@ function abstractWriter.getWriterAndFout(outputFileStruct)
     return abstractWriter.writers[fileType], fout
 end
 
+
+
+--
+-- Called when the whole test is started.
+-- This function calls functions with the same name that should exist for all registered writers.
+--
 function abstractWriter.writeHeader(results)
+    -- loop over all registered writers
     for _, outputFileStruct in pairs(abstractWriter.outputFileStructs) do
         local writer, fout = abstractWriter.getWriterAndFout(outputFileStruct)
         writer.writeHeader(fout, results)
     end
 end
 
+
+
+--
+-- Called when whole test finished.
+-- This function calls functions with the same name that should exist for all registered writers.
+--
 function abstractWriter.writeFooter(results)
+    -- loop over all registered writers
     for _, outputFileStruct in pairs(abstractWriter.outputFileStructs) do
         local writer, fout = abstractWriter.getWriterAndFout(outputFileStruct)
         writer.writeFooter(fout, results)
     end
 end
 
+
+
+--
+-- Called when test suite is started.
+-- This function calls functions with the same name that should exist for all registered writers.
+--
 function abstractWriter.writeSuiteStart(testSuite)
+    -- loop over all registered writers
     for _, outputFileStruct in pairs(abstractWriter.outputFileStructs) do
         local writer, fout = abstractWriter.getWriterAndFout(outputFileStruct)
         writer.writeSuiteStart(fout, testSuite)
     end
 end
 
+
+
+--
+-- Called when test suite finished.
+-- This function calls functions with the same name that should exist for all registered writers.
+--
 function abstractWriter.writeSuiteEnd(testSuite)
+    -- loop over all registered writers
     for _, outputFileStruct in pairs(abstractWriter.outputFileStructs) do
         local writer, fout = abstractWriter.getWriterAndFout(outputFileStruct)
         writer.writeSuiteEnd(fout, testSuite)
     end
 end
 
+
+
+--
+-- Called when test case is started.
+-- This function calls functions with the same name that should exist for all registered writers.
+--
 function abstractWriter.writeCaseStart(testCaseInfo)
+    -- loop over all registered writers
     for _, outputFileStruct in pairs(abstractWriter.outputFileStructs) do
         local writer, fout = abstractWriter.getWriterAndFout(outputFileStruct)
         writer.writeCaseStart(fout, testCaseInfo)
     end
 end
 
+
+
+--
+-- Called when test case finished.
+-- This function calls functions with the same name that should exist for all registered writers.
+--
 function abstractWriter.writeCaseEnd(testCaseInfo)
+    -- loop over all registered writers
     for _, outputFileStruct in pairs(abstractWriter.outputFileStructs) do
         local writer, fout = abstractWriter.getWriterAndFout(outputFileStruct)
         writer.writeCaseEnd(fout, testCaseInfo)
     end
 end
 
+
+
+--
+-- Called for each pass() function.
+-- This function calls functions with the same name that should exist for all registered writers.
+--
 function abstractWriter.writeTestPass(testName, message)
+    -- loop over all registered writers
     for _, outputFileStruct in pairs(abstractWriter.outputFileStructs) do
         local writer, fout = abstractWriter.getWriterAndFout(outputFileStruct)
         writer.writeTestPass(fout, testName, message)
     end
 end
 
+
+
+--
+-- Called for each fail() function.
+-- This function calls functions with the same name that should exist for all registered writers.
+--
 function abstractWriter.writeTestFail(testName, message)
+    -- loop over all registered writers
     for _, outputFileStruct in pairs(abstractWriter.outputFileStructs) do
         local writer, fout = abstractWriter.getWriterAndFout(outputFileStruct)
         writer.writeTestFail(fout, testName, message)
     end
 end
 
+
+
+--
+-- Called for each warn() function.
+-- This function calls functions with the same name that should exist for all registered writers.
+--
 function abstractWriter.writeTestInfo(testName, message)
+    -- loop over all registered writers
     for _, outputFileStruct in pairs(abstractWriter.outputFileStructs) do
         local writer, fout = abstractWriter.getWriterAndFout(outputFileStruct)
         writer.writeTestInfo(fout, testName, message)
     end
 end
 
+
+
+--
+-- Called in case of any error in the test structure.
+-- This function calls functions with the same name that should exist for all registered writers.
+--
 function abstractWriter.writeTestError(testName, message)
+    -- loop over all registered writers
     for _, outputFileStruct in pairs(abstractWriter.outputFileStructs) do
         local writer, fout = abstractWriter.getWriterAndFout(outputFileStruct)
         writer.writeTestError(fout, testName, message)
     end
 end
 
+
+
+--
+-- Write overall results to the standard output.
+--
 function abstractWriter.writeOverallResults(results)
     local passedTests = results.passedTests
     local failedTests = results.failedTests
@@ -111,5 +197,9 @@ function abstractWriter.writeOverallResults(results)
 end
 
 
+
+--
+-- Export the module API
+--
 return abstractWriter
 
