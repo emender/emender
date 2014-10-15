@@ -15,6 +15,11 @@
 -- You should have received a copy of the GNU General Public License  along
 -- with this program. If not, see <http://www.gnu.org/licenses/>.
 
+
+
+--
+-- Data structure that holds all exported variables and functions
+--
 local textWriter = {
 }
 
@@ -74,5 +79,10 @@ function textWriter.writeTestError(fout, testName, message)
     return
 end
 
+
+
+--
+-- Export the module API
+--
 return textWriter
 

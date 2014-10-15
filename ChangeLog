@@ -1,5 +1,10 @@
 2014-10-15  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* src/writers/textWriter.lua:
+	Added comments, minor fixes.
+
+2014-10-15  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* src/selftest/toolsChecker.lua:
 	Added comments, minor fixes.
 
