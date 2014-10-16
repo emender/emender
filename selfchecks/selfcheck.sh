@@ -84,6 +84,9 @@ function printSummary {
     echo "Passed: ${pass_cnt}"
     echo "Failed: ${fail_cnt}"
     echo "Total:  ${test_cnt}"
+    echo "YVALUE=${test_cnt}" >> all_tests.property
+    echo "YVALUE=${pass_cnt}" >> passed_tests.property
+    echo "YVALUE=${fail_cnt}" >> failed_tests.property
 }
 
 
