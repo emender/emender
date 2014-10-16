@@ -1,5 +1,10 @@
 2014-10-16  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* emend:
+	Unknown command line options should be sorted to have the stable output.
+
+2014-10-16  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* src/common/table.lua:
 	Added four useful functions: keys(), values(), sortedKeys() and sortedValues().
 

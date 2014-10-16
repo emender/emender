@@ -104,9 +104,14 @@ function checkForUnknownOptions(options)
             msg = "options are"
         end
         print("Error - unknown " .. msg .. " used on the command line:")
-        for i,v in pairs(unknownOptions) do
-            print("    " .. i)
+
+        -- list all unknown command line options
+        -- for stability we need output to be sorted
+        local sortedUnknownOptions = table.sortedKeys(unknownOptions)
+        for _,v in ipairs(sortedUnknownOptions) do
+            print("    " .. v)
         end
+
         os.exit(1)
     end
 end
