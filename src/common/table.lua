@@ -109,3 +109,77 @@ function table.compare(src, dst)
     end
 end
 
+
+
+--
+-- Return all keys stored in an association array.
+-- Please note that keys are not sorted and values are returned
+-- in "random" order.
+--
+function table.keys(src)
+    -- table used to store all keys
+    local keys = {}
+    local i = 1
+
+    -- loop over the whole table
+    for key, value in pairs(src) do
+        -- put key into the result array
+        keys[i] = key
+        i = i + 1
+    end
+
+    -- return the array containing all keys from the source table
+    return keys
+end
+
+
+
+--
+-- Return all keys stored in an association array.
+-- Keys are sorted.
+--
+function table.sortedKeys(src)
+    -- retrieve array containing all keys from the source table
+    local allKeys = table.keys(src)
+    -- sort that array
+    table.sort(allKeys)
+    return allKeys
+end
+
+
+
+--
+-- Return all values stored in an association array.
+-- Please note that values are not sorted and values are returned
+-- in "random" order.
+--
+function table.values(src)
+    -- table used to store all values
+    local values = {}
+    local i = 1
+
+    -- loop over the whole table
+    for key, value in pairs(src) do
+        -- put value into the result array
+        values[i] = value
+        i = i + 1
+    end
+
+    -- return the array containing all values from the source table
+    return values
+end
+
+
+
+--
+-- Return all values stored in an association array.
+-- Values are sorted.
+--
+function table.sortedValues(src)
+    -- retrieve array containing all keys from the source table
+    local allValues = table.values(src)
+    -- sort that array
+    table.sort(allValues)
+    return allValues
+end
+

@@ -1,5 +1,10 @@
 2014-10-16  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* src/common/table.lua:
+	Added four useful functions: keys(), values(), sortedKeys() and sortedValues().
+
+2014-10-16  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* selfchecks/selfcheck.sh:
 	* selfchecks/show_help_1.in:
 	* selfchecks/show_help_2.in:
