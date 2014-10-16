@@ -1,3 +1,11 @@
+2014-10-16  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* selfchecks/selfcheck.sh:
+	Refactored a bit.
+	* selfchecks/show_license_1.in:
+	* selfchecks/show_license_2.in:
+	Added new selfchecks.
+
 2014-10-15  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* src/writers/abstractWriter.lua:
