@@ -33,6 +33,8 @@ function runTestsForBasicCLI {
     ../emend --version > show_version_2.out
     ../emend -L        > show_license_1.out
     ../emend --license > show_license_2.out
+    ../emend -h        > show_help_1.out
+    ../emend --help    > show_help_2.out
 }
 
 

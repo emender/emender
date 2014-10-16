@@ -1,6 +1,13 @@
 2014-10-16  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* selfchecks/selfcheck.sh:
+	* selfchecks/show_help_1.in:
+	* selfchecks/show_help_2.in:
+	Added two new selfchecks.
+
+2014-10-16  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* selfchecks/selfcheck.sh:
 	Refactored a bit.
 	* selfchecks/show_license_1.in:
 	* selfchecks/show_license_2.in:
