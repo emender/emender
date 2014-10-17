@@ -15,12 +15,22 @@
 -- You should have received a copy of the GNU General Public License  along
 -- with this program. If not, see <http://www.gnu.org/licenses/>.
 
+
+
+--
+-- Data structure that holds all exported variables and functions
+--
 local htmlWriter = {
     testSuiteCounter = 0,
     toggleCounter = 0,
     testCaseCounter = 0
 }
 
+
+
+--
+-- Return string representing HTML table containing overall test results.
+--
 function getOverallResults(allTests, failedTests)
     return [[
       <table id="overall_results">
@@ -36,6 +46,11 @@ function getOverallResults(allTests, failedTests)
 ]]
 end
 
+
+
+--
+-- Return string representing the HTML header of "tab" content.
+--
 function getTabBodyHeader()
     return [[
       <div class="col-xs-9 col-lg-10 tab-body">
@@ -44,6 +59,12 @@ function getTabBodyHeader()
 ]]
 end
 
+
+
+--
+-- Generate JavaScript data structure used to generate graph
+-- on the client side (ie. in WWW browser).
+--
 function createGraph(fout, passedTests, failedTests)
     fout:write([[
 <div id="status_graph" style="width:230px;height:230px;"></div>
@@ -74,6 +95,11 @@ function createGraph(fout, passedTests, failedTests)
 ]])
 end
 
+
+
+--
+-- Write part of HTML that represents tablist on the left side.
+--
 function writeLeftTab(fout, results, passedTests, failedTests)
     local testSuites = results.suites
     local failed = failedTests > 0
@@ -98,6 +124,11 @@ function writeLeftTab(fout, results, passedTests, failedTests)
     fout:write("      </div>\n")
 end
 
+
+
+--
+-- Write HTML header and the first part of HTML body, including tablist on the left side.
+--
 function htmlWriter.writeHeader(fout, results)
     local passedTests = results.passedTests
     local failedTests = results.failedTests
@@ -141,6 +172,11 @@ function htmlWriter.writeHeader(fout, results)
     fout:write(getTabBodyHeader())
 end
 
+
+
+--
+-- Write HTML footer.
+--
 function htmlWriter.writeFooter(fout, results)
     fout:write([[
     <div class="clearfix"></div>
@@ -156,6 +192,11 @@ function htmlWriter.writeFooter(fout, results)
 ]])
 end
 
+
+
+--
+-- Write the test suite "header" to the HTML file.
+--
 function htmlWriter.writeSuiteStart(fout, testSuite)
     htmlWriter.testSuiteCounter = htmlWriter.testSuiteCounter + 1
     if htmlWriter.testSuiteCounter == 1 then
@@ -174,6 +215,11 @@ function htmlWriter.writeSuiteStart(fout, testSuite)
     htmlWriter.testCaseCounter = 0
 end
 
+
+
+--
+--
+--
 function computeSuitePercantages(testSuite)
     local passed = testSuite.passCount
     local failed = testSuite.failCount
@@ -203,6 +249,11 @@ function computeSuitePercantages(testSuite)
     return passPerc, failPerc, errorPerc
 end
 
+
+
+--
+--
+--
 function getTags(testSuite)
     if type(testSuite.tags) == "table" then
         return table.concat(testSuite.tags, ", ")
@@ -211,6 +262,11 @@ function getTags(testSuite)
     end
 end
 
+
+
+--
+-- Write the test suite "footer" to the HTML file.
+--
 function htmlWriter.writeSuiteEnd(fout, testSuite)
     local passed = testSuite.passCount
     local failed = testSuite.failCount
@@ -276,6 +332,11 @@ function htmlWriter.writeSuiteEnd(fout, testSuite)
 ]])
 end
 
+
+
+--
+--
+--
 function getIconAndStatus(testCase)
     local pass   = testCase.pass
     local fail   = testCase.fail
@@ -299,6 +360,11 @@ function getIconAndStatus(testCase)
     return icon, testStatus
 end
 
+
+
+--
+--
+--
 function computeCasePercentages(testCase)
     local pass   = testCase.pass
     local fail   = testCase.fail
@@ -329,6 +395,11 @@ function computeCasePercentages(testCase)
     return passPerc, infoPerc, failPerc
 end
 
+
+
+--
+-- Write the test case "header" to the HTML file.
+--
 function htmlWriter.writeCaseStart(fout, testCase)
     local passPerc, infoPerc, failPerc = computeCasePercentages(testCase)
     local icon, testStatus = getIconAndStatus(testCase)
@@ -354,6 +425,11 @@ function htmlWriter.writeCaseStart(fout, testCase)
 ]])
 end
 
+
+
+--
+-- Write the test case "footer" to the HTML file.
+--
 function htmlWriter.writeCaseEnd(fout, testCaseInfo)
     fout:write([[
                 </table>
@@ -367,6 +443,11 @@ function htmlWriter.writeCaseEnd(fout, testCaseInfo)
     end
 end
 
+
+
+--
+-- Write the test result to the HTML file.
+--
 function writeTestMessage(fout, message)
     local msgStatus = message[1]
     local explanation = message[2]
@@ -379,22 +460,46 @@ function writeTestMessage(fout, message)
 ]])
 end
 
+
+
+--
+-- Write the test result to the HTML file.
+--
 function htmlWriter.writeTestPass(fout, testName, message)
     writeTestMessage(fout, message)
 end
 
+
+
+--
+-- Write the test result to the HTML file.
+--
 function htmlWriter.writeTestFail(fout, testName, message)
     writeTestMessage(fout, message)
 end
 
+
+
+--
+-- Write the test result to the HTML file.
+--
 function htmlWriter.writeTestInfo(fout, testName, message)
     writeTestMessage(fout, message)
 end
 
+
+
+--
+-- Write the test result to the HTML file.
+--
 function htmlWriter.writeTestError(fout, testName, message)
     writeTestMessage(fout, message)
 end
 
 
+
+--
+-- Export the module API
+--
 return htmlWriter
 
