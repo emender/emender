@@ -52,10 +52,22 @@ function runTestsWithBadCLIOptions {
 
 
 
+# Run Emender by using various bad output format
+function runTestsWithBadOutputFormat {
+    ../emend -o output1 ../test/TestPassFail.lua ../test/Test1.lua > bad_output_format_1.out
+    ../emend -o out.    ../test/TestPassFail.lua ../test/Test1.lua > bad_output_format_2.out
+    ../emend -o out..   ../test/TestPassFail.lua ../test/Test1.lua > bad_output_format_3.out
+    ../emend -o out.doc ../test/TestPassFail.lua ../test/Test1.lua > bad_output_format_4.out
+    ../emend -o out.X   ../test/TestPassFail.lua ../test/Test1.lua > bad_output_format_5.out
+}
+
+
+
 # Run all tests
 function runAllTests {
     runTestsForBasicCLI
     runTestsWithBadCLIOptions
+    runTestsWithBadOutputFormat
 }
 
 

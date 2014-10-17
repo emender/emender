@@ -1,4 +1,14 @@
-2014-10-16  Pavel Tisnovsky  <ptisnovs@redhat.com>
+2014-10-17  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* selfchecks/bad_output_format_1.in:
+	* selfchecks/bad_output_format_2.in:
+	* selfchecks/bad_output_format_3.in:
+	* selfchecks/bad_output_format_4.in:
+	* selfchecks/bad_output_format_5.in:
+	* selfchecks/selfcheck.sh:
+	Added five new selfchecks.
+
+2014-10-17  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* selfchecks/bad_cli_options_1.in:
 	* selfchecks/bad_cli_options_2.in:
