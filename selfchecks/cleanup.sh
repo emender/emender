@@ -20,4 +20,5 @@
 rm *.out
 rm *.diff
 rm errors.txt
+rm *.property
 

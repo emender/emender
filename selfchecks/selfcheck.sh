@@ -39,9 +39,23 @@ function runTestsForBasicCLI {
 
 
 
+# Run Emender by using various bad CLI options
+function runTestsWithBadCLIOptions {
+    ../emend -x                  > bad_cli_options_1.out
+    ../emend --xyzzy             > bad_cli_options_2.out
+    ../emend -x -h               > bad_cli_options_3.out
+    ../emend -x -?               > bad_cli_options_4.out
+    ../emend --xyzzy --??        > bad_cli_options_5.out
+    ../emend --xyzzy --?? -v -c  > bad_cli_options_6.out
+    ../emend  -v -c -V -x -y -z  > bad_cli_options_7.out
+}
+
+
+
 # Run all tests
 function runAllTests {
     runTestsForBasicCLI
+    runTestsWithBadCLIOptions
 }
 
 
