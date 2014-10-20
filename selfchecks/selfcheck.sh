@@ -63,11 +63,19 @@ function runTestsWithBadOutputFormat {
 
 
 
+# Run Emender with some example tests with known output
+function runTestExamples {
+     ../emend ../test/TestEmpty.lua > test_empty.out
+}
+
+
+
 # Run all tests
 function runAllTests {
     runTestsForBasicCLI
     runTestsWithBadCLIOptions
     runTestsWithBadOutputFormat
+    runTestExamples
 }
 
 
