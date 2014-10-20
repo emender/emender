@@ -65,7 +65,9 @@ function runTestsWithBadOutputFormat {
 
 # Run Emender with some example tests with known output
 function runTestExamples {
-     ../emend ../test/TestEmpty.lua > test_empty.out
+     ../emend ../test/TestEmpty.lua        > test_empty.out
+     ../emend ../test/TestSetUpOnly.lua    > test_setup_only.out
+     ../emend ../test/TestTearDownOnly.lua > test_teardown_only.out
 }
 
 

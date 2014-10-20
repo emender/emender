@@ -1,6 +1,13 @@
 2014-10-20  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* selfchecks/selfcheck.sh:
+	* selfchecks/test_setup_only.in:
+	* selfchecks/test_teardown_only.in:
+	Added two new selfchecks.
+
+2014-10-20  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* selfchecks/selfcheck.sh:
 	* selfchecks/test_empty.in:
 	Added one new selfcheck.
 
