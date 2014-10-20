@@ -1,5 +1,12 @@
 2014-10-20  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* selfchecks/selfcheck.sh:
+	* selfchecks/test_setup.in:
+	* selfchecks/test_teardown.in:
+	Added two new selfchecks.
+
+2014-10-20  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* test/TestSetUpOnly.lua:
 	* test/TestSetUpTearDown.lua:
 	Added comments.
