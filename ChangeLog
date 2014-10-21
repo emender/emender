@@ -1,5 +1,12 @@
 2014-10-21  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* test/Test1Fail.lua:
+	* test/Test1Info.lua:
+	* test/Test1Pass.lua:
+	Add three new basic tests.
+
+2014-10-21  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* selfchecks/selfcheck.sh:
 	* selfchecks/test_100_passes_1_fail.in:
 	* selfchecks/test_100_passes_1_info.in:
