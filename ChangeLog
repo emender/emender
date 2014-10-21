@@ -1,3 +1,17 @@
+2014-10-21  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* selfchecks/selfcheck.sh:
+	* selfchecks/test_100_passes_1_fail.in:
+	* selfchecks/test_100_passes_1_info.in:
+	Added two (yet another) new selfchecks.
+
+2014-10-21  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* selfchecks/selfcheck.sh:
+	* selfchecks/test_pass_fail.in:
+	* selfchecks/test_setup_teardown_only.in:
+	Added two new selfchecks.
+
 2014-10-20  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* selfchecks/selfcheck.sh:

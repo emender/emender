@@ -72,6 +72,8 @@ function runTestExamples {
      ../emend ../test/TestTearDown.lua          > test_teardown.out
      ../emend ../test/TestTearDownOnly.lua      > test_teardown_only.out
      ../emend ../test/TestPassFail.lua          > test_pass_fail.out
+     ../emend ../test/Test100Passes1Fail.lua    > test_100_passes_1_fail.out
+     ../emend ../test/Test100Passes1Info.lua    > test_100_passes_1_info.out
 }
 
 
