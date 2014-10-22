@@ -1,5 +1,10 @@
 2014-10-22  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* test/TestAssertionPass.lua:
+	Updated, added comments and some new test cases.
+
+2014-10-22  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* selfchecks/test_pass_fail.in:
 	* selfchecks/test_teardown.in:
 	* selfchecks/test_teardown_only.in:
