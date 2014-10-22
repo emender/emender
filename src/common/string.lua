@@ -134,7 +134,11 @@ function string.alignCenter(str, width, indent, first_indent)
             local line_length = string.len(line)
 
             if line_length < width then
-                return string.rep(" ", (width - line_length) / 2) .. line
+                -- we need to use explicit rounding here, because string.rep()
+                -- is unstable when repeatCount is floating point value
+                -- instead of integer (difference between Lua 5.2.2 and 5.2.3 etc.)
+                local numOfSpaces = math.floor(0.5 + (width - line_length) / 2)
+                return string.rep(" ", numOfSpaces) .. line
             end
 
             return line
