@@ -1,5 +1,12 @@
 2014-10-22  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* selfchecks/test_pass_fail.in:
+	* selfchecks/test_teardown.in:
+	* selfchecks/test_teardown_only.in:
+	Fixed three selfchecks according to string.rep()-related fix.
+
+2014-10-22  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* src/common/string.lua:
 	Fixed issue with implicit rounding in string.rep().
 

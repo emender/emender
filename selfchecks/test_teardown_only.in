@@ -1,5 +1,5 @@
 ---------------------------------------------------------------------------
-                          :: TestTearDownOnly ::
+                           :: TestTearDownOnly ::
 ---------------------------------------------------------------------------
 
   Description:   Check that docunit core works correctly - test contains
