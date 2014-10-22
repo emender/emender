@@ -1,8 +1,8 @@
 -- TestAssertionPass.lua - test the behavior of the asserts.pass() function
 -- Copyright (C) 2014 Jaromir Hradilek, Pavel Tisnovsky
-
+--
 -- This file is part of Emender.
-
+--
 -- Emender is free software: you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
 -- the Free Software Foundation; version 3 of the License.
@@ -14,14 +14,16 @@
 --
 -- You should have received a copy of the GNU General Public License
 -- along with Emender.  If not, see <http://www.gnu.org/licenses/>.
+--
 
 TestAssertionPass = {
+    -- required field
     metadata = {
         description = "Test the behavior of the asserts.pass() function.",
         authors = "Jaromir Hradilek, Pavel Tisnovsky",
         emails = "jhradilek@redhat.com, ptisnovs@redhat.com",
         changed = "2014-10-22",
-        tags = {"BasicTest"}
+        tags = {"BasicTest", "SmokeTest"},
     }
 }
 
@@ -119,7 +121,7 @@ end
 
 
 --
--- Verify that the function does not accept a hash table as an argument:
+-- Verify that the function does not accept a nested table as an argument:
 --
 function TestAssertionPass.testNegative09()
     pass({{{1},2},3})
@@ -128,7 +130,7 @@ end
 
 
 --
--- Verify that the function does not accept a nested table as an argument:
+-- Verify that the function does not accept a hash table as an argument:
 --
 function TestAssertionPass.testNegative10()
     local table1 = {}

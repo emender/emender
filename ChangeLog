@@ -1,6 +1,12 @@
 2014-10-22  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* test/TestAssertionPass.lua:
+	* test/TestAssertionWarn.lua:
+	Updated, added comments and some new test cases.
+
+2014-10-22  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* test/TestAssertionPass.lua:
 	Updated, added comments and some new test cases.
 
 2014-10-22  Pavel Tisnovsky  <ptisnovs@redhat.com>
