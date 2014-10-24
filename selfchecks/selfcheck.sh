@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+#
 # Emender selfcheck - this script tries to run Emender using several command
 # line options and check if the output is the same as expected output.
 #
@@ -16,6 +17,16 @@
 #
 # You should have received a copy of the GNU General Public License
 # along with Emender.  If not, see <http://www.gnu.org/licenses/>.
+#
+
+
+
+#
+# Several output files are generated:
+#     all_tests.property    - contains only one number with number of all tests
+#     passed_tests.property - contains number of passed tests
+#     failed_tests.property - contains number of failed tests
+#     results.xml           - test results in JUnit format
 #
 
 
@@ -98,6 +109,26 @@ function prepareErrorFile {
 
 
 
+function writeJUnitHeader {
+    echo "<testsuites>" > results.xml
+    echo "    <testsuite name=\"Emender selftests\">" >> results.xml
+}
+
+function writeJUnitFooter {
+    echo "    <testsuite>" >> results.xml
+    echo "<testsuites>" >> results.xml
+}
+
+function markTestFailure {
+    echo "        <testcase name=\"$1\" classname=\"$1\">" >> results.xml
+    echo "            <error message=\"$2\">$2</error>" >> results.xml
+    echo "        </testcase>" >> results.xml
+}
+
+function markTestPass {
+    echo "        <testcase name=\"$1\" classname=\"$1\" />" >> results.xml
+}
+
 # Compare Emender output with the expected results
 function compareResults {
     # loop over all .in files with expected results
@@ -113,9 +144,13 @@ function compareResults {
             echo ${filename} >> errors.txt
             let fail_cnt=fail_cnt+1
             echo "[ FAIL ]   ${filename}"
+            # Output into results.xml
+            markTestFailure ${filename} "Diff is stored in the file ${filename}.diff"
         else
             let pass_cnt=pass_cnt+1
             echo "[ PASS ]   ${filename}"
+            # Output into results.xml
+            markTestPass ${filename}
         fi
         let test_cnt=test_cnt+1
     done
@@ -140,7 +175,9 @@ function printSummary {
 function run {
     prepareErrorFile
     runAllTests
+    writeJUnitHeader
     compareResults
+    writeJUnitFooter
     printSummary
 }
 

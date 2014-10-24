@@ -1,3 +1,10 @@
+2014-10-24  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* selftest/cleanup.sh:
+	* selftest/selfcheck.sh:
+	Added support for JUnit-like output of test results
+	(to be used on Jenkins).
+
 2014-10-22  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* test/TestAssertionPass.lua:

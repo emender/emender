@@ -21,4 +21,5 @@ rm *.out
 rm *.diff
 rm errors.txt
 rm *.property
+rm results.xml
 
