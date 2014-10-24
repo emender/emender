@@ -115,8 +115,8 @@ function writeJUnitHeader {
 }
 
 function writeJUnitFooter {
-    echo "    <testsuite>" >> results.xml
-    echo "<testsuites>" >> results.xml
+    echo "    </testsuite>" >> results.xml
+    echo "</testsuites>" >> results.xml
 }
 
 function markTestFailure {
