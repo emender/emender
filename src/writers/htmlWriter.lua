@@ -451,11 +451,14 @@ end
 function writeTestMessage(fout, message)
     local msgStatus = message[1]
     local explanation = message[2]
+    -- get rid of all unwanted special HTML characters
+    -- -> use corresponding HTML entities instead
+    local escapedHTML = explanation:escapeHTML()
     local class = msgStatus:lower()
     fout:write([[
                   <tr>
                     <td class="result ]] .. class .. [[">]] .. msgStatus .. [[</td>
-                    <td>]] .. explanation .. [[</td>
+                    <td>]] .. escapedHTML .. [[</td>
                   </tr>
 ]])
 end
