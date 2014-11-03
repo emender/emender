@@ -62,6 +62,24 @@ function TestPassFail.testMixed()
     end
 end
 
+function TestPassFail.testPassFailPass()
+    pass("test passed!!!")
+    fail("test failed!!!")
+    pass("test passed!!!")
+end
+
+function TestPassFail.testFailFailPass()
+    fail("test failed!!!")
+    fail("test failed!!!")
+    pass("test passed!!!")
+end
+
+function TestPassFail.testPassFailFail()
+    pass("test passed!!!")
+    fail("test failed!!!")
+    fail("test failed!!!")
+end
+
 function TestPassFail.xyzzy()
     print(self.val)
 end
