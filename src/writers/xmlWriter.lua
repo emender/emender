@@ -1,5 +1,5 @@
 -- xmlWriter.lua - a writer for the XML file format
--- Copyright (C) 2014 Jaromir Hradilek
+-- Copyright (C) 2014 Jaromir Hradilek, Pavel Tisnovsky
 
 -- This file is part of Emender.
 
@@ -28,8 +28,11 @@ local xmlWriter = {
 --
 -- Write the result of a single test function to the file:
 --
-function writeTestResult(fout, result, explanation)
-    fout:write('      <test result="' .. result .. '">' .. explanation .. '</test>\n')
+function xmlWriter.writeTestResult(fout, result, explanation)
+    -- get rid of all unwanted special HTML/XML characters
+    -- -> use corresponding HTML/XML entities instead
+    local escapedHTML = explanation:escapeHTML()
+    fout:write('      <test result="' .. result .. '">' .. escapedHTML .. '</test>\n')
 end
 
 
@@ -134,7 +137,7 @@ end
 --
 function xmlWriter.writeTestPass(fout, testName, message)
     local explanation = message[2]
-    writeTestResult(fout, 'pass', explanation)
+    xmlWriter.writeTestResult(fout, 'pass', explanation)
 end
 
 
@@ -144,7 +147,7 @@ end
 --
 function xmlWriter.writeTestFail(fout, testName, message)
     local explanation = message[2]
-    writeTestResult(fout, 'fail', explanation)
+    xmlWriter.writeTestResult(fout, 'fail', explanation)
 end
 
 
@@ -154,7 +157,7 @@ end
 --
 function xmlWriter.writeTestInfo(fout, testName, message)
     local explanation = message[2]
-    writeTestResult(fout, 'info', explanation)
+    xmlWriter.writeTestResult(fout, 'info', explanation)
 end
 
 
