@@ -1,5 +1,10 @@
 2014-11-03  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* src/common/string.lua:
+	Add new method string.escapeHTML() into the module string.lua.
+
+2014-11-03  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* src/TestPassFail.lua:
 	Updated the test TestPassFail.lua to check for more issues.
 

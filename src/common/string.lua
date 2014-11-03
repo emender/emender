@@ -31,6 +31,8 @@ function string.startsWith(str, prefix)
     return prefix == "" or substring == prefix
 end
 
+
+
 --
 -- Tests if the given string ends with the specified suffix.
 --
@@ -39,12 +41,16 @@ function string.endsWith(str, suffix)
     return suffix == "" or substring == suffix
 end
 
+
+
 --
 -- Just an alias for sub()
 --
 function string.subs(str, from, to)
     return string.sub(str, from, to)
 end
+
+
 
 --
 -- Another alias for sub()
@@ -53,6 +59,8 @@ end
 function string.substring(str, from, to)
     return string.sub(str, from, to)
 end
+
+
 
 --
 -- Implementation of classical trim() function
@@ -65,6 +73,8 @@ function string.trim(str)
         return str:match("^%s*(.*%S)")
     end
 end
+
+
 
 --
 -- Breaks lines at word boundaries, indents the text and aligns it along
@@ -101,6 +111,8 @@ function string.alignLeft(str, width, indent, first_indent)
     return result
 end
 
+
+
 --
 -- Breaks lines at word boundaries, indents the text and aligns it along
 -- the right margin:
@@ -122,6 +134,8 @@ function string.alignRight(str, width, indent, first_indent)
 
     return result
 end
+
+
 
 --
 -- Breaks lines at word boundaries, indents the text and centers it:
@@ -148,6 +162,8 @@ function string.alignCenter(str, width, indent, first_indent)
     return result
 end
 
+
+
 --
 -- Aligns two strings along the left and right margin and fills the space
 -- between them with space characters:
@@ -165,3 +181,20 @@ function string.horizontalFill(left_str, right_str, width, filler)
 
     return left_str .. right_str
 end
+
+
+
+--
+-- Escape common HTML characters in a given string.
+--
+function string.escapeHTML(str)
+    -- be sure the string is not nil nor false
+    if not str then
+        return str
+    end
+    -- escape all four common HTML characters ie.
+    -- transform them into corresponding HTML entities
+    str = str:gsub("&", "&amp;"):gsub("<", "&lt;"):gsub(">", "&gt;"):gsub("\"", "&quot;")
+    return str
+end
+
