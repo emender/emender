@@ -161,16 +161,16 @@ function getopt.recognizeOutputFormats(outputFileNames)
         local extensionSeparator = outputFileName:find("%.[^%.]*$")
         if not extensionSeparator or extensionSeparator == #outputFileName then
             print("The provided output file name '" .. outputFileName .. "' has wrong format.")
-            print("Emender supports the following name format: 'filename.xml' 'filename.txt' and 'filename.html'.")
+            print("Emender supports the following name format: 'filename.xml' 'filename.txt',  'filename.html' and 'filename.junit'.")
             os.exit(1)
         end
         local extension = outputFileName:subs(1+extensionSeparator)
-        if extension == "txt" or extension == "html" or extension == "xml" then
+        if extension == "txt" or extension == "html" or extension == "xml" or extension == "junit" then
             -- pair: file extension + handle
             outputFiles[outputFileName] = {extension, nil}
         else
             print("The provided output file name '" .. outputFileName .. "' has wrong extension '".. extension .."'.")
-            print("Supported extensions are: .txt, .html and .xml.")
+            print("Supported extensions are: .txt, .html, .xml and .junit.")
             os.exit(1)
         end
     end
