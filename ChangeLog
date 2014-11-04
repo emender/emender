@@ -1,5 +1,10 @@
 2014-11-04  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* src/common/fileio.lua:
+	Updated comments.
+
+2014-11-04  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* src/common/getopt.lua:
 	Added support for new output format to the getopt module.
 

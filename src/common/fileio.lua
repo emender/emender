@@ -23,6 +23,9 @@
 -- Returns true if everything is ok, nil instead.
 -- (nil is evaluated as a false value in most cases)
 --
+-- @param fileName Name of file that will be created
+-- @param content  Content to be written to a new file
+--
 function spit(fileName, content)
     local fout = io.open(fileName, "w")
 
@@ -39,6 +42,7 @@ function spit(fileName, content)
         return true
     end
     -- file can't be opened
+    -- -> return nil so this exception could be checked later
     return nil
 end
 
@@ -49,6 +53,9 @@ end
 --
 -- Returns true if everything is ok, nil instead.
 -- (nil is evaluated as a false value in most cases)
+--
+-- @param fileName Name of file that will be created
+-- @param content  Content to be written to a new file
 --
 function spitTable(fileName, content)
     local fout = io.open(fileName, "w")
@@ -69,6 +76,7 @@ function spitTable(fileName, content)
         return true
     end
     -- file can't be opened
+    -- -> return nil so this exception could be checked later
     return nil
 end
 
@@ -80,6 +88,8 @@ end
 -- Returns string read from the file, or nil in case of any I/O error.
 -- (nil is evaluated as a false value in most cases)
 --
+-- @param fileName Name of file that will be read
+--
 function slurp(fileName)
     local fin = io.open(fileName, "r")
     local content = fin:read("*all")
@@ -89,6 +99,7 @@ function slurp(fileName)
         return nil
     end
 
+    -- return content read from the input file
     return content
 end
 
@@ -101,6 +112,8 @@ end
 -- Returns table of strings read from the file, or nil
 -- in case of any I/O error.
 -- (nil is evaluated as a false value in most cases)
+--
+-- @param fileName Name of file that will be read
 --
 function slurpTable(fileName)
     local content = {}
@@ -117,11 +130,12 @@ function slurpTable(fileName)
         table.insert(content, line);
     end
 
-    -- check if file could be closed
+    -- check if file could be properly closed
     if not fin:close() then
         return nil
     end
 
+    -- return content read from the input file
     return content
 end
 
