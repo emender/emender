@@ -1,5 +1,10 @@
 2014-11-04  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* src/writers/junitWriter.lua:
+	Added new writer used to create reports compatible with JUnit.
+
+2014-11-04  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* selftest/test_pass_fail.in:
 	Fixed selftest test_pass_fail.
 
