@@ -38,6 +38,12 @@
     [ PASS ]  pass #2
     [ PASS ]  pass #3
 
+  Test Case: testFailFailPass
+
+    [ FAIL ]  test failed!!!
+    [ FAIL ]  test failed!!!
+    [ PASS ]  test passed!!!
+
   Test Case: testMixed
 
     [ PASS ]  pass #1
@@ -47,11 +53,23 @@
     [ PASS ]  pass #3
     [ FAIL ]  fail #3
 
+  Test Case: testPassFailFail
+
+    [ PASS ]  test passed!!!
+    [ FAIL ]  test failed!!!
+    [ FAIL ]  test failed!!!
+
+  Test Case: testPassFailPass
+
+    [ PASS ]  test passed!!!
+    [ FAIL ]  test failed!!!
+    [ PASS ]  test passed!!!
+
   Test Summary                                                            
 
-    Executed Test Cases: 7
+    Executed Test Cases: 10
     Passed Test Cases:   3
-    Failed Test Cases:   4
+    Failed Test Cases:   7
     Encountered Errors:  0
     Overall Result:      FAIL
 
