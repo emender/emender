@@ -1,5 +1,10 @@
 2014-11-05  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* src/common/asserts.lua:
+	Added comments.
+
+2014-11-05  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* selfchecks/bad_output_format_1.in:
 	* selfchecks/bad_output_format_2.in:
 	* selfchecks/bad_output_format_3.in:

@@ -1,4 +1,4 @@
--- asserts.lua - a module containing all assertion functions
+-- asserts.lua - a module containing all required assertion functions.
 -- Copyright (C) 2014 Pavel Tisnovsky, Jaromir Hradilek
 
 -- This file is part of Emender.
@@ -19,8 +19,11 @@
 
 --
 -- Function that could be called from the core (or possibly directly from the
--- test) to report error. Please note that error is usually a bit different
--- from the test failure reported via the fail() function.
+-- test) to report unexpected error. Please note that error is usually a bit
+-- different from the test failure reported via the fail() function. All common
+-- and (probably expected) runtime failures should be reported via fail().
+--
+-- @param message Message containing the explanation of (test) error.
 --
 function report_error(message)
     -- to be caught by a pcall()
@@ -33,6 +36,8 @@ end
 -- Report a serious error in the test structure.
 -- This type of error is reported when some required parameters are missing
 -- and/or have an improper type.
+--
+-- @param message Message containing the explanation of (test) error.
 --
 function report_error_in_test_structure(message)
     -- We need to acquire the exact name of the test function.
@@ -50,6 +55,7 @@ function report_error_in_test_structure(message)
         -- we need to check the latter possibility
         local debugInfo = debug.getinfo(3)
         if debugInfo then
+            -- information about the name of source file
             local callerSrc = debugInfo.short_src
             -- check the caller
             if callerSrc and callerSrc:endsWith("asserts.lua") then
@@ -71,6 +77,9 @@ end
 --
 --  is_true(result > 42, "The value is greater than 42")
 --
+-- @param expression Expression to be evaluated, can't be nil, must be of type boolean
+-- @param explanation Short description of the test, must be of type string
+--
 function is_true(expression, explanation)
     -- Verify that <expression> is specified:
     if expression == nil then
@@ -86,8 +95,10 @@ function is_true(expression, explanation)
 
     -- Evaluate the expression:
     if expression then
+        -- check if explanation is a proper string is performed inside pass() function
         pass(explanation)
     else
+        -- check if explanation is a proper string is performed inside fail() function
         fail(explanation)
     end
 end
@@ -102,6 +113,9 @@ end
 -- of the test. For example, to test if a variable named result is less than or equal to 42, type:
 --
 --  is_false(result > 42, "The value is not greater than 42")
+--
+-- @param expression Expression to be evaluated, can't be nil, must be of type boolean
+-- @param explanation Short description of the test, must be of type string
 --
 function is_false(expression, explanation)
     -- Verify that <expression> is specified:
@@ -118,8 +132,10 @@ function is_false(expression, explanation)
 
     -- Evaluate the expression:
     if expression then
+        -- check if explanation is a proper string is performed inside fail() function
         fail(explanation)
     else
+        -- check if explanation is a proper string is performed inside pass() function
         pass(explanation)
     end
 end
@@ -137,6 +153,10 @@ end
 --
 --  is_equal(result, 42, "The value is equal to 42")
 --
+-- @param current_value Value to test, can't be nil
+-- @param expected_value Expected value, can't be nil
+-- @param explanation Short description of the test, must be of type string
+--
 function is_equal(current_value, expected_value, explanation)
     -- Verify that <current_value> is specified:
     if current_value == nil then
@@ -153,9 +173,11 @@ function is_equal(current_value, expected_value, explanation)
     -- Compare the values:
     if type(current_value) == "table" and type(expected_value) == "table" then
         -- we need to make deep comparison of items stored in tables
+        -- check if explanation is a proper string is performed later
         is_true(table.compare(current_value, expected_value), explanation)
     else
         -- for other types, it's perfectly ok to use the == operator
+        -- check if explanation is a proper string is performed later
         is_true(current_value == expected_value, explanation)
     end
 end
@@ -172,6 +194,10 @@ end
 -- a value other than 42, type:
 --
 --  is_unequal(result, 42, "The value is not equal to 42")
+--
+-- @param current_value Value to test, can't be nil
+-- @param expected_value Expected value, can't be nil
+-- @param explanation Short description of the test, must be of type string
 --
 function is_unequal(current_value, expected_value, explanation)
     -- Verify that <current_value> is specified:
@@ -190,9 +216,11 @@ function is_unequal(current_value, expected_value, explanation)
     if type(current_value) == "table" and type(expected_value) == "table" then
         -- we need to make deep comparison of items stored in tables
         -- and then negate the result
+        -- check if explanation is a proper string is performed later
         is_false(table.compare(current_value, expected_value), explanation)
     else
         -- for other types, it's perfectly ok to use the ~= operator
+        -- check if explanation is a proper string is performed later
         is_true(current_value ~= expected_value, explanation)
     end
 end
@@ -209,6 +237,10 @@ end
 --
 --  is_like(result, "^%d%d%d%d-%d%d-%d%d$", "The value represents a date.")
 --
+-- @param current_value Value to test, can't be nil
+-- @param pattern Text pattern that is specified in PIL, can't be nil
+-- @param explanation Short description of the test, must be of type string
+--
 function is_like(current_value, pattern, explanation)
     -- Verify that <current_value> is specified:
     if current_value == nil then
@@ -223,6 +255,7 @@ function is_like(current_value, pattern, explanation)
     end
 
     -- Compare the value with the pattern:
+    -- check if explanation is a proper string is performed later
     is_true(string.match(current_value, pattern) ~= nil, explanation)
 end
 
@@ -238,6 +271,10 @@ end
 --
 --  is_unlike(result, "%a", "The value does not contain letters.")
 --
+-- @param current_value Value to test, can't be nil
+-- @param pattern Text pattern that is specified in PIL, can't be nil
+-- @param explanation Short description of the test, must be of type string
+--
 function is_unlike(current_value, pattern, explanation)
     -- Verify that <current_value> is specified:
     if current_value == nil then
@@ -252,6 +289,7 @@ function is_unlike(current_value, pattern, explanation)
     end
 
     -- Compare the value with the pattern:
+    -- check if explanation is a proper string is performed later
     is_true(string.match(current_value, pattern) == nil, explanation)
 end
 
@@ -267,6 +305,11 @@ end
 --
 --  is_type(result, "number", "The value is a number")
 --
+-- @param value Value to test
+-- @param expectedType One of the following strings: string, number, function, boolean, nil,
+--                                                   table or thread
+-- @param explanation Short description of the test, must be of type string
+--
 function is_type(value, expected_type, explanation)
     -- Verify that <expected_type> is specified:
     if expected_type == nil then
@@ -281,6 +324,7 @@ function is_type(value, expected_type, explanation)
     end
 
     -- Compare the types:
+    -- check if explanation is a proper string is performed later
     is_true(type(value) == expected_type, explanation)
 end
 
@@ -296,6 +340,11 @@ end
 --
 --  is_not_type(result, "number", "The value is not a number")
 --
+-- @param value Value to test
+-- @param expectedType One of the following strings: string, number, function, boolean, nil,
+--                                                   table or thread
+-- @param explanation Short description of the test, must be of type string
+--
 function is_not_type(value, expected_type, explanation)
     -- Verify that <expected_type> is specified:
     if expected_type == nil then
@@ -310,6 +359,7 @@ function is_not_type(value, expected_type, explanation)
     end
 
     -- Compare the types:
+    -- check if explanation is a proper string is performed later
     is_true(type(value) ~= expected_type, explanation)
 end
 
@@ -324,11 +374,16 @@ end
 --
 --  is_nil(result, "The value is nil")
 --
+-- @param value Value to test
+-- @param explanation Short description of the test, must be of type string
+--
 function is_nil(value, explanation)
     -- Determine the type of the value:
     if value == nil then
+        -- check if explanation is a proper string is performed inside pass() function
         pass(explanation)
     else
+        -- check if explanation is a proper string is performed inside fail() function
         fail(explanation)
     end
 end
@@ -344,17 +399,23 @@ end
 --
 --  is_not_nil(result, "The value is not nil.")
 --
+-- @param value Value to test
+-- @param explanation Short description of the test, must be of type string
+--
 function is_not_nil(value, explanation)
     -- Determine the type of the value:
     if value ~= nil then
+        -- check if explanation is a proper string is performed inside pass() function
         pass(explanation)
     else
+        -- check if explanation is a proper string is performed inside fail() function
         fail(explanation)
     end
 end
 
 
 
+--
 -- The is_empty() function tests whether a certain table is empty. If it is, the
 -- function reports the test as passed, otherwise it reports it as failed.
 -- 
@@ -362,6 +423,10 @@ end
 -- the test. For example, to test if a table named results is empty, type:
 -- 
 --  is_empty(results, "The table is empty")
+-- 
+-- @param table Table to test, must be of type table
+-- @param explanation Short description of the test, must be of type string
+--
 function is_empty(table, explanation)
     -- Verify that <table> is specified:
     if table == nil then
@@ -377,13 +442,17 @@ function is_empty(table, explanation)
 
     -- Check the contents of the table:
     if next(table) == nil then
+        -- check if explanation is a proper string is performed inside pass() function
         pass(explanation)
     else
+        -- check if explanation is a proper string is performed inside fail() function
         fail(explanation)
     end
 end
 
 
+
+-- 
 -- The is_not_empty() function tests whether a certain table contains at least one
 -- item. If it does, the function reports the test as passed, otherwise it reports
 -- the test as failed.
@@ -392,6 +461,10 @@ end
 -- the test. For example, to test if a table named result contains some items, type:
 -- 
 --  is_not_empty(results, "The table is not empty")
+-- 
+-- @param table Table to test, must be of type table
+-- @param explanation Short description of the test, must be of type string
+--
 function is_not_empty(table, explanation)
     -- Verify that <table> is specified:
     if table == nil then
@@ -407,8 +480,10 @@ function is_not_empty(table, explanation)
 
     -- Check the contents of the table:
     if next(table) ~= nil then
+        -- check if explanation is a proper string is performed inside pass() function
         pass(explanation)
     else
+        -- check if explanation is a proper string is performed inside fail() function
         fail(explanation)
     end
 end
@@ -421,6 +496,8 @@ end
 -- Replace explanation with a short description of the test. For example:
 --
 --  pass("The value is on the list of allowed values.")
+--
+-- @param explanation Short description of the test, must be of type string
 --
 function pass(explanation)
     -- Verify that <explanation> is specified:
@@ -448,6 +525,8 @@ end
 -- Replace explanation with a short description of the test. For example:
 --
 --  fail("The value is not on the list of allowed values.")
+--
+-- @param explanation Short description of the test, must be of type string
 --
 function fail(explanation)
     -- Verify that <explanation> is specified:
@@ -479,6 +558,8 @@ end
 -- Replace explanation with a short description of the test. For example:
 --
 --  warn("This might change in the future.")
+--
+-- @param explanation Short description of the test, must be of type string
 --
 function warn(explanation)
     -- Verify that <explanation> is specified:
