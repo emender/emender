@@ -1,5 +1,11 @@
 2014-11-05  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* test/TestEscapingHTML.lua:
+	* test/TestWithoutFunctions.lua:
+	Added new tests.
+
+2014-11-05  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* emend:
 	Registered JUnit writer.
 
