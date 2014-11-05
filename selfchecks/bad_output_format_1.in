@@ -1,2 +1,2 @@
 The provided output file name 'output1' has wrong format.
-Emender supports the following name format: 'filename.xml' 'filename.txt' and 'filename.html'.
+Emender supports the following name format: 'filename.xml' 'filename.txt',  'filename.html' and 'filename.junit'.
