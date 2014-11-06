@@ -1,3 +1,8 @@
+2014-11-06  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* src/writers/summaryWriter.lua:
+	Added new writer type.
+
 2014-11-05  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* test/TestEscapingHTML.lua:
