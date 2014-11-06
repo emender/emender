@@ -35,6 +35,7 @@ local htmlWriter = nil
 local xmlWriter = nil
 local textWriter = nil
 local junitWriter = nil
+local summaryWriter = nil
 
 
 
@@ -89,6 +90,7 @@ function loadModules()
     xmlWriter = require("src/writers/xmlWriter")
     textWriter = require("src/writers/textWriter")
     junitWriter = require("src/writers/junitWriter")
+    summaryWriter = require("src/writers/summaryWriter")
     require("src/common/fileio")
     require("src/common/string")
     require("src/common/table")
@@ -143,6 +145,7 @@ function registerWriters()
     abstractWriter.writers["xml"] = xmlWriter
     abstractWriter.writers["txt"] = textWriter
     abstractWriter.writers["junit"] = junitWriter
+    abstractWriter.writers["summary"] = summaryWriter
 end
 
 function main(arg)

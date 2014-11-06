@@ -1,5 +1,10 @@
 2014-11-06  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* emend:
+	Registered new output format writer.
+
+2014-11-06  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* src/common/getopt.lua:
 	Added support for recognizing new output format.
 
