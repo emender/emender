@@ -1,5 +1,10 @@
 2014-11-07  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* test/TestFileOperationSlurpTable.lua:
+	Added new test for checking slurptable() functionality.
+
+2014-11-07  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* test/TestFileOperationSlurp.lua:
 	Added new test for checking slurp() functionality.
 
