@@ -1,5 +1,10 @@
 2014-11-07  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* test/TestFileOperationSlurp.lua:
+	Added new test for checking slurp() functionality.
+
+2014-11-07  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* src/common/fileio.lua:
 	Added more IO checks.
 
