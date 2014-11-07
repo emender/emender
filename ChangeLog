@@ -1,3 +1,8 @@
+2014-11-07  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* src/common/asserts.lua:
+	Added more comments into asserts.lua.
+
 2014-11-06  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* selfchecks/bad_output_format_1.in:

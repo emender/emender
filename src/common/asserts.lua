@@ -83,12 +83,14 @@ end
 function is_true(expression, explanation)
     -- Verify that <expression> is specified:
     if expression == nil then
+        -- if parameters are missing or incorrect, error should be reported immediately
         report_error_in_test_structure("Expression is a required argument.")
         return
     end
 
     -- Verify that <expression> is a valid expression:
     if type(expression) ~= "boolean" then
+        -- if parameters are missing or incorrect, error should be reported immediately
         report_error_in_test_structure("Expression must evaluate to a Boolean.")
         return
     end
@@ -120,12 +122,14 @@ end
 function is_false(expression, explanation)
     -- Verify that <expression> is specified:
     if expression == nil then
+        -- if parameters are missing or incorrect, error should be reported immediately
         report_error_in_test_structure("Expression is a required argument.")
         return
     end
 
     -- Verify that <expression> is a valid expression:
     if type(expression) ~= "boolean" then
+        -- if parameters are missing or incorrect, error should be reported immediately
         report_error_in_test_structure("Expression must evaluate to a Boolean.")
         return
     end
@@ -160,12 +164,14 @@ end
 function is_equal(current_value, expected_value, explanation)
     -- Verify that <current_value> is specified:
     if current_value == nil then
+        -- if parameters are missing or incorrect, error should be reported immediately
         report_error_in_test_structure("Current value a required argument.")
         return
     end
 
     -- Verify that <expected_value> is specified:
     if expected_value == nil then
+        -- if parameters are missing or incorrect, error should be reported immediately
         report_error_in_test_structure("Expected value is a required argument.")
         return
     end
@@ -202,12 +208,14 @@ end
 function is_unequal(current_value, expected_value, explanation)
     -- Verify that <current_value> is specified:
     if current_value == nil then
+        -- if parameters are missing or incorrect, error should be reported immediately
         report_error_in_test_structure("Current value a required argument.")
         return
     end
 
     -- Verify that <expected_value> is specified:
     if expected_value == nil then
+        -- if parameters are missing or incorrect, error should be reported immediately
         report_error_in_test_structure("Expected value is a required argument.")
         return
     end
@@ -244,12 +252,14 @@ end
 function is_like(current_value, pattern, explanation)
     -- Verify that <current_value> is specified:
     if current_value == nil then
+        -- if parameters are missing or incorrect, error should be reported immediately
         report_error_in_test_structure("Current value is a required argument.")
         return
     end
 
     -- Verify that <pattern> is specified:
     if pattern == nil then
+        -- if parameters are missing or incorrect, error should be reported immediately
         report_error_in_test_structure("Pattern is a required argument.")
         return
     end
@@ -278,12 +288,14 @@ end
 function is_unlike(current_value, pattern, explanation)
     -- Verify that <current_value> is specified:
     if current_value == nil then
+        -- if parameters are missing or incorrect, error should be reported immediately
         report_error_in_test_structure("Current value is a required argument.")
         return
     end
 
     -- Verify that <pattern> is specified:
     if pattern == nil then
+        -- if parameters are missing or incorrect, error should be reported immediately
         report_error_in_test_structure("Pattern is a required argument.")
         return
     end
@@ -313,12 +325,14 @@ end
 function is_type(value, expected_type, explanation)
     -- Verify that <expected_type> is specified:
     if expected_type == nil then
+        -- if parameters are missing or incorrect, error should be reported immediately
         report_error_in_test_structure("Type is a required argument.")
         return
     end
 
     -- Verify that <expected_type> is a string:
     if type(expected_type) ~= "string" then
+        -- if parameters are missing or incorrect, error should be reported immediately
         report_error_in_test_structure("Expected type must be a string.")
         return
     end
@@ -348,12 +362,14 @@ end
 function is_not_type(value, expected_type, explanation)
     -- Verify that <expected_type> is specified:
     if expected_type == nil then
+        -- if parameters are missing or incorrect, error should be reported immediately
         report_error_in_test_structure("Type is a required argument.")
         return
     end
 
     -- Verify that <expected_type> is a string:
     if type(expected_type) ~= "string" then
+        -- if parameters are missing or incorrect, error should be reported immediately
         report_error_in_test_structure("Expected type must be a string.")
         return
     end
@@ -430,12 +446,14 @@ end
 function is_empty(table, explanation)
     -- Verify that <table> is specified:
     if table == nil then
+        -- if parameters are missing or incorrect, error should be reported immediately
         report_error_in_test_structure("Table is a required argument.")
         return
     end
 
     -- Verify that <table> is a table:
     if type(table) ~= "table" then
+        -- if parameters are missing or incorrect, error should be reported immediately
         report_error_in_test_structure("Table must be a table.")
         return
     end
@@ -468,12 +486,14 @@ end
 function is_not_empty(table, explanation)
     -- Verify that <table> is specified:
     if table == nil then
+        -- if parameters are missing or incorrect, error should be reported immediately
         report_error_in_test_structure("Table is a required argument.")
         return
     end
 
     -- Verify that <table> is a table:
     if type(table) ~= "table" then
+        -- if parameters are missing or incorrect, error should be reported immediately
         report_error_in_test_structure("Table must be a table.")
         return
     end
@@ -502,12 +522,14 @@ end
 function pass(explanation)
     -- Verify that <explanation> is specified:
     if explanation == nil then
+        -- if parameters are missing or incorrect, error should be reported immediately
         report_error_in_test_structure("Explanation is a required argument.")
         return
     end
 
     -- Verify that <explanation> is a string:
     if type(explanation) ~= "string" then
+        -- if parameters are missing or incorrect, error should be reported immediately
         report_error_in_test_structure("Explanation must be a string.")
         return
     end
@@ -531,12 +553,14 @@ end
 function fail(explanation)
     -- Verify that <explanation> is specified:
     if explanation == nil then
+        -- if parameters are missing or incorrect, error should be reported immediately
         report_error_in_test_structure("Explanation is a required argument.")
         return
     end
 
     -- Verify that <explanation> is a string:
     if type(explanation) ~= "string" then
+        -- if parameters are missing or incorrect, error should be reported immediately
         report_error_in_test_structure("Explanation must be a string.")
         return
     end
@@ -564,12 +588,14 @@ end
 function warn(explanation)
     -- Verify that <explanation> is specified:
     if explanation == nil then
+        -- if parameters are missing or incorrect, error should be reported immediately
         report_error_in_test_structure("Explanation is a required argument.")
         return
     end
 
     -- Verify that <explanation> is a string:
     if type(explanation) ~= "string" then
+        -- if parameters are missing or incorrect, error should be reported immediately
         report_error_in_test_structure("Explanation must be a string.")
         return
     end
