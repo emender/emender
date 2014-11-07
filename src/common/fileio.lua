@@ -31,7 +31,14 @@ function spit(fileName, content)
 
     -- if file could be opened for writing into it
     if fout then
-        fout:write(content)
+        local result = fout:write(content)
+
+        -- in Lua 5.2 it is possible to check if write() was successful
+        if not result then
+            -- try to close the file
+            fout:close()
+            return nil
+        end
 
         -- check if file could be closed
         if not fout:close() then
@@ -63,8 +70,23 @@ function spitTable(fileName, content)
     -- if file could be opened for writing into it
     if fout then
         for _, line in ipairs(content) do
-            fout:write(line)
-            fout:write("\n")
+            local result
+            result = fout:write(line)
+
+            -- in Lua 5.2 it is possible to check if write() was successful
+            if not result then
+                -- try to close the file
+                fout:close()
+                return nil
+            end
+
+            result = fout:write("\n")
+            -- in Lua 5.2 it is possible to check if write() was successful
+            if not result then
+                -- try to close the file
+                fout:close()
+                return nil
+            end
         end
 
         -- check if file could be closed
@@ -92,6 +114,13 @@ end
 --
 function slurp(fileName)
     local fin = io.open(fileName, "r")
+
+    -- check if it's possible to open the file for reading
+    if not fin then
+        return nil
+    end
+
+    -- try to read the whole file
     local content = fin:read("*all")
 
     -- check if file could be closed
@@ -117,9 +146,10 @@ end
 --
 function slurpTable(fileName)
     local content = {}
+
     local fin = io.open(fileName, "r")
 
-    -- open failure
+    -- check if it's possible to open the file for reading
     if not fin then
         return nil
     end
