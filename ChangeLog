@@ -1,11 +1,16 @@
 2014-11-10  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
-	* src/TestFileOperationSlurpTable.lua:
+	* test/TestFileOperationSpit.lua:
+	Added new test for checking spit() functionality.
+
+2014-11-10  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* test/TestFileOperationSlurpTable.lua:
 	Updated test TestFileOperationSlurpTable.lua.
 
 2014-11-10  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
-	* src/TestFileOperationSlurp.lua:
+	* test/TestFileOperationSlurp.lua:
 	Updated test TestFileOperationSlurp.lua.
 
 2014-11-07  Pavel Tisnovsky  <ptisnovs@redhat.com>
