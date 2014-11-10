@@ -1,5 +1,10 @@
 2014-11-10  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* test/TestFileOperationSpitTable.lua:
+	Added new test for checking spitTable() functionality.
+
+2014-11-10  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* test/TestFileOperationSpit.lua:
 	Added new test for checking spit() functionality.
 
