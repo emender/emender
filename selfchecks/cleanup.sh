@@ -22,4 +22,5 @@ rm *.diff
 rm errors.txt
 rm *.property
 rm results.xml
+rm delete*.txt
 

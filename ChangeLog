@@ -1,5 +1,12 @@
 2014-11-11  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* selfchecks/cleanup.sh:
+	Cleanup need to be changed to reflect test output.
+	* selfchecks/selfcheck.sh:
+	New selfchecks to run have been added into selfchecks.sh script.
+
+2014-11-11  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* selfchecks/test_file_operation_spit.in:
 	* selfchecks/test_file_operation_spit_table.in:
 	Added two another new selfchecks.
