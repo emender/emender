@@ -1,5 +1,11 @@
 2014-11-11  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* selfchecks/test_file_operation_spit.in:
+	* selfchecks/test_file_operation_spit_table.in:
+	Added two another new selfchecks.
+
+2014-11-11  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* selfchecks/test_file_operation_slurp.in:
 	* selfchecks/test_file_operation_slurp_table.in:
 	Added two new selfchecks.
