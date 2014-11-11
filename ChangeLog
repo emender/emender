@@ -1,3 +1,9 @@
+2014-11-11  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* selfchecks/test_file_operation_slurp.in:
+	* selfchecks/test_file_operation_slurp_table.in:
+	Added two new selfchecks.
+
 2014-11-10  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* test/TestFileOperationSpitTable.lua:
