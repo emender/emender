@@ -1,5 +1,10 @@
 2014-11-11  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* test/TestModuleAsserts.lua:
+	Added new test.
+
+2014-11-11  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* selfchecks/cleanup.sh:
 	Cleanup need to be changed to reflect test output.
 	* selfchecks/selfcheck.sh:
