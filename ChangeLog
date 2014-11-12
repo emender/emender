@@ -1,6 +1,12 @@
 2014-11-12  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* selfchecks/selfcheck.sh:
+	* selfchecks/test_100_failures_1_pass.in:
+	Added yet another new selfcheck.
+
+2014-11-12  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* selfchecks/selfcheck.sh:
 	* selfchecks/test_module_fileio.in:
 	Added new selfcheck - test_module_fileio.
 

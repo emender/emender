@@ -85,6 +85,7 @@ function runTestExamples {
      ../emend ../test/TestPassFail.lua          > test_pass_fail.out
      ../emend ../test/Test100Passes1Fail.lua    > test_100_passes_1_fail.out
      ../emend ../test/Test100Passes1Info.lua    > test_100_passes_1_info.out
+     ../emend ../test/Test100Failures1Pass.lua  > test_100_failures_1_pass.out
      ../emend ../test/Test1Pass.lua             > test_1_pass.out
      ../emend ../test/Test1Fail.lua             > test_1_fail.out
      ../emend ../test/Test1Info.lua             > test_1_info.out
