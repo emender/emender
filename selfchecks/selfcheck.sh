@@ -92,12 +92,19 @@ function runTestExamples {
 
 
 
-# Run Emender with tests that checks various file operations
+# Run Emender with tests that check various file operations
 function runTestsForFileOperations {
      ../emend ../test/TestFileOperationSlurp.lua       > test_file_operation_slurp.out
      ../emend ../test/TestFileOperationSlurpTable.lua  > test_file_operation_slurp_table.out
      ../emend ../test/TestFileOperationSpit.lua        > test_file_operation_spit.out
      ../emend ../test/TestFileOperationSpitTable.lua   > test_file_operation_spit_table.out
+}
+
+
+
+# Run Emender with tests that check various Emender modules
+function runTestsModules {
+     ../emend ../test/TestModuleAsserts.lua > test_module_asserts.out
 }
 
 
@@ -109,6 +116,7 @@ function runAllTests {
     runTestsWithBadOutputFormat
     runTestExamples
     runTestsForFileOperations
+    runTestsModules
 }
 
 
