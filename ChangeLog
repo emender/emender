@@ -1,5 +1,10 @@
 2014-11-12  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* test/TestModuleFileio.lua:
+	Added new test.
+
+2014-11-12  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* selfchecks/selfcheck.sh:
 	* selfchecks/test_module_asserts.in:
 	Added new selfcheck - test_module_asserts.
