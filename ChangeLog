@@ -1,3 +1,8 @@
+2014-11-13  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* test/Test100Failures1Info.lua:
+	Added new test Test100Failures1Info.
+
 2014-11-12  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* selfchecks/selfcheck.sh:
