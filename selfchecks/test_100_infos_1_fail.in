@@ -1,0 +1,341 @@
+---------------------------------------------------------------------------
+                          :: Test100Infos1Fail ::
+---------------------------------------------------------------------------
+
+  Description:   Check that graphs are rendered correctly.
+  Authors:       Pavel Tisnovsky
+  Emails:        ptisnovs@redhat.com
+  Last Modified: 2014-11-13
+  Tags:          BasicTest, SmokeTest
+
+  Test Case: testA
+
+    [ INFO ]  Info#1
+    [ INFO ]  Info#2
+    [ INFO ]  Info#3
+    [ INFO ]  Info#4
+    [ INFO ]  Info#5
+    [ INFO ]  Info#6
+    [ INFO ]  Info#7
+    [ INFO ]  Info#8
+    [ INFO ]  Info#9
+    [ INFO ]  Info#10
+    [ INFO ]  Info#11
+    [ INFO ]  Info#12
+    [ INFO ]  Info#13
+    [ INFO ]  Info#14
+    [ INFO ]  Info#15
+    [ INFO ]  Info#16
+    [ INFO ]  Info#17
+    [ INFO ]  Info#18
+    [ INFO ]  Info#19
+    [ INFO ]  Info#20
+    [ INFO ]  Info#21
+    [ INFO ]  Info#22
+    [ INFO ]  Info#23
+    [ INFO ]  Info#24
+    [ INFO ]  Info#25
+    [ INFO ]  Info#26
+    [ INFO ]  Info#27
+    [ INFO ]  Info#28
+    [ INFO ]  Info#29
+    [ INFO ]  Info#30
+    [ INFO ]  Info#31
+    [ INFO ]  Info#32
+    [ INFO ]  Info#33
+    [ INFO ]  Info#34
+    [ INFO ]  Info#35
+    [ INFO ]  Info#36
+    [ INFO ]  Info#37
+    [ INFO ]  Info#38
+    [ INFO ]  Info#39
+    [ INFO ]  Info#40
+    [ INFO ]  Info#41
+    [ INFO ]  Info#42
+    [ INFO ]  Info#43
+    [ INFO ]  Info#44
+    [ INFO ]  Info#45
+    [ INFO ]  Info#46
+    [ INFO ]  Info#47
+    [ INFO ]  Info#48
+    [ INFO ]  Info#49
+    [ INFO ]  Info#50
+    [ INFO ]  Info#51
+    [ INFO ]  Info#52
+    [ INFO ]  Info#53
+    [ INFO ]  Info#54
+    [ INFO ]  Info#55
+    [ INFO ]  Info#56
+    [ INFO ]  Info#57
+    [ INFO ]  Info#58
+    [ INFO ]  Info#59
+    [ INFO ]  Info#60
+    [ INFO ]  Info#61
+    [ INFO ]  Info#62
+    [ INFO ]  Info#63
+    [ INFO ]  Info#64
+    [ INFO ]  Info#65
+    [ INFO ]  Info#66
+    [ INFO ]  Info#67
+    [ INFO ]  Info#68
+    [ INFO ]  Info#69
+    [ INFO ]  Info#70
+    [ INFO ]  Info#71
+    [ INFO ]  Info#72
+    [ INFO ]  Info#73
+    [ INFO ]  Info#74
+    [ INFO ]  Info#75
+    [ INFO ]  Info#76
+    [ INFO ]  Info#77
+    [ INFO ]  Info#78
+    [ INFO ]  Info#79
+    [ INFO ]  Info#80
+    [ INFO ]  Info#81
+    [ INFO ]  Info#82
+    [ INFO ]  Info#83
+    [ INFO ]  Info#84
+    [ INFO ]  Info#85
+    [ INFO ]  Info#86
+    [ INFO ]  Info#87
+    [ INFO ]  Info#88
+    [ INFO ]  Info#89
+    [ INFO ]  Info#90
+    [ INFO ]  Info#91
+    [ INFO ]  Info#92
+    [ INFO ]  Info#93
+    [ INFO ]  Info#94
+    [ INFO ]  Info#95
+    [ INFO ]  Info#96
+    [ INFO ]  Info#97
+    [ INFO ]  Info#98
+    [ INFO ]  Info#99
+    [ INFO ]  Info#100
+    [ FAIL ]  Failure
+
+  Test Case: testB
+
+    [ FAIL ]  Failure
+    [ INFO ]  Info#1
+    [ INFO ]  Info#2
+    [ INFO ]  Info#3
+    [ INFO ]  Info#4
+    [ INFO ]  Info#5
+    [ INFO ]  Info#6
+    [ INFO ]  Info#7
+    [ INFO ]  Info#8
+    [ INFO ]  Info#9
+    [ INFO ]  Info#10
+    [ INFO ]  Info#11
+    [ INFO ]  Info#12
+    [ INFO ]  Info#13
+    [ INFO ]  Info#14
+    [ INFO ]  Info#15
+    [ INFO ]  Info#16
+    [ INFO ]  Info#17
+    [ INFO ]  Info#18
+    [ INFO ]  Info#19
+    [ INFO ]  Info#20
+    [ INFO ]  Info#21
+    [ INFO ]  Info#22
+    [ INFO ]  Info#23
+    [ INFO ]  Info#24
+    [ INFO ]  Info#25
+    [ INFO ]  Info#26
+    [ INFO ]  Info#27
+    [ INFO ]  Info#28
+    [ INFO ]  Info#29
+    [ INFO ]  Info#30
+    [ INFO ]  Info#31
+    [ INFO ]  Info#32
+    [ INFO ]  Info#33
+    [ INFO ]  Info#34
+    [ INFO ]  Info#35
+    [ INFO ]  Info#36
+    [ INFO ]  Info#37
+    [ INFO ]  Info#38
+    [ INFO ]  Info#39
+    [ INFO ]  Info#40
+    [ INFO ]  Info#41
+    [ INFO ]  Info#42
+    [ INFO ]  Info#43
+    [ INFO ]  Info#44
+    [ INFO ]  Info#45
+    [ INFO ]  Info#46
+    [ INFO ]  Info#47
+    [ INFO ]  Info#48
+    [ INFO ]  Info#49
+    [ INFO ]  Info#50
+    [ INFO ]  Info#51
+    [ INFO ]  Info#52
+    [ INFO ]  Info#53
+    [ INFO ]  Info#54
+    [ INFO ]  Info#55
+    [ INFO ]  Info#56
+    [ INFO ]  Info#57
+    [ INFO ]  Info#58
+    [ INFO ]  Info#59
+    [ INFO ]  Info#60
+    [ INFO ]  Info#61
+    [ INFO ]  Info#62
+    [ INFO ]  Info#63
+    [ INFO ]  Info#64
+    [ INFO ]  Info#65
+    [ INFO ]  Info#66
+    [ INFO ]  Info#67
+    [ INFO ]  Info#68
+    [ INFO ]  Info#69
+    [ INFO ]  Info#70
+    [ INFO ]  Info#71
+    [ INFO ]  Info#72
+    [ INFO ]  Info#73
+    [ INFO ]  Info#74
+    [ INFO ]  Info#75
+    [ INFO ]  Info#76
+    [ INFO ]  Info#77
+    [ INFO ]  Info#78
+    [ INFO ]  Info#79
+    [ INFO ]  Info#80
+    [ INFO ]  Info#81
+    [ INFO ]  Info#82
+    [ INFO ]  Info#83
+    [ INFO ]  Info#84
+    [ INFO ]  Info#85
+    [ INFO ]  Info#86
+    [ INFO ]  Info#87
+    [ INFO ]  Info#88
+    [ INFO ]  Info#89
+    [ INFO ]  Info#90
+    [ INFO ]  Info#91
+    [ INFO ]  Info#92
+    [ INFO ]  Info#93
+    [ INFO ]  Info#94
+    [ INFO ]  Info#95
+    [ INFO ]  Info#96
+    [ INFO ]  Info#97
+    [ INFO ]  Info#98
+    [ INFO ]  Info#99
+    [ INFO ]  Info#100
+
+  Test Case: testC
+
+    [ INFO ]  Info#1
+    [ INFO ]  Info#2
+    [ INFO ]  Info#3
+    [ INFO ]  Info#4
+    [ INFO ]  Info#5
+    [ INFO ]  Info#6
+    [ INFO ]  Info#7
+    [ INFO ]  Info#8
+    [ INFO ]  Info#9
+    [ INFO ]  Info#10
+    [ INFO ]  Info#11
+    [ INFO ]  Info#12
+    [ INFO ]  Info#13
+    [ INFO ]  Info#14
+    [ INFO ]  Info#15
+    [ INFO ]  Info#16
+    [ INFO ]  Info#17
+    [ INFO ]  Info#18
+    [ INFO ]  Info#19
+    [ INFO ]  Info#20
+    [ INFO ]  Info#21
+    [ INFO ]  Info#22
+    [ INFO ]  Info#23
+    [ INFO ]  Info#24
+    [ INFO ]  Info#25
+    [ INFO ]  Info#26
+    [ INFO ]  Info#27
+    [ INFO ]  Info#28
+    [ INFO ]  Info#29
+    [ INFO ]  Info#30
+    [ INFO ]  Info#31
+    [ INFO ]  Info#32
+    [ INFO ]  Info#33
+    [ INFO ]  Info#34
+    [ INFO ]  Info#35
+    [ INFO ]  Info#36
+    [ INFO ]  Info#37
+    [ INFO ]  Info#38
+    [ INFO ]  Info#39
+    [ INFO ]  Info#40
+    [ INFO ]  Info#41
+    [ INFO ]  Info#42
+    [ INFO ]  Info#43
+    [ INFO ]  Info#44
+    [ INFO ]  Info#45
+    [ INFO ]  Info#46
+    [ INFO ]  Info#47
+    [ INFO ]  Info#48
+    [ INFO ]  Info#49
+    [ INFO ]  Info#50
+    [ FAIL ]  Failure
+    [ INFO ]  Info#51
+    [ INFO ]  Info#52
+    [ INFO ]  Info#53
+    [ INFO ]  Info#54
+    [ INFO ]  Info#55
+    [ INFO ]  Info#56
+    [ INFO ]  Info#57
+    [ INFO ]  Info#58
+    [ INFO ]  Info#59
+    [ INFO ]  Info#60
+    [ INFO ]  Info#61
+    [ INFO ]  Info#62
+    [ INFO ]  Info#63
+    [ INFO ]  Info#64
+    [ INFO ]  Info#65
+    [ INFO ]  Info#66
+    [ INFO ]  Info#67
+    [ INFO ]  Info#68
+    [ INFO ]  Info#69
+    [ INFO ]  Info#70
+    [ INFO ]  Info#71
+    [ INFO ]  Info#72
+    [ INFO ]  Info#73
+    [ INFO ]  Info#74
+    [ INFO ]  Info#75
+    [ INFO ]  Info#76
+    [ INFO ]  Info#77
+    [ INFO ]  Info#78
+    [ INFO ]  Info#79
+    [ INFO ]  Info#80
+    [ INFO ]  Info#81
+    [ INFO ]  Info#82
+    [ INFO ]  Info#83
+    [ INFO ]  Info#84
+    [ INFO ]  Info#85
+    [ INFO ]  Info#86
+    [ INFO ]  Info#87
+    [ INFO ]  Info#88
+    [ INFO ]  Info#89
+    [ INFO ]  Info#90
+    [ INFO ]  Info#91
+    [ INFO ]  Info#92
+    [ INFO ]  Info#93
+    [ INFO ]  Info#94
+    [ INFO ]  Info#95
+    [ INFO ]  Info#96
+    [ INFO ]  Info#97
+    [ INFO ]  Info#98
+    [ INFO ]  Info#99
+    [ INFO ]  Info#100
+
+  Test Summary                                                            
+
+    Executed Test Cases: 3
+    Passed Test Cases:   0
+    Failed Test Cases:   3
+    Encountered Errors:  0
+    Overall Result:      FAIL
+
+---------------------------------------------------------------------------
+                               :: Summary ::
+---------------------------------------------------------------------------
+
+  Executed Tests: 1
+  Passed Tests:   0
+  Failed Tests:   1
+  Overall Result: FAIL
+
+---------------------------------------------------------------------------
+Generated by Emender                           https://github.com/emender/

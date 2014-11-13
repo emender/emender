@@ -1,5 +1,13 @@
 2014-11-13  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* selfchecks/selfcheck.sh:
+	* selfchecks/test_100_failures_1_info.in:
+	* selfchecks/test_100_infos_1_fail.in:
+	* selfchecks/test_100_infos_1_pass.in:
+	Added three new selfchecks.
+
+2014-11-13  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* test/Test100Infos1Pass.lua:
 	Added new test Test100Infos1Pass.
 
