@@ -1,5 +1,10 @@
 2014-11-13  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* test/Test100Infos1Fail.lua:
+	Added new test Test100Infos1Fail.
+
+2014-11-13  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* test/Test100Failures1Info.lua:
 	Added new test Test100Failures1Info.
 
