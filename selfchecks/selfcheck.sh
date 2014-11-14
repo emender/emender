@@ -106,6 +106,13 @@ function runTestsForFileOperations {
 
 
 
+# Run Emender with tests that check various assertions
+function runTestsForAssertions {
+     ../emend ../test/TestAssertionPass.lua > test_assertion_pass.out
+}
+
+
+
 # Run Emender with tests that check various Emender modules
 function runTestsModules {
      ../emend ../test/TestModuleAsserts.lua > test_module_asserts.out
@@ -122,6 +129,7 @@ function runAllTests {
     runTestExamples
     runTestsForFileOperations
     runTestsModules
+    runTestsForAssertions
 }
 
 
