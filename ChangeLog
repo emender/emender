@@ -1,3 +1,8 @@
+2014-11-14  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* test/TestAssertionFail.lua:
+	Updated the test TestAssertionFail.lua, added new testcases etc.
+
 2014-11-13  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* selfchecks/selfcheck.sh:
