@@ -1,3 +1,9 @@
+2014-11-18  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* selfchecks/selfcheck.sh:
+	* selfchecks/test_assertion_warn.in:
+	Added new selfcheck test_assertion_warn.
+
 2014-11-14  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* selfchecks/selfcheck.sh:

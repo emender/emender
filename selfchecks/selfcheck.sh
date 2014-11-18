@@ -110,6 +110,7 @@ function runTestsForFileOperations {
 function runTestsForAssertions {
      ../emend ../test/TestAssertionPass.lua > test_assertion_pass.out
      ../emend ../test/TestAssertionFail.lua > test_assertion_fail.out
+     ../emend ../test/TestAssertionWarn.lua > test_assertion_warn.out
 }
 
 
