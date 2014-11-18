@@ -59,7 +59,7 @@ function report_error_in_test_structure(message)
             local callerSrc = debugInfo.short_src
             -- check the caller
             if callerSrc and callerSrc:endsWith("asserts.lua") then
-                stackDepth = stackDepth + 2
+                stackDepth = stackDepth + 1
             end
         end
     end
