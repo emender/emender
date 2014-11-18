@@ -25,46 +25,158 @@ TestAssertionIsTrue = {
     },
 }
 
-function TestAssertionIsTrue.testPositive1()
+
+
+--
+-- Verify that the function accepts boolean and string as its arguments:
+--
+function TestAssertionIsTrue.testPositive01()
     is_true(true, "true is still true :)")
 end
 
-function TestAssertionIsTrue.testPositive2()
-    is_true(1==1, "equality")
+
+
+--
+-- Verify that the function accepts boolean and string as its arguments:
+--
+function TestAssertionIsTrue.testPositive02()
+    is_true(1 == 1, "equality")
 end
 
-function TestAssertionIsTrue.testPositive3()
-    is_true(1==1, "")
+
+
+--
+-- Verify that the function accepts boolean and empty string as its arguments:
+--
+function TestAssertionIsTrue.testPositive03()
+    is_true(1 == 1, "")
 end
 
-function TestAssertionIsTrue.testNegative1()
+
+
+--
+-- Verify that two numbers could be compared:
+--
+function TestAssertionIsTrue.testPositive04()
+    is_true(42 == 42, "numbers could be compared")
+end
+
+
+
+--
+-- Verify that two strings could be compared:
+--
+function TestAssertionIsTrue.testPositive05()
+    is_true("xyzzy" == "xyzzy", "strings could be compared")
+end
+
+
+
+--
+-- Verify that two nils could be compared:
+--
+function TestAssertionIsTrue.testPositive06()
+    is_true(nil == nil, "even nils could be compared")
+end
+
+
+
+--
+-- Basic negative test.
+--
+function TestAssertionIsTrue.testNegative01()
     is_true(false, "(expected) false is definitely not true")
 end
 
-function TestAssertionIsTrue.testNegative2()
+
+
+--
+-- Basic negative test.
+--
+function TestAssertionIsTrue.testNegative02()
+    is_true(1 ~= 1, "(expected) false is definitely not true")
+end
+
+
+
+--
+-- Basic negative test.
+--
+function TestAssertionIsTrue.testNegative03()
+    is_true("aaa" ~= "aaa", "(expected) false is definitely not true")
+end
+
+
+
+--
+-- Basic negative test.
+--
+function TestAssertionIsTrue.testNegative04()
     is_true(1==2, "(expected) not equals!")
 end
 
-function TestAssertionIsTrue.testNegative3()
+
+
+--
+-- Basic negative test.
+--
+function TestAssertionIsTrue.testNegative05()
+    is_true(nil==1, "(expected) not equals!")
+end
+
+
+
+--
+-- Verify that the function requires at least one argument:
+--
+function TestAssertionIsTrue.testNegative06()
     is_true()
 end
 
-function TestAssertionIsTrue.testNegative4()
-    is_true(1==1)
-end
 
-function TestAssertionIsTrue.testNegative5()
-    is_true(1==1, nil)
-end
 
-function TestAssertionIsTrue.testNegative6()
+--
+-- Verify that the function does not accept an nil as an first argument:
+--
+function TestAssertionIsTrue.testNegative07()
     is_true(nil, "What's wrong?")
 end
 
-function TestAssertionIsTrue.testNegative7()
+
+
+--
+-- Verify that the function requires at least two arguments:
+--
+function TestAssertionIsTrue.testNegative08()
+    is_true(1==1)
+end
+
+
+
+--
+-- Verify that the first argument has type boolean:
+--
+function TestAssertionIsTrue.testNegative09()
+    is_true(42, "42 is not a valid expression")
+end
+
+
+
+--
+-- Verify that the second argument has type string:
+--
+function TestAssertionIsTrue.testNegative10()
     is_true(1==1, 42)
 end
 
-function TestAssertionIsTrue.testNegative8()
-    is_true(42, "42 is not a valid expression")
+
+
+--
+-- Verify that the second argument has type string:
+--
+function TestAssertionIsTrue.testNegative11()
+    is_true(1==1, nil)
 end
+
+
+
