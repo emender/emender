@@ -1,5 +1,12 @@
 2014-11-19  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* selfchecks/selfcheck.sh:
+	* selfchecks/test_assertion_is_true.in:
+	* selfchecks/test_assertion_is_false.in:
+	Added new selfcheck test_assertion_is_false, added missing file.
+
+2014-11-19  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* test/TestAssertionIsFalse.lua:
 	Added new test cases.
 

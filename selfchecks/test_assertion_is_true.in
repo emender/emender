@@ -1,0 +1,169 @@
+---------------------------------------------------------------------------
+                         :: TestAssertionIsTrue ::
+---------------------------------------------------------------------------
+
+  Description:   Test the behaviour function asserts.is_true().
+  Authors:       Pavel Tisnovsky
+  Emails:        ptisnovs@redhat.com
+  Last Modified: 2014-08-28
+  Tags:          BasicTest
+
+  Test Case: testNegative01
+
+    [ FAIL ]  (expected) false is definitely not true
+
+  Test Case: testNegative02
+
+    [ FAIL ]  (expected) false is definitely not true
+
+  Test Case: testNegative03
+
+    [ FAIL ]  (expected) false is definitely not true
+
+  Test Case: testNegative04
+
+    [ FAIL ]  (expected) not equals!
+
+  Test Case: testNegative05
+
+    [ FAIL ]  (expected) not equals!
+
+  Test Case: testNegative06
+
+       ../test/TestAssertionIsTrue.lua:133: Test structure error: Expression is a required argument.
+
+  Test Case: testNegative07
+
+       ../test/TestAssertionIsTrue.lua:142: Test structure error: Expression is a required argument.
+
+  Test Case: testNegative08
+
+       ../test/TestAssertionIsTrue.lua:151: Test structure error: Explanation is a required argument.
+
+  Test Case: testNegative09
+
+       ../test/TestAssertionIsTrue.lua:160: Test structure error: Expression must evaluate to a Boolean.
+
+  Test Case: testNegative10
+
+       ../test/TestAssertionIsTrue.lua:169: Test structure error: Expression must evaluate to a Boolean.
+
+  Test Case: testNegative11
+
+       ../test/TestAssertionIsTrue.lua:178: Test structure error: Expression must evaluate to a Boolean.
+
+  Test Case: testNegative12
+
+       ../test/TestAssertionIsTrue.lua:187: Test structure error: Expression must evaluate to a Boolean.
+
+  Test Case: testNegative13
+
+       ../test/TestAssertionIsTrue.lua:196: Test structure error: Expression must evaluate to a Boolean.
+
+  Test Case: testNegative14
+
+       ../test/TestAssertionIsTrue.lua:212: Test structure error: Expression must evaluate to a Boolean.
+
+  Test Case: testNegative15
+
+       ../test/TestAssertionIsTrue.lua:221: Test structure error: Expression must evaluate to a Boolean.
+
+  Test Case: testNegative16
+
+       ../test/TestAssertionIsTrue.lua:235: Test structure error: Expression must evaluate to a Boolean.
+
+  Test Case: testNegative17
+
+       ../test/TestAssertionIsTrue.lua:253: Test structure error: Expression must evaluate to a Boolean.
+
+  Test Case: testNegative18
+
+       ../test/TestAssertionIsTrue.lua:267: Test structure error: Expression must evaluate to a Boolean.
+
+  Test Case: testNegative19
+
+       ../test/TestAssertionIsTrue.lua:276: Test structure error: Explanation is a required argument.
+
+  Test Case: testNegative20
+
+       ../test/TestAssertionIsTrue.lua:285: Test structure error: Explanation must be a string.
+
+  Test Case: testNegative21
+
+       ../test/TestAssertionIsTrue.lua:294: Test structure error: Explanation must be a string.
+
+  Test Case: testNegative22
+
+       ../test/TestAssertionIsTrue.lua:303: Test structure error: Explanation must be a string.
+
+  Test Case: testNegative23
+
+       ../test/TestAssertionIsTrue.lua:312: Test structure error: Explanation must be a string.
+
+  Test Case: testNegative24
+
+       ../test/TestAssertionIsTrue.lua:321: Test structure error: Explanation must be a string.
+
+  Test Case: testNegative25
+
+       ../test/TestAssertionIsTrue.lua:337: Test structure error: Explanation must be a string.
+
+  Test Case: testNegative26
+
+       ../test/TestAssertionIsTrue.lua:346: Test structure error: Explanation must be a string.
+
+  Test Case: testNegative27
+
+       ../test/TestAssertionIsTrue.lua:360: Test structure error: Explanation must be a string.
+
+  Test Case: testNegative28
+
+       ../test/TestAssertionIsTrue.lua:378: Test structure error: Explanation must be a string.
+
+  Test Case: testNegative29
+
+       ../test/TestAssertionIsTrue.lua:392: Test structure error: Explanation must be a string.
+
+  Test Case: testPositive01
+
+    [ PASS ]  true is still true :)
+
+  Test Case: testPositive02
+
+    [ PASS ]  equality
+
+  Test Case: testPositive03
+
+    [ PASS ]  
+
+  Test Case: testPositive04
+
+    [ PASS ]  numbers could be compared
+
+  Test Case: testPositive05
+
+    [ PASS ]  strings could be compared
+
+  Test Case: testPositive06
+
+    [ PASS ]  even nils could be compared
+
+  Test Summary                                                            
+
+    Executed Test Cases: 35
+    Passed Test Cases:   6
+    Failed Test Cases:   5
+    Encountered Errors:  24
+    Overall Result:      FAIL
+
+---------------------------------------------------------------------------
+                               :: Summary ::
+---------------------------------------------------------------------------
+
+  Executed Tests: 1
+  Passed Tests:   0
+  Failed Tests:   1
+  Overall Result: FAIL
+
+---------------------------------------------------------------------------
+Generated by Emender                           https://github.com/emender/
