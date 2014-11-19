@@ -1,6 +1,11 @@
 2014-11-19  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* test/TestAssertionIsFalse.lua:
+	Added new test cases.
+
+2014-11-19  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* test/TestAssertionIsFalse.lua:
 	Added comments, renumbered test cases.
 
 2014-11-19  Pavel Tisnovsky  <ptisnovs@redhat.com>
