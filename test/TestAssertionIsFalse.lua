@@ -25,17 +25,61 @@ TestAssertionIsFalse = {
     },
 }
 
-function TestAssertionIsFalse.testPositive1()
+
+
+--
+-- Verify that the function accepts boolean and string as its arguments:
+--
+function TestAssertionIsFalse.testPositive01()
     is_false(false, "false is still false :)")
 end
 
-function TestAssertionIsFalse.testPositive2()
-    is_false(1~=1, "inequality")
+
+
+--
+-- Verify that the function accepts boolean and string as its arguments:
+--
+function TestAssertionIsFalse.testPositive02()
+    is_false(1 ~= 1, "inequality")
 end
 
-function TestAssertionIsFalse.testPositive3()
-    is_false(1~=1, "")
+
+
+--
+-- Verify that the function accepts boolean and empty string as its arguments:
+--
+function TestAssertionIsFalse.testPositive03()
+    is_false(1 ~= 1, "")
 end
+
+
+
+--
+-- Verify that two numbers could be compared:
+--
+function TestAssertionIsFalse.testPositive04()
+    is_false(42 ~= 42, "numbers could be compared")
+end
+
+
+
+--
+-- Verify that two strings could be compared:
+--
+function TestAssertionIsFalse.testPositive05()
+    is_false("xyzzy" ~= "xyzzy", "strings could be compared")
+end
+
+
+
+--
+-- Verify that two nils could be compared:
+--
+function TestAssertionIsFalse.testPositive06()
+    is_false(nil ~= nil, "even nils could be compared")
+end
+
+
 
 function TestAssertionIsFalse.testNegative1()
     is_false(true, "(expected) true is definitely not false")
@@ -68,3 +112,4 @@ end
 function TestAssertionIsFalse.testNegative8()
     is_false(42, "42 is not a valid expression")
 end
+
