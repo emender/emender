@@ -108,9 +108,10 @@ function runTestsForFileOperations {
 
 # Run Emender with tests that check various assertions
 function runTestsForAssertions {
-     ../emend ../test/TestAssertionPass.lua > test_assertion_pass.out
-     ../emend ../test/TestAssertionFail.lua > test_assertion_fail.out
-     ../emend ../test/TestAssertionWarn.lua > test_assertion_warn.out
+     ../emend ../test/TestAssertionPass.lua   > test_assertion_pass.out
+     ../emend ../test/TestAssertionFail.lua   > test_assertion_fail.out
+     ../emend ../test/TestAssertionWarn.lua   > test_assertion_warn.out
+     ../emend ../test/TestAssertionIsTrue.lua > test_assertion_is_true.out
 }
 
 
