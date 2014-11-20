@@ -1,5 +1,5 @@
 -- TestAssertionIsEmpty.lua - test the behavior of the asserts.is_empty() function
--- Copyright (C) 2014 Jaromir Hradilek
+-- Copyright (C) 2014 Jaromir Hradilek, Pavel Tisnovsky
 --
 -- This file is part of Emender.
 --
@@ -20,9 +20,9 @@ TestAssertionIsEmpty = {
     -- required field
     metadata = {
         description = "Test the behavior of the asserts.is_empty() function.",
-        authors = "Jaromir Hradilek",
-        emails = "jhradilek@redhat.com",
-        changed = "2014-11-14",
+        authors = "Jaromir Hradilek, Pavel Tisnovsky",
+        emails = "jhradilek@redhat.com, ptisnovs@redhat.com",
+        changed = "2014-11-18",
         tags = {"BasicTest", "SmokeTest"}
     }
 }
@@ -32,8 +32,45 @@ TestAssertionIsEmpty = {
 --
 -- Verify that the function recognizes an empty table:
 --
-function TestAssertionIsEmpty.testPositive1()
+function TestAssertionIsEmpty.testPositive01()
     is_empty({}, "table is empty")
+end
+
+
+
+--
+-- Verify that the function recognizes an empty table:
+-- (the second element could be empty string)
+--
+function TestAssertionIsEmpty.testPositive02()
+    is_empty({}, "")
+end
+
+
+
+--
+-- Verify that the function recognizes a table with items in it:
+--
+function TestAssertionIsEmpty.testPositive03()
+    is_empty({nil}, "table containing just nil is empty")
+end
+
+
+
+--
+-- Verify that the function recognizes a table with items in it:
+--
+function TestAssertionIsEmpty.testPositive04()
+    is_empty({nil, nil}, "table containing two nils is empty")
+end
+
+
+
+--
+-- Verify that the function recognizes a table with items in it:
+--
+function TestAssertionIsEmpty.testPositive05()
+    is_empty({nil, nil, nil, nil}, "table containing more nils is empty")
 end
 
 
@@ -114,7 +151,7 @@ end
 -- Verify that the function recognizes a (non empty) table:
 --
 function TestAssertionIsEmpty.testNegative09()
-    is_empty({1,2,3}, "table is not empty")
+    is_empty({1,2,3}, "(expected) table is not empty")
 end
 
 
@@ -123,7 +160,7 @@ end
 -- Verify that the function recognizes a nested table as an argument:
 --
 function TestAssertionIsEmpty.testNegative10()
-    is_empty({{{1},2},3}, "nested table is not empty")
+    is_empty({{{1},2},3}, "(expected) nested table is not empty")
 end
 
 
@@ -195,5 +232,32 @@ function TestAssertionIsEmpty.testNegative15()
          end)
     -- and call the is_empty() function with the coroutine as its argument
     is_empty(func, "coroutine is definitely not empty")
+end
+
+
+
+--
+-- Verify that the function recognizes a nested table as an argument:
+--
+function TestAssertionIsEmpty.testNegative16()
+    is_empty({{}}, "(expected) nested table is not empty")
+end
+
+
+
+--
+-- Verify that the function recognizes a nested table as an argument:
+--
+function TestAssertionIsEmpty.testNegative17()
+    is_empty({{{}}}, "(expected) deeply nested table is not empty")
+end
+
+
+
+--
+-- Verify that the function recognizes a nested table as an argument:
+--
+function TestAssertionIsEmpty.testNegative18()
+    is_empty({{}, {}}, "(expected) deeply nested table is not empty")
 end
 

@@ -1,3 +1,8 @@
+2014-11-20  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* test/TestAssertionIsEmpty.lua:
+	Added new test cases.
+
 2014-11-19  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* selfchecks/selfcheck.sh:
