@@ -1,5 +1,10 @@
 2014-11-20  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* test/TestAssertionIsNil.lua:
+	Added new test cases into TestAssertionIsNil.
+
+2014-11-20  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* test/TestAssertionIsNotEmpty.lua:
 	Added new test cases into TestAssertionIsNotEmpty.
 
