@@ -1,6 +1,13 @@
 2014-11-21  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* selfchecks/selfcheck.sh:
+	* selfchecks/test_assertion_is_empty.in:
+	* selfchecks/test_assertion_is_not_empty.in:
+	Added two new selfchecks.
+
+2014-11-21  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* selfchecks/selfcheck.sh:
 	* selfchecks/test_assertion_is_nil.in:
 	* selfchecks/test_assertion_is_not_nil.in:
 	Added two new selfchecks.
