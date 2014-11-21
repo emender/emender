@@ -1,5 +1,10 @@
 2014-11-21  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* test/TestAssertionIsEqual.lua:
+	Added test cases into the test TestAssertionIsEqual.
+
+2014-11-21  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* selfchecks/selfcheck.sh:
 	* selfchecks/test_assertion_is_empty.in:
 	* selfchecks/test_assertion_is_not_empty.in:

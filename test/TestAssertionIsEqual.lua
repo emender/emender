@@ -25,6 +25,8 @@ TestAssertionIsEqual = {
     },
 }
 
+
+
 --
 -- Check if two boolean values "true" are equal.
 --
@@ -32,6 +34,8 @@ function TestAssertionIsEqual.testPositive01()
     -- perform comparison
     is_equal(true, true, "positive equality test:two booleans")
 end
+
+
 
 --
 -- Check if two boolean values "false" are equal.
@@ -41,6 +45,8 @@ function TestAssertionIsEqual.testPositive02()
     is_equal(false, false, "positive equality test:two booleans")
 end
 
+
+
 --
 -- Check if two integer values are equal.
 --
@@ -48,6 +54,8 @@ function TestAssertionIsEqual.testPositive03()
     -- perform comparison
     is_equal(42, 42, "positive equality test: two integers")
 end
+
+
 
 --
 -- Check if two float values are equal.
@@ -57,6 +65,8 @@ function TestAssertionIsEqual.testPositive04()
     is_equal(3.14, 3.14, "positive equality test: two floats")
 end
 
+
+
 --
 -- Check if two empty strings are equal.
 --
@@ -64,6 +74,8 @@ function TestAssertionIsEqual.testPositive05()
     -- perform comparison
     is_equal("", "", "positive equality test: two empty strings")
 end
+
+
 
 --
 -- Check if two non-empty strings are equal.
@@ -73,6 +85,8 @@ function TestAssertionIsEqual.testPositive06()
     is_equal("x", "x", "positive equality test: two strings")
 end
 
+
+
 --
 -- Check if two non-empty strings (containing special character) are equal.
 --
@@ -80,6 +94,8 @@ function TestAssertionIsEqual.testPositive07()
     -- perform comparison
     is_equal("\n", "\n", "positive equality test: two strings")
 end
+
+
 
 --
 -- Check if two empty tables are equal.
@@ -89,6 +105,8 @@ function TestAssertionIsEqual.testPositive08()
     is_equal({}, {}, "positive equality test: two empty tables")
 end
 
+
+
 --
 -- Check if two tables are equal.
 --
@@ -96,6 +114,8 @@ function TestAssertionIsEqual.testPositive09()
     -- perform comparison
     is_equal({1,2}, {1,2}, "positive equality test: two tables, items are integers")
 end
+
+
 
 --
 -- Check if two tables are equal.
@@ -105,6 +125,8 @@ function TestAssertionIsEqual.testPositive10()
     is_equal({1,2,3,4}, {1,2,3,4}, "positive equality test: two tables, items are integers")
 end
 
+
+
 --
 -- Check if two tables are equal.
 --
@@ -112,6 +134,8 @@ function TestAssertionIsEqual.testPositive11()
     -- perform comparison
     is_equal({"x", "y"}, {"x", "y"}, "positive equality test: two tables, items are strings")
 end
+
+
 
 --
 -- Check if two nested tables are equal.
@@ -121,6 +145,8 @@ function TestAssertionIsEqual.testPositive12()
     is_equal({1,{2,3},4}, {1,{2,3},4}, "positive equality test: two nested tables")
 end
 
+
+
 --
 -- Check if two nested tables are equal.
 --
@@ -128,6 +154,8 @@ function TestAssertionIsEqual.testPositive13()
     -- perform comparison
     is_equal({1,{2,{3}},4}, {1,{2,{3}},4}, "positive equality test: two deeply nested tables")
 end
+
+
 
 --
 -- Check if two nested tables are equal.
@@ -138,6 +166,8 @@ function TestAssertionIsEqual.testPositive14()
     -- perform comparison
     is_equal(table1, table2, "positive equality test: two deeply nested tables")
 end
+
+
 
 --
 -- Check if two hash tables are equal.
@@ -160,6 +190,8 @@ function TestAssertionIsEqual.testPositive15()
     is_equal(table1, table2, "positive equality test: two hash tables")
 end
 
+
+
 --
 -- Check if two hash tables are equal.
 --
@@ -180,6 +212,8 @@ function TestAssertionIsEqual.testPositive16()
     -- perform comparison
     is_equal(table1, table2, "positive equality test: two hash tables")
 end
+
+
 
 --
 -- Check if two nested hash tables are equal.
@@ -202,6 +236,8 @@ function TestAssertionIsEqual.testPositive17()
     is_equal(table1, table2, "positive equality test: two nested hash tables")
 end
 
+
+
 --
 -- Verify that true!=false.
 --
@@ -209,6 +245,8 @@ function TestAssertionIsEqual.testNegative01()
     -- perform comparison
     is_equal(true, false, "(expected) negative equality test")
 end
+
+
 
 --
 -- Verify that false!=true.
@@ -218,6 +256,8 @@ function TestAssertionIsEqual.testNegative02()
     is_equal(false, true, "(expected) negative equality test")
 end
 
+
+
 --
 -- Verify that 1!=2.
 --
@@ -225,6 +265,8 @@ function TestAssertionIsEqual.testNegative03()
     -- perform comparison
     is_equal(1, 2, "(expected) integers are not the same")
 end
+
+
 
 --
 -- Verify that 1.9!=2.0.
@@ -234,6 +276,8 @@ function TestAssertionIsEqual.testNegative04()
     is_equal(1.9, 2.0, "(expected) integers are not the same")
 end
 
+
+
 --
 -- Compare two different strings.
 --
@@ -241,6 +285,8 @@ function TestAssertionIsEqual.testNegative05()
     -- perform comparison
     is_equal("x", "y", "(expected) strings are not the same")
 end
+
+
 
 --
 -- Compare two different strings (first one is empty).
@@ -250,6 +296,8 @@ function TestAssertionIsEqual.testNegative06()
     is_equal("", "y", "(expected) strings are not the same")
 end
 
+
+
 --
 -- Compare two different strings (first one contains special character).
 --
@@ -257,6 +305,8 @@ function TestAssertionIsEqual.testNegative07()
     -- perform comparison
     is_equal("\n", "y", "(expected) strings are not the same")
 end
+
+
 
 --
 -- Verify that the function does not accept no arguments:
@@ -266,6 +316,8 @@ function TestAssertionIsEqual.testNegative08()
     is_equal()
 end
 
+
+
 --
 -- Verify that the function does not accept only one argument:
 --
@@ -273,6 +325,8 @@ function TestAssertionIsEqual.testNegative09()
     -- perform comparison
     is_equal(1)
 end
+
+
 
 --
 -- Verify that the function does not accept only two arguments:
@@ -282,6 +336,8 @@ function TestAssertionIsEqual.testNegative10()
     is_equal(1, 1)
 end
 
+
+
 --
 -- Verify that if is never equals to nil.
 --
@@ -289,6 +345,8 @@ function TestAssertionIsEqual.testNegative11()
     -- perform comparison
     is_equal(nil, nil, "What's wrong?")
 end
+
+
 
 --
 -- Comparison of two tables.
@@ -298,6 +356,8 @@ function TestAssertionIsEqual.testNegative12()
     is_equal({}, {1}, "negative equality test: two tables")
 end
 
+
+
 --
 -- Comparison of two tables.
 --
@@ -305,6 +365,8 @@ function TestAssertionIsEqual.testNegative13()
     -- perform comparison
     is_equal({1,2}, {2,1}, "negative equality test: two tables, items are integers")
 end
+
+
 
 --
 -- Comparison of two tables.
@@ -314,6 +376,8 @@ function TestAssertionIsEqual.testNegative14()
     is_equal({1,2,3,4}, {1,2,3,4,5,6,7}, "negative equality test: two tables, items are integers")
 end
 
+
+
 --
 -- Comparison of two tables.
 --
@@ -321,6 +385,8 @@ function TestAssertionIsEqual.testNegative15()
     -- perform comparison
     is_equal({"x", "y"}, {"x", "z"}, "negative equality test: two tables, items are strings")
 end
+
+
 
 --
 -- Comparison of two nested tables.
@@ -330,6 +396,8 @@ function TestAssertionIsEqual.testNegative16()
     is_equal({1,{2,3},4}, {1,{2,9999},4}, "negative equality test: two nested tables")
 end
 
+
+
 --
 -- Comparison of two nested tables.
 --
@@ -337,6 +405,8 @@ function TestAssertionIsEqual.testNegative17()
     -- perform comparison
     is_equal({1,{2,{3}},4}, {1,{2,{}},4}, "negative equality test: two deeply nested tables")
 end
+
+
 
 --
 -- Comparison of two nested tables.
@@ -347,6 +417,8 @@ function TestAssertionIsEqual.testNegative18()
     -- perform comparison
     is_equal(table1, table2, "negative equality test: two deeply nested tables")
 end
+
+
 
 --
 -- Comparison of two hash tables.
@@ -369,6 +441,8 @@ function TestAssertionIsEqual.testNegative19()
     is_equal(table1, table2, "negative equality test: two hash tables")
 end
 
+
+
 --
 -- Comparison of two hash tables.
 --
@@ -390,6 +464,8 @@ function TestAssertionIsEqual.testNegative20()
     is_equal(table1, table2, "negative equality test: two hash tables")
 end
 
+
+
 --
 -- Comparison of two nested hash tables.
 --
@@ -409,5 +485,205 @@ function TestAssertionIsEqual.testNegative21()
 
     -- perform comparison
     is_equal(table1, table2, "negative equality test: two nested hash tables")
+end
+
+
+
+--
+-- Test comparison of integer with boolean.
+--
+function TestAssertionIsEqual.testNegative22()
+    -- perform comparison
+    is_equal(1, true, "negative equality test: comparison of integer with boolean")
+end
+
+
+
+--
+-- Test comparison of integer with boolean.
+--
+function TestAssertionIsEqual.testNegative23()
+    -- perform comparison
+    is_equal(1, false, "negative equality test: comparison of integer with boolean")
+end
+
+
+
+--
+-- Test comparison of boolean with integer.
+--
+function TestAssertionIsEqual.testNegative24()
+    -- perform comparison
+    is_equal(true, 1, "negative equality test: comparison of boolean with integer")
+end
+
+
+
+--
+-- Test comparison of boolean with integer.
+--
+function TestAssertionIsEqual.testNegative25()
+    -- perform comparison
+    is_equal(false, 1, "negative equality test: comparison of boolean with integer")
+end
+
+
+
+--
+-- Test comparison of string with boolean.
+--
+function TestAssertionIsEqual.testNegative26()
+    -- perform comparison
+    is_equal("xyzzy", true, "negative equality test: comparison of string with boolean")
+end
+
+
+
+--
+-- Test comparison of string with boolean.
+--
+function TestAssertionIsEqual.testNegative27()
+    -- perform comparison
+    is_equal("xyzzy", false, "negative equality test: comparison of string with boolean")
+end
+
+
+
+--
+-- Test comparison of boolean with string.
+--
+function TestAssertionIsEqual.testNegative28()
+    -- perform comparison
+    is_equal(true, "xyzzy", "negative equality test: comparison of boolean with string")
+end
+
+
+
+--
+-- Test comparison of boolean with string.
+--
+function TestAssertionIsEqual.testNegative29()
+    -- perform comparison
+    is_equal(false, "xyzzy", "negative equality test: comparison of boolean with string")
+end
+
+
+
+--
+-- Test comparison of table with boolean.
+--
+function TestAssertionIsEqual.testNegative30()
+    -- perform comparison
+    is_equal({1,2,3}, true, "negative equality test: comparison of table with boolean")
+end
+
+
+
+--
+-- Test comparison of table with boolean.
+--
+function TestAssertionIsEqual.testNegative31()
+    -- perform comparison
+    is_equal({1,2,3}, false, "negative equality test: comparison of table with boolean")
+end
+
+
+
+--
+-- Test comparison of boolean with table.
+--
+function TestAssertionIsEqual.testNegative32()
+    -- perform comparison
+    is_equal(true, {1,2,3}, "negative equality test: comparison of boolean with table")
+end
+
+
+
+--
+-- Test comparison of boolean with table.
+--
+function TestAssertionIsEqual.testNegative33()
+    -- perform comparison
+    is_equal(false, {1,2,3}, "negative equality test: comparison of boolean with table")
+end
+
+
+
+--
+-- Test comparison of table with boolean.
+--
+function TestAssertionIsEqual.testNegative34()
+    -- perform comparison
+    is_equal({true}, true, "negative equality test: comparison of table with boolean")
+end
+
+
+
+--
+-- Test comparison of table with boolean.
+--
+function TestAssertionIsEqual.testNegative35()
+    -- perform comparison
+    is_equal({false}, false, "negative equality test: comparison of table with boolean")
+end
+
+
+
+--
+-- Test comparison of boolean with table.
+--
+function TestAssertionIsEqual.testNegative36()
+    -- perform comparison
+    is_equal(true, {true}, "negative equality test: comparison of boolean with table")
+end
+
+
+
+--
+-- Test comparison of boolean with table.
+--
+function TestAssertionIsEqual.testNegative37()
+    -- perform comparison
+    is_equal(false, {false}, "negative equality test: comparison of boolean with table")
+end
+
+
+
+--
+-- Test comparison of table with string.
+--
+function TestAssertionIsEqual.testNegative38()
+    -- perform comparison
+    is_equal({"xyzzy"}, "xyzzy", "negative equality test: comparison of table with string")
+end
+
+
+
+--
+-- Test comparison of table with number.
+--
+function TestAssertionIsEqual.testNegative39()
+    -- perform comparison
+    is_equal({42}, 42, "negative equality test: comparison of table with number")
+end
+
+
+
+--
+-- Test comparison of string with table.
+--
+function TestAssertionIsEqual.testNegative40()
+    -- perform comparison
+    is_equal("xyzzy", {"xyzzy"}, "negative equality test: comparison of string with table")
+end
+
+
+
+--
+-- Test comparison of number with table.
+--
+function TestAssertionIsEqual.testNegative41()
+    -- perform comparison
+    is_equal(42, {42}, "negative equality test: comparison of number with table")
 end
 
