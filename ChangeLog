@@ -1,3 +1,8 @@
+2014-11-21  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* selftest/selfcheck.sh:
+	Minor change.
+
 2014-11-20  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* test/TestAssertionIsNotNil.lua:
