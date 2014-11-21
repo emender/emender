@@ -113,6 +113,8 @@ function runTestsForAssertions {
      ../emend ../test/TestAssertionWarn.lua       > test_assertion_warn.out
      ../emend ../test/TestAssertionIsTrue.lua     > test_assertion_is_true.out
      ../emend ../test/TestAssertionIsFalse.lua    > test_assertion_is_false.out
+     ../emend ../test/TestAssertionIsNil.lua      > test_assertion_is_nil.out
+     ../emend ../test/TestAssertionIsNotNil.lua   > test_assertion_is_not_nil.out
 }
 
 
