@@ -120,7 +120,11 @@ function checkForUnknownOptions(options)
     end
 end
 
-function printConfiguration(outputFileNames, outputFiles, testsToRun)
+function isTableEmpty(tbl)
+    return not tbl or next(tbl) == nil
+end
+
+function printConfiguration(outputFileNames, outputFiles, testsToRun, testOptions)
     print("Tests to run:")
     for _, testToRun in ipairs(testsToRun) do
         print("", testToRun)
@@ -128,14 +132,32 @@ function printConfiguration(outputFileNames, outputFiles, testsToRun)
     print()
 
     print("Output file names:")
-    for _, outputFileName in ipairs(outputFileNames) do
-        print("", outputFileName)
+    if isTableEmpty(outputFileNames) then
+        print("    Not specified")
+    else
+        for _, outputFileName in ipairs(outputFileNames) do
+            print("", outputFileName)
+        end
     end
     print()
 
     print("Output files:")
-    for format, file in pairs(outputFiles) do
-        print("", format, file[1])
+    if isTableEmpty(outputFiles) then
+        print("    Not specified")
+    else
+        for format, file in pairs(outputFiles) do
+            print("", format, file[1])
+        end
+    end
+    print()
+
+    print("Options passed to tests:")
+    if isTableEmpty(testOptions) then
+        print("    Not specified")
+    else
+        for name, value in pairs(testOptions) do
+            print("", name, value)
+        end
     end
     print()
 end
@@ -169,13 +191,14 @@ function main(arg)
     local testsToRun = getopt.getTestsToRun(arg)
 
     local outputFiles = getopt.recognizeOutputFormats(outputFileNames)
+    local testOptions = getopt.getTestOptions(options)
 
     if tracingOn then
         tracer.enable()
     end
 
     if verboseOperations then
-        printConfiguration(outputFileNames, outputFiles, testsToRun)
+        printConfiguration(outputFileNames, outputFiles, testsToRun, testOptions)
     end
 
     logger.setColorOutput(colorOutput)
@@ -189,7 +212,7 @@ function main(arg)
     elseif getopt.isTestListOptionUsed(options) then
         core.performTestList(verboseOperations, colorOutput)
     else
-        core.runTests(verboseOperations, colorOutput, testsToRun, outputFiles)
+        core.runTests(verboseOperations, colorOutput, testsToRun, outputFiles, testOptions)
     end
 end
 

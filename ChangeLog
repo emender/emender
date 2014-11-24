@@ -1,5 +1,10 @@
 2014-11-24  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* emend:
+	Test-specific parameters should be properly passed to core.
+
+2014-11-24  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* src/core.lua:
 	Added support for test-specific parameters specified on the command
 	line into Emender core.
