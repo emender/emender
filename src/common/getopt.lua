@@ -146,15 +146,59 @@ function getopt.getUnknownOptions(options)
     local knownOptions = {"v", "verbose",   "l", "list",      "h", "help",
                           "V", "version",   "L", "license",   "c", "color",
                           "s", "summary",   "T", "trace",     "o", "output"}
+
+    -- we are going to modify table two times, so let's made a copy of it
     local unknownOptions = table.copy(options)
+
+    -- remove all know options from the table of all options specified on command line
     for _, knownOption in ipairs(knownOptions) do
          unknownOptions[knownOption] = nil
     end
+
+    -- all options that stars with "--X" are to be pass to the test
+    for optionName, optionValue in pairs(options) do
+         -- check the first letter if it's equals to "X"
+         local firstLetter = optionName:subs(1,1)
+         if firstLetter == "X" then
+             -- we found option that could be passed to the test
+             unknownOptions[optionName] = nil
+         end
+    end
+
+    -- all options that are left in the table unknownOptions are really unknown options :)
     return unknownOptions
 end
 
 
 
+--
+-- Get all options that could be passed to the test.
+--
+function getopt.getTestOptions(options)
+    -- we are going to modify table two times, so let's made a copy of it
+    local testOptions = {}
+
+    -- all options that stars with "--X" are to be pass to the test
+    for optionName, optionValue in pairs(options) do
+         -- check the first letter if it's equals to "X"
+         local firstLetter = optionName:subs(1,1)
+         -- option name should be without the "X" at the beginning
+         local realOptionName = optionName:subs(2)
+         if firstLetter == "X" and realOptionName ~= nil then
+             -- we found option that could be passed to the test
+             testOptions[realOptionName] = optionValue
+         end
+    end
+
+    -- return all test options found in list of all options specified on CLI
+    return testOptions
+end
+
+
+
+--
+-- Try to recognize all output formats specified by user
+--
 function getopt.recognizeOutputFormats(outputFileNames)
     local outputFiles = {}
     for _, outputFileName in ipairs(outputFileNames) do
@@ -177,6 +221,11 @@ function getopt.recognizeOutputFormats(outputFileNames)
     return outputFiles
 end
 
+
+
+--
+-- Try to recognize all tests that should be run.
+--
 function getopt.getTestsToRun(arg)
     local testList = {}
 
@@ -189,6 +238,11 @@ function getopt.getTestsToRun(arg)
     return testList
 end
 
+
+
+--
+-- Try to recognize all output file specified by user.
+--
 function getopt.getOutputFiles(arg)
     local outputFiles = {}
 
