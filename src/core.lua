@@ -306,10 +306,36 @@ function filterMessages(messages, filter)
     return cnt
 end
 
+
+
+--
+-- Pass all test options given on the command line to the test.
+--
+function addTestOptions(testSuiteName, testOptions)
+    -- no test options specified? we are done then
+    if not testOptions or next(testOptions) == nil then
+        return
+    end
+
+    -- try to read test structure from the global table
+    local test = _G[testSuiteName]
+    -- no test found? error will be reported later
+    if not test then
+        return
+    end
+
+    -- pass test options to the test
+    for name, value in pairs(testOptions) do
+        test[name] = value
+    end
+end
+
+
+
 --
 --
 --
-function core.runTest(scriptDirectory, filename, verboseOperation)
+function core.runTest(scriptDirectory, filename, verboseOperation, testOptions)
     local testSuiteName = core.updateTestSuiteName(filename)
     if testSuiteName then
         local testSuite = {}
@@ -324,13 +350,14 @@ function core.runTest(scriptDirectory, filename, verboseOperation)
             dofile(scriptDirectory .. "test/" .. filename)
         else
             if verboseOperation then
-                print("Script filename: " .. scriptDirectory .. "test/" .. filename)
+                print("Script filename: test/" .. filename)
                 print("Test name: " ..testSuiteName)
             end
             dofile(filename)
         end
 
         fillInTestMetadata(testSuite, testSuiteName)
+        addTestOptions(testSuiteName, testOptions)
 
         local setupFunction = core.getSetupFunction(testSuiteName)
         local tearDownFunction = core.getTearDownFunction(testSuiteName)
@@ -537,14 +564,14 @@ end
 --
 --
 --
-function core.runTests(verboseOperation, colorOutput, testsToRun, outputFiles)
+function core.runTests(verboseOperation, colorOutput, testsToRun, outputFiles, testOptions)
     core.results.passedTests = 0
     core.results.failedTests = 0
     core.results.suites = {}
 
     if testsToRun and #testsToRun > 0 then
         for i, filename in ipairs(testsToRun) do
-            local result = core.runTest(nil, filename, verboseOperation)
+            local result = core.runTest(nil, filename, verboseOperation, testOptions)
             if result ~= nil then
                 if result then
                     core.results.passedTests = core.results.passedTests + 1

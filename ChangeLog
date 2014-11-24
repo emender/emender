@@ -1,5 +1,11 @@
 2014-11-24  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* src/core.lua:
+	Added support for test-specific parameters specified on the command
+	line into Emender core.
+
+2014-11-24  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* src/common/getopt.lua:
 	Added support for test-specific parameters specified on the command line.
 
