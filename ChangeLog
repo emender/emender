@@ -1,5 +1,11 @@
 2014-11-24  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* examples/test_parameters.sh:
+	* test/TestParameters.lua:
+	Added example how to pass parameters to the test.
+
+2014-11-24  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* emend:
 	Test-specific parameters should be properly passed to core.
 
