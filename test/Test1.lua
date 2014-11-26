@@ -49,10 +49,16 @@ function Test1.xyzzy()
     pass("The function Test1.xyzzy() is called from another function.")
 end
 
+--
+-- This is function that is NOT automatically called from the Emender.
+--
 function Test1.foo()
     fail("This method should not be called from the tool core!")
 end
 
+--
+-- This is function that is NOT automatically called from the Emender.
+--
 function Test1.bar()
     self:foo()
     fail("This method should not be called from the tool core!")
