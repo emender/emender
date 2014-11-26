@@ -79,6 +79,9 @@ function Test1.testCallOtherFunction()
     Test1.xyzzy()
 end
 
+--
+-- In this function the test-local value val is read and then modified.
+--
 function Test1.testReadWriteLocalValue()
     is_true(Test1.val == 42, "Old value is properly set to 42")
     print("\tOld value: " .. Test1.val)
