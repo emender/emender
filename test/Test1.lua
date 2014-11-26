@@ -42,6 +42,9 @@ function Test1.testB()
     pass("The function Test1.testB() is called properly.")
 end
 
+--
+-- This is function that is NOT automatically called from the Emender.
+--
 function Test1.xyzzy()
     pass("The function Test1.xyzzy() is called from another function.")
 end
@@ -77,4 +80,3 @@ function Test1.testReadWriteLocalValue()
     is_true(Test1.val == 6502, "New value is properly set to 42")
     print("\tNew value: " .. Test1.val)
 end
-
