@@ -3,6 +3,11 @@
 	* test/TestAssertionIsUnequal.lua:
 	Added new test cases into TestAssertionIsUnequal.
 
+2014-12-01  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* test/TestAssertionIsUnequal.lua:
+	Added new test cases into TestAssertionIsUnequal.
+
 2014-11-24  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* examples/test_parameters.sh:

@@ -440,3 +440,252 @@ end
 
 
 
+--
+-- Check if two boolean values "true" are equal.
+--
+function TestAssertionIsUnequal.testNegative01()
+    -- perform comparison
+    is_unequal(true, true, "negative unequality test:two booleans")
+end
+
+
+
+--
+-- Check if two boolean values "false" are equal.
+--
+function TestAssertionIsUnequal.testNegative02()
+    -- perform comparison
+    is_unequal(false, false, "negative unequality test:two booleans")
+end
+
+
+
+--
+-- Check if two integer values are equal.
+--
+function TestAssertionIsUnequal.testNegative03()
+    -- perform comparison
+    is_unequal(42, 42, "negative unequality test: two integers")
+end
+
+
+
+--
+-- Check if two float values are equal.
+--
+function TestAssertionIsUnequal.testNegative04()
+    -- perform comparison
+    is_unequal(3.14, 3.14, "negative unequality test: two floats")
+end
+
+
+
+--
+-- Check if two empty strings are equal.
+--
+function TestAssertionIsUnequal.testNegative05()
+    -- perform comparison
+    is_unequal("", "", "negative unequality test: two empty strings")
+end
+
+
+
+--
+-- Check if two non-empty strings are equal.
+--
+function TestAssertionIsUnequal.testNegative06()
+    -- perform comparison
+    is_unequal("x", "x", "negative unequality test: two strings")
+end
+
+
+
+--
+-- Check if two non-empty strings (containing special character) are equal.
+--
+function TestAssertionIsUnequal.testNegative07()
+    -- perform comparison
+    is_unequal("\n", "\n", "negative unequality test: two strings")
+end
+
+
+
+--
+-- Check if two empty tables are equal.
+--
+function TestAssertionIsUnequal.testNegative08()
+    -- perform comparison
+    is_unequal({}, {}, "negative unequality test: two empty tables")
+end
+
+
+
+--
+-- Check if two tables are equal.
+--
+function TestAssertionIsUnequal.testNegative09()
+    -- perform comparison
+    is_unequal({1,2}, {1,2}, "negative unequality test: two tables, items are integers")
+end
+
+
+
+--
+-- Check if two tables are equal.
+--
+function TestAssertionIsUnequal.testNegative10()
+    -- perform comparison
+    is_unequal({1,2,3,4}, {1,2,3,4}, "negative unequality test: two tables, items are integers")
+end
+
+
+
+--
+-- Check if two tables are equal.
+--
+function TestAssertionIsUnequal.testNegative11()
+    -- perform comparison
+    is_unequal({"x", "y"}, {"x", "y"}, "negative unequality test: two tables, items are strings")
+end
+
+
+
+--
+-- Check if two nested tables are equal.
+--
+function TestAssertionIsUnequal.testNegative12()
+    -- perform comparison
+    is_unequal({1,{2,3},4}, {1,{2,3},4}, "negative unequality test: two nested tables")
+end
+
+
+
+--
+-- Check if two nested tables are equal.
+--
+function TestAssertionIsUnequal.testNegative13()
+    -- perform comparison
+    is_unequal({1,{2,{3}},4}, {1,{2,{3}},4}, "negative unequality test: two deeply nested tables")
+end
+
+
+
+--
+-- Check if two nested tables are equal.
+--
+function TestAssertionIsUnequal.testNegative14()
+    local table1 = {"a",{"b",{"c",{"d", {"e"}}}}}
+    local table2 = {"a",{"b",{"c",{"d", {"e"}}}}}
+    -- perform comparison
+    is_unequal(table1, table2, "negative unequality test: two deeply nested tables")
+end
+
+
+
+--
+-- Check if two hash tables are equal.
+--
+function TestAssertionIsUnequal.testNegative15()
+    local table1 = {}
+    local table2 = {}
+
+    -- fill in the first table
+    table1["first"]  = 1
+    table1["second"] = 2
+    table1["third"]  = 3
+
+    -- fill in second table
+    table2["first"]  = 1
+    table2["second"] = 2
+    table2["third"]  = 3
+
+    -- perform comparison
+    is_unequal(table1, table2, "negative unequality test: two hash tables")
+end
+
+
+
+--
+-- Check if two hash tables are equal.
+--
+function TestAssertionIsUnequal.testNegative16()
+    local table1 = {}
+    local table2 = {}
+
+    -- fill in the first table
+    table1["first"]  = "!"
+    table1["second"] = "@"
+    table1["third"]  = "#"
+
+    -- fill in second table
+    table2["first"]  = "!"
+    table2["second"] = "@"
+    table2["third"]  = "#"
+
+    -- perform comparison
+    is_unequal(table1, table2, "negative unequality test: two hash tables")
+end
+
+
+
+--
+-- Check if two nested hash tables are equal.
+--
+function TestAssertionIsUnequal.testNegative17()
+    local table1 = {}
+    local table2 = {}
+
+    -- fill in the first table
+    table1["first"]  = {1,2,3}
+    table1["second"] = {4,5,6}
+    table1["third"]  = {7,8,9}
+
+    -- fill in second table
+    table2["first"]  = {1,2,3}
+    table2["second"] = {4,5,6}
+    table2["third"]  = {7,8,9}
+
+    -- perform comparison
+    is_unequal(table1, table2, "negative unequality test: two nested hash tables")
+end
+
+
+
+--
+-- Verify that the function does not accept no arguments:
+--
+function TestAssertionIsUnequal.testNegative18()
+    -- perform comparison
+    is_unequal()
+end
+
+
+
+--
+-- Verify that the function does not accept only one argument:
+--
+function TestAssertionIsUnequal.testNegative19()
+    -- perform comparison
+    is_unequal(1)
+end
+
+
+
+--
+-- Verify that the function does not accept only two arguments:
+--
+function TestAssertionIsUnequal.testNegative20()
+    -- perform comparison
+    is_unequal(1, 1)
+end
+
+
+
+--
+-- Verify that if is never equals to nil.
+--
+function TestAssertionIsUnequal.testNegative21()
+    -- perform comparison
+    is_unequal(nil, nil, "What's wrong?")
+end
+
