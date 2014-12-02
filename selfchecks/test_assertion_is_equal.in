@@ -1,0 +1,261 @@
+---------------------------------------------------------------------------
+                         :: TestAssertionIsEqual ::
+---------------------------------------------------------------------------
+
+  Description:   Test the behaviour function asserts.is_equal().
+  Authors:       Pavel Tisnovsky
+  Emails:        ptisnovs@redhat.com
+  Last Modified: 2014-09-23
+  Tags:          BasicTest
+
+  Test Case: testNegative01
+
+    [ FAIL ]  (expected) negative equality test
+
+  Test Case: testNegative02
+
+    [ FAIL ]  (expected) negative equality test
+
+  Test Case: testNegative03
+
+    [ FAIL ]  (expected) integers are not the same
+
+  Test Case: testNegative04
+
+    [ FAIL ]  (expected) integers are not the same
+
+  Test Case: testNegative05
+
+    [ FAIL ]  (expected) strings are not the same
+
+  Test Case: testNegative06
+
+    [ FAIL ]  (expected) strings are not the same
+
+  Test Case: testNegative07
+
+    [ FAIL ]  (expected) strings are not the same
+
+  Test Case: testNegative08
+
+       ../test/TestAssertionIsEqual.lua:316: Test structure error: Current value a required argument.
+
+  Test Case: testNegative09
+
+       ../test/TestAssertionIsEqual.lua:326: Test structure error: Expected value is a required argument.
+
+  Test Case: testNegative10
+
+       ../src/common/asserts.lua:187: Test structure error: Explanation is a required argument.
+
+  Test Case: testNegative11
+
+       ../test/TestAssertionIsEqual.lua:346: Test structure error: Current value a required argument.
+
+  Test Case: testNegative12
+
+    [ FAIL ]  negative equality test: two tables
+
+  Test Case: testNegative13
+
+    [ FAIL ]  negative equality test: two tables, items are integers
+
+  Test Case: testNegative14
+
+    [ FAIL ]  negative equality test: two tables, items are integers
+
+  Test Case: testNegative15
+
+    [ FAIL ]  negative equality test: two tables, items are strings
+
+  Test Case: testNegative16
+
+    [ FAIL ]  negative equality test: two nested tables
+
+  Test Case: testNegative17
+
+    [ FAIL ]  negative equality test: two deeply nested tables
+
+  Test Case: testNegative18
+
+    [ FAIL ]  negative equality test: two deeply nested tables
+
+  Test Case: testNegative19
+
+    [ FAIL ]  negative equality test: two hash tables
+
+  Test Case: testNegative20
+
+    [ FAIL ]  negative equality test: two hash tables
+
+  Test Case: testNegative21
+
+    [ FAIL ]  negative equality test: two nested hash tables
+
+  Test Case: testNegative22
+
+    [ FAIL ]  negative equality test: comparison of integer with boolean
+
+  Test Case: testNegative23
+
+    [ FAIL ]  negative equality test: comparison of integer with boolean
+
+  Test Case: testNegative24
+
+    [ FAIL ]  negative equality test: comparison of boolean with integer
+
+  Test Case: testNegative25
+
+    [ FAIL ]  negative equality test: comparison of boolean with integer
+
+  Test Case: testNegative26
+
+    [ FAIL ]  negative equality test: comparison of string with boolean
+
+  Test Case: testNegative27
+
+    [ FAIL ]  negative equality test: comparison of string with boolean
+
+  Test Case: testNegative28
+
+    [ FAIL ]  negative equality test: comparison of boolean with string
+
+  Test Case: testNegative29
+
+    [ FAIL ]  negative equality test: comparison of boolean with string
+
+  Test Case: testNegative30
+
+    [ FAIL ]  negative equality test: comparison of table with boolean
+
+  Test Case: testNegative31
+
+    [ FAIL ]  negative equality test: comparison of table with boolean
+
+  Test Case: testNegative32
+
+    [ FAIL ]  negative equality test: comparison of boolean with table
+
+  Test Case: testNegative33
+
+    [ FAIL ]  negative equality test: comparison of boolean with table
+
+  Test Case: testNegative34
+
+    [ FAIL ]  negative equality test: comparison of table with boolean
+
+  Test Case: testNegative35
+
+    [ FAIL ]  negative equality test: comparison of table with boolean
+
+  Test Case: testNegative36
+
+    [ FAIL ]  negative equality test: comparison of boolean with table
+
+  Test Case: testNegative37
+
+    [ FAIL ]  negative equality test: comparison of boolean with table
+
+  Test Case: testNegative38
+
+    [ FAIL ]  negative equality test: comparison of table with string
+
+  Test Case: testNegative39
+
+    [ FAIL ]  negative equality test: comparison of table with number
+
+  Test Case: testNegative40
+
+    [ FAIL ]  negative equality test: comparison of string with table
+
+  Test Case: testNegative41
+
+    [ FAIL ]  negative equality test: comparison of number with table
+
+  Test Case: testPositive01
+
+    [ PASS ]  positive equality test:two booleans
+
+  Test Case: testPositive02
+
+    [ PASS ]  positive equality test:two booleans
+
+  Test Case: testPositive03
+
+    [ PASS ]  positive equality test: two integers
+
+  Test Case: testPositive04
+
+    [ PASS ]  positive equality test: two floats
+
+  Test Case: testPositive05
+
+    [ PASS ]  positive equality test: two empty strings
+
+  Test Case: testPositive06
+
+    [ PASS ]  positive equality test: two strings
+
+  Test Case: testPositive07
+
+    [ PASS ]  positive equality test: two strings
+
+  Test Case: testPositive08
+
+    [ PASS ]  positive equality test: two empty tables
+
+  Test Case: testPositive09
+
+    [ PASS ]  positive equality test: two tables, items are integers
+
+  Test Case: testPositive10
+
+    [ PASS ]  positive equality test: two tables, items are integers
+
+  Test Case: testPositive11
+
+    [ PASS ]  positive equality test: two tables, items are strings
+
+  Test Case: testPositive12
+
+    [ PASS ]  positive equality test: two nested tables
+
+  Test Case: testPositive13
+
+    [ PASS ]  positive equality test: two deeply nested tables
+
+  Test Case: testPositive14
+
+    [ PASS ]  positive equality test: two deeply nested tables
+
+  Test Case: testPositive15
+
+    [ PASS ]  positive equality test: two hash tables
+
+  Test Case: testPositive16
+
+    [ PASS ]  positive equality test: two hash tables
+
+  Test Case: testPositive17
+
+    [ PASS ]  positive equality test: two nested hash tables
+
+  Test Summary                                                            
+
+    Executed Test Cases: 58
+    Passed Test Cases:   17
+    Failed Test Cases:   37
+    Encountered Errors:  4
+    Overall Result:      FAIL
+
+---------------------------------------------------------------------------
+                               :: Summary ::
+---------------------------------------------------------------------------
+
+  Executed Tests: 1
+  Passed Tests:   0
+  Failed Tests:   1
+  Overall Result: FAIL
+
+---------------------------------------------------------------------------
+Generated by Emender                           https://github.com/emender/

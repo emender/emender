@@ -1,0 +1,265 @@
+---------------------------------------------------------------------------
+                        :: TestAssertionIsUnequal ::
+---------------------------------------------------------------------------
+
+  Description:   Test the behaviour function asserts.is_unequal().
+  Authors:       Pavel Tisnovsky
+  Emails:        ptisnovs@redhat.com
+  Last Modified: 2014-12-01
+  Tags:          BasicTest
+
+  Test Case: testNegative01
+
+    [ FAIL ]  negative unequality test:two booleans
+
+  Test Case: testNegative02
+
+    [ FAIL ]  negative unequality test:two booleans
+
+  Test Case: testNegative03
+
+    [ FAIL ]  negative unequality test: two integers
+
+  Test Case: testNegative04
+
+    [ FAIL ]  negative unequality test: two floats
+
+  Test Case: testNegative05
+
+    [ FAIL ]  negative unequality test: two empty strings
+
+  Test Case: testNegative06
+
+    [ FAIL ]  negative unequality test: two strings
+
+  Test Case: testNegative07
+
+    [ FAIL ]  negative unequality test: two strings
+
+  Test Case: testNegative08
+
+    [ FAIL ]  negative unequality test: two empty tables
+
+  Test Case: testNegative09
+
+    [ FAIL ]  negative unequality test: two tables, items are integers
+
+  Test Case: testNegative10
+
+    [ FAIL ]  negative unequality test: two tables, items are integers
+
+  Test Case: testNegative11
+
+    [ FAIL ]  negative unequality test: two tables, items are strings
+
+  Test Case: testNegative12
+
+    [ FAIL ]  negative unequality test: two nested tables
+
+  Test Case: testNegative13
+
+    [ FAIL ]  negative unequality test: two deeply nested tables
+
+  Test Case: testNegative14
+
+    [ FAIL ]  negative unequality test: two deeply nested tables
+
+  Test Case: testNegative15
+
+    [ FAIL ]  negative unequality test: two hash tables
+
+  Test Case: testNegative16
+
+    [ FAIL ]  negative unequality test: two hash tables
+
+  Test Case: testNegative17
+
+    [ FAIL ]  negative unequality test: two nested hash tables
+
+  Test Case: testNegative18
+
+       ../test/TestAssertionIsUnequal.lua:659: Test structure error: Current value a required argument.
+
+  Test Case: testNegative19
+
+       ../test/TestAssertionIsUnequal.lua:669: Test structure error: Expected value is a required argument.
+
+  Test Case: testNegative20
+
+       ../src/common/asserts.lua:232: Test structure error: Explanation is a required argument.
+
+  Test Case: testNegative21
+
+       ../test/TestAssertionIsUnequal.lua:689: Test structure error: Current value a required argument.
+
+  Test Case: testPositive01
+
+    [ PASS ]  (expected) positive unequality test
+
+  Test Case: testPositive02
+
+    [ PASS ]  (expected) positive unequality test
+
+  Test Case: testPositive03
+
+    [ PASS ]  (expected) integers are not the same
+
+  Test Case: testPositive04
+
+    [ PASS ]  (expected) integers are not the same
+
+  Test Case: testPositive05
+
+    [ PASS ]  (expected) strings are not the same
+
+  Test Case: testPositive06
+
+    [ PASS ]  (expected) strings are not the same
+
+  Test Case: testPositive07
+
+    [ PASS ]  (expected) strings are not the same
+
+  Test Case: testPositive08
+
+    [ PASS ]  positive unequality test: two tables
+
+  Test Case: testPositive09
+
+    [ PASS ]  positive unequality test: two tables, items are integers
+
+  Test Case: testPositive10
+
+    [ PASS ]  positive unequality test: two tables, items are integers
+
+  Test Case: testPositive11
+
+    [ PASS ]  positive unequality test: two tables, items are strings
+
+  Test Case: testPositive12
+
+    [ PASS ]  positive unequality test: two nested tables
+
+  Test Case: testPositive13
+
+    [ PASS ]  positive unequality test: two deeply nested tables
+
+  Test Case: testPositive14
+
+    [ PASS ]  positive unequality test: two deeply nested tables
+
+  Test Case: testPositive15
+
+    [ PASS ]  positive unequality test: two hash tables
+
+  Test Case: testPositive16
+
+    [ PASS ]  positive unequality test: two hash tables
+
+  Test Case: testPositive17
+
+    [ PASS ]  positive unequality test: two nested hash tables
+
+  Test Case: testPositive18
+
+    [ PASS ]  positive unequality test: comparison of integer with
+              boolean
+
+  Test Case: testPositive19
+
+    [ PASS ]  positive unequality test: comparison of integer with
+              boolean
+
+  Test Case: testPositive20
+
+    [ PASS ]  positive unequality test: comparison of boolean with
+              integer
+
+  Test Case: testPositive21
+
+    [ PASS ]  positive unequality test: comparison of boolean with
+              integer
+
+  Test Case: testPositive22
+
+    [ PASS ]  positive unequality test: comparison of string with boolean
+
+  Test Case: testPositive23
+
+    [ PASS ]  positive unequality test: comparison of string with boolean
+
+  Test Case: testPositive24
+
+    [ PASS ]  positive unequality test: comparison of boolean with string
+
+  Test Case: testPositive25
+
+    [ PASS ]  positive unequality test: comparison of boolean with string
+
+  Test Case: testPositive26
+
+    [ PASS ]  positive unequality test: comparison of table with boolean
+
+  Test Case: testPositive27
+
+    [ PASS ]  positive unequality test: comparison of table with boolean
+
+  Test Case: testPositive28
+
+    [ PASS ]  positive unequality test: comparison of boolean with table
+
+  Test Case: testPositive29
+
+    [ PASS ]  positive unequality test: comparison of boolean with table
+
+  Test Case: testPositive30
+
+    [ PASS ]  positive unequality test: comparison of table with boolean
+
+  Test Case: testPositive31
+
+    [ PASS ]  positive unequality test: comparison of table with boolean
+
+  Test Case: testPositive32
+
+    [ PASS ]  positive unequality test: comparison of boolean with table
+
+  Test Case: testPositive33
+
+    [ PASS ]  positive unequality test: comparison of boolean with table
+
+  Test Case: testPositive34
+
+    [ PASS ]  positive unequality test: comparison of table with string
+
+  Test Case: testPositive35
+
+    [ PASS ]  positive unequality test: comparison of table with number
+
+  Test Case: testPositive36
+
+    [ PASS ]  positive unequality test: comparison of string with table
+
+  Test Case: testPositive37
+
+    [ PASS ]  positive unequality test: comparison of number with table
+
+  Test Summary                                                            
+
+    Executed Test Cases: 58
+    Passed Test Cases:   37
+    Failed Test Cases:   17
+    Encountered Errors:  4
+    Overall Result:      FAIL
+
+---------------------------------------------------------------------------
+                               :: Summary ::
+---------------------------------------------------------------------------
+
+  Executed Tests: 1
+  Passed Tests:   0
+  Failed Tests:   1
+  Overall Result: FAIL
+
+---------------------------------------------------------------------------
+Generated by Emender                           https://github.com/emender/

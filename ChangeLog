@@ -1,3 +1,10 @@
+2014-12-02  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* selfchecks/selfcheck.sh:
+	* selfchecks/test_assertion_is_equal.in:
+	* selfchecks/test_assertion_is_unequal.in:
+	Added two new selfchecks.
+
 2014-12-01  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* test/TestAssertionIsUnequal.lua:
