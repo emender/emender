@@ -169,3 +169,29 @@ function slurpTable(fileName)
     return content
 end
 
+
+
+--
+-- Check if given directory exists.
+--
+function directoryExists(directory)
+    -- if directory is not given, silently return false
+    if not directory then
+        return false
+    end
+
+    -- shell command to check if given 'file' is a proper directory
+    local command = "test -d " .. directory .. ";echo $?"
+    local process = io.popen(command)
+
+    -- return values:
+    --     0 - test ok
+    --     1 - test failed
+    local result = process:read()
+
+    -- wait for the process to exit
+    process:close()
+
+    return result == "0"
+end
+
