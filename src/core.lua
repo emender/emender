@@ -475,7 +475,7 @@ end
 
 
 --
---
+-- Read all tests stored in the "test" subdirectory.
 --
 function getTestList()
     --local scriptDirectory = getScriptDirectory()
@@ -583,9 +583,11 @@ function core.runTests(verboseOperation, colorOutput, testsToRun, outputFiles, t
     else
         --local scriptDirectory = getScriptDirectory()
         local currentDirectory = getCurrentDirectory()
+        -- read all tests stored in a "test" subdirectory
         local testList = getTestList()
+        -- loop over all tests stored in testList
         for i, filename in ipairs(testList) do
-            local result = core.runTest(currentDirectory, filename, verboseOperation)
+            local result = core.runTest(currentDirectory, filename, verboseOperation, testOptions)
             if result ~= nil then
                 if result then
                     core.results.passedTests = core.results.passedTests + 1
