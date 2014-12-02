@@ -480,10 +480,18 @@ end
 function getTestList()
     --local scriptDirectory = getScriptDirectory()
     local currentDirectory = getCurrentDirectory()
-    local command = 'ls -1 '.. currentDirectory .. "test/*.lua"..'| xargs -n 1 basename'
-    local process = io.popen(command)
-    local testList = process:lines()
-    return putTestListIntoTable(testList)
+    local testDirectory = currentDirectory .. "test"
+
+    -- check if directory containing tests exists
+    if directoryExists(testDirectory) then
+        local command = 'ls -1 '.. testDirectory .. "/*.lua"..' 2> /dev/null | xargs -n 1 basename 2> /dev/null'
+        local process = io.popen(command)
+        local testList = process:lines()
+        return putTestListIntoTable(testList)
+    else
+        print("Test directory '" .. testDirectory .. "' does not exist!")
+        return {}
+    end
 end
 
 

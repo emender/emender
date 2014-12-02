@@ -1,5 +1,10 @@
 2014-12-02  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* src/core.lua:
+	Added check if test directory exists.
+
+2014-12-02  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* src/common/fileio.lua:
 	Added function to check if given directory exists.
 
