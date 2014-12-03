@@ -1,3 +1,8 @@
+2014-12-03  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* src/TestAssertionIsLike.lua:
+	Added more positive tests into TestAssertionIsLike.
+
 2014-12-02  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* src/core.lua:
