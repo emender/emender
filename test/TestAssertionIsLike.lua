@@ -153,6 +153,114 @@ end
 
 
 
+--
+-- Verify that "%u" matches "ABC".
+--
+function TestAssertionIsLike.testPositive15()
+    is_like("ABC", "%u", "positive test")
+end
+
+
+
+--
+-- Verify that "%u*" matches "ABC".
+--
+function TestAssertionIsLike.testPositive16()
+    is_like("ABC", "%u*", "positive test")
+end
+
+
+
+--
+-- Verify that "%u+" matches "ABC".
+--
+function TestAssertionIsLike.testPositive17()
+    is_like("ABC", "%u+", "positive test")
+end
+
+
+
+--
+-- Verify that "%x" matches "1234".
+--
+function TestAssertionIsLike.testPositive18()
+    is_like("1234", "%x", "positive test")
+end
+
+
+
+--
+-- Verify that "%x*" matches "1234".
+--
+function TestAssertionIsLike.testPositive19()
+    is_like("1234", "%x*", "positive test")
+end
+
+
+
+--
+-- Verify that "%x+" matches "1234".
+--
+function TestAssertionIsLike.testPositive20()
+    is_like("1234", "%x+", "positive test")
+end
+
+
+
+--
+-- Verify that "%x" matches "89ab".
+--
+function TestAssertionIsLike.testPositive21()
+    is_like("89ab", "%x", "positive test")
+end
+
+
+
+--
+-- Verify that "%x*" matches "89ab".
+--
+function TestAssertionIsLike.testPositive22()
+    is_like("89ab", "%x*", "positive test")
+end
+
+
+
+--
+-- Verify that "%x+" matches "89ab".
+--
+function TestAssertionIsLike.testPositive23()
+    is_like("89ab", "%x+", "positive test")
+end
+
+
+
+--
+-- Verify that "%x" matches "abcdef".
+--
+function TestAssertionIsLike.testPositive24()
+    is_like("abcdef", "%x", "positive test")
+end
+
+
+
+--
+-- Verify that "%x*" matches "abcdef".
+--
+function TestAssertionIsLike.testPositive25()
+    is_like("abcdef", "%x*", "positive test")
+end
+
+
+
+--
+-- Verify that "%x+" matches "abcdef".
+--
+function TestAssertionIsLike.testPositive26()
+    is_like("abcdef", "%x+", "positive test")
+end
+
+
+
 function TestAssertionIsLike.testNegative01()
     is_like()
 end
