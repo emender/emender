@@ -1,5 +1,10 @@
 2014-12-04  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* test/TestColorInMessages.lua:
+	Added new test for check coloried output.
+
+2014-12-04  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* test/TestAssertionIsEqual.lua:
 	* test/TestAssertionIsUnequal.lua:
 	Minor changes in documentation.
