@@ -1,5 +1,11 @@
 2014-12-04  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* selfchecks/test_assertion_is_equal.in:
+	* selfchecks/test_assertion_is_unequal.in:
+	Two selfchecks updated.
+
+2014-12-04  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* emend:
 	* src/common/asserts.lua:
 	* src/core.lua:

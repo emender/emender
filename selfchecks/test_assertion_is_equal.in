@@ -5,7 +5,7 @@
   Description:   Test the behaviour function asserts.is_equal().
   Authors:       Pavel Tisnovsky
   Emails:        ptisnovs@redhat.com
-  Last Modified: 2014-09-23
+  Last Modified: 2014-12-04
   Tags:          BasicTest
 
   Test Case: testNegative01
@@ -38,11 +38,11 @@
 
   Test Case: testNegative08
 
-       ../test/TestAssertionIsEqual.lua:316: Test structure error: Current value a required argument.
+       ../test/TestAssertionIsEqual.lua:318: Test structure error: Current value a required argument.
 
   Test Case: testNegative09
 
-       ../test/TestAssertionIsEqual.lua:326: Test structure error: Expected value is a required argument.
+       ../test/TestAssertionIsEqual.lua:328: Test structure error: Expected value is a required argument.
 
   Test Case: testNegative10
 
@@ -50,7 +50,7 @@
 
   Test Case: testNegative11
 
-       ../test/TestAssertionIsEqual.lua:346: Test structure error: Current value a required argument.
+       ../test/TestAssertionIsEqual.lua:348: Test structure error: Current value a required argument.
 
   Test Case: testNegative12
 
