@@ -41,6 +41,20 @@ end
 
 
 --
+-- Setup color output or no color output.
+-- This function calls functions with the same name that should exist for all registered writers.
+--
+function abstractWriter.setColorOutput(colorOutput)
+    -- loop over all registered writers
+    for _, outputFileStruct in pairs(abstractWriter.outputFileStructs) do
+        local writer, fout = abstractWriter.getWriterAndFout(outputFileStruct)
+        writer.setColorOutput(colorOutput)
+    end
+end
+
+
+
+--
 -- Called when the whole test is started.
 -- This function calls functions with the same name that should exist for all registered writers.
 --

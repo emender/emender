@@ -502,6 +502,14 @@ end
 
 
 --
+-- Setup color output or no color output.
+--
+function htmlWriter.setColorOutput(colorOutput)
+end
+
+
+
+--
 -- Export the module API
 --
 return htmlWriter

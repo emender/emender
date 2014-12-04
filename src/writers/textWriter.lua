@@ -82,6 +82,14 @@ end
 
 
 --
+-- Setup color output or no color output.
+--
+function textWriter.setColorOutput(colorOutput)
+end
+
+
+
+--
 -- Export the module API
 --
 return textWriter

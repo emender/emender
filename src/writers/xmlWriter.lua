@@ -172,6 +172,14 @@ end
 
 
 --
+-- Setup color output or no color output.
+--
+function xmlWriter.setColorOutput(colorOutput)
+end
+
+
+
+--
 -- Export the module API
 --
 return xmlWriter

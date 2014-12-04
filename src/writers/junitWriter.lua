@@ -132,6 +132,14 @@ end
 
 
 --
+-- Setup color output or no color output.
+--
+function junitWriter.setColorOutput(colorOutput)
+end
+
+
+
+--
 -- Export the module API
 --
 return junitWriter
