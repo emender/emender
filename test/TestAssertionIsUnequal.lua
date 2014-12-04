@@ -1,4 +1,4 @@
--- TestAssertionIsUnequal.lua - check for basic Emender functionality
+-- TestAssertionIsUnequal.lua - test the behavior of the asserts.is_unequal() function
 -- Copyright (C) 2014 Pavel Tisnovsky
 --
 -- This file is part of Emender.
@@ -22,7 +22,7 @@ TestAssertionIsUnequal = {
         description = "Test the behaviour function asserts.is_unequal().",
         authors = "Pavel Tisnovsky",
         emails = "ptisnovs@redhat.com",
-        changed = "2014-12-01",
+        changed = "2014-12-04",
         tags = {"BasicTest"},
     },
 }

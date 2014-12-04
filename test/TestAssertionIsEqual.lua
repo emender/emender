@@ -1,3 +1,5 @@
+-- TestAssertionIsEqual.lua - test the behavior of the asserts.is_equal() function
+-- Copyright (C) 2014 Pavel Tisnovsky
 --
 -- This file is part of Emender.
 --
@@ -20,7 +22,7 @@ TestAssertionIsEqual = {
         description = "Test the behaviour function asserts.is_equal().",
         authors = "Pavel Tisnovsky",
         emails = "ptisnovs@redhat.com",
-        changed = "2014-09-23",
+        changed = "2014-12-04",
         tags = {"BasicTest"},
     },
 }

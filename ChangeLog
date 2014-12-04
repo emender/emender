@@ -1,3 +1,9 @@
+2014-12-04  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* test/TestAssertionIsEqual.lua:
+	* test/TestAssertionIsUnequal.lua:
+	Minor changes in documentation.
+
 2014-12-03  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* src/TestAssertionIsLike.lua:
