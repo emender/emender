@@ -1,13 +1,53 @@
 local textWidth = 75
 local horizontalSeparator = string.rep("-", 75) .. "\n"
 
+function colorizeMessage(message)
+    local redStartSequence = _G["logger"].codes.color_red
+    local redStopSequence = _G["logger"].codes.reset
+    local output = ""
+    local insideStars = false
+    local i = 1
+    while i <= #message do
+        local char = message:sub(i,i)
+        local twoChars = message:sub(i, i+1)
+        -- two stars means we need to use the red color
+        -- but those two stars are used at the beggining *and* at the end too
+        if twoChars == "**" then
+            i = i + 1
+            if insideStars then
+                insideStars = false
+                output = output .. redStopSequence
+            else
+                insideStars = true
+                output = output .. redStartSequence
+            end
+        else
+            output = output .. char
+        end
+        i = i + 1
+    end
+
+    -- user just forget to use "**" in pairs
+    if insideStars then
+        output = output .. redStopSequence
+    end
+
+    return output
+end
+
 -- Format the result of a single test function:
-function formatTestResult(result, explanation)
+function formatTestResult(result, explanation, colorOutput)
     local message = explanation or "(unknown)"
     local status = "[ " .. string.upper(result) .. " ]  "
 
-    return string.alignLeft(status .. message, textWidth - 2,
-                            string.len(status) + 4, 4) .. "\n"
+    if not colorOutput then
+        return string.alignLeft(status .. message, textWidth - 2,
+                                string.len(status) + 4, 4) .. "\n"
+    else
+        local colorizedMessage = colorizeMessage(message)
+        return string.alignLeft(status .. colorizedMessage, textWidth - 2,
+                                string.len(status) + 4, 4) .. "\n"
+    end
 end
 
 -- Format test metadata:
@@ -119,18 +159,18 @@ function writeSummary(fout, results, colorOutput)
 end
 
 function writeTestPass(fout, testName, explanation, colorOutput)
-    fout:write(formatTestResult('pass', explanation))
+    fout:write(formatTestResult('pass', explanation, colorOutput))
 end
 
 function writeTestFail(fout, testName, explanation, colorOutput)
-    fout:write(formatTestResult('fail', explanation))
+    fout:write(formatTestResult('fail', explanation, colorOutput))
 end
 
 function writeTestInfo(fout, testName, explanation, colorOutput)
-    fout:write(formatTestResult('info', explanation))
+    fout:write(formatTestResult('info', explanation, colorOutput))
 end
 
 function writeTestError(fout, testName, explanation, colorOutput)
-    fout:write(formatTestResult('error', explanation))
+    fout:write(formatTestResult('error', explanation, colorOutput))
 end
 

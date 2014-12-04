@@ -535,7 +535,7 @@ function pass(explanation)
     end
 
     -- test structure is ok, let register status with its message
-    writeTestPass(io.stdout, nil, explanation, false)
+    writeTestPass(io.stdout, nil, explanation, colorOutput)
     registerPassMessage(explanation)
 end
 
@@ -566,7 +566,7 @@ function fail(explanation)
     end
 
     -- test structure is ok, let register status with its message
-    writeTestFail(io.stdout, nil, explanation, false)
+    writeTestFail(io.stdout, nil, explanation, colorOutput)
     registerFailMessage(explanation)
     -- test harness needs to be informed that the test fail
     markTestFailure()
@@ -601,7 +601,7 @@ function warn(explanation)
     end
 
     -- test structure is ok, let register status with its message
-    writeTestInfo(io.stdout, nil, explanation, false)
+    writeTestInfo(io.stdout, nil, explanation, colorOutput)
     registerInfoMessage(explanation)
 end
 

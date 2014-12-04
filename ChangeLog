@@ -1,5 +1,13 @@
 2014-12-04  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* emend:
+	* src/common/asserts.lua:
+	* src/core.lua:
+	* src/writers/commonTextWriter.lua:
+	Basic color output support.
+
+2014-12-04  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* test/TestColorInMessages.lua:
 	Added new test for check coloried output.
 

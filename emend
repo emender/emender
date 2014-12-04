@@ -83,6 +83,7 @@ function loadModules()
     version = require("src/version")
     asserts = require("src/common/asserts")
     logger = require("src/common/logger")
+    _G["logger"] = logger
     tracer = require("src/common/tracer")
     gendoc = require("src/common/gendoc")
     abstractWriter = require("src/writers/abstractWriter")

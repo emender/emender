@@ -335,7 +335,7 @@ end
 --
 --
 --
-function core.runTest(scriptDirectory, filename, verboseOperation, testOptions)
+function core.runTest(scriptDirectory, filename, verboseOperation, testOptions, colorOutput)
     local testSuiteName = core.updateTestSuiteName(filename)
     if testSuiteName then
         local testSuite = {}
@@ -532,10 +532,11 @@ end
 --
 -- Export results into all selected output files.
 --
-function exportResults(outputFiles)
+function exportResults(outputFiles, colorOutput)
     local results = core.results
     openOutputFiles(outputFiles)
     core.writer.outputFileStructs = outputFiles
+    --core.writer.setColorOutput(colorOutput)
     core.writer.writeHeader(results)
 
     for i,testSuite in ipairs(results.suites) do
@@ -549,14 +550,14 @@ function exportResults(outputFiles)
                 local status = message[1]
                 local messageText = message[2]
                 if status == "PASS" then
-                    core.writer.writeTestPass(testName, message)
+                    core.writer.writeTestPass(testName, message, colorOutput)
                 elseif status == "FAIL" then
-                    core.writer.writeTestFail(testName, message)
+                    core.writer.writeTestFail(testName, message, colorOutput)
                 elseif status == "INFO" then
-                    core.writer.writeTestInfo(testName, message)
+                    core.writer.writeTestInfo(testName, message, colorOutput)
                 elseif status == "ERROR" then
                     if messageText then
-                        core.writer.writeTestError(testName, message)
+                        core.writer.writeTestError(testName, message, colorOutput)
                     end
                 end
             end
@@ -576,10 +577,12 @@ function core.runTests(verboseOperation, colorOutput, testsToRun, outputFiles, t
     core.results.passedTests = 0
     core.results.failedTests = 0
     core.results.suites = {}
+    -- set global variable
+    _G["colorOutput"] = colorOutput
 
     if testsToRun and #testsToRun > 0 then
         for i, filename in ipairs(testsToRun) do
-            local result = core.runTest(nil, filename, verboseOperation, testOptions)
+            local result = core.runTest(nil, filename, verboseOperation, testOptions, colorOutput)
             if result ~= nil then
                 if result then
                     core.results.passedTests = core.results.passedTests + 1
@@ -595,7 +598,7 @@ function core.runTests(verboseOperation, colorOutput, testsToRun, outputFiles, t
         local testList = getTestList()
         -- loop over all tests stored in testList
         for i, filename in ipairs(testList) do
-            local result = core.runTest(currentDirectory, filename, verboseOperation, testOptions)
+            local result = core.runTest(currentDirectory, filename, verboseOperation, testOptions, colorOutput)
             if result ~= nil then
                 if result then
                     core.results.passedTests = core.results.passedTests + 1
@@ -608,7 +611,7 @@ function core.runTests(verboseOperation, colorOutput, testsToRun, outputFiles, t
 
     writeSummary(io.stdout, core.results, false)
     --dumpTestResults()
-    exportResults(outputFiles)
+    exportResults(outputFiles, colorOutput)
 end
 
 return core
