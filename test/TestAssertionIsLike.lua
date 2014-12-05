@@ -1,3 +1,5 @@
+-- TestAssertionIsLike.lua - test the behavior of the asserts.is_like() function
+-- Copyright (C) 2014 Pavel Tisnovsky
 --
 -- This file is part of Emender.
 --
@@ -261,43 +263,89 @@ end
 
 
 
+--
+-- Negative test - wrong number of parameters.
+--
 function TestAssertionIsLike.testNegative01()
     is_like()
 end
 
+
+
+--
+-- Negative test - wrong number of parameters.
+--
 function TestAssertionIsLike.testNegative02()
     is_like(nil)
 end
 
+
+
+--
+-- Negative test - wrong number of parameters.
+--
 function TestAssertionIsLike.testNegative03()
     is_like("string")
 end
 
+
+
+--
+-- Negative test - wrong number of parameters.
+--
 function TestAssertionIsLike.testNegative04()
     is_like("string", nil)
 end
 
+
+
+--
+-- Negative test - wrong number of parameters.
+--
 function TestAssertionIsLike.testNegative05()
     is_like("string", "string")
 end
 
+
+
+--
+-- Negative test - wrong type of the last parameter.
+--
 function TestAssertionIsLike.testNegative06()
     is_like("string", "string", nil)
 end
 
+
+
+--
+-- Negative test - wrong type of the first parameter.
+--
 function TestAssertionIsLike.testNegative07()
-    is_like("", "a", "(expected) negative test")
+    is_like(nil, "string", "")
+end
+
+
+
+--
+-- Negative test - wrong type of the second parameter.
+--
+function TestAssertionIsLike.testNegative07()
+    is_like("string", nil, "")
 end
 
 function TestAssertionIsLike.testNegative08()
-    is_like("", "[0-9]+", "(expected) negative test")
+    is_like("", "a", "(expected) negative test")
 end
 
 function TestAssertionIsLike.testNegative09()
-    is_like("", "%d", "(expected) negative test")
+    is_like("", "[0-9]+", "(expected) negative test")
 end
 
 function TestAssertionIsLike.testNegative10()
+    is_like("", "%d", "(expected) negative test")
+end
+
+function TestAssertionIsLike.testNegative11()
     is_like("", "%d+", "(expected) negative test")
 end
 

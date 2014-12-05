@@ -1,3 +1,8 @@
+2014-12-05  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* test/TestAssertionIsLike.lua:
+	Added some negative tests into TestAssertionIsLike.
+
 2014-12-04  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* src/writers/abstractWriter.lua:
