@@ -1,5 +1,11 @@
 2014-12-05  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* selfchecks/selfcheck.sh:
+	* selfchecks/test_color_in_messages.in:
+	Added new selfcheck: color in messages.
+
+2014-12-05  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* test/TestAssertionIsLike.lua:
 	Added some negative tests into TestAssertionIsLike.
 

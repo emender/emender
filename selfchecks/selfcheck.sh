@@ -131,6 +131,13 @@ function runTestsModules {
 
 
 
+# Run other tests
+function runOtherTests {
+     ../emend ../test/TestColorInMessages.lua > test_color_in_messages.out
+}
+
+
+
 # Run all tests
 function runAllTests {
     runTestsForBasicCLI
@@ -140,6 +147,7 @@ function runAllTests {
     runTestsForFileOperations
     runTestsModules
     runTestsForAssertions
+    runOtherTests
 }
 
 
