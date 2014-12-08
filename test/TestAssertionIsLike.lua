@@ -403,6 +403,141 @@ end
 
 
 
+--
+-- Verify that "%w" matches "12345".
+--
+function TestAssertionIsLike.testPositive41()
+    is_like("12345", "%w", "positive test")
+end
+
+
+
+--
+-- Verify that "%w+" matches "12345".
+--
+function TestAssertionIsLike.testPositive42()
+    is_like("12345", "%w+", "positive test")
+end
+
+
+
+--
+-- Verify that "%w*" matches "12345".
+--
+function TestAssertionIsLike.testPositive43()
+    is_like("12345", "%w*", "positive test")
+end
+
+
+
+--
+-- Verify that "%w-" matches "12345".
+--
+function TestAssertionIsLike.testPositive44()
+    is_like("12345", "%w-", "positive test")
+end
+
+
+
+--
+-- Verify that "%w?" matches "1".
+--
+function TestAssertionIsLike.testPositive45()
+    is_like("1", "%w?", "positive test")
+end
+
+
+
+--
+-- Verify that "%w" matches "abcdef".
+--
+function TestAssertionIsLike.testPositive46()
+    is_like("abcdef", "%w", "positive test")
+end
+
+
+
+--
+-- Verify that "%w+" matches "abcdef".
+--
+function TestAssertionIsLike.testPositive47()
+    is_like("abcdef", "%w+", "positive test")
+end
+
+
+
+--
+-- Verify that "%w*" matches "abcdef".
+--
+function TestAssertionIsLike.testPositive48()
+    is_like("abcdef", "%w*", "positive test")
+end
+
+
+
+--
+-- Verify that "%w-" matches "abcdef".
+--
+function TestAssertionIsLike.testPositive49()
+    is_like("abcdef", "%w-", "positive test")
+end
+
+
+
+--
+-- Verify that "%w?" matches "abcdef".
+--
+function TestAssertionIsLike.testPositive50()
+    is_like("abcdef", "%w?", "positive test")
+end
+
+
+
+--
+-- Verify that "%w" matches "xyzzy".
+--
+function TestAssertionIsLike.testPositive51()
+    is_like("xyzzy", "%w", "positive test")
+end
+
+
+
+--
+-- Verify that "%w+" matches "xyzzy".
+--
+function TestAssertionIsLike.testPositive52()
+    is_like("xyzzy", "%w+", "positive test")
+end
+
+
+
+--
+-- Verify that "%w*" matches "xyzzy".
+--
+function TestAssertionIsLike.testPositive53()
+    is_like("xyzzy", "%w*", "positive test")
+end
+
+
+
+--
+-- Verify that "%w-" matches "xyzzy".
+--
+function TestAssertionIsLike.testPositive54()
+    is_like("xyzzy", "%w-", "positive test")
+end
+
+
+
+--
+-- Verify that "%w?" matches "xyzzy".
+--
+function TestAssertionIsLike.testPositive55()
+    is_like("xyzzy", "%w?", "positive test")
+end
+
+
+
 --[[
 --
 -- Verify that "[0-9]*" matches "12345".
