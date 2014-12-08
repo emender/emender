@@ -57,9 +57,86 @@ end
 
 
 --
--- Verify that "%d" matches "12345".
+-- Verify that "ZZ" matches "XYZZY".
 --
 function TestAssertionIsLike.testPositive04()
+    is_like("XYZZY", "ZZ", "positive test")
+end
+
+
+
+--
+-- Verify that "." matches "X".
+--
+function TestAssertionIsLike.testPositive05()
+    is_like("X", ".", "positive test")
+end
+
+
+
+--
+-- Verify that "%." matches ".".
+--
+function TestAssertionIsLike.testPositive06()
+    is_like(".", "%.", "positive test")
+end
+
+
+
+--
+-- Verify that "%%" matches "%".
+--
+function TestAssertionIsLike.testPositive07()
+    is_like("%", "%%", "positive test")
+end
+
+
+
+--
+-- Verify that "[a-z] matches "a".
+--
+function TestAssertionIsLike.testPositive08()
+    is_like("a", "[a-z]", "positive test")
+end
+
+
+
+--
+-- Verify that "[A-Z] matches "A".
+--
+function TestAssertionIsLike.testPositive09()
+    is_like("A", "[A-Z]", "positive test")
+end
+
+
+
+--
+-- Verify that "[0-9] matches "5".
+--
+function TestAssertionIsLike.testPositive10()
+    is_like("5", "[0-9]", "positive test")
+end
+
+
+
+-- We need to check all the following character classes:
+-- %a    letters
+-- %c    control characters
+-- %d    digits
+-- %l    lower case letters
+-- %p    punctuation characters
+-- %s    space characters
+-- %u    upper case letters
+-- %w    alphanumeric characters
+-- %x    hexadecimal digits
+-- %z    the character with representation 0
+
+
+
+--
+-- Verify that "%d" matches "12345".
+--
+function TestAssertionIsLike.testPositive11()
     is_like("12345", "%d", "positive test")
 end
 
@@ -68,12 +145,85 @@ end
 --
 -- Verify that "%d+" matches "12345".
 --
-function TestAssertionIsLike.testPositive05()
+function TestAssertionIsLike.testPositive12()
     is_like("12345", "%d+", "positive test")
 end
 
 
 
+--
+-- Verify that "%d*" matches "12345".
+--
+function TestAssertionIsLike.testPositive13()
+    is_like("12345", "%d*", "positive test")
+end
+
+
+
+--
+-- Verify that "%d-" matches "12345".
+--
+function TestAssertionIsLike.testPositive14()
+    is_like("12345", "%d-", "positive test")
+end
+
+
+
+--
+-- Verify that "%d?" matches "1".
+--
+function TestAssertionIsLike.testPositive15()
+    is_like("1", "%d?", "positive test")
+end
+
+
+
+--
+-- Verify that "%a" matches "abc".
+--
+function TestAssertionIsLike.testPositive16()
+    is_like("abc", "%a", "positive test")
+end
+
+
+
+--
+-- Verify that "%a+" matches "abc".
+--
+function TestAssertionIsLike.testPositive17()
+    is_like("abc", "%a+", "positive test")
+end
+
+
+
+--
+-- Verify that "%a*" matches "abc".
+--
+function TestAssertionIsLike.testPositive18()
+    is_like("abc", "%a*", "positive test")
+end
+
+
+
+--
+-- Verify that "%a-" matches "abc".
+--
+function TestAssertionIsLike.testPositive19()
+    is_like("abc", "%a+", "positive test")
+end
+
+
+
+--
+-- Verify that "%a?" matches "abc".
+--
+function TestAssertionIsLike.testPositive20()
+    is_like("abc", "%a?", "positive test")
+end
+
+
+
+--[[
 --
 -- Verify that "[0-9]*" matches "12345".
 --
@@ -97,33 +247,6 @@ end
 --
 function TestAssertionIsLike.testPositive08()
     is_like("", "[0-9]*", "positive test")
-end
-
-
-
---
--- Verify that "%a" matches "abc".
---
-function TestAssertionIsLike.testPositive09()
-    is_like("abc", "%a", "positive test")
-end
-
-
-
---
--- Verify that "%a*" matches "abc".
---
-function TestAssertionIsLike.testPositive10()
-    is_like("abc", "%a*", "positive test")
-end
-
-
-
---
--- Verify that "%a+" matches "abc".
---
-function TestAssertionIsLike.testPositive11()
-    is_like("abc", "%a+", "positive test")
 end
 
 
@@ -349,3 +472,4 @@ function TestAssertionIsLike.testNegative11()
     is_like("", "%d+", "(expected) negative test")
 end
 
+--]]
