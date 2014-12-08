@@ -223,6 +223,96 @@ end
 
 
 
+--
+-- Verify that "%l" matches "abc".
+--
+function TestAssertionIsLike.testPositive21()
+    is_like("abc", "%l", "positive test")
+end
+
+
+
+--
+-- Verify that "%l+" matches "abc".
+--
+function TestAssertionIsLike.testPositive22()
+    is_like("abc", "%l+", "positive test")
+end
+
+
+
+--
+-- Verify that "%l*" matches "abc".
+--
+function TestAssertionIsLike.testPositive23()
+    is_like("abc", "%l*", "positive test")
+end
+
+
+
+--
+-- Verify that "%l-" matches "abc".
+--
+function TestAssertionIsLike.testPositive24()
+    is_like("abc", "%l+", "positive test")
+end
+
+
+
+--
+-- Verify that "%l?" matches "abc".
+--
+function TestAssertionIsLike.testPositive25()
+    is_like("abc", "%l?", "positive test")
+end
+
+
+
+--
+-- Verify that "%u" matches "ABC".
+--
+function TestAssertionIsLike.testPositive26()
+    is_like("ABC", "%u", "positive test")
+end
+
+
+
+--
+-- Verify that "%u+" matches "ABC".
+--
+function TestAssertionIsLike.testPositive27()
+    is_like("ABC", "%u+", "positive test")
+end
+
+
+
+--
+-- Verify that "%u*" matches "ABC".
+--
+function TestAssertionIsLike.testPositive28()
+    is_like("ABC", "%u*", "positive test")
+end
+
+
+
+--
+-- Verify that "%u-" matches "ABC".
+--
+function TestAssertionIsLike.testPositive29()
+    is_like("ABC", "%u+", "positive test")
+end
+
+
+
+--
+-- Verify that "%u?" matches "ABC".
+--
+function TestAssertionIsLike.testPositive30()
+    is_like("ABC", "%u?", "positive test")
+end
+
+
+
 --[[
 --
 -- Verify that "[0-9]*" matches "12345".
@@ -247,60 +337,6 @@ end
 --
 function TestAssertionIsLike.testPositive08()
     is_like("", "[0-9]*", "positive test")
-end
-
-
-
---
--- Verify that "%l" matches "abc".
---
-function TestAssertionIsLike.testPositive12()
-    is_like("abc", "%l", "positive test")
-end
-
-
-
---
--- Verify that "%l*" matches "abc".
---
-function TestAssertionIsLike.testPositive13()
-    is_like("abc", "%l*", "positive test")
-end
-
-
-
---
--- Verify that "%l+" matches "abc".
---
-function TestAssertionIsLike.testPositive14()
-    is_like("abc", "%l+", "positive test")
-end
-
-
-
---
--- Verify that "%u" matches "ABC".
---
-function TestAssertionIsLike.testPositive15()
-    is_like("ABC", "%u", "positive test")
-end
-
-
-
---
--- Verify that "%u*" matches "ABC".
---
-function TestAssertionIsLike.testPositive16()
-    is_like("ABC", "%u*", "positive test")
-end
-
-
-
---
--- Verify that "%u+" matches "ABC".
---
-function TestAssertionIsLike.testPositive17()
-    is_like("ABC", "%u+", "positive test")
 end
 
 
