@@ -508,11 +508,24 @@ function core.performTestList(verboseOperation)
 end
 
 
+
+--
+-- Returns the directory where output file(s) should be generated.
+--
+function getDirectoryOfOutputFile(fileName)
+    local process = io.popen("dirname " .. fileName)
+    local out = process:read("*all")
+    process.close()
+    return out
+end
+
 function openOutputFiles(outputFiles)
     for fileName, outputFile in pairs(outputFiles) do
         local fout = io.open(fileName, "w")
         if fout then
             outputFile[2] = fout
+            -- we need to know the output directory too
+            outputFile[3] = getDirectoryOfOutputFile(fileName)
         else
             print("Error: can not open file '" .. fileName .. "' for writing.")
             os.exit(2)
