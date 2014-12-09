@@ -1,5 +1,10 @@
 2014-12-09  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* src/writers/htmlWriter.lua:
+	Graphs are generated only when selected global variable is set.
+
+2014-12-09  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* emend:
 	* src/config.lua:
 	Added support for loading global configuration file.

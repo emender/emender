@@ -120,8 +120,36 @@ function writeLeftTab(fout, results, passedTests, failedTests)
         fout:write("          </li>\n")
     end
     fout:write("        </ul>\n")
-    createGraph(fout, passedTests, failedTests)
+
+    -- generate graphs in HTML output, but only if the global variable
+    -- named generateGraphsInHtmlOutput is set to true
+    if generateGraphsInHtmlOutput then
+        createGraph(fout, passedTests, failedTests)
+    end
     fout:write("      </div>\n")
+end
+
+
+--
+-- When the global variable named generateGraphsInHtmlOutput is set to true
+-- the flotr library (and all required libraries) should be loaded onto the HTML page.
+--
+function includeFlottrLibrary()
+    if generateGraphsInHtmlOutput then
+        return [[
+  <script type="text/javascript" src="flotr/lib/prototype-1.6.0.2.js"></script>
+  
+  <!--[if IE]>
+      <script type="text/javascript" src="../flotr/lib/excanvas.js"></script>
+      <script type="text/javascript" src="../flotr/lib/base64.js"></script>
+  <![endif]-->
+  <script type="text/javascript" src="flotr/lib/canvas2image.js"></script>
+  <script type="text/javascript" src="flotr/lib/canvastext.js"></script>
+  <script type="text/javascript" src="flotr/flotr-0.2.0-alpha.js"></script>
+]]
+    else
+        return ""
+    end
 end
 
 
@@ -143,15 +171,8 @@ function htmlWriter.writeHeader(fout, results)
   <link href="bootstrap/bootstrap.vertical-tabs.css" rel="stylesheet" type="text/css" />
   <link href="yoana.css" rel="stylesheet" type="text/css" />
   <title>Emender Test Suite</title>
-        <script type="text/javascript" src="flotr/lib/prototype-1.6.0.2.js"></script>
-        
-        <!--[if IE]>
-            <script type="text/javascript" src="../flotr/lib/excanvas.js"></script>
-            <script type="text/javascript" src="../flotr/lib/base64.js"></script>
-        <![endif]-->
-        <script type="text/javascript" src="flotr/lib/canvas2image.js"></script>
-        <script type="text/javascript" src="flotr/lib/canvastext.js"></script>
-        <script type="text/javascript" src="flotr/flotr-0.2.0-alpha.js"></script>
+]] .. includeFlottrLibrary() .. 
+[[
 </head>
 <body>
   <div class="container-fluid main-container">
