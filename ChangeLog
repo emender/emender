@@ -1,3 +1,9 @@
+2014-12-09  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* emend:
+	* src/config.lua:
+	Added support for loading global configuration file.
+
 2014-12-08  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* test/TestAssertionIsLike.lua:

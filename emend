@@ -96,6 +96,7 @@ function loadModules()
     require("src/common/string")
     require("src/common/table")
     require("src/writers/commonTextWriter")
+    require("src/config")
 end
 
 function checkForUnknownOptions(options)
