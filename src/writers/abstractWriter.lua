@@ -41,6 +41,19 @@ end
 
 
 --
+-- This function is to be called from the core only.
+-- Return writer and output directory.
+--
+function abstractWriter.getWriterAndOutputDirectory(outputFileStruct)
+    local fileType = outputFileStruct[1]
+    local outdir   = outputFileStruct[3]
+    local writer   = abstractWriter.writers[fileType]
+    return abstractWriter.writers[fileType], outdir
+end
+
+
+
+--
 -- Setup color output or no color output.
 -- This function calls functions with the same name that should exist for all registered writers.
 --
@@ -208,6 +221,32 @@ function abstractWriter.writeOverallResults(results)
     print("  Passed: " .. passedTests)
     print("  Failed: " .. failedTests)
     print()
+end
+
+
+
+--
+-- Called to initialize writers.
+--
+function abstractWriter.initialize()
+    -- loop over all registered writers
+    for _, outputFileStruct in pairs(abstractWriter.outputFileStructs) do
+        local writer, outdir = abstractWriter.getWriterAndOutputDirectory(outputFileStruct)
+        writer.initialize(outdir)
+    end
+end
+
+
+
+--
+-- Called to finalize writers.
+--
+function abstractWriter.finalize()
+    -- loop over all registered writers
+    for _, outputFileStruct in pairs(abstractWriter.outputFileStructs) do
+        local writer, outdir = abstractWriter.getWriterAndOutputDirectory(outputFileStruct)
+        writer.finalize(outdir)
+    end
 end
 
 

@@ -1,5 +1,10 @@
 2014-12-09  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* src/writers/abstractWriter.lua:
+	Added basic support for writer initializers and finalizers.
+
+2014-12-09  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* src/core.lua:
 	Output directory is registered for all output file.
 
