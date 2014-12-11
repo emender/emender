@@ -1,5 +1,14 @@
 2014-12-11  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* selfchecks/test_setup.in:
+	* selfchecks/test_setup_only.in:
+	* selfchecks/test_setup_teardown_only.in:
+	* selfchecks/test_teardown.in:
+	* selfchecks/test_teardown_only.in:
+	Updated selfchecks to reflect changes made in Emender core.
+
+2014-12-11  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* src/core.lua:
 	When setup() function failed, the whole test should fail as well.
 

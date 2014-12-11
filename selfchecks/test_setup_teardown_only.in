@@ -9,11 +9,11 @@
   Last Modified: 2014-08-25
   Tags:          BasicTest
 
-  Test Case: setup
+  Test setup
 
 	setUp() function called
 
-  Test Case: tearDown
+  Test tearDown
 
 	tearDown() function called
 

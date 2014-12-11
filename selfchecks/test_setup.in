@@ -8,7 +8,7 @@
   Last Modified: 2014-08-25
   Tags:          BasicTest
 
-  Test Case: setup
+  Test setup
 
     [ PASS ]  setUp() function properly called.
 

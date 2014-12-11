@@ -9,7 +9,7 @@
   Last Modified: 2014-09-08
   Tags:          BasicTest
 
-  Test Case: tearDown
+  Test tearDown
 
     [ PASS ]  tearDown() function properly called.
 
