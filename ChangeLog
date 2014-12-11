@@ -1,5 +1,10 @@
 2014-12-11  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* test/TestSetUpFailure.lua:
+	Added new test to check setUp() behaviour.
+
+2014-12-11  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* src/writers/commonTextWriter.lua:
 	Test setup and tearDown functions should print different message than
 	regular test cases to the standard output.
