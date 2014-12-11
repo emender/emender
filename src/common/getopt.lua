@@ -140,12 +140,22 @@ end
 
 
 --
+-- Check if -D or --debug is used on the CLI.
+--
+function getopt.isDebugFlagUsed(options)
+    return options["D"] or options["debug"]
+end
+
+
+
+--
 -- Returns table that would contain all unknown command line options.
 --
 function getopt.getUnknownOptions(options)
     local knownOptions = {"v", "verbose",   "l", "list",      "h", "help",
                           "V", "version",   "L", "license",   "c", "color",
-                          "s", "summary",   "T", "trace",     "o", "output"}
+                          "s", "summary",   "T", "trace",     "o", "output",
+                          "D", "debug"}
 
     -- we are going to modify table two times, so let's made a copy of it
     local unknownOptions = table.copy(options)

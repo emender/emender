@@ -1,5 +1,10 @@
 2014-12-11  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* src/common/getopt.lua:
+	Added basic support for the -D and --debug flags.
+
+2014-12-11  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* src/core.lua:
 	* src/writers/htmlWriter.lua:
 	All the required files for the generated HTML page is copied into the
