@@ -1,5 +1,10 @@
 2014-12-11  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* src/core.lua:
+	When setup() function failed, the whole test should fail as well.
+
+2014-12-11  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* test/TestSetUpFailure.lua:
 	Added new test to check setUp() behaviour.
 

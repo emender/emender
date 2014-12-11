@@ -362,12 +362,14 @@ function core.runTest(scriptDirectory, filename, verboseOperation, testOptions, 
         local setupFunction = core.getSetupFunction(testSuiteName)
         local tearDownFunction = core.getTearDownFunction(testSuiteName)
         local testFunctionNames = core.getListOfTestFunctionNames(testSuiteName)
+        local processRestOfTest = true
 
         if testFunctionNames or setupFunction or tearDownFunction then
             -- print an information about the test suite that are started
             -- to the standard output
             writeTestSuiteStart(io.stdout, testSuite, false)
             if setupFunction then
+                currentTestFailure = false
                 writeSetupStart(io.stdout, false)
 
                 if verboseOperation then
@@ -380,47 +382,53 @@ function core.runTest(scriptDirectory, filename, verboseOperation, testOptions, 
                     end
                 else
                     print("       " .. message)
+                    processRestOfTest = false
+                end
+                if currentTestFailure then
+                    processRestOfTest = false
                 end
             end
             local passCnt = 0
             local failCnt = 0
             local errorCnt = 0
             local methods = {}
-            for i,testFunctionName in ipairs(testFunctionNames) do
-                local method = {}
-                method.name = testFunctionName
+            if processRestOfTest then
+                for i,testFunctionName in ipairs(testFunctionNames) do
+                    local method = {}
+                    method.name = testFunctionName
 
-                core.messages = {}
-                method.result = nil
+                    core.messages = {}
+                    method.result = nil
 
-                writeCaseStart(io.stdout, method, false)
+                    writeCaseStart(io.stdout, method, false)
 
-                currentTestFailure = false
-                local testFunction = _G[testSuiteName][testFunctionName]
-                local status, message = pcall(testFunction)
-                if status and not currentTestFailure then
-                    if verboseOperation then
-                        print("        OK")
-                    end
-                    passCnt = passCnt + 1
-                    method.result = "OK"
-                else
-                    if message then
-                        print("       " .. message)
-                        table.insert(core.messages, {"ERROR", message})
-                        errorCnt = errorCnt + 1
-                        method.result = "ERROR"
+                    currentTestFailure = false
+                    local testFunction = _G[testSuiteName][testFunctionName]
+                    local status, message = pcall(testFunction)
+                    if status and not currentTestFailure then
+                        if verboseOperation then
+                            print("        OK")
+                        end
+                        passCnt = passCnt + 1
+                        method.result = "OK"
                     else
-                        failCnt = failCnt + 1
-                        method.result = "FAIL"
+                        if message then
+                            print("       " .. message)
+                            table.insert(core.messages, {"ERROR", message})
+                            errorCnt = errorCnt + 1
+                            method.result = "ERROR"
+                        else
+                            failCnt = failCnt + 1
+                            method.result = "FAIL"
+                        end
                     end
+                    method.messages = table.copy(core.messages)
+                    method.pass = filterMessages(method.messages, "PASS")
+                    method.fail = filterMessages(method.messages, "FAIL")
+                    method.info = filterMessages(method.messages, "INFO")
+                    method.errors = filterMessages(method.messages, "ERROR")
+                    table.insert(methods, method)
                 end
-                method.messages = table.copy(core.messages)
-                method.pass = filterMessages(method.messages, "PASS")
-                method.fail = filterMessages(method.messages, "FAIL")
-                method.info = filterMessages(method.messages, "INFO")
-                method.errors = filterMessages(method.messages, "ERROR")
-                table.insert(methods, method)
             end
             if tearDownFunction then
                 writeTearDownStart(io.stdout, false)
@@ -452,7 +460,10 @@ function core.runTest(scriptDirectory, filename, verboseOperation, testOptions, 
 
             -- return true only when there are no tests that failed or
             -- can not be run due to other error
-            return failCnt == 0 and errorCnt == 0
+            -- also: when processRestOfTest is set to true -> it means
+            --       that setupFunction have failed so the test as a whole
+            --       must fail
+            return failCnt == 0 and errorCnt == 0 and processRestOfTest
         end
     end
     return nil
