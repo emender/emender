@@ -80,6 +80,7 @@ function runTestExamples {
      ../emend ../test/TestSetUp.lua             > test_setup.out
      ../emend ../test/TestSetUpOnly.lua         > test_setup_only.out
      ../emend ../test/TestSetUpTearDownOnly.lua > test_setup_teardown_only.out
+     ../emend ../test/TestSetUpFailure.lua      > test_setup_failure.out
      ../emend ../test/TestTearDown.lua          > test_teardown.out
      ../emend ../test/TestTearDownOnly.lua      > test_teardown_only.out
      ../emend ../test/TestPassFail.lua          > test_pass_fail.out
