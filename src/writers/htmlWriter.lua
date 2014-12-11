@@ -531,6 +531,22 @@ end
 
 
 --
+-- Called to initialize the writer.
+--
+function htmlWriter.initialize(outdir)
+end
+
+
+
+--
+-- Called to finalize the writer.
+--
+function htmlWriter.finalize(outdir)
+end
+
+
+
+--
 -- Export the module API
 --
 return htmlWriter

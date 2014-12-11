@@ -1,5 +1,14 @@
 2014-12-11  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* src/writers/htmlWriter.lua:
+	* src/writers/junitWriter.lua:
+	* src/writers/summaryWriter.lua:
+	* src/writers/textWriter.lua:
+	* src/writers/xmlWriter.lua:
+	Initializers and finalizers should be called for all registered writers..
+
+2014-12-11  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* selfchecks/test_setup_failure.in:
 	Added new selfcheck.
 

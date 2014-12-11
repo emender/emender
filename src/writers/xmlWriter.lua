@@ -180,6 +180,22 @@ end
 
 
 --
+-- Called to initialize the writer.
+--
+function xmlWriter.initialize(outdir)
+end
+
+
+
+--
+-- Called to finalize the writer.
+--
+function xmlWriter.finalize(outdir)
+end
+
+
+
+--
 -- Export the module API
 --
 return xmlWriter

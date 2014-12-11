@@ -128,6 +128,22 @@ end
 
 
 --
+-- Called to initialize the writer.
+--
+function summaryWriter.initialize(outdir)
+end
+
+
+
+--
+-- Called to finalize the writer.
+--
+function summaryWriter.finalize(outdir)
+end
+
+
+
+--
 -- Export the module API
 --
 return summaryWriter

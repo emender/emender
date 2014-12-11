@@ -90,6 +90,22 @@ end
 
 
 --
+-- Called to initialize the writer.
+--
+function textWriter.initialize(outdir)
+end
+
+
+
+--
+-- Called to finalize the writer.
+--
+function textWriter.finalize(outdir)
+end
+
+
+
+--
 -- Export the module API
 --
 return textWriter

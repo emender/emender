@@ -140,6 +140,22 @@ end
 
 
 --
+-- Called to initialize the writer.
+--
+function junitWriter.initialize(outdir)
+end
+
+
+
+--
+-- Called to finalize the writer.
+--
+function junitWriter.finalize(outdir)
+end
+
+
+
+--
 -- Export the module API
 --
 return junitWriter
