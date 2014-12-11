@@ -133,11 +133,11 @@ function writeCaseStart(fout, testCase, colorOutput)
 end
 
 function writeSetupStart(fout, colorOutput)
-    fout:write("\n  Test Case: setup\n\n")
+    fout:write("\n  Test setup\n\n")
 end
 
 function writeTearDownStart(fout, colorOutput)
-    fout:write("\n  Test Case: tearDown\n\n")
+    fout:write("\n  Test tearDown\n\n")
 end
 
 function writeCaseEnd(fout, testCase, colorOutput)

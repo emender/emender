@@ -1,5 +1,11 @@
 2014-12-11  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* src/writers/commonTextWriter.lua:
+	Test setup and tearDown functions should print different message than
+	regular test cases to the standard output.
+
+2014-12-11  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* src/core.lua:
 	Fixed issue caused by incompatibility between Lua 5.1.4 and Lua 5.2.3.
 
