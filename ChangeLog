@@ -1,5 +1,10 @@
 2014-12-11  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* selfchecks/test_setup_failure.in:
+	Added new selfcheck.
+
+2014-12-11  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* selfchecks/test_setup.in:
 	* selfchecks/test_setup_only.in:
 	* selfchecks/test_setup_teardown_only.in:
