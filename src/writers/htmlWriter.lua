@@ -542,6 +542,18 @@ end
 -- Called to finalize the writer.
 --
 function htmlWriter.finalize(outdir)
+    local srcdir = getScriptDirectory()
+    -- copy all files required by HTML page to the right output directory
+    if outdir and srcdir then
+        -- perform copy only if everything is setup correctly
+        local command = "cp -r " .. srcdir .. "files/* " .. outdir
+        local process = io.popen(command)
+        -- wait for the process to finish
+        if process then
+            process:read('*all')
+            process:close()
+        end
+    end
 end
 
 

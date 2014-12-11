@@ -1,5 +1,12 @@
 2014-12-11  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* src/core.lua:
+	* src/writers/htmlWriter.lua:
+	All the required files for the generated HTML page is copied into the
+	output directory.
+
+2014-12-11  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* selfchecks/selfcheck.sh:
 	New selfcheck should be run regularly from this shellscript.
 

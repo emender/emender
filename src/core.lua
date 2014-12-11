@@ -563,6 +563,7 @@ function exportResults(outputFiles, colorOutput)
     local results = core.results
     openOutputFiles(outputFiles)
     core.writer.outputFileStructs = outputFiles
+    core.writer.initialize()
     --core.writer.setColorOutput(colorOutput)
     core.writer.writeHeader(results)
 
@@ -595,6 +596,7 @@ function exportResults(outputFiles, colorOutput)
     core.writer.writeFooter(results)
 
     closeOutputFiles(outputFiles)
+    core.writer.finalize()
 end
 
 --
