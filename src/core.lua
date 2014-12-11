@@ -515,7 +515,10 @@ end
 function getDirectoryOfOutputFile(fileName)
     local process = io.popen("dirname " .. fileName)
     local out = process:read("*all")
-    process.close()
+    -- be sure that the process is not nil (Lua API is not stable at this point!)
+    if process then
+        process:close()
+    end
     return out
 end
 
