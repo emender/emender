@@ -1,3 +1,8 @@
+2014-12-12  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* test/TestSetUpOnlyFailure.lua:
+	Added new test TestSetUpOnlyFailure.
+
 2014-12-11  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* src/common/getopt.lua:
