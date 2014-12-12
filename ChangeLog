@@ -1,5 +1,11 @@
 2014-12-12  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* selfchecks/selfcheck.sh:
+	* selfchecks/test_setup_only_failure.in:
+	Added new selfcheck.
+
+2014-12-12  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* test/TestSetUpOnlyFailure.lua:
 	Added new test TestSetUpOnlyFailure.
 
