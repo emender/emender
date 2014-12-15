@@ -719,6 +719,96 @@ end
 
 
 
+--
+-- Verify that "%c" matches "\f".
+--
+function TestAssertionIsLike.testPositive76()
+    is_like("\f", "%c", "positive test")
+end
+
+
+
+--
+-- Verify that "%c+" matches "\f".
+--
+function TestAssertionIsLike.testPositive77()
+    is_like("\f", "%c+", "positive test")
+end
+
+
+
+--
+-- Verify that "%c*" matches "\f".
+--
+function TestAssertionIsLike.testPositive78()
+    is_like("\f", "%c*", "positive test")
+end
+
+
+
+--
+-- Verify that "%c-" matches "\f".
+--
+function TestAssertionIsLike.testPositive79()
+    is_like("\f", "%c-", "positive test")
+end
+
+
+
+--
+-- Verify that "%c?" matches "\f".
+--
+function TestAssertionIsLike.testPositive80()
+    is_like("\f", "%c?", "positive test")
+end
+
+
+
+--
+-- Verify that "%c" matches "\r".
+--
+function TestAssertionIsLike.testPositive81()
+    is_like("\r", "%c", "positive test")
+end
+
+
+
+--
+-- Verify that "%c+" matches "\r".
+--
+function TestAssertionIsLike.testPositive82()
+    is_like("\r", "%c+", "positive test")
+end
+
+
+
+--
+-- Verify that "%c*" matches "\r".
+--
+function TestAssertionIsLike.testPositive83()
+    is_like("\r", "%c*", "positive test")
+end
+
+
+
+--
+-- Verify that "%c-" matches "\r".
+--
+function TestAssertionIsLike.testPositive84()
+    is_like("\r", "%c-", "positive test")
+end
+
+
+
+--
+-- Verify that "%c?" matches "\r".
+--
+function TestAssertionIsLike.testPositive85()
+    is_like("\r", "%c?", "positive test")
+end
+
+
+
 --[[
 --
 -- Verify that "[0-9]*" matches "12345".
