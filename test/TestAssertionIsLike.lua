@@ -628,6 +628,97 @@ end
 
 
 
+--
+-- Verify that "%c" matches "\b".
+--
+function TestAssertionIsLike.testPositive66()
+    is_like("\b", "%c", "positive test")
+end
+
+
+
+--
+-- Verify that "%c+" matches "\b".
+--
+function TestAssertionIsLike.testPositive67()
+    is_like("\b", "%c+", "positive test")
+end
+
+
+
+--
+-- Verify that "%c*" matches "\b".
+--
+function TestAssertionIsLike.testPositive68()
+    is_like("\b", "%c*", "positive test")
+end
+
+
+
+--
+-- Verify that "%c-" matches "\b".
+--
+function TestAssertionIsLike.testPositive69()
+    is_like("\b", "%c-", "positive test")
+end
+
+
+
+--
+-- Verify that "%c?" matches "\b".
+--
+function TestAssertionIsLike.testPositive70()
+    is_like("\b", "%c?", "positive test")
+end
+
+
+
+
+--
+-- Verify that "%c" matches "\v".
+--
+function TestAssertionIsLike.testPositive71()
+    is_like("\v", "%c", "positive test")
+end
+
+
+
+--
+-- Verify that "%c+" matches "\v".
+--
+function TestAssertionIsLike.testPositive72()
+    is_like("\v", "%c+", "positive test")
+end
+
+
+
+--
+-- Verify that "%c*" matches "\v".
+--
+function TestAssertionIsLike.testPositive73()
+    is_like("\v", "%c*", "positive test")
+end
+
+
+
+--
+-- Verify that "%c-" matches "\v".
+--
+function TestAssertionIsLike.testPositive74()
+    is_like("\v", "%c-", "positive test")
+end
+
+
+
+--
+-- Verify that "%c?" matches "\v".
+--
+function TestAssertionIsLike.testPositive75()
+    is_like("\v", "%c?", "positive test")
+end
+
+
+
 --[[
 --
 -- Verify that "[0-9]*" matches "12345".
