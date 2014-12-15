@@ -121,7 +121,7 @@ end
 
 -- We need to check all the following character classes:
 -- %a    letters
--- %c *  control characters
+-- %c    control characters
 -- %d    digits
 -- %l    lower case letters
 -- %p *  punctuation characters
@@ -129,7 +129,7 @@ end
 -- %u    upper case letters
 -- %w    alphanumeric characters
 -- %x    hexadecimal digits
--- %z *  the character with representation 0
+-- %z    the character with representation 0
 
 
 
@@ -805,6 +805,96 @@ end
 --
 function TestAssertionIsLike.testPositive85()
     is_like("\r", "%c?", "positive test")
+end
+
+
+
+--
+-- Verify that "%c" matches "\a".
+--
+function TestAssertionIsLike.testPositive86()
+    is_like("\a", "%c", "positive test")
+end
+
+
+
+--
+-- Verify that "%c+" matches "\a".
+--
+function TestAssertionIsLike.testPositive87()
+    is_like("\a", "%c+", "positive test")
+end
+
+
+
+--
+-- Verify that "%c*" matches "\a".
+--
+function TestAssertionIsLike.testPositive88()
+    is_like("\a", "%c*", "positive test")
+end
+
+
+
+--
+-- Verify that "%c-" matches "\a".
+--
+function TestAssertionIsLike.testPositive89()
+    is_like("\a", "%c-", "positive test")
+end
+
+
+
+--
+-- Verify that "%c?" matches "\a".
+--
+function TestAssertionIsLike.testPositive90()
+    is_like("\a", "%c?", "positive test")
+end
+
+
+
+--
+-- Verify that "%z" matches "\0".
+--
+function TestAssertionIsLike.testPositive91()
+    is_like("\0", "%z", "positive test")
+end
+
+
+
+--
+-- Verify that "%z+" matches "\0".
+--
+function TestAssertionIsLike.testPositive92()
+    is_like("\0", "%z+", "positive test")
+end
+
+
+
+--
+-- Verify that "%z*" matches "\0".
+--
+function TestAssertionIsLike.testPositive93()
+    is_like("\0", "%z*", "positive test")
+end
+
+
+
+--
+-- Verify that "%z-" matches "\0".
+--
+function TestAssertionIsLike.testPositive94()
+    is_like("\0", "%z-", "positive test")
+end
+
+
+
+--
+-- Verify that "%z?" matches "\0".
+--
+function TestAssertionIsLike.testPositive95()
+    is_like("\0", "%z?", "positive test")
 end
 
 
