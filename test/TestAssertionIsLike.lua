@@ -121,15 +121,15 @@ end
 
 -- We need to check all the following character classes:
 -- %a    letters
--- %c    control characters
+-- %c *  control characters
 -- %d    digits
 -- %l    lower case letters
--- %p    punctuation characters
--- %s    space characters
+-- %p *  punctuation characters
+-- %s *  space characters
 -- %u    upper case letters
 -- %w    alphanumeric characters
 -- %x    hexadecimal digits
--- %z    the character with representation 0
+-- %z *  the character with representation 0
 
 
 
@@ -534,6 +534,96 @@ end
 --
 function TestAssertionIsLike.testPositive55()
     is_like("xyzzy", "%w?", "positive test")
+end
+
+
+
+--
+-- Verify that "%c" matches "\n".
+--
+function TestAssertionIsLike.testPositive56()
+    is_like("\n", "%c", "positive test")
+end
+
+
+
+--
+-- Verify that "%c+" matches "\n".
+--
+function TestAssertionIsLike.testPositive57()
+    is_like("\n", "%c+", "positive test")
+end
+
+
+
+--
+-- Verify that "%c*" matches "\n".
+--
+function TestAssertionIsLike.testPositive58()
+    is_like("\n", "%c*", "positive test")
+end
+
+
+
+--
+-- Verify that "%c-" matches "\n".
+--
+function TestAssertionIsLike.testPositive59()
+    is_like("\n", "%c-", "positive test")
+end
+
+
+
+--
+-- Verify that "%c?" matches "\n".
+--
+function TestAssertionIsLike.testPositive60()
+    is_like("\n", "%c?", "positive test")
+end
+
+
+
+--
+-- Verify that "%c" matches "\t".
+--
+function TestAssertionIsLike.testPositive61()
+    is_like("\t", "%c", "positive test")
+end
+
+
+
+--
+-- Verify that "%c+" matches "\t".
+--
+function TestAssertionIsLike.testPositive62()
+    is_like("\t", "%c+", "positive test")
+end
+
+
+
+--
+-- Verify that "%c*" matches "\t".
+--
+function TestAssertionIsLike.testPositive63()
+    is_like("\t", "%c*", "positive test")
+end
+
+
+
+--
+-- Verify that "%c-" matches "\t".
+--
+function TestAssertionIsLike.testPositive64()
+    is_like("\t", "%c-", "positive test")
+end
+
+
+
+--
+-- Verify that "%c?" matches "\t".
+--
+function TestAssertionIsLike.testPositive65()
+    is_like("\t", "%c?", "positive test")
 end
 
 

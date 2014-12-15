@@ -1,3 +1,8 @@
+2014-12-15  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* test/TestAssertionIsLike.lua:
+	Added ten new tests into TestAssertionIsLike.
+
 2014-12-12  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* selfchecks/selfcheck.sh:
