@@ -899,6 +899,96 @@ end
 
 
 
+--
+-- Verify that "%s" matches " ".
+--
+function TestAssertionIsLike.testPositive96()
+    is_like(" ", "%s", "positive test")
+end
+
+
+
+--
+-- Verify that "%s+" matches " ".
+--
+function TestAssertionIsLike.testPositive97()
+    is_like(" ", "%s+", "positive test")
+end
+
+
+
+--
+-- Verify that "%s*" matches " ".
+--
+function TestAssertionIsLike.testPositive98()
+    is_like(" ", "%s*", "positive test")
+end
+
+
+
+--
+-- Verify that "%s-" matches " ".
+--
+function TestAssertionIsLike.testPositive99()
+    is_like(" ", "%s-", "positive test")
+end
+
+
+
+--
+-- Verify that "%s?" matches " ".
+--
+function TestAssertionIsLike.testPositive100()
+    is_like(" ", "%s?", "positive test")
+end
+
+
+
+--
+-- Verify that "%s" matches "\t".
+--
+function TestAssertionIsLike.testPositive101()
+    is_like("\t", "%s", "positive test")
+end
+
+
+
+--
+-- Verify that "%s+" matches "\t".
+--
+function TestAssertionIsLike.testPositive102()
+    is_like("\t", "%s+", "positive test")
+end
+
+
+
+--
+-- Verify that "%s*" matches "\t".
+--
+function TestAssertionIsLike.testPositive103()
+    is_like("\t", "%s*", "positive test")
+end
+
+
+
+--
+-- Verify that "%s-" matches "\t".
+--
+function TestAssertionIsLike.testPositive104()
+    is_like("\t", "%s-", "positive test")
+end
+
+
+
+--
+-- Verify that "%s?" matches "\t".
+--
+function TestAssertionIsLike.testPositive105()
+    is_like("\t", "%s?", "positive test")
+end
+
+
+
 --[[
 --
 -- Verify that "[0-9]*" matches "12345".
