@@ -1203,3 +1203,103 @@ function TestAssertionIsLike.testNegative13()
     is_like(1, "a", "(expected) negative test")
 end
 
+
+
+--
+-- Verify that the function does not accept an empty table as the first argument:
+--
+function TestAssertionIsLike.testNegative14()
+    is_like({}, "a", "(expected) negative test")
+end
+
+
+
+--
+-- Verify that the function does not accept a table as the first argument:
+--
+function TestAssertionIsLike.testNegative15()
+    is_like({1,2,3}, "a", "(expected) negative test")
+end
+
+
+
+--
+-- Verify that the function does not accept nested table as the first argument:
+--
+function TestAssertionIsLike.testNegative16()
+    is_like({{{1},2},3}, "a", "(expected) negative test")
+end
+
+
+
+--
+-- Verify that the function does not accept a hash table as an argument:
+--
+function TestAssertionIsLike.testNegative17()
+    local table1 = {}
+
+    -- fill in the first table
+    table1["first"]  = 1
+    table1["second"] = 2
+    table1["third"]  = 3
+
+    is_like(table1, "a", "(expected) negative test")
+end
+
+
+
+--
+-- Verify that the function does not accept a standard function as an argument:
+--
+function TestAssertionIsLike.testNegative18()
+    is_like(print, "a", "(expected) negative test")
+end
+
+
+
+--
+-- Verify that the function does not accept an user defined function as an argument:
+--
+function TestAssertionIsLike.testNegative19()
+    -- create local function
+    local func = function()
+        return 42
+    end
+    -- and call the is_like() function with the function as its argument
+    is_like(func, "a", "(expected) negative test")
+end
+
+
+
+--
+-- Verify that the function does not accept a closure as an argument:
+--
+function TestAssertionIsLike.testNegative20()
+    -- create local closure
+    local closure = function()
+        local i
+        return function()
+            i = i + 1
+            return i
+        end
+    end
+    -- and call the is_like() function with the closure as its argument
+    is_like(closure, "a", "(expected) negative test")
+end
+
+
+
+--
+-- Verify that the function does not accept a coroutine as an argument:
+--
+function TestAssertionIsLike.testNegative21()
+    -- create local coroutine
+    local func = coroutine.create(function ()
+           print(42)
+         end)
+    -- and call the is_like() function with the coroutine as its argument
+    is_like(func, "a", "coroutine is not a valid expression")
+end
+
+
+

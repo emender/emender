@@ -1,6 +1,11 @@
 2014-12-16  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* test/TestAssertionIsLike.lua:
+	Added more negative tests.
+
+2014-12-16  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* test/TestAssertionIsLike.lua:
 	Renumbered positive tests, add some negative tests.
 
 2014-12-16  Pavel Tisnovsky  <ptisnovs@redhat.com>
