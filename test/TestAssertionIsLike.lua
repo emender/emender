@@ -125,7 +125,7 @@ end
 -- %d    digits
 -- %l    lower case letters
 -- %p *  punctuation characters
--- %s *  space characters
+-- %s    space characters
 -- %u    upper case letters
 -- %w    alphanumeric characters
 -- %x    hexadecimal digits
@@ -985,6 +985,96 @@ end
 --
 function TestAssertionIsLike.testPositive105()
     is_like("\t", "%s?", "positive test")
+end
+
+
+
+--
+-- Verify that "%s" matches "\t \t".
+--
+function TestAssertionIsLike.testPositive106()
+    is_like("\t \t", "%s", "positive test")
+end
+
+
+
+--
+-- Verify that "%s+" matches "\t \t".
+--
+function TestAssertionIsLike.testPositive107()
+    is_like("\t \t", "%s+", "positive test")
+end
+
+
+
+--
+-- Verify that "%s*" matches "\t \t".
+--
+function TestAssertionIsLike.testPositive108()
+    is_like("\t \t", "%s*", "positive test")
+end
+
+
+
+--
+-- Verify that "%s-" matches "\t \t".
+--
+function TestAssertionIsLike.testPositive109()
+    is_like("\t \t", "%s-", "positive test")
+end
+
+
+
+--
+-- Verify that "%s?" matches "\t \t".
+--
+function TestAssertionIsLike.testPositive110()
+    is_like("\t \t", "%s?", "positive test")
+end
+
+
+
+--
+-- Verify that "%p" matches ".".
+--
+function TestAssertionIsLike.testPositive106()
+    is_like(".", "%p", "positive test")
+end
+
+
+
+--
+-- Verify that "%p+" matches ".".
+--
+function TestAssertionIsLike.testPositive107()
+    is_like(".", "%p+", "positive test")
+end
+
+
+
+--
+-- Verify that "%p*" matches ".".
+--
+function TestAssertionIsLike.testPositive108()
+    is_like(".", "%p*", "positive test")
+end
+
+
+
+--
+-- Verify that "%p-" matches ".".
+--
+function TestAssertionIsLike.testPositive109()
+    is_like(".", "%p-", "positive test")
+end
+
+
+
+--
+-- Verify that "%p?" matches ".".
+--
+function TestAssertionIsLike.testPositive110()
+    is_like(".", "%p?", "positive test")
 end
 
 
