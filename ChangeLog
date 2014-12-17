@@ -1,6 +1,11 @@
 2014-12-17  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* test/TestAssertionIsUnlike.lua:
+	Added various new test cases.
+
+2014-12-17  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* test/TestAssertionIsUnlike.lua:
 	Renumbered some tests.
 
 2014-12-17  Pavel Tisnovsky  <ptisnovs@redhat.com>
