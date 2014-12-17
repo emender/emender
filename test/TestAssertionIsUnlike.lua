@@ -25,75 +25,75 @@ TestAssertionIsUnlike = {
     },
 }
 
-function TestAssertionIsUnlike.testPositive1()
+function TestAssertionIsUnlike.testPositive01()
     is_unlike("xyzzy", "a", "positive test")
 end
 
-function TestAssertionIsUnlike.testPositive2()
+function TestAssertionIsUnlike.testPositive02()
     is_unlike("a", "xyzzy", "positive test")
 end
 
-function TestAssertionIsUnlike.testPositive3()
+function TestAssertionIsUnlike.testPositive03()
     is_unlike("xyzzy", "aaa", "positive test")
 end
 
-function TestAssertionIsUnlike.testPositive4()
+function TestAssertionIsUnlike.testPositive04()
     is_unlike("12345", "%a", "positive test")
 end
 
-function TestAssertionIsUnlike.testPositive5()
+function TestAssertionIsUnlike.testPositive05()
     is_unlike("abcde", "%d+", "positive test")
 end
 
-function TestAssertionIsUnlike.testPositive6()
+function TestAssertionIsUnlike.testPositive06()
     is_unlike("12345", "[a-b]+", "positive test")
 end
 
-function TestAssertionIsUnlike.testPositive7()
+function TestAssertionIsUnlike.testPositive07()
     is_unlike("x", "[0-9]+", "positive test")
 end
 
-function TestAssertionIsUnlike.testPositive8()
+function TestAssertionIsUnlike.testPositive08()
     is_unlike("", "[0-9]+", "positive test")
 end
 
-function TestAssertionIsUnlike.testPositive9()
+function TestAssertionIsUnlike.testPositive09()
     is_unlike("", "%d+", "positive test")
 end
 
-function TestAssertionIsUnlike.testNegative1()
+function TestAssertionIsUnlike.testNegative01()
     is_unlike()
 end
 
-function TestAssertionIsUnlike.testNegative2()
+function TestAssertionIsUnlike.testNegative02()
     is_unlike(nil)
 end
 
-function TestAssertionIsUnlike.testNegative3()
+function TestAssertionIsUnlike.testNegative03()
     is_unlike("string")
 end
 
-function TestAssertionIsUnlike.testNegative4()
+function TestAssertionIsUnlike.testNegative04()
     is_unlike("string", nil)
 end
 
-function TestAssertionIsUnlike.testNegative5()
+function TestAssertionIsUnlike.testNegative05()
     is_unlike("string", "string")
 end
 
-function TestAssertionIsUnlike.testNegative6()
+function TestAssertionIsUnlike.testNegative06()
     is_unlike("string", "string", nil)
 end
 
-function TestAssertionIsUnlike.testNegative7()
+function TestAssertionIsUnlike.testNegative07()
     is_unlike("aaa", "[0-9]*", "(expected) negative test")
 end
 
-function TestAssertionIsUnlike.testNegative8()
+function TestAssertionIsUnlike.testNegative08()
     is_unlike("aaa", "%d*", "(expected) negative test")
 end
 
-function TestAssertionIsUnlike.testNegative9()
+function TestAssertionIsUnlike.testNegative09()
     is_unlike("123", "%a*", "(expected) negative test")
 end
 

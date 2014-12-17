@@ -1,5 +1,10 @@
 2014-12-17  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* test/TestAssertionIsUnlike.lua:
+	Renumbered some tests.
+
+2014-12-17  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* selfchecks/selfcheck.sh:
 	* selfchecks/test_assertion_is_like.in:
 	Added new selfcheck.
