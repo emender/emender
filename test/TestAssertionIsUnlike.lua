@@ -38,26 +38,60 @@ function TestAssertionIsUnlike.testPositive03()
 end
 
 function TestAssertionIsUnlike.testPositive04()
-    is_unlike("12345", "%a", "positive test")
+    is_unlike("xyzzy", "111", "positive test")
 end
 
 function TestAssertionIsUnlike.testPositive05()
-    is_unlike("abcde", "%d+", "positive test")
+    is_unlike("", "111", "positive test")
 end
 
+-- We need to check all the following character classes:
+-- %a    letters
+-- %c    control characters
+-- %d    digits
+-- %l    lower case letters
+-- %p    punctuation characters
+-- %s    space characters
+-- %u    upper case letters
+-- %w    alphanumeric characters
+-- %x    hexadecimal digits
+-- %z    the character with representation 0
+
 function TestAssertionIsUnlike.testPositive06()
-    is_unlike("12345", "[a-b]+", "positive test")
+    is_unlike("12345", "%a", "positive test")
 end
 
 function TestAssertionIsUnlike.testPositive07()
-    is_unlike("x", "[0-9]+", "positive test")
+    is_unlike("12345", "%a%a", "positive test")
 end
 
 function TestAssertionIsUnlike.testPositive08()
-    is_unlike("", "[0-9]+", "positive test")
+    is_unlike("12345", "%a+", "positive test")
 end
 
 function TestAssertionIsUnlike.testPositive09()
+    is_unlike("12345", "%a%a*", "positive test")
+end
+
+function TestAssertionIsUnlike.testPositive10()
+    is_unlike("12345", "%a%a-", "positive test")
+end
+
+
+
+function TestAssertionIsUnlike.testPositive11()
+    is_unlike("12345", "[a-b]+", "positive test")
+end
+
+function TestAssertionIsUnlike.testPositive12()
+    is_unlike("x", "[0-9]+", "positive test")
+end
+
+function TestAssertionIsUnlike.testPositive13()
+    is_unlike("", "[0-9]+", "positive test")
+end
+
+function TestAssertionIsUnlike.testPositive14()
     is_unlike("", "%d+", "positive test")
 end
 
