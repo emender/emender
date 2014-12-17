@@ -121,6 +121,7 @@ function runTestsForAssertions {
      ../emend ../test/TestAssertionIsNotNil.lua   > test_assertion_is_not_nil.out
      ../emend ../test/TestAssertionIsEqual.lua    > test_assertion_is_equal.out
      ../emend ../test/TestAssertionIsUnequal.lua  > test_assertion_is_unequal.out
+     ../emend ../test/TestAssertionIsLike.lua     > test_assertion_is_like.out
 }
 
 

@@ -1,0 +1,553 @@
+---------------------------------------------------------------------------
+                         :: TestAssertionIsLike ::
+---------------------------------------------------------------------------
+
+  Description:   Test the behaviour function asserts.is_like().
+  Authors:       Pavel Tisnovsky
+  Emails:        ptisnovs@redhat.com
+  Last Modified: 2014-08-28
+  Tags:          BasicTest
+
+  Test Case: testNegative01
+
+       ../test/TestAssertionIsLike.lua:1086: Test structure error: Current value is a required argument.
+
+  Test Case: testNegative02
+
+       ../test/TestAssertionIsLike.lua:1095: Test structure error: Current value is a required argument.
+
+  Test Case: testNegative03
+
+       ../test/TestAssertionIsLike.lua:1104: Test structure error: Pattern is a required argument.
+
+  Test Case: testNegative04
+
+       ../test/TestAssertionIsLike.lua:1113: Test structure error: Pattern is a required argument.
+
+  Test Case: testNegative05
+
+       ../src/common/asserts.lua:269: Test structure error: Explanation is a required argument.
+
+  Test Case: testNegative06
+
+       ../src/common/asserts.lua:269: Test structure error: Explanation is a required argument.
+
+  Test Case: testNegative07
+
+       ../test/TestAssertionIsLike.lua:1149: Test structure error: Pattern is a required argument.
+
+  Test Case: testNegative08
+
+    [ FAIL ]  (expected) negative test
+
+  Test Case: testNegative09
+
+    [ FAIL ]  (expected) negative test
+
+  Test Case: testNegative10
+
+    [ FAIL ]  (expected) negative test
+
+  Test Case: testNegative11
+
+    [ FAIL ]  (expected) negative test
+
+  Test Case: testNegative12
+
+    [ FAIL ]  (expected) negative test
+
+  Test Case: testNegative13
+
+    [ FAIL ]  (expected) negative test
+
+  Test Case: testNegative14
+
+       ../src/common/asserts.lua:269: bad argument #1 to 'match' (string expected, got table)
+
+  Test Case: testNegative15
+
+       ../src/common/asserts.lua:269: bad argument #1 to 'match' (string expected, got table)
+
+  Test Case: testNegative16
+
+       ../src/common/asserts.lua:269: bad argument #1 to 'match' (string expected, got table)
+
+  Test Case: testNegative17
+
+       ../src/common/asserts.lua:269: bad argument #1 to 'match' (string expected, got table)
+
+  Test Case: testNegative18
+
+       ../src/common/asserts.lua:269: bad argument #1 to 'match' (string expected, got function)
+
+  Test Case: testNegative19
+
+       ../src/common/asserts.lua:269: bad argument #1 to 'match' (string expected, got function)
+
+  Test Case: testNegative20
+
+       ../src/common/asserts.lua:269: bad argument #1 to 'match' (string expected, got function)
+
+  Test Case: testNegative21
+
+       ../src/common/asserts.lua:269: bad argument #1 to 'match' (string expected, got thread)
+
+  Test Case: testPositive001
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive002
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive003
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive004
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive005
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive006
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive007
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive008
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive009
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive010
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive011
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive012
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive013
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive014
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive015
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive016
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive017
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive018
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive019
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive020
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive021
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive022
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive023
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive024
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive025
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive026
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive027
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive028
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive029
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive030
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive031
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive032
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive033
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive034
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive035
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive036
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive037
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive038
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive039
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive040
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive041
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive042
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive043
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive044
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive045
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive046
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive047
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive048
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive049
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive050
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive051
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive052
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive053
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive054
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive055
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive056
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive057
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive058
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive059
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive060
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive061
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive062
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive063
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive064
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive065
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive066
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive067
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive068
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive069
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive070
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive071
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive072
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive073
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive074
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive075
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive076
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive077
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive078
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive079
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive080
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive081
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive082
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive083
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive084
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive085
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive086
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive087
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive088
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive089
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive090
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive091
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive092
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive093
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive094
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive095
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive096
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive097
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive098
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive099
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive100
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive101
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive102
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive103
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive104
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive105
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive106
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive107
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive108
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive109
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive110
+
+    [ PASS ]  positive test
+
+  Test Summary                                                            
+
+    Executed Test Cases: 131
+    Passed Test Cases:   110
+    Failed Test Cases:   6
+    Encountered Errors:  15
+    Overall Result:      FAIL
+
+---------------------------------------------------------------------------
+                               :: Summary ::
+---------------------------------------------------------------------------
+
+  Executed Tests: 1
+  Passed Tests:   0
+  Failed Tests:   1
+  Overall Result: FAIL
+
+---------------------------------------------------------------------------
+Generated by Emender                           https://github.com/emender/
