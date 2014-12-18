@@ -157,6 +157,86 @@ function TestAssertionIsUnlike.testPositive30()
     is_unlike("abcde", "%d%d-", "positive test")
 end
 
+function TestAssertionIsUnlike.testPositive31()
+    is_unlike("ABCDE", "%l", "positive test")
+end
+
+function TestAssertionIsUnlike.testPositive32()
+    is_unlike("ABCDE", "%l%l", "positive test")
+end
+
+function TestAssertionIsUnlike.testPositive33()
+    is_unlike("ABCDE", "%l+", "positive test")
+end
+
+function TestAssertionIsUnlike.testPositive34()
+    is_unlike("ABCDE", "%l%l*", "positive test")
+end
+
+function TestAssertionIsUnlike.testPositive35()
+    is_unlike("ABCDE", "%l%l-", "positive test")
+end
+
+function TestAssertionIsUnlike.testPositive36()
+    is_unlike("12345", "%l", "positive test")
+end
+
+function TestAssertionIsUnlike.testPositive37()
+    is_unlike("12345", "%l%l", "positive test")
+end
+
+function TestAssertionIsUnlike.testPositive38()
+    is_unlike("12345", "%l+", "positive test")
+end
+
+function TestAssertionIsUnlike.testPositive39()
+    is_unlike("12345", "%l%l*", "positive test")
+end
+
+function TestAssertionIsUnlike.testPositive40()
+    is_unlike("12345", "%l%l-", "positive test")
+end
+
+function TestAssertionIsUnlike.testPositive41()
+    is_unlike("ABCDE", "%p", "positive test")
+end
+
+function TestAssertionIsUnlike.testPositive42()
+    is_unlike("ABCDE", "%p%p", "positive test")
+end
+
+function TestAssertionIsUnlike.testPositive43()
+    is_unlike("ABCDE", "%p+", "positive test")
+end
+
+function TestAssertionIsUnlike.testPositive44()
+    is_unlike("ABCDE", "%p%p*", "positive test")
+end
+
+function TestAssertionIsUnlike.testPositive45()
+    is_unlike("ABCDE", "%p%p-", "positive test")
+end
+
+function TestAssertionIsUnlike.testPositive46()
+    is_unlike("12345", "%p", "positive test")
+end
+
+function TestAssertionIsUnlike.testPositive47()
+    is_unlike("12345", "%p%p", "positive test")
+end
+
+function TestAssertionIsUnlike.testPositive48()
+    is_unlike("12345", "%p+", "positive test")
+end
+
+function TestAssertionIsUnlike.testPositive49()
+    is_unlike("12345", "%p%p*", "positive test")
+end
+
+function TestAssertionIsUnlike.testPositive50()
+    is_unlike("12345", "%p%p-", "positive test")
+end
+
 
 
 --[[
