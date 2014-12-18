@@ -20,7 +20,7 @@ TestAssertionIsUnlike = {
         description = "Test the behaviour function asserts.is_unlike().",
         authors = "Pavel Tisnovsky",
         emails = "ptisnovs@redhat.com",
-        changed = "2014-08-28",
+        changed = "2014-12-18",
         tags = {"BasicTest"},
     },
 }
@@ -77,8 +77,69 @@ function TestAssertionIsUnlike.testPositive10()
     is_unlike("12345", "%a%a-", "positive test")
 end
 
+function TestAssertionIsUnlike.testPositive11()
+    is_unlike("\0", "%a", "positive test")
+end
+
+function TestAssertionIsUnlike.testPositive12()
+    is_unlike("\0", "%a%a", "positive test")
+end
+
+function TestAssertionIsUnlike.testPositive13()
+    is_unlike("\0", "%a+", "positive test")
+end
+
+function TestAssertionIsUnlike.testPositive14()
+    is_unlike("\0", "%a%a*", "positive test")
+end
+
+function TestAssertionIsUnlike.testPositive15()
+    is_unlike("\0", "%a%a-", "positive test")
+end
+
+function TestAssertionIsUnlike.testPositive16()
+    is_unlike("12345", "%c", "positive test")
+end
+
+function TestAssertionIsUnlike.testPositive17()
+    is_unlike("12345", "%c%c", "positive test")
+end
+
+function TestAssertionIsUnlike.testPositive18()
+    is_unlike("12345", "%c+", "positive test")
+end
+
+function TestAssertionIsUnlike.testPositive19()
+    is_unlike("12345", "%c%c*", "positive test")
+end
+
+function TestAssertionIsUnlike.testPositive20()
+    is_unlike("12345", "%c%c-", "positive test")
+end
+
+function TestAssertionIsUnlike.testPositive21()
+    is_unlike("abcde", "%c", "positive test")
+end
+
+function TestAssertionIsUnlike.testPositive22()
+    is_unlike("abcde", "%c%c", "positive test")
+end
+
+function TestAssertionIsUnlike.testPositive23()
+    is_unlike("abcde", "%c+", "positive test")
+end
+
+function TestAssertionIsUnlike.testPositive24()
+    is_unlike("abcde", "%c%c*", "positive test")
+end
+
+function TestAssertionIsUnlike.testPositive25()
+    is_unlike("abcde", "%c%c-", "positive test")
+end
 
 
+
+--[[
 function TestAssertionIsUnlike.testPositive11()
     is_unlike("12345", "[a-b]+", "positive test")
 end
@@ -94,6 +155,7 @@ end
 function TestAssertionIsUnlike.testPositive14()
     is_unlike("", "%d+", "positive test")
 end
+--]]
 
 
 
