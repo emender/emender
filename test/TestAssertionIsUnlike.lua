@@ -237,6 +237,46 @@ function TestAssertionIsUnlike.testPositive50()
     is_unlike("12345", "%p%p-", "positive test")
 end
 
+function TestAssertionIsUnlike.testPositive51()
+    is_unlike("ABCDE", "%s", "positive test")
+end
+
+function TestAssertionIsUnlike.testPositive52()
+    is_unlike("ABCDE", "%s%s", "positive test")
+end
+
+function TestAssertionIsUnlike.testPositive53()
+    is_unlike("ABCDE", "%s+", "positive test")
+end
+
+function TestAssertionIsUnlike.testPositive54()
+    is_unlike("ABCDE", "%s%s*", "positive test")
+end
+
+function TestAssertionIsUnlike.testPositive55()
+    is_unlike("ABCDE", "%s%s-", "positive test")
+end
+
+function TestAssertionIsUnlike.testPositive56()
+    is_unlike("12345", "%s", "positive test")
+end
+
+function TestAssertionIsUnlike.testPositive57()
+    is_unlike("12345", "%s%s", "positive test")
+end
+
+function TestAssertionIsUnlike.testPositive58()
+    is_unlike("12345", "%s+", "positive test")
+end
+
+function TestAssertionIsUnlike.testPositive59()
+    is_unlike("12345", "%s%s*", "positive test")
+end
+
+function TestAssertionIsUnlike.testPositive60()
+    is_unlike("12345", "%s%s-", "positive test")
+end
+
 
 
 --[[
