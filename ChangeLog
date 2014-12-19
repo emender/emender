@@ -1,6 +1,11 @@
 2014-12-19  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* test/TestAssertionIsUnlike.lua:
+	Finished.
+
+2014-12-19  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* test/TestAssertionIsUnlike.lua:
 	Updated.
 
 2014-12-19  Pavel Tisnovsky  <ptisnovs@redhat.com>

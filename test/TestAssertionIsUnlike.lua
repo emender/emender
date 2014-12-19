@@ -318,43 +318,103 @@ function TestAssertionIsUnlike.testPositive70()
 end
 
 function TestAssertionIsUnlike.testPositive71()
-    is_unlike(".", "%x", "positive test")
+    is_unlike(".", "%w", "positive test")
 end
 
 function TestAssertionIsUnlike.testPositive72()
-    is_unlike(".", "%x%x", "positive test")
+    is_unlike(".", "%w%w", "positive test")
 end
 
 function TestAssertionIsUnlike.testPositive73()
-    is_unlike(".", "%x+", "positive test")
+    is_unlike(".", "%w+", "positive test")
 end
 
 function TestAssertionIsUnlike.testPositive74()
-    is_unlike(".", "%x%x*", "positive test")
+    is_unlike(".", "%w%w*", "positive test")
 end
 
 function TestAssertionIsUnlike.testPositive75()
-    is_unlike(".", "%x%x-", "positive test")
+    is_unlike(".", "%w%w-", "positive test")
 end
 
 function TestAssertionIsUnlike.testPositive76()
-    is_unlike("\0", "%x", "positive test")
+    is_unlike("\0", "%w", "positive test")
 end
 
 function TestAssertionIsUnlike.testPositive77()
-    is_unlike("\0", "%x%x", "positive test")
+    is_unlike("\0", "%w%w", "positive test")
 end
 
 function TestAssertionIsUnlike.testPositive78()
-    is_unlike("\0", "%x+", "positive test")
+    is_unlike("\0", "%w+", "positive test")
 end
 
 function TestAssertionIsUnlike.testPositive79()
-    is_unlike("\0", "%x%x*", "positive test")
+    is_unlike("\0", "%w%w*", "positive test")
 end
 
 function TestAssertionIsUnlike.testPositive80()
+    is_unlike("\0", "%w%w-", "positive test")
+end
+
+function TestAssertionIsUnlike.testPositive81()
+    is_unlike(".", "%x", "positive test")
+end
+
+function TestAssertionIsUnlike.testPositive82()
+    is_unlike(".", "%x%x", "positive test")
+end
+
+function TestAssertionIsUnlike.testPositive83()
+    is_unlike(".", "%x+", "positive test")
+end
+
+function TestAssertionIsUnlike.testPositive84()
+    is_unlike(".", "%x%x*", "positive test")
+end
+
+function TestAssertionIsUnlike.testPositive85()
+    is_unlike(".", "%x%x-", "positive test")
+end
+
+function TestAssertionIsUnlike.testPositive86()
+    is_unlike("\0", "%x", "positive test")
+end
+
+function TestAssertionIsUnlike.testPositive87()
+    is_unlike("\0", "%x%x", "positive test")
+end
+
+function TestAssertionIsUnlike.testPositive88()
+    is_unlike("\0", "%x+", "positive test")
+end
+
+function TestAssertionIsUnlike.testPositive89()
+    is_unlike("\0", "%x%x*", "positive test")
+end
+
+function TestAssertionIsUnlike.testPositive90()
     is_unlike("\0", "%x%x-", "positive test")
+end
+
+function TestAssertionIsUnlike.testPositive91()
+    is_unlike(".", "%z", "positive test")
+end
+
+function TestAssertionIsUnlike.testPositive92()
+    is_unlike(".", "%z%z", "positive test")
+end
+
+function TestAssertionIsUnlike.testPositive93()
+    is_unlike(".", "%z+", "positive test")
+end
+
+function TestAssertionIsUnlike.testPositive94()
+    is_unlike(".", "%z%z*", "positive test")
+end
+
+function TestAssertionIsUnlike.testPositive95()
+    is_unlike(".", "%z%z-", "positive test")
 end
 
 
