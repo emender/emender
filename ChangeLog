@@ -1,5 +1,11 @@
 2014-12-19  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* selfchecks/selfcheck.sh:
+	* selfchecks/test_assertion_is_unlike.in:
+	Added new selfcheck.
+
+2014-12-19  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* test/TestAssertionIsUnlike.lua:
 	Finished.
 
