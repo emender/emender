@@ -346,6 +346,31 @@ Replace I<message> with a short message. For example:
 
 =back
 
+=head2 Helper Methods
+
+Emender implements a number of helper method to make it easier for you to
+write test functions. Available helper methods are as follows:
+
+=over
+
+=item B<string>.B<alignCenter>(I<text>[, I<width>[, I<indent>[,
+I<first_indent>]]])
+
+The C<string.alignCenter()> method breaks lines at word boundaries, indents
+the text, and centers it.
+
+Replace I<text> with a string, I<width> with the line width (the default
+value is 75 characters), I<indent> with the indentation level (the default
+value is 0 characters), and I<first_indent> with the indentation level of
+the very first line (the same as I<indent> by default). For example:
+
+  string.alignCenter(":: Summary ::\n", 75)
+
+This function is especially useful if you intend to implement support for
+another output format or add debugging information to your tests.
+
+=back
+
 =head1 SEE ALSO
 
 B<emend>(1), B<lua>(1)
