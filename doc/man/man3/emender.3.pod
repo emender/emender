@@ -366,7 +366,39 @@ the very first line (the same as I<indent> by default). For example:
 
   string.alignCenter(":: Summary ::\n", 75)
 
-This function is especially useful if you intend to implement support for
+This method is especially useful if you intend to implement support for
+another output format or add debugging information to your tests.
+
+=item B<string>.B<alignLeft>(I<text>[, I<width>[, I<indent>[,
+I<first_indent>]]])
+
+The C<string.alignLeft()> method breaks lines at word boundaries, indents
+the text, and aligns it along the left margin.
+
+Replace I<text> with a string, I<width> with the line width (the default
+value is 75 characters), I<indent> with the indentation level (the default
+value is 0 characters), and I<first_indent> with the indentation level of
+the very first line (the same as I<indent> by default). For example:
+
+  string.alignLeft("  Executed Tests: " .. total .. "\n")
+
+This method is especially useful if you intend to implement support for
+another output format or add debugging information to your tests.
+
+=item B<string>.B<alignRight>(I<text>[, I<width>[, I<indent>[,
+I<first_indent>]]])
+
+The C<string.alignRight()> method breaks lines at word boundaries, indents
+the text, and aligns it along the right margin.
+
+Replace I<text> with a string, I<width> with the line width (the default
+value is 75 characters), I<indent> with the indentation level (the default
+value is 0 characters), and I<first_indent> with the indentation level of
+the very first line (the same as I<indent> by default). For example:
+
+  string.alignRight(string.upper(result) .. "\n")
+
+This method is especially useful if you intend to implement support for
 another output format or add debugging information to your tests.
 
 =back
