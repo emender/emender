@@ -1,5 +1,5 @@
 # A makefile for Emender, a test automation framework for documentation
-# Copyright (C) 2014 Jaromir Hradilek <jhradilek@redhat.com>
+# Copyright (C) 2014, 2015 Jaromir Hradilek <jhradilek@redhat.com>
 
 # This program is  free software:  you can redistribute it and/or modify it
 # under  the terms  of the  GNU General Public License  as published by the
@@ -81,16 +81,16 @@ clean:
 	-rm -f $(MANS)
 
 %.1: %.1.pod
-	$(POD2MAN) --section=1 --center="Emender" \
-	                       --name="$(notdir $(basename $^))" \
+	$(POD2MAN) --section=1 --center="$(NAME)" \
+	                       --name="$(notdir $(basename $@))" \
 	                       --release="Version $(VERSION)" $^ $@
 
 %.3: %.3.pod
-	$(POD2MAN) --section=3 --center="Emender" \
-	                       --name="$(notdir $(basename $^))" \
+	$(POD2MAN) --section=3 --center="$(NAME)" \
+	                       --name="$(notdir $(basename $@))" \
 	                       --release="Version $(VERSION)" $^ $@
 
 %.5: %.5.pod
-	$(POD2MAN) --section=5 --center="Emender" \
-	                       --name="$(notdir $(basename $^))" \
+	$(POD2MAN) --section=5 --center="$(NAME)" \
+	                       --name="$(notdir $(basename $@))" \
 	                       --release="Version $(VERSION)" $^ $@

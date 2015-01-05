@@ -4,7 +4,7 @@ emend - a command-line interface for Emender
 
 =head1 SYNOPSIS
 
-B<emend> [B<-clsv>] [B<-o> I<output_file>] [I<test_file>...]
+B<emend> [B<-clsvDT>] [B<-o> I<output_file>] [I<test_file>...]
 
 B<emend> B<-h>|B<-V>|B<-L>
 
@@ -24,9 +24,9 @@ command line.
 Stores a detailed report to the file named I<output_file>. The B<emend>
 utility deduces the format of the output file form the file extension:
 currently recognized file extensions are B<.txt> (plain text), B<.html>
-(HTML), and B<.xml> (XML as described in B<emender_xml>(5)). Note that you
-can specify the B<-o> option more than once to generate the report in
-multiple formats.
+(HTML), B<.xml> (XML as described in B<emender_xml>(5)), and B<.junit>
+(JUnit XML output). Note that you can specify the B<-o> option more than
+once to generate the report in multiple formats.
 
 =item B<-l>, B<--list>
 
@@ -50,6 +50,14 @@ Enables colored output.
 =item B<-v>, B<--verbose>
 
 Enables verbose mode.
+
+=item B<-D>, B<--debug>
+
+Enables debugging information.
+
+=item B<-T>, B<--trace>
+
+Enables tracing information.
 
 =item B<-h>, B<--help>
 
@@ -80,7 +88,7 @@ L<https://github.com/emender/emender/issues>.
 
 =head1 COPYRIGHT
 
-Copyright (C) 2014 Pavel Tisnovsky, Jaromir Hradilek
+Copyright (C) 2014-2015 Pavel Tisnovsky, Jaromir Hradilek
 
 This program is free software; see the source for copying conditions. It is
 distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
