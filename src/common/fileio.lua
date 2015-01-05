@@ -195,3 +195,32 @@ function directoryExists(directory)
     return result == "0"
 end
 
+
+
+--
+-- Check if given file exists.
+--
+function fileExists(fileName)
+    -- if filename is not given, silently return false
+    if not fileName then
+        return nil
+    end
+
+    -- try to open the file for reading
+    local fin = io.open(fileName, "r")
+
+    -- check if it's possible to open the file for reading
+    if not fin then
+        return nil
+    end
+
+    -- check if file could be closed
+    if not fin:close() then
+    print("D")
+        return nil
+    end
+
+    -- file seems to be readable
+    return true
+end
+

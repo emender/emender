@@ -1,3 +1,8 @@
+2015-01-05  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* src/common/fileio.lua:
+	Added new helper function: fileExists().
+
 2014-12-19  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* selfchecks/selfcheck.sh:
