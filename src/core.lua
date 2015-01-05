@@ -353,7 +353,11 @@ function core.runTest(scriptDirectory, filename, verboseOperation, testOptions, 
                 print("Script filename: test/" .. filename)
                 print("Test name: " ..testSuiteName)
             end
-            dofile(filename)
+            if fileExists(filename) then
+               dofile(filename)
+            else
+               print("Test '" .. filename .. "' does not exist.")
+            end
         end
 
         fillInTestMetadata(testSuite, testSuiteName)
@@ -603,6 +607,7 @@ end
 --
 --
 function core.runTests(verboseOperation, colorOutput, testsToRun, outputFiles, testOptions)
+    local returnValue = true
     core.results.passedTests = 0
     core.results.failedTests = 0
     core.results.suites = {}
@@ -636,11 +641,20 @@ function core.runTests(verboseOperation, colorOutput, testsToRun, outputFiles, t
                 end
             end
         end
+        if core.results.passedTests == 0 and core.results.failedTests == 0 then
+            print("No tests to run.")
+            returnValue = false
+        end
     end
 
-    writeSummary(io.stdout, core.results, false)
+    if core.results.passedTests > 0 or core.results.failedTests > 0 then
+        writeSummary(io.stdout, core.results, false)
+    else
+        returnValue = false
+    end
     --dumpTestResults()
     exportResults(outputFiles, colorOutput)
+    return returnValue
 end
 
 return core

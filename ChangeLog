@@ -1,5 +1,10 @@
 2015-01-05  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* src/core.lua:
+	Basic check if test file(s) exists.
+
+2015-01-05  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* src/common/fileio.lua:
 	Added new helper function: fileExists().
 
