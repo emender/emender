@@ -264,6 +264,20 @@ function is_like(current_value, pattern, explanation)
         return
     end
 
+    -- Verify that <current_value> is a string:
+    if type(current_value) ~= "string" then
+        -- if parameters are missing or incorrect, error should be reported immediately
+        report_error_in_test_structure("Current value type must be a string.")
+        return
+    end
+
+    -- Verify that <pattern> is a string:
+    if type(pattern) ~= "string" then
+        -- if parameters are missing or incorrect, error should be reported immediately
+        report_error_in_test_structure("Pattern type must be a string.")
+        return
+    end
+
     -- Compare the value with the pattern:
     -- check if explanation is a proper string is performed later
     is_true(string.match(current_value, pattern) ~= nil, explanation)
@@ -297,6 +311,20 @@ function is_unlike(current_value, pattern, explanation)
     if pattern == nil then
         -- if parameters are missing or incorrect, error should be reported immediately
         report_error_in_test_structure("Pattern is a required argument.")
+        return
+    end
+
+    -- Verify that <current_value> is a string:
+    if type(current_value) ~= "string" then
+        -- if parameters are missing or incorrect, error should be reported immediately
+        report_error_in_test_structure("Current value type must be a string.")
+        return
+    end
+
+    -- Verify that <pattern> is a string:
+    if type(pattern) ~= "string" then
+        -- if parameters are missing or incorrect, error should be reported immediately
+        report_error_in_test_structure("Pattern type must be a string.")
         return
     end
 
