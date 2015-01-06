@@ -26,11 +26,11 @@
 
   Test Case: testNegative05
 
-       ../src/common/asserts.lua:269: Test structure error: Explanation is a required argument.
+       ../src/common/asserts.lua:283: Test structure error: Explanation is a required argument.
 
   Test Case: testNegative06
 
-       ../src/common/asserts.lua:269: Test structure error: Explanation is a required argument.
+       ../src/common/asserts.lua:283: Test structure error: Explanation is a required argument.
 
   Test Case: testNegative07
 
@@ -54,43 +54,43 @@
 
   Test Case: testNegative12
 
-    [ FAIL ]  (expected) negative test
+       ../test/TestAssertionIsLike.lua:1194: Test structure error: Current value type must be a string.
 
   Test Case: testNegative13
 
-    [ FAIL ]  (expected) negative test
+       ../test/TestAssertionIsLike.lua:1203: Test structure error: Current value type must be a string.
 
   Test Case: testNegative14
 
-       ../src/common/asserts.lua:269: bad argument #1 to 'match' (string expected, got table)
+       ../test/TestAssertionIsLike.lua:1212: Test structure error: Current value type must be a string.
 
   Test Case: testNegative15
 
-       ../src/common/asserts.lua:269: bad argument #1 to 'match' (string expected, got table)
+       ../test/TestAssertionIsLike.lua:1221: Test structure error: Current value type must be a string.
 
   Test Case: testNegative16
 
-       ../src/common/asserts.lua:269: bad argument #1 to 'match' (string expected, got table)
+       ../test/TestAssertionIsLike.lua:1230: Test structure error: Current value type must be a string.
 
   Test Case: testNegative17
 
-       ../src/common/asserts.lua:269: bad argument #1 to 'match' (string expected, got table)
+       ../test/TestAssertionIsLike.lua:1246: Test structure error: Current value type must be a string.
 
   Test Case: testNegative18
 
-       ../src/common/asserts.lua:269: bad argument #1 to 'match' (string expected, got function)
+       ../test/TestAssertionIsLike.lua:1255: Test structure error: Current value type must be a string.
 
   Test Case: testNegative19
 
-       ../src/common/asserts.lua:269: bad argument #1 to 'match' (string expected, got function)
+       ../test/TestAssertionIsLike.lua:1269: Test structure error: Current value type must be a string.
 
   Test Case: testNegative20
 
-       ../src/common/asserts.lua:269: bad argument #1 to 'match' (string expected, got function)
+       ../test/TestAssertionIsLike.lua:1287: Test structure error: Current value type must be a string.
 
   Test Case: testNegative21
 
-       ../src/common/asserts.lua:269: bad argument #1 to 'match' (string expected, got thread)
+       ../test/TestAssertionIsLike.lua:1301: Test structure error: Current value type must be a string.
 
   Test Case: testPositive001
 
@@ -536,8 +536,8 @@
 
     Executed Test Cases: 131
     Passed Test Cases:   110
-    Failed Test Cases:   6
-    Encountered Errors:  15
+    Failed Test Cases:   4
+    Encountered Errors:  17
     Overall Result:      FAIL
 
 ---------------------------------------------------------------------------
