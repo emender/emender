@@ -1,13 +1,15 @@
-Usage: emend [-clsv] [FILE...]
-       emend [-c] -h|-V|-L
+Usage: emend [-clsvDT] [-o FILE] [FILE...]
+       emend -h|-V|-L
 
--o, --output file   stores a detailed report to the file named "file" (.xml, .html and .txt files are supported)
+-o, --output FILE   store a detailed report to a file; supported file
+                    extensions are: .txt, .html, .xml, and .junit
+-c, --color         enable colored output
 -l, --list          list available tests and exit
 -s, --summary       suppress detailed test results and print only summaries
--c, --color         enable colored output
 -v, --verbose       enable verbose mode
+-D, --debug         enable debugging information
+-T, --trace         enable tracing information
 -h, --help          display this help and exit
 -V, --version       display version information and exit
 -L, --license       display the license and exit
--T, --trace         turn on tracing
 
