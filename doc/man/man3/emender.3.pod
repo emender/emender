@@ -401,6 +401,30 @@ the very first line (the same as I<indent> by default). For example:
 This method is especially useful if you intend to implement support for
 another output format or add debugging information to your tests.
 
+=item B<string>.B<endsWith>(I<string>, I<suffix>)
+
+The C<string.endsWith()> method determines whether a certain string
+contains a particular suffix. If it does, the method returns B<true>,
+otherwise it returns B<false>.
+
+Replace I<string> with a string and I<suffix> with a suffix. For example,
+to determine whether a variable named C<filename> contains a file name that
+has the C<.lua> file extension, type:
+
+  string.endsWith(filename, ".lua")
+
+=item B<string>.B<startsWith>(I<string>, I<prefix>)
+
+The C<string.startsWith()> method determines whether a certain string
+contains a particular prefix. If it does, the method returns B<true>,
+otherwise it returns B<false>.
+
+Replace I<string> with a string and I<suffix> with a suffix. For example,
+to determine whether a variable named C<path> contains an absolute path to
+a file or directory, type:
+
+  string.startsWith(path, "/")
+
 =back
 
 =head1 SEE ALSO
