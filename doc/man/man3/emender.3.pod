@@ -413,6 +413,18 @@ has the C<.lua> file extension, type:
 
   string.endsWith(filename, ".lua")
 
+=item B<string>.B<escapeHTML>(I<string>)
+
+The C<string.escapeHTML()> method replaces reserved HTML characters with
+their corresponding HTML entities.
+
+Replace I<string> with a string you want to convert. For example:
+
+  local error_message = string.escapeHTML(explanation)
+
+This method is especially useful if you intend to implement support for
+another output format.
+
 =item B<string>.B<startsWith>(I<string>, I<prefix>)
 
 The C<string.startsWith()> method determines whether a certain string
