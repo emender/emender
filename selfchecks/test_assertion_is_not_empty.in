@@ -6,7 +6,7 @@
                  function.
   Authors:       Jaromir Hradilek, Pavel Tisnovsky
   Emails:        jhradilek@redhat.com, ptisnovs@redhat.com
-  Last Modified: 2014-11-18
+  Last Modified: 2015-01-05
   Tags:          BasicTest, SmokeTest
 
   Test Case: testNegative01
@@ -57,6 +57,50 @@
 
        ../test/TestAssertionIsNotEmpty.lua:241: Test structure error: Table must be a table.
 
+  Test Case: testNegative13
+
+       ../test/TestAssertionIsNotEmpty.lua:250: Test structure error: Explanation is a required argument.
+
+  Test Case: testNegative14
+
+       ../test/TestAssertionIsNotEmpty.lua:259: Test structure error: Explanation must be a string.
+
+  Test Case: testNegative15
+
+       ../test/TestAssertionIsNotEmpty.lua:268: Test structure error: Explanation must be a string.
+
+  Test Case: testNegative16
+
+       ../test/TestAssertionIsNotEmpty.lua:277: Test structure error: Explanation must be a string.
+
+  Test Case: testNegative17
+
+       ../test/TestAssertionIsNotEmpty.lua:286: Test structure error: Explanation must be a string.
+
+  Test Case: testNegative18
+
+       ../test/TestAssertionIsNotEmpty.lua:295: Test structure error: Explanation must be a string.
+
+  Test Case: testNegative19
+
+       ../test/TestAssertionIsNotEmpty.lua:304: Test structure error: Explanation must be a string.
+
+  Test Case: testNegative20
+
+       ../test/TestAssertionIsNotEmpty.lua:313: Test structure error: Explanation must be a string.
+
+  Test Case: testNegative21
+
+       ../test/TestAssertionIsNotEmpty.lua:327: Test structure error: Explanation must be a string.
+
+  Test Case: testNegative22
+
+       ../test/TestAssertionIsNotEmpty.lua:345: Test structure error: Explanation must be a string.
+
+  Test Case: testNegative23
+
+       ../test/TestAssertionIsNotEmpty.lua:359: Test structure error: Explanation must be a string.
+
   Test Case: testPositive01
 
     [ PASS ]  table is not empty
@@ -95,10 +139,10 @@
 
   Test Summary                                                            
 
-    Executed Test Cases: 21
+    Executed Test Cases: 32
     Passed Test Cases:   9
     Failed Test Cases:   1
-    Encountered Errors:  11
+    Encountered Errors:  22
     Overall Result:      FAIL
 
 ---------------------------------------------------------------------------
