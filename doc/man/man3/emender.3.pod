@@ -348,7 +348,7 @@ Replace I<message> with a short message. For example:
 
 =head2 Helper Methods
 
-Emender implements a number of helper method to make it easier for you to
+Emender implements a number of helper methods to make it easier for you to
 write test functions. Available helper methods are as follows:
 
 =over
