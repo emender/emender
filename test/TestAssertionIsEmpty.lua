@@ -1,5 +1,5 @@
 -- TestAssertionIsEmpty.lua - test the behavior of the asserts.is_empty() function
--- Copyright (C) 2014 Jaromir Hradilek, Pavel Tisnovsky
+-- Copyright (C) 2014, 2015 Jaromir Hradilek, Pavel Tisnovsky
 --
 -- This file is part of Emender.
 --
@@ -22,7 +22,7 @@ TestAssertionIsEmpty = {
         description = "Test the behavior of the asserts.is_empty() function.",
         authors = "Jaromir Hradilek, Pavel Tisnovsky",
         emails = "jhradilek@redhat.com, ptisnovs@redhat.com",
-        changed = "2014-11-18",
+        changed = "2014-01-05",
         tags = {"BasicTest", "SmokeTest"}
     }
 }
@@ -259,5 +259,123 @@ end
 --
 function TestAssertionIsEmpty.testNegative18()
     is_empty({{}, {}}, "(expected) deeply nested table is not empty")
+end
+
+
+
+--
+-- Verify if is_empty() API is checked properly.
+--
+function TestAssertionIsEmpty.testNegative19()
+    is_empty({}, nil)
+end
+
+
+
+--
+-- Verify if is_empty() API is checked properly.
+--
+function TestAssertionIsEmpty.testNegative20()
+    is_empty({}, true)
+end
+
+
+
+--
+-- Verify if is_empty() API is checked properly.
+--
+function TestAssertionIsEmpty.testNegative21()
+    is_empty({}, false)
+end
+
+
+
+--
+-- Verify if is_empty() API is checked properly.
+--
+function TestAssertionIsEmpty.testNegative22()
+    is_empty({}, 42)
+end
+
+
+
+--
+-- Verify if is_empty() API is checked properly.
+--
+function TestAssertionIsEmpty.testNegative23()
+    is_empty({}, 1.5)
+end
+
+
+
+--
+-- Verify if is_empty() API is checked properly.
+--
+function TestAssertionIsEmpty.testNegative24()
+    is_empty({}, {})
+end
+
+
+
+--
+-- Verify if is_empty() API is checked properly.
+--
+function TestAssertionIsEmpty.testNegative25()
+    is_empty({}, {1,2,3})
+end
+
+
+
+--
+-- Verify if is_empty() API is checked properly.
+--
+function TestAssertionIsEmpty.testNegative26()
+    is_empty({}, print)
+end
+
+
+
+--
+-- Verify if is_empty() API is checked properly.
+--
+function TestAssertionIsEmpty.testNegative27()
+    -- create local function
+    local func = function()
+        return 42
+    end
+    -- and call the is_empty() function with the function as its argument
+    is_empty({}, func)
+end
+
+
+
+--
+-- Verify if is_empty() API is checked properly.
+--
+function TestAssertionIsEmpty.testNegative28()
+    -- create local closure
+    local closure = function()
+        local i
+        return function()
+            i = i + 1
+            return i
+        end
+    end
+    -- and call the is_empty() function with the closure as its argument
+    is_empty({}, closure)
+end
+
+
+
+--
+-- Verify if is_empty() API is checked properly.
+--
+function TestAssertionIsEmpty.testNegative29()
+    -- create local coroutine
+    local func = coroutine.create(function ()
+           print(42)
+         end)
+    -- and call the is_empty() function with the coroutine as its argument
+    is_empty({}, func)
 end
 
