@@ -1,5 +1,10 @@
 2015-01-07  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* selfchecks/test_assertion_is_empty.in:
+	Updated one selfcheck output.
+
+2015-01-07  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* test/TestAssertionIsEmpty.lua:
 	Add API check tests for is_empty() into TestAssertionIsEmpty.
 
