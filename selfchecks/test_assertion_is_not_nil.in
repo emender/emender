@@ -20,9 +20,49 @@
 
     [ FAIL ]  (expected) nil is nil
 
+  Test Case: testNegative04
+
+       ../test/TestAssertionIsNotNil.lua:213: Test structure error: Explanation is a required argument.
+
+  Test Case: testNegative05
+
+       ../test/TestAssertionIsNotNil.lua:222: Test structure error: Explanation must be a string.
+
+  Test Case: testNegative06
+
+       ../test/TestAssertionIsNotNil.lua:231: Test structure error: Explanation must be a string.
+
+  Test Case: testNegative07
+
+       ../test/TestAssertionIsNotNil.lua:240: Test structure error: Explanation must be a string.
+
   Test Case: testNegative08
 
-    [ PASS ]  (expected) hash table is not nil
+       ../test/TestAssertionIsNotNil.lua:249: Test structure error: Explanation must be a string.
+
+  Test Case: testNegative09
+
+       ../test/TestAssertionIsNotNil.lua:258: Test structure error: Explanation must be a string.
+
+  Test Case: testNegative10
+
+       ../test/TestAssertionIsNotNil.lua:267: Test structure error: Explanation must be a string.
+
+  Test Case: testNegative11
+
+       ../test/TestAssertionIsNotNil.lua:276: Test structure error: Explanation must be a string.
+
+  Test Case: testNegative12
+
+       ../test/TestAssertionIsNotNil.lua:290: Test structure error: Explanation must be a string.
+
+  Test Case: testNegative13
+
+       ../test/TestAssertionIsNotNil.lua:308: Test structure error: Explanation must be a string.
+
+  Test Case: testNegative14
+
+       ../test/TestAssertionIsNotNil.lua:322: Test structure error: Explanation must be a string.
 
   Test Case: testPositive01
 
@@ -78,10 +118,10 @@
 
   Test Summary                                                            
 
-    Executed Test Cases: 17
-    Passed Test Cases:   14
+    Executed Test Cases: 27
+    Passed Test Cases:   13
     Failed Test Cases:   1
-    Encountered Errors:  2
+    Encountered Errors:  13
     Overall Result:      FAIL
 
 ---------------------------------------------------------------------------
