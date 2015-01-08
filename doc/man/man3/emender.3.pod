@@ -348,7 +348,7 @@ Replace I<message> with a short message. For example:
 
 =head2 Helper Methods
 
-Emender implements a number of helper method to make it easier for you to
+Emender implements a number of helper methods to make it easier for you to
 write test functions. Available helper methods are as follows:
 
 =over
@@ -400,6 +400,42 @@ the very first line (the same as I<indent> by default). For example:
 
 This method is especially useful if you intend to implement support for
 another output format or add debugging information to your tests.
+
+=item B<string>.B<endsWith>(I<string>, I<suffix>)
+
+The C<string.endsWith()> method determines whether a certain string
+contains a particular suffix. If it does, the method returns B<true>,
+otherwise it returns B<false>.
+
+Replace I<string> with a string and I<suffix> with a suffix. For example,
+to determine whether a variable named C<filename> contains a file name that
+has the C<.lua> file extension, type:
+
+  string.endsWith(filename, ".lua")
+
+=item B<string>.B<escapeHTML>(I<string>)
+
+The C<string.escapeHTML()> method replaces reserved HTML characters with
+their corresponding HTML entities.
+
+Replace I<string> with a string you want to convert. For example:
+
+  local error_message = string.escapeHTML(explanation)
+
+This method is especially useful if you intend to implement support for
+another output format.
+
+=item B<string>.B<startsWith>(I<string>, I<prefix>)
+
+The C<string.startsWith()> method determines whether a certain string
+contains a particular prefix. If it does, the method returns B<true>,
+otherwise it returns B<false>.
+
+Replace I<string> with a string and I<suffix> with a suffix. For example,
+to determine whether a variable named C<path> contains an absolute path to
+a file or directory, type:
+
+  string.startsWith(path, "/")
 
 =back
 
