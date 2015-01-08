@@ -214,3 +214,121 @@ function TestAssertionIsNil.testNegative16()
     is_nil({{nil}}, "(expected) deeply nested table is not nil")
 end
 
+
+
+--
+-- Verify if is_nil() API is checked properly.
+--
+function TestAssertionIsNil.testNegative17()
+    is_nil({}, nil)
+end
+
+
+
+--
+-- Verify if is_nil() API is checked properly.
+--
+function TestAssertionIsNil.testNegative18()
+    is_nil({}, true)
+end
+
+
+
+--
+-- Verify if is_nil() API is checked properly.
+--
+function TestAssertionIsNil.testNegative19()
+    is_nil({}, false)
+end
+
+
+
+--
+-- Verify if is_nil() API is checked properly.
+--
+function TestAssertionIsNil.testNegative20()
+    is_nil({}, 42)
+end
+
+
+
+--
+-- Verify if is_nil() API is checked properly.
+--
+function TestAssertionIsNil.testNegative21()
+    is_nil({}, 1.5)
+end
+
+
+
+--
+-- Verify if is_nil() API is checked properly.
+--
+function TestAssertionIsNil.testNegative22()
+    is_nil({}, {})
+end
+
+
+
+--
+-- Verify if is_nil() API is checked properly.
+--
+function TestAssertionIsNil.testNegative23()
+    is_nil({}, {1,2,3})
+end
+
+
+
+--
+-- Verify if is_nil() API is checked properly.
+--
+function TestAssertionIsNil.testNegative24()
+    is_nil({}, print)
+end
+
+
+
+--
+-- Verify if is_nil() API is checked properly.
+--
+function TestAssertionIsNil.testNegative25()
+    -- create local function
+    local func = function()
+        return 42
+    end
+    -- and call the is_nil() function with the function as its argument
+    is_nil({}, func)
+end
+
+
+
+--
+-- Verify if is_nil() API is checked properly.
+--
+function TestAssertionIsNil.testNegative26()
+    -- create local closure
+    local closure = function()
+        local i
+        return function()
+            i = i + 1
+            return i
+        end
+    end
+    -- and call the is_nil() function with the closure as its argument
+    is_nil({}, closure)
+end
+
+
+
+--
+-- Verify if is_nil() API is checked properly.
+--
+function TestAssertionIsNil.testNegative27()
+    -- create local coroutine
+    local func = coroutine.create(function ()
+           print(42)
+         end)
+    -- and call the is_nil() function with the coroutine as its argument
+    is_nil({}, func)
+end
+
