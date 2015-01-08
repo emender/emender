@@ -1,5 +1,10 @@
 2015-01-08  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* selfchecks/test_assertion_is_nil.in:
+	Updated one selfcheck output.
+
+2015-01-08  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* test/TestAssertionIsNil.lua:
 	Add API check tests for is_nil() into TestAssertionIsNil.
 
