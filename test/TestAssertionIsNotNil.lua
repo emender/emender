@@ -204,3 +204,121 @@ function TestAssertionIsNotNil.testNegative03()
     is_not_nil(nil, "(expected) nil is nil")
 end
 
+
+
+--
+-- Verify if is_not_nil() API is checked properly.
+--
+function TestAssertionIsNotNil.testNegative04()
+    is_not_nil({}, nil)
+end
+
+
+
+--
+-- Verify if is_not_nil() API is checked properly.
+--
+function TestAssertionIsNotNil.testNegative05()
+    is_not_nil({}, true)
+end
+
+
+
+--
+-- Verify if is_not_nil() API is checked properly.
+--
+function TestAssertionIsNotNil.testNegative06()
+    is_not_nil({}, false)
+end
+
+
+
+--
+-- Verify if is_not_nil() API is checked properly.
+--
+function TestAssertionIsNotNil.testNegative07()
+    is_not_nil({}, 42)
+end
+
+
+
+--
+-- Verify if is_not_nil() API is checked properly.
+--
+function TestAssertionIsNotNil.testNegative08()
+    is_not_nil({}, 1.5)
+end
+
+
+
+--
+-- Verify if is_not_nil() API is checked properly.
+--
+function TestAssertionIsNotNil.testNegative09()
+    is_not_nil({}, {})
+end
+
+
+
+--
+-- Verify if is_not_nil() API is checked properly.
+--
+function TestAssertionIsNotNil.testNegative10()
+    is_not_nil({}, {1,2,3})
+end
+
+
+
+--
+-- Verify if is_not_nil() API is checked properly.
+--
+function TestAssertionIsNotNil.testNegative11()
+    is_not_nil({}, print)
+end
+
+
+
+--
+-- Verify if is_not_nil() API is checked properly.
+--
+function TestAssertionIsNotNil.testNegative12()
+    -- create local function
+    local func = function()
+        return 42
+    end
+    -- and call the is_not_nil() function with the function as its argument
+    is_not_nil({}, func)
+end
+
+
+
+--
+-- Verify if is_not_nil() API is checked properly.
+--
+function TestAssertionIsNotNil.testNegative13()
+    -- create local closure
+    local closure = function()
+        local i
+        return function()
+            i = i + 1
+            return i
+        end
+    end
+    -- and call the is_not_nil() function with the closure as its argument
+    is_not_nil({}, closure)
+end
+
+
+
+--
+-- Verify if is_not_nil() API is checked properly.
+--
+function TestAssertionIsNotNil.testNegative14()
+    -- create local coroutine
+    local func = coroutine.create(function ()
+           print(42)
+         end)
+    -- and call the is_not_nil() function with the coroutine as its argument
+    is_not_nil({}, func)
+end
+
