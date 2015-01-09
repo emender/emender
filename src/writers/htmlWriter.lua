@@ -306,7 +306,7 @@ function htmlWriter.writeSuiteEnd(fout, testSuite)
                     <td>]] .. passed .. [[</td>
                     <td>
                       <div class="progress" title="Success: ]] .. passPerc .. [[%; Failure: ]] .. failPerc .. [[%; Error: ]] .. errorPerc .. [[%">
-                        <div class="progress-bar progress-bar-success progress-bar-striped" style="width: ]] .. passPerc .. [[%">]] .. passPerc .. [[%</div>
+                        <div class="progress-bar progress-bar-success" style="width: ]] .. passPerc .. [[%">]] .. passPerc .. [[%</div>
                       </div>
                     </td>
                   </tr>
@@ -315,7 +315,7 @@ function htmlWriter.writeSuiteEnd(fout, testSuite)
                     <td>]] .. failed .. [[</td>
                     <td>
                       <div class="progress" title="Success: ]] .. passPerc .. [[%; Failure: ]] .. failPerc .. [[%; Error: ]] .. errorPerc .. [[%">
-                        <div class="progress-bar progress-bar-danger progress-bar-striped" style="width: ]] .. failPerc .. [[%">]] .. failPerc .. [[%</div>
+                        <div class="progress-bar progress-bar-danger" style="width: ]] .. failPerc .. [[%">]] .. failPerc .. [[%</div>
                       </div>
                     </td>
                   </tr>
@@ -324,7 +324,7 @@ function htmlWriter.writeSuiteEnd(fout, testSuite)
                     <td>]] .. errors .. [[</td>
                     <td>
                       <div class="progress" title="Success: ]] .. passPerc .. [[%; Failure: ]] .. failPerc .. [[%; Error: ]] .. errorPerc .. [[%">
-                        <div class="progress-bar progress-bar-warning progress-bar-striped" style="width: ]] .. errorPerc .. [[%">]] .. errorPerc .. [[%</div>
+                        <div class="progress-bar progress-bar-warning" style="width: ]] .. errorPerc .. [[%">]] .. errorPerc .. [[%</div>
                       </div>
                     </td>
                   </tr>
@@ -430,13 +430,13 @@ function htmlWriter.writeCaseStart(fout, testCase)
               <div class="col-xs-12 col-sm-6 col-lg-4 tab-body-cell">
                 <h5><span class="bullet ]] .. icon .. [[" title="]] .. testStatus .. [[">&bull;</span> ]] .. testCase.name .. [[</h5>
                 <div class="progress" title="Success: ]] ..passPerc .. [[%; Info: ]]..infoPerc..[[%; Failure: ]]..failPerc ..[[%">
-                  <div class="progress-bar progress-bar-success progress-bar-striped" style="width: ]] .. passPerc .. [[%">
+                  <div class="progress-bar progress-bar-success" style="width: ]] .. passPerc .. [[%">
                    ]] .. passPerc .. [[%
                   </div>
-                  <div class="progress-bar progress-bar-warning progress-bar-striped" style="width: ]] .. infoPerc .. [[%">
+                  <div class="progress-bar progress-bar-warning" style="width: ]] .. infoPerc .. [[%">
                    ]] .. infoPerc .. [[%
                   </div>
-                  <div class="progress-bar progress-bar-danger progress-bar-striped" style="width: ]] .. failPerc .. [[%">
+                  <div class="progress-bar progress-bar-danger" style="width: ]] .. failPerc .. [[%">
                    ]] .. failPerc .. [[%
                   </div>
                 </div>
