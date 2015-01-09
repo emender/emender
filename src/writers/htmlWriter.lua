@@ -398,10 +398,12 @@ function computeCasePercentages(testCase)
     local failPerc = math.floor(100.0 * (fail+errors) / total)
 
     if passPerc + infoPerc + failPerc > 100 then
-        passPerc = passPerc - 1
+        local diff = passPerc + infoPerc + failPerc - 100
+        passPerc = passPerc - diff
     end
     if passPerc + infoPerc + failPerc < 100 then
-        passPerc = passPerc + 1
+        local diff = 100 - passPerc - infoPerc - failPerc
+        passPerc = passPerc + diff
     end
 
     if passPerc == 100 and fail > 0 then
