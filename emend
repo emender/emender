@@ -36,6 +36,7 @@ local xmlWriter = nil
 local textWriter = nil
 local junitWriter = nil
 local summaryWriter = nil
+local debugMode = nil
 
 
 
@@ -195,6 +196,8 @@ function main(arg)
     local outputFiles = getopt.recognizeOutputFormats(outputFileNames)
     local testOptions = getopt.getTestOptions(options)
 
+    local debugMode = getopt.isDebugFlagUsed(options)
+
     if tracingOn then
         tracer.enable()
     end
@@ -214,7 +217,12 @@ function main(arg)
     elseif getopt.isTestListOptionUsed(options) then
         core.performTestList(verboseOperations, colorOutput)
     else
-        core.runTests(verboseOperations, colorOutput, testsToRun, outputFiles, testOptions)
+        local returnValue = core.runTests(verboseOperations, colorOutput, testsToRun, outputFiles, testOptions)
+        if returnValue then
+            os.exit(0)
+        else
+            os.exit(1)
+        end
     end
 end
 
