@@ -1,5 +1,5 @@
 -- Global Emender configuration.
--- Copyright (C) 2014 Pavel Tisnovsky
+-- Copyright (C) 2014, 2015 Pavel Tisnovsky
 --
 -- This file is part of Emender.
 --
@@ -18,7 +18,8 @@
 
 
 
--- If set to true, graph with overall results will be generated
--- in HTML output. This graph would require flotr library.
+-- When this options is set to true, graph with overall results will be
+-- generated in HTML output. This graph would require flotr library to
+-- be available in the directory with HTML results.
 generateGraphsInHtmlOutput = false
 
