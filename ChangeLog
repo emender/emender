@@ -1,5 +1,10 @@
 2015-01-09  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* src/version.lua:
+	Updated documentation.
+
+2015-01-09  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* src/config.lua:
 	Updated documentation.
 

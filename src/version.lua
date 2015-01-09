@@ -1,3 +1,5 @@
+-- Module with implementation of the function to show version number.
+-- Copyright (C) 2014, 2015 Pavel Tisnovsky
 --
 -- This file is part of Emender.
 --
@@ -14,6 +16,11 @@
 -- along with Emender.  If not, see <http://www.gnu.org/licenses/>.
 --
 
+
+
+--
+-- Function to show Emender version
+--
 local version = {
 }
 
@@ -21,5 +28,8 @@ function version.showVersion()
     print("Emender version 0.0.1")
 end
 
+
+
+-- export module
 return version
 
