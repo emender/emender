@@ -111,9 +111,9 @@ function writeLeftTab(fout, results, passedTests, failedTests)
         end
         fout:write("            <a data-toggle=\"tab\" href=\"#test" .. i .. "\">\n")
         if failed then
-            fout:write("            <h4><span class=\"nowrap\"><span class=\"bullet fail\" title=\"test failed\">&bull;</span> " .. testSuite.name .. "</span></span></h4>\n")
+            fout:write("            <h4><span class=\"nowrap\"><span class=\"bullet fail\" title=\"Test failed\">&bull;</span> " .. testSuite.name .. "</span></span></h4>\n")
         else
-            fout:write("            <h4><span class=\"nowrap\"><span class=\"bullet pass\" title=\"test passed\">&bull;</span> " .. testSuite.name .. "</span></span></h4>\n")
+            fout:write("            <h4><span class=\"nowrap\"><span class=\"bullet pass\" title=\"Test passed\">&bull;</span> " .. testSuite.name .. "</span></span></h4>\n")
         end
         fout:write("            <p>" .. testSuite.description .. "</p>\n")
         fout:write("            </a>\n")
@@ -366,16 +366,16 @@ function getIconAndStatus(testCase)
     local total  = pass + fail + info + errors
 
     local icon = "pass"
-    local testStatus = "method passed"
+    local testStatus = "Test case passed"
 
     if fail > 0 or errors > 0 then
-        testStatus = "method failed"
+        testStatus = "Test case failed"
         icon = "fail"
     end
 
     if total == 0 then
         icon = "norun"
-        testStatus = "method norun"
+        testStatus = "Test results are empty"
     end
 
     return icon, testStatus
