@@ -1,5 +1,5 @@
 -- Module with implementation of Emender core functionality.
--- Copyright (C) 2014 Pavel Tisnovsky
+-- Copyright (C) 2014, 2015 Pavel Tisnovsky
 --
 -- This file is part of Emender.
 --
@@ -16,11 +16,16 @@
 -- along with Emender.  If not, see <http://www.gnu.org/licenses/>.
 --
 
+
+
+--
+-- Module name
+--
 local core = {
-    asserts = nil,
-    writer = nil,
+    asserts  = nil,
+    writer   = nil,
     messages = {},
-    results = {}
+    results  = {}
 }
 
 
@@ -31,21 +36,26 @@ local core = {
 function core.updateTestSuiteName(filename)
     -- TODO: what to do with files w/o .lua extensions? simply ignore them?
     if filename:endsWith(".lua") then
-        -- try to find the last / in the path + filename
+        -- try to find the last / character in the path + filename
         -- (might be empty)
         local lastSlash = filename:find("/[^/]*$")
+        -- try to find the extension
+        -- (that must exis according to previous condition)
         local extensionIndex = filename:find(".lua", 1, true)
+
         -- get only text name (w/o path and w/o extension)
         if extensionIndex then
             -- get rid of the path
             if lastSlash then
                 return filename:substring(lastSlash+1, extensionIndex - 1)
+            -- no path, just file name was entered
             else
                 return filename:substring(1, extensionIndex - 1)
             end
         else -- extension not found (should not happen in real world)
             return nil
         end
+    -- fallback for filenames that does not end with ".lua" postfix
     else
         return nil
     end
@@ -84,18 +94,26 @@ end
 -- (used to get setUp() and tearDown() functions).
 --
 -- If function with given name does not exist, nil is returned instead.
--- If test with given name does not exists, nil is returned.
+-- If test with given name does not exists, nil is returned instead.
 --
 function core.getTestFunction(testName, functionName)
+    -- get all symbol names of given module from the global table
     local test = _G[testName]
+
+    -- if module exists
     if test then
-        local setupFunction = test[functionName]
-        if setupFunction and type(setupFunction) == "function" then
-            return setupFunction
+        -- try to select function with given name
+        local selectedFunction = test[functionName]
+
+        -- if function is found, return reference to it
+        if selectedFunction and type(selectedFunction) == "function" then
+            return selectedFunction
         else
+            -- function can't be found
             return nil
         end
     else
+        -- module does not exists at all
         return nil
     end
 end
@@ -657,5 +675,8 @@ function core.runTests(verboseOperation, colorOutput, testsToRun, outputFiles, t
     return returnValue
 end
 
+
+
+-- export module
 return core
 
