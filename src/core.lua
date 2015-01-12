@@ -666,7 +666,7 @@ function core.runTests(verboseOperation, colorOutput, testsToRun, outputFiles, t
     end
 
     if core.results.passedTests > 0 or core.results.failedTests > 0 then
-        writeSummary(io.stdout, core.results, false)
+        writeSummary(io.stdout, core.results, colorOutput)
     else
         returnValue = false
     end
