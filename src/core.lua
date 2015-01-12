@@ -422,7 +422,7 @@ function core.runTest(scriptDirectory, filename, verboseOperation, testOptions, 
                     core.messages = {}
                     method.result = nil
 
-                    writeCaseStart(io.stdout, method, false)
+                    writeCaseStart(io.stdout, method, colorOutput)
 
                     currentTestFailure = false
                     local testFunction = _G[testSuiteName][testFunctionName]

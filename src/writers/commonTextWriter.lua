@@ -159,6 +159,13 @@ end
 function writeCaseStart(fout, testCase, colorOutput)
     local name = testCase.name
 
+    if colorOutput then
+        local colorReset = _G["logger"].codes.reset
+        local colorBold = _G["logger"].codes.bold
+
+        name = colorBold .. name .. colorReset
+    end
+
     fout:write("\n  Test Case: " .. name .. "\n\n")
 end
 
