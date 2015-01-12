@@ -15,17 +15,18 @@ manually.
 > **emender** noun [C] — one who emends
 
 **Emender** is a test automation framework tailored specifically for product
-documentation written in XML. It not only makes it easy for individual authors
-to develop custom tests for their documentation, but is also distributed with a
+documentation. It not only makes it easy for individual authors to develop
+custom tests for their documentation, but is also distributed with a
 standard set of universally applicable tests.
 
 
 Features
 --------
 
-* Designed specifically for product documentation written in XML.
-* Built-in support for documents written in DocBook and Mallard.
-* Written in Lua 5.2.
+* Designed specifically for product documentation.
+* Capable of producing HTML, XML, and plain text reports.
+* Written in Lua 5.1, but fully compatible with Lua 5.2 for maximum
+  portability.
 
 
 Example Usage
@@ -40,9 +41,10 @@ To run only a selected test, specify it on the command line as follows:
 
     $ emend test/check_packages.lua
 
-To print a list of available tests to standard output, type:
+To generate an HTML report for all tests located in the **./test/**
+directory, type:
 
-    $ emend --list
+    $ emend -o report.html
 
 
 License
