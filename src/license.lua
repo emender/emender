@@ -1,3 +1,5 @@
+-- Module with implementation of the function to show licence.
+-- Copyright (C) 2014, 2015 Pavel Tisnovsky
 --
 -- This file is part of Emender.
 --
@@ -14,9 +16,19 @@
 -- along with Emender.  If not, see <http://www.gnu.org/licenses/>.
 --
 
+
+
+--
+-- Module name
+--
 local license = {
 }
 
+
+
+--
+-- Function to show Emender licence
+--
 function license.showLicense()
     print([[
 Emender is free software: you can redistribute it and/or modify
@@ -33,5 +45,8 @@ along with Emender.  If not, see <http://www.gnu.org/licenses/>.
     ]])
 end
 
+
+
+-- export module
 return license
 

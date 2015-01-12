@@ -1,3 +1,8 @@
+2015-01-12  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* src/license.lua:
+	Updated documentation in the module license.lua.
+
 2015-01-09  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* src/writers/htmlWriter.lua:
@@ -6,12 +11,12 @@
 2015-01-09  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* src/version.lua:
-	Updated documentation.
+	Updated documentation in the module version.lua.
 
 2015-01-09  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* src/config.lua:
-	Updated documentation.
+	Updated documentation in the module config.lua.
 
 2015-01-09  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
