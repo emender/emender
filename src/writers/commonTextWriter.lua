@@ -146,14 +146,25 @@ function writeTestSuiteEnd(fout, testSuite, colorOutput)
     local failed = testSuite.failCount
     local errors = testSuite.errorCount
     local total  = testSuite.total
-    local result = determineTestResult(passed, failed, 0, errors)
+    local result = determineTestResult(passed, failed, 0, errors):upper()
+
+    if colorOutput then
+        local colorReset = _G["logger"].codes.reset
+        local colorBold = _G["logger"].codes.bold
+
+        passed = colorBold .. passed .. colorReset
+        failed = colorBold .. failed .. colorReset
+        errors = colorBold .. errors .. colorReset
+        total  = colorBold .. total  .. colorReset
+        result = colorStatus(result)
+    end
 
     fout:write(formatTestCaseTitle("Test Summary"))
     fout:write("    Executed Test Cases: " .. total .. "\n")
     fout:write("    Passed Test Cases:   " .. passed .. "\n")
     fout:write("    Failed Test Cases:   " .. failed .. "\n")
     fout:write("    Encountered Errors:  " .. errors .. "\n")
-    fout:write("    Overall Result:      " .. string.upper(result) .. "\n\n")
+    fout:write("    Overall Result:      " .. result .. "\n\n")
 end
 
 function writeCaseStart(fout, testCase, colorOutput)

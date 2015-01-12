@@ -474,7 +474,7 @@ function core.runTest(scriptDirectory, filename, verboseOperation, testOptions, 
 
             -- print an information about the test suite that just finished
             -- to the standard output
-            writeTestSuiteEnd(io.stdout, testSuite, false)
+            writeTestSuiteEnd(io.stdout, testSuite, colorOutput)
 
             -- store results into the core.results table; this table will
             -- be used by various writers
