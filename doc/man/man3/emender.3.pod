@@ -454,6 +454,23 @@ a file or directory, type:
 
   string.startsWith(path, "/")
 
+=item B<string>.B<subs>(I<string>, I<from>, I<to>)
+
+The C<string.subs()> method is an alias for C<string.sub()>.
+
+=item B<string>.B<substring>(I<string>, I<from>, I<to>)
+
+The C<string.substring()> method is an alias for C<string.sub()>.
+
+=item B<string>.B<trim>(I<string>)
+
+The C<string.trim()> method removes leading and trailing white space from a
+certain string and returns the result.
+
+Replace I<string> with a string. For example:
+
+  string.trim(output)
+
 =back
 
 =head1 SEE ALSO
