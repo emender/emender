@@ -166,7 +166,7 @@ end
 
 --
 -- Aligns two strings along the left and right margin and fills the space
--- between them with space characters:
+-- between them with selected characters:
 --
 function string.horizontalFill(left_str, right_str, width, filler)
     width = width or 75
