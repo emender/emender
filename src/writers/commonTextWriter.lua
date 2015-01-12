@@ -2,8 +2,8 @@ local textWidth = 75
 local horizontalSeparator = string.rep("-", 75) .. "\n"
 
 function colorizeMessage(message)
-    local redStartSequence = _G["logger"].codes.color_red
-    local redStopSequence = _G["logger"].codes.reset
+    local highlightStart = _G["logger"].codes.color_red .. _G["logger"].codes.bold
+    local highlightStop = _G["logger"].codes.reset
     local output = ""
     local insideStars = false
     local i = 1
@@ -16,10 +16,10 @@ function colorizeMessage(message)
             i = i + 1
             if insideStars then
                 insideStars = false
-                output = output .. redStopSequence
+                output = output .. highlightStop
             else
                 insideStars = true
-                output = output .. redStartSequence
+                output = output .. highlightStart
             end
         else
             output = output .. char
@@ -29,7 +29,7 @@ function colorizeMessage(message)
 
     -- user just forget to use "**" in pairs
     if insideStars then
-        output = output .. redStopSequence
+        output = output .. highlightStop
     end
 
     return output
