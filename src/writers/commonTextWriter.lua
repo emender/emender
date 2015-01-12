@@ -1,12 +1,13 @@
 local textWidth = 75
 local horizontalSeparator = string.rep("-", 75) .. "\n"
 
-function colorizeMessage(message)
+function colorMessage(message)
     local highlightStart = _G["logger"].codes.color_red .. _G["logger"].codes.bold
     local highlightStop = _G["logger"].codes.reset
     local output = ""
     local insideStars = false
     local i = 1
+
     while i <= #message do
         local char = message:sub(i,i)
         local twoChars = message:sub(i, i+1)
@@ -35,19 +36,48 @@ function colorizeMessage(message)
     return output
 end
 
+function colorStatus(status)
+    local status = status:upper()
+
+    local colorReset = _G["logger"].codes.reset
+    local colorBold = _G["logger"].codes.bold
+    local colorPass = colorBold .. _G["logger"].codes.color_green
+    local colorFail = colorBold .. _G["logger"].codes.color_red
+    local colorInfo = colorBold .. _G["logger"].codes.color_yellow
+    local colorResult
+
+    if status == "PASS" then
+        colorResult = colorPass
+    elseif status == "FAIL" then
+        colorResult = colorFail
+    else
+        colorResult = colorInfo
+    end
+
+    return colorResult .. status .. colorReset
+end
+
 -- Format the result of a single test function:
 function formatTestResult(result, explanation, colorOutput)
-    local message = explanation or "(unknown)"
-    local status = "[ " .. string.upper(result) .. " ]  "
+    local explanation = explanation or "(unknown)"
+
+    local statusLength = result:len()
+    local message = string.alignLeft(explanation, textWidth - 2, 10 + statusLength)
+    local status
 
     if not colorOutput then
-        return string.alignLeft(status .. message, textWidth - 2,
-                                string.len(status) + 4, 4) .. "\n"
+        status = "[ " .. result:upper() .. " ]"
     else
-        local colorizedMessage = colorizeMessage(message)
-        return string.alignLeft(status .. colorizedMessage, textWidth - 2,
-                                string.len(status) + 4, 4) .. "\n"
+        local colorBracket = _G["logger"].codes.color_cyan
+        local colorReset = _G["logger"].codes.reset
+
+        status = colorBracket .. "[ " .. colorReset ..
+                 colorStatus(result:upper()) ..
+                 colorBracket .. " ]" .. colorReset
+        message = colorMessage(message)
     end
+
+    return "    " .. status .. message:sub(9 + statusLength) .. "\n"
 end
 
 -- Format test metadata:
