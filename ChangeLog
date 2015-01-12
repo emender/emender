@@ -1,5 +1,10 @@
 2015-01-12  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* src/help.lua:
+	Updated documentation in the module help.lua.
+
+2015-01-12  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* src/license.lua:
 	Updated documentation in the module license.lua.
 

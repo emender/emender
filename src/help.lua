@@ -1,3 +1,5 @@
+-- Module with implementation of function to show help (usage).
+-- Copyright (C) 2014, 2015 Pavel Tisnovsky
 --
 -- This file is part of Emender.
 --
@@ -14,9 +16,19 @@
 -- along with Emender.  If not, see <http://www.gnu.org/licenses/>.
 --
 
+
+
+--
+-- Module name
+--
 local help = {
 }
 
+
+
+--
+-- Function to show help
+--
 function help.showHelp()
     print([[
 Usage: emend [-clsvDT] [-o FILE] [FILE...]
@@ -36,5 +48,8 @@ Usage: emend [-clsvDT] [-o FILE] [FILE...]
 ]])
 end
 
+
+
+-- export module 
 return help
 
