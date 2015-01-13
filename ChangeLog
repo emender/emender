@@ -1,5 +1,10 @@
 2015-01-13  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* emend:
+	testInfo module should be properly loaded from the emend script.
+
+2015-01-13  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* src/core.lua:
 	Functions implemented in module testInfo should be properly called
 	from the core.

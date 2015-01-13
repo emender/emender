@@ -2,7 +2,7 @@
 
 -- Entry point to the Emender tool.
 --
--- Copyright (C) 2014 Pavel Tisnovsky
+-- Copyright (C) 2014, 2015 Pavel Tisnovsky
 --
 -- This file is part of Emender.
 --
@@ -24,6 +24,7 @@ local toolsChecker = nil
 local getopt = nil
 local core = nil
 local help = nil
+local testInfo = nil
 local license = nil
 local version = nil
 local asserts = nil
@@ -80,6 +81,8 @@ function loadModules()
     getopt = require("src/common/getopt")
     core = require("src/core")
     help = require("src/help")
+    testInfo = require("src/testInfo")
+    _G["testInfo"] = testInfo
     license = require("src/license")
     version = require("src/version")
     asserts = require("src/common/asserts")
