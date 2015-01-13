@@ -1,5 +1,11 @@
 2015-01-13  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* selfchecks/test_assertion_is_empty.in:
+	* selfchecks/test_assertion_is_false.in:
+	Fixed two selfcheck failures caused by changes made in Emender writers.
+
+2015-01-13  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* emend:
 	testInfo module should be properly loaded from the emend script.
 
