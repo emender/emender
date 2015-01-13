@@ -1,5 +1,11 @@
 2015-01-13  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* src/core.lua:
+	Functions implemented in module testInfo should be properly called
+	from the core.
+
+2015-01-13  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* src/testInfo.lua:
 	Refactored some functionality from the core to the new module testInfo.
 

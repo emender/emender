@@ -64,32 +64,6 @@ end
 
 
 --
--- Ge list of references to all functions defined in given test (module);
--- names of all returned functions start with "test"
--- (functions with different names are considered as common functions
--- and are not directly called by the test harness)
---
--- If test with given name does not exists, nil is returned.
---
-function core.getListOfTestFunctionNames(testName)
-    local testFunctionNames = {}
-    local test = _G[testName]
-    if test then
-        for k,v in pairs(test) do
-            if k and k:startsWith("test") and type(v) == "function" then
-                table.insert(testFunctionNames, k)
-            end
-        end
-        table.sort(testFunctionNames)
-        return testFunctionNames
-    else
-        return nil
-    end
-end
-
-
-
---
 -- Get reference to a function with given name.
 -- (used to get setUp() and tearDown() functions).
 --
@@ -145,73 +119,6 @@ end
 
 
 --
--- Print test metadata.
---
-function core.printTestMetadata(metadata)
-    local description = metadata["description"]
-    print("    Description: " .. description)
-    local authors = metadata["authors"]
-    print("    Authors:     " .. authors)
-    local emails = metadata["emails"]
-    print("    Emails:      " .. emails)
-    local changed = metadata["changed"]
-    print("    Changed:     " .. changed)
-end
-
-function core.printListOfTestFunctionNames(testFunctions)
-    print("    Test functions:")
-    for i, testFunction in ipairs(testFunctions) do
-        print("        " .. testFunction)
-    end
-end
-
-function core.printTestRequiredTool(requiresAttribute)
-    print("    Required external tools:")
-    if not requiresAttribute then
-        print("        none")
-    else
-        for i, requires in ipairs(requiresAttribute) do
-            print("        " .. requires)
-        end
-    end
-end
-
-
-
-function core.printTestTags(tags)
-    print("    Tags bound to the test:")
-    if not tags then
-        print("        none")
-    else
-        for _, tag in ipairs(tags) do
-            print("        " .. tag)
-        end
-    end
-end
-
---
---
---
-function core.printDetailedTestInfo(test, testName)
-    local metadata = test["metadata"]
-    if not metadata then
-        print("Test " .. test .. " does not contain metadata, needs to be fixed!")
-    end
-    core.printTestMetadata(metadata)
-
-    local tags = metadata["tags"]
-    core.printTestTags(tags)
-
-    local requiresAttribute = test["requires"]
-    core.printTestRequiredTool(requiresAttribute)
-
-    local testFunctions = core.getListOfTestFunctionNames(testName)
-    core.printListOfTestFunctionNames(testFunctions)
-end
-
-
-
---
 --
 --
 function core.checkTestNameShadowing(testName)
@@ -236,7 +143,7 @@ function core.printTestInfo(scriptDirectory, filename, verboseOperation)
         if test then
             print("Test: " .. testName)
             if verboseOperation then
-                core.printDetailedTestInfo(test, testName)
+                testInfo.printDetailedTestInfo(test, testName)
             end
         else
             print("Test '" .. testName .. "' can't be loaded or there's name mismatch")
@@ -383,7 +290,7 @@ function core.runTest(scriptDirectory, filename, verboseOperation, testOptions, 
 
         local setupFunction = core.getSetupFunction(testSuiteName)
         local tearDownFunction = core.getTearDownFunction(testSuiteName)
-        local testFunctionNames = core.getListOfTestFunctionNames(testSuiteName)
+        local testFunctionNames = testInfo.getListOfTestFunctionNames(testSuiteName)
         local processRestOfTest = true
 
         if testFunctionNames or setupFunction or tearDownFunction then
@@ -581,44 +488,44 @@ end
 --
 -- Export results into all selected output files.
 --
-function exportResults(outputFiles, colorOutput)
+function exportResults(outputFiles, colorOutput, selectedWriter)
     local results = core.results
     openOutputFiles(outputFiles)
-    core.writer.outputFileStructs = outputFiles
-    core.writer.initialize()
-    --core.writer.setColorOutput(colorOutput)
-    core.writer.writeHeader(results)
+    selectedWriter.outputFileStructs = outputFiles
+    selectedWriter.initialize()
+    --selectedWriter.setColorOutput(colorOutput)
+    selectedWriter.writeHeader(results)
 
     for i,testSuite in ipairs(results.suites) do
         local testName = testSuite.name
         local testCases = testSuite.methods
-        core.writer.writeSuiteStart(testSuite)
+        selectedWriter.writeSuiteStart(testSuite)
 
         for j,testCase in ipairs(testCases) do
-            core.writer.writeCaseStart(testCase)
+            selectedWriter.writeCaseStart(testCase)
             for _,message in ipairs(testCase.messages) do
                 local status = message[1]
                 local messageText = message[2]
                 if status == "PASS" then
-                    core.writer.writeTestPass(testName, message, colorOutput)
+                    selectedWriter.writeTestPass(testName, message, colorOutput)
                 elseif status == "FAIL" then
-                    core.writer.writeTestFail(testName, message, colorOutput)
+                    selectedWriter.writeTestFail(testName, message, colorOutput)
                 elseif status == "INFO" then
-                    core.writer.writeTestInfo(testName, message, colorOutput)
+                    selectedWriter.writeTestInfo(testName, message, colorOutput)
                 elseif status == "ERROR" then
                     if messageText then
-                        core.writer.writeTestError(testName, message, colorOutput)
+                        selectedWriter.writeTestError(testName, message, colorOutput)
                     end
                 end
             end
-            core.writer.writeCaseEnd(testCase)
+            selectedWriter.writeCaseEnd(testCase)
         end
-        core.writer.writeSuiteEnd(testSuite)
+        selectedWriter.writeSuiteEnd(testSuite)
     end
-    core.writer.writeFooter(results)
+    selectedWriter.writeFooter(results)
 
     closeOutputFiles(outputFiles)
-    core.writer.finalize()
+    selectedWriter.finalize()
 end
 
 --
@@ -671,7 +578,7 @@ function core.runTests(verboseOperation, colorOutput, testsToRun, outputFiles, t
         returnValue = false
     end
     --dumpTestResults()
-    exportResults(outputFiles, colorOutput)
+    exportResults(outputFiles, colorOutput, core.writer)
     return returnValue
 end
 
