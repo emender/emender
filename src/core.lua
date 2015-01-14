@@ -258,6 +258,26 @@ end
 
 
 --
+-- Write (any) error message to the standard output.
+--
+function writeMessageToStdOut(message, colorOutput)
+    if colorOutput then
+        -- in case of color output we need to print the right
+        -- terminal escape sequences to the standard output and
+        -- then reset the terminal back to normal color/font style
+        local colorReset = _G["logger"].codes.reset
+        local colorBold = _G["logger"].codes.bold
+        local colorFail = colorBold .. _G["logger"].codes.color_red
+        print("       " .. colorBold .. colorFail .. message .. colorReset)
+    else
+        -- no color output requested? well, it's easy then
+        print("       " .. message)
+    end
+end
+
+
+
+--
 --
 --
 function core.runTest(scriptDirectory, filename, verboseOperation, testOptions, colorOutput)
@@ -342,7 +362,7 @@ function core.runTest(scriptDirectory, filename, verboseOperation, testOptions, 
                         method.result = "OK"
                     else
                         if message then
-                            print("       " .. message)
+                            writeMessageToStdOut(message, colorOutput)
                             table.insert(core.messages, {"ERROR", message})
                             errorCnt = errorCnt + 1
                             method.result = "ERROR"

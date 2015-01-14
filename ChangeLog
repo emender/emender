@@ -1,5 +1,10 @@
 2015-01-14  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* src/core.lua:
+	When any message is returned from the test method call, it should be colorized.
+
+2015-01-14  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* selfchecks/test_assertion_is_nil.in:
 	* selfchecks/test_assertion_is_true.in:
 	Last two selfchecks fixed, back CI error count to zero.
