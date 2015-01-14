@@ -267,10 +267,10 @@ function writeMessageToStdOut(message, colorOutput)
         -- then reset the terminal back to normal color/font style
         local colorReset = _G["logger"].codes.reset
         local colorFail = _G["logger"].codes.color_red
-        print("       " .. colorFail .. message .. colorReset)
+        print("    " .. colorFail .. message .. colorReset)
     else
         -- no color output requested? well, it's easy then
-        print("       " .. message)
+        print("    " .. message)
     end
 end
 
