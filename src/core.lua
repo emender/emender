@@ -266,9 +266,8 @@ function writeMessageToStdOut(message, colorOutput)
         -- terminal escape sequences to the standard output and
         -- then reset the terminal back to normal color/font style
         local colorReset = _G["logger"].codes.reset
-        local colorBold = _G["logger"].codes.bold
-        local colorFail = colorBold .. _G["logger"].codes.color_red
-        print("       " .. colorBold .. colorFail .. message .. colorReset)
+        local colorFail = _G["logger"].codes.color_red
+        print("       " .. colorFail .. message .. colorReset)
     else
         -- no color output requested? well, it's easy then
         print("       " .. message)
