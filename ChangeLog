@@ -1,5 +1,11 @@
 2015-01-14  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* selfchecks/test_assertion_is_nil.in:
+	* selfchecks/test_assertion_is_true.in:
+	Last two selfchecks fixed, back CI error count to zero.
+
+2015-01-14  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* selfchecks/test_assertion_pass.in:
 	* selfchecks/test_assertion_warn.in:
 	Fixed another two selfcheck failures caused by changes made in Emender writers.
