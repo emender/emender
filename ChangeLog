@@ -1,3 +1,8 @@
+2015-01-15  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* src/testExporter.lua:
+	Functions for export results are refactored out of Emender core.
+
 2015-01-14  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* src/core.lua:
