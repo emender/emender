@@ -1,5 +1,10 @@
 2015-01-15  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* emend:
+	Added code for loading testExporter module in runtime.
+
+2015-01-15  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* src/testExporter.lua:
 	Functions for export results are refactored out of Emender core.
 

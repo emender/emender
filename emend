@@ -37,6 +37,7 @@ local xmlWriter = nil
 local textWriter = nil
 local junitWriter = nil
 local summaryWriter = nil
+local textExporter = nil
 local debugMode = nil
 
 
@@ -101,6 +102,7 @@ function loadModules()
     require("src/common/table")
     require("src/writers/commonTextWriter")
     require("src/config")
+    require("src/testExporter")
 end
 
 function checkForUnknownOptions(options)
