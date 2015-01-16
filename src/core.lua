@@ -469,85 +469,6 @@ end
 
 
 --
--- Returns the directory where output file(s) should be generated.
---
-function getDirectoryOfOutputFile(fileName)
-    local process = io.popen("dirname " .. fileName)
-    local out = process:read("*all")
-    -- be sure that the process is not nil (Lua API is not stable at this point!)
-    if process then
-        process:close()
-    end
-    return out
-end
-
-function openOutputFiles(outputFiles)
-    for fileName, outputFile in pairs(outputFiles) do
-        local fout = io.open(fileName, "w")
-        if fout then
-            outputFile[2] = fout
-            -- we need to know the output directory too
-            outputFile[3] = getDirectoryOfOutputFile(fileName)
-        else
-            print("Error: can not open file '" .. fileName .. "' for writing.")
-            os.exit(2)
-        end
-    end
-end
-
-function closeOutputFiles(outputFiles)
-    for _, outputFile in pairs(outputFiles) do
-        local fout = outputFile[2]
-        fout:close()
-    end
-end
-
-
-
---
--- Export results into all selected output files.
---
-function exportResults(outputFiles, colorOutput, selectedWriter)
-    local results = core.results
-    openOutputFiles(outputFiles)
-    selectedWriter.outputFileStructs = outputFiles
-    selectedWriter.initialize()
-    --selectedWriter.setColorOutput(colorOutput)
-    selectedWriter.writeHeader(results)
-
-    for i,testSuite in ipairs(results.suites) do
-        local testName = testSuite.name
-        local testCases = testSuite.methods
-        selectedWriter.writeSuiteStart(testSuite)
-
-        for j,testCase in ipairs(testCases) do
-            selectedWriter.writeCaseStart(testCase)
-            for _,message in ipairs(testCase.messages) do
-                local status = message[1]
-                local messageText = message[2]
-                if status == "PASS" then
-                    selectedWriter.writeTestPass(testName, message, colorOutput)
-                elseif status == "FAIL" then
-                    selectedWriter.writeTestFail(testName, message, colorOutput)
-                elseif status == "INFO" then
-                    selectedWriter.writeTestInfo(testName, message, colorOutput)
-                elseif status == "ERROR" then
-                    if messageText then
-                        selectedWriter.writeTestError(testName, message, colorOutput)
-                    end
-                end
-            end
-            selectedWriter.writeCaseEnd(testCase)
-        end
-        selectedWriter.writeSuiteEnd(testSuite)
-    end
-    selectedWriter.writeFooter(results)
-
-    closeOutputFiles(outputFiles)
-    selectedWriter.finalize()
-end
-
---
 --
 --
 function core.runTests(verboseOperation, colorOutput, testsToRun, outputFiles, testOptions)
@@ -597,7 +518,7 @@ function core.runTests(verboseOperation, colorOutput, testsToRun, outputFiles, t
         returnValue = false
     end
     --dumpTestResults()
-    exportResults(outputFiles, colorOutput, core.writer)
+    exportResults(outputFiles, colorOutput, core.writer, core.results)
     return returnValue
 end
 

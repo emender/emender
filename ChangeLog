@@ -1,5 +1,10 @@
 2015-01-15  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* src/core.lua:
+	Finished refactoring of Emender core.
+
+2015-01-15  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* emend:
 	Added code for loading testExporter module in runtime.
 
