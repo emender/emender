@@ -10,59 +10,59 @@
 
   Test Case: testNegative01
 
-       ../test/TestAssertionPass.lua:54: Test structure error: Explanation is a required argument.
+    ../test/TestAssertionPass.lua:54: Test structure error: Explanation is a required argument.
 
   Test Case: testNegative02
 
-       ../test/TestAssertionPass.lua:63: Test structure error: Explanation is a required argument.
+    ../test/TestAssertionPass.lua:63: Test structure error: Explanation is a required argument.
 
   Test Case: testNegative03
 
-       ../test/TestAssertionPass.lua:72: Test structure error: Explanation must be a string.
+    ../test/TestAssertionPass.lua:72: Test structure error: Explanation must be a string.
 
   Test Case: testNegative04
 
-       ../test/TestAssertionPass.lua:82: Test structure error: Explanation must be a string.
+    ../test/TestAssertionPass.lua:82: Test structure error: Explanation must be a string.
 
   Test Case: testNegative05
 
-       ../test/TestAssertionPass.lua:91: Test structure error: Explanation must be a string.
+    ../test/TestAssertionPass.lua:91: Test structure error: Explanation must be a string.
 
   Test Case: testNegative06
 
-       ../test/TestAssertionPass.lua:100: Test structure error: Explanation must be a string.
+    ../test/TestAssertionPass.lua:100: Test structure error: Explanation must be a string.
 
   Test Case: testNegative07
 
-       ../test/TestAssertionPass.lua:109: Test structure error: Explanation must be a string.
+    ../test/TestAssertionPass.lua:109: Test structure error: Explanation must be a string.
 
   Test Case: testNegative08
 
-       ../test/TestAssertionPass.lua:118: Test structure error: Explanation must be a string.
+    ../test/TestAssertionPass.lua:118: Test structure error: Explanation must be a string.
 
   Test Case: testNegative09
 
-       ../test/TestAssertionPass.lua:127: Test structure error: Explanation must be a string.
+    ../test/TestAssertionPass.lua:127: Test structure error: Explanation must be a string.
 
   Test Case: testNegative10
 
-       ../test/TestAssertionPass.lua:143: Test structure error: Explanation must be a string.
+    ../test/TestAssertionPass.lua:143: Test structure error: Explanation must be a string.
 
   Test Case: testNegative11
 
-       ../test/TestAssertionPass.lua:152: Test structure error: Explanation must be a string.
+    ../test/TestAssertionPass.lua:152: Test structure error: Explanation must be a string.
 
   Test Case: testNegative12
 
-       ../test/TestAssertionPass.lua:166: Test structure error: Explanation must be a string.
+    ../test/TestAssertionPass.lua:166: Test structure error: Explanation must be a string.
 
   Test Case: testNegative13
 
-       ../test/TestAssertionPass.lua:184: Test structure error: Explanation must be a string.
+    ../test/TestAssertionPass.lua:184: Test structure error: Explanation must be a string.
 
   Test Case: testNegative14
 
-       ../test/TestAssertionPass.lua:198: Test structure error: Explanation must be a string.
+    ../test/TestAssertionPass.lua:198: Test structure error: Explanation must be a string.
 
   Test Case: testPositive01
 

@@ -1,3 +1,10 @@
+2015-01-19  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* selfchecks/test_assertion_fail.in:
+	* selfchecks/test_assertion_pass.in:
+	* selfchecks/test_assertion_warn.in:
+	Fixed three selfcheck failures caused by changes in test reporter.
+
 2015-01-15  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* src/core.lua:
