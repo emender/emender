@@ -11,11 +11,11 @@
 
   Test Case: testNegative01
 
-       ../test/TestAssertionIsNotEmpty.lua:123: Test structure error: Table must be a table.
+    ../test/TestAssertionIsNotEmpty.lua:123: Test structure error: Table must be a table.
 
   Test Case: testNegative02
 
-       ../test/TestAssertionIsNotEmpty.lua:132: Test structure error: Table is a required argument.
+    ../test/TestAssertionIsNotEmpty.lua:132: Test structure error: Table is a required argument.
 
   Test Case: testNegative03
 
@@ -23,83 +23,83 @@
 
   Test Case: testNegative04
 
-       ../test/TestAssertionIsNotEmpty.lua:150: Test structure error: Table is a required argument.
+    ../test/TestAssertionIsNotEmpty.lua:150: Test structure error: Table is a required argument.
 
   Test Case: testNegative05
 
-       ../test/TestAssertionIsNotEmpty.lua:159: Test structure error: Table must be a table.
+    ../test/TestAssertionIsNotEmpty.lua:159: Test structure error: Table must be a table.
 
   Test Case: testNegative06
 
-       ../test/TestAssertionIsNotEmpty.lua:168: Test structure error: Table must be a table.
+    ../test/TestAssertionIsNotEmpty.lua:168: Test structure error: Table must be a table.
 
   Test Case: testNegative07
 
-       ../test/TestAssertionIsNotEmpty.lua:177: Test structure error: Table must be a table.
+    ../test/TestAssertionIsNotEmpty.lua:177: Test structure error: Table must be a table.
 
   Test Case: testNegative08
 
-       ../test/TestAssertionIsNotEmpty.lua:186: Test structure error: Table must be a table.
+    ../test/TestAssertionIsNotEmpty.lua:186: Test structure error: Table must be a table.
 
   Test Case: testNegative09
 
-       ../test/TestAssertionIsNotEmpty.lua:195: Test structure error: Table must be a table.
+    ../test/TestAssertionIsNotEmpty.lua:195: Test structure error: Table must be a table.
 
   Test Case: testNegative10
 
-       ../test/TestAssertionIsNotEmpty.lua:209: Test structure error: Table must be a table.
+    ../test/TestAssertionIsNotEmpty.lua:209: Test structure error: Table must be a table.
 
   Test Case: testNegative11
 
-       ../test/TestAssertionIsNotEmpty.lua:227: Test structure error: Table must be a table.
+    ../test/TestAssertionIsNotEmpty.lua:227: Test structure error: Table must be a table.
 
   Test Case: testNegative12
 
-       ../test/TestAssertionIsNotEmpty.lua:241: Test structure error: Table must be a table.
+    ../test/TestAssertionIsNotEmpty.lua:241: Test structure error: Table must be a table.
 
   Test Case: testNegative13
 
-       ../test/TestAssertionIsNotEmpty.lua:250: Test structure error: Explanation is a required argument.
+    ../test/TestAssertionIsNotEmpty.lua:250: Test structure error: Explanation is a required argument.
 
   Test Case: testNegative14
 
-       ../test/TestAssertionIsNotEmpty.lua:259: Test structure error: Explanation must be a string.
+    ../test/TestAssertionIsNotEmpty.lua:259: Test structure error: Explanation must be a string.
 
   Test Case: testNegative15
 
-       ../test/TestAssertionIsNotEmpty.lua:268: Test structure error: Explanation must be a string.
+    ../test/TestAssertionIsNotEmpty.lua:268: Test structure error: Explanation must be a string.
 
   Test Case: testNegative16
 
-       ../test/TestAssertionIsNotEmpty.lua:277: Test structure error: Explanation must be a string.
+    ../test/TestAssertionIsNotEmpty.lua:277: Test structure error: Explanation must be a string.
 
   Test Case: testNegative17
 
-       ../test/TestAssertionIsNotEmpty.lua:286: Test structure error: Explanation must be a string.
+    ../test/TestAssertionIsNotEmpty.lua:286: Test structure error: Explanation must be a string.
 
   Test Case: testNegative18
 
-       ../test/TestAssertionIsNotEmpty.lua:295: Test structure error: Explanation must be a string.
+    ../test/TestAssertionIsNotEmpty.lua:295: Test structure error: Explanation must be a string.
 
   Test Case: testNegative19
 
-       ../test/TestAssertionIsNotEmpty.lua:304: Test structure error: Explanation must be a string.
+    ../test/TestAssertionIsNotEmpty.lua:304: Test structure error: Explanation must be a string.
 
   Test Case: testNegative20
 
-       ../test/TestAssertionIsNotEmpty.lua:313: Test structure error: Explanation must be a string.
+    ../test/TestAssertionIsNotEmpty.lua:313: Test structure error: Explanation must be a string.
 
   Test Case: testNegative21
 
-       ../test/TestAssertionIsNotEmpty.lua:327: Test structure error: Explanation must be a string.
+    ../test/TestAssertionIsNotEmpty.lua:327: Test structure error: Explanation must be a string.
 
   Test Case: testNegative22
 
-       ../test/TestAssertionIsNotEmpty.lua:345: Test structure error: Explanation must be a string.
+    ../test/TestAssertionIsNotEmpty.lua:345: Test structure error: Explanation must be a string.
 
   Test Case: testNegative23
 
-       ../test/TestAssertionIsNotEmpty.lua:359: Test structure error: Explanation must be a string.
+    ../test/TestAssertionIsNotEmpty.lua:359: Test structure error: Explanation must be a string.
 
   Test Case: testPositive01
 
