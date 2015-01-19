@@ -38,19 +38,19 @@
 
   Test Case: testNegative08
 
-       ../test/TestAssertionIsEqual.lua:318: Test structure error: Current value a required argument.
+    ../test/TestAssertionIsEqual.lua:318: Test structure error: Current value a required argument.
 
   Test Case: testNegative09
 
-       ../test/TestAssertionIsEqual.lua:328: Test structure error: Expected value is a required argument.
+    ../test/TestAssertionIsEqual.lua:328: Test structure error: Expected value is a required argument.
 
   Test Case: testNegative10
 
-       ../src/common/asserts.lua:187: Test structure error: Explanation is a required argument.
+    ../src/common/asserts.lua:187: Test structure error: Explanation is a required argument.
 
   Test Case: testNegative11
 
-       ../test/TestAssertionIsEqual.lua:348: Test structure error: Current value a required argument.
+    ../test/TestAssertionIsEqual.lua:348: Test structure error: Current value a required argument.
 
   Test Case: testNegative12
 
