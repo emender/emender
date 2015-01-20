@@ -1,3 +1,9 @@
+2015-01-20  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* selfchecks/test_assertion_is_false.in:
+	* selfchecks/test_assertion_is_true.in:
+	Fixed yet another two selfcheck failures caused by changes in test reporter.
+
 2015-01-19  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* selfchecks/test_assertion_is_equal.in:
