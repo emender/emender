@@ -496,7 +496,7 @@ end
 function core.performTestList(verboseOperation)
     local scriptDirectory = getScriptDirectory()
     local testList = getTestList()
-    for i, filename in ipairs(testList) do
+    for _, filename in ipairs(testList) do
         core.printTestInfo(scriptDirectory, filename, verboseOperation)
     end
 end
@@ -515,7 +515,7 @@ function core.runTests(verboseOperation, colorOutput, testsToRun, outputFiles, t
     _G["colorOutput"] = colorOutput
 
     if testsToRun and #testsToRun > 0 then
-        for i, filename in ipairs(testsToRun) do
+        for _, filename in ipairs(testsToRun) do
             local result = core.runTest(nil, filename, verboseOperation, testOptions, colorOutput)
             if result ~= nil then
                 if result then
