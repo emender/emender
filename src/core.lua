@@ -256,8 +256,14 @@ function fillInTestMetadata(testSuite, testSuiteName)
     end
 end
 
+
+
+--
+-- Filter test messages according to the given filter ("PASS", "FAIL" etc.).
+--
 function filterMessages(messages, filter)
     local cnt = 0
+    -- iterate over all registered messages
     for _, message in ipairs(messages) do
         if message[1] == filter then
             cnt = cnt + 1
@@ -312,7 +318,8 @@ end
 
 
 --
---
+-- Load and run one selected test.
+-- TODO: this function really needs to be refactored!
 --
 function core.runTest(scriptDirectory, filename, verboseOperation, testOptions, colorOutput)
     local testSuiteName = core.updateTestSuiteName(filename)
@@ -491,7 +498,7 @@ end
 
 
 --
---
+-- List all tests stored in specified script/test directory.
 --
 function core.performTestList(verboseOperation)
     local scriptDirectory = getScriptDirectory()
@@ -504,9 +511,10 @@ end
 
 
 --
---
+-- Run all selected tests.
 --
 function core.runTests(verboseOperation, colorOutput, testsToRun, outputFiles, testOptions)
+    -- variable that controls the return value passed to os.exit()
     local returnValue = true
     core.results.passedTests = 0
     core.results.failedTests = 0
@@ -514,9 +522,13 @@ function core.runTests(verboseOperation, colorOutput, testsToRun, outputFiles, t
     -- set global variable
     _G["colorOutput"] = colorOutput
 
+    -- some test(s) are specified on the command line
     if testsToRun and #testsToRun > 0 then
+        -- try to load and run all specified tests
         for _, filename in ipairs(testsToRun) do
+            -- load and run one test
             local result = core.runTest(nil, filename, verboseOperation, testOptions, colorOutput)
+            -- refresh test statistics
             if result ~= nil then
                 if result then
                     core.results.passedTests = core.results.passedTests + 1
@@ -532,7 +544,9 @@ function core.runTests(verboseOperation, colorOutput, testsToRun, outputFiles, t
         local testList = getTestList()
         -- loop over all tests stored in testList
         for i, filename in ipairs(testList) do
+            -- load and run one test
             local result = core.runTest(currentDirectory, filename, verboseOperation, testOptions, colorOutput)
+            -- refresh test statistics
             if result ~= nil then
                 if result then
                     core.results.passedTests = core.results.passedTests + 1
@@ -541,15 +555,18 @@ function core.runTests(verboseOperation, colorOutput, testsToRun, outputFiles, t
                 end
             end
         end
+        -- test directory seems to be empty
         if core.results.passedTests == 0 and core.results.failedTests == 0 then
             print("No tests to run.")
             returnValue = false
         end
     end
 
+    -- if no tests were run, report this situation
     if core.results.passedTests > 0 or core.results.failedTests > 0 then
         writeSummary(io.stdout, core.results, colorOutput)
     else
+        -- update value used by os.exit()
         returnValue = false
     end
     --dumpTestResults()

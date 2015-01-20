@@ -1,6 +1,11 @@
 2015-01-20  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* src/core.lua:
+	Added LuaDoc to remaining functions from the core module.
+
+2015-01-20  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* src/core.lua:
 	For-each loops should be idiomatic.
 
 2015-01-20  Pavel Tisnovsky  <ptisnovs@redhat.com>
