@@ -1,5 +1,10 @@
 2015-01-20  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* src/core.lua:
+	Added LuaDoc to selected functions from the core module.
+
+2015-01-20  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* selfchecks/test_assertion_is_false.in:
 	* selfchecks/test_assertion_is_true.in:
 	Fixed yet another two selfcheck failures caused by changes in test reporter.

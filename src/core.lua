@@ -119,9 +119,13 @@ end
 
 
 --
---
+-- This function is called to check if some module is not already loaded
+-- and stored in the global table _G. When the module is loaded it might
+-- mean that somebody simply copied test code w/o changing test (module) name.
+-- (this is a common mistake for copiers&pasters :p)
 --
 function core.checkTestNameShadowing(testName)
+    -- try to read (any) object from the global table _G.
     if _G[testName] then
         print("Warning: test " .. testName .. " might overwrite (shadow) core functionality!")
         print("You'd need to rename it")
@@ -131,20 +135,24 @@ end
 
 
 --
---
+-- Print informations about selected test, this function is called
+-- when -l/--list option is specified on the command line.
 --
 function core.printTestInfo(scriptDirectory, filename, verboseOperation)
     local testName = core.updateTestSuiteName(filename)
     if testName then
         core.checkTestNameShadowing(testName)
+        -- try to load the script that contains selected test
         dofile(scriptDirectory .. "test/" .. filename)
         -- if test is properly loaded
         local test = _G[testName]
+        -- if the test is properly loaded, read and print informations about it
         if test then
             print("Test: " .. testName)
             if verboseOperation then
                 testInfo.printDetailedTestInfo(test, testName)
             end
+        -- if the test could not be loaded
         else
             print("Test '" .. testName .. "' can't be loaded or there's name mismatch")
             print("(test name is different from the name of test file).")
@@ -157,24 +165,44 @@ end
 local currentTestFailure
 
 
+
+--
+-- This function could be call from the test machinery
+-- to register message about passing of any part of test case.
+--
 function registerPassMessage(message)
     table.insert(core.messages, {"PASS", message})
 end
 
+
+
+--
+-- This function could be call from the test machinery
+-- to register message about failing of any part of test case.
+--
 function registerFailMessage(message)
     table.insert(core.messages, {"FAIL", message})
 end
 
+
+
+--
+-- This function could be call from the test machinery
+-- to register message with information text.
+--
 function registerInfoMessage(message)
     table.insert(core.messages, {"INFO", message})
 end
 
+
+
 --
---
+-- Called by the test machinery to mark the current test case failure.
 --
 function markTestFailure()
     currentTestFailure = true 
 end
+
 
 
 --
@@ -200,12 +228,19 @@ function dumpTestResults()
     end
 end
 
+
+
+--
+-- Fill in all required information in the testSuite record from the metadata
+-- read from the test script.
+--
 function fillInTestMetadata(testSuite, testSuiteName)
     local test = _G[testSuiteName]
     if not test then
         return
     end
     local metadata = test["metadata"]
+    -- if metadata exists
     if metadata then
         testSuite.description = metadata["description"] or "not set"
         testSuite.authors = metadata["authors"] or "not set"
