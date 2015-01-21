@@ -79,6 +79,7 @@ function runTestExamples {
      ../emend ../test/TestEmpty.lua             > test_empty.out
      ../emend ../test/TestSetUp.lua             > test_setup.out
      ../emend ../test/TestSetUpOnly.lua         > test_setup_only.out
+     ../emend ../test/TestSetUpTearDown.lua     > test_setup_teardown.out
      ../emend ../test/TestSetUpTearDownOnly.lua > test_setup_teardown_only.out
      ../emend ../test/TestSetUpFailure.lua      > test_setup_failure.out
      ../emend ../test/TestSetUpOnlyFailure.lua  > test_setup_only_failure.out

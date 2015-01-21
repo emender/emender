@@ -1,5 +1,11 @@
 2015-01-20  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* selfchecks/selfcheck.sh:
+	* selfchecks/test_setup_teardown.in:
+	Added new selfcheck test_setup_teardown.
+
+2015-01-20  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* src/core.lua:
 	Added LuaDoc to remaining functions from the core module.
 
