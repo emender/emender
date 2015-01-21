@@ -1,5 +1,11 @@
 2015-01-21  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* selfchecks/test_assertion_is_nil.in:
+	* selfchecks/test_assertion_is_not_nil.in:
+	Another two fixes in selfchecks.
+
+2015-01-21  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* selfchecks/test_assertion_is_like.in:
 	* selfchecks/test_assertion_is_unlike.in:
 	Fixed two selfcheck failures caused by changes in test reporter.
