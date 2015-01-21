@@ -10,31 +10,31 @@
 
   Test Case: testNegative01
 
-       ../test/TestAssertionIsUnlike.lua:446: Test structure error: Current value is a required argument.
+    ../test/TestAssertionIsUnlike.lua:446: Test structure error: Current value is a required argument.
 
   Test Case: testNegative02
 
-       ../test/TestAssertionIsUnlike.lua:455: Test structure error: Current value is a required argument.
+    ../test/TestAssertionIsUnlike.lua:455: Test structure error: Current value is a required argument.
 
   Test Case: testNegative03
 
-       ../test/TestAssertionIsUnlike.lua:464: Test structure error: Pattern is a required argument.
+    ../test/TestAssertionIsUnlike.lua:464: Test structure error: Pattern is a required argument.
 
   Test Case: testNegative04
 
-       ../test/TestAssertionIsUnlike.lua:473: Test structure error: Pattern is a required argument.
+    ../test/TestAssertionIsUnlike.lua:473: Test structure error: Pattern is a required argument.
 
   Test Case: testNegative05
 
-       ../src/common/asserts.lua:333: Test structure error: Explanation is a required argument.
+    ../src/common/asserts.lua:333: Test structure error: Explanation is a required argument.
 
   Test Case: testNegative06
 
-       ../src/common/asserts.lua:333: Test structure error: Explanation is a required argument.
+    ../src/common/asserts.lua:333: Test structure error: Explanation is a required argument.
 
   Test Case: testNegative07
 
-       ../test/TestAssertionIsUnlike.lua:500: Test structure error: Current value is a required argument.
+    ../test/TestAssertionIsUnlike.lua:500: Test structure error: Current value is a required argument.
 
   Test Case: testNegative08
 
@@ -62,35 +62,35 @@
 
   Test Case: testNegative14
 
-       ../test/TestAssertionIsUnlike.lua:562: Test structure error: Current value type must be a string.
+    ../test/TestAssertionIsUnlike.lua:562: Test structure error: Current value type must be a string.
 
   Test Case: testNegative15
 
-       ../test/TestAssertionIsUnlike.lua:571: Test structure error: Current value type must be a string.
+    ../test/TestAssertionIsUnlike.lua:571: Test structure error: Current value type must be a string.
 
   Test Case: testNegative16
 
-       ../test/TestAssertionIsUnlike.lua:580: Test structure error: Current value type must be a string.
+    ../test/TestAssertionIsUnlike.lua:580: Test structure error: Current value type must be a string.
 
   Test Case: testNegative17
 
-       ../test/TestAssertionIsUnlike.lua:596: Test structure error: Current value type must be a string.
+    ../test/TestAssertionIsUnlike.lua:596: Test structure error: Current value type must be a string.
 
   Test Case: testNegative18
 
-       ../test/TestAssertionIsUnlike.lua:605: Test structure error: Current value type must be a string.
+    ../test/TestAssertionIsUnlike.lua:605: Test structure error: Current value type must be a string.
 
   Test Case: testNegative19
 
-       ../test/TestAssertionIsUnlike.lua:619: Test structure error: Current value type must be a string.
+    ../test/TestAssertionIsUnlike.lua:619: Test structure error: Current value type must be a string.
 
   Test Case: testNegative20
 
-       ../test/TestAssertionIsUnlike.lua:637: Test structure error: Current value type must be a string.
+    ../test/TestAssertionIsUnlike.lua:637: Test structure error: Current value type must be a string.
 
   Test Case: testNegative21
 
-       ../test/TestAssertionIsUnlike.lua:651: Test structure error: Current value type must be a string.
+    ../test/TestAssertionIsUnlike.lua:651: Test structure error: Current value type must be a string.
 
   Test Case: testPositive01
 

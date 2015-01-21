@@ -1,4 +1,10 @@
-2015-01-20  Pavel Tisnovsky  <ptisnovs@redhat.com>
+2015-01-21  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* selfchecks/test_assertion_is_like.in:
+	* selfchecks/test_assertion_is_unlike.in:
+	Fixed two selfcheck failures caused by changes in test reporter.
+
+2015-01-21  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* selfchecks/selfcheck.sh:
 	* selfchecks/test_setup_teardown.in:

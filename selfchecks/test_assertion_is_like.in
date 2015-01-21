@@ -10,31 +10,31 @@
 
   Test Case: testNegative01
 
-       ../test/TestAssertionIsLike.lua:1086: Test structure error: Current value is a required argument.
+    ../test/TestAssertionIsLike.lua:1086: Test structure error: Current value is a required argument.
 
   Test Case: testNegative02
 
-       ../test/TestAssertionIsLike.lua:1095: Test structure error: Current value is a required argument.
+    ../test/TestAssertionIsLike.lua:1095: Test structure error: Current value is a required argument.
 
   Test Case: testNegative03
 
-       ../test/TestAssertionIsLike.lua:1104: Test structure error: Pattern is a required argument.
+    ../test/TestAssertionIsLike.lua:1104: Test structure error: Pattern is a required argument.
 
   Test Case: testNegative04
 
-       ../test/TestAssertionIsLike.lua:1113: Test structure error: Pattern is a required argument.
+    ../test/TestAssertionIsLike.lua:1113: Test structure error: Pattern is a required argument.
 
   Test Case: testNegative05
 
-       ../src/common/asserts.lua:283: Test structure error: Explanation is a required argument.
+    ../src/common/asserts.lua:283: Test structure error: Explanation is a required argument.
 
   Test Case: testNegative06
 
-       ../src/common/asserts.lua:283: Test structure error: Explanation is a required argument.
+    ../src/common/asserts.lua:283: Test structure error: Explanation is a required argument.
 
   Test Case: testNegative07
 
-       ../test/TestAssertionIsLike.lua:1149: Test structure error: Pattern is a required argument.
+    ../test/TestAssertionIsLike.lua:1149: Test structure error: Pattern is a required argument.
 
   Test Case: testNegative08
 
@@ -54,43 +54,43 @@
 
   Test Case: testNegative12
 
-       ../test/TestAssertionIsLike.lua:1194: Test structure error: Current value type must be a string.
+    ../test/TestAssertionIsLike.lua:1194: Test structure error: Current value type must be a string.
 
   Test Case: testNegative13
 
-       ../test/TestAssertionIsLike.lua:1203: Test structure error: Current value type must be a string.
+    ../test/TestAssertionIsLike.lua:1203: Test structure error: Current value type must be a string.
 
   Test Case: testNegative14
 
-       ../test/TestAssertionIsLike.lua:1212: Test structure error: Current value type must be a string.
+    ../test/TestAssertionIsLike.lua:1212: Test structure error: Current value type must be a string.
 
   Test Case: testNegative15
 
-       ../test/TestAssertionIsLike.lua:1221: Test structure error: Current value type must be a string.
+    ../test/TestAssertionIsLike.lua:1221: Test structure error: Current value type must be a string.
 
   Test Case: testNegative16
 
-       ../test/TestAssertionIsLike.lua:1230: Test structure error: Current value type must be a string.
+    ../test/TestAssertionIsLike.lua:1230: Test structure error: Current value type must be a string.
 
   Test Case: testNegative17
 
-       ../test/TestAssertionIsLike.lua:1246: Test structure error: Current value type must be a string.
+    ../test/TestAssertionIsLike.lua:1246: Test structure error: Current value type must be a string.
 
   Test Case: testNegative18
 
-       ../test/TestAssertionIsLike.lua:1255: Test structure error: Current value type must be a string.
+    ../test/TestAssertionIsLike.lua:1255: Test structure error: Current value type must be a string.
 
   Test Case: testNegative19
 
-       ../test/TestAssertionIsLike.lua:1269: Test structure error: Current value type must be a string.
+    ../test/TestAssertionIsLike.lua:1269: Test structure error: Current value type must be a string.
 
   Test Case: testNegative20
 
-       ../test/TestAssertionIsLike.lua:1287: Test structure error: Current value type must be a string.
+    ../test/TestAssertionIsLike.lua:1287: Test structure error: Current value type must be a string.
 
   Test Case: testNegative21
 
-       ../test/TestAssertionIsLike.lua:1301: Test structure error: Current value type must be a string.
+    ../test/TestAssertionIsLike.lua:1301: Test structure error: Current value type must be a string.
 
   Test Case: testPositive001
 
