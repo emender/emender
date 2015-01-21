@@ -1,5 +1,10 @@
 2015-01-21  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* selfchecks/test_100_passes_1_info.in:
+	The last fix in selfcheck.
+
+2015-01-21  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* selfchecks/test_assertion_is_nil.in:
 	* selfchecks/test_assertion_is_not_nil.in:
 	Another two fixes in selfchecks.

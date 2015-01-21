@@ -110,11 +110,11 @@
     [ PASS ]  Pass#98
     [ PASS ]  Pass#99
     [ PASS ]  Pass#100
-       ../test/Test100Passes1Info.lua:42: attempt to call global 'info' (a nil value)
+    ../test/Test100Passes1Info.lua:42: attempt to call global 'info' (a nil value)
 
   Test Case: testB
 
-       ../test/Test100Passes1Info.lua:52: attempt to call global 'info' (a nil value)
+    ../test/Test100Passes1Info.lua:52: attempt to call global 'info' (a nil value)
 
   Test Case: testC
 
@@ -168,7 +168,7 @@
     [ PASS ]  Pass#48
     [ PASS ]  Pass#49
     [ PASS ]  Pass#50
-       ../test/Test100Passes1Info.lua:70: attempt to call global 'info' (a nil value)
+    ../test/Test100Passes1Info.lua:70: attempt to call global 'info' (a nil value)
 
   Test Summary                                                            
 
