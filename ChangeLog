@@ -1,5 +1,11 @@
 2015-01-22  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* selfchecks/selfcheck.sh:
+	* selfchecks/test_assertion_is_not_type.in:
+	Added yet another selfcheck.
+
+2015-01-22  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* selfchecks/test_assertion_is_type.in:
 	Added new selfcheck.
 
