@@ -189,3 +189,120 @@ end
 function TestAssertionIsType.testNegative31()
     is_type(nil, 42, "negative test")
 end
+
+--
+-- Verify if is_empty() API is checked properly.
+--
+function TestAssertionIsType.testNegative32()
+    is_type("", "string", nil)
+end
+
+
+
+--
+-- Verify if is_empty() API is checked properly.
+--
+function TestAssertionIsType.testNegative33()
+    is_type("", "string", true)
+end
+
+
+
+--
+-- Verify if is_empty() API is checked properly.
+--
+function TestAssertionIsType.testNegative34()
+    is_type("", "string", false)
+end
+
+
+
+--
+-- Verify if is_empty() API is checked properly.
+--
+function TestAssertionIsType.testNegative35()
+    is_type("", "string", 42)
+end
+
+
+
+--
+-- Verify if is_empty() API is checked properly.
+--
+function TestAssertionIsType.testNegative36()
+    is_type("", "string", 1.5)
+end
+
+
+
+--
+-- Verify if is_empty() API is checked properly.
+--
+function TestAssertionIsType.testNegative37()
+    is_type("", "string", {})
+end
+
+
+
+--
+-- Verify if is_empty() API is checked properly.
+--
+function TestAssertionIsType.testNegative38()
+    is_type("", "string", {1,2,3})
+end
+
+
+
+--
+-- Verify if is_empty() API is checked properly.
+--
+function TestAssertionIsType.testNegative39()
+    is_type("", "string", print)
+end
+
+
+
+--
+-- Verify if is_empty() API is checked properly.
+--
+function TestAssertionIsType.testNegative40()
+    -- create local function
+    local func = function()
+        return 42
+    end
+    -- and call the is_empty() function with the function as its argument
+    is_type("", "string", func)
+end
+
+
+
+--
+-- Verify if is_empty() API is checked properly.
+--
+function TestAssertionIsType.testNegative41()
+    -- create local closure
+    local closure = function()
+        local i
+        return function()
+            i = i + 1
+            return i
+        end
+    end
+    -- and call the is_empty() function with the closure as its argument
+    is_type("", "string", closure)
+end
+
+
+
+--
+-- Verify if is_empty() API is checked properly.
+--
+function TestAssertionIsType.testNegative42()
+    -- create local coroutine
+    local func = coroutine.create(function ()
+           print(42)
+         end)
+    -- and call the is_empty() function with the coroutine as its argument
+    is_type("", "string", func)
+end
+
