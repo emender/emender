@@ -31,6 +31,7 @@ local asserts = nil
 local logger = nil
 local tracer = nil
 local gendoc = nil
+local path = nil
 local abstractWriter = nil
 local htmlWriter = nil
 local xmlWriter = nil
@@ -91,6 +92,8 @@ function loadModules()
     _G["logger"] = logger
     tracer = require("src/common/tracer")
     gendoc = require("src/common/gendoc")
+    path = require("src/common/path")
+    _G["path"] = path
     abstractWriter = require("src/writers/abstractWriter")
     htmlWriter = require("src/writers/htmlWriter")
     xmlWriter = require("src/writers/xmlWriter")
