@@ -133,7 +133,8 @@ function runTestsForAssertions {
 # Run Emender with tests that check various Emender modules
 function runTestsModules {
      ../emend ../test/TestModuleAsserts.lua > test_module_asserts.out
-     ../emend ../test/TestModuleFileio.lua > test_module_fileio.out
+     ../emend ../test/TestModuleFileio.lua  > test_module_fileio.out
+     ../emend ../test/TestPathCompose.lua   > test_module_path_compose.out
 }
 
 
