@@ -1,5 +1,11 @@
 2015-02-02  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* selfchecks/selfcheck.sh:
+	* selfchecks/test_man_pages.in:
+	Added yet another new selftest.
+
+2015-02-02  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* test/TestModuleGendoc.lua:
 	Added new test.
 
