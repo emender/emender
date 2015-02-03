@@ -1,3 +1,9 @@
+2015-02-03  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* selfchecks/selfcheck.sh:
+	* selfchecks/test_comments.in:
+	Added new selfcheck: test_comments.
+
 2015-02-02  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* selfchecks/selfcheck.sh:

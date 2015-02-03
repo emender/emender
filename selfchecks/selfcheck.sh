@@ -134,6 +134,7 @@ function runTestsForAssertions {
 function runTestsModules {
      ../emend ../test/TestModuleAsserts.lua > test_module_asserts.out
      ../emend ../test/TestModuleFileio.lua  > test_module_fileio.out
+     ../emend ../test/TestModuleGendoc.lua  > test_module_gendoc.out
      ../emend ../test/TestPathCompose.lua   > test_module_path_compose.out
 }
 
@@ -143,6 +144,7 @@ function runTestsModules {
 function runOtherTests {
      ../emend ../test/TestColorInMessages.lua > test_color_in_messages.out
      ../emend ../test/TestManPages.lua        > test_man_pages.out
+     ../emend ../test/TestComments.lua        > test_comments.out
 }
 
 
