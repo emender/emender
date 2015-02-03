@@ -1,6 +1,12 @@
 2015-02-03  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* selfchecks/selfcheck.sh:
+	* selfchecks/test_without_functions.in:
+	Added new selfcheck: test_without_functions.
+
+2015-02-03  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* selfchecks/selfcheck.sh:
 	* selfchecks/test_comments.in:
 	Added new selfcheck: test_comments.
 

@@ -142,9 +142,10 @@ function runTestsModules {
 
 # Run other tests
 function runOtherTests {
-     ../emend ../test/TestColorInMessages.lua > test_color_in_messages.out
-     ../emend ../test/TestManPages.lua        > test_man_pages.out
-     ../emend ../test/TestComments.lua        > test_comments.out
+     ../emend ../test/TestColorInMessages.lua  > test_color_in_messages.out
+     ../emend ../test/TestManPages.lua         > test_man_pages.out
+     ../emend ../test/TestComments.lua         > test_comments.out
+     ../emend ../test/TestWithoutFunctions.lua > test_without_functions.out
 }
 
 
