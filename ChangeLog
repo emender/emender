@@ -1,5 +1,10 @@
 2015-02-03  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* selfchecks/test_module_gendoc.in:
+	Data file for testModuleGendoc selfcheck.
+
+2015-02-03  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* selfchecks/selfcheck.sh:
 	* selfchecks/test_without_functions.in:
 	Added new selfcheck: test_without_functions.
