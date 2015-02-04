@@ -1,4 +1,4 @@
--- Module that contains text exporter.
+-- Module that contains test exporter.
 --
 -- Copyright (C) 2014, 2015 Pavel Tisnovsky
 --

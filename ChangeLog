@@ -1,5 +1,10 @@
 2015-02-04  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* src/testExporter.lua:
+	Fixed typo.
+
+2015-02-04  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* selfchecks/selfcheck.sh:
 	* selfchecks/test_requires2.in:
 	Added new selfcheck: test_requires2.
