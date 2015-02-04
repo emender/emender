@@ -1,6 +1,12 @@
 2015-02-04  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* selfchecks/selfcheck.sh:
+	* selfchecks/test_requires2.in:
+	Added new selfcheck: test_requires2.
+
+2015-02-04  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* selfchecks/selfcheck.sh:
 	* selfchecks/test_requires1.in:
 	Added new selfcheck: test_requires1.
 
