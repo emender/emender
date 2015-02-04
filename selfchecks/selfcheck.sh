@@ -146,6 +146,7 @@ function runOtherTests {
      ../emend ../test/TestManPages.lua         > test_man_pages.out
      ../emend ../test/TestComments.lua         > test_comments.out
      ../emend ../test/TestWithoutFunctions.lua > test_without_functions.out
+     ../emend ../test/TestRequires1.lua        > test_requires1.out
 }
 
 
