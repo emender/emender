@@ -74,3 +74,69 @@ function Test100Failures1Info.testC()
     end
 end
 
+
+
+--
+-- Mixed case.
+--
+function Test100Failures1Info.testD()
+    -- call fail() once
+    fail("Fail#1")
+    -- call warn() once
+    warn("Info")
+    -- call fail() 99 times
+    for i = 1, 99 do
+        fail("Fail#" .. i)
+    end
+end
+
+
+
+--
+-- Mixed case.
+--
+function Test100Failures1Info.testE()
+    -- call fail() 99 times
+    for i = 1, 99 do
+        fail("Fail#" .. i)
+    end
+    -- call warn() once
+    warn("Info")
+    -- call fail() once
+    fail("Fail#100")
+end
+
+
+
+--
+-- Mixed case.
+--
+function Test100Failures1Info.testF()
+    -- call fail() two trimes
+    fail("Fail#1")
+    fail("Fail#1")
+    -- call warn() once
+    warn("Info")
+    -- call fail() 98 times
+    for i = 1, 98 do
+        fail("Fail#" .. i)
+    end
+end
+
+
+
+--
+-- Mixed case.
+--
+function Test100Failures1Info.testG()
+    -- call fail() 98 times
+    for i = 1, 98 do
+        fail("Fail#" .. i)
+    end
+    -- call warn() once
+    warn("Info")
+    -- call fail() two times
+    fail("Fail#99")
+    fail("Fail#100")
+end
+

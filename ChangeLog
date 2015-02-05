@@ -1,6 +1,11 @@
 2015-02-05  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* test/Test100Failures1Info.lua:
+	Added new test cases.
+
+2015-02-05  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* test/Test100Failures1Info.lua:
 	Fixed typos.
 
 2015-02-04  Pavel Tisnovsky  <ptisnovs@redhat.com>
