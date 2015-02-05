@@ -1,5 +1,5 @@
 -- Test100Failures1Info.lua - check that graphs are rendered correctly.
--- Copyright (C) 2014 Pavel Tisnovsky
+-- Copyright (C) 2014, 2015  Pavel Tisnovsky
 --
 --
 -- This file is part of Emender.
@@ -23,7 +23,7 @@ Test100Failures1Info = {
         description = "Check that graphs are rendered correctly.",
         authors = "Pavel Tisnovsky",
         emails = "ptisnovs@redhat.com",
-        changed = "2014-11-13",
+        changed = "2015-02-05",
         tags = {"BasicTest", "SmokeTest"},
     },
 }
@@ -31,24 +31,24 @@ Test100Failures1Info = {
 
 
 --
--- This function calls fail() 100 times and pass() only once.
+-- This function calls fail() 100 times and warn() only once.
 --
 function Test100Failures1Info.testA()
     -- call fail() 100 times
     for i = 1, 100 do
         fail("Fail#" .. i)
     end
-    -- call pass() once
+    -- call warn() once
     warn("Info")
 end
 
 
 
 --
--- This function calls pass() once and fail() 100 times.
+-- This function calls warn() once and fail() 100 times.
 --
 function Test100Failures1Info.testB()
-    -- call pass() once
+    -- call warn() once
     warn("Info")
     -- call fail() 100 times
     for i = 1, 100 do
@@ -59,14 +59,14 @@ end
 
 
 --
--- This function fail() 50 times, then pass() once and then fail() 50 times.
+-- This function fail() 50 times, then warn() once and then fail() 50 times.
 --
 function Test100Failures1Info.testC()
     -- call fail() 50 times
     for i = 1, 50 do
         fail("Fail#" .. i)
     end
-    -- call pass() once
+    -- call warn() once
     warn("Info")
     -- call fail() 50 times
     for i = 1, 50 do
