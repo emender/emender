@@ -1,5 +1,6 @@
 -- Common file I/O operations used elsewhere in the Emender.
--- Copyright (C) 2014 Pavel Tisnovsky
+--
+-- Copyright (C) 2014, 2015 Pavel Tisnovsky
 
 -- This file is part of Emender.
 
@@ -23,8 +24,9 @@
 -- Returns true if everything is ok, nil instead.
 -- (nil is evaluated as a false value in most cases)
 --
--- @param fileName Name of file that will be created
--- @param content  Content to be written to a new file
+-- @param  fileName Name of file that will be created
+-- @param  content  Content to be written to a new file
+-- @return true if write was successful, nil otherwise
 --
 function spit(fileName, content)
     local fout = io.open(fileName, "w")
@@ -61,8 +63,9 @@ end
 -- Returns true if everything is ok, nil instead.
 -- (nil is evaluated as a false value in most cases)
 --
--- @param fileName Name of file that will be created
--- @param content  Content to be written to a new file
+-- @param  fileName Name of file that will be created
+-- @param  content  Content to be written to a new file
+-- @return true if write was successful, nil otherwise
 --
 function spitTable(fileName, content)
     local fout = io.open(fileName, "w")
@@ -110,7 +113,8 @@ end
 -- Returns string read from the file, or nil in case of any I/O error.
 -- (nil is evaluated as a false value in most cases)
 --
--- @param fileName Name of file that will be read
+-- @param  fileName Name of file that will be read
+-- @return file content if read was successful, nil otherwise
 --
 function slurp(fileName)
     local fin = io.open(fileName, "r")
@@ -142,7 +146,8 @@ end
 -- in case of any I/O error.
 -- (nil is evaluated as a false value in most cases)
 --
--- @param fileName Name of file that will be read
+-- @param  fileName Name of file that will be read
+-- @return file content if read was successful, nil otherwise
 --
 function slurpTable(fileName)
     local content = {}
@@ -174,6 +179,9 @@ end
 --
 -- Check if given directory exists.
 --
+-- @param  directory name of directory
+-- @return true if directory exists, false otherwise
+--
 function directoryExists(directory)
     -- if directory is not given, silently return false
     if not directory then
@@ -199,6 +207,9 @@ end
 
 --
 -- Check if given file exists.
+--
+-- @param  directory name of file
+-- @return true if file exists, false otherwise
 --
 function fileExists(fileName)
     -- if filename is not given, silently return false
