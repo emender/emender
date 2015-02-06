@@ -1,5 +1,10 @@
 2015-02-06  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* src/common/gendoc.lua:
+	Updated comments and (c) year.
+
+2015-02-06  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* src/common/fileio.lua:
 	Updated comments and (c) year.
 
