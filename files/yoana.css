@@ -1,33 +1,20 @@
 /* bs */
 
-html, body,
-.main-container,
-.top-row,
-.top-row .top-grid,
-.tab-body {
+html, body {
   height: 100%;
+  background-color: #F0F2F7;
 }
-.nowrap { white-space: nowrap; }
-.main-container {
-  background-color: #f0f2f7;
+a,
+a:hover {
+  text-decoration: none;
 }
-.top-grid {
-  margin-top: 20px;
-}
-.top-row {
+.container-fluid.top-level {
   padding: 0 15px;
-}
-.tab-body {
-  background-color: white;
-  padding: 30px 10px 30px 10px;
-  margin: -140px 0 0 -16px;
-  box-shadow: #888888 -3px 0px 5px;
-  border: 1px solid #ddd;
 }
 .emender-header {
   border-left: 3px solid black;
-  margin-left: 15px;
   padding: 0 0 5px 10px;
+  margin-bottom: 10px;
 }
 .emender-header ul li {
   margin: 0;
@@ -42,12 +29,9 @@ html, body,
   border: none;
 }
 h1, h2, h3, h4, h5, h6 { font-weight: bold; }
-.tab-pane .tab-body-cell {
-  padding-bottom: 10px;
-  border-bottom: 1px solid #ddd;
-}
-.tab-pane .tab-body-cell:hover {
-  background-color: #f0f0f0;
+.tab-pane .panel,
+.tab-pane .panel-heading {
+  background-color: #F0F2F7 !important;
 }
 .tab-pane .test-results tr td:last-child {
   width: 100%;
@@ -55,22 +39,24 @@ h1, h2, h3, h4, h5, h6 { font-weight: bold; }
 .tab-pane {
   padding: 0 10px 10px 10px;
 }
-.nav li {
-  box-shadow: #888888 -3px 0px 5px;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
+.nav-pills > li > a {
+  background-color: #DADCE0 !important;
+  border: 1px solid #CBCDD1;
+  padding: 0 1em;
 }
-.nav > li a:hover,
-.nav > li a:active {
-  background-color: #fff;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
+.nav-pills > li {
+  margin: 3px !important;
 }
-.nav>li.active>a {
-  z-index: 2;
+.nav-pills > .active > a {
+  background-color: white !important;
+  color: black !important;
+  border: 1px solid grey;
 }
-.nav>li>a {
-  z-index: 1;
+.nav-pills > li > a:hover {
+  background-color: #E4E6EA !important;
+}
+.nav-pills > .active > a:hover {
+  background-color: white !important;
 }
 .progress { margin-bottom: 10px; }
 .summary table { margin-top: 20px; }
@@ -88,69 +74,55 @@ td {
 .info {
   font-weight: bold;
 }
-.tab-head .bullet {
+.nav-pills .bullet {
   font-size: 60px;
   line-height: 10px;
   vertical-align: -120%;
 }
-.tab-body .bullet {
+.tab-pane .bullet {
   font-size: 50px;
   line-height: 10px;
   vertical-align: -100%;
 }
-.nav-tabs ul,
 .tab-pane ul { 
   list-style-type: none;
   padding: 0 0 10px 10px;
   margin: 0;
 }
-.nav-tabs ul li span span,
+.tab-pane { 
+  margin: 3px 0 15px 2px;
+}
+.tab-pane.active { 
+  background-color: white;
+  border: 1px solid grey;
+  border-radius: 4px;
+}
 .tab-pane ul { 
   list-style-type: none;
   padding: 0 0 10px 10px;
   margin: 0;
 }
-
-input[type=checkbox] {
-  position: absolute;
-  top: -9999px;
-  left: -9999px;
-}
-label { 
-  float: right;
-  margin: 0 10px 0 0;
-  cursor: pointer;
-  position: relative;
-  top: 5px;
-  display: inline-block;
-  font-weight: normal;
-}
-label .glyph { 
+.glyph { 
   font-family: 'Glyphicons Halflings';
   font-style: normal;
   font-weight: normal;
   line-height: 1;
 }
-
-/* Default State */
-label .glyph:after { 
-  content: "\e114";
+.collapse-widget {
+  text-align: right;
 }
-label:before { 
-  content: "show all ";
-}
-.tab-pane .tab-body-cell table {
-  display: none;
-  clear: both;
-}
-
 /* Toggled State */
-input[type=checkbox]:checked ~ label .glyph:after {
+.panel-title .glyph:after {
   content: "\e113";
+  vertical-align: middle;
 }
-input[type=checkbox]:checked ~ label:before {
+.panel-title:before {
   content: "hide ";
 }
-input[type=checkbox]:checked ~ label ~ table {
-  display: block;
+/* Default State */
+.panel-title.collapsed .glyph:after { 
+  content: "\e114";
+}
+.panel-title.collapsed:before { 
+  content: "show all ";
 }
