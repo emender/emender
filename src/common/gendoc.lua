@@ -1,5 +1,6 @@
 -- Documentation generation module.
--- Copyright (C) 2014 Pavel Tisnovsky
+--
+-- Copyright (C) 2014, 2015  Pavel Tisnovsky
 
 -- This file is part of Emender.
 
@@ -15,6 +16,7 @@
 -- You should have received a copy of the GNU General Public License
 -- along with Emender.  If not, see <http://www.gnu.org/licenses/>.
 
+-- Define the module:
 local gendoc = {
 }
 
@@ -23,11 +25,13 @@ local gendoc = {
 --
 -- Get comment that would be read up to the given line.
 -- All comment lines should start with "--"
+-- Comments are read in the opposite direction: from the function definition 'higher'.
 --
 function getComment(testSource, endLine)
     -- comment lines should END just before the line containing function name
     local i = endLine - 1
 
+    -- check if we are still at the beginning of the test source (it is unlikely)
     if i <= 1 then
         print("Test function is at the beggining of the test source...strange.")
     end
@@ -39,6 +43,7 @@ function getComment(testSource, endLine)
     -- and join it into one "big" string
     repeat
         local line = testSource[i]
+        -- check for nil
         assert(line)
 
         local commentLine = line:startsWith("--")
@@ -58,6 +63,7 @@ function getComment(testSource, endLine)
     -- trim whitespaces
     output = output:trim()
 
+    -- is function commented at all?
     if output == "" then
         return "(not commented)"
     else
@@ -78,16 +84,22 @@ function generateDocForOneFunction(testName, testFunction, testSource)
         return
     end
 
+    -- read the selected function from the global table
     local f = _G[testName][testFunction]
+
+    -- try to get debuginfo for the function
     local debugInfo = debug.getinfo(f)
 
+    -- check if debuginfo can be read
     if not debugInfo then
         print("    Internal error; can not read debuginfo for the test function " .. testName .. "." .. testFunction)
         return
     end
 
+    -- all we need is line number
     local line = debugInfo.linedefined
 
+    -- check if linedefined item can be read from the debuginfo
     if not line then
         print("    Internal error; can not read debuginfo for the test function " .. testName .. "." .. testFunction)
         return
@@ -147,11 +159,12 @@ end
 
 
 --
--- Generate simple documentation (comments for all function)
+-- Generate simple documentation (comments for all functions)
 -- for the given list of tests.
 --
 function generateDocForAllTests(core, testList, scriptDirectory)
-    for i, filename in ipairs(testList) do
+    -- loop over all (possible) tests
+    for _, filename in ipairs(testList) do
         local testName = core.updateTestName(filename)
         -- if the filename is the real test name, generate documentation for it
         if testName then
@@ -175,5 +188,6 @@ end
 
 
 
+-- Export the module:
 return gendoc
 

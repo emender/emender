@@ -1,3 +1,33 @@
+2015-02-06  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* src/common/gendoc.lua:
+	Updated comments and (c) year.
+
+2015-02-06  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* src/common/fileio.lua:
+	Updated comments and (c) year.
+
+2015-02-06  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* src/common/asserts.lua:
+	Updated comments and (c) year.
+
+2015-02-05  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* selfchecks/test_100_failures_1_info.in:
+	Updated selfcheck test_100_failures_1_info.
+
+2015-02-05  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* test/Test100Failures1Info.lua:
+	Added new test cases.
+
+2015-02-05  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* test/Test100Failures1Info.lua:
+	Fixed typos.
+
 2015-02-04  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* src/testExporter.lua:

@@ -1,5 +1,5 @@
 -- asserts.lua - a module containing all required assertion functions.
--- Copyright (C) 2014 Pavel Tisnovsky, Jaromir Hradilek
+-- Copyright (C) 2014, 2015  Pavel Tisnovsky, Jaromir Hradilek
 
 -- This file is part of Emender.
 
@@ -78,7 +78,8 @@ end
 --  is_true(result > 42, "The value is greater than 42")
 --
 -- @param expression Expression to be evaluated, can't be nil, must be of type boolean
--- @param explanation Short description of the test, must be of type string
+-- @param explanation Short description of the test, must be of type string.
+--                    Test structure error is reported if the type is not a string.
 --
 function is_true(expression, explanation)
     -- Verify that <expression> is specified:
@@ -117,7 +118,8 @@ end
 --  is_false(result > 42, "The value is not greater than 42")
 --
 -- @param expression Expression to be evaluated, can't be nil, must be of type boolean
--- @param explanation Short description of the test, must be of type string
+-- @param explanation Short description of the test, must be of type string.
+--                    Test structure error is reported if the type is not a string.
 --
 function is_false(expression, explanation)
     -- Verify that <expression> is specified:
@@ -159,7 +161,8 @@ end
 --
 -- @param current_value Value to test, can't be nil
 -- @param expected_value Expected value, can't be nil
--- @param explanation Short description of the test, must be of type string
+-- @param explanation Short description of the test, must be of type string.
+--                    Test structure error is reported if the type is not a string.
 --
 function is_equal(current_value, expected_value, explanation)
     -- Verify that <current_value> is specified:
@@ -203,7 +206,8 @@ end
 --
 -- @param current_value Value to test, can't be nil
 -- @param expected_value Expected value, can't be nil
--- @param explanation Short description of the test, must be of type string
+-- @param explanation Short description of the test, must be of type string.
+--                    Test structure error is reported if the type is not a string.
 --
 function is_unequal(current_value, expected_value, explanation)
     -- Verify that <current_value> is specified:
@@ -247,7 +251,8 @@ end
 --
 -- @param current_value Value to test, can't be nil
 -- @param pattern Text pattern that is specified in PIL, can't be nil
--- @param explanation Short description of the test, must be of type string
+-- @param explanation Short description of the test, must be of type string.
+--                    Test structure error is reported if the type is not a string.
 --
 function is_like(current_value, pattern, explanation)
     -- Verify that <current_value> is specified:
@@ -297,7 +302,8 @@ end
 --
 -- @param current_value Value to test, can't be nil
 -- @param pattern Text pattern that is specified in PIL, can't be nil
--- @param explanation Short description of the test, must be of type string
+-- @param explanation Short description of the test, must be of type string.
+--                    Test structure error is reported if the type is not a string.
 --
 function is_unlike(current_value, pattern, explanation)
     -- Verify that <current_value> is specified:
@@ -348,7 +354,8 @@ end
 -- @param value Value to test
 -- @param expectedType One of the following strings: string, number, function, boolean, nil,
 --                                                   table or thread
--- @param explanation Short description of the test, must be of type string
+-- @param explanation Short description of the test, must be of type string.
+--                    Test structure error is reported if the type is not a string.
 --
 function is_type(value, expected_type, explanation)
     -- Verify that <expected_type> is specified:
@@ -385,7 +392,8 @@ end
 -- @param value Value to test
 -- @param expectedType One of the following strings: string, number, function, boolean, nil,
 --                                                   table or thread
--- @param explanation Short description of the test, must be of type string
+-- @param explanation Short description of the test, must be of type string.
+--                    Test structure error is reported if the type is not a string.
 --
 function is_not_type(value, expected_type, explanation)
     -- Verify that <expected_type> is specified:
@@ -419,7 +427,8 @@ end
 --  is_nil(result, "The value is nil")
 --
 -- @param value Value to test
--- @param explanation Short description of the test, must be of type string
+-- @param explanation Short description of the test, must be of type string.
+--                    Test structure error is reported if the type is not a string.
 --
 function is_nil(value, explanation)
     -- Determine the type of the value:
@@ -444,7 +453,8 @@ end
 --  is_not_nil(result, "The value is not nil.")
 --
 -- @param value Value to test
--- @param explanation Short description of the test, must be of type string
+-- @param explanation Short description of the test, must be of type string.
+--                    Test structure error is reported if the type is not a string.
 --
 function is_not_nil(value, explanation)
     -- Determine the type of the value:
@@ -469,7 +479,8 @@ end
 --  is_empty(results, "The table is empty")
 -- 
 -- @param table Table to test, must be of type table
--- @param explanation Short description of the test, must be of type string
+-- @param explanation Short description of the test, must be of type string.
+--                    Test structure error is reported if the type is not a string.
 --
 function is_empty(table, explanation)
     -- Verify that <table> is specified:
@@ -509,7 +520,8 @@ end
 --  is_not_empty(results, "The table is not empty")
 -- 
 -- @param table Table to test, must be of type table
--- @param explanation Short description of the test, must be of type string
+-- @param explanation Short description of the test, must be of type string.
+--                    Test structure error is reported if the type is not a string.
 --
 function is_not_empty(table, explanation)
     -- Verify that <table> is specified:
@@ -545,7 +557,8 @@ end
 --
 --  pass("The value is on the list of allowed values.")
 --
--- @param explanation Short description of the test, must be of type string
+-- @param explanation Short description of the test, must be of type string.
+--                    Test structure error is reported if the type is not a string.
 --
 function pass(explanation)
     -- Verify that <explanation> is specified:
@@ -576,7 +589,8 @@ end
 --
 --  fail("The value is not on the list of allowed values.")
 --
--- @param explanation Short description of the test, must be of type string
+-- @param explanation Short description of the test, must be of type string.
+--                    Test structure error is reported if the type is not a string.
 --
 function fail(explanation)
     -- Verify that <explanation> is specified:
@@ -611,7 +625,8 @@ end
 --
 --  warn("This might change in the future.")
 --
--- @param explanation Short description of the test, must be of type string
+-- @param explanation Short description of the test, must be of type string.
+--                    Test structure error is reported if the type is not a string.
 --
 function warn(explanation)
     -- Verify that <explanation> is specified:
