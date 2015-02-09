@@ -1,5 +1,6 @@
 -- Test100Failures1Pass.lua - check that graphs are rendered correctly.
--- Copyright (C) 2014 Pavel Tisnovsky
+--
+-- Copyright (C) 2014, 2015  Pavel Tisnovsky
 --
 --
 -- This file is part of Emender.
@@ -23,7 +24,7 @@ Test100Failures1Pass = {
         description = "Check that graphs are rendered correctly.",
         authors = "Pavel Tisnovsky",
         emails = "ptisnovs@redhat.com",
-        changed = "2014-10-08",
+        changed = "2015-02-09",
         tags = {"BasicTest", "SmokeTest"},
     },
 }
@@ -72,5 +73,71 @@ function Test100Failures1Pass.testC()
     for i = 1, 50 do
         fail("Fail#" .. (i+50))
     end
+end
+
+
+
+--
+-- Mixed case.
+--
+function Test100Failures1Pass.testD()
+    -- call fail() once
+    fail("Fail#1")
+    -- call pass() once
+    pass("Pass")
+    -- call fail() 99 times
+    for i = 1, 99 do
+        fail("Fail#" .. i)
+    end
+end
+
+
+
+--
+-- Mixed case.
+--
+function Test100Failures1Pass.testE()
+    -- call fail() 99 times
+    for i = 1, 99 do
+        fail("Fail#" .. i)
+    end
+    -- call pass() once
+    pass("Pass")
+    -- call fail() once
+    fail("Fail#100")
+end
+
+
+
+--
+-- Mixed case.
+--
+function Test100Failures1Pass.testF()
+    -- call fail() two trimes
+    fail("Fail#1")
+    fail("Fail#1")
+    -- call pass() once
+    pass("Pass")
+    -- call fail() 98 times
+    for i = 1, 98 do
+        fail("Fail#" .. i)
+    end
+end
+
+
+
+--
+-- Mixed case.
+--
+function Test100Failures1Pass.testG()
+    -- call fail() 98 times
+    for i = 1, 98 do
+        fail("Fail#" .. i)
+    end
+    -- call pass() once
+    pass("Pass")
+    -- call fail() two times
+    fail("Fail#99")
+    fail("Fail#100")
 end
 
