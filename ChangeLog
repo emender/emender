@@ -1,3 +1,8 @@
+2015-02-10  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* test/TestAssertionIsLike.lua:
+	Fixed names of several test suites.
+
 2015-02-09  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* selfchecks/test_assertion_is_equal.in:
@@ -6,7 +11,7 @@
 	* selfchecks/test_assertion_is_type.in:
 	* selfchecks/test_assertion_is_unequal.in:
 	* selfchecks/test_assertion_is_unlike.in:
-	Fixed six selfcheck due to changes made in the core.
+	Fixed six selfchecks due to changes made in the core.
 
 2015-02-09  Pavel Tisnovsky  <ptisnovs@redhat.com>
 

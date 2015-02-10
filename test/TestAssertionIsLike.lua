@@ -673,7 +673,6 @@ end
 
 
 
-
 --
 -- Verify that "%c" matches "\v".
 --
@@ -1037,7 +1036,7 @@ end
 --
 -- Verify that "%p" matches ".".
 --
-function TestAssertionIsLike.testPositive106()
+function TestAssertionIsLike.testPositive111()
     is_like(".", "%p", "positive test")
 end
 
@@ -1046,7 +1045,7 @@ end
 --
 -- Verify that "%p+" matches ".".
 --
-function TestAssertionIsLike.testPositive107()
+function TestAssertionIsLike.testPositive112()
     is_like(".", "%p+", "positive test")
 end
 
@@ -1055,7 +1054,7 @@ end
 --
 -- Verify that "%p*" matches ".".
 --
-function TestAssertionIsLike.testPositive108()
+function TestAssertionIsLike.testPositive113()
     is_like(".", "%p*", "positive test")
 end
 
@@ -1064,7 +1063,7 @@ end
 --
 -- Verify that "%p-" matches ".".
 --
-function TestAssertionIsLike.testPositive109()
+function TestAssertionIsLike.testPositive114()
     is_like(".", "%p-", "positive test")
 end
 
@@ -1073,7 +1072,7 @@ end
 --
 -- Verify that "%p?" matches ".".
 --
-function TestAssertionIsLike.testPositive110()
+function TestAssertionIsLike.testPositive115()
     is_like(".", "%p?", "positive test")
 end
 
