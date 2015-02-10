@@ -1079,6 +1079,96 @@ end
 
 
 --
+-- Verify that "%d" matches "12345".
+--
+function TestAssertionIsLike.testPositive116()
+    is_like("prefix@12345", "prefix@%d", "positive test")
+end
+
+
+
+--
+-- Verify that "%d+" matches "12345".
+--
+function TestAssertionIsLike.testPositive117()
+    is_like("prefix@12345", "prefix@%d+", "positive test")
+end
+
+
+
+--
+-- Verify that "%d*" matches "12345".
+--
+function TestAssertionIsLike.testPositive118()
+    is_like("prefix@12345", "prefix@%d*", "positive test")
+end
+
+
+
+--
+-- Verify that "%d-" matches "12345".
+--
+function TestAssertionIsLike.testPositive119()
+    is_like("prefix@12345", "prefix@%d-", "positive test")
+end
+
+
+
+--
+-- Verify that "%d?" matches "1".
+--
+function TestAssertionIsLike.testPositive120()
+    is_like("prefix@1", "prefix@%d?", "positive test")
+end
+
+
+
+--
+-- Verify that "%a" matches "abc".
+--
+function TestAssertionIsLike.testPositive121()
+    is_like("prefix@abc", "prefix@%a", "positive test")
+end
+
+
+
+--
+-- Verify that "%a+" matches "abc".
+--
+function TestAssertionIsLike.testPositive122()
+    is_like("prefix@abc", "prefix@%a+", "positive test")
+end
+
+
+
+--
+-- Verify that "%a*" matches "abc".
+--
+function TestAssertionIsLike.testPositive123()
+    is_like("prefix@abc", "prefix@%a*", "positive test")
+end
+
+
+
+--
+-- Verify that "%a-" matches "abc".
+--
+function TestAssertionIsLike.testPositive124()
+    is_like("prefix@abc", "prefix@%a+", "positive test")
+end
+
+
+
+--
+-- Verify that "%a?" matches "abc".
+--
+function TestAssertionIsLike.testPositive125()
+    is_like("prefix@abc", "prefix@%a?", "positive test")
+end
+
+
+
+--
 -- Negative test - wrong number of parameters.
 --
 function TestAssertionIsLike.testNegative01()
@@ -1299,6 +1389,4 @@ function TestAssertionIsLike.testNegative21()
     -- and call the is_like() function with the coroutine as its argument
     is_like(func, "a", "coroutine is not a valid expression")
 end
-
-
 
