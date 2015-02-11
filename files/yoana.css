@@ -33,7 +33,7 @@ h1, h2, h3, h4, h5, h6 { font-weight: bold; }
 .tab-pane .panel-heading {
   background-color: #F0F2F7 !important;
 }
-.tab-pane .test-results tr td:last-child {
+.tab-pane .summary-bars tr td:last-child {
   width: 100%;
 }
 .tab-pane {
