@@ -339,7 +339,7 @@ function core.runTest(scriptDirectory, filename, verboseOperation, testOptions, 
                 print("Script filename: test/" .. filename)
                 print("Test name: " ..testSuiteName)
             end
-            if fileExists(filename) then
+            if path.file_exists(filename) then
                dofile(filename)
             else
                print("Test '" .. filename .. "' does not exist.")
@@ -484,7 +484,7 @@ function getTestList()
     local testDirectory = currentDirectory .. "test"
 
     -- check if directory containing tests exists
-    if directoryExists(testDirectory) then
+    if path.directory_exists(testDirectory) then
         local command = 'ls -1 '.. testDirectory .. "/*.lua"..' 2> /dev/null | xargs -n 1 basename 2> /dev/null'
         local process = io.popen(command)
         local testList = process:lines()
