@@ -214,19 +214,78 @@ end
 -- Write the test suite "header" to the HTML file.
 --
 function htmlWriter.writeSuiteStart(fout, testSuite)
+    local passed = testSuite.passCount
+    local failed = testSuite.failCount
+    local errors = testSuite.errorCount
+
+    local passPerc, failPerc, errorPerc = computeSuitePercantages(testSuite)
+
     htmlWriter.testSuiteCounter = htmlWriter.testSuiteCounter + 1
     if htmlWriter.testSuiteCounter == 1 then
         fout:write([[
             <div class="tab-pane active" id="test]] .. htmlWriter.testSuiteCounter .. [[">
-              <h4>Test Results</h4>
 ]])
     else
         fout:write([[
             <div class="tab-pane" id="test]] .. htmlWriter.testSuiteCounter .. [[">
-              <h4>Test Results</h4>
 ]])
     end
-    fout:write("              <div class=\"row\">\n")
+    fout:write([[
+              <div class="row">
+                <div class="col-md-6 summary">
+                  <h4>Summary</h4>
+                  <table class="test-results">
+                    <tr>
+                      <td>Passed:</td>
+                      <td>]] .. passed .. [[</td>
+                      <td>
+                        <div class="progress" title="Success: ]] .. passPerc .. [[%; Failure: ]] .. failPerc .. [[%; Error: ]] .. errorPerc .. [[%">
+                          <div class="progress-bar progress-bar-success" style="width: ]] .. passPerc .. [[%">]] .. passPerc .. [[%</div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Failed:</td>
+                      <td>]] .. failed .. [[</td>
+                      <td>
+                        <div class="progress" title="Success: ]] .. passPerc .. [[%; Failure: ]] .. failPerc .. [[%; Error: ]] .. errorPerc .. [[%">
+                          <div class="progress-bar progress-bar-danger" style="width: ]] .. failPerc .. [[%">]] .. failPerc .. [[%</div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Errors:</td>
+                      <td>]] .. errors .. [[</td>
+                      <td>
+                        <div class="progress" title="Success: ]] .. passPerc .. [[%; Failure: ]] .. failPerc .. [[%; Error: ]] .. errorPerc .. [[%">
+                          <div class="progress-bar progress-bar-warning" style="width: ]] .. errorPerc .. [[%">]] .. errorPerc .. [[%</div>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                  <table class="test-metadata">
+                    <tr>
+                      <td>Authors:</td>
+                      <td>]] .. testSuite.authors .. [[</td>
+                    </tr>
+                    <tr>
+                      <td>Emails:</td>
+                      <td>]] .. testSuite.emails .. [[</td>
+                    </tr>
+                    <tr>
+                      <td>Last modified:</td>
+                      <td>]] .. testSuite.modified .. [[</td>
+                    </tr>
+                    <tr>
+                      <td>Tags:</td>
+                      <td>]] .. getTags(testSuite).. [[</td>
+                    </tr>
+                  </table>
+                </div><!--summary-->
+              </div><!--row-->
+              <h4>Test Results</h4>
+              <div class="row">
+]])
 
     htmlWriter.testCaseCounter = 0
 end
@@ -284,65 +343,7 @@ end
 -- Write the test suite "footer" to the HTML file.
 --
 function htmlWriter.writeSuiteEnd(fout, testSuite)
-    local passed = testSuite.passCount
-    local failed = testSuite.failCount
-    local errors = testSuite.errorCount
-
-    local passPerc, failPerc, errorPerc = computeSuitePercantages(testSuite)
-
     fout:write([[
-              </div><!--row-->
-              <div class="row">
-                <div class="col-md-6 summary">
-                  <h4>Summary</h4>
-                  <table class="test-results">
-                    <tr>
-                      <td>Passed:</td>
-                      <td>]] .. passed .. [[</td>
-                      <td>
-                        <div class="progress" title="Success: ]] .. passPerc .. [[%; Failure: ]] .. failPerc .. [[%; Error: ]] .. errorPerc .. [[%">
-                          <div class="progress-bar progress-bar-success" style="width: ]] .. passPerc .. [[%">]] .. passPerc .. [[%</div>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Failed:</td>
-                      <td>]] .. failed .. [[</td>
-                      <td>
-                        <div class="progress" title="Success: ]] .. passPerc .. [[%; Failure: ]] .. failPerc .. [[%; Error: ]] .. errorPerc .. [[%">
-                          <div class="progress-bar progress-bar-danger" style="width: ]] .. failPerc .. [[%">]] .. failPerc .. [[%</div>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Errors:</td>
-                      <td>]] .. errors .. [[</td>
-                      <td>
-                        <div class="progress" title="Success: ]] .. passPerc .. [[%; Failure: ]] .. failPerc .. [[%; Error: ]] .. errorPerc .. [[%">
-                          <div class="progress-bar progress-bar-warning" style="width: ]] .. errorPerc .. [[%">]] .. errorPerc .. [[%</div>
-                        </div>
-                      </td>
-                    </tr>
-                  </table>
-                  <table class="test-metadata">
-                    <tr>
-                      <td>Authors:</td>
-                      <td>]] .. testSuite.authors .. [[</td>
-                    </tr>
-                    <tr>
-                      <td>Emails:</td>
-                      <td>]] .. testSuite.emails .. [[</td>
-                    </tr>
-                    <tr>
-                      <td>Last modified:</td>
-                      <td>]] .. testSuite.modified .. [[</td>
-                    </tr>
-                    <tr>
-                      <td>Tags:</td>
-                      <td>]] .. getTags(testSuite).. [[</td>
-                    </tr>
-                  </table>
-                </div><!--summary-->
               </div><!--row-->
             </div><!--tab-pane-->
 ]])
