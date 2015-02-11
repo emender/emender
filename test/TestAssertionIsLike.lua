@@ -1169,6 +1169,96 @@ end
 
 
 --
+-- Verify that "%x" matches "12345".
+--
+function TestAssertionIsLike.testPositive136()
+    is_like("prefix@12345", "%x", "positive test")
+end
+
+
+
+--
+-- Verify that "%x+" matches "12345".
+--
+function TestAssertionIsLike.testPositive137()
+    is_like("prefix@12345", "%x+", "positive test")
+end
+
+
+
+--
+-- Verify that "%x*" matches "12345".
+--
+function TestAssertionIsLike.testPositive138()
+    is_like("prefix@12345", "%x*", "positive test")
+end
+
+
+
+--
+-- Verify that "%x-" matches "12345".
+--
+function TestAssertionIsLike.testPositive139()
+    is_like("prefix@12345", "%x-", "positive test")
+end
+
+
+
+--
+-- Verify that "%x?" matches "1".
+--
+function TestAssertionIsLike.testPositive140()
+    is_like("prefix@1", "%x?", "positive test")
+end
+
+
+
+--
+-- Verify that "%x" matches "abcdef".
+--
+function TestAssertionIsLike.testPositive141()
+    is_like("prefix@abcdef", "%x", "positive test")
+end
+
+
+
+--
+-- Verify that "%x+" matches "abcdef".
+--
+function TestAssertionIsLike.testPositive142()
+    is_like("prefix@abcdef", "%x+", "positive test")
+end
+
+
+
+--
+-- Verify that "%x*" matches "abcdef".
+--
+function TestAssertionIsLike.testPositive143()
+    is_like("prefix@abcdef", "%x*", "positive test")
+end
+
+
+
+--
+-- Verify that "%x-" matches "abcdef".
+--
+function TestAssertionIsLike.testPositive144()
+    is_like("prefix@abcdef", "%x-", "positive test")
+end
+
+
+
+--
+-- Verify that "%x?" matches "abcdef".
+--
+function TestAssertionIsLike.testPositive145()
+    is_like("prefix@abcdef", "%x?", "positive test")
+end
+
+
+
+--
 -- Verify that "%l" matches "abc".
 --
 function TestAssertionIsLike.testPositive126()

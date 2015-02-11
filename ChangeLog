@@ -1,6 +1,11 @@
 2015-02-11  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* src/TestAssertionIsLike.lua:
+	Yet another tests added into TestAssertionIsLike.
+
+2015-02-11  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* src/TestAssertionIsLike.lua:
 	Ten new tests added into TestAssertionIsLike.lua.
 
 2015-02-10  Pavel Tisnovsky  <ptisnovs@redhat.com>
