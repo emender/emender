@@ -1169,6 +1169,96 @@ end
 
 
 --
+-- Verify that "%l" matches "abc".
+--
+function TestAssertionIsLike.testPositive126()
+    is_like("prefix@abc", "%l", "positive test")
+end
+
+
+
+--
+-- Verify that "%l+" matches "abc".
+--
+function TestAssertionIsLike.testPositive127()
+    is_like("prefix@abc", "%l+", "positive test")
+end
+
+
+
+--
+-- Verify that "%l*" matches "abc".
+--
+function TestAssertionIsLike.testPositive128()
+    is_like("prefix@abc", "%l*", "positive test")
+end
+
+
+
+--
+-- Verify that "%l-" matches "abc".
+--
+function TestAssertionIsLike.testPositive129()
+    is_like("prefix@abc", "%l+", "positive test")
+end
+
+
+
+--
+-- Verify that "%l?" matches "abc".
+--
+function TestAssertionIsLike.testPositive130()
+    is_like("prefix@abc", "%l?", "positive test")
+end
+
+
+
+--
+-- Verify that "%u" matches "ABC".
+--
+function TestAssertionIsLike.testPositive131()
+    is_like("prefix@ABC", "%u", "positive test")
+end
+
+
+
+--
+-- Verify that "%u+" matches "ABC".
+--
+function TestAssertionIsLike.testPositive132()
+    is_like("prefix@ABC", "%u+", "positive test")
+end
+
+
+
+--
+-- Verify that "%u*" matches "ABC".
+--
+function TestAssertionIsLike.testPositive133()
+    is_like("prefix@ABC", "%u*", "positive test")
+end
+
+
+
+--
+-- Verify that "%u-" matches "ABC".
+--
+function TestAssertionIsLike.testPositive134()
+    is_like("prefix@ABC", "%u+", "positive test")
+end
+
+
+
+--
+-- Verify that "%u?" matches "ABC".
+--
+function TestAssertionIsLike.testPositive135()
+    is_like("prefix@ABC", "%u?", "positive test")
+end
+
+
+
+--
 -- Negative test - wrong number of parameters.
 --
 function TestAssertionIsLike.testNegative01()
