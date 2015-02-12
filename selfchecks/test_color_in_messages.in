@@ -24,10 +24,30 @@
 
     [ PASS ]  Do **you** want **to** see **many** colorized **words**?
 
+  Test Case: test05
+
+    [ PASS ]  Package **xorg-x11-drv-*** not found.
+
+  Test Case: test06
+
+    [ PASS ]  Package **xorg-x11-drv-*** not **found**.
+
+  Test Case: test07
+
+    [ PASS ]  >>> Five stars: ***** <<<
+
+  Test Case: test08
+
+    [ PASS ]  >>> Six stars: ****** <<<
+
+  Test Case: test09
+
+    [ PASS ]  >>> Seven stars: ******* <<<
+
   Test Summary                                                            
 
-    Executed Test Cases: 4
-    Passed Test Cases:   4
+    Executed Test Cases: 9
+    Passed Test Cases:   9
     Failed Test Cases:   0
     Encountered Errors:  0
     Overall Result:      PASS

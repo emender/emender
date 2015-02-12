@@ -63,3 +63,47 @@ function TestColorInMessages.test04()
     pass("Do **you** want **to** see **many** colorized **words**?")
 end
 
+
+
+--
+-- This function calls pass() once.
+--
+function TestColorInMessages.test05()
+    pass("Package **xorg-x11-drv-*** not found.")
+end
+
+
+
+--
+-- This function calls pass() once.
+--
+function TestColorInMessages.test06()
+    pass("Package **xorg-x11-drv-*** not **found**.")
+end
+
+
+
+--
+-- This function calls pass() once.
+--
+function TestColorInMessages.test07()
+    pass(">>> Five stars: ***** <<<")
+end
+
+
+
+--
+-- This function calls pass() once.
+--
+function TestColorInMessages.test08()
+    pass(">>> Six stars: ****** <<<")
+end
+
+
+
+--
+-- This function calls pass() once.
+--
+function TestColorInMessages.test09()
+    pass(">>> Seven stars: ******* <<<")
+end
