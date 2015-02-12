@@ -1,5 +1,10 @@
 2015-02-12  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* src/writers/htmlWriter.lua:
+	Fixed issue #10.
+
+2015-02-12  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* selfchecks/selfcheck.sh:
 	* selfchecks/test_return_value_n1.in:
 	* selfchecks/test_return_value_n2.in:

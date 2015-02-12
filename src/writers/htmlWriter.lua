@@ -100,8 +100,9 @@ end
 --
 function writeLeftTab(fout, results, passedTests, failedTests)
     local testSuites = results.suites
-    local failed = failedTests > 0
     for i, testSuite in ipairs(testSuites) do
+        -- mark overall test failure in case at least one error or fail is detected
+        local failed = testSuite.failCount > 0 or testSuite.errorCount > 0
         if i==1 then
             fout:write("            <li class=\"active\">\n")
         else
