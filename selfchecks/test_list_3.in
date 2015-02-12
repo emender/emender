@@ -1,0 +1,15 @@
+Test: TestAssertionFail
+Test: TestAssertionIsEmpty
+Test: TestAssertionIsEqual
+Test: TestAssertionIsFalse
+Test: TestAssertionIsLike
+Test: TestAssertionIsNil
+Test: TestAssertionIsNotEmpty
+Test: TestAssertionIsNotNil
+Test: TestAssertionIsNotType
+Test: TestAssertionIsTrue
+Test: TestAssertionIsType
+Test: TestAssertionIsUnequal
+Test: TestAssertionIsUnlike
+Test: TestAssertionPass
+Test: TestAssertionWarn
