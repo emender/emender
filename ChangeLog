@@ -1,10 +1,15 @@
 2015-02-12  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* src/core.lua:
+	Fixed issue #1.
+
+2015-02-12  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* selfchecks/selfcheck.sh:
 	* selfchecks/test_list_1.in:
 	* selfchecks/test_list_2.in:
 	* selfchecks/test_list_3.in:
-	Added three selfcheck to test fixes #7 and #11.
+	Added three selfchecks to test fixes #7 and #11.
 
 2015-02-12  Pavel Tisnovsky  <ptisnovs@redhat.com>
 

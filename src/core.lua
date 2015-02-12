@@ -495,7 +495,8 @@ function getTestList()
         return putTestListIntoTable(testList)
     else
         print("Test directory '" .. testDirectory .. "' does not exist!")
-        return {}
+        -- we need to use special value
+        return nil
     end
 end
 
@@ -520,9 +521,13 @@ function performListOfAllTests(verboseOperation)
 
     -- read all tests stored in a "test" subdirectory
     local testList = getTestList()
-    -- loop over all tests stored in testList
-    for _, filename in ipairs(testList) do
-        core.printTestInfo(testDirectory, filename, verboseOperation)
+
+    -- if test directory exists (might be empty)
+    if testList then
+        -- loop over all tests stored in testList
+        for _, filename in ipairs(testList) do
+            core.printTestInfo(testDirectory, filename, verboseOperation)
+        end
     end
 end
 
@@ -586,23 +591,27 @@ function core.runTests(verboseOperation, colorOutput, testsToRun, outputFiles, t
         local currentDirectory = getCurrentDirectory()
         -- read all tests stored in a "test" subdirectory
         local testList = getTestList()
-        -- loop over all tests stored in testList
-        for i, filename in ipairs(testList) do
-            -- load and run one test
-            local result = core.runTest(currentDirectory, filename, verboseOperation, testOptions, colorOutput)
-            -- refresh test statistics
-            if result ~= nil then
-                if result then
-                    core.results.passedTests = core.results.passedTests + 1
-                else
-                    core.results.failedTests = core.results.failedTests + 1
+        -- if test directory exists
+        if testList then
+            -- loop over all tests stored in testList
+            for i, filename in ipairs(testList) do
+                -- load and run one test
+                local result = core.runTest(currentDirectory, filename, verboseOperation, testOptions, colorOutput)
+                -- refresh test statistics
+                if result ~= nil then
+                    if result then
+                        core.results.passedTests = core.results.passedTests + 1
+                    else
+                        core.results.failedTests = core.results.failedTests + 1
+                    end
                 end
             end
+        else
+            returnValue = false
         end
         -- test directory seems to be empty
         if core.results.passedTests == 0 and core.results.failedTests == 0 then
             print("No tests to run.")
-            returnValue = false
         end
     end
 
@@ -611,7 +620,9 @@ function core.runTests(verboseOperation, colorOutput, testsToRun, outputFiles, t
         writeSummary(io.stdout, core.results, colorOutput)
     else
         -- update value used by os.exit()
-        returnValue = false
+        -- well no tests were run, but according to issue #1:
+        -- "The emend command should return 0 in this situation."
+        --returnValue = false
     end
     --dumpTestResults()
     exportResults(outputFiles, colorOutput, core.writer, core.results)
