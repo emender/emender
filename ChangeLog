@@ -1,5 +1,32 @@
 2015-02-12  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* selfchecks/test_100_failures_1_info.in:
+	* selfchecks/test_100_failures_1_pass.in:
+	* selfchecks/test_100_infos_1_fail.in:
+	* selfchecks/test_100_infos_1_pass.in:
+	* selfchecks/test_100_passes_1_fail.in:
+	* selfchecks/test_100_passes_1_info.in:
+	* selfchecks/test_1_fail.in:
+	* selfchecks/test_1_info.in:
+	* selfchecks/test_1_pass.in:
+	* selfchecks/test_assertion_fail.in:
+	* selfchecks/test_assertion_is_empty.in:
+	* selfchecks/test_assertion_is_equal.in:
+	* selfchecks/test_assertion_is_false.in:
+	* selfchecks/test_assertion_is_like.in:
+	* selfchecks/test_assertion_is_nil.in:
+	* selfchecks/test_assertion_is_not_empty.in:
+	* selfchecks/test_assertion_is_not_nil.in:
+	* selfchecks/test_assertion_is_not_type.in:
+	* selfchecks/test_assertion_is_true.in:
+	* selfchecks/test_assertion_is_type.in:
+	* selfchecks/test_assertion_is_unequal.in:
+	* selfchecks/test_assertion_is_unlike.in:
+	* selfchecks/test_assertion_warn.in:
+	Updated selfchecks output to reflect changes in the core.
+
+2015-02-12  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* src/core.lua:
 	* src/writers/commonTextWriter.lua:
 	* src/writers/textWriter.lua:
