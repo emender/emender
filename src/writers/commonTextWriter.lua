@@ -6,21 +6,41 @@ function colorMessage(message)
     local highlightStop = _G["logger"].codes.reset
     local output = ""
     local insideStars = false
+    local wannaCloseRedBlock = false
     local i = 1
 
     while i <= #message do
         local char = message:sub(i,i)
         local twoChars = message:sub(i, i+1)
+
         -- two stars means we need to use the red color
         -- but those two stars are used at the beggining *and* at the end too
-        if twoChars == "**" then
+        if twoChars == "**" and not wannaCloseRedBlock then
             i = i + 1
             if insideStars then
-                insideStars = false
-                output = output .. highlightStop
+                -- we are probably at the end of 'red' block, but we need to
+                -- take care of the remaining stars: '*'
+                wannaCloseRedBlock = true
             else
                 insideStars = true
+                wannaCloseRedBlock = false
                 output = output .. highlightStart
+            end
+        -- take care of more than two stars at the end of 'red' block, etc.:
+        -- "** xx ***"
+        -- "*****"
+        -- or even
+        -- "******"
+        -- and
+        -- "*******"
+        elseif wannaCloseRedBlock then
+            if char == "*" then
+                output = output .. "*"
+            else
+                insideStars = false
+                wannaCloseRedBlock = false
+                output = output .. highlightStop
+                output = output .. char
             end
         else
             output = output .. char
