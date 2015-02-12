@@ -223,7 +223,7 @@ function main(arg)
     elseif getopt.isLicenseOptionUsed(options) then
         license.showLicense(colorOutput)
     elseif getopt.isTestListOptionUsed(options) then
-        core.performTestList(verboseOperations, colorOutput)
+        core.performTestList(verboseOperations, colorOutput, testsToRun)
     else
         local returnValue = core.runTests(verboseOperations, colorOutput, testsToRun, outputFiles, testOptions)
         if returnValue then

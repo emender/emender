@@ -143,7 +143,11 @@ function core.printTestInfo(testDirectory, filename, verboseOperation)
     if testName then
         core.checkTestNameShadowing(testName)
         -- try to load the script that contains selected test
-        dofile(testDirectory .. "/" .. filename)
+        if testDirectory then
+            dofile(testDirectory .. "/" .. filename)
+        else
+            dofile(filename)
+        end
         -- if test is properly loaded
         local test = _G[testName]
         -- if the test is properly loaded, read and print informations about it
@@ -498,9 +502,18 @@ end
 
 
 --
--- List all tests stored in specified script/test directory.
+-- Returns true if at least one test is specified on the command line.
 --
-function core.performTestList(verboseOperation)
+function areTestsSpecified(testsToRun)
+    return testsToRun and #testsToRun > 0
+end
+
+
+
+--
+-- List all tests stored in the current working directory + 'test' subdirectory.
+--
+function performListOfAllTests(verboseOperation)
     -- test subdirectory might be different than the directory where the script is stored
     local currentDirectory = getCurrentDirectory()
     local testDirectory = currentDirectory .. "test"
@@ -510,6 +523,32 @@ function core.performTestList(verboseOperation)
     -- loop over all tests stored in testList
     for _, filename in ipairs(testList) do
         core.printTestInfo(testDirectory, filename, verboseOperation)
+    end
+end
+
+
+
+--
+-- Perform a list for specified tests only.
+--
+function performListOfSpecifiedTests(verboseOperation, testsToRun)
+    -- try to process all specified tests
+    for _, filename in ipairs(testsToRun) do
+        core.printTestInfo(nil, filename, verboseOperation)
+    end
+end
+
+
+
+--
+-- List all tests stored in specified script/test directory.
+--
+function core.performTestList(verboseOperation, colorOutput, testsToRun)
+    -- some test(s) are specified on the command line
+    if areTestsSpecified(testsToRun) then
+        performListOfSpecifiedTests(verboseOperation, testsToRun)
+    else
+        performListOfAllTests(verboseOperation)
     end
 end
 
@@ -528,7 +567,7 @@ function core.runTests(verboseOperation, colorOutput, testsToRun, outputFiles, t
     _G["colorOutput"] = colorOutput
 
     -- some test(s) are specified on the command line
-    if testsToRun and #testsToRun > 0 then
+    if areTestsSpecified(testsToRun) then
         -- try to load and run all specified tests
         for _, filename in ipairs(testsToRun) do
             -- load and run one test
