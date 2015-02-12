@@ -1,5 +1,16 @@
 2015-02-12  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* selfchecks/selfcheck.sh:
+	* selfchecks/test_return_value_1.in:
+	* selfchecks/test_return_value_2.in:
+	* selfchecks/test_return_value_3.in:
+	* selfchecks/test_return_value_4.in:
+	* selfchecks/test_return_value_5.in:
+	* selfchecks/test_return_value_6.in:
+	Six new selfchecks added: checks for Emender's return value.
+
+2015-02-12  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* src/core.lua:
 	Fixed issue #1.
 

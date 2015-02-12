@@ -155,6 +155,29 @@ function runOtherTests {
 
 
 
+# Test Emender's return value
+function runTestReturnValuePositive {
+     ../emend -V
+     echo $? > test_return_value_1.out
+
+     ../emend --version
+     echo $? > test_return_value_2.out
+
+     ../emend -L
+     echo $? > test_return_value_3.out
+
+     ../emend --license
+     echo $? > test_return_value_4.out
+
+     ../emend -h
+     echo $? > test_return_value_5.out
+
+     ../emend --help
+     echo $? > test_return_value_6.out
+}
+
+
+
 # Run all tests
 function runAllTests {
     runTestsForBasicCLI
@@ -165,6 +188,7 @@ function runAllTests {
     runTestsModules
     runTestsForAssertions
     runOtherTests
+    runTestReturnValuePositive
 }
 
 
