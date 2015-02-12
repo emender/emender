@@ -1,6 +1,18 @@
 2015-02-12  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* selfchecks/selfcheck.sh:
+	* selfchecks/test_return_value_n1.in:
+	* selfchecks/test_return_value_n2.in:
+	* selfchecks/test_return_value_n3.in:
+	* selfchecks/test_return_value_n4.in:
+	* selfchecks/test_return_value_n5.in:
+	* selfchecks/test_return_value_n6.in:
+	Six new selfchecks added: checks for Emender's return value returned
+	in case of bad input.
+
+2015-02-12  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* selfchecks/selfcheck.sh:
 	* selfchecks/test_return_value_1.in:
 	* selfchecks/test_return_value_2.in:
 	* selfchecks/test_return_value_3.in:

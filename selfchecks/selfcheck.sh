@@ -178,6 +178,29 @@ function runTestReturnValuePositive {
 
 
 
+# Test Emender's return negative
+function runTestReturnValueNegative {
+     ../emend -x
+     echo $? > test_return_value_n1.out
+
+     ../emend --xyzzy
+     echo $? > test_return_value_n2.out
+
+     ../emend -x -h
+     echo $? > test_return_value_n3.out
+
+     ../emend -?
+     echo $? > test_return_value_n4.out
+
+     ../emend --??
+     echo $? > test_return_value_n5.out
+
+     ../emend -v -c -V -x -y -z
+     echo $? > test_return_value_n6.out
+}
+
+
+
 # Run all tests
 function runAllTests {
     runTestsForBasicCLI
@@ -189,6 +212,7 @@ function runAllTests {
     runTestsForAssertions
     runOtherTests
     runTestReturnValuePositive
+    runTestReturnValueNegative
 }
 
 
