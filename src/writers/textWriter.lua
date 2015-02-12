@@ -30,7 +30,7 @@ end
 
 -- Write the report footer to the file:
 function textWriter.writeFooter(fout, results)
-    writeSummary(fout, results, false)
+    writeSummary(fout, results, false, true)
 end
 
 -- Write the test suite header to the file:

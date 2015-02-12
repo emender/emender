@@ -617,7 +617,7 @@ function core.runTests(verboseOperation, colorOutput, testsToRun, outputFiles, t
 
     -- if no tests were run, report this situation
     if core.results.passedTests > 0 or core.results.failedTests > 0 then
-        writeSummary(io.stdout, core.results, colorOutput)
+        writeSummary(io.stdout, core.results, colorOutput, false)
     else
         -- update value used by os.exit()
         -- well no tests were run, but according to issue #1:
