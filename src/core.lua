@@ -138,12 +138,12 @@ end
 -- Print informations about selected test, this function is called
 -- when -l/--list option is specified on the command line.
 --
-function core.printTestInfo(scriptDirectory, filename, verboseOperation)
+function core.printTestInfo(testDirectory, filename, verboseOperation)
     local testName = core.updateTestSuiteName(filename)
     if testName then
         core.checkTestNameShadowing(testName)
         -- try to load the script that contains selected test
-        dofile(scriptDirectory .. "test/" .. filename)
+        dofile(testDirectory .. "/" .. filename)
         -- if test is properly loaded
         local test = _G[testName]
         -- if the test is properly loaded, read and print informations about it
@@ -501,10 +501,15 @@ end
 -- List all tests stored in specified script/test directory.
 --
 function core.performTestList(verboseOperation)
-    local scriptDirectory = getScriptDirectory()
+    -- test subdirectory might be different than the directory where the script is stored
+    local currentDirectory = getCurrentDirectory()
+    local testDirectory = currentDirectory .. "test"
+
+    -- read all tests stored in a "test" subdirectory
     local testList = getTestList()
+    -- loop over all tests stored in testList
     for _, filename in ipairs(testList) do
-        core.printTestInfo(scriptDirectory, filename, verboseOperation)
+        core.printTestInfo(testDirectory, filename, verboseOperation)
     end
 end
 

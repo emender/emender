@@ -1,3 +1,8 @@
+2015-02-12  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* src/core.lua:
+	Fixed issue #7.
+
 2015-02-11  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* selfcheck/test_assertion_is_like.in:
