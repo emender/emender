@@ -322,10 +322,24 @@ end
 
 
 --
+-- Return true only if at least given tag is contained in tags specified for given test.
+--
+function tagsExist(testSuite, tags)
+    for _,tag in ipairs(tags) do
+        if table.contains(testSuite.tags, tag) then
+            return true
+        end
+    end
+    return false
+end
+
+
+
+--
 -- Load and run one selected test.
 -- TODO: this function really needs to be refactored!
 --
-function core.runTest(scriptDirectory, filename, verboseOperation, testOptions, colorOutput)
+function core.runTest(scriptDirectory, filename, verboseOperation, testOptions, colorOutput, tags)
     local testSuiteName = core.updateTestSuiteName(filename)
     if testSuiteName then
         local testSuite = {}
@@ -351,6 +365,14 @@ function core.runTest(scriptDirectory, filename, verboseOperation, testOptions, 
         end
 
         fillInTestMetadata(testSuite, testSuiteName)
+
+        if tags and testSuite.tags and #tags > 0 then
+            local found = tagsExist(testSuite, tags)
+            if not found then
+                return nil
+            end
+        end
+
         addTestOptions(testSuiteName, testOptions)
 
         local setupFunction = core.getSetupFunction(testSuiteName)
@@ -562,7 +584,7 @@ end
 --
 -- Run all selected tests.
 --
-function core.runTests(verboseOperation, colorOutput, testsToRun, outputFiles, testOptions)
+function core.runTests(verboseOperation, colorOutput, testsToRun, outputFiles, testOptions, tags)
     -- variable that controls the return value passed to os.exit()
     local returnValue = true
     core.results.passedTests = 0
@@ -576,7 +598,7 @@ function core.runTests(verboseOperation, colorOutput, testsToRun, outputFiles, t
         -- try to load and run all specified tests
         for _, filename in ipairs(testsToRun) do
             -- load and run one test
-            local result = core.runTest(nil, filename, verboseOperation, testOptions, colorOutput)
+            local result = core.runTest(nil, filename, verboseOperation, testOptions, colorOutput, tags)
             -- refresh test statistics
             if result ~= nil then
                 if result then
@@ -596,7 +618,7 @@ function core.runTests(verboseOperation, colorOutput, testsToRun, outputFiles, t
             -- loop over all tests stored in testList
             for i, filename in ipairs(testList) do
                 -- load and run one test
-                local result = core.runTest(currentDirectory, filename, verboseOperation, testOptions, colorOutput)
+                local result = core.runTest(currentDirectory, filename, verboseOperation, testOptions, colorOutput, tags)
                 -- refresh test statistics
                 if result ~= nil then
                     if result then

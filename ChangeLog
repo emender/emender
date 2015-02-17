@@ -1,5 +1,10 @@
 2015-02-17  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* src/core.lua:
+	Added check for proper tag(s) into the Emender core.
+
+2015-02-17  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* emend:
 	Emend should recognize -t and --tags command line parameters.
 
