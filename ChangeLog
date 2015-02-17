@@ -1,5 +1,12 @@
 2015-02-17  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* test/TestTagA.lua:
+	* test/TestTagB.lua:
+	* test/TestTagC.lua:
+	Added three new tests: TestTagA, TestTagB and TestTagC.
+
+2015-02-17  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* src/core.lua:
 	Added check for proper tag(s) into the Emender core.
 
