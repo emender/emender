@@ -1,4 +1,5 @@
 -- Module with implementation of function to show help (usage).
+--
 -- Copyright (C) 2014, 2015 Pavel Tisnovsky
 --
 -- This file is part of Emender.
@@ -31,11 +32,13 @@ local help = {
 --
 function help.showHelp()
     print([[
-Usage: emend [-clsvDT] [-o FILE] [FILE...]
+Usage: emend [-clsvDT] [-o FILE] [-t TAG...] [FILE...]
        emend -h|-V|-L
 
 -o, --output FILE   store a detailed report to a file; supported file
                     extensions are: .txt, .html, .xml, and .junit
+-t, --tags TAGS     run only tests with selected tags; replace TAGS with
+                    a comma-separated list of tags
 -c, --color         enable colored output
 -l, --list          list available tests and exit
 -s, --summary       suppress detailed test results and print only summaries

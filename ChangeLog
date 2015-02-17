@@ -1,3 +1,8 @@
+2015-02-17  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* src/help.lua:
+	Help should contain -t and --tags command line options.
+
 2015-02-12  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* src/writers/commonTextWriter.lua:
