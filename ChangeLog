@@ -1,5 +1,11 @@
 2015-02-17  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* selfchecks/show_help_1.in:
+	* selfchecks/show_help_2.in:
+	Updated two selfchecks according to changes in the src/help module.
+
+2015-02-17  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* src/help.lua:
 	Help should contain -t and --tags command line options.
 
