@@ -1,6 +1,8 @@
 --
+-- Various enhancements of all string objects.
+--
 -- This file is part of Emender.
--- Copyright (C) 2014 Pavel Tisnovsky, Jaromir Hradilek
+-- Copyright (C) 2014, 2015 Pavel Tisnovsky, Jaromir Hradilek
 --
 -- Emender is free software: you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -196,5 +198,27 @@ function string.escapeHTML(str)
     -- transform them into corresponding HTML entities
     str = str:gsub("&", "&amp;"):gsub("<", "&lt;"):gsub(">", "&gt;"):gsub("\"", "&quot;")
     return str
+end
+
+
+
+--
+-- Implementation of split() function. Many other ideas how to implement
+-- this functionality are discussed here:
+-- http://lua-users.org/wiki/SplitJoin
+--
+function string:split(separator)
+    -- if separator is not given, simply return a table containing
+    -- just one item - the string itself
+    if not separator then
+        return {self}
+    end
+
+    -- table which would contain result - parts of original string
+    local parts = {}
+    local pattern = string.format("([^%s]+)", separator)
+    -- split the string using anonymous function called for each group
+    self:gsub(pattern, function(c) parts[#parts+1] = c end)
+    return parts
 end
 
