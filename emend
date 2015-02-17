@@ -57,6 +57,8 @@ function getCurrentDirectory()
     return pwd
 end
 
+
+
 --
 -- Alter the content of "package.path" to contain the relative path
 -- to "emend" script, because we need to be able to load other modules
@@ -73,8 +75,11 @@ function alterPackagePath()
     package.path = package.path .. ";" ..scriptDirectory.."?.lua"
 end
 
+
+
 --
--- Load all relevant modules
+-- Load all relevant modules and store selected modules into
+-- the global table _G.
 --
 function loadModules()
     alterPackagePath()
@@ -135,7 +140,7 @@ function isTableEmpty(tbl)
     return not tbl or next(tbl) == nil
 end
 
-function printConfiguration(outputFileNames, outputFiles, testsToRun, testOptions)
+function printConfiguration(outputFileNames, outputFiles, testsToRun, testOptions, tags)
     print("Tests to run:")
     for _, testToRun in ipairs(testsToRun) do
         print("", testToRun)
@@ -158,6 +163,16 @@ function printConfiguration(outputFileNames, outputFiles, testsToRun, testOption
     else
         for format, file in pairs(outputFiles) do
             print("", format, file[1])
+        end
+    end
+    print()
+
+    print("Tags:")
+    if isTableEmpty(tags) then
+        print("    Not specified")
+    else
+        for _, tag in ipairs(tags) do
+            print("", tag)
         end
     end
     print()
@@ -199,6 +214,7 @@ function main(arg)
     local tracingOn = getopt.isTraceOptionUsed(options)
 
     local outputFileNames = getopt.getOutputFiles(arg)
+    local tags = getopt.recognizeTags(arg)
     local testsToRun = getopt.getTestsToRun(arg)
 
     local outputFiles = getopt.recognizeOutputFormats(outputFileNames)
@@ -211,7 +227,7 @@ function main(arg)
     end
 
     if verboseOperations then
-        printConfiguration(outputFileNames, outputFiles, testsToRun, testOptions)
+        printConfiguration(outputFileNames, outputFiles, testsToRun, testOptions, tags)
     end
 
     logger.setColorOutput(colorOutput)
@@ -225,7 +241,7 @@ function main(arg)
     elseif getopt.isTestListOptionUsed(options) then
         core.performTestList(verboseOperations, colorOutput, testsToRun)
     else
-        local returnValue = core.runTests(verboseOperations, colorOutput, testsToRun, outputFiles, testOptions)
+        local returnValue = core.runTests(verboseOperations, colorOutput, testsToRun, outputFiles, testOptions, tags)
         if returnValue then
             os.exit(0)
         else
