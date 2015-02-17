@@ -1,5 +1,12 @@
 2015-02-17  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* test/TestTagATagB.lua:
+	* test/TestTagATagC.lua:
+	* test/TestTagBTagC.lua:
+	Added three new tests: TestTagATagB, TestTagATagC and TestTagBTagC.
+
+2015-02-17  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* test/TestTagA.lua:
 	* test/TestTagB.lua:
 	* test/TestTagC.lua:
