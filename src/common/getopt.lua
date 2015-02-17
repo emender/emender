@@ -1,4 +1,5 @@
---
+-- getopt.lua - module for handling command line options and flags.
+-- 
 -- This file is part of Emender.
 --
 -- Emender is free software: you can redistribute it and/or modify
@@ -21,6 +22,7 @@ local getopt = {
 
 
 
+--
 -- This function is taken from http://lua-users.org/wiki/AlternativeGetOpt
 -- getopt, POSIX style command line argument parser
 -- param arg contains the command line arguments in a standard table.
@@ -155,7 +157,7 @@ function getopt.getUnknownOptions(options)
     local knownOptions = {"v", "verbose",   "l", "list",      "h", "help",
                           "V", "version",   "L", "license",   "c", "color",
                           "s", "summary",   "T", "trace",     "o", "output",
-                          "D", "debug"}
+                          "D", "debug",     "t", "tags"}
 
     -- we are going to modify table two times, so let's made a copy of it
     local unknownOptions = table.copy(options)
@@ -265,6 +267,37 @@ function getopt.getOutputFiles(arg)
     end
 
     return outputFiles
+end
+
+
+
+--
+-- Try to recognize all tags.
+--
+function getopt.recognizeTags(arg)
+    local tags = {}
+
+    -- loop over all command line arguments
+    for i = 1, #arg-1 do
+        -- if the argument is -t or --tags, suppose then
+        -- the following argument is a list of tags
+        if arg[i] == "-t" or arg[i] == "--tags" then
+            local tagNames = arg[i+1]
+            -- tags are to be separated by commas
+            -- let's split all tags
+            local splittedNames = tagNames:split(",")
+            -- insert all tags (one by one) into the table
+            for _,name in ipairs(splittedNames) do
+                table.insert(tags, name)
+            end
+            -- the already processed arguments can't be
+            -- processed later
+            arg[i] = ""
+            arg[i+1] = ""
+        end
+    end
+
+    return tags
 end
 
 return getopt

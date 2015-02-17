@@ -1,5 +1,10 @@
 2015-02-17  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* src/common/getopt.lua:
+	Added support for processing -t and --tags command line parameters.
+
+2015-02-17  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* src/common/string.lua:
 	Added new function/method to the string libary: string:split.
 
