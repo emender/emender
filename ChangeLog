@@ -1,5 +1,10 @@
 2015-02-17  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* test/TestTagATagBTagC.lua:
+	Added remaining 'tag' test: TestTagATagBTagC.
+
+2015-02-17  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* test/TestTagATagB.lua:
 	* test/TestTagATagC.lua:
 	* test/TestTagBTagC.lua:
