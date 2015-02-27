@@ -472,8 +472,8 @@ function highlightMessage(message)
         local char = message:sub(i,i)
         local twoChars = message:sub(i, i+1)
 
-        -- two stars means we need to use the red color
-        -- but those two stars are used at the beggining *and* at the end too
+        -- two stars means we need to highlight the text
+        -- but those two stars are used at the beginning *and* at the end too
         if twoChars == "**" and not wannaCloseRedBlock then
             i = i + 1
             if insideStars then
@@ -485,7 +485,7 @@ function highlightMessage(message)
                 wannaCloseRedBlock = false
                 output = output .. highlightStart
             end
-        -- take care of more than two stars at the end of 'red' block, etc.:
+        -- take care of more than two stars at the end of highlighted text:
         -- "** xx ***"
         -- "*****"
         -- or even
