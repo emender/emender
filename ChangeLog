@@ -1,6 +1,11 @@
 2015-03-02  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* test/TestAssertionIsLike.lua:
+	Added ten new test cases into TestAssertionIsLike.
+
+2015-03-02  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* test/TestAssertionIsLike.lua:
 	Renumbered tests, updated comments.
 
 2015-02-17  Pavel Tisnovsky  <ptisnovs@redhat.com>

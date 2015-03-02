@@ -1379,6 +1379,96 @@ end
 
 
 --
+-- Verify that "%w" matches "12345".
+--
+function TestAssertionIsLike.testPositive146()
+    is_like("prefix@12345", "%w", "positive test")
+end
+
+
+
+--
+-- Verify that "%w+" matches "12345".
+--
+function TestAssertionIsLike.testPositive147()
+    is_like("prefix@12345", "%w+", "positive test")
+end
+
+
+
+--
+-- Verify that "%w*" matches "12345".
+--
+function TestAssertionIsLike.testPositive148()
+    is_like("prefix@12345", "%w*", "positive test")
+end
+
+
+
+--
+-- Verify that "%w-" matches "12345".
+--
+function TestAssertionIsLike.testPositive149()
+    is_like("prefix@12345", "%w-", "positive test")
+end
+
+
+
+--
+-- Verify that "%w?" matches "1".
+--
+function TestAssertionIsLike.testPositive150()
+    is_like("prefix@1", "%w?", "positive test")
+end
+
+
+
+--
+-- Verify that "%w" matches "abcdef".
+--
+function TestAssertionIsLike.testPositive151()
+    is_like("prefix@abcdef", "%w", "positive test")
+end
+
+
+
+--
+-- Verify that "%w+" matches "abcdef".
+--
+function TestAssertionIsLike.testPositive152()
+    is_like("prefix@abcdef", "%w+", "positive test")
+end
+
+
+
+--
+-- Verify that "%w*" matches "abcdef".
+--
+function TestAssertionIsLike.testPositive153()
+    is_like("prefix@abcdef", "%w*", "positive test")
+end
+
+
+
+--
+-- Verify that "%w-" matches "abcdef".
+--
+function TestAssertionIsLike.testPositive154()
+    is_like("prefix@abcdef", "%w-", "positive test")
+end
+
+
+
+--
+-- Verify that "%w?" matches "abcdef".
+--
+function TestAssertionIsLike.testPositive155()
+    is_like("prefix@abcdef", "%w?", "positive test")
+end
+
+
+
+--
 -- Negative test - wrong number of parameters.
 --
 function TestAssertionIsLike.testNegative01()
