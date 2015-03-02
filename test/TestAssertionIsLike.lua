@@ -1080,6 +1080,7 @@ end
 
 --
 -- Verify that "%d" matches "12345".
+-- (modified version that uses prefix)
 --
 function TestAssertionIsLike.testPositive116()
     is_like("prefix@12345", "prefix@%d", "positive test")
@@ -1089,6 +1090,7 @@ end
 
 --
 -- Verify that "%d+" matches "12345".
+-- (modified version that uses prefix)
 --
 function TestAssertionIsLike.testPositive117()
     is_like("prefix@12345", "prefix@%d+", "positive test")
@@ -1098,6 +1100,7 @@ end
 
 --
 -- Verify that "%d*" matches "12345".
+-- (modified version that uses prefix)
 --
 function TestAssertionIsLike.testPositive118()
     is_like("prefix@12345", "prefix@%d*", "positive test")
@@ -1107,6 +1110,7 @@ end
 
 --
 -- Verify that "%d-" matches "12345".
+-- (modified version that uses prefix)
 --
 function TestAssertionIsLike.testPositive119()
     is_like("prefix@12345", "prefix@%d-", "positive test")
@@ -1116,6 +1120,7 @@ end
 
 --
 -- Verify that "%d?" matches "1".
+-- (modified version that uses prefix)
 --
 function TestAssertionIsLike.testPositive120()
     is_like("prefix@1", "prefix@%d?", "positive test")
@@ -1125,6 +1130,7 @@ end
 
 --
 -- Verify that "%a" matches "abc".
+-- (modified version that uses prefix)
 --
 function TestAssertionIsLike.testPositive121()
     is_like("prefix@abc", "prefix@%a", "positive test")
@@ -1134,6 +1140,7 @@ end
 
 --
 -- Verify that "%a+" matches "abc".
+-- (modified version that uses prefix)
 --
 function TestAssertionIsLike.testPositive122()
     is_like("prefix@abc", "prefix@%a+", "positive test")
@@ -1143,6 +1150,7 @@ end
 
 --
 -- Verify that "%a*" matches "abc".
+-- (modified version that uses prefix)
 --
 function TestAssertionIsLike.testPositive123()
     is_like("prefix@abc", "prefix@%a*", "positive test")
@@ -1152,6 +1160,7 @@ end
 
 --
 -- Verify that "%a-" matches "abc".
+-- (modified version that uses prefix)
 --
 function TestAssertionIsLike.testPositive124()
     is_like("prefix@abc", "prefix@%a+", "positive test")
@@ -1161,6 +1170,7 @@ end
 
 --
 -- Verify that "%a?" matches "abc".
+-- (modified version that uses prefix)
 --
 function TestAssertionIsLike.testPositive125()
     is_like("prefix@abc", "prefix@%a?", "positive test")
@@ -1170,8 +1180,9 @@ end
 
 --
 -- Verify that "%x" matches "12345".
+-- (modified version that uses prefix)
 --
-function TestAssertionIsLike.testPositive136()
+function TestAssertionIsLike.testPositive126()
     is_like("prefix@12345", "%x", "positive test")
 end
 
@@ -1179,8 +1190,9 @@ end
 
 --
 -- Verify that "%x+" matches "12345".
+-- (modified version that uses prefix)
 --
-function TestAssertionIsLike.testPositive137()
+function TestAssertionIsLike.testPositive127()
     is_like("prefix@12345", "%x+", "positive test")
 end
 
@@ -1188,8 +1200,9 @@ end
 
 --
 -- Verify that "%x*" matches "12345".
+-- (modified version that uses prefix)
 --
-function TestAssertionIsLike.testPositive138()
+function TestAssertionIsLike.testPositive128()
     is_like("prefix@12345", "%x*", "positive test")
 end
 
@@ -1197,8 +1210,9 @@ end
 
 --
 -- Verify that "%x-" matches "12345".
+-- (modified version that uses prefix)
 --
-function TestAssertionIsLike.testPositive139()
+function TestAssertionIsLike.testPositive129()
     is_like("prefix@12345", "%x-", "positive test")
 end
 
@@ -1206,8 +1220,9 @@ end
 
 --
 -- Verify that "%x?" matches "1".
+-- (modified version that uses prefix)
 --
-function TestAssertionIsLike.testPositive140()
+function TestAssertionIsLike.testPositive130()
     is_like("prefix@1", "%x?", "positive test")
 end
 
@@ -1215,8 +1230,9 @@ end
 
 --
 -- Verify that "%x" matches "abcdef".
+-- (modified version that uses prefix)
 --
-function TestAssertionIsLike.testPositive141()
+function TestAssertionIsLike.testPositive131()
     is_like("prefix@abcdef", "%x", "positive test")
 end
 
@@ -1224,8 +1240,9 @@ end
 
 --
 -- Verify that "%x+" matches "abcdef".
+-- (modified version that uses prefix)
 --
-function TestAssertionIsLike.testPositive142()
+function TestAssertionIsLike.testPositive132()
     is_like("prefix@abcdef", "%x+", "positive test")
 end
 
@@ -1233,8 +1250,9 @@ end
 
 --
 -- Verify that "%x*" matches "abcdef".
+-- (modified version that uses prefix)
 --
-function TestAssertionIsLike.testPositive143()
+function TestAssertionIsLike.testPositive133()
     is_like("prefix@abcdef", "%x*", "positive test")
 end
 
@@ -1242,8 +1260,9 @@ end
 
 --
 -- Verify that "%x-" matches "abcdef".
+-- (modified version that uses prefix)
 --
-function TestAssertionIsLike.testPositive144()
+function TestAssertionIsLike.testPositive134()
     is_like("prefix@abcdef", "%x-", "positive test")
 end
 
@@ -1251,8 +1270,9 @@ end
 
 --
 -- Verify that "%x?" matches "abcdef".
+-- (modified version that uses prefix)
 --
-function TestAssertionIsLike.testPositive145()
+function TestAssertionIsLike.testPositive135()
     is_like("prefix@abcdef", "%x?", "positive test")
 end
 
@@ -1260,8 +1280,9 @@ end
 
 --
 -- Verify that "%l" matches "abc".
+-- (modified version that uses prefix)
 --
-function TestAssertionIsLike.testPositive126()
+function TestAssertionIsLike.testPositive136()
     is_like("prefix@abc", "%l", "positive test")
 end
 
@@ -1269,8 +1290,9 @@ end
 
 --
 -- Verify that "%l+" matches "abc".
+-- (modified version that uses prefix)
 --
-function TestAssertionIsLike.testPositive127()
+function TestAssertionIsLike.testPositive137()
     is_like("prefix@abc", "%l+", "positive test")
 end
 
@@ -1278,8 +1300,9 @@ end
 
 --
 -- Verify that "%l*" matches "abc".
+-- (modified version that uses prefix)
 --
-function TestAssertionIsLike.testPositive128()
+function TestAssertionIsLike.testPositive138()
     is_like("prefix@abc", "%l*", "positive test")
 end
 
@@ -1287,8 +1310,9 @@ end
 
 --
 -- Verify that "%l-" matches "abc".
+-- (modified version that uses prefix)
 --
-function TestAssertionIsLike.testPositive129()
+function TestAssertionIsLike.testPositive139()
     is_like("prefix@abc", "%l+", "positive test")
 end
 
@@ -1296,8 +1320,9 @@ end
 
 --
 -- Verify that "%l?" matches "abc".
+-- (modified version that uses prefix)
 --
-function TestAssertionIsLike.testPositive130()
+function TestAssertionIsLike.testPositive140()
     is_like("prefix@abc", "%l?", "positive test")
 end
 
@@ -1305,8 +1330,9 @@ end
 
 --
 -- Verify that "%u" matches "ABC".
+-- (modified version that uses prefix)
 --
-function TestAssertionIsLike.testPositive131()
+function TestAssertionIsLike.testPositive141()
     is_like("prefix@ABC", "%u", "positive test")
 end
 
@@ -1314,8 +1340,9 @@ end
 
 --
 -- Verify that "%u+" matches "ABC".
+-- (modified version that uses prefix)
 --
-function TestAssertionIsLike.testPositive132()
+function TestAssertionIsLike.testPositive142()
     is_like("prefix@ABC", "%u+", "positive test")
 end
 
@@ -1323,8 +1350,9 @@ end
 
 --
 -- Verify that "%u*" matches "ABC".
+-- (modified version that uses prefix)
 --
-function TestAssertionIsLike.testPositive133()
+function TestAssertionIsLike.testPositive143()
     is_like("prefix@ABC", "%u*", "positive test")
 end
 
@@ -1332,8 +1360,9 @@ end
 
 --
 -- Verify that "%u-" matches "ABC".
+-- (modified version that uses prefix)
 --
-function TestAssertionIsLike.testPositive134()
+function TestAssertionIsLike.testPositive144()
     is_like("prefix@ABC", "%u+", "positive test")
 end
 
@@ -1341,8 +1370,9 @@ end
 
 --
 -- Verify that "%u?" matches "ABC".
+-- (modified version that uses prefix)
 --
-function TestAssertionIsLike.testPositive135()
+function TestAssertionIsLike.testPositive145()
     is_like("prefix@ABC", "%u?", "positive test")
 end
 
