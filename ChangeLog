@@ -1,11 +1,16 @@
 2015-03-03  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* selftest/test_assertion_is_like.in:
+	Updated selfcheck output to reflect changes made in the test.
+
+2015-03-03  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* test/TestAssertionIsLike.lua:
 	Added another ten new test cases into TestAssertionIsLike.
 
 2015-03-02  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
-	* test/test_assertion_is_like.in:
+	* selftest/test_assertion_is_like.in:
 	Updated selfcheck output to reflect changes made in the test.
 
 2015-03-02  Pavel Tisnovsky  <ptisnovs@redhat.com>

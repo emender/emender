@@ -10,19 +10,19 @@
 
   Test Case: testNegative01
 
-    ../test/TestAssertionIsLike.lua:1475: Test structure error: Current value is a required argument.
+    ../test/TestAssertionIsLike.lua:1565: Test structure error: Current value is a required argument.
 
   Test Case: testNegative02
 
-    ../test/TestAssertionIsLike.lua:1484: Test structure error: Current value is a required argument.
+    ../test/TestAssertionIsLike.lua:1574: Test structure error: Current value is a required argument.
 
   Test Case: testNegative03
 
-    ../test/TestAssertionIsLike.lua:1493: Test structure error: Pattern is a required argument.
+    ../test/TestAssertionIsLike.lua:1583: Test structure error: Pattern is a required argument.
 
   Test Case: testNegative04
 
-    ../test/TestAssertionIsLike.lua:1502: Test structure error: Pattern is a required argument.
+    ../test/TestAssertionIsLike.lua:1592: Test structure error: Pattern is a required argument.
 
   Test Case: testNegative05
 
@@ -34,7 +34,7 @@
 
   Test Case: testNegative07
 
-    ../test/TestAssertionIsLike.lua:1538: Test structure error: Pattern is a required argument.
+    ../test/TestAssertionIsLike.lua:1628: Test structure error: Pattern is a required argument.
 
   Test Case: testNegative08
 
@@ -54,43 +54,43 @@
 
   Test Case: testNegative12
 
-    ../test/TestAssertionIsLike.lua:1583: Test structure error: Current value type must be a string.
+    ../test/TestAssertionIsLike.lua:1673: Test structure error: Current value type must be a string.
 
   Test Case: testNegative13
 
-    ../test/TestAssertionIsLike.lua:1592: Test structure error: Current value type must be a string.
+    ../test/TestAssertionIsLike.lua:1682: Test structure error: Current value type must be a string.
 
   Test Case: testNegative14
 
-    ../test/TestAssertionIsLike.lua:1601: Test structure error: Current value type must be a string.
+    ../test/TestAssertionIsLike.lua:1691: Test structure error: Current value type must be a string.
 
   Test Case: testNegative15
 
-    ../test/TestAssertionIsLike.lua:1610: Test structure error: Current value type must be a string.
+    ../test/TestAssertionIsLike.lua:1700: Test structure error: Current value type must be a string.
 
   Test Case: testNegative16
 
-    ../test/TestAssertionIsLike.lua:1619: Test structure error: Current value type must be a string.
+    ../test/TestAssertionIsLike.lua:1709: Test structure error: Current value type must be a string.
 
   Test Case: testNegative17
 
-    ../test/TestAssertionIsLike.lua:1635: Test structure error: Current value type must be a string.
+    ../test/TestAssertionIsLike.lua:1725: Test structure error: Current value type must be a string.
 
   Test Case: testNegative18
 
-    ../test/TestAssertionIsLike.lua:1644: Test structure error: Current value type must be a string.
+    ../test/TestAssertionIsLike.lua:1734: Test structure error: Current value type must be a string.
 
   Test Case: testNegative19
 
-    ../test/TestAssertionIsLike.lua:1658: Test structure error: Current value type must be a string.
+    ../test/TestAssertionIsLike.lua:1748: Test structure error: Current value type must be a string.
 
   Test Case: testNegative20
 
-    ../test/TestAssertionIsLike.lua:1676: Test structure error: Current value type must be a string.
+    ../test/TestAssertionIsLike.lua:1766: Test structure error: Current value type must be a string.
 
   Test Case: testNegative21
 
-    ../test/TestAssertionIsLike.lua:1690: Test structure error: Current value type must be a string.
+    ../test/TestAssertionIsLike.lua:1780: Test structure error: Current value type must be a string.
 
   Test Case: testPositive001
 
@@ -712,10 +712,50 @@
 
     [ PASS ]  positive test
 
+  Test Case: testPositive156
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive157
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive158
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive159
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive160
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive161
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive162
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive163
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive164
+
+    [ PASS ]  positive test
+
+  Test Case: testPositive165
+
+    [ PASS ]  positive test
+
   Test Summary                                                            
 
-    Executed Test Cases: 176
-    Passed Test Cases:   155
+    Executed Test Cases: 186
+    Passed Test Cases:   165
     Failed Test Cases:   4
     Encountered Errors:  17
     Overall Result:      FAIL
