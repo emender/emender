@@ -1,5 +1,10 @@
 2015-03-04  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* test/Test100Failures1Info.lua:
+	Changed, added two new test cases.
+
+2015-03-04  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* test/TestAssertionIsLike.lua:
 	Added another ten new test cases into TestAssertionIsLike.
 
