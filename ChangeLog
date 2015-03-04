@@ -20,7 +20,7 @@
 
 2015-03-03  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
-	* selftest/test_assertion_is_like.in:
+	* selfcheck/test_assertion_is_like.in:
 	Updated selfcheck output to reflect changes made in the test.
 
 2015-03-03  Pavel Tisnovsky  <ptisnovs@redhat.com>
@@ -30,7 +30,7 @@
 
 2015-03-02  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
-	* selftest/test_assertion_is_like.in:
+	* selfcheck/test_assertion_is_like.in:
 	Updated selfcheck output to reflect changes made in the test.
 
 2015-03-02  Pavel Tisnovsky  <ptisnovs@redhat.com>
@@ -931,7 +931,7 @@
 
 2014-11-21  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
-	* selftest/selfcheck.sh:
+	* selfcheck/selfcheck.sh:
 	Minor change.
 
 2014-11-20  Pavel Tisnovsky  <ptisnovs@redhat.com>
@@ -1195,7 +1195,7 @@
 
 2014-11-04  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
-	* selftest/test_pass_fail.in:
+	* selfcheck/test_pass_fail.in:
 	Fixed selftest test_pass_fail.
 
 2014-11-03  Pavel Tisnovsky  <ptisnovs@redhat.com>
@@ -1220,8 +1220,8 @@
 
 2014-10-24  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
-	* selftest/cleanup.sh:
-	* selftest/selfcheck.sh:
+	* selfcheck/cleanup.sh:
+	* selfcheck/selfcheck.sh:
 	Added support for JUnit-like output of test results
 	(to be used on Jenkins).
 
