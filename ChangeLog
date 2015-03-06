@@ -1,5 +1,13 @@
 2015-03-06  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* examples/run_all_tests_tagA.sh:
+	* examples/run_all_tests_tagB.sh:
+	* examples/run_all_tests_tagC.sh:
+	* examples/run_all_tests_tagX.sh:
+	Added four scripts to run tests with selected tag.
+
+2015-03-06  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* examples/bad_option_1.sh:
 	* examples/bad_option_2.sh:
 	* examples/bad_option_3.sh:
