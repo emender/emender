@@ -1,5 +1,16 @@
 2015-03-06  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* examples/bad_option_1.sh:
+	* examples/bad_option_2.sh:
+	* examples/bad_option_3.sh:
+	* examples/bad_options_1.sh:
+	* examples/bad_options_2.sh:
+	* examples/bad_options_3.sh:
+	* examples/bad_options_4.sh:
+	Added comments.
+
+2015-03-06  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* src/common/asserts.lua:
 	Minor improvement.
 
