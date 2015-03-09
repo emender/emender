@@ -1,5 +1,14 @@
 2015-03-09  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* examples/tagA_tagA.sh:
+	* examples/tagA_tagAtagB.sh:
+	* examples/tagA_tagAtagC.sh:
+	* examples/tagA_tagB.sh:
+	* examples/tagA_tagBtagC.sh:
+	Added scripts to start selected tests with the -t tagA CLI option.
+
+2015-03-09  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* examples/check_bad_output_format_1.sh:
 	* examples/check_bad_output_format_2.sh:
 	* examples/check_bad_output_format_3.sh:
