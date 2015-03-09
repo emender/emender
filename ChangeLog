@@ -1,5 +1,13 @@
 2015-03-09  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* examples/check_good_output_format_1.sh:
+	* examples/check_good_output_format_2.sh:
+	* examples/check_good_output_format_3.sh:
+	* examples/check_tracer_many_test_errors.sh:
+	Added comments to existing scripts.
+
+2015-03-09  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* examples/tagA_tagA.sh:
 	* examples/tagA_tagAtagB.sh:
 	* examples/tagA_tagAtagC.sh:
