@@ -1,5 +1,10 @@
 2015-03-10  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* examples/tagA_tagC.sh:
+	Added missing script.
+
+2015-03-10  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* examples/tagB_tagA.sh:
 	* examples/tagB_tagAtagB.sh:
 	* examples/tagB_tagAtagC.sh:
