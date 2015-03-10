@@ -1,5 +1,15 @@
 2015-03-10  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* examples/tagC_tagA.sh:
+	* examples/tagC_tagAtagB.sh:
+	* examples/tagC_tagAtagC.sh:
+	* examples/tagC_tagB.sh:
+	* examples/tagC_tagBtagC.sh:
+	* examples/tagC_tagC.sh:
+	Added scripts to start selected tests with the -t tagC CLI option.
+
+2015-03-10  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* examples/tagA_tagC.sh:
 	Added missing script.
 
