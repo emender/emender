@@ -1,5 +1,12 @@
 2015-03-11  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* selfchecks/test_testC_tagA.in:
+	* selfchecks/test_testC_tagB.in:
+	* selfchecks/test_testC_tagC.in:
+	Added expected test results for three new selfchecks.
+
+2015-03-11  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* selfchecks/selfcheck.sh:
 	Prepared to run yet another three tests to check tag support.
 
