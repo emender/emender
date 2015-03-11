@@ -201,6 +201,15 @@ function runTestReturnValueNegative {
 
 
 
+# Test Emender's ability to handle tags properly
+function runTestsWithTags {
+    ../emend -t tagA ../test/TestTagA.lua > test_testA_tagA.out
+    ../emend -t tagB ../test/TestTagA.lua > test_testA_tagB.out
+    ../emend -t tagC ../test/TestTagA.lua > test_testA_tagC.out
+}
+
+
+
 # Run all tests
 function runAllTests {
     runTestsForBasicCLI
@@ -213,6 +222,7 @@ function runAllTests {
     runOtherTests
     runTestReturnValuePositive
     runTestReturnValueNegative
+    runTestsWithTags
 }
 
 

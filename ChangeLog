@@ -1,3 +1,8 @@
+2015-03-11  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* selfchecks/selfcheck.sh:
+	Prepared to run tests to check tag support.
+
 2015-03-10  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* examples/tagC_tagA.sh:
