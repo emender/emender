@@ -214,6 +214,7 @@ function runTestsWithTags {
     ../emend -t tagC ../test/TestTagC.lua > test_testC_tagC.out
 
     ../emend -t tagA ../test/TestTag*.lua > test_testA_all.out
+    ../emend -t tagB ../test/TestTag*.lua > test_testB_all.out
 }
 
 
