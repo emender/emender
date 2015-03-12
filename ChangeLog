@@ -1,3 +1,9 @@
+2015-03-12  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* selfchecks/selfcheck.sh:
+	* selfchecks/test_testA_all.in:
+	Added new selfcheck - run only tests that have tagA specified.
+
 2015-03-11  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* selfchecks/test_testC_tagA.in:

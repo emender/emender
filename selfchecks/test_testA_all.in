@@ -1,0 +1,97 @@
+---------------------------------------------------------------------------
+                               :: TestTagA ::
+---------------------------------------------------------------------------
+
+  Description:   Check that docunit core works correctly.
+  Authors:       Pavel Tisnovsky
+  Emails:        ptisnovs@redhat.com
+  Last Modified: 2015-02-12
+  Tags:          tagA
+
+  Test Case: test1
+
+    [ PASS ]  The function TestTagA.test1() is called properly.
+
+  Test Summary                                                            
+
+    Executed Test Cases: 1
+    Passed Test Cases:   1
+    Failed Test Cases:   0
+    Encountered Errors:  0
+    Overall Result:      PASS
+
+---------------------------------------------------------------------------
+                             :: TestTagATagB ::
+---------------------------------------------------------------------------
+
+  Description:   Check that docunit core works correctly.
+  Authors:       Pavel Tisnovsky
+  Emails:        ptisnovs@redhat.com
+  Last Modified: 2015-02-12
+  Tags:          tagA, tagB
+
+  Test Case: test1
+
+    [ PASS ]  The function TestTagATagB.test1() is called properly.
+
+  Test Summary                                                            
+
+    Executed Test Cases: 1
+    Passed Test Cases:   1
+    Failed Test Cases:   0
+    Encountered Errors:  0
+    Overall Result:      PASS
+
+---------------------------------------------------------------------------
+                           :: TestTagATagBTagC ::
+---------------------------------------------------------------------------
+
+  Description:   Check that docunit core works correctly.
+  Authors:       Pavel Tisnovsky
+  Emails:        ptisnovs@redhat.com
+  Last Modified: 2015-02-12
+  Tags:          tagA, tagB, tagC
+
+  Test Case: test1
+
+    [ PASS ]  The function TestTagATagBTagC.test1() is called properly.
+
+  Test Summary                                                            
+
+    Executed Test Cases: 1
+    Passed Test Cases:   1
+    Failed Test Cases:   0
+    Encountered Errors:  0
+    Overall Result:      PASS
+
+---------------------------------------------------------------------------
+                             :: TestTagATagC ::
+---------------------------------------------------------------------------
+
+  Description:   Check that docunit core works correctly.
+  Authors:       Pavel Tisnovsky
+  Emails:        ptisnovs@redhat.com
+  Last Modified: 2015-02-12
+  Tags:          tagA, tagC
+
+  Test Case: test1
+
+    [ PASS ]  The function TestTagATagC.test1() is called properly.
+
+  Test Summary                                                            
+
+    Executed Test Cases: 1
+    Passed Test Cases:   1
+    Failed Test Cases:   0
+    Encountered Errors:  0
+    Overall Result:      PASS
+
+---------------------------------------------------------------------------
+                               :: Summary ::
+---------------------------------------------------------------------------
+
+  Executed Tests: 4
+  Passed Tests:   4
+  Failed Tests:   0
+  Overall Result: PASS
+
