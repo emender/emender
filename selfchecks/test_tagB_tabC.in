@@ -1,0 +1,141 @@
+---------------------------------------------------------------------------
+                             :: TestTagATagB ::
+---------------------------------------------------------------------------
+
+  Description:   Check that docunit core works correctly.
+  Authors:       Pavel Tisnovsky
+  Emails:        ptisnovs@redhat.com
+  Last Modified: 2015-02-12
+  Tags:          tagA, tagB
+
+  Test Case: test1
+
+    [ PASS ]  The function TestTagATagB.test1() is called properly.
+
+  Test Summary                                                            
+
+    Executed Test Cases: 1
+    Passed Test Cases:   1
+    Failed Test Cases:   0
+    Encountered Errors:  0
+    Overall Result:      PASS
+
+---------------------------------------------------------------------------
+                           :: TestTagATagBTagC ::
+---------------------------------------------------------------------------
+
+  Description:   Check that docunit core works correctly.
+  Authors:       Pavel Tisnovsky
+  Emails:        ptisnovs@redhat.com
+  Last Modified: 2015-02-12
+  Tags:          tagA, tagB, tagC
+
+  Test Case: test1
+
+    [ PASS ]  The function TestTagATagBTagC.test1() is called properly.
+
+  Test Summary                                                            
+
+    Executed Test Cases: 1
+    Passed Test Cases:   1
+    Failed Test Cases:   0
+    Encountered Errors:  0
+    Overall Result:      PASS
+
+---------------------------------------------------------------------------
+                             :: TestTagATagC ::
+---------------------------------------------------------------------------
+
+  Description:   Check that docunit core works correctly.
+  Authors:       Pavel Tisnovsky
+  Emails:        ptisnovs@redhat.com
+  Last Modified: 2015-02-12
+  Tags:          tagA, tagC
+
+  Test Case: test1
+
+    [ PASS ]  The function TestTagATagC.test1() is called properly.
+
+  Test Summary                                                            
+
+    Executed Test Cases: 1
+    Passed Test Cases:   1
+    Failed Test Cases:   0
+    Encountered Errors:  0
+    Overall Result:      PASS
+
+---------------------------------------------------------------------------
+                               :: TestTagB ::
+---------------------------------------------------------------------------
+
+  Description:   Check that docunit core works correctly.
+  Authors:       Pavel Tisnovsky
+  Emails:        ptisnovs@redhat.com
+  Last Modified: 2015-02-12
+  Tags:          tagB
+
+  Test Case: test1
+
+    [ PASS ]  The function TestTagB.test1() is called properly.
+
+  Test Summary                                                            
+
+    Executed Test Cases: 1
+    Passed Test Cases:   1
+    Failed Test Cases:   0
+    Encountered Errors:  0
+    Overall Result:      PASS
+
+---------------------------------------------------------------------------
+                             :: TestTagBTagC ::
+---------------------------------------------------------------------------
+
+  Description:   Check that docunit core works correctly.
+  Authors:       Pavel Tisnovsky
+  Emails:        ptisnovs@redhat.com
+  Last Modified: 2015-02-12
+  Tags:          tagB, tagC
+
+  Test Case: test1
+
+    [ PASS ]  The function TestTagBTagC.test1() is called properly.
+
+  Test Summary                                                            
+
+    Executed Test Cases: 1
+    Passed Test Cases:   1
+    Failed Test Cases:   0
+    Encountered Errors:  0
+    Overall Result:      PASS
+
+---------------------------------------------------------------------------
+                               :: TestTagC ::
+---------------------------------------------------------------------------
+
+  Description:   Check that docunit core works correctly.
+  Authors:       Pavel Tisnovsky
+  Emails:        ptisnovs@redhat.com
+  Last Modified: 2015-02-12
+  Tags:          tagC
+
+  Test Case: test1
+
+    [ PASS ]  The function TestTagC.test1() is called properly.
+
+  Test Summary                                                            
+
+    Executed Test Cases: 1
+    Passed Test Cases:   1
+    Failed Test Cases:   0
+    Encountered Errors:  0
+    Overall Result:      PASS
+
+---------------------------------------------------------------------------
+                               :: Summary ::
+---------------------------------------------------------------------------
+
+  Executed Tests: 6
+  Passed Tests:   6
+  Failed Tests:   0
+  Overall Result: PASS
+
