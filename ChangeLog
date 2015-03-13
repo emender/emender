@@ -1,3 +1,9 @@
+2015-03-13  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* selfchecks/selfcheck.sh:
+	* selfchecks/test_tagA_tabB.in:
+	Added new selfcheck - run only tests witch tagA and tagB.
+
 2015-03-12  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* selfchecks/selfcheck.sh:
