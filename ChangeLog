@@ -1,5 +1,13 @@
 2015-03-16  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* selfchecks/selfcheck.sh:
+	* selfchecks/test_tagA_tabB.in -> selfchecks/test_tagA_tagB.in:
+	* selfchecks/test_tagA_tabC.in -> selfchecks/test_tagA_tagC.in:
+	* selfchecks/test_tagB_tabC.in -> selfchecks/test_tagB_tagC.in:
+	Fixed ugly typos in test result names.
+
+2015-03-16  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* examples/list_tests_1.sh:
 	* examples/list_tests_1_trace.sh:
 	* examples/list_tests_2.sh:
