@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 
 #
+# Simple example how to run Emender.
+#
+# Copyright (C) 2014, 2015 Pavel Tisnovsky
+#
 # This file is part of Emender.
 #
 # Emender is free software: you can redistribute it and/or modify
