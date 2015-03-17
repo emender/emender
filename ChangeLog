@@ -1,6 +1,12 @@
 2015-03-17  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* selfchecks/selfcheck.sh:
+	* selfchecks/test_tagC_tagX.in:
+	Added new selfcheck - run only tests with tagC and tagX.
+
+2015-03-17  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* selfchecks/selfcheck.sh:
 	* selfchecks/test_tagB_tagX.in:
 	Added new selfcheck - run only tests with tagB and tagX.
 
