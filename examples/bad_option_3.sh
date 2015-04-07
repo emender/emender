@@ -2,6 +2,7 @@
 
 #
 # Simple example how to run Emender.
+# -x is an unsupported command line options so Emender should print error message.
 #
 # Copyright (C) 2014, 2015 Pavel Tisnovsky
 #
