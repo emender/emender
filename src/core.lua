@@ -336,6 +336,34 @@ end
 
 
 --
+-- Load test script.
+--
+function loadTestScript(scriptDirectory, filename, verboseOperation, testSuiteName)
+    -- if script directory (where 'emend' is stored) is specified, load test from this directory
+    if scriptDirectory then
+        if verboseOperation then
+            print("Script directory/filename: " .. scriptDirectory .. "test/" .. filename)
+            print("Test name: " ..testSuiteName)
+        end
+        dofile(scriptDirectory .. "test/" .. filename)
+    -- fallback when script directory is not specified
+    else
+        if verboseOperation then
+            print("Script filename: test/" .. filename)
+            print("Test name: " ..testSuiteName)
+        end
+        -- test script must exists
+        if path.file_exists(filename) then
+           dofile(filename)
+        else
+           print("Test '" .. filename .. "' does not exist.")
+        end
+    end
+end
+
+
+
+--
 -- Load and run one selected test.
 -- TODO: this function really needs to be refactored!
 --
@@ -346,23 +374,7 @@ function core.runTest(scriptDirectory, filename, verboseOperation, testOptions, 
         testSuite.name = testSuiteName
         core.checkTestNameShadowing(testSuiteName)
 
-        if scriptDirectory then
-            if verboseOperation then
-                print("Script directory/filename: " .. scriptDirectory .. "test/" .. filename)
-                print("Test name: " ..testSuiteName)
-            end
-            dofile(scriptDirectory .. "test/" .. filename)
-        else
-            if verboseOperation then
-                print("Script filename: test/" .. filename)
-                print("Test name: " ..testSuiteName)
-            end
-            if path.file_exists(filename) then
-               dofile(filename)
-            else
-               print("Test '" .. filename .. "' does not exist.")
-            end
-        end
+        loadTestScript(scriptDirectory, filename, verboseOperation, testSuiteName)
 
         fillInTestMetadata(testSuite, testSuiteName)
 
