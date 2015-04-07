@@ -1,6 +1,11 @@
 2015-04-07  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* src/core.lua:
+	Refactored huge function runTest, second step.
+
+2015-04-07  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* src/core.lua:
 	Refactored huge function runTest.
 
 2015-04-07  Pavel Tisnovsky  <ptisnovs@redhat.com>

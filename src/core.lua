@@ -263,6 +263,19 @@ end
 
 
 --
+-- Fill in all information about test results into testSuite data structure.
+--
+function fillInTestResults(testSuite, passCnt, failCnt, errorCnt, methods)
+    testSuite.passCount  = passCnt
+    testSuite.failCount  = failCnt
+    testSuite.errorCount = errorCnt
+    testSuite.total   = passCnt + failCnt + errorCnt
+    testSuite.methods = methods
+end
+
+
+
+--
 -- Filter test messages according to the given filter ("PASS", "FAIL" etc.).
 --
 function filterMessages(messages, filter)
@@ -472,11 +485,9 @@ function core.runTest(scriptDirectory, filename, verboseOperation, testOptions, 
                     print("       " .. message)
                 end
             end
-            testSuite.passCount  = passCnt
-            testSuite.failCount  = failCnt
-            testSuite.errorCount = errorCnt
-            testSuite.total   = passCnt + failCnt + errorCnt
-            testSuite.methods = methods
+
+            -- fill in all information about test results into testSuite data structure
+            fillInTestResults(testSuite, passCnt, failCnt, errorCnt, methods)
 
             -- print an information about the test suite that just finished
             -- to the standard output
