@@ -1,5 +1,10 @@
 2015-04-08  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* selfchecks/selfcheck.sh:
+	Added three tests to run.
+
+2015-04-08  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* examples/bad_options_1.sh:
 	* examples/bad_options_2.sh:
 	* examples/bad_options_3.sh:
