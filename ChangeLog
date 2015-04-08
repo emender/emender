@@ -1,5 +1,12 @@
 2015-04-08  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* selfchecks/test_tagA_tagB_tagX.in:
+	* selfchecks/test_tagA_tagC_tagX.in:
+	* selfchecks/test_tagB_tagC_tagX.in:
+	Added three new selfchecks.
+
+2015-04-08  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* selfchecks/selfcheck.sh:
 	Added three tests to run.
 
