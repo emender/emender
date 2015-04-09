@@ -111,6 +111,7 @@ function loadModules()
     require("src/writers/commonTextWriter")
     require("src/config")
     require("src/testExporter")
+    require("src/common/exec")
 end
 
 function checkForUnknownOptions(options)

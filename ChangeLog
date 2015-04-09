@@ -1,5 +1,10 @@
 2015-04-09  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* emend:
+	exec module should be loaded during startup.
+
+2015-04-09  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* src/common/exec.lua:
 	Added new function: execCaptureOutputAsString.
 
