@@ -46,3 +46,36 @@ function execCaptureOutputAsTable(command)
     return result
 end
 
+function execCaptureOutputAsString(command)
+    -- execute new process
+    local process,x = io.popen(command, "r")
+
+    -- check the return value (io.popen can fail)
+    if not process then
+        return nil
+    end
+
+    -- capture whole output (if any)
+    local lines = process:lines()
+    if not lines then
+        return nil
+    end
+
+    -- transform output to a string
+    -- (clone is needed here because the process will be closed ASAP)
+    local result = ""
+    local firstLine = true
+    -- loop over all lines and make a string from all lines
+    for line in lines do
+        if not firstLine then
+            result = result .. "\n"
+        end
+        result = result .. line
+        firstLine = false
+    end
+
+    -- be nice to operating system and remove PID as soon as possible ;)
+    process:close()
+    return result
+end
+

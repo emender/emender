@@ -1,6 +1,11 @@
 2015-04-09  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* src/common/exec.lua:
+	Added new function: execCaptureOutputAsString.
+
+2015-04-09  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* src/common/exec.lua:
 	First version of module 'exec'.
 
 2015-04-08  Pavel Tisnovsky  <ptisnovs@redhat.com>
