@@ -1,3 +1,8 @@
+2015-04-10  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* test/TestExec.lua:
+	Added new test to check the behaviour of 'exec' module.
+
 2015-04-09  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* emend:
