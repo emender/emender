@@ -34,3 +34,19 @@ function TestExec.test1()
     is_equal(result, "Test", "Check if standard output of 'echo' command is correctly captured")
 end
 
+--
+-- Test the behaviour of the following function: execCaptureOutputAsTable.
+--
+function TestExec.test2()
+    local result = execCaptureOutputAsTable("echo 'Test'")
+    is_equal(#result, 1, "Check if standard output of 'echo' command is correctly captured")
+end
+
+--
+-- Test the behaviour of the following function: execCaptureOutputAsTable.
+--
+function TestExec.test3()
+    local result = execCaptureOutputAsTable("echo 'Test'")
+    is_equal(result[1], "Test", "Check if standard output of 'echo' command is correctly captured")
+end
+
