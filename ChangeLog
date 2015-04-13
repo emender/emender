@@ -1,5 +1,10 @@
 2015-04-13  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* selfchecks/test_exec.in:
+	Updated expected test results for TestExec test.
+
+2015-04-13  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* test/TestExec.lua:
 	Added three new test cases into TestExec.lua - multiline output.
 
