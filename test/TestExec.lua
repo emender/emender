@@ -50,3 +50,29 @@ function TestExec.test3()
     is_equal(result[1], "Test", "Check if standard output of 'echo' command is correctly captured")
 end
 
+--
+-- Test the behaviour of the following function: execCaptureOutputAsString.
+--
+function TestExec.test4()
+    local result = execCaptureOutputAsString("echo -e '1\n2\n3'")
+    is_equal(result, "1\n2\n3", "Check if standard output of 'echo' command is correctly captured")
+end
+
+--
+-- Test the behaviour of the following function: execCaptureOutputAsTable.
+--
+function TestExec.test5()
+    local result = execCaptureOutputAsTable("echo -e '1\n2\n3'")
+    is_equal(#result, 3, "Check if standard output of 'echo' command is correctly captured")
+end
+
+--
+-- Test the behaviour of the following function: execCaptureOutputAsTable.
+--
+function TestExec.test6()
+    local result = execCaptureOutputAsTable("echo -e '1\n2\n3'")
+    is_equal(result[1], "1", "Check if standard output of 'echo' command is correctly captured")
+    is_equal(result[2], "2", "Check if standard output of 'echo' command is correctly captured")
+    is_equal(result[3], "3", "Check if standard output of 'echo' command is correctly captured")
+end
+
