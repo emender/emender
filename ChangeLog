@@ -1,3 +1,8 @@
+2015-04-14  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* test/TestExec.lua:
+	Added two new test cases into TestExec.lua.
+
 2015-04-13  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* selfchecks/test_exec.in:

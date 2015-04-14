@@ -26,6 +26,8 @@ TestExec = {
         tags = {"BasicTest", "SmokeTest"},
     }}
 
+
+
 --
 -- Test the behaviour of the following function: execCaptureOutputAsString.
 --
@@ -33,6 +35,8 @@ function TestExec.test1()
     local result = execCaptureOutputAsString("echo 'Test'")
     is_equal(result, "Test", "Check if standard output of 'echo' command is correctly captured")
 end
+
+
 
 --
 -- Test the behaviour of the following function: execCaptureOutputAsTable.
@@ -42,6 +46,8 @@ function TestExec.test2()
     is_equal(#result, 1, "Check if standard output of 'echo' command is correctly captured")
 end
 
+
+
 --
 -- Test the behaviour of the following function: execCaptureOutputAsTable.
 --
@@ -49,6 +55,8 @@ function TestExec.test3()
     local result = execCaptureOutputAsTable("echo 'Test'")
     is_equal(result[1], "Test", "Check if standard output of 'echo' command is correctly captured")
 end
+
+
 
 --
 -- Test the behaviour of the following function: execCaptureOutputAsString.
@@ -58,6 +66,8 @@ function TestExec.test4()
     is_equal(result, "1\n2\n3", "Check if standard output of 'echo' command is correctly captured")
 end
 
+
+
 --
 -- Test the behaviour of the following function: execCaptureOutputAsTable.
 --
@@ -65,6 +75,8 @@ function TestExec.test5()
     local result = execCaptureOutputAsTable("echo -e '1\n2\n3'")
     is_equal(#result, 3, "Check if standard output of 'echo' command is correctly captured")
 end
+
+
 
 --
 -- Test the behaviour of the following function: execCaptureOutputAsTable.
@@ -74,5 +86,25 @@ function TestExec.test6()
     is_equal(result[1], "1", "Check if standard output of 'echo' command is correctly captured")
     is_equal(result[2], "2", "Check if standard output of 'echo' command is correctly captured")
     is_equal(result[3], "3", "Check if standard output of 'echo' command is correctly captured")
+end
+
+
+
+--
+-- Test the behaviour of the following function: execCaptureOutputAsString.
+--
+function TestExec.test7()
+    local result = execCaptureOutputAsString("")
+    is_equal(result, "", "Check if standard output of none command is correctly captured")
+end
+
+
+
+--
+-- Test the behaviour of the following function: execCaptureOutputAsTable.
+--
+function TestExec.test8()
+    local result = execCaptureOutputAsTable("")
+    is_equal(#result, 0, "Check if standard output of none command is correctly captured")
 end
 
