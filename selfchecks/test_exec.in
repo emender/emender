@@ -42,10 +42,20 @@
     [ PASS ]  Check if standard output of 'echo' command is correctly
               captured
 
+  Test Case: test7
+
+    [ PASS ]  Check if standard output of none command is correctly
+              captured
+
+  Test Case: test8
+
+    [ PASS ]  Check if standard output of none command is correctly
+              captured
+
   Test Summary                                                            
 
-    Executed Test Cases: 6
-    Passed Test Cases:   6
+    Executed Test Cases: 8
+    Passed Test Cases:   8
     Failed Test Cases:   0
     Encountered Errors:  0
     Overall Result:      PASS
