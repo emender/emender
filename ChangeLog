@@ -1,6 +1,11 @@
 2015-04-15  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* src/core.lua:
+	Refactored function runTest.
+
+2015-04-15  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* src/core.lua:
 	Refactored function runTests.
 
 2015-04-14  Pavel Tisnovsky  <ptisnovs@redhat.com>

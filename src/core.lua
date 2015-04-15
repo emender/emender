@@ -377,6 +377,28 @@ end
 
 
 --
+-- Run tear down function (if it exists)
+--
+function runTearDownFunction(verboseOperation, tearDownFunction)
+    if tearDownFunction then
+        writeTearDownStart(io.stdout, false)
+        if verboseOperation then
+            print("    TearDown:")
+        end
+        local status, message = pcall(tearDownFunction)
+        if status then
+            if verboseOperation then
+                print("        OK\n")
+            end
+        else
+            print("       " .. message)
+        end
+    end
+end
+
+
+
+--
 -- Load and run one selected test.
 -- TODO: this function really needs to be refactored!
 --
@@ -471,20 +493,7 @@ function core.runTest(scriptDirectory, filename, verboseOperation, testOptions, 
                     table.insert(methods, method)
                 end
             end
-            if tearDownFunction then
-                writeTearDownStart(io.stdout, false)
-                if verboseOperation then
-                    print("    TearDown:")
-                end
-                local status, message = pcall(tearDownFunction)
-                if status then
-                    if verboseOperation then
-                        print("        OK\n")
-                    end
-                else
-                    print("       " .. message)
-                end
-            end
+            runTearDownFunction(verboseOperation, tearDownFunction)
 
             -- fill in all information about test results into testSuite data structure
             fillInTestResults(testSuite, passCnt, failCnt, errorCnt, methods)
