@@ -605,14 +605,34 @@ end
 
 
 --
+-- Prepares data structure that will hold test results.
+--
+function prepareTestResultStructure()
+    core.results.passedTests = 0
+    core.results.failedTests = 0
+    core.results.suites = {}
+end
+
+
+
+--
+-- Print message esp. in case test directory seems to be empty
+--
+function printMessageIfNoTestsToRun()
+    if core.results.passedTests == 0 and core.results.failedTests == 0 then
+        print("No tests to run.")
+    end
+end
+
+
+
+--
 -- Run all selected tests.
 --
 function core.runTests(verboseOperation, colorOutput, testsToRun, outputFiles, testOptions, tags)
     -- variable that controls the return value passed to os.exit()
     local returnValue = true
-    core.results.passedTests = 0
-    core.results.failedTests = 0
-    core.results.suites = {}
+    prepareTestResultStructure()
     -- set global variable
     _G["colorOutput"] = colorOutput
 
@@ -654,10 +674,7 @@ function core.runTests(verboseOperation, colorOutput, testsToRun, outputFiles, t
         else
             returnValue = false
         end
-        -- test directory seems to be empty
-        if core.results.passedTests == 0 and core.results.failedTests == 0 then
-            print("No tests to run.")
-        end
+        printMessageIfNoTestsToRun()
     end
 
     -- if no tests were run, report this situation
