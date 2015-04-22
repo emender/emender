@@ -93,12 +93,12 @@ function string.trimString(str)
     if not str then
         return nil
     end
-    if string.len(text) > 2 then
-        local getOutput = text:gmatch("[%p%s]*(%w[%w%s%p]*%w)[%p%s]*$")
+    if string.len(str) > 2 then
+        local getOutput = str:gmatch("[%p%s]*(%w[%w%s%p]*%w)[%p%s]*$")
         return getOutput()
     else
         -- special cases for string of length 0 to 2 characters
-        local getOutput = text:gmatch("[%p%s]*(%w*)[%p%s]*$")
+        local getOutput = str:gmatch("[%p%s]*(%w*)[%p%s]*$")
         return getOutput()
     end
 end
