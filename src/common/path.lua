@@ -96,6 +96,11 @@ function path.file_exists(filename)
         return nil
     end
 
+    -- check if filename parameter has the proper value
+    if type(filename) ~= "string" then
+        return nil
+    end
+
     -- Try to open the file for reading:
     local fin = io.open(filename, "r")
 
@@ -116,3 +121,4 @@ end
 
 -- Export the module:
 return path
+
