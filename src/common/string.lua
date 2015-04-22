@@ -2,7 +2,7 @@
 -- Various enhancements of all string objects.
 --
 -- This file is part of Emender.
--- Copyright (C) 2014, 2015 Pavel Tisnovsky, Jaromir Hradilek
+-- Copyright (C) 2014, 2015 Pavel Tisnovsky, Jaromir Hradilek, Pavel Vomacka
 --
 -- Emender is free software: you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -69,10 +69,37 @@ end
 -- known from other programming languages.
 --
 function string.trim(str)
+    -- make sure we don't get 'NPE'
+    if not str then
+        return nil
+    end
     if str:find("^%s*$") then -- string contains only whitespace(s)
         return ""
     else
         return str:match("^%s*(.*%S)")
+    end
+end
+
+
+
+--
+-- Function that removes all punctuation characters and spaces from both sides of string.
+--
+-- @param text string which should be edited
+-- @return edited string
+--
+function string.trimString(str)
+    -- make sure we don't get 'NPE'
+    if not str then
+        return nil
+    end
+    if string.len(text) > 2 then
+        local getOutput = text:gmatch("[%p%s]*(%w[%w%s%p]*%w)[%p%s]*$")
+        return getOutput()
+    else
+        -- special cases for string of length 0 to 2 characters
+        local getOutput = text:gmatch("[%p%s]*(%w*)[%p%s]*$")
+        return getOutput()
     end
 end
 
