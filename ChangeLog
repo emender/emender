@@ -1,3 +1,8 @@
+2015-04-23  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* src/common/string.lua:
+	Fixed issue in trimString() function and strings with 3 characters.
+
 2015-04-22  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* test/TestModuleString.lua:
