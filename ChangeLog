@@ -1,5 +1,11 @@
 2015-04-23  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* selfchecks/selfcheck.sh:
+	* selfchecks/test_module_string.in:
+	Added new selfcheck for testing module String.
+
+2015-04-23  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* src/TestModuleString.lua:
 	More test added into TestModuleString test.
 

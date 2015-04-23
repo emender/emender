@@ -138,6 +138,7 @@ function runTestsModules {
      ../emend ../test/TestModuleAsserts.lua > test_module_asserts.out
      ../emend ../test/TestModuleFileio.lua  > test_module_fileio.out
      ../emend ../test/TestModuleGendoc.lua  > test_module_gendoc.out
+     ../emend ../test/TestModuleString.lua  > test_module_string.out
      ../emend ../test/TestPathCompose.lua   > test_module_path_compose.out
 }
 
