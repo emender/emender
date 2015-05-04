@@ -1,3 +1,8 @@
+2015-05-04  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* src/common/string.lua:
+	Added new function: lastIndexOf().
+
 2015-04-23  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* selfchecks/selfcheck.sh:

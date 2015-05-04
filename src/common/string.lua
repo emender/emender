@@ -249,3 +249,16 @@ function string:split(separator)
     return parts
 end
 
+
+
+--
+-- Implementation of classical lastIndexOf() function
+--
+function string:lastIndexOf(str)
+    local i = self:match(".*" .. str .. "()")
+    if not i then
+        return nil
+    else
+        return i-1 end
+end
+
