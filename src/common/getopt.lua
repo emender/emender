@@ -151,13 +151,22 @@ end
 
 
 --
+-- Check if -G or --gendoc is used on the CLI.
+--
+function getopt.isGenDocFlagUsed(options)
+    return options["G"] or options["gendoc"]
+end
+
+
+
+--
 -- Returns table that would contain all unknown command line options.
 --
 function getopt.getUnknownOptions(options)
     local knownOptions = {"v", "verbose",   "l", "list",      "h", "help",
                           "V", "version",   "L", "license",   "c", "color",
                           "s", "summary",   "T", "trace",     "o", "output",
-                          "D", "debug",     "t", "tags"}
+                          "D", "debug",     "t", "tags",      "G", "gendoc"}
 
     -- we are going to modify table two times, so let's made a copy of it
     local unknownOptions = table.copy(options)
