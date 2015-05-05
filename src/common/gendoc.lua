@@ -188,6 +188,84 @@ end
 
 
 
+function writeSourceFileName(sourceFile, type, fout)
+    if type == "txt" then
+        fout:write("[" .. sourceFile .. "]\n\n")
+    elseif type == "html" then
+        fout:write("<h1>" .. sourceFile .. "</h1>\n")
+    end
+end
+
+function writeFunctionName(functionName, type, fout)
+    if type == "txt" then
+        fout:write(functionName .. "\n")
+    elseif type == "html" then
+        fout:write("<h2>" .. functionName .. "</h2>\n")
+    end
+end
+
+function writeComment(comment, type, fout)
+    if type == "txt" then
+        fout:write(comment .. "\n\n")
+    elseif type == "html" then
+        fout:write("<p>" .. comment .. "</p>\n")
+    end
+end
+
+
+
+--
+-- Generate simple documentation for one selected source file.
+--
+function generateDocForOneSourceFile(sourceFile, colorOutput, outputFiles)
+    print("***", sourceFile, "***")
+    for _,outputFile in pairs(outputFiles) do
+        local type = outputFile[1]
+        local fout = outputFile[2]
+        local name = sourceFile:substring(1+sourceFile:lastIndexOf("/"))
+        writeSourceFileName(name, type, fout)
+    end
+    local source = slurpTable(sourceFile)
+    for lineNumber, lineContent in ipairs(source) do
+        if lineContent:startsWith("function ") then
+            local functionNameParams = lineContent:substring(lineContent:find("function") + 9)
+            if functionNameParams then
+                local comment = getComment(source, lineNumber)
+                print(lineNumber, functionNameParams)
+                print(comment)
+                print()
+                for _,outputFile in pairs(outputFiles) do
+                    local type = outputFile[1]
+                    local fout = outputFile[2]
+                    writeFunctionName(functionNameParams, type, fout)
+                    writeComment(comment, type, fout)
+                end
+            end
+        end
+    end
+end
+
+
+
+--
+-- Generate simple documentation for Emender (comments for all test functions
+-- found in all Emender modules).
+--
+function gendoc.generateDocForWholeEmender(scriptDirectory, colorOutput, outputFiles)
+    openOutputFiles(outputFiles)
+    generateDocForOneSourceFile(scriptDirectory .. "emend", colorOutput, outputFiles)
+    local listSourcesCmd = "tree -f -i -n -P *.lua " .. scriptDirectory .. "src/"
+    local sourceList = execCaptureOutputAsTable(listSourcesCmd)
+    for _, sourceFile in ipairs(sourceList) do
+        if sourceFile:endsWith(".lua") then
+          --  generateDocForOneSourceFile(sourceFile, colorOutput, outputFiles)
+        end
+    end
+    closeOutputFiles(outputFiles)
+end
+
+
+
 -- Export the module:
 return gendoc
 

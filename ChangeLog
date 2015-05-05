@@ -1,6 +1,11 @@
 2015-05-05  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* src/common/gendoc.lua:
+	First version of documentation generator.
+
+2015-05-05  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* src/common/gendoc.lua:
 	Fixed typo and renamed one function.
 
 2015-05-04  Pavel Tisnovsky  <ptisnovs@redhat.com>
