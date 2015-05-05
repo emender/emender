@@ -127,7 +127,7 @@ end
 function generateDocForOneTest(core, testName, scriptDirectory, filename)
     core.checkTestNameShadowing(testName)
 
-    -- load or reload the test se we could use reflection
+    -- load or reload the test so we could use reflection
     dofile(scriptDirectory .. "test/" .. filename)
 
     -- if test is properly loaded its structure must be stored in a global table _G
@@ -179,7 +179,7 @@ end
 -- Generate simple documentation (comments for all test functions found
 -- in all tests).
 --
-function gendoc.generateDoc(core)
+function gendoc.generateDocForAllTests(core)
     local scriptDirectory = getScriptDirectory()
     local testList = getTestList()
     -- generate simple documentation for the given list of tests
