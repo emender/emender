@@ -129,3 +129,104 @@ end
 
 
 
+--
+-- Test if global function with the given name exists.
+--
+function TestModuleString.testTrimStringFunction1()
+    local str = "Hello world!"
+    warn("Original string: " .. str)
+    warn("Trimmed string:  " .. str:trimString())
+    is_equal(str:trimString(), "Hello world", "Test if trimString() function works correctly")
+end
+
+
+
+--
+-- Test if global function with the given name exists.
+--
+function TestModuleString.testTrimStringFunction2()
+    local str = "   Hello world!"
+    is_equal(str:trimString(), "Hello world", "Test if trimString() function works correctly")
+end
+
+
+
+--
+-- Test if global function with the given name exists.
+--
+function TestModuleString.testTrimStringFunction3()
+    local str = "Hello world!   "
+    is_equal(str:trimString(), "Hello world", "Test if trimString() function works correctly")
+end
+
+
+
+--
+-- Test if global function with the given name exists.
+--
+function TestModuleString.testTrimStringFunction4()
+    local str = "   Hello world!   "
+    is_equal(str:trimString(), "Hello world", "Test if trimString() function works correctly")
+end
+
+
+
+--
+-- Test if global function with the given name exists.
+--
+function TestModuleString.testTrimStringFunction5()
+    local str = ""
+    is_equal(str:trimString(), "", "Test if trimString() function works correctly")
+end
+
+
+
+--
+-- Test if global function with the given name exists.
+--
+function TestModuleString.testTrimStringFunction6()
+    local str = " "
+    is_equal(str:trimString(), "", "Test if trimString() function works correctly")
+end
+
+
+
+--
+-- Test if global function with the given name exists.
+--
+function TestModuleString.testTrimStringFunction7()
+    local str = "  "
+    is_equal(str:trimString(), "", "Test if trimString() function works correctly")
+end
+
+
+
+--
+-- Test if global function with the given name exists.
+--
+function TestModuleString.testTrimStringFunction8()
+    local str = "   "
+    is_equal(str:trimString(), "", "Test if trimString() function works correctly")
+end
+
+
+
+--
+-- Test if global function with the given name exists.
+--
+function TestModuleString.testTrimStringFunction9()
+    local str = " x "
+    is_equal(str:trimString(), "x", "Test if trimString() function works correctly")
+end
+
+
+
+--
+-- Test if global function with the given name exists.
+--
+function TestModuleString.testTrimStringFunction10()
+    local str = " xx "
+    is_equal(str:trimString(), "xx", "Test if trimString() function works correctly")
+end
+
+

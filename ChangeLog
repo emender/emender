@@ -1,5 +1,10 @@
 2015-05-06  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* test/TestModuleString.lua:
+	Added ten new test cases into TestModuleString.
+
+2015-05-06  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* examples/gendoc_stdout.sh:
 	* examples/gendoc_txt.sh:
 	Added two examples - how to generate documentation.
