@@ -1,5 +1,5 @@
 -- Tools checker module.
--- Copyright (C) 2014 Pavel Tisnovsky
+-- Copyright (C) 2014, 2015 Pavel Tisnovsky
 
 -- This file is part of Emender.
 
@@ -21,7 +21,9 @@
 -- Data structure that holds all exported variables and functions
 --
 local toolsChecker = {
-    requiredTools = {"curl", "wget", "xmllint"}
+    --requiredBasicTools = {"curl", "wget", "xmllint", "tree"}
+    -- the following tools (or built-in commands) are required by Emender itself
+    requiredBasicTools = {"cp", "ls", "tree"}
 }
 
 
@@ -54,9 +56,9 @@ end
 -- Perform check if all required commands are installed.
 -- If any of required tools is not intalled, the process fail.
 --
-function toolsChecker.performCheck()
+function toolsChecker.performCheck(verboseOperations, listOfTools)
     -- loop over all required tools
-    for _, command in ipairs(toolsChecker.requiredTools) do
+    for _, command in ipairs(listOfTools) do
         -- check for tool existence
         local exists = commandExists(command)
         if not exists then
@@ -64,9 +66,21 @@ function toolsChecker.performCheck()
             print("Failure, this tool can't be started properly.")
             os.exit(1)
         else
-            commandCheckMessage(command, "OK")
+            if verboseOperations then
+                commandCheckMessage(command, "OK")
+            end
         end
     end
+end
+
+
+
+--
+-- Perform check if all basic tools required by Emender itself are installed.
+-- If any of required tools is not intalled, the process fail.
+--
+function toolsChecker.performBasicCheck(verboseOperations)
+    toolsChecker.performCheck(verboseOperations, toolsChecker.requiredBasicTools)
 end
 
 

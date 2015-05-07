@@ -1,5 +1,10 @@
 2015-05-07  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* src/selftest/toolsChecker.lua:
+	Updated to check if basic tools are already installed.
+
+2015-05-07  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* src/man/man1/emend.1.pod:
 	Added new flags to man page.
 
