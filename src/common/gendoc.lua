@@ -258,7 +258,7 @@ function gendoc.generateDocForWholeEmender(scriptDirectory, colorOutput, outputF
     local sourceList = execCaptureOutputAsTable(listSourcesCmd)
     for _, sourceFile in ipairs(sourceList) do
         if sourceFile:endsWith(".lua") then
-          --  generateDocForOneSourceFile(sourceFile, colorOutput, outputFiles)
+            generateDocForOneSourceFile(sourceFile, colorOutput, outputFiles)
         end
     end
     closeOutputFiles(outputFiles)
