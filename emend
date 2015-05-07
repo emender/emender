@@ -205,7 +205,6 @@ function main(arg)
 
     registerWriters()
 
-    --toolsChecker.performCheck()
     local options = getopt.getopt(arg, "")
 
     checkForUnknownOptions(options)
@@ -230,6 +229,8 @@ function main(arg)
     if verboseOperations then
         printConfiguration(outputFileNames, outputFiles, testsToRun, testOptions, tags)
     end
+
+    toolsChecker.performBasicCheck(verboseOperations)
 
     logger.setColorOutput(colorOutput)
 

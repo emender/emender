@@ -1,5 +1,10 @@
 2015-05-07  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* emend:
+	Tool checker should be run before Emender started its core.
+
+2015-05-07  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* src/selftest/toolsChecker.lua:
 	Updated to check if basic tools are already installed.
 
