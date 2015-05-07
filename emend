@@ -242,6 +242,8 @@ function main(arg)
         license.showLicense(colorOutput)
     elseif getopt.isTestListOptionUsed(options) then
         core.performTestList(verboseOperations, colorOutput, testsToRun)
+    elseif getopt.isGenDocFlagUsed(options) then
+        gendoc.generateDocForWholeEmender(getScriptDirectory(), colorOutput, outputFiles)
     else
         local returnValue = core.runTests(verboseOperations, colorOutput, testsToRun, outputFiles, testOptions, tags)
         if returnValue then

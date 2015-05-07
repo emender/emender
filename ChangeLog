@@ -1,6 +1,12 @@
 2015-05-07  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* emend:
+	Documentation generator should be started when -G or
+	--gendoc flag is specified on the command line.
+
+2015-05-07  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* emend:
 	Tool checker should be run before Emender started its core.
 
 2015-05-07  Pavel Tisnovsky  <ptisnovs@redhat.com>
