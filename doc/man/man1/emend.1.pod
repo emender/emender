@@ -71,6 +71,10 @@ Displays version information and exits.
 
 Displays the license and exits.
 
+=item B<-G>, B<--gendoc>
+
+Generates documentation for all Emender modules.
+
 =back
 
 =head1 EXIT STATUS
