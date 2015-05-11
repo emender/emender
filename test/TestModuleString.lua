@@ -230,7 +230,7 @@ end
 
 
 --
--- Test if global function with the given name exists.
+-- Test the behaviour of the following Emender function: string:trimString().
 --
 function TestModuleString.testTrimStringFunction01()
     local str = "Hello world!"
@@ -242,7 +242,7 @@ end
 
 
 --
--- Test if global function with the given name exists.
+-- Test the behaviour of the following Emender function: string:trimString().
 --
 function TestModuleString.testTrimStringFunction02()
     local str = "   Hello world!"
@@ -252,7 +252,7 @@ end
 
 
 --
--- Test if global function with the given name exists.
+-- Test the behaviour of the following Emender function: string:trimString().
 --
 function TestModuleString.testTrimStringFunction03()
     local str = "Hello world!   "
@@ -262,7 +262,7 @@ end
 
 
 --
--- Test if global function with the given name exists.
+-- Test the behaviour of the following Emender function: string:trimString().
 --
 function TestModuleString.testTrimStringFunction04()
     local str = "   Hello world!   "
@@ -272,7 +272,7 @@ end
 
 
 --
--- Test if global function with the given name exists.
+-- Test the behaviour of the following Emender function: string:trimString().
 --
 function TestModuleString.testTrimStringFunction05()
     local str = ""
@@ -282,7 +282,7 @@ end
 
 
 --
--- Test if global function with the given name exists.
+-- Test the behaviour of the following Emender function: string:trimString().
 --
 function TestModuleString.testTrimStringFunction06()
     local str = " "
@@ -292,7 +292,7 @@ end
 
 
 --
--- Test if global function with the given name exists.
+-- Test the behaviour of the following Emender function: string:trimString().
 --
 function TestModuleString.testTrimStringFunction07()
     local str = "  "
@@ -302,7 +302,7 @@ end
 
 
 --
--- Test if global function with the given name exists.
+-- Test the behaviour of the following Emender function: string:trimString().
 --
 function TestModuleString.testTrimStringFunction08()
     local str = "   "
@@ -312,7 +312,7 @@ end
 
 
 --
--- Test if global function with the given name exists.
+-- Test the behaviour of the following Emender function: string:trimString().
 --
 function TestModuleString.testTrimStringFunction09()
     local str = " x "
@@ -322,11 +322,122 @@ end
 
 
 --
--- Test if global function with the given name exists.
+-- Test the behaviour of the following Emender function: string:trimString().
 --
 function TestModuleString.testTrimStringFunction10()
     local str = " xx "
     is_equal(str:trimString(), "xx", "Test if trimString() function works correctly")
 end
+
+
+
+--
+-- Test the behaviour of the following Emender function: string:trimString().
+--
+function TestModuleString.testTrimStringFunction11()
+    local str = "\n "
+    is_equal(str:trimString(), "", "Test if trimString() function works correctly")
+end
+
+
+
+--
+-- Test the behaviour of the following Emender function: string:trimString().
+--
+function TestModuleString.testTrimStringFunction12()
+    local str = " \n"
+    is_equal(str:trimString(), "", "Test if trimString() function works correctly")
+end
+
+
+
+--
+-- Test the behaviour of the following Emender function: string:trimString().
+--
+function TestModuleString.testTrimStringFunction13()
+    local str = "\t "
+    is_equal(str:trimString(), "", "Test if trimString() function works correctly")
+end
+
+
+
+--
+-- Test the behaviour of the following Emender function: string:trimString().
+--
+function TestModuleString.testTrimStringFunction14()
+    local str = " \t"
+    is_equal(str:trimString(), "", "Test if trimString() function works correctly")
+end
+
+
+
+--
+-- Test the behaviour of the following Emender function: string:trimString().
+--
+function TestModuleString.testTrimStringFunction15()
+    local str = "\n\t"
+    is_equal(str:trimString(), "", "Test if trimString() function works correctly")
+end
+
+
+
+--
+-- Test the behaviour of the following Emender function: string:trimString().
+--
+function TestModuleString.testTrimStringFunction16()
+    local str = " \n\t"
+    is_equal(str:trimString(), "", "Test if trimString() function works correctly")
+end
+
+
+
+--
+-- Test the behaviour of the following Emender function: string:trimString().
+--
+function TestModuleString.testTrimStringFunction17()
+    local str = "\n \t"
+    is_equal(str:trimString(), "", "Test if trimString() function works correctly")
+end
+
+
+
+--
+-- Test the behaviour of the following Emender function: string:trimString().
+--
+function TestModuleString.testTrimStringFunction18()
+    local str = "\n\t "
+    is_equal(str:trimString(), "", "Test if trimString() function works correctly")
+end
+
+
+
+--
+-- Test the behaviour of the following Emender function: string:trimString().
+--
+function TestModuleString.testTrimStringFunction19()
+    local str = " \n\t "
+    is_equal(str:trimString(), "", "Test if trimString() function works correctly")
+end
+
+
+
+--
+-- Test the behaviour of the following Emender function: string:trimString().
+--
+function TestModuleString.testTrimStringFunction20()
+    local str = " \n \t "
+    is_equal(str:trimString(), "", "Test if trimString() function works correctly")
+end
+
+
+
+--
+-- Test the behaviour of the following Emender function: string:trimString().
+--
+function TestModuleString.testTrimStringFunction21()
+    local str = "  \n \t  "
+    is_equal(str:trimString(), "", "Test if trimString() function works correctly")
+end
+
 
 
