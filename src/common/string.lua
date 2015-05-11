@@ -95,11 +95,21 @@ function string.trimString(str)
     end
     if string.len(str) > 3 then
         local getOutput = str:gmatch("[%p%s]*(%w[%w%s%p]*%w)[%p%s]*$")
-        return getOutput()
+        local output = getOutput()
+        if not output then
+            return ""
+        else
+            return output
+        end
     else
         -- special cases for string of length 0 to 3 characters
         local getOutput = str:gmatch("[%p%s]*(%w*)[%p%s]*$")
-        return getOutput()
+        local output = getOutput()
+        if not output then
+            return ""
+        else
+            return output
+        end
     end
 end
 

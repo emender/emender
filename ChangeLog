@@ -1,5 +1,10 @@
 2015-05-11  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* src/common/string.lua:
+	Fixed behaviour of string:trimString function.
+
+2015-05-11  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* test/TestModuleString.lua:
 	Added ten new tests into TestModuleString.
 
