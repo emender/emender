@@ -5,7 +5,7 @@
   Description:   Check the API for the Emender module 'string'.
   Authors:       Pavel Tisnovsky
   Emails:        ptisnovs@redhat.com
-  Last Modified: 2015-04-22
+  Last Modified: 2015-05-11
   Tags:          BasicTest, ModuleTest
 
   Test Case: testTrimFunction01
@@ -48,52 +48,136 @@
 
     [ PASS ]  Test if trim() function works correctly
 
-  Test Case: testTrimStringFunction1
+  Test Case: testTrimFunction11
+
+    [ PASS ]  Test if trim() function works correctly
+
+  Test Case: testTrimFunction12
+
+    [ PASS ]  Test if trim() function works correctly
+
+  Test Case: testTrimFunction13
+
+    [ PASS ]  Test if trim() function works correctly
+
+  Test Case: testTrimFunction14
+
+    [ PASS ]  Test if trim() function works correctly
+
+  Test Case: testTrimFunction15
+
+    [ PASS ]  Test if trim() function works correctly
+
+  Test Case: testTrimFunction16
+
+    [ PASS ]  Test if trim() function works correctly
+
+  Test Case: testTrimFunction17
+
+    [ PASS ]  Test if trim() function works correctly
+
+  Test Case: testTrimFunction18
+
+    [ PASS ]  Test if trim() function works correctly
+
+  Test Case: testTrimFunction19
+
+    [ PASS ]  Test if trim() function works correctly
+
+  Test Case: testTrimFunction20
+
+    [ PASS ]  Test if trim() function works correctly
+
+  Test Case: testTrimStringFunction01
 
     [ INFO ]  Original string: Hello world!
     [ INFO ]  Trimmed string:  Hello world
+    [ PASS ]  Test if trimString() function works correctly
+
+  Test Case: testTrimStringFunction02
+
+    [ PASS ]  Test if trimString() function works correctly
+
+  Test Case: testTrimStringFunction03
+
+    [ PASS ]  Test if trimString() function works correctly
+
+  Test Case: testTrimStringFunction04
+
+    [ PASS ]  Test if trimString() function works correctly
+
+  Test Case: testTrimStringFunction05
+
+    [ PASS ]  Test if trimString() function works correctly
+
+  Test Case: testTrimStringFunction06
+
+    [ PASS ]  Test if trimString() function works correctly
+
+  Test Case: testTrimStringFunction07
+
+    [ PASS ]  Test if trimString() function works correctly
+
+  Test Case: testTrimStringFunction08
+
+    [ PASS ]  Test if trimString() function works correctly
+
+  Test Case: testTrimStringFunction09
+
     [ PASS ]  Test if trimString() function works correctly
 
   Test Case: testTrimStringFunction10
 
     [ PASS ]  Test if trimString() function works correctly
 
-  Test Case: testTrimStringFunction2
+  Test Case: testTrimStringFunction11
 
     [ PASS ]  Test if trimString() function works correctly
 
-  Test Case: testTrimStringFunction3
+  Test Case: testTrimStringFunction12
 
     [ PASS ]  Test if trimString() function works correctly
 
-  Test Case: testTrimStringFunction4
+  Test Case: testTrimStringFunction13
 
     [ PASS ]  Test if trimString() function works correctly
 
-  Test Case: testTrimStringFunction5
+  Test Case: testTrimStringFunction14
 
     [ PASS ]  Test if trimString() function works correctly
 
-  Test Case: testTrimStringFunction6
+  Test Case: testTrimStringFunction15
 
     [ PASS ]  Test if trimString() function works correctly
 
-  Test Case: testTrimStringFunction7
+  Test Case: testTrimStringFunction16
 
     [ PASS ]  Test if trimString() function works correctly
 
-  Test Case: testTrimStringFunction8
+  Test Case: testTrimStringFunction17
 
     [ PASS ]  Test if trimString() function works correctly
 
-  Test Case: testTrimStringFunction9
+  Test Case: testTrimStringFunction18
+
+    [ PASS ]  Test if trimString() function works correctly
+
+  Test Case: testTrimStringFunction19
+
+    [ PASS ]  Test if trimString() function works correctly
+
+  Test Case: testTrimStringFunction20
+
+    [ PASS ]  Test if trimString() function works correctly
+
+  Test Case: testTrimStringFunction21
 
     [ PASS ]  Test if trimString() function works correctly
 
   Test Summary                                                            
 
-    Executed Test Cases: 20
-    Passed Test Cases:   20
+    Executed Test Cases: 41
+    Passed Test Cases:   41
     Failed Test Cases:   0
     Encountered Errors:  0
     Overall Result:      PASS
