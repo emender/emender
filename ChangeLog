@@ -1,6 +1,11 @@
 2015-05-11  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* test/TestModuleString.lua:
+	Added ten new tests into TestModuleString.
+
+2015-05-11  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* test/TestModuleString.lua:
 	Renamed various test cases.
 
 2015-05-07  Pavel Tisnovsky  <ptisnovs@redhat.com>
