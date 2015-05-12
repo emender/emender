@@ -441,3 +441,43 @@ end
 
 
 
+--
+-- Test the behaviour of the following Emender function: string:startsWith().
+--
+function TestModuleString.testStartsWithFunction01()
+    local str = "abcdef";
+    is_true(str:startsWith("abc"), "Test if startsWith() function works correctly")
+end
+
+
+
+--
+-- Test the behaviour of the following Emender function: string:endsWith().
+--
+function TestModuleString.testEndsWithFunction01()
+    local str = "abcdef";
+    is_true(str:endsWith("def"), "Test if endsWith() function works correctly")
+end
+
+
+
+--
+-- Test the behaviour of the following Emender function: string:subs().
+--
+function TestModuleString.testSubsFunction01()
+    local str = "abcdef";
+    is_equal(str:subs(1, 2), "ab", "Test if subs() function works correctly")
+end
+
+
+
+--
+-- Test the behaviour of the following Emender function: string:substring().
+--
+function TestModuleString.testSubstringFunction01()
+    local str = "abcdef";
+    is_equal(str:substring(1, 2), "ab", "Test if substring() function works correctly")
+end
+
+
+

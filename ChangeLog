@@ -1,3 +1,8 @@
+2015-05-12  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* test/TestModuleString.lua:
+	Added four tests info TestModuleString.
+
 2015-05-11  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* selftest/test_module_string.in:
