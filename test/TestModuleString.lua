@@ -452,6 +452,106 @@ end
 
 
 --
+-- Test the behaviour of the following Emender function: string:startsWith().
+--
+function TestModuleString.testStartsWithFunction02()
+    local str = "abcdef";
+    is_true(str:startsWith("a"), "Test if startsWith() function works correctly")
+end
+
+
+
+--
+-- Test the behaviour of the following Emender function: string:startsWith().
+--
+function TestModuleString.testStartsWithFunction03()
+    local str = "abcdef";
+    is_true(str:startsWith(""), "Test if startsWith() function works correctly")
+end
+
+
+
+--
+-- Test the behaviour of the following Emender function: string:startsWith().
+--
+function TestModuleString.testStartsWithFunction04()
+    local str = "abcdef";
+    is_true(str:startsWith(""), "Test if startsWith() function works correctly")
+end
+
+
+
+--
+-- Test the behaviour of the following Emender function: string:startsWith().
+--
+function TestModuleString.testStartsWithFunction05()
+    local str = "";
+    is_true(str:startsWith(""), "Test if startsWith() function works correctly")
+end
+
+
+
+--
+-- Test the behaviour of the following Emender function: string:startsWith().
+--
+function TestModuleString.testStartsWithFunction06()
+    local str = " ";
+    is_true(str:startsWith(""), "Test if startsWith() function works correctly")
+end
+
+
+
+--
+-- Test the behaviour of the following Emender function: string:startsWith().
+--
+function TestModuleString.testStartsWithFunction07()
+    local str = " ";
+    is_true(str:startsWith(" "), "Test if startsWith() function works correctly")
+end
+
+
+
+--
+-- Test the behaviour of the following Emender function: string:startsWith().
+--
+function TestModuleString.testStartsWithFunction08()
+    local str = "***";
+    is_true(str:startsWith(""), "Test if startsWith() function works correctly")
+end
+
+
+
+--
+-- Test the behaviour of the following Emender function: string:startsWith().
+--
+function TestModuleString.testStartsWithFunction09()
+    local str = "***";
+    is_true(str:startsWith("*"), "Test if startsWith() function works correctly")
+end
+
+
+
+--
+-- Test the behaviour of the following Emender function: string:startsWith().
+--
+function TestModuleString.testStartsWithFunction10()
+    local str = "***";
+    is_true(str:startsWith("**"), "Test if startsWith() function works correctly")
+end
+
+
+
+--
+-- Test the behaviour of the following Emender function: string:startsWith().
+--
+function TestModuleString.testStartsWithFunction11()
+    local str = "***";
+    is_true(str:startsWith("***"), "Test if startsWith() function works correctly")
+end
+
+
+
+--
 -- Test the behaviour of the following Emender function: string:endsWith().
 --
 function TestModuleString.testEndsWithFunction01()
