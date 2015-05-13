@@ -12,7 +12,67 @@
 
     [ PASS ]  Test if endsWith() function works correctly
 
+  Test Case: testEndsWithFunction02
+
+    [ PASS ]  Test if endsWith() function works correctly
+
+  Test Case: testEndsWithFunction03
+
+    [ PASS ]  Test if endsWith() function works correctly
+
+  Test Case: testEndsWithFunction04
+
+    [ PASS ]  Test if endsWith() function works correctly
+
+  Test Case: testEndsWithFunction05
+
+    [ PASS ]  Test if endsWith() function works correctly
+
+  Test Case: testEndsWithFunction06
+
+    [ PASS ]  Test if endsWith() function works correctly
+
   Test Case: testStartsWithFunction01
+
+    [ PASS ]  Test if startsWith() function works correctly
+
+  Test Case: testStartsWithFunction02
+
+    [ PASS ]  Test if startsWith() function works correctly
+
+  Test Case: testStartsWithFunction03
+
+    [ PASS ]  Test if startsWith() function works correctly
+
+  Test Case: testStartsWithFunction04
+
+    [ PASS ]  Test if startsWith() function works correctly
+
+  Test Case: testStartsWithFunction05
+
+    [ PASS ]  Test if startsWith() function works correctly
+
+  Test Case: testStartsWithFunction06
+
+    [ PASS ]  Test if startsWith() function works correctly
+
+  Test Case: testStartsWithFunction07
+
+    [ PASS ]  Test if startsWith() function works correctly
+
+  Test Case: testStartsWithFunction08
+
+    [ PASS ]  Test if startsWith() function works correctly
+
+  Test Case: testStartsWithFunction09
+
+    [ PASS ]  Test if startsWith() function works correctly
+
+  Test Case: testStartsWithFunction10
+
+    [ PASS ]  Test if startsWith() function works correctly
+
+  Test Case: testStartsWithFunction11
 
     [ PASS ]  Test if startsWith() function works correctly
 
@@ -192,8 +252,8 @@
 
   Test Summary                                                            
 
-    Executed Test Cases: 45
-    Passed Test Cases:   45
+    Executed Test Cases: 60
+    Passed Test Cases:   60
     Failed Test Cases:   0
     Encountered Errors:  0
     Overall Result:      PASS
