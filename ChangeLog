@@ -1,6 +1,11 @@
 2015-05-14  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* test/TestModuleExec.lua:
+	Added new test cases into test TestModuleExec.
+
+2015-05-14  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* test/TestModuleExec.lua:
 	Stub for test for module 'exec'.
 
 2015-05-13  Pavel Tisnovsky  <ptisnovs@redhat.com>

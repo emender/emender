@@ -56,3 +56,13 @@ function TestModuleExec.testFunctionExecCaptureOutputAsTable()
     TestModuleExec.doesFunctionExist("execCaptureOutputAsTable")
 end
 
+
+
+--
+-- Check if the following global function exists: 'execCaptureOutputAsString'.
+-- This function should be declared as part of exec module.
+--
+function TestModuleExec.testFunctionExecCaptureOutputAsString()
+    TestModuleExec.doesFunctionExist("execCaptureOutputAsString")
+end
+
