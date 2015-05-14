@@ -86,6 +86,7 @@ function loadModules()
     luaVersionChecker = require("src/selftest/luaVersionChecker")
     toolsChecker = require("src/selftest/toolsChecker")
     getopt = require("src/common/getopt")
+    _G["getopt"] = getopt
     core = require("src/core")
     help = require("src/help")
     testInfo = require("src/testInfo")

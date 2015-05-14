@@ -1,5 +1,10 @@
 2015-05-14  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* emend:
+	GetOpt module should be stored in a global table _G.
+
+2015-05-14  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* test/TestModuleGetopt.lua:
 	Stub for test for module 'getopt'.
 
