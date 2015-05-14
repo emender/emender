@@ -1,5 +1,10 @@
 2015-05-14  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* test/TestModuleGetopt.lua:
+	Stub for test for module 'getopt'.
+
+2015-05-14  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* test/TestModuleExec.lua:
 	Added new test cases into test TestModuleExec.
 
