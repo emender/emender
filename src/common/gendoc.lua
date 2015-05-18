@@ -188,6 +188,22 @@ end
 
 
 
+--
+-- Write header into selected output file
+--
+function writeHeader(type, fout)
+end
+
+
+
+--
+-- Write footer into selected output file
+--
+function writeFooter(type, fout)
+end
+
+
+
 function writeSourceFileName(sourceFile, type, fout)
     if type == "txt" then
         fout:write("[" .. sourceFile .. "]\n\n")
@@ -209,6 +225,32 @@ function writeComment(comment, type, fout)
         fout:write(comment .. "\n\n")
     elseif type == "html" then
         fout:write("<p>" .. comment .. "</p>\n")
+    end
+end
+
+
+
+--
+-- Generate header into all output files
+--
+function generateHeader(outputFiles)
+    for _,outputFile in pairs(outputFiles) do
+        local type = outputFile[1]
+        local fout = outputFile[2]
+        writeHeader(type, fout)
+    end
+end
+
+
+
+--
+-- Generate footer into all output files
+--
+function generateFooter(outputFiles)
+    for _,outputFile in pairs(outputFiles) do
+        local type = outputFile[1]
+        local fout = outputFile[2]
+        writeFooter(type, fout)
     end
 end
 
@@ -253,6 +295,9 @@ end
 --
 function gendoc.generateDocForWholeEmender(scriptDirectory, colorOutput, outputFiles)
     openOutputFiles(outputFiles)
+
+    generateHeader(outputFiles)
+
     generateDocForOneSourceFile(scriptDirectory .. "emend", colorOutput, outputFiles)
     local listSourcesCmd = "tree -f -i -n -P *.lua " .. scriptDirectory .. "src/"
     local sourceList = execCaptureOutputAsTable(listSourcesCmd)
@@ -261,6 +306,9 @@ function gendoc.generateDocForWholeEmender(scriptDirectory, colorOutput, outputF
             generateDocForOneSourceFile(sourceFile, colorOutput, outputFiles)
         end
     end
+
+    generateFooter(outputFiles)
+
     closeOutputFiles(outputFiles)
 end
 

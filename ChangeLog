@@ -1,3 +1,9 @@
+2015-05-18  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* src/common/gendoc.lua:
+	Added functions to generate header and footer in generated HTML
+	documentation.
+
 2015-05-14  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* emend:
