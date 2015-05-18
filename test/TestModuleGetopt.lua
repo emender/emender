@@ -30,19 +30,29 @@ TestModuleGetopt = {
 
 
 --
--- Test if global function with the given name exists.
+-- Test if global object with the given name exists.
 --
-function TestModuleGetopt.doesFunctionExist(functionName)
+function TestModuleGetopt.doesObjectExist(objectName)
     -- try to get global object from the global table _G
-    local func = _G[functionName]
+    local func = _G[objectName]
 
     -- check if global object exists at all
-    is_not_nil(func, "Check if global object with the name '" .. functionName .. "' exists.")
+    is_not_nil(func, "Check if global object with the name '" .. objectName .. "' exists.")
     if not func then
         return
     end
 
     -- check global object type
-    is_type(func, "function", "Check if object with the name '" .. functionName .. "' has correct type")
+    is_type(func, "table", "Check if object with the name '" .. objectName .. "' has correct type")
+end
+
+
+
+--
+-- Check if the following global object exists: 'getopt'.
+-- This function should be declared as part of getopt module.
+--
+function TestModuleGetopt.testObjectGetopt()
+    TestModuleGetopt.doesObjectExist("getopt")
 end
 
