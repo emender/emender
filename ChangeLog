@@ -1,5 +1,10 @@
 2015-05-19  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* emend:
+	Module 'toolchecker' should be accessible through core."
+
+2015-05-19  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* src/common/gendoc.lua:
 	Rendering of HTML header and footer in generated HTML documentation.
 

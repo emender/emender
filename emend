@@ -85,6 +85,7 @@ function loadModules()
     alterPackagePath()
     luaVersionChecker = require("src/selftest/luaVersionChecker")
     toolsChecker = require("src/selftest/toolsChecker")
+    _G["toolsChecker"] = toolsChecker
     getopt = require("src/common/getopt")
     _G["getopt"] = getopt
     core = require("src/core")
