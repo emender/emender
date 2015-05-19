@@ -56,7 +56,7 @@ end
 -- Perform check if all required commands are installed.
 -- If any of required tools is not intalled, the process fail.
 --
-function toolsChecker.performCheck(verboseOperations, listOfTools)
+function toolsChecker.performCheck(verboseOperations, listOfTools, stopEmender)
     -- loop over all required tools
     for _, command in ipairs(listOfTools) do
         -- check for tool existence
@@ -64,13 +64,18 @@ function toolsChecker.performCheck(verboseOperations, listOfTools)
         if not exists then
             commandCheckMessage(command, "error")
             print("Failure, this tool can't be started properly.")
-            os.exit(1)
+            if stopEmender then
+                os.exit(1)
+            else
+                return false
+            end
         else
             if verboseOperations then
                 commandCheckMessage(command, "OK")
             end
         end
     end
+    return true
 end
 
 
@@ -80,7 +85,7 @@ end
 -- If any of required tools is not intalled, the process fail.
 --
 function toolsChecker.performBasicCheck(verboseOperations)
-    toolsChecker.performCheck(verboseOperations, toolsChecker.requiredBasicTools)
+    toolsChecker.performCheck(verboseOperations, toolsChecker.requiredBasicTools, true)
 end
 
 
