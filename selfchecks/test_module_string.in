@@ -2,11 +2,12 @@
                            :: TestModuleString ::
 ---------------------------------------------------------------------------
 
-  Description:   Check the API for the Emender module 'string'.
-  Authors:       Pavel Tisnovsky
-  Emails:        ptisnovs@redhat.com
-  Last Modified: 2015-05-11
-  Tags:          BasicTest, ModuleTest
+  Description:     Check the API for the Emender module 'string'.
+  Authors:         Pavel Tisnovsky
+  Emails:          ptisnovs@redhat.com
+  Last Modified:   2015-05-11
+  Tags:            BasicTest, ModuleTest
+  Required tools:  
 
   Test Case: testEndsWithFunction01
 

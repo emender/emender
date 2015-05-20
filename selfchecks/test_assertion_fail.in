@@ -2,11 +2,12 @@
                           :: TestAssertionFail ::
 ---------------------------------------------------------------------------
 
-  Description:   Test the behavior of the asserts.fail() function.
-  Authors:       Jaromir Hradilek, Pavel Tisnovsky
-  Emails:        jhradilek@redhat.com, ptisnovs@redhat.com
-  Last Modified: 2014-11-14
-  Tags:          BasicTest, SmokeTest
+  Description:     Test the behavior of the asserts.fail() function.
+  Authors:         Jaromir Hradilek, Pavel Tisnovsky
+  Emails:          jhradilek@redhat.com, ptisnovs@redhat.com
+  Last Modified:   2014-11-14
+  Tags:            BasicTest, SmokeTest
+  Required tools:  
 
   Test Case: testNegative01
 

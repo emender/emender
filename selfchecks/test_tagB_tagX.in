@@ -2,11 +2,12 @@
                              :: TestTagATagB ::
 ---------------------------------------------------------------------------
 
-  Description:   Check that docunit core works correctly.
-  Authors:       Pavel Tisnovsky
-  Emails:        ptisnovs@redhat.com
-  Last Modified: 2015-02-12
-  Tags:          tagA, tagB
+  Description:     Check that docunit core works correctly.
+  Authors:         Pavel Tisnovsky
+  Emails:          ptisnovs@redhat.com
+  Last Modified:   2015-02-12
+  Tags:            tagA, tagB
+  Required tools:  
 
   Test Case: test1
 
@@ -24,11 +25,12 @@
                            :: TestTagATagBTagC ::
 ---------------------------------------------------------------------------
 
-  Description:   Check that docunit core works correctly.
-  Authors:       Pavel Tisnovsky
-  Emails:        ptisnovs@redhat.com
-  Last Modified: 2015-02-12
-  Tags:          tagA, tagB, tagC
+  Description:     Check that docunit core works correctly.
+  Authors:         Pavel Tisnovsky
+  Emails:          ptisnovs@redhat.com
+  Last Modified:   2015-02-12
+  Tags:            tagA, tagB, tagC
+  Required tools:  
 
   Test Case: test1
 
@@ -46,11 +48,12 @@
                                :: TestTagB ::
 ---------------------------------------------------------------------------
 
-  Description:   Check that docunit core works correctly.
-  Authors:       Pavel Tisnovsky
-  Emails:        ptisnovs@redhat.com
-  Last Modified: 2015-02-12
-  Tags:          tagB
+  Description:     Check that docunit core works correctly.
+  Authors:         Pavel Tisnovsky
+  Emails:          ptisnovs@redhat.com
+  Last Modified:   2015-02-12
+  Tags:            tagB
+  Required tools:  
 
   Test Case: test1
 
@@ -68,11 +71,12 @@
                              :: TestTagBTagC ::
 ---------------------------------------------------------------------------
 
-  Description:   Check that docunit core works correctly.
-  Authors:       Pavel Tisnovsky
-  Emails:        ptisnovs@redhat.com
-  Last Modified: 2015-02-12
-  Tags:          tagB, tagC
+  Description:     Check that docunit core works correctly.
+  Authors:         Pavel Tisnovsky
+  Emails:          ptisnovs@redhat.com
+  Last Modified:   2015-02-12
+  Tags:            tagB, tagC
+  Required tools:  
 
   Test Case: test1
 

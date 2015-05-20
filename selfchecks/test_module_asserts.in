@@ -2,11 +2,12 @@
                           :: TestModuleAsserts ::
 ---------------------------------------------------------------------------
 
-  Description:   Check the API for the Emender module 'asserts'.
-  Authors:       Pavel Tisnovsky
-  Emails:        ptisnovs@redhat.com
-  Last Modified: 2014-11-11
-  Tags:          BasicTest, ModuleTest
+  Description:     Check the API for the Emender module 'asserts'.
+  Authors:         Pavel Tisnovsky
+  Emails:          ptisnovs@redhat.com
+  Last Modified:   2014-11-11
+  Tags:            BasicTest, ModuleTest
+  Required tools:  
 
   Test Case: testFunctionFail
 

@@ -2,11 +2,12 @@
                          :: TestColorInMessages ::
 ---------------------------------------------------------------------------
 
-  Description:   Check how color in messages are rendered
-  Authors:       Pavel Tisnovsky
-  Emails:        ptisnovs@redhat.com
-  Last Modified: 2014-12-04
-  Tags:          BasicTest, SmokeTest
+  Description:     Check how color in messages are rendered
+  Authors:         Pavel Tisnovsky
+  Emails:          ptisnovs@redhat.com
+  Last Modified:   2014-12-04
+  Tags:            BasicTest, SmokeTest
+  Required tools:  
 
   Test Case: test01
 

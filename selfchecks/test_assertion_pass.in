@@ -2,11 +2,12 @@
                           :: TestAssertionPass ::
 ---------------------------------------------------------------------------
 
-  Description:   Test the behavior of the asserts.pass() function.
-  Authors:       Jaromir Hradilek, Pavel Tisnovsky
-  Emails:        jhradilek@redhat.com, ptisnovs@redhat.com
-  Last Modified: 2014-10-22
-  Tags:          BasicTest, SmokeTest
+  Description:     Test the behavior of the asserts.pass() function.
+  Authors:         Jaromir Hradilek, Pavel Tisnovsky
+  Emails:          jhradilek@redhat.com, ptisnovs@redhat.com
+  Last Modified:   2014-10-22
+  Tags:            BasicTest, SmokeTest
+  Required tools:  
 
   Test Case: testNegative01
 

@@ -2,11 +2,12 @@
                            :: TestModuleGendoc ::
 ---------------------------------------------------------------------------
 
-  Description:   Check the API for the Emender module 'gendoc'.
-  Authors:       Pavel Tisnovsky
-  Emails:        ptisnovs@redhat.com
-  Last Modified: 2014-11-11
-  Tags:          BasicTest, ModuleTest
+  Description:     Check the API for the Emender module 'gendoc'.
+  Authors:         Pavel Tisnovsky
+  Emails:          ptisnovs@redhat.com
+  Last Modified:   2014-11-11
+  Tags:            BasicTest, ModuleTest
+  Required tools:  
 
   Test Case: testFunctionReportError
 

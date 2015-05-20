@@ -2,11 +2,12 @@
                         :: TestFileOperationSlurp ::
 ---------------------------------------------------------------------------
 
-  Description:   Check file I/O operations.
-  Authors:       Pavel Tisnovsky
-  Emails:        ptisnovs@redhat.com
-  Last Modified: 2014-11-07
-  Tags:          BasicTest, FileIO
+  Description:     Check file I/O operations.
+  Authors:         Pavel Tisnovsky
+  Emails:          ptisnovs@redhat.com
+  Last Modified:   2014-11-07
+  Tags:            BasicTest, FileIO
+  Required tools:  
 
   Test Case: testSlurp01
 

@@ -2,11 +2,12 @@
                               :: TestEmpty ::
 ---------------------------------------------------------------------------
 
-  Description:   This is almost empty test
-  Authors:       Pavel Tisnovsky
-  Emails:        ptisnovs@redhat.com
-  Last Modified: 2014-09-12
-  Tags:          BasicTest, SmokeTest
+  Description:     This is almost empty test
+  Authors:         Pavel Tisnovsky
+  Emails:          ptisnovs@redhat.com
+  Last Modified:   2014-09-12
+  Tags:            BasicTest, SmokeTest
+  Required tools:  
 
   Test Summary                                                            
 

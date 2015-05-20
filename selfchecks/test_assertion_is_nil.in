@@ -2,11 +2,12 @@
                           :: TestAssertionIsNil ::
 ---------------------------------------------------------------------------
 
-  Description:   Test the behavior of the asserts.is_nil() function.
-  Authors:       Jaromir Hradilek, Pavel Tisnovsky
-  Emails:        jhradilek@redhat.com, ptisnovs@redhat.com
-  Last Modified: 2014-11-19
-  Tags:          BasicTest, SmokeTest
+  Description:     Test the behavior of the asserts.is_nil() function.
+  Authors:         Jaromir Hradilek, Pavel Tisnovsky
+  Emails:          jhradilek@redhat.com, ptisnovs@redhat.com
+  Last Modified:   2014-11-19
+  Tags:            BasicTest, SmokeTest
+  Required tools:  
 
   Test Case: testNegative01
 

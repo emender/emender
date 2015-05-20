@@ -2,12 +2,13 @@
                         :: TestSetUpTearDownOnly ::
 ---------------------------------------------------------------------------
 
-  Description:   Check that docunit core works correctly - test contains
-                 setUp() and tearDown() functions only..
-  Authors:       Pavel Tisnovsky
-  Emails:        ptisnovs@redhat.com
-  Last Modified: 2014-08-25
-  Tags:          BasicTest
+  Description:     Check that docunit core works correctly - test
+                   contains setUp() and tearDown() functions only..
+  Authors:         Pavel Tisnovsky
+  Emails:          ptisnovs@redhat.com
+  Last Modified:   2014-08-25
+  Tags:            BasicTest
+  Required tools:  
 
   Test setup
 

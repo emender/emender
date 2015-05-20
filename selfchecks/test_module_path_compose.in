@@ -2,11 +2,12 @@
                            :: TestPathCompose ::
 ---------------------------------------------------------------------------
 
-  Description:   Test the behavior of the path.compose() method.
-  Authors:       Jaromir Hradilek
-  Emails:        jhradilek@redhat.com
-  Last Modified: 2015-01-29
-  Tags:          BasicTest, SmokeTest
+  Description:     Test the behavior of the path.compose() method.
+  Authors:         Jaromir Hradilek
+  Emails:          jhradilek@redhat.com
+  Last Modified:   2015-01-29
+  Tags:            BasicTest, SmokeTest
+  Required tools:  
 
   Test Case: testAbsolutePath
 

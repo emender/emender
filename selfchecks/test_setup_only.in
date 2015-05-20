@@ -2,12 +2,13 @@
                             :: TestSetUpOnly ::
 ---------------------------------------------------------------------------
 
-  Description:   Check that docunit core works correctly - test contains
-                 setUp() function only.
-  Authors:       Pavel Tisnovsky
-  Emails:        ptisnovs@redhat.com
-  Last Modified: 2014-09-08
-  Tags:          BasicTest
+  Description:     Check that docunit core works correctly - test
+                   contains setUp() function only.
+  Authors:         Pavel Tisnovsky
+  Emails:          ptisnovs@redhat.com
+  Last Modified:   2014-09-08
+  Tags:            BasicTest
+  Required tools:  
 
   Test setup
 

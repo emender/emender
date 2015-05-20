@@ -2,11 +2,12 @@
                              :: TestPassFail ::
 ---------------------------------------------------------------------------
 
-  Description:   This is the second test
-  Authors:       Pavel Tisnovsky
-  Emails:        ptisnovs@redhat.com
-  Last Modified: 2014-08-25
-  Tags:          XMLcheck, BasicTest, SmokeTest
+  Description:     This is the second test
+  Authors:         Pavel Tisnovsky
+  Emails:          ptisnovs@redhat.com
+  Last Modified:   2014-08-25
+  Tags:            XMLcheck, BasicTest, SmokeTest
+  Required tools:  
 
   Test Case: test1fail
 

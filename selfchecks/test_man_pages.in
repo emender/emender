@@ -1,12 +1,14 @@
+Checking existence of command 'podlint': OK
 ---------------------------------------------------------------------------
                              :: TestManPages ::
 ---------------------------------------------------------------------------
 
-  Description:   Verify that all manual pages are present and valid.
-  Authors:       Jaromir Hradilek
-  Emails:        jhradilek@redhat.com
-  Last Modified: 2014-10-10
-  Tags:          SmokeTest
+  Description:     Verify that all manual pages are present and valid.
+  Authors:         Jaromir Hradilek
+  Emails:          jhradilek@redhat.com
+  Last Modified:   2014-10-10
+  Tags:            SmokeTest
+  Required tools:  podlint
 
   Test setup
 

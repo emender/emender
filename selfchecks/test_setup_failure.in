@@ -2,11 +2,12 @@
                            :: TestSetUpFailure ::
 ---------------------------------------------------------------------------
 
-  Description:   Check that docunit core works correctly.
-  Authors:       Pavel Tisnovsky
-  Emails:        ptisnovs@redhat.com
-  Last Modified: 2014-12-11
-  Tags:          BasicTest
+  Description:     Check that docunit core works correctly.
+  Authors:         Pavel Tisnovsky
+  Emails:          ptisnovs@redhat.com
+  Last Modified:   2014-12-11
+  Tags:            BasicTest
+  Required tools:  
 
   Test setup
 

@@ -2,11 +2,12 @@
                               :: Test1Info ::
 ---------------------------------------------------------------------------
 
-  Description:   Check the graph & statistic submodules of Emender
-  Authors:       Pavel Tisnovsky
-  Emails:        ptisnovs@redhat.com
-  Last Modified: 2014-10-21
-  Tags:          BasicTest, SmokeTest
+  Description:     Check the graph & statistic submodules of Emender
+  Authors:         Pavel Tisnovsky
+  Emails:          ptisnovs@redhat.com
+  Last Modified:   2014-10-21
+  Tags:            BasicTest, SmokeTest
+  Required tools:  
 
   Test Case: test
 

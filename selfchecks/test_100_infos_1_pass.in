@@ -2,11 +2,12 @@
                           :: Test100Infos1Pass ::
 ---------------------------------------------------------------------------
 
-  Description:   Check that graphs are rendered correctly.
-  Authors:       Pavel Tisnovsky
-  Emails:        ptisnovs@redhat.com
-  Last Modified: 2014-11-13
-  Tags:          BasicTest, SmokeTest
+  Description:     Check that graphs are rendered correctly.
+  Authors:         Pavel Tisnovsky
+  Emails:          ptisnovs@redhat.com
+  Last Modified:   2014-11-13
+  Tags:            BasicTest, SmokeTest
+  Required tools:  
 
   Test Case: testA
 

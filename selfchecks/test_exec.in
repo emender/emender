@@ -2,11 +2,12 @@
                                :: TestExec ::
 ---------------------------------------------------------------------------
 
-  Description:   Check the module exec.
-  Authors:       Pavel Tisnovsky
-  Emails:        ptisnovs@redhat.com
-  Last Modified: 2015-04-10
-  Tags:          BasicTest, SmokeTest
+  Description:     Check the module exec.
+  Authors:         Pavel Tisnovsky
+  Emails:          ptisnovs@redhat.com
+  Last Modified:   2015-04-10
+  Tags:            BasicTest, SmokeTest
+  Required tools:  
 
   Test Case: test1
 
