@@ -234,6 +234,23 @@ end
 
 
 
+function checkTools(testSuite, testSuiteName)
+    local test = _G[testSuiteName]
+    if not test then
+        return false
+    end
+    local requires = test["requires"]
+
+    -- no external tools needed -> everything is ok in this step
+    if not requires then
+        return true
+    else
+        return toolsChecker.performCheck(true, requires, false)
+    end
+end
+
+
+
 --
 -- Fill in all required information in the testSuite record from the metadata
 -- read from the test script.
@@ -257,6 +274,13 @@ function fillInTestMetadata(testSuite, testSuiteName)
         testSuite.emails = "not set"
         testSuite.modified = "not set"
         testSuite.tags = "not set"
+    end
+    local requires = test["requires"]
+    -- if requires field exists
+    if requires then
+        testSuite.requires = requires
+    else
+        testSuite.requires = {}
     end
 end
 
@@ -412,6 +436,11 @@ function core.runTest(scriptDirectory, filename, verboseOperation, testOptions, 
         loadTestScript(scriptDirectory, filename, verboseOperation, testSuiteName)
 
         fillInTestMetadata(testSuite, testSuiteName)
+
+        if not checkTools(testSuite, testSuiteName) then
+            print("Required tool(s) missing.")
+            return nil
+        end
 
         if tags and testSuite.tags and #tags > 0 then
             local found = tagsExist(testSuite, tags)

@@ -1,5 +1,10 @@
 2015-05-20  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* src/core.lua:
+	Support for checking if all tools required by the test are installed.
+
+2015-05-20  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* src/common/gendoc.lua:
 	Documentation for 'emend' script should be processed in the same way
 	as for other modules.
