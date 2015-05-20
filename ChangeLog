@@ -1,3 +1,9 @@
+2015-05-20  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* src/common/gendoc.lua:
+	Documentation for 'emend' script should be processed in the same way
+	as for other modules.
+
 2015-05-19  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* src/selftest/toolsChecker.lua:

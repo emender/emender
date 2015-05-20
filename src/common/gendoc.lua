@@ -319,11 +319,14 @@ function gendoc.generateDocForWholeEmender(scriptDirectory, colorOutput, outputF
 
     generateHeader(outputFiles)
 
-    generateDocForOneSourceFile(scriptDirectory .. "emend", colorOutput, outputFiles)
     local listSourcesCmd = "tree -f -i -n -P *.lua " .. scriptDirectory .. "src/"
     local sourceList = execCaptureOutputAsTable(listSourcesCmd)
+
+    -- add the main script into the table
+    table.insert(sourceList, 1, scriptDirectory .. "emend")
     for _, sourceFile in ipairs(sourceList) do
-        if sourceFile:endsWith(".lua") then
+        -- "emend" is special case, because name of this script does not end with ".lua"
+        if sourceFile:endsWith(".lua") or sourceFile:endsWith("emend") then
             generateDocForOneSourceFile(sourceFile, colorOutput, outputFiles)
         end
     end
