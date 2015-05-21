@@ -152,13 +152,15 @@ function writeTestSuiteStart(fout, testSuite, colorOutput)
     local emails = testSuite.emails
     local modified = testSuite.modified
     local tags = table.concat(testSuite.tags, ", ")
+    local requires = table.concat(testSuite.requires, ", ")
 
     fout:write(formatSectionTitle(name) .. "\n")
-    fout:write(formatTestMetadata("Description:  ", description))
-    fout:write(formatTestMetadata("Authors:      ", authors))
-    fout:write(formatTestMetadata("Emails:       ", emails))
-    fout:write(formatTestMetadata("Last Modified:", modified))
-    fout:write(formatTestMetadata("Tags:         ", tags))
+    fout:write(formatTestMetadata("Description:    ", description))
+    fout:write(formatTestMetadata("Authors:        ", authors))
+    fout:write(formatTestMetadata("Emails:         ", emails))
+    fout:write(formatTestMetadata("Last Modified:  ", modified))
+    fout:write(formatTestMetadata("Tags:           ", tags))
+    fout:write(formatTestMetadata("Required tools: ", requires))
 end
 
 function writeTestSuiteEnd(fout, testSuite, colorOutput)

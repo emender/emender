@@ -1,3 +1,8 @@
+2015-05-21  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* src/writers/commonTextWriter.lua:
+	Updated text writer to display required tools for each test.
+
 2015-05-20  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* selfchecks/test_100_failures_1_info.in
