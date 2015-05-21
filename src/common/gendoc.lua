@@ -225,6 +225,53 @@ end
 
 
 
+--
+-- Write footer into selected output file
+--
+function writeFooter(type, fout)
+    if type == "html" then
+        fout:write([[</body>
+</html>]])
+    end
+end
+
+
+
+--
+-- Write table of content into selected output file
+--
+function writeTableOfContent(type, fout, sourceList)
+    if type == "html" then
+        fout:write("    <div class='sidebar' id='namespaces'>\n")
+        fout:write("        <h3><a href='index.html'><span class='inner'>Modules</span></a></h3>\n")
+        -- make sure the table was created
+        if sourceList then
+            fout:write("        <ul>\n")
+            for _, source in ipairs(sourceList) do
+                if source:endsWith(".lua") or source:endsWith("emend") then
+                    local beginning = source:find("/")
+                    local ending = source:find(".lua")
+                    local moduleName
+                    if beginning then
+                        if ending then
+                            moduleName = source:substring(1+beginning, ending-1)
+                        else
+                            moduleName = source:substring(1+beginning)
+                        end
+                    end
+                    fout:write("            <li class='depth-1'><div class='no-link'><div class='inner'>\n")
+                    fout:write("                <span class='tree'><span class='top'></span><span class='bottom'></span></span><span>"..moduleName.."</span>\n")
+                    fout:write("            </div></div></li>\n")
+                end
+            end
+            fout:write("        </ul>\n")
+        end
+        fout:write("    </div>\n")
+    end
+end
+
+
+
 function writeSourceFileName(sourceFile, type, fout)
     if type == "txt" then
         fout:write("[" .. sourceFile .. "]\n\n")
@@ -278,6 +325,19 @@ end
 
 
 --
+-- Generate table of content
+--
+function generateTableOfContent(outputFiles, sourceList)
+    for _,outputFile in pairs(outputFiles) do
+        local type = outputFile[1]
+        local fout = outputFile[2]
+        writeTableOfContent(type, fout, sourceList)
+    end
+end
+
+
+
+--
 -- Generate simple documentation for one selected source file.
 --
 function generateDocForOneSourceFile(sourceFile, colorOutput, outputFiles)
@@ -324,6 +384,8 @@ function gendoc.generateDocForWholeEmender(scriptDirectory, colorOutput, outputF
 
     -- add the main script into the table
     table.insert(sourceList, 1, scriptDirectory .. "emend")
+    generateTableOfContent(outputFiles, sourceList)
+
     for _, sourceFile in ipairs(sourceList) do
         -- "emend" is special case, because name of this script does not end with ".lua"
         if sourceFile:endsWith(".lua") or sourceFile:endsWith("emend") then
