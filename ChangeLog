@@ -1,5 +1,10 @@
 2015-05-21  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* test/TestRequires1.lua:
+	Updated comments.
+
+2015-05-21  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* src/common/gendoc.lua:
 	Added table of content functionality into API generator.
 

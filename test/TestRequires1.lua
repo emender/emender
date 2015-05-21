@@ -1,3 +1,6 @@
+-- TestRequires1.lua - check if all required tools are available.
+--
+-- Copyright (C) 2014 Pavel Tisnovsky
 --
 -- This file is part of Emender.
 --
@@ -20,7 +23,7 @@ TestRequires1 = {
         description = "Check that docunit core works correctly.",
         authors = "Pavel Tisnovsky",
         emails = "ptisnovs@redhat.com",
-        changed = "2014-08-25",
+        changed = "2015-05-21",
         tags = {"XMLcheck", "BasicTest", "SmokeTest"},
     },
     -- check if the tool properly check for existence of the following tools
