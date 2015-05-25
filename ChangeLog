@@ -1,5 +1,10 @@
 2015-05-25  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* selfchecks/test_requires1.in:
+	Updated expected test results.
+
+2015-05-25  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* src/common/gendoc.lua:
 	Refactored API generator functions.
 
@@ -20,71 +25,71 @@
 
 2015-05-20  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
-	* selfchecks/test_100_failures_1_info.in
-	* selfchecks/test_100_failures_1_pass.in
-	* selfchecks/test_100_infos_1_fail.in
-	* selfchecks/test_100_infos_1_pass.in
-	* selfchecks/test_100_passes_1_fail.in
-	* selfchecks/test_100_passes_1_info.in
-	* selfchecks/test_1_fail.in
-	* selfchecks/test_1_info.in
-	* selfchecks/test_1_pass.in
-	* selfchecks/test_assertion_fail.in
-	* selfchecks/test_assertion_is_empty.in
-	* selfchecks/test_assertion_is_equal.in
-	* selfchecks/test_assertion_is_false.in
-	* selfchecks/test_assertion_is_like.in
-	* selfchecks/test_assertion_is_nil.in
-	* selfchecks/test_assertion_is_not_empty.in
-	* selfchecks/test_assertion_is_not_nil.in
-	* selfchecks/test_assertion_is_not_type.in
-	* selfchecks/test_assertion_is_true.in
-	* selfchecks/test_assertion_is_type.in
-	* selfchecks/test_assertion_is_unequal.in
-	* selfchecks/test_assertion_is_unlike.in
-	* selfchecks/test_assertion_pass.in
-	* selfchecks/test_assertion_warn.in
-	* selfchecks/test_color_in_messages.in
-	* selfchecks/test_comments.in
-	* selfchecks/test_empty.in
-	* selfchecks/test_exec.in
-	* selfchecks/test_file_operation_slurp.in
-	* selfchecks/test_file_operation_slurp_table.in
-	* selfchecks/test_file_operation_spit.in
-	* selfchecks/test_file_operation_spit_table.in
-	* selfchecks/test_man_pages.in
-	* selfchecks/test_module_asserts.in
-	* selfchecks/test_module_fileio.in
-	* selfchecks/test_module_gendoc.in
-	* selfchecks/test_module_path_compose.in
-	* selfchecks/test_module_string.in
-	* selfchecks/test_pass_fail.in
-	* selfchecks/test_requires1.in
-	* selfchecks/test_requires2.in
-	* selfchecks/test_setup.in
-	* selfchecks/test_setup_failure.in
-	* selfchecks/test_setup_only.in
-	* selfchecks/test_setup_only_failure.in
-	* selfchecks/test_setup_teardown.in
-	* selfchecks/test_setup_teardown_only.in
-	* selfchecks/test_tagA_tagB.in
-	* selfchecks/test_tagA_tagB_tagX.in
-	* selfchecks/test_tagA_tagC.in
-	* selfchecks/test_tagA_tagC_tagX.in
-	* selfchecks/test_tagA_tagX.in
-	* selfchecks/test_tagB_tagC.in
-	* selfchecks/test_tagB_tagC_tagX.in
-	* selfchecks/test_tagB_tagX.in
-	* selfchecks/test_tagC_tagX.in
-	* selfchecks/test_teardown.in
-	* selfchecks/test_teardown_only.in
-	* selfchecks/test_testA_all.in
-	* selfchecks/test_testA_tagA.in
-	* selfchecks/test_testB_all.in
-	* selfchecks/test_testB_tagB.in
-	* selfchecks/test_testC_all.in
-	* selfchecks/test_testC_tagC.in
-	* selfchecks/test_without_functions.in
+	* selfchecks/test_100_failures_1_info.in:
+	* selfchecks/test_100_failures_1_pass.in:
+	* selfchecks/test_100_infos_1_fail.in:
+	* selfchecks/test_100_infos_1_pass.in:
+	* selfchecks/test_100_passes_1_fail.in:
+	* selfchecks/test_100_passes_1_info.in:
+	* selfchecks/test_1_fail.in:
+	* selfchecks/test_1_info.in:
+	* selfchecks/test_1_pass.in:
+	* selfchecks/test_assertion_fail.in:
+	* selfchecks/test_assertion_is_empty.in:
+	* selfchecks/test_assertion_is_equal.in:
+	* selfchecks/test_assertion_is_false.in:
+	* selfchecks/test_assertion_is_like.in:
+	* selfchecks/test_assertion_is_nil.in:
+	* selfchecks/test_assertion_is_not_empty.in:
+	* selfchecks/test_assertion_is_not_nil.in:
+	* selfchecks/test_assertion_is_not_type.in:
+	* selfchecks/test_assertion_is_true.in:
+	* selfchecks/test_assertion_is_type.in:
+	* selfchecks/test_assertion_is_unequal.in:
+	* selfchecks/test_assertion_is_unlike.in:
+	* selfchecks/test_assertion_pass.in:
+	* selfchecks/test_assertion_warn.in:
+	* selfchecks/test_color_in_messages.in:
+	* selfchecks/test_comments.in:
+	* selfchecks/test_empty.in:
+	* selfchecks/test_exec.in:
+	* selfchecks/test_file_operation_slurp.in:
+	* selfchecks/test_file_operation_slurp_table.in:
+	* selfchecks/test_file_operation_spit.in:
+	* selfchecks/test_file_operation_spit_table.in:
+	* selfchecks/test_man_pages.in:
+	* selfchecks/test_module_asserts.in:
+	* selfchecks/test_module_fileio.in:
+	* selfchecks/test_module_gendoc.in:
+	* selfchecks/test_module_path_compose.in:
+	* selfchecks/test_module_string.in:
+	* selfchecks/test_pass_fail.in:
+	* selfchecks/test_requires1.in:
+	* selfchecks/test_requires2.in:
+	* selfchecks/test_setup.in:
+	* selfchecks/test_setup_failure.in:
+	* selfchecks/test_setup_only.in:
+	* selfchecks/test_setup_only_failure.in:
+	* selfchecks/test_setup_teardown.in:
+	* selfchecks/test_setup_teardown_only.in:
+	* selfchecks/test_tagA_tagB.in:
+	* selfchecks/test_tagA_tagB_tagX.in:
+	* selfchecks/test_tagA_tagC.in:
+	* selfchecks/test_tagA_tagC_tagX.in:
+	* selfchecks/test_tagA_tagX.in:
+	* selfchecks/test_tagB_tagC.in:
+	* selfchecks/test_tagB_tagC_tagX.in:
+	* selfchecks/test_tagB_tagX.in:
+	* selfchecks/test_tagC_tagX.in:
+	* selfchecks/test_teardown.in:
+	* selfchecks/test_teardown_only.in:
+	* selfchecks/test_testA_all.in:
+	* selfchecks/test_testA_tagA.in:
+	* selfchecks/test_testB_all.in:
+	* selfchecks/test_testB_tagB.in:
+	* selfchecks/test_testC_all.in:
+	* selfchecks/test_testC_tagC.in:
+	* selfchecks/test_without_functions.in:
 	Updated expected test results.
 
 2015-05-20  Pavel Tisnovsky  <ptisnovs@redhat.com>
