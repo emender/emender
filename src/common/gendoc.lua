@@ -237,6 +237,21 @@ end
 
 
 
+function getModuleName(source)
+    local beginning = source:find("/")
+    local ending = source:find(".lua")
+    if beginning then
+        if ending then
+            return source:substring(1+beginning, ending-1)
+        else
+            return source:substring(1+beginning)
+        end
+    end
+    return nil
+end
+
+
+
 --
 -- Write table of content into selected output file
 --
@@ -249,19 +264,13 @@ function writeTableOfContent(type, fout, sourceList)
             fout:write("        <ul>\n")
             for _, source in ipairs(sourceList) do
                 if source:endsWith(".lua") or source:endsWith("emend") then
-                    local beginning = source:find("/")
-                    local ending = source:find(".lua")
-                    local moduleName
-                    if beginning then
-                        if ending then
-                            moduleName = source:substring(1+beginning, ending-1)
-                        else
-                            moduleName = source:substring(1+beginning)
-                        end
+                    local moduleName = getModuleName(source)
+                    if moduleName then
+                        local href = moduleName:gsub("/", "_")
+                        fout:write("            <li class='depth-1'><div class='no-link'><div class='inner'>\n")
+                        fout:write("                <span class='tree'><span class='top'></span><span class='bottom'></span></span><span>"..moduleName.."</span>\n")
+                        fout:write("            </div></div></li>\n")
                     end
-                    fout:write("            <li class='depth-1'><div class='no-link'><div class='inner'>\n")
-                    fout:write("                <span class='tree'><span class='top'></span><span class='bottom'></span></span><span>"..moduleName.."</span>\n")
-                    fout:write("            </div></div></li>\n")
                 end
             end
             fout:write("        </ul>\n")
