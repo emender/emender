@@ -1,6 +1,6 @@
 -- TestRequires1.lua - check if all required tools are available.
 --
--- Copyright (C) 2014 Pavel Tisnovsky
+-- Copyright (C) 2014, 2015 Pavel Tisnovsky
 --
 -- This file is part of Emender.
 --

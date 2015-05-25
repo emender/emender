@@ -1,5 +1,11 @@
 2015-05-25  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* test/TestRequires1.lua:
+	* test/TestRequires2.lua:
+	Updated tests comments.
+
+2015-05-25  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* selfchecks/test_requires1.in:
 	Updated expected test results.
 
