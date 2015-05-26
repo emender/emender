@@ -53,7 +53,7 @@ function getComment(testSource, endLine)
         -- (because we read comments from the end to the beginning)
         if commentLine then
             local x = line:subs(3):trim()
-            output = x .. " " .. output
+            output = x .. "\n" .. output
         end
 
         -- go to the previous line
@@ -230,7 +230,8 @@ end
 --
 function writeFooter(type, fout)
     if type == "html" then
-        fout:write([[</body>
+        fout:write([[    </div>
+    </body>
 </html>]])
     end
 end
@@ -266,16 +267,18 @@ function writeTableOfContent(type, fout, sourceList)
                 if source:endsWith(".lua") or source:endsWith("emend") then
                     local moduleName = getModuleName(source)
                     if moduleName then
-                        local href = moduleName:gsub("/", "_")
-                        fout:write("            <li class='depth-1'><div class='no-link'><div class='inner'>\n")
+                        local href = source:substring(1+source:lastIndexOf("/")):gsub("/", "_"):gsub("%.", "_")
+                        fout:write("            <li class='depth-1'><a href='#" .. href .. "'><div class='inner'>\n")
                         fout:write("                <span class='tree'><span class='top'></span><span class='bottom'></span></span><span>"..moduleName.."</span>\n")
-                        fout:write("            </div></div></li>\n")
+                        fout:write("            </div></a></li>\n")
                     end
                 end
             end
             fout:write("        </ul>\n")
         end
         fout:write("    </div>\n")
+        fout:write("    <div class='namespace-docs' id='content'>\n")
+        fout:write("        <h1>Emender</h1>\n")
     end
 end
 
@@ -285,7 +288,10 @@ function writeSourceFileName(sourceFile, type, fout)
     if type == "txt" then
         fout:write("[" .. sourceFile .. "]\n\n")
     elseif type == "html" then
-        fout:write("<h1>" .. sourceFile .. "</h1>\n")
+        if sourceFile:endsWith(".lua") or sourceFile:endsWith("emend") then
+            local name = sourceFile:gsub("%.", "_")
+            fout:write("<h2 class='anchor' id='" .. name .. "'>" .. sourceFile .. "</h2>\n")
+        end
     end
 end
 
@@ -293,7 +299,7 @@ function writeFunctionName(functionName, type, fout)
     if type == "txt" then
         fout:write(functionName .. "\n")
     elseif type == "html" then
-        fout:write("<h2>" .. functionName .. "</h2>\n")
+        fout:write("<h3>" .. functionName .. "</h3>\n")
     end
 end
 
@@ -301,7 +307,7 @@ function writeComment(comment, type, fout)
     if type == "txt" then
         fout:write(comment .. "\n\n")
     elseif type == "html" then
-        fout:write("<p>" .. comment .. "</p>\n")
+        fout:write("<div class='doc'><pre class='plaintext'>" .. comment .. "</pre></div>\n")
     end
 end
 
@@ -363,9 +369,9 @@ function generateDocForOneSourceFile(sourceFile, colorOutput, outputFiles)
             local functionNameParams = lineContent:substring(lineContent:find("function") + 9)
             if functionNameParams then
                 local comment = getComment(source, lineNumber)
-                print(lineNumber, functionNameParams)
-                print(comment)
-                print()
+               --print(lineNumber, functionNameParams)
+               --print(comment)
+               --print()
                 for _,outputFile in pairs(outputFiles) do
                     local type = outputFile[1]
                     local fout = outputFile[2]

@@ -1,3 +1,8 @@
+2015-05-26  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* src/common/gendoc.lua:
+	Fixed HTML rendering issue.
+
 2015-05-25  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* selfchecks/test_requires2.in:
