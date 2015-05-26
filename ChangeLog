@@ -1,5 +1,10 @@
 2015-05-26  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* test/TestRequires3.lua:
+	Added test that checks "requires" attribute.
+
+2015-05-26  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* src/common/gendoc.lua:
 	Fixed HTML rendering issue.
 
