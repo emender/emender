@@ -1,5 +1,6 @@
-Checking existence of command 'xmllint': OK
-Checking existence of command 'wget': OK
+Checking existence of command 'ls': OK
+Checking existence of command 'true': OK
+Checking existence of command 'cp': OK
 ---------------------------------------------------------------------------
                             :: TestRequires1 ::
 ---------------------------------------------------------------------------
@@ -7,13 +8,13 @@ Checking existence of command 'wget': OK
   Description:     Check that docunit core works correctly.
   Authors:         Pavel Tisnovsky
   Emails:          ptisnovs@redhat.com
-  Last Modified:   2015-05-21
-  Tags:            XMLcheck, BasicTest, SmokeTest
-  Required tools:  xmllint, wget
+  Last Modified:   2015-05-27
+  Tags:            BasicTest, SmokeTest, RequireMetadataTest
+  Required tools:  ls, true, cp
 
   Test Case: testA
 
-	TestRequires1.testA()
+    [ PASS ]  TestRequires1.testA()
 
   Test Summary                                                            
 

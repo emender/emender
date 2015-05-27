@@ -1,5 +1,10 @@
 2015-05-27  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* selfchecks/test_requires1.in:
+	Updated expected test results.
+
+2015-05-27  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* test_examples/TestInstallationGuide.lua:
 	Fixed minor issue - 'requires' metadata structure and placement.
 
