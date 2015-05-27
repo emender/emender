@@ -6,8 +6,9 @@ TestInstallationGuide = {
         emails = "eko@rsd.cz",
         changed = "2015-04-23",
         tags = {"Sanity", "XMLcheck", "SmokeTest"},
-        requires = {"grep", "xmlstarlet","xmllint"},
-    }
+    },
+    -- this demo needs the following tools to be installed on the system:
+    requires = {"grep", "xmlstarlet","xmllint"}
 }
 
 function TestInstallationGuide.setUp()
