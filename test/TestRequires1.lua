@@ -1,4 +1,6 @@
 -- TestRequires1.lua - check if all required tools are available.
+-- This test contains 'requires' metadata with three basic tools
+-- that are checked for its existence: 'ls', 'true' and 'cp'.
 --
 -- Copyright (C) 2014, 2015 Pavel Tisnovsky
 --
@@ -23,14 +25,21 @@ TestRequires1 = {
         description = "Check that docunit core works correctly.",
         authors = "Pavel Tisnovsky",
         emails = "ptisnovs@redhat.com",
-        changed = "2015-05-21",
-        tags = {"XMLcheck", "BasicTest", "SmokeTest"},
+        changed = "2015-05-27",
+        tags = {"BasicTest", "SmokeTest", "RequireMetadataTest"},
     },
-    -- check if the tool properly check for existence of the following tools
-    requires = {"xmllint", "wget"}
+    -- check if the Emender core properly checks for existence of all
+    -- tools specified below:
+    requires = {"ls", "true", "cp"}
 }
 
+
+
+--
+-- Just a dummy test function that shoult always pass. This function is
+-- included here because we would like to have non-empty test.
+--
 function TestRequires1.testA()
-    print("\tTestRequires1.testA()")
+    pass("TestRequires1.testA()")
 end
 

@@ -1,3 +1,8 @@
+2015-05-27  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* test/TestRequires1.lua:
+	Updated, added proper comments, changed tools to check.
+
 2015-05-26  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* test/TestRequires4.lua:
