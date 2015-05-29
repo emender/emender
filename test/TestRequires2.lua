@@ -1,4 +1,5 @@
 -- TestRequires2.lua - check if all required tools are available.
+-- This test contains 'requires' metadata which is empty.
 --
 -- Copyright (C) 2014, 2015 Pavel Tisnovsky
 --
@@ -23,14 +24,20 @@ TestRequires2 = {
         description = "Check that docunit core works correctly.",
         authors = "Pavel Tisnovsky",
         emails = "ptisnovs@redhat.com",
-        changed = "2015-05-25",
-        tags = {"XMLcheck", "BasicTest", "SmokeTest"},
+        changed = "2015-05-27",
+        tags = {"BasicTest", "SmokeTest", "RequireMetadataTest"},
     },
-    -- check if the tool work properly with an empty table
+    -- check if the Emender core work properly with an empty table:
     requires = {}
 }
 
+
+
+--
+-- Just a dummy test function that shoult always pass. This function is
+-- included here because we would like to have non-empty test.
+--
 function TestRequires2.testA()
-    print("\tTestRequires2.testA()")
+    pass("TestRequires2.testA()")
 end
 
