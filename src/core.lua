@@ -245,7 +245,14 @@ function checkTools(testSuite, testSuiteName)
     if not requires then
         return true
     else
-        return toolsChecker.performCheck(true, requires, false)
+        -- make sure the test structure is correct, ie if the 'requires'
+        -- metadata is table (and not other type)
+        if type(requires) == "table" then
+            return toolsChecker.performCheck(true, requires, false)
+        else
+            print("Test structure error: wrong 'requires' attribute - table expected")
+            return false
+        end
     end
 end
 
@@ -437,11 +444,6 @@ function core.runTest(scriptDirectory, filename, verboseOperation, testOptions, 
 
         fillInTestMetadata(testSuite, testSuiteName)
 
-        if not checkTools(testSuite, testSuiteName) then
-            print("Required tool(s) missing.")
-            return nil
-        end
-
         if tags and testSuite.tags and #tags > 0 then
             local found = tagsExist(testSuite, tags)
             if not found then
@@ -449,17 +451,25 @@ function core.runTest(scriptDirectory, filename, verboseOperation, testOptions, 
             end
         end
 
+        local processRestOfTest = true
+
+        if not checkTools(testSuite, testSuiteName) then
+            print("Required tool(s) missing.")
+            processRestOfTest = false
+        end
+
         addTestOptions(testSuiteName, testOptions)
 
         local setupFunction = core.getSetupFunction(testSuiteName)
         local tearDownFunction = core.getTearDownFunction(testSuiteName)
         local testFunctionNames = testInfo.getListOfTestFunctionNames(testSuiteName)
-        local processRestOfTest = true
 
         if testFunctionNames or setupFunction or tearDownFunction then
+
             -- print an information about the test suite that are started
             -- to the standard output
             writeTestSuiteStart(io.stdout, testSuite, false)
+
             if setupFunction then
                 currentTestFailure = false
                 writeSetupStart(io.stdout, false)
