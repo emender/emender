@@ -1,4 +1,5 @@
 -- TestRequires4.lua - check if all required tools are available.
+-- This test contains 'requires' metadata with one non-existing tool.
 --
 -- Copyright (C) 2015 Pavel Tisnovsky
 --
@@ -23,14 +24,21 @@ TestRequires4 = {
         description = "Check that core works correctly.",
         authors = "Pavel Tisnovsky",
         emails = "ptisnovs@redhat.com",
-        changed = "2015-05-26",
+        changed = "2015-05-27",
         tags = {"BasicTest", "SmokeTest"},
     },
-    -- check if the tool work properly with empty table
+    -- check if the Emender core properly checks for existence of
+    -- unknown utility (-> this test should fail)
     requires = {"wget", "ls", "unknown-utility"}
 }
 
+
+
+--
+-- Just a dummy test function that shoult always pass. This function is
+-- included here because we would like to have non-empty test.
+--
 function TestRequires4.testA()
-    print("\tTestRequires4.testA()")
+    pass("TestRequires4.testA()")
 end
 
