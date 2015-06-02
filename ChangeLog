@@ -1,5 +1,10 @@
 2015-06-02  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* src/common/gendoc.lua:
+	Refactored gendoc module.
+
+2015-06-02  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* srr/selfcheck.sh:
 	* selfchecks/test_requires4.in:
 	Added new selfcheck for TestRequires4.lua test.
