@@ -1,3 +1,9 @@
+2015-06-02  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* src/selfcheck.sh:
+	* selfchecks/test_requires3.in:
+	Added new selfcheck for TestRequires3.lua test.
+
 2015-05-27  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* selfchecks/test_requires1.in:
