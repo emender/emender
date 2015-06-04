@@ -303,17 +303,43 @@ end
 
 
 
-function writeSourceFileName(sourceFile, type, fout)
-    if type == "txt" then
-        fout:write("[" .. sourceFile .. "]\n\n")
-    elseif type == "html" then
-        if sourceFile:endsWith(".lua") or sourceFile:endsWith("emend") then
-            local name = sourceFile:gsub("%.", "_")
-            fout:write("<h2 class='anchor' id='" .. name .. "'>" .. sourceFile .. "</h2>\n")
-        end
+--
+-- Write source file name into the selected output text file.
+--
+function writeSourceFileNameIntoTxtFile(sourceFile, fout)
+    fout:write("[" .. sourceFile .. "]\n\n")
+end
+
+
+
+--
+-- Write source file name into the selected output HTML file.
+--
+function writeSourceFileNameIntoHtmlFile(sourceFile, fout)
+    if sourceFile:endsWith(".lua") or sourceFile:endsWith("emend") then
+        local name = sourceFile:gsub("%.", "_")
+        fout:write("<h2 class='anchor' id='" .. name .. "'>" .. sourceFile .. "</h2>\n")
     end
 end
 
+
+
+--
+-- Write source file name into the selected output file.
+--
+function writeSourceFileName(sourceFile, type, fout)
+    if type == "txt" then
+        writeSourceFileNameIntoTxtFile(sourceFile, fout)
+    elseif type == "html" then
+        writeSourceFileNameIntoHtmlFile(sourceFile, fout)
+    end
+end
+
+
+
+--
+-- Write function name into the selected output file.
+--
 function writeFunctionName(functionName, type, fout)
     if type == "txt" then
         fout:write(functionName .. "\n")
@@ -322,6 +348,11 @@ function writeFunctionName(functionName, type, fout)
     end
 end
 
+
+
+--
+-- Write comment into the selected output file.
+--
 function writeComment(comment, type, fout)
     if type == "txt" then
         fout:write(comment .. "\n\n")
