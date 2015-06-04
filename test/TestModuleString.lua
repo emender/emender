@@ -622,6 +622,56 @@ end
 
 
 --
+-- Test the behaviour of the following Emender function: string:subs().
+--
+function TestModuleString.testSubsFunction02()
+    local str = "abcdef";
+    is_equal(str:subs(0, 2), "ab", "Test if subs() function works correctly")
+end
+
+
+
+--
+-- Test the behaviour of the following Emender function: string:subs().
+--
+function TestModuleString.testSubsFunction03()
+    local str = "abcdef";
+    is_equal(str:subs(1, 1), "a", "Test if subs() function works correctly")
+end
+
+
+
+--
+-- Test the behaviour of the following Emender function: string:subs().
+--
+function TestModuleString.testSubsFunction04()
+    local str = "abcdef";
+    is_equal(str:subs(2, 2), "b", "Test if subs() function works correctly")
+end
+
+
+
+--
+-- Test the behaviour of the following Emender function: string:subs().
+--
+function TestModuleString.testSubsFunction05()
+    local str = "abcdef";
+    is_equal(str:subs(0, 0), "", "Test if subs() function works correctly")
+end
+
+
+
+--
+-- Test the behaviour of the following Emender function: string:subs().
+--
+function TestModuleString.testSubsFunction06()
+    local str = "abcdef";
+    is_equal(str:subs(1, 1000), "abcdef", "Test if subs() function works correctly")
+end
+
+
+
+--
 -- Test the behaviour of the following Emender function: string:substring().
 --
 function TestModuleString.testSubstringFunction01()
