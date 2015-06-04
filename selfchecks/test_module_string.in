@@ -81,6 +81,26 @@
 
     [ PASS ]  Test if subs() function works correctly
 
+  Test Case: testSubsFunction02
+
+    [ PASS ]  Test if subs() function works correctly
+
+  Test Case: testSubsFunction03
+
+    [ PASS ]  Test if subs() function works correctly
+
+  Test Case: testSubsFunction04
+
+    [ PASS ]  Test if subs() function works correctly
+
+  Test Case: testSubsFunction05
+
+    [ PASS ]  Test if subs() function works correctly
+
+  Test Case: testSubsFunction06
+
+    [ PASS ]  Test if subs() function works correctly
+
   Test Case: testSubstringFunction01
 
     [ PASS ]  Test if substring() function works correctly
@@ -253,8 +273,8 @@
 
   Test Summary                                                            
 
-    Executed Test Cases: 60
-    Passed Test Cases:   60
+    Executed Test Cases: 65
+    Passed Test Cases:   65
     Failed Test Cases:   0
     Encountered Errors:  0
     Overall Result:      PASS

@@ -1,5 +1,10 @@
 2015-06-04  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* src/test_module_string.in:
+	Updated expected test results.
+
+2015-06-04  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* test/TestModuleString.lua:
 	Added five new tests into TestModuleString.
 
