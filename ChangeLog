@@ -1,7 +1,12 @@
 2015-06-05  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
-	* test/TestRequires4.lua:
-	Added new test: TestRequires4.
+	* test/TestRequires6.lua:
+	Added new test: TestRequires6.
+
+2015-06-05  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* test/TestRequires5.lua:
+	Added new test: TestRequires5.
 
 2015-06-04  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
