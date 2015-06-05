@@ -1,3 +1,8 @@
+2015-06-05  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* test/TestRequires4.lua:
+	Added new test: TestRequires4.
+
 2015-06-04  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* src/common/gendoc.lua:
