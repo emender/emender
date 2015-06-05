@@ -1,5 +1,11 @@
 2015-06-05  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* srr/selfcheck.sh:
+	* selfchecks/test_requires5.in:
+	Added new selfcheck for TestRequires5.lua test.
+
+2015-06-05  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* test/TestRequires6.lua:
 	Added new test: TestRequires6.
 
