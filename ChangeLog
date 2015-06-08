@@ -1,3 +1,8 @@
+2015-06-08  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* test/TestRequires7.lua:
+	Added new test: TestRequires7.
+
 2015-06-05  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* srr/selfcheck.sh:
