@@ -24,7 +24,7 @@ TestRequires7 = {
         description = "Check that docunit core works correctly.",
         authors = "Pavel Tisnovsky",
         emails = "ptisnovs@redhat.com",
-        changed = "2015-06-08",
+        changed = "2015-05-27",
         tags = {"BasicTest", "SmokeTest", "RequireMetadataTest"},
     },
     -- check if the Emender core work properly with 'requires' attribute

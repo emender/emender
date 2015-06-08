@@ -1,13 +1,18 @@
 2015-06-08  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* test/TestRequires7.lua:
+	Added new test: TestRequires7.
+
+2015-06-08  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* selfchecks/selfcheck.sh:
 	* selfchecks/test_requires6.in:
 	Added new selfcheck for TestRequires6.lua test.
 
 2015-06-08  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
-	* test/TestRequires7.lua:
-	Added new test: TestRequires7.
+	* test/TestRequires6.lua:
+	Added new test: TestRequires6.
 
 2015-06-05  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
