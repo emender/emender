@@ -1,5 +1,10 @@
 2015-06-09  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* src/checkTools.lua:
+	Stub for new module - checkTools.
+
+2015-06-09  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* selfchecks/selfcheck.sh:
 	* selfchecks/test_requires7.in:
 	Added new selfcheck for TestRequires7.lua test.
