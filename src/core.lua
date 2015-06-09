@@ -242,7 +242,9 @@ function checkTools(testSuite, testSuiteName)
     local requires = test["requires"]
 
     -- no external tools needed -> everything is ok in this step
-    if not requires then
+    -- (note that "not nil" condition can't be used here because we need to
+    --  distinguish between "false" and "nil)
+    if requires == nil then
         return true
     else
         -- make sure the test structure is correct, ie if the 'requires'

@@ -1,3 +1,8 @@
+2015-06-09  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* src/core.lua:
+	'false' and 'nil' values needs to be distinquish in require metadata.
+
 2015-06-08  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* test/TestRequires7.lua:
