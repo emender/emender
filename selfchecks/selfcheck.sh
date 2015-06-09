@@ -156,6 +156,7 @@ function runOtherTests {
      ../emend ../test/TestRequires4.lua        > test_requires4.out
      ../emend ../test/TestRequires5.lua        > test_requires5.out
      ../emend ../test/TestRequires6.lua        > test_requires6.out
+     ../emend ../test/TestRequires7.lua        > test_requires7.out
      ../emend ../test/TestExec.lua             > test_exec.out
 }
 

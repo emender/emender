@@ -1,5 +1,11 @@
 2015-06-09  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* selfchecks/selfcheck.sh:
+	* selfchecks/test_requires7.in:
+	Added new selfcheck for TestRequires7.lua test.
+
+2015-06-09  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* src/core.lua:
 	'false' and 'nil' values needs to be distinquish in require metadata.
 
