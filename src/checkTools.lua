@@ -26,11 +26,22 @@ local checkTools = {
 
 
 
+--
+-- Checks if all tools described in the 'requires' metadata
+-- are installed on the system where Emender is started.
+--
 function checkForAllTools(testSuite, testSuiteName)
+    -- fetch all informations about the test
     local test = _G[testSuiteName]
+
+    -- if the test does not exist, print error message and skip
+    -- all other processing
     if not test then
+        print("Test structure error: test are not loaded properly")
         return false
     end
+
+    -- try to fetch test metadata
     local requires = test["requires"]
 
     -- no external tools needed -> everything is ok in this step

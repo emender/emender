@@ -1,6 +1,11 @@
 2015-06-10  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* src/checkTools.lua:
+	Added comments.
+
+2015-06-10  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* src/checkTools.lua:
 	* src/core.lua:
 	Refactored checkTools function into its own module.
 
