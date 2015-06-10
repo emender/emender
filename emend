@@ -114,6 +114,8 @@ function loadModules()
     require("src/config")
     require("src/testExporter")
     require("src/common/exec")
+    checkTools = require("src/checkTools")
+    _G["checkTools"] = checkTools
 end
 
 function checkForUnknownOptions(options)

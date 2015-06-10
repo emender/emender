@@ -1,3 +1,8 @@
+2015-06-10  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* emend:
+	Loading of new module - checkTools.
+
 2015-06-09  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* src/checkTools.lua:
