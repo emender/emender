@@ -1,5 +1,10 @@
 2015-06-11  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* test/TestModuleTable.lua:
+	Added stub for new test: TestModuleTable.
+
+2015-06-11  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* test/TestModulePath.lua:
 	Added stub for new test: TestModulePath.
 
