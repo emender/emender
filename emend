@@ -98,6 +98,7 @@ function loadModules()
     logger = require("src/common/logger")
     _G["logger"] = logger
     tracer = require("src/common/tracer")
+    _G["tracer"] = tracer
     gendoc = require("src/common/gendoc")
     path = require("src/common/path")
     _G["path"] = path

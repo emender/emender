@@ -1,5 +1,10 @@
 2015-06-11  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* emend:
+	Tracer module should be stored into global table _G.
+
+2015-06-11  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* test/TestModuleTable.lua:
 	Added stub for new test: TestModuleTable.
 
