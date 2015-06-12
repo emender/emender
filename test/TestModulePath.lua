@@ -32,18 +32,18 @@ TestModulePath = {
 --
 -- Test if global module with the given name exists.
 --
-function TestModulePath.doesModuleExist(functionName)
+function TestModulePath.doesModuleExist(moduleName)
     -- try to get global object from the global table _G
-    local object = _G[functionName]
+    local object = _G[moduleName]
 
     -- check if global object exists at all
-    is_not_nil(object, "Check if global object with the name '" .. functionName .. "' exists.")
+    is_not_nil(object, "Check if global object with the name '" .. moduleName .. "' exists.")
     if not object then
         return
     end
 
     -- check global object type
-    is_type(object, "table", "Check if object with the name '" .. functionName .. "' has correct type")
+    is_type(object, "table", "Check if object with the name '" .. moduleName .. "' has correct type")
 end
 
 
