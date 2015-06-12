@@ -1,0 +1,42 @@
+---------------------------------------------------------------------------
+                            :: TestModuleExec ::
+---------------------------------------------------------------------------
+
+  Description:     Check the API for the Emender module 'exec'.
+  Authors:         Pavel Tisnovsky
+  Emails:          ptisnovs@redhat.com
+  Last Modified:   2015-05-14
+  Tags:            BasicTest, ModuleTest
+  Required tools:  
+
+  Test Case: testFunctionExecCaptureOutputAsString
+
+    [ PASS ]  Check if global object with the name
+              'execCaptureOutputAsString' exists.
+    [ PASS ]  Check if object with the name 'execCaptureOutputAsString'
+              has correct type
+
+  Test Case: testFunctionExecCaptureOutputAsTable
+
+    [ PASS ]  Check if global object with the name
+              'execCaptureOutputAsTable' exists.
+    [ PASS ]  Check if object with the name 'execCaptureOutputAsTable'
+              has correct type
+
+  Test Summary                                                            
+
+    Executed Test Cases: 2
+    Passed Test Cases:   2
+    Failed Test Cases:   0
+    Encountered Errors:  0
+    Overall Result:      PASS
+
+---------------------------------------------------------------------------
+                               :: Summary ::
+---------------------------------------------------------------------------
+
+  Executed Tests: 1
+  Passed Tests:   1
+  Failed Tests:   0
+  Overall Result: PASS
+

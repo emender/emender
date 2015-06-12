@@ -1,5 +1,11 @@
 2015-06-12  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* selfchecks/selfcheck.sh:
+	* selfchecks/test_module_exec.in:
+	Added new selftest: test_module_exec.
+
+2015-06-12  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* src/TestModuleTable.lua:
 	Fixed argument name in TestModuleTable.
 
