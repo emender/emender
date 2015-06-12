@@ -1,5 +1,10 @@
 2015-06-12  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* src/TestModuleTable.lua:
+	Fixed argument name in TestModuleTable.
+
+2015-06-12  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* test/TestModulePath.lua:
 	Fixed comments in TestModulePath.
 
