@@ -1,5 +1,10 @@
 2015-06-15  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* emend:
+	Added checks to the getScriptDirectory() function.
+
+2015-06-15  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* selfchecks/selfcheck.sh:
 	* selfchecks/test_module_tracer.in:
 	Added new selftest: test_module_tracer.

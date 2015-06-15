@@ -43,14 +43,38 @@ local debugMode = nil
 
 
 
+--
+-- Returns directory where this script (emend) is stored.
+-- This function should work even when the 'emend' is on PATH, is called
+-- using absolute or relative path etc.
+--
 function getScriptDirectory()
     local scriptSrc = debug.getinfo(1).short_src
+
+    -- make sure that debug module works correctly
+    if not scriptSrc then
+        return nil
+    end
+
+    -- make sure that the index is correct
     local scriptNameIndex = string.len(scriptSrc) - string.len("emend")
+    if scriptNameIndex < 0 then
+        return nil
+    end
+
+    -- "emend" is found in the short_src metadata -> let's use its index
     return string.sub(scriptSrc, 1, scriptNameIndex)
 end
 
+
+
+--
+-- Returns current directory. Note that this directory might be different
+-- that result of getScriptDirectory().
+--
 function getCurrentDirectory()
     local pwd = os.getenv("PWD")
+    -- add slash if it is't part of PWD
     if not pwd:endsWith("/") then
         pwd = pwd .. "/"
     end
