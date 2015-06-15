@@ -1,0 +1,33 @@
+---------------------------------------------------------------------------
+                           :: TestModuleTracer ::
+---------------------------------------------------------------------------
+
+  Description:     Check the API for the Emender module 'gendoc'.
+  Authors:         Pavel Tisnovsky
+  Emails:          ptisnovs@redhat.com
+  Last Modified:   2015-06-11
+  Tags:            BasicTest, ModuleTest
+  Required tools:  
+
+  Test Case: testModuleExistence
+
+    [ PASS ]  Check if global object with the name 'tracer' exists.
+    [ PASS ]  Check if object with the name 'tracer' has correct type
+
+  Test Summary                                                            
+
+    Executed Test Cases: 1
+    Passed Test Cases:   1
+    Failed Test Cases:   0
+    Encountered Errors:  0
+    Overall Result:      PASS
+
+---------------------------------------------------------------------------
+                               :: Summary ::
+---------------------------------------------------------------------------
+
+  Executed Tests: 1
+  Passed Tests:   1
+  Failed Tests:   0
+  Overall Result: PASS
+
