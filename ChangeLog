@@ -1,3 +1,8 @@
+2015-06-15  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* test/TestModuleTracer.lua:
+	Added new test: TestModuleTracer.
+
 2015-06-12  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* selfchecks/selfcheck.sh:
