@@ -50,6 +50,12 @@
     [ PASS ]  Check if global object with the name 'is_not_nil' exists.
     [ PASS ]  Check if object with the name 'is_not_nil' has correct type
 
+  Test Case: testFunctionIsNotType
+
+    [ PASS ]  Check if global object with the name 'is_not_type' exists.
+    [ PASS ]  Check if object with the name 'is_not_type' has correct
+              type
+
   Test Case: testFunctionIsTrue
 
     [ PASS ]  Check if global object with the name 'is_true' exists.
@@ -95,8 +101,8 @@
 
   Test Summary                                                            
 
-    Executed Test Cases: 16
-    Passed Test Cases:   16
+    Executed Test Cases: 17
+    Passed Test Cases:   17
     Failed Test Cases:   0
     Encountered Errors:  0
     Overall Result:      PASS

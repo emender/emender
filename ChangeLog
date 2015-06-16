@@ -1,5 +1,10 @@
 2015-06-16  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* selfchecks/test_module_asserts.in:
+	Modified expected test output according to changes made in TestModuleAsserts.
+
+2015-06-16  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* test/TestModuleAsserts.lua:
 	Added new test case into TestModuleAsserts.
 
