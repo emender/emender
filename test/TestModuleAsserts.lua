@@ -139,6 +139,16 @@ end
 
 
 --
+-- Check if the following global function exists: 'is_not_type'.
+-- This function should be declared as part of asserts module.
+--
+function TestModuleAsserts.testFunctionIsNotType()
+    TestModuleAsserts.doesFunctionExist("is_not_type")
+end
+
+
+
+--
 -- Check if the following global function exists: 'is_nil'.
 -- This function should be declared as part of asserts module.
 --
