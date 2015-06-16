@@ -48,6 +48,7 @@ Usage: emend [-clsvDT] [-o FILE] [-t TAG...] [FILE...]
 -h, --help          display this help and exit
 -V, --version       display version information and exit
 -L, --license       display the license and exit
+-G, --gendoc        generator documentation for Emender API
 ]])
 end
 

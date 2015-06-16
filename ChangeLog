@@ -1,5 +1,10 @@
 2015-06-16  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* src/help.lua:
+	-G and --gendoc command line options should be printed in help.
+
+2015-06-16  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* selfchecks/test_module_asserts.in:
 	Modified expected test output according to changes made in TestModuleAsserts.
 
