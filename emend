@@ -106,26 +106,21 @@ end
 -- the global table _G.
 --
 function loadModules()
+    -- path to the 'emend' module should be added to the PATH
     alterPackagePath()
     luaVersionChecker = require("src/selftest/luaVersionChecker")
     toolsChecker = require("src/selftest/toolsChecker")
-    _G["toolsChecker"] = toolsChecker
     getopt = require("src/common/getopt")
-    _G["getopt"] = getopt
     core = require("src/core")
     help = require("src/help")
     testInfo = require("src/testInfo")
-    _G["testInfo"] = testInfo
     license = require("src/license")
     version = require("src/version")
     asserts = require("src/common/asserts")
     logger = require("src/common/logger")
-    _G["logger"] = logger
     tracer = require("src/common/tracer")
-    _G["tracer"] = tracer
     gendoc = require("src/common/gendoc")
     path = require("src/common/path")
-    _G["path"] = path
     abstractWriter = require("src/writers/abstractWriter")
     htmlWriter = require("src/writers/htmlWriter")
     xmlWriter = require("src/writers/xmlWriter")
@@ -140,30 +135,15 @@ function loadModules()
     require("src/testExporter")
     require("src/common/exec")
     checkTools = require("src/checkTools")
+    -- some modules should be added to the global table _G to be accessible
+    -- from other scripts (including tests)
+    _G["toolsChecker"] = toolsChecker
+    _G["getopt"] = getopt
+    _G["testInfo"] = testInfo
+    _G["logger"] = logger
+    _G["tracer"] = tracer
+    _G["path"] = path
     _G["checkTools"] = checkTools
-end
-
-function checkForUnknownOptions(options)
-    local unknownOptions = getopt.getUnknownOptions(options)
-    local unknownOptionsCnt = table.hashTableSize(unknownOptions)
-    if unknownOptionsCnt > 0 then
-        local msg = ""
-        if unknownOptionsCnt == 1 then
-            msg = "option is"
-        else
-            msg = "options are"
-        end
-        print("Error - unknown " .. msg .. " used on the command line:")
-
-        -- list all unknown command line options
-        -- for stability we need output to be sorted
-        local sortedUnknownOptions = table.sortedKeys(unknownOptions)
-        for _,v in ipairs(sortedUnknownOptions) do
-            print("    " .. v)
-        end
-
-        os.exit(1)
-    end
 end
 
 function isTableEmpty(tbl)
@@ -236,7 +216,7 @@ function main(arg)
 
     local options = getopt.getopt(arg, "")
 
-    checkForUnknownOptions(options)
+    getopt.checkForUnknownOptions(options)
 
     local verboseOperations = getopt.isVerboseOptionUsed(options)
     local colorOutput = getopt.isColorOutputOptionUsed(options)

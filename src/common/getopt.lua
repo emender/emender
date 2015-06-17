@@ -309,5 +309,28 @@ function getopt.recognizeTags(arg)
     return tags
 end
 
+function getopt.checkForUnknownOptions(options)
+    local unknownOptions = getopt.getUnknownOptions(options)
+    local unknownOptionsCnt = table.hashTableSize(unknownOptions)
+    if unknownOptionsCnt > 0 then
+        local msg = ""
+        if unknownOptionsCnt == 1 then
+            msg = "option is"
+        else
+            msg = "options are"
+        end
+        print("Error - unknown " .. msg .. " used on the command line:")
+
+        -- list all unknown command line options
+        -- for stability we need output to be sorted
+        local sortedUnknownOptions = table.sortedKeys(unknownOptions)
+        for _,v in ipairs(sortedUnknownOptions) do
+            print("    " .. v)
+        end
+
+        os.exit(1)
+    end
+end
+
 return getopt
 

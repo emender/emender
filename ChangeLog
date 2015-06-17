@@ -1,5 +1,11 @@
 2015-06-17  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* emend:
+	* src/common/getopt.lua:
+	Refactoring - unknown option checker moved into getopt module.
+
+2015-06-17  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* selfchecks/show_help_2.in:
 	Updated expected test results for TestShowHelp2 test.
 
