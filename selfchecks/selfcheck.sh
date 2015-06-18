@@ -187,6 +187,9 @@ function runTestReturnValuePositive {
 
      ../emend ../test/Test1Pass.lua
      echo $? > test_return_value_7.out
+
+     ../emend ../test/Test1Fail.lua
+     echo $? > test_return_value_8.out
 }
 
 

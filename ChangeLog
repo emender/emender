@@ -1,6 +1,12 @@
 2015-06-18  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* selfchecks/selfcheck.sh:
+	* selfchecks/test_return_value_8.in:
+	Added new selftest: test_return_value_8.
+
+2015-06-18  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* selfchecks/selfcheck.sh:
 	* selfchecks/test_return_value_7.in:
 	Added new selftest: test_return_value_7.
 
