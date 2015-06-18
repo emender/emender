@@ -1,3 +1,8 @@
+2015-06-18  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* src/version.lua:
+	Better handling of Emender versions.
+
 2015-06-17  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* emend:

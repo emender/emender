@@ -22,10 +22,18 @@
 -- Function to show Emender version
 --
 local version = {
+    major = 0,
+    minor = 0,
+    revision = 1
 }
 
+
+
+--
+-- Print Emender version to the standard output.
+--
 function version.showVersion()
-    print("Emender version 0.0.1")
+    print("Emender version " .. version.major .. "." .. version.minor .. "." .. version.revision)
 end
 
 
