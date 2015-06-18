@@ -184,6 +184,9 @@ function runTestReturnValuePositive {
 
      ../emend --help
      echo $? > test_return_value_6.out
+
+     ../emend ../test/Test1Pass.lua
+     echo $? > test_return_value_7.out
 }
 
 
