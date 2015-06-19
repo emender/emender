@@ -1,5 +1,11 @@
 2015-06-19  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* selfchecks/selfcheck.sh:
+	* selfchecks/test_module_logger.in:
+	New test: test_module_logger.
+
+2015-06-19  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* test/TestModuleLogger.lua:
 	Added new test into TestModuleLogger.
 
