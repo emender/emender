@@ -53,7 +53,7 @@ end
 -- This function should be declared as part of gendoc module.
 --
 function TestModuleLogger.testFunctionReportError()
-    TestModuleLogger.doesFunctionExist("report_error")
+    TestModuleLogger.doesFunctionExist("readTputControlSequence")
 end
 
 
