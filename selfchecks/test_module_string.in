@@ -77,6 +77,30 @@
 
     [ PASS ]  Test if startsWith() function works correctly
 
+  Test Case: testStartsWithFunction12
+
+    [ PASS ]  Test if startsWith() function works correctly
+
+  Test Case: testStartsWithFunction13
+
+    [ PASS ]  Test if startsWith() function works correctly
+
+  Test Case: testStartsWithFunction14
+
+    [ PASS ]  Test if startsWith() function works correctly
+
+  Test Case: testStartsWithFunction15
+
+    [ PASS ]  Test if startsWith() function works correctly
+
+  Test Case: testStartsWithFunction16
+
+    [ PASS ]  Test if startsWith() function works correctly
+
+  Test Case: testStartsWithFunction17
+
+    [ PASS ]  Test if startsWith() function works correctly
+
   Test Case: testSubsFunction01
 
     [ PASS ]  Test if subs() function works correctly
@@ -273,8 +297,8 @@
 
   Test Summary                                                            
 
-    Executed Test Cases: 65
-    Passed Test Cases:   65
+    Executed Test Cases: 71
+    Passed Test Cases:   71
     Failed Test Cases:   0
     Encountered Errors:  0
     Overall Result:      PASS
