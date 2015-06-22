@@ -552,6 +552,66 @@ end
 
 
 --
+-- Test the behaviour of the following Emender function: string:startsWith().
+--
+function TestModuleString.testStartsWithFunction12()
+    local str = "\nxyzzy"
+    is_true(str:startsWith("\n"), "Test if startsWith() function works correctly")
+end
+
+
+
+--
+-- Test the behaviour of the following Emender function: string:startsWith().
+--
+function TestModuleString.testStartsWithFunction13()
+    local str = "\nxyzzy"
+    is_true(str:startsWith("\nxyzzy"), "Test if startsWith() function works correctly")
+end
+
+
+
+--
+-- Test the behaviour of the following Emender function: string:startsWith().
+--
+function TestModuleString.testStartsWithFunction14()
+    local str = "\txyzzy"
+    is_true(str:startsWith("\t"), "Test if startsWith() function works correctly")
+end
+
+
+
+--
+-- Test the behaviour of the following Emender function: string:startsWith().
+--
+function TestModuleString.testStartsWithFunction15()
+    local str = "\txyzzy"
+    is_true(str:startsWith("\txyzzy"), "Test if startsWith() function works correctly")
+end
+
+
+
+--
+-- Test the behaviour of the following Emender function: string:startsWith().
+--
+function TestModuleString.testStartsWithFunction16()
+    local str = "\n\txyzzy"
+    is_true(str:startsWith("\n\t"), "Test if startsWith() function works correctly")
+end
+
+
+
+--
+-- Test the behaviour of the following Emender function: string:startsWith().
+--
+function TestModuleString.testStartsWithFunction17()
+    local str = "\n\txyzzy"
+    is_true(str:startsWith("\n\txyzzy"), "Test if startsWith() function works correctly")
+end
+
+
+
+--
 -- Test the behaviour of the following Emender function: string:endsWith().
 --
 function TestModuleString.testEndsWithFunction01()

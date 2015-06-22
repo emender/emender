@@ -1,5 +1,10 @@
 2015-06-22  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* test/TestModuleString.lua:
+	Added six test cases into TestModuleString.
+
+2015-06-22  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* test/TestModuleLogger.lua:
 	Fixed typo.
 
