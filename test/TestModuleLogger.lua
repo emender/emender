@@ -1,4 +1,4 @@
--- TestModuleLogger.lua - check the API for the Emender module 'gendoc'.
+-- TestModuleLogger.lua - check the API for the Emender module 'logger'.
 -- Copyright (C) 2014 Pavel Tisnovsky
 --
 -- This file is part of Emender.
