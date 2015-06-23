@@ -102,6 +102,36 @@ end
 
 
 --
+-- Load all common modules so they can be used by Emender itself
+-- and by the tests as well.
+function loadCommonModules()
+    require("src/common/fileio")
+    require("src/common/string")
+    require("src/common/table")
+    require("src/writers/commonTextWriter")
+    require("src/config")
+    require("src/testExporter")
+    require("src/common/exec")
+end
+
+
+
+--
+-- Store selected modules into global table _G
+--
+function storeModuleIntoGlobalTable()
+    _G["toolsChecker"] = toolsChecker
+    _G["getopt"] = getopt
+    _G["testInfo"] = testInfo
+    _G["logger"] = logger
+    _G["tracer"] = tracer
+    _G["path"] = path
+    _G["checkTools"] = checkTools
+end
+
+
+
+--
 -- Load all relevant modules and store selected modules into
 -- the global table _G.
 --
@@ -127,23 +157,11 @@ function loadModules()
     textWriter = require("src/writers/textWriter")
     junitWriter = require("src/writers/junitWriter")
     summaryWriter = require("src/writers/summaryWriter")
-    require("src/common/fileio")
-    require("src/common/string")
-    require("src/common/table")
-    require("src/writers/commonTextWriter")
-    require("src/config")
-    require("src/testExporter")
-    require("src/common/exec")
     checkTools = require("src/checkTools")
+    loadCommonModules()
     -- some modules should be added to the global table _G to be accessible
     -- from other scripts (including tests)
-    _G["toolsChecker"] = toolsChecker
-    _G["getopt"] = getopt
-    _G["testInfo"] = testInfo
-    _G["logger"] = logger
-    _G["tracer"] = tracer
-    _G["path"] = path
-    _G["checkTools"] = checkTools
+    storeModuleIntoGlobalTable()
 end
 
 function isTableEmpty(tbl)
