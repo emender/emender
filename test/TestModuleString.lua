@@ -672,6 +672,46 @@ end
 
 
 --
+-- Test the behaviour of the following Emender function: string:endsWith().
+--
+function TestModuleString.testEndsWithFunction07()
+    local str = "\n"
+    is_true(str:endsWith("\n"), "Test if endsWith() function works correctly")
+end
+
+
+
+--
+-- Test the behaviour of the following Emender function: string:endsWith().
+--
+function TestModuleString.testEndsWithFunction08()
+    local str = "\t"
+    is_true(str:endsWith("\t"), "Test if endsWith() function works correctly")
+end
+
+
+
+--
+-- Test the behaviour of the following Emender function: string:endsWith().
+--
+function TestModuleString.testEndsWithFunction09()
+    local str = "xyzzy\n"
+    is_true(str:endsWith("\n"), "Test if endsWith() function works correctly")
+end
+
+
+
+--
+-- Test the behaviour of the following Emender function: string:endsWith().
+--
+function TestModuleString.testEndsWithFunction10()
+    local str = "xyzzy\t"
+    is_true(str:endsWith("\t"), "Test if endsWith() function works correctly")
+end
+
+
+
+--
 -- Test the behaviour of the following Emender function: string:subs().
 --
 function TestModuleString.testSubsFunction01()
