@@ -1,5 +1,10 @@
 2015-06-23  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* selfchecks/test_module_string.in:
+	Updated expected test results for TestModuleString test.
+
+2015-06-23  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* test/TestModuleString.lua:
 	Added four new tests for String:endsWith() function.
 

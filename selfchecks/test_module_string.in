@@ -33,6 +33,22 @@
 
     [ PASS ]  Test if endsWith() function works correctly
 
+  Test Case: testEndsWithFunction07
+
+    [ PASS ]  Test if endsWith() function works correctly
+
+  Test Case: testEndsWithFunction08
+
+    [ PASS ]  Test if endsWith() function works correctly
+
+  Test Case: testEndsWithFunction09
+
+    [ PASS ]  Test if endsWith() function works correctly
+
+  Test Case: testEndsWithFunction10
+
+    [ PASS ]  Test if endsWith() function works correctly
+
   Test Case: testStartsWithFunction01
 
     [ PASS ]  Test if startsWith() function works correctly
@@ -297,8 +313,8 @@
 
   Test Summary                                                            
 
-    Executed Test Cases: 71
-    Passed Test Cases:   71
+    Executed Test Cases: 75
+    Passed Test Cases:   75
     Failed Test Cases:   0
     Encountered Errors:  0
     Overall Result:      PASS
