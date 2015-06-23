@@ -89,18 +89,25 @@ end
 -- @return edited string
 --
 function string.trimString(str)
+    local pattern = "[%p%s]*(%w.*)$"
+    
     -- make sure we don't get 'NPE'
     if not str then
         return nil
     end
     if string.len(str) > 3 then
-        local getOutput = str:gmatch("[%p%s]*(%w[%w%s%p]*%w)[%p%s]*$")
+        local getOutput = str:gmatch(pattern)
         local output = getOutput()
-        if not output then
-            return ""
-        else
-            return output
+        if not output then 
+          return ""
         end
+        
+        output = output:reverse()
+        
+        -- Use the same pattern for the end of reversed string.
+        getOutput = output:gmatch(pattern)
+        output = getOutput()
+        return output:reverse()
     else
         -- special cases for string of length 0 to 3 characters
         local getOutput = str:gmatch("[%p%s]*(%w*)[%p%s]*$")
