@@ -1,5 +1,10 @@
 2015-06-24  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* src/common/table.lua:
+	Added new method: table.isEmpty()
+
+2015-06-24  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* emend:
 	Another refactoring of function loadModules.
 

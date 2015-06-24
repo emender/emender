@@ -183,3 +183,13 @@ function table.sortedValues(src)
     return allValues
 end
 
+
+
+--
+-- Returns true if table does not exists or if its empty.
+--
+function table.isEmpty(tbl)
+    -- if tbl == nil then return true as well
+    return not tbl or next(tbl) == nil
+end
+
