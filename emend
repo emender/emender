@@ -104,6 +104,7 @@ end
 --
 -- Load all common modules so they can be used by Emender itself
 -- and by the tests as well.
+--
 function loadCommonModules()
     require("src/common/fileio")
     require("src/common/string")
@@ -112,6 +113,34 @@ function loadCommonModules()
     require("src/config")
     require("src/testExporter")
     require("src/common/exec")
+end
+
+
+
+--
+-- Load all module whose references should be stored in vars.
+--
+function loadModulesAndInitReferences()
+    luaVersionChecker = require("src/selftest/luaVersionChecker")
+    toolsChecker =      require("src/selftest/toolsChecker")
+    getopt =            require("src/common/getopt")
+    core =              require("src/core")
+    help =              require("src/help")
+    testInfo =          require("src/testInfo")
+    license =           require("src/license")
+    version =           require("src/version")
+    asserts =           require("src/common/asserts")
+    logger =            require("src/common/logger")
+    tracer =            require("src/common/tracer")
+    gendoc =            require("src/common/gendoc")
+    path =              require("src/common/path")
+    abstractWriter =    require("src/writers/abstractWriter")
+    htmlWriter =        require("src/writers/htmlWriter")
+    xmlWriter =         require("src/writers/xmlWriter")
+    textWriter =        require("src/writers/textWriter")
+    junitWriter =       require("src/writers/junitWriter")
+    summaryWriter =     require("src/writers/summaryWriter")
+    checkTools =        require("src/checkTools")
 end
 
 
@@ -138,26 +167,9 @@ end
 function loadModules()
     -- path to the 'emend' module should be added to the PATH
     alterPackagePath()
-    luaVersionChecker = require("src/selftest/luaVersionChecker")
-    toolsChecker = require("src/selftest/toolsChecker")
-    getopt = require("src/common/getopt")
-    core = require("src/core")
-    help = require("src/help")
-    testInfo = require("src/testInfo")
-    license = require("src/license")
-    version = require("src/version")
-    asserts = require("src/common/asserts")
-    logger = require("src/common/logger")
-    tracer = require("src/common/tracer")
-    gendoc = require("src/common/gendoc")
-    path = require("src/common/path")
-    abstractWriter = require("src/writers/abstractWriter")
-    htmlWriter = require("src/writers/htmlWriter")
-    xmlWriter = require("src/writers/xmlWriter")
-    textWriter = require("src/writers/textWriter")
-    junitWriter = require("src/writers/junitWriter")
-    summaryWriter = require("src/writers/summaryWriter")
-    checkTools = require("src/checkTools")
+    -- load all module whose references should be stored in vars
+    loadModulesAndInitReferences()
+    -- load all common modules
     loadCommonModules()
     -- some modules should be added to the global table _G to be accessible
     -- from other scripts (including tests)

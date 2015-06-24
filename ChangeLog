@@ -1,3 +1,8 @@
+2015-06-24  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* emend:
+	Another refactoring of function loadModules.
+
 2015-06-23  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* emend:
