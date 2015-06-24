@@ -176,9 +176,7 @@ function loadModules()
     storeModuleIntoGlobalTable()
 end
 
-function isTableEmpty(tbl)
-    return not tbl or next(tbl) == nil
-end
+
 
 function printConfiguration(outputFileNames, outputFiles, testsToRun, testOptions, tags)
     print("Tests to run:")
@@ -188,7 +186,7 @@ function printConfiguration(outputFileNames, outputFiles, testsToRun, testOption
     print()
 
     print("Output file names:")
-    if isTableEmpty(outputFileNames) then
+    if table.isEmpty(outputFileNames) then
         print("    Not specified")
     else
         for _, outputFileName in ipairs(outputFileNames) do
@@ -198,7 +196,7 @@ function printConfiguration(outputFileNames, outputFiles, testsToRun, testOption
     print()
 
     print("Output files:")
-    if isTableEmpty(outputFiles) then
+    if table.isEmpty(outputFiles) then
         print("    Not specified")
     else
         for format, file in pairs(outputFiles) do
@@ -208,7 +206,7 @@ function printConfiguration(outputFileNames, outputFiles, testsToRun, testOption
     print()
 
     print("Tags:")
-    if isTableEmpty(tags) then
+    if table.isEmpty(tags) then
         print("    Not specified")
     else
         for _, tag in ipairs(tags) do
@@ -218,7 +216,7 @@ function printConfiguration(outputFileNames, outputFiles, testsToRun, testOption
     print()
 
     print("Options passed to tests:")
-    if isTableEmpty(testOptions) then
+    if table.isEmpty(testOptions) then
         print("    Not specified")
     else
         for name, value in pairs(testOptions) do
