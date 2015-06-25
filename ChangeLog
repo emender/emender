@@ -1,6 +1,11 @@
 2015-06-25  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* emend:
+	Refactoring: function printOutputFileNames.
+
+2015-06-25  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* emend:
 	Refactoring: function printTestsToRun.
 
 2015-06-24  Pavel Tisnovsky  <ptisnovs@redhat.com>

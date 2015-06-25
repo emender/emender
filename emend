@@ -192,11 +192,9 @@ end
 
 
 --
--- Print given configuration to the standard output.
+-- Print list of tests that should be run from the Emender.
 --
-function printConfiguration(outputFileNames, outputFiles, testsToRun, testOptions, tags)
-    printTestsToRun(testsToRun)
-
+function printOutputFileNames(outputFiles)
     print("Output file names:")
     if table.isEmpty(outputFileNames) then
         print("    Not specified")
@@ -206,6 +204,16 @@ function printConfiguration(outputFileNames, outputFiles, testsToRun, testOption
         end
     end
     print()
+end
+
+
+
+--
+-- Print given configuration to the standard output.
+--
+function printConfiguration(outputFileNames, outputFiles, testsToRun, testOptions, tags)
+    printTestsToRun(testsToRun)
+    printOutputFileNames(outputFiles)
 
     print("Output files:")
     if table.isEmpty(outputFiles) then
