@@ -178,12 +178,24 @@ end
 
 
 
-function printConfiguration(outputFileNames, outputFiles, testsToRun, testOptions, tags)
+--
+-- Print list of tests that should be run from the Emender.
+--
+function printTestsToRun(testsToRun)
     print("Tests to run:")
     for _, testToRun in ipairs(testsToRun) do
         print("", testToRun)
     end
     print()
+end
+
+
+
+--
+-- Print given configuration to the standard output.
+--
+function printConfiguration(outputFileNames, outputFiles, testsToRun, testOptions, tags)
+    printTestsToRun(testsToRun)
 
     print("Output file names:")
     if table.isEmpty(outputFileNames) then
