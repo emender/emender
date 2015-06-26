@@ -1,0 +1,5 @@
+*.out
+*.diff
+selfchecks/*.property
+selfchecks/*.txt
+selfchecks/*.xml
