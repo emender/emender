@@ -1,4 +1,9 @@
-2015-06-25  Pavel Tisnovsky  <ptisnovs@redhat.com>
+2015-06-26  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* emend:
+	Refactoring: function printOptions.
+
+2015-06-26  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* emend:
 	Refactoring: function printTags.
