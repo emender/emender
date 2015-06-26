@@ -1,6 +1,11 @@
 2015-06-25  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* emend:
+	Refactoring: function printTags.
+
+2015-06-25  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* emend:
 	Refactoring: function printOutputFiles.
 
 2015-06-25  Pavel Tisnovsky  <ptisnovs@redhat.com>

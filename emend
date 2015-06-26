@@ -226,13 +226,9 @@ end
 
 
 --
--- Print given configuration to the standard output.
+-- Print set of tags specified on the command line.
 --
-function printConfiguration(outputFileNames, outputFiles, testsToRun, testOptions, tags)
-    printTestsToRun(testsToRun)
-    printOutputFileNames(outputFiles)
-    printOutputFiles(outputFiles)
-
+function printTags(tags)
     print("Tags:")
     if table.isEmpty(tags) then
         print("    Not specified")
@@ -242,6 +238,18 @@ function printConfiguration(outputFileNames, outputFiles, testsToRun, testOption
         end
     end
     print()
+end
+
+
+
+--
+-- Print given configuration to the standard output.
+--
+function printConfiguration(outputFileNames, outputFiles, testsToRun, testOptions, tags)
+    printTestsToRun(testsToRun)
+    printOutputFileNames(outputFiles)
+    printOutputFiles(outputFiles)
+    printTags(tags)
 
     print("Options passed to tests:")
     if table.isEmpty(testOptions) then
