@@ -251,6 +251,13 @@ function runTestsWithTags {
 
 
 
+# Test Emender's ability to support different output formats
+function runTestsWithSpecificOutput {
+    false
+}
+
+
+
 # Run all tests
 function runAllTests {
     runTestsForBasicCLI
@@ -264,6 +271,7 @@ function runAllTests {
     runTestReturnValuePositive
     runTestReturnValueNegative
     runTestsWithTags
+    runTestsWithSpecificOutput
 }
 
 

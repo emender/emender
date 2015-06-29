@@ -1,5 +1,10 @@
 2015-06-29  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* selfchecks/selfcheck.sh:
+	Support for checking different output formats.
+
+2015-06-29  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* emend:
 	* src/writers/abstractWriter.lua:
 	Function to register all writers should be part of abstractWriter.
