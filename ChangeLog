@@ -1,3 +1,9 @@
+2015-06-29  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* emend:
+	* src/writers/abstractWriter.lua:
+	Function to register all writers should be part of abstractWriter.
+
 2015-06-26  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* .gitignore:

@@ -270,21 +270,13 @@ function printConfiguration(outputFileNames, outputFiles, testsToRun, testOption
     printOptions(testOptions)
 end
 
-function registerWriters()
-    abstractWriter.writers["html"] = htmlWriter
-    abstractWriter.writers["xml"] = xmlWriter
-    abstractWriter.writers["txt"] = textWriter
-    abstractWriter.writers["junit"] = junitWriter
-    abstractWriter.writers["summary"] = summaryWriter
-end
-
 function main(arg)
     loadModules()
     luaVersionChecker.checkLuaVersion()
     core.asserts = asserts
     core.writer = abstractWriter
 
-    registerWriters()
+    abstractWriter.registerWriters(htmlWriter, xmlWriter, textWriter, junitWriter, summaryWriter)
 
     local options = getopt.getopt(arg, "")
 
