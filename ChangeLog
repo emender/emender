@@ -1,6 +1,12 @@
 2015-06-29  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* selfchecks/selfcheck.sh:
+	* selfchecks/test_output_format_txt.in:
+	Added test to check txt output format.
+
+2015-06-29  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* selfchecks/selfcheck.sh:
 	Support for checking different output formats.
 
 2015-06-29  Pavel Tisnovsky  <ptisnovs@redhat.com>

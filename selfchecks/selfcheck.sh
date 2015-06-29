@@ -253,7 +253,8 @@ function runTestsWithTags {
 
 # Test Emender's ability to support different output formats
 function runTestsWithSpecificOutput {
-    false
+    ../emend -o test_output_format_txt.txt ../test/Test1.lua
+    mv test_output_format_txt.txt test_output_format_txt.out
 }
 
 
