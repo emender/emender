@@ -270,6 +270,11 @@ function printConfiguration(outputFileNames, outputFiles, testsToRun, testOption
     printOptions(testOptions)
 end
 
+
+
+--
+-- Entry point to the Emender
+--
 function main(arg)
     loadModules()
     luaVersionChecker.checkLuaVersion()
@@ -295,10 +300,12 @@ function main(arg)
 
     local debugMode = getopt.isDebugFlagUsed(options)
 
+    -- enable trace mode if -T or --trace option is specified on the command line
     if tracingOn then
         tracer.enable()
     end
 
+    -- enable verbose mode if -v or --verbose option is specified on the command line
     if verboseOperations then
         printConfiguration(outputFileNames, outputFiles, testsToRun, testOptions, tags)
     end
@@ -307,7 +314,9 @@ function main(arg)
 
     logger.setColorOutput(colorOutput)
 
+    -- choose the operation that should be started
     if getopt.isHelpOptionUsed(options) then
+        -- show help if -h or --help option is specified on the command line
         help.showHelp(colorOutput)
     elseif getopt.isVersionOptionUsed(options) then
         version.showVersion(colorOutput)
@@ -318,6 +327,7 @@ function main(arg)
     elseif getopt.isGenDocFlagUsed(options) then
         gendoc.generateDocForWholeEmender(getScriptDirectory(), colorOutput, outputFiles)
     else
+        -- run all selected tests and evaluate exit value
         local returnValue = core.runTests(verboseOperations, colorOutput, testsToRun, outputFiles, testOptions, tags)
         if returnValue then
             os.exit(0)

@@ -1,5 +1,10 @@
 2015-07-01  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* emend:
+	Added comments into 'emend' module.
+
+2015-07-01  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* selfchecks/selfcheck.sh:
 	* selfchecks/test_output_format_txt_2.in:
 	* selfchecks/test_output_format_xml_2.in:
