@@ -258,6 +258,10 @@ function runTestsWithSpecificOutput {
 
     ../emend -o test_output_format_xml.xml ../test/Test1.lua
     mv test_output_format_xml.xml test_output_format_xml.out
+
+    ../emend -o test_output_format_txt_2.txt -o test_output_format_xml_2.xml ../test/Test1.lua
+    mv test_output_format_txt_2.txt test_output_format_txt_2.out
+    mv test_output_format_xml_2.xml test_output_format_xml_2.out
 }
 
 
