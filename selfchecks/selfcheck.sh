@@ -255,6 +255,9 @@ function runTestsWithTags {
 function runTestsWithSpecificOutput {
     ../emend -o test_output_format_txt.txt ../test/Test1.lua
     mv test_output_format_txt.txt test_output_format_txt.out
+
+    ../emend -o test_output_format_xml.xml ../test/Test1.lua
+    mv test_output_format_xml.xml test_output_format_xml.out
 }
 
 

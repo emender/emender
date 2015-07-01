@@ -1,0 +1,31 @@
+<report xmlns="http://emender.blackened.cz/1.0/">
+  <suite name="Test1" result="pass">
+    <info>
+      <description>Check that docunit core works correctly.</description>
+      <authors>Pavel Tisnovsky</authors>
+      <emails>ptisnovs@redhat.com</emails>
+      <modified>2014-08-25</modified>
+      <tags>
+        <tag>XMLcheck</tag>
+        <tag>BasicTest</tag>
+        <tag>SmokeTest</tag>
+      </tags>
+    </info>
+    <case name="testA" result="pass">
+      <test result="pass">The function Test1.testA() is called properly.</test>
+    </case>
+    <case name="testB" result="pass">
+      <test result="pass">The function Test1.testB() is called properly.</test>
+    </case>
+    <case name="testCallOtherFunction" result="pass">
+      <test result="pass">The function Test1.xyzzy() is called from another function.</test>
+    </case>
+    <case name="testReadLocalValue" result="pass">
+      <test result="pass">Local variable bind to the test has the value 42</test>
+    </case>
+    <case name="testReadWriteLocalValue" result="pass">
+      <test result="pass">Old value is properly set to 42</test>
+      <test result="pass">New value is properly set to 42</test>
+    </case>
+  </suite>
+</report>
