@@ -23,4 +23,7 @@ rm errors.txt
 rm *.property
 rm results.xml
 rm delete*.txt
+rm -rf bootstrap
+rm -rf flotr
+rm *.css
 

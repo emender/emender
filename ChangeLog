@@ -1,4 +1,9 @@
-2015-07-01  Pavel Tisnovsky  <ptisnovs@redhat.com>
+2015-07-02  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* selfchecks/cleanup.sh:
+	Updated script used to clean up selfchecks directory.
+
+2015-07-02  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* emend:
 	Added comments into 'emend' module.
