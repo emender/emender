@@ -287,6 +287,7 @@ function main(arg)
 
     getopt.checkForUnknownOptions(options)
 
+    -- read options handled only in this function
     local verboseOperations = getopt.isVerboseOptionUsed(options)
     local colorOutput = getopt.isColorOutputOptionUsed(options)
     local tracingOn = getopt.isTraceOptionUsed(options)
@@ -319,12 +320,16 @@ function main(arg)
         -- show help if -h or --help option is specified on the command line
         help.showHelp(colorOutput)
     elseif getopt.isVersionOptionUsed(options) then
+        -- show version if -V or --version option is specified on the command line
         version.showVersion(colorOutput)
     elseif getopt.isLicenseOptionUsed(options) then
+        -- show licence text if -L or --license option is specified on the command line
         license.showLicense(colorOutput)
     elseif getopt.isTestListOptionUsed(options) then
+        -- show list of tests to run if -l or --list option is specified on the command line
         core.performTestList(verboseOperations, colorOutput, testsToRun)
     elseif getopt.isGenDocFlagUsed(options) then
+        -- generate Emender docuumentation if -G or --gendoc option is specified on the command line
         gendoc.generateDocForWholeEmender(getScriptDirectory(), colorOutput, outputFiles)
     else
         -- run all selected tests and evaluate exit value
