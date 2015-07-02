@@ -1,5 +1,11 @@
 2015-07-02  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* selfchecks/selfcheck.sh:
+	* selfchecks/test_output_format_html.in:
+	Added test to check HTML output format.
+
+2015-07-02  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* selfchecks/cleanup.sh:
 	Updated script used to clean up selfchecks directory.
 
