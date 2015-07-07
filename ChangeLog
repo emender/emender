@@ -1,3 +1,9 @@
+2015-07-07  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* selfchecks/test_output_format_html_3.in:
+	* selfchecks/test_output_format_txt_3.in:
+	Added test to check txt and html output formats.
+
 2015-07-02  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* selfchecks/selfcheck.sh:
