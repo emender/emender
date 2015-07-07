@@ -261,10 +261,18 @@ function runTestsWithSpecificOutput {
 
     ../emend -o test_output_format_html.html ../test/Test1.lua
     mv test_output_format_html.html test_output_format_html.out
+    # we don't want 'random' data in output format
+    sed -i 's/name="date" content=".*"/name="date" content=""/' test_output_format_html.out
 
     ../emend -o test_output_format_txt_2.txt -o test_output_format_xml_2.xml ../test/Test1.lua
     mv test_output_format_txt_2.txt test_output_format_txt_2.out
     mv test_output_format_xml_2.xml test_output_format_xml_2.out
+
+#sed -i 's/name="date" content=".*"/name="date" content=""/'
+
+    ../emend -o test_output_format_txt_3.txt -o test_output_format_html_3.html ../test/Test1.lua
+    mv test_output_format_txt_3.txt test_output_format_txt_3.out
+    mv test_output_format_html_3.html test_output_format_html_3.out
 }
 
 
