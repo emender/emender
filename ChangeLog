@@ -1,3 +1,10 @@
+2015-07-08  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* selfchecks/selfcheck.sh:
+	* selfchecks/test_output_format_html_4.in:
+	* selfchecks/test_output_format_xml_4.in:
+	Added test to check xml and html output formats.
+
 2015-07-07  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* selfchecks/selfcheck.sh:
