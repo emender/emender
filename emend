@@ -329,6 +329,10 @@ function main(arg)
         -- show list of tests to run if -l or --list option is specified on the command line
         core.performTestList(verboseOperations, colorOutput, testsToRun)
     elseif getopt.isGenDocFlagUsed(options) then
+        if not outputFiles or #outputFiles == 0 then
+            print("Error - no output files given, please use -o option")
+            os.exit(1)
+        end
         -- generate Emender docuumentation if -G or --gendoc option is specified on the command line
         gendoc.generateDocForWholeEmender(getScriptDirectory(), colorOutput, outputFiles)
     else

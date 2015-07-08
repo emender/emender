@@ -1,5 +1,10 @@
 2015-07-08  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* emend:
+	Added check if output files are specified for -G or --gendoc command line option.
+
+2015-07-08  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* selfchecks/selfcheck.sh:
 	* selfchecks/test_output_format_html_4.in:
 	* selfchecks/test_output_format_xml_4.in:
