@@ -1,5 +1,11 @@
 2015-07-08  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* selfchecks/selfcheck.sh:
+	* selfchecks/show_gendoc_1.in:
+	Added selfcheck for the command line option -G.
+
+2015-07-08  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* emend:
 	Added check if output files are specified for -G or --gendoc command line option.
 
