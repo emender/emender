@@ -1,5 +1,10 @@
 2015-07-09  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* emend:
+	Fixed check for output files in case --gendoc CLI option is used.
+
+2015-07-09  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* selfchecks/selfcheck.sh:
 	* selfchecks/show_gendoc_2.in:
 	Added selfcheck for the command line option --gendoc.

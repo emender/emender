@@ -329,7 +329,7 @@ function main(arg)
         -- show list of tests to run if -l or --list option is specified on the command line
         core.performTestList(verboseOperations, colorOutput, testsToRun)
     elseif getopt.isGenDocFlagUsed(options) then
-        if not outputFiles or #outputFiles == 0 then
+        if not outputFiles or table.isEmpty(outputFiles) then
             print("Error - no output files given, please use -o option")
             os.exit(1)
         end
