@@ -406,7 +406,7 @@ end
 -- Generate simple documentation for one selected source file.
 --
 function generateDocForOneSourceFile(sourceFile, colorOutput, outputFiles)
-    print("***", sourceFile, "***")
+    print("Generating doc for the following source file:", sourceFile)
     for _,outputFile in pairs(outputFiles) do
         local type = outputFile[1]
         local fout = outputFile[2]

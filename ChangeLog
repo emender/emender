@@ -1,5 +1,10 @@
 2015-07-09  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* src/common/gendoc.lua:
+	Gendoc module should use meaningful messages.
+
+2015-07-09  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* emend:
 	Fixed check for output files in case --gendoc CLI option is used.
 
