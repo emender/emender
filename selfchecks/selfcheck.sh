@@ -40,16 +40,17 @@ fail_cnt=0
 
 # Run Emender by using various CLI options and export output
 function runTestsForBasicCLI {
-    ../emend -V                         > show_version_1.out
-    ../emend --version                  > show_version_2.out
-    ../emend -L                         > show_license_1.out
-    ../emend --license                  > show_license_2.out
-    ../emend -h                         > show_help_1.out
-    ../emend --help                     > show_help_2.out
+    ../emend -V                            > show_version_1.out
+    ../emend --version                     > show_version_2.out
+    ../emend -L                            > show_license_1.out
+    ../emend --license                     > show_license_2.out
+    ../emend -h                            > show_help_1.out
+    ../emend --help                        > show_help_2.out
     ../emend -l ../test/Test1.lua          > test_list_1.out
     ../emend -l ../test/Test100*.lua       > test_list_2.out
     ../emend -l ../test/TestAssertion*.lua > test_list_3.out
-    ../emend -G                         > show_gendoc_1.out
+    ../emend -G                            > show_gendoc_1.out
+    ../emend --gendoc                      > show_gendoc_2.out
 }
 
 
