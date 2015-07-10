@@ -289,6 +289,8 @@ function runTestsWithSpecificOutput {
 function runGenDocTests {
     ../emend -G -o doc.txt > gendoc_1.out
     rm doc.txt
+    ../emend --gendoc -o doc.txt > gendoc_2.out
+    rm doc.txt
 }
 
 
