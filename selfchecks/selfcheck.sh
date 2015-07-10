@@ -285,6 +285,14 @@ function runTestsWithSpecificOutput {
 
 
 
+# Test Emender's ability to generate documentation
+function runGenDocTests {
+    ../emend -G -o doc.txt > gendoc_1.out
+    rm doc.txt
+}
+
+
+
 # Run all tests
 function runAllTests {
     runTestsForBasicCLI
@@ -299,6 +307,7 @@ function runAllTests {
     runTestReturnValueNegative
     runTestsWithTags
     runTestsWithSpecificOutput
+    runGenDocTests
 }
 
 

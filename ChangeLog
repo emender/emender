@@ -1,3 +1,9 @@
+2015-07-10  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* selfchecks/gendoc_1.in:
+	* selfchecks/selfcheck.sh:
+	New test - documentation generator.
+
 2015-07-09  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* src/common/gendoc.lua:
