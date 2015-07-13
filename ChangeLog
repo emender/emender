@@ -1,5 +1,10 @@
 2015-07-13  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* selfchecks/selfcheck.sh:
+	Updated to run Emender with unknown CLI options.
+
+2015-07-13  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* selfchecks/gendoc_4.in:
 	* selfchecks/selfcheck.sh:
 	Fourth test for documentation generator.

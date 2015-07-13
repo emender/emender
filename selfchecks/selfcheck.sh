@@ -68,6 +68,26 @@ function runTestsWithBadCLIOptions {
 
 
 
+# Run Emender by using unknown CLI options
+# Try to use all one character wide options excluding the supported ones:
+#   -c
+#   -h
+#   -l
+#   -o
+#   -s
+#   -t
+#   -v
+#   -D
+#   -G
+#   -L
+#   -T
+#   -V
+function runTestsWithUnknownCLIOptions {
+    echo ""
+}
+
+
+
 # Run Emender by using various bad output format
 function runTestsWithBadOutputFormat {
     ../emend -o output1 ../test/TestPassFail.lua ../test/Test1.lua > bad_output_format_1.out
@@ -303,6 +323,7 @@ function runGenDocTests {
 function runAllTests {
     runTestsForBasicCLI
     runTestsWithBadCLIOptions
+    runTestsWithUnknownCLIOptions
     runTestsWithBadOutputFormat
     runTestExamples
     runTestsForFileOperations
