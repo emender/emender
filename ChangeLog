@@ -1,3 +1,9 @@
+2015-07-13  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* selfchecks/gendoc_4.in:
+	* selfchecks/selfcheck.sh:
+	Fourth test for documentation generator.
+
 2015-07-10  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* selfchecks/gendoc_3.in:

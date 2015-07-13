@@ -293,6 +293,8 @@ function runGenDocTests {
     rm doc.txt
     ../emend -G -o doc.html > gendoc_3.out
     rm doc.html
+    ../emend --gendoc -o doc.html > gendoc_4.out
+    rm doc.html
 }
 
 
