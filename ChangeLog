@@ -1,6 +1,14 @@
 2015-07-14  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* selfchecks/selfcheck.sh:
+	* selfchecks/unknown_cli_option_e.in:
+	* selfchecks/unknown_cli_option_f.in:
+	* selfchecks/unknown_cli_option_g.in:
+	Three selfchecks added: unknown CLI options -e, -f, and -g
+
+2015-07-14  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* selfchecks/selfcheck.sh:
 	* selfchecks/unknown_cli_option_a.in:
 	* selfchecks/unknown_cli_option_b.in:
 	* selfchecks/unknown_cli_option_d.in:
