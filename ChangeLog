@@ -1,5 +1,10 @@
 2015-07-15  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* src/common/asserts.lua:
+	New function in asserts module: debug().
+
+2015-07-15  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* test/TestDebug.lua:
 	Added new test to check RFE: Implement the --debug command line option #15
 
