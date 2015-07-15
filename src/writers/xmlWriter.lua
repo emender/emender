@@ -163,6 +163,16 @@ end
 
 
 --
+-- Write the test tag with the result attribute set to 'info' to the file:
+--
+function xmlWriter.writeTestDebug(fout, testName, message)
+    local explanation = message[2]
+    xmlWriter.writeTestResult(fout, 'debug', explanation)
+end
+
+
+
+--
 -- Do nothing:
 --
 function xmlWriter.writeTestError(fout, testName, message)

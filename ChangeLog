@@ -1,5 +1,10 @@
 2015-07-15  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* src/writers/xmlWriter.lua:
+	Added new function into xmlWriter: writeTestDebug().
+
+2015-07-15  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* src/common/asserts.lua:
 	New function in asserts module: debug().
 
