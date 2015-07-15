@@ -1,3 +1,8 @@
+2015-07-15  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* test/TestDebug.lua:
+	Added new test to check RFE: Implement the --debug command line option #15
+
 2015-07-14  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* selfchecks/selfcheck.sh:
