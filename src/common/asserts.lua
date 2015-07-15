@@ -17,6 +17,10 @@
 
 
 
+debugMode = nil
+
+
+
 --
 -- Function that could be called from the core (or possibly directly from the
 -- test) to report unexpected error. Please note that error is usually a bit
@@ -646,5 +650,32 @@ function warn(explanation)
     -- test structure is ok, let register status with its message
     writeTestInfo(io.stdout, nil, explanation, colorOutput)
     registerInfoMessage(explanation)
+end
+
+
+
+--
+-- Show message but only when -D or --debug CLI option is used.
+--
+function debug(explanation)
+    if not debugMode then
+        return
+    end
+    -- Verify that <explanation> is specified:
+    if explanation == nil then
+        -- if parameters are missing or incorrect, error should be reported immediately
+        report_error_in_test_structure("Explanation is a required argument.")
+        return
+    end
+
+    -- Verify that <explanation> is a string:
+    if type(explanation) ~= "string" then
+        -- if parameters are missing or incorrect, error should be reported immediately
+        report_error_in_test_structure("Explanation must be a string.")
+        return
+    end
+
+    -- test structure is ok, let register status with its message
+    writeTestDebug(io.stdout, nil, explanation, colorOutput)
 end
 
