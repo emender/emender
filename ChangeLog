@@ -1,5 +1,14 @@
 2015-07-16  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* selfchecks/test_assertion_is_equal.in:
+	* selfchecks/test_assertion_is_like.in:
+	* selfchecks/test_assertion_is_not_type.in:
+	* selfchecks/test_assertion_is_unequal.in:
+	* selfchecks/test_assertion_is_unlike.in:
+	Updated test results due to changes in asserts module.
+
+2015-07-16  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* test/TestDebug.lua:
 	Test to check the new yap() function.
 

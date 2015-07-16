@@ -27,11 +27,11 @@
 
   Test Case: testNegative05
 
-    ../src/common/asserts.lua:339: Test structure error: Explanation is a required argument.
+    ../src/common/asserts.lua:343: Test structure error: Explanation is a required argument.
 
   Test Case: testNegative06
 
-    ../src/common/asserts.lua:339: Test structure error: Explanation is a required argument.
+    ../src/common/asserts.lua:343: Test structure error: Explanation is a required argument.
 
   Test Case: testNegative07
 

@@ -87,7 +87,7 @@
 
   Test Case: testNegative20
 
-    ../src/common/asserts.lua:236: Test structure error: Explanation is a required argument.
+    ../src/common/asserts.lua:240: Test structure error: Explanation is a required argument.
 
   Test Case: testNegative21
 
