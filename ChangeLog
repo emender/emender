@@ -1,5 +1,10 @@
 2015-07-16  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* selfchecks/test_assertion_is_type.in:
+	Updated remaining test result due to changes in asserts module.
+
+2015-07-16  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* selfchecks/test_assertion_is_equal.in:
 	* selfchecks/test_assertion_is_like.in:
 	* selfchecks/test_assertion_is_not_type.in:
