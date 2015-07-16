@@ -1,4 +1,4 @@
--- TestDebug.lua - check the debug() function.
+-- TestDebug.lua - check the yap() function.
 -- Copyright (C) 2014 Pavel Tisnovsky
 --
 --
@@ -20,7 +20,7 @@
 TestDebug = {
     -- required field
     metadata = {
-        description = "Check the debug() function.",
+        description = "Check the yap() function.",
         authors = "Pavel Tisnovsky",
         emails = "ptisnovs@redhat.com",
         changed = "2015-07-15",
@@ -31,29 +31,29 @@ TestDebug = {
 
 
 --
--- This function calls debug() once.
+-- This function calls Debug() once.
 --
 function TestDebug.test1()
-    debug("Info#1")
+    yap("Info#1")
 end
 
 
 
 --
--- This function calls debug() once.
+-- This function calls Debug() once.
 --
 function TestDebug.test2()
-    debug("Info#1")
+    yap("Info#1")
     pass("OK")
 end
 
 
 
 --
--- This function calls debug() once.
+-- This function calls Debug() once.
 --
 function TestDebug.test3()
-    debug("Info#1")
+    yap("Info#1")
     fail("Error")
 end
 

@@ -1,5 +1,10 @@
 2015-07-16  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* test/TestDebug.lua:
+	Test to check the new yap() function.
+
+2015-07-16  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* src/common/asserts.lua:
 	debug() function renamed to yap().
 
