@@ -1,3 +1,8 @@
+2015-07-16  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* src/common/asserts.lua:
+	debug() function renamed to yap().
+
 2015-07-15  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* src/writers/xmlWriter.lua:

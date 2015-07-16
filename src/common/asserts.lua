@@ -657,7 +657,7 @@ end
 --
 -- Show message but only when -D or --debug CLI option is used.
 --
-function debug(explanation)
+function yap(explanation)
     if not debugMode then
         return
     end
