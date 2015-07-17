@@ -113,6 +113,15 @@ end
 --
 -- Do nothing:
 --
+function summaryWriter.writeTestDebug(fout, testName, message)
+    return
+end
+
+
+
+--
+-- Do nothing:
+--
 function summaryWriter.writeTestError(fout, testName, message)
     return
 end

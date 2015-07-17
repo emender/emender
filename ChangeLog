@@ -1,5 +1,10 @@
 2015-07-17  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* src/writers/summaryWriter.lua:
+	Dummy debug() function for summaryWriter.
+
+2015-07-17  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* src/writers/textWriter.lua:
 	Debug messages could be used by textWriter.
 
