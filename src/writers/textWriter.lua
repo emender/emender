@@ -74,6 +74,12 @@ function textWriter.writeTestInfo(fout, testName, message)
     writeTestInfo(fout, testName, explanation, false)
 end
 
+-- Write the test result to the file:
+function textWriter.writeTestDebug(fout, testName, message)
+    local explanation = message[2]
+    writeTestDebug(fout, testName, explanation, false)
+end
+
 -- Do nothing:
 function textWriter.writeTestError(fout, testName, message)
     return

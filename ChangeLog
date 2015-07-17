@@ -1,5 +1,10 @@
 2015-07-17  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* src/writers/textWriter.lua:
+	Debug messages could be used by textWriter.
+
+2015-07-17  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* src/core.lua:
 	Debug mode should be properly set before tests are started.
 
