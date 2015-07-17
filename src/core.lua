@@ -653,7 +653,9 @@ end
 --
 -- Run all selected tests.
 --
-function core.runTests(verboseOperation, colorOutput, testsToRun, outputFiles, testOptions, tags)
+function core.runTests(verboseOperation, colorOutput, testsToRun, outputFiles, testOptions, tags, debugModePar)
+    debugMode = debugModePar
+
     -- variable that controls the return value passed to os.exit()
     local returnValue = true
     prepareTestResultStructure()
