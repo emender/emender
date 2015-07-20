@@ -588,6 +588,15 @@ end
 --
 -- Write the test result to the HTML file.
 --
+function htmlWriter.writeTestDebug(fout, testName, message)
+    writeTestMessage(fout, message)
+end
+
+
+
+--
+-- Write the test result to the HTML file.
+--
 function htmlWriter.writeTestError(fout, testName, message)
     writeTestMessage(fout, message)
 end
