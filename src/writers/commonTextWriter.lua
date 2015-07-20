@@ -258,6 +258,10 @@ function writeTestInfo(fout, testName, explanation, colorOutput)
     fout:write(formatTestResult('info', explanation, colorOutput))
 end
 
+function writeTestDebug(fout, testName, explanation, colorOutput)
+    fout:write(formatTestResult('debug', explanation, colorOutput))
+end
+
 function writeTestError(fout, testName, explanation, colorOutput)
     fout:write(formatTestResult('error', explanation, colorOutput))
 end
