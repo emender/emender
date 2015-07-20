@@ -193,3 +193,19 @@ function table.isEmpty(tbl)
     return not tbl or next(tbl) == nil
 end
 
+--
+-- Function which converts table from {[1]="a", [2]="b", etc.}
+-- to {[a]=true. [b]=true, etc.}. Just because of speed
+-- of finding items.
+-- @param tbl the table which should be converted.
+-- @return converted table.
+function table.setValueToKey(tbl)
+  local convertedTable = {}
+  
+  for _, value in ipairs(tbl) do
+    convertedTable[value] = true
+  end
+  
+  return convertedTable
+end
+
