@@ -122,6 +122,16 @@ end
 
 
 --
+-- Write the test tag with the result attribute set to 'info' to the file:
+--
+function junitWriter.writeTestDebug(fout, testName, message)
+    -- do nothing
+    return
+end
+
+
+
+--
 -- Write test error to the file:
 --
 function junitWriter.writeTestError(fout, testName, message)

@@ -1,3 +1,8 @@
+2015-07-20  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* src/writers/junitWriter.lua:
+	Dummy debug() function for junitWriter.
+
 2015-07-17  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* src/writers/summaryWriter.lua:
