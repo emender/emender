@@ -1,5 +1,10 @@
 2015-07-21  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* selfchecks/selfcheck.sh:
+	Support for running debug selfchecks.
+
+2015-07-21  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* emend:
 	Debug flag should be passed into core module.
 

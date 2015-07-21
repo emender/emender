@@ -331,6 +331,13 @@ function runGenDocTests {
 
 
 
+# Test Emender's ability to use yap() function
+function runDebugTests {
+    echo ""
+}
+
+
+
 # Run all tests
 function runAllTests {
     runTestsForBasicCLI
@@ -347,6 +354,7 @@ function runAllTests {
     runTestsWithTags
     runTestsWithSpecificOutput
     runGenDocTests
+    runDebugTests
 }
 
 
