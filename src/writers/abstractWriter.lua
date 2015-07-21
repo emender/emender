@@ -194,6 +194,20 @@ end
 
 
 --
+-- Called for each debug() function.
+-- This function calls functions with the same name that should exist for all registered writers.
+--
+function abstractWriter.writeTestDebug(testName, message)
+    -- loop over all registered writers
+    for _, outputFileStruct in pairs(abstractWriter.outputFileStructs) do
+        local writer, fout = abstractWriter.getWriterAndFout(outputFileStruct)
+        writer.writeTestDebug(fout, testName, message)
+    end
+end
+
+
+
+--
 -- Called in case of any error in the test structure.
 -- This function calls functions with the same name that should exist for all registered writers.
 --
