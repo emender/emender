@@ -337,7 +337,7 @@ function main(arg)
         gendoc.generateDocForWholeEmender(getScriptDirectory(), colorOutput, outputFiles)
     else
         -- run all selected tests and evaluate exit value
-        local returnValue = core.runTests(verboseOperations, colorOutput, testsToRun, outputFiles, testOptions, tags)
+        local returnValue = core.runTests(verboseOperations, colorOutput, testsToRun, outputFiles, testOptions, tags, debugMode)
         if returnValue then
             os.exit(0)
         else

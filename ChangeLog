@@ -1,5 +1,10 @@
 2015-07-21  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* emend:
+	Debug flag should be passed into core module.
+
+2015-07-21  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* src/writers/abstractWriter.lua:
 	Support for debug messaged that could be called from tests.
 
