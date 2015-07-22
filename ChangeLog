@@ -1,6 +1,12 @@
 2015-07-22  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* selfchecks/selfcheck.sh:
+	* selfchecks/test_debug_2.in:
+	Second test for checking the yap() function.
+
+2015-07-22  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* selfchecks/selfcheck.sh:
 	* selfchecks/test_debug_1.in:
 	Test for checking the yap() function.
 

@@ -334,6 +334,7 @@ function runGenDocTests {
 # Test Emender's ability to use yap() function
 function runDebugTests {
     ../emend ../test/TestDebug.lua > test_debug_1.out
+    ../emend -D ../test/TestDebug.lua > test_debug_2.out
 }
 
 
