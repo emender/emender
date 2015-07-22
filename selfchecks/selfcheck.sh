@@ -335,6 +335,7 @@ function runGenDocTests {
 function runDebugTests {
     ../emend ../test/TestDebug.lua > test_debug_1.out
     ../emend -D ../test/TestDebug.lua > test_debug_2.out
+    ../emend --debug ../test/TestDebug.lua > test_debug_3.out
 }
 
 
