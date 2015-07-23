@@ -1,3 +1,8 @@
+2015-07-23  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* selfchecks/selfcheck.sh:
+	Prepared selfchecks script to run new tests.
+
 2015-07-22  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* selfchecks/selfcheck.sh:
