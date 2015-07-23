@@ -1,5 +1,14 @@
 2015-07-23  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* selfchecks/unknown_cli_option_m.in:
+	* selfchecks/unknown_cli_option_n.in:
+	* selfchecks/unknown_cli_option_p.in:
+	* selfchecks/unknown_cli_option_q.in:
+	* selfchecks/unknown_cli_option_r.in:
+	Five new selfchecks.
+
+2015-07-23  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* selfchecks/selfcheck.sh:
 	* selfchecks/unknown_cli_option_h.in:
 	-h is proper CLI option.
