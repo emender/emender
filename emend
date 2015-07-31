@@ -329,11 +329,14 @@ function main(arg)
         -- show list of tests to run if -l or --list option is specified on the command line
         core.performTestList(verboseOperations, colorOutput, testsToRun)
     elseif getopt.isGenDocFlagUsed(options) then
+        -- user need to specify name of output file where the generated documentation
+        -- will be stored (the -o option is used for two distinct operations)
         if not outputFiles or table.isEmpty(outputFiles) then
             print("Error - no output files given, please use -o option")
             os.exit(1)
         end
-        -- generate Emender docuumentation if -G or --gendoc option is specified on the command line
+        -- generate Emender docuumentation if -G or --gendoc option is specified
+        -- on the command line and the -o filename option is used as well
         gendoc.generateDocForWholeEmender(getScriptDirectory(), colorOutput, outputFiles)
     else
         -- run all selected tests and evaluate exit value
