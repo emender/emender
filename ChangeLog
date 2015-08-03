@@ -1,3 +1,8 @@
+2015-08-03  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* test/TestModuleTable.lua:
+	New test: TestModuleTable.testContainsOnEmptyTable"
+
 2015-07-31  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* emend:

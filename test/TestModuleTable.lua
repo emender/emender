@@ -55,3 +55,16 @@ function TestModuleTable.testModuleExistence()
     TestModuleTable.doesModuleExist("table")
 end
 
+
+
+--
+-- Check the function table.contains() on empty table.
+--
+function TestModuleTable.testContainsOnEmptyTable()
+    local tbl = {}
+    is_false(table.contains(tbl, nil),     "Check table.contains(nil) for empty table.")
+    is_false(table.contains(tbl, 42),      "Check table.contains(42) for empty table.")
+    is_false(table.contains(tbl, "xyzzy"), "Check table.contains(\"xyzzy\") for empty table.")
+    is_false(table.contains(tbl, "{}"),    "Check table.contains({}) for empty table.")
+end
+
