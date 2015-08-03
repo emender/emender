@@ -76,7 +76,20 @@ end
 function TestModuleTable.testContainsNegative1()
     local tbl = {42}
     is_false(table.contains(tbl, nil),     "Check table.contains(nil) for non empty table.")
-    is_false(table.contains(tbl, 0),       "Check table.contains(42) for non empty table.")
+    is_false(table.contains(tbl, 0),       "Check table.contains(0) for non empty table.")
+    is_false(table.contains(tbl, "xyzzy"), "Check table.contains(\"xyzzy\") for non empty table.")
+    is_false(table.contains(tbl, "{}"),    "Check table.contains({}) for non empty table.")
+end
+
+
+
+--
+-- Check the function table.contains() - negative results are expected.
+--
+function TestModuleTable.testContainsNegative2()
+    local tbl = {"Hello world!"}
+    is_false(table.contains(tbl, nil),     "Check table.contains(nil) for non empty table.")
+    is_false(table.contains(tbl, 42),      "Check table.contains(42) for non empty table.")
     is_false(table.contains(tbl, "xyzzy"), "Check table.contains(\"xyzzy\") for non empty table.")
     is_false(table.contains(tbl, "{}"),    "Check table.contains({}) for non empty table.")
 end

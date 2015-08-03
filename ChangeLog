@@ -1,6 +1,11 @@
 2015-08-03  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* test/TestModuleTable.lua:
+	New test: TestModuleTable.testContainsNegative2"
+
+2015-08-03  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* test/TestModuleTable.lua:
 	New test: TestModuleTable.testContainsNegative1"
 
 2015-08-03  Pavel Tisnovsky  <ptisnovs@redhat.com>
