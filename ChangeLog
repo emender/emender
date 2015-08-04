@@ -1,3 +1,8 @@
+2015-08-04  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* test/TestModuleTable.lua:
+	Fixed comments in TestModuleTable.
+
 2015-08-03  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* test/TestModuleTable.lua:

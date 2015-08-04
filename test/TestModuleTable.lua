@@ -1,4 +1,4 @@
--- TestModuleTable.lua - check the API for the Emender module 'gendoc'.
+-- TestModuleTable.lua - check the API for the Emender module 'table'.
 -- Copyright (C) 2014, 2015 Pavel Tisnovsky
 --
 -- This file is part of Emender.
@@ -19,10 +19,10 @@
 TestModuleTable = {
     -- required field
     metadata = {
-        description = "Check the API for the Emender module 'gendoc'.",
+        description = "Check the API for the Emender module 'table'.",
         authors = "Pavel Tisnovsky",
         emails = "ptisnovs@redhat.com",
-        changed = "2015-06-11",
+        changed = "2015-08-04",
         tags = {"BasicTest", "ModuleTest"},
     }
 }
