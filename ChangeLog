@@ -1,6 +1,11 @@
 2015-08-04  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* test/TestModuleTable.lua:
+	New test: TestModuleTable.testContainsPositive2
+
+2015-08-04  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* test/TestModuleTable.lua:
 	New test: TestModuleTable.testContainsPositive1
 
 2015-08-04  Pavel Tisnovsky  <ptisnovs@redhat.com>
