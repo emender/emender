@@ -94,3 +94,17 @@ function TestModuleTable.testContainsNegative2()
     is_false(table.contains(tbl, "{}"),    "Check table.contains({}) for non empty table.")
 end
 
+
+
+--
+-- Check the function table.contains() - positive results are expected.
+--
+function TestModuleTable.testContainsPositive1()
+    local tbl = {1, 2, 3, 42}
+    is_true(table.contains(tbl, 42), "Check table.contains(42) for non empty table.")
+    is_true(table.contains(tbl, 1),  "Check table.contains(1) for non empty table.")
+    is_true(table.contains(tbl, 2),  "Check table.contains(2) for non empty table.")
+    is_true(table.contains(tbl, 3),  "Check table.contains(3) for non empty table.")
+end
+
+

@@ -1,22 +1,27 @@
 2015-08-04  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* test/TestModuleTable.lua:
+	New test: TestModuleTable.testContainsPositive1
+
+2015-08-04  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* test/TestModuleTable.lua:
 	Fixed comments in TestModuleTable.
 
 2015-08-03  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* test/TestModuleTable.lua:
-	New test: TestModuleTable.testContainsNegative2"
+	New test: TestModuleTable.testContainsNegative2
 
 2015-08-03  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* test/TestModuleTable.lua:
-	New test: TestModuleTable.testContainsNegative1"
+	New test: TestModuleTable.testContainsNegative1
 
 2015-08-03  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* test/TestModuleTable.lua:
-	New test: TestModuleTable.testContainsOnEmptyTable"
+	New test: TestModuleTable.testContainsOnEmptyTable
 
 2015-07-31  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
