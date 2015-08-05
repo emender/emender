@@ -1,5 +1,10 @@
 2015-08-05  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* test/TestModuleString.lua:
+	Five new tests added into TestModuleString.
+
+2015-08-05  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* test/TestModuleTable.lua:
 	New tests: TestModuleTable.testContainsPositive3 and
 	TestModuleTable.testContainsPositive4
