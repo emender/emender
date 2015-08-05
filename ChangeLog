@@ -1,3 +1,12 @@
+2015-08-05  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* selfchecks/selfcheck.sh:
+	* selfchecks/unknown_cli_option_E.in:
+	* selfchecks/unknown_cli_option_F.in:
+	* selfchecks/unknown_cli_option_H.in:
+	* selfchecks/unknown_cli_option_I.in:
+	Four new selfchecks.
+
 2015-08-04  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* test/TestModuleTable.lua:
