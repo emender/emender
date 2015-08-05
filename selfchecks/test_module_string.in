@@ -145,6 +145,26 @@
 
     [ PASS ]  Test if substring() function works correctly
 
+  Test Case: testSubstringFunction02
+
+    [ PASS ]  Test if substring() function works correctly
+
+  Test Case: testSubstringFunction03
+
+    [ PASS ]  Test if substring() function works correctly
+
+  Test Case: testSubstringFunction04
+
+    [ PASS ]  Test if substring() function works correctly
+
+  Test Case: testSubstringFunction05
+
+    [ PASS ]  Test if substring() function works correctly
+
+  Test Case: testSubstringFunction06
+
+    [ PASS ]  Test if substring() function works correctly
+
   Test Case: testTrimFunction01
 
     [ PASS ]  Test if trim() function works correctly
@@ -313,8 +333,8 @@
 
   Test Summary                                                            
 
-    Executed Test Cases: 75
-    Passed Test Cases:   75
+    Executed Test Cases: 80
+    Passed Test Cases:   80
     Failed Test Cases:   0
     Encountered Errors:  0
     Overall Result:      PASS
