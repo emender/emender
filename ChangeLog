@@ -1,5 +1,11 @@
 2015-08-05  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* test/TestModuleTable.lua:
+	New tests: TestModuleTable.testContainsPositive3 and
+	TestModuleTable.testContainsPositive4
+
+2015-08-05  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* selfchecks/selfcheck.sh:
 	* selfchecks/unknown_cli_option_E.in:
 	* selfchecks/unknown_cli_option_F.in:

@@ -120,3 +120,29 @@ function TestModuleTable.testContainsPositive2()
 end
 
 
+
+--
+-- Check the function table.contains() - positive results are expected.
+--
+function TestModuleTable.testContainsPositive3()
+    local tbl = {nil, "x", "y"}
+    is_true(table.contains(tbl, nil),     "Check table.contains(nil) for non empty table.")
+    is_true(table.contains(tbl, "x"),     "Check table.contains(\"x\") for non empty table.")
+    is_true(table.contains(tbl, "y"),     "Check table.contains(\"y\") for non empty table.")
+end
+
+
+
+--
+-- Check the function table.contains() - positive results are expected.
+--
+function TestModuleTable.testContainsPositive4()
+    local tbl = {1, 2, nil, 3, 4}
+    is_true(table.contains(tbl, nil),    "Check table.contains(nil) for non empty table.")
+    is_true(table.contains(tbl, 1),      "Check table.contains(1) for non empty table.")
+    is_true(table.contains(tbl, 2),      "Check table.contains(2) for non empty table.")
+    is_true(table.contains(tbl, 3),      "Check table.contains(3) for non empty table.")
+    is_true(table.contains(tbl, 4),      "Check table.contains(4) for non empty table.")
+end
+
+
