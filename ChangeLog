@@ -1,5 +1,10 @@
 2015-08-06  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* selftests/test_module_string.in:
+	Updated expected test results.
+
+2015-08-06  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* test/TestModuleString.lua:
 	New tests: testLastIndexOf2 testLastIndexOf2.
 
