@@ -1,3 +1,8 @@
+2015-08-06  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* test/TestModuleString.lua:
+	New tests: testLastIndexOf1 testLastIndexOf2.
+
 2015-08-05  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* selftests/test_module_string.in:

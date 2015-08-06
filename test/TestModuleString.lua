@@ -831,3 +831,28 @@ end
 
 
 
+--
+-- Test the behaviour of the following Emender function: string:lastIndexOf().
+--
+function TestModuleString.testLastIndexOf1()
+    local str = "abcdef";
+    is_equal(str:lastIndexOf("a"), 1, "Test if lastIndexOf() function works correctly")
+    is_equal(str:lastIndexOf("b"), 2, "Test if lastIndexOf() function works correctly")
+    is_equal(str:lastIndexOf("c"), 3, "Test if lastIndexOf() function works correctly")
+    is_equal(str:lastIndexOf("d"), 4, "Test if lastIndexOf() function works correctly")
+    is_equal(str:lastIndexOf("e"), 5, "Test if lastIndexOf() function works correctly")
+    is_equal(str:lastIndexOf("f"), 6, "Test if lastIndexOf() function works correctly")
+end
+
+
+
+--
+-- Test the behaviour of the following Emender function: string:lastIndexOf().
+--
+function TestModuleString.testLastIndexOf2()
+    local str = "abc_def";
+    is_equal(str:lastIndexOf("_"), 4, "Test if lastIndexOf() function works correctly")
+end
+
+
+
