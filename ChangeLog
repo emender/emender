@@ -1,5 +1,13 @@
 2015-08-06  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* selfchecks/selfcheck.sh:
+	* selfchecks/unknown_cli_option_J.in:
+	* selfchecks/unknown_cli_option_K.in:
+	* selfchecks/unknown_cli_option_L.in:
+	Three new selfchecks.
+
+2015-08-06  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* selftests/test_module_string.in:
 	Updated expected test results.
 
