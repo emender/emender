@@ -856,3 +856,15 @@ end
 
 
 
+--
+-- Test the behaviour of the following Emender function: string:lastIndexOf().
+--
+function TestModuleString.testLastIndexOf3()
+    local str = "";
+    is_nil(str:lastIndexOf("a"), "Test if lastIndexOf() function works correctly")
+    is_nil(str:lastIndexOf("_"), "Test if lastIndexOf() function works correctly")
+    is_nil(str:lastIndexOf(" "), "Test if lastIndexOf() function works correctly")
+end
+
+
+
