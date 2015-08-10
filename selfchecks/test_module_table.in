@@ -1,0 +1,81 @@
+---------------------------------------------------------------------------
+                           :: TestModuleTable ::
+---------------------------------------------------------------------------
+
+  Description:     Check the API for the Emender module 'table'.
+  Authors:         Pavel Tisnovsky
+  Emails:          ptisnovs@redhat.com
+  Last Modified:   2015-08-04
+  Tags:            BasicTest, ModuleTest
+  Required tools:  
+
+  Test Case: testContainsNegative1
+
+    [ PASS ]  Check table.contains(nil) for non empty table.
+    [ PASS ]  Check table.contains(0) for non empty table.
+    [ PASS ]  Check table.contains("xyzzy") for non empty table.
+    [ PASS ]  Check table.contains({}) for non empty table.
+
+  Test Case: testContainsNegative2
+
+    [ PASS ]  Check table.contains(nil) for non empty table.
+    [ PASS ]  Check table.contains(42) for non empty table.
+    [ PASS ]  Check table.contains("xyzzy") for non empty table.
+    [ PASS ]  Check table.contains({}) for non empty table.
+
+  Test Case: testContainsOnEmptyTable
+
+    [ PASS ]  Check table.contains(nil) for empty table.
+    [ PASS ]  Check table.contains(42) for empty table.
+    [ PASS ]  Check table.contains("xyzzy") for empty table.
+    [ PASS ]  Check table.contains({}) for empty table.
+
+  Test Case: testContainsPositive1
+
+    [ PASS ]  Check table.contains(42) for non empty table.
+    [ PASS ]  Check table.contains(1) for non empty table.
+    [ PASS ]  Check table.contains(2) for non empty table.
+    [ PASS ]  Check table.contains(3) for non empty table.
+
+  Test Case: testContainsPositive2
+
+    [ PASS ]  Check table.contains("x") for non empty table.
+    [ PASS ]  Check table.contains("y") for non empty table.
+    [ PASS ]  Check table.contains("xyzzy") for non empty table.
+
+  Test Case: testContainsPositive3
+
+    [ PASS ]  Check table.contains(nil) for non empty table.
+    [ PASS ]  Check table.contains("x") for non empty table.
+    [ PASS ]  Check table.contains("y") for non empty table.
+
+  Test Case: testContainsPositive4
+
+    [ PASS ]  Check table.contains(nil) for non empty table.
+    [ PASS ]  Check table.contains(1) for non empty table.
+    [ PASS ]  Check table.contains(2) for non empty table.
+    [ PASS ]  Check table.contains(3) for non empty table.
+    [ PASS ]  Check table.contains(4) for non empty table.
+
+  Test Case: testModuleExistence
+
+    [ PASS ]  Check if global object with the name 'table' exists.
+    [ PASS ]  Check if object with the name 'table' has correct type
+
+  Test Summary                                                            
+
+    Executed Test Cases: 8
+    Passed Test Cases:   8
+    Failed Test Cases:   0
+    Encountered Errors:  0
+    Overall Result:      PASS
+
+---------------------------------------------------------------------------
+                               :: Summary ::
+---------------------------------------------------------------------------
+
+  Executed Tests: 1
+  Passed Tests:   1
+  Failed Tests:   0
+  Overall Result: PASS
+

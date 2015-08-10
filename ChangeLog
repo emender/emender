@@ -1,6 +1,12 @@
 2015-08-10  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* selfchecks/selfcheck.sh:
+	* selfchecks/test_module_table.in:
+	New selfcheck for module 'table'.
+
+2015-08-10  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* selfchecks/selfcheck.sh:
 	* selfchecks/unknown_cli_option_M.in:
 	* selfchecks/unknown_cli_option_N.in:
 	* selfchecks/unknown_cli_option_O.in:
