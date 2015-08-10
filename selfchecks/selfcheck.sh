@@ -121,7 +121,11 @@ function runTestsWithUnknownCLIOptions {
     ../emend -I                  > unknown_cli_option_I.out
     ../emend -J                  > unknown_cli_option_J.out
     ../emend -K                  > unknown_cli_option_K.out
-    ../emend -L                  > unknown_cli_option_L.out
+    #        -L is correct option
+    ../emend -M                  > unknown_cli_option_M.out
+    ../emend -N                  > unknown_cli_option_N.out
+    ../emend -O                  > unknown_cli_option_O.out
+    ../emend -P                  > unknown_cli_option_P.out
 }
 
 
