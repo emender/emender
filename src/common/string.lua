@@ -99,6 +99,25 @@ end
 
 
 --
+-- Implementation of classical rtrim() function
+-- known from other programming languages.
+-- Remove trailing whitespace from string.
+--
+function string.rtrim(str)
+    -- make sure we don't get 'NPE'
+    if not str then
+        return nil
+    end
+    local n = #str
+    while n > 0 and str:find("^%s", n) do
+        n = n - 1
+    end
+    return str:sub(1, n)
+end
+
+
+
+--
 -- Function that removes all punctuation characters and spaces from both sides of string.
 --
 -- @param text string which should be edited
