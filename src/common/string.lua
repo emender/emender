@@ -67,6 +67,7 @@ end
 --
 -- Implementation of classical trim() function
 -- known from other programming languages.
+-- Remove trailing and leading whitespace from string.
 --
 function string.trim(str)
     -- make sure we don't get 'NPE'
