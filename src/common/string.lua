@@ -84,6 +84,21 @@ end
 
 
 --
+-- Implementation of classical ltrim() function
+-- known from other programming languages.
+-- Remove leading whitespace from string.
+--
+function string.ltrim(str)
+    -- make sure we don't get 'NPE'
+    if not str then
+        return nil
+    end
+    return str:gsub("^%s*", "")
+end
+
+
+
+--
 -- Function that removes all punctuation characters and spaces from both sides of string.
 --
 -- @param text string which should be edited
