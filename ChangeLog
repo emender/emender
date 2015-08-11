@@ -1,6 +1,11 @@
 2015-08-11  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* src/common/string.lua:
+	Updated comments for string:rtrim().
+
+2015-08-11  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* src/common/string.lua:
 	New function: string:rtrim().
 
 2015-08-11  Pavel Tisnovsky  <ptisnovs@redhat.com>

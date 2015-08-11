@@ -108,6 +108,12 @@ function string.rtrim(str)
     if not str then
         return nil
     end
+    -- this code is not efficient, but should work:
+    -- s:gsub("%s*$", "")
+    -- (see http://lua-users.org/wiki/CommonFunctions)
+
+    -- try to find the first non-whitespace character from
+    -- the right end of the string
     local n = #str
     while n > 0 and str:find("^%s", n) do
         n = n - 1
