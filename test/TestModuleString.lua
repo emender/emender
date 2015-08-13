@@ -330,6 +330,106 @@ end
 
 
 --
+-- Test the behaviour of the following Emender function: string:ltrim().
+--
+function TestModuleString.testLtrimFunction11()
+    local str = "\n "
+    is_equal(str:ltrim(), "", "Test if ltrim() function works correctly")
+end
+
+
+
+--
+-- Test the behaviour of the following Emender function: string:ltrim().
+--
+function TestModuleString.testLtrimFunction12()
+    local str = " \n"
+    is_equal(str:ltrim(), "", "Test if ltrim() function works correctly")
+end
+
+
+
+--
+-- Test the behaviour of the following Emender function: string:ltrim().
+--
+function TestModuleString.testLtrimFunction13()
+    local str = "\t "
+    is_equal(str:ltrim(), "", "Test if ltrim() function works correctly")
+end
+
+
+
+--
+-- Test the behaviour of the following Emender function: string:ltrim().
+--
+function TestModuleString.testLtrimFunction14()
+    local str = " \t"
+    is_equal(str:ltrim(), "", "Test if ltrim() function works correctly")
+end
+
+
+
+--
+-- Test the behaviour of the following Emender function: string:ltrim().
+--
+function TestModuleString.testLtrimFunction15()
+    local str = "\n\t"
+    is_equal(str:ltrim(), "", "Test if ltrim() function works correctly")
+end
+
+
+
+--
+-- Test the behaviour of the following Emender function: string:ltrim().
+--
+function TestModuleString.testLtrimFunction16()
+    local str = " \n\t"
+    is_equal(str:ltrim(), "", "Test if ltrim() function works correctly")
+end
+
+
+
+--
+-- Test the behaviour of the following Emender function: string:ltrim().
+--
+function TestModuleString.testLtrimFunction17()
+    local str = "\n \t"
+    is_equal(str:ltrim(), "", "Test if ltrim() function works correctly")
+end
+
+
+
+--
+-- Test the behaviour of the following Emender function: string:ltrim().
+--
+function TestModuleString.testLtrimFunction18()
+    local str = "\n\t "
+    is_equal(str:ltrim(), "", "Test if ltrim() function works correctly")
+end
+
+
+
+--
+-- Test the behaviour of the following Emender function: string:ltrim().
+--
+function TestModuleString.testLtrimFunction19()
+    local str = " \n\t "
+    is_equal(str:ltrim(), "", "Test if ltrim() function works correctly")
+end
+
+
+
+--
+-- Test the behaviour of the following Emender function: string:ltrim().
+--
+function TestModuleString.testLtrimFunction20()
+    local str = " \n \t "
+    is_equal(str:ltrim(), "", "Test if ltrim() function works correctly")
+end
+
+
+
+--
 -- Test the behaviour of the following Emender function: string:trimString().
 --
 function TestModuleString.testTrimStringFunction01()
