@@ -1,5 +1,10 @@
 2015-08-13  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* selfchecks/test_module_string.in:
+	Updated expected test results (new tests have been added).
+
+2015-08-13  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* test/TestModuleString.lua:
 	Another ten tests for function string:rtrim().
 
