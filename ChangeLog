@@ -1,6 +1,11 @@
 2015-08-13  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* test/TestModuleString.lua:
+	Another ten tests for function string:rtrim().
+
+2015-08-13  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* test/TestModuleString.lua:
 	Ten tests for function string:rtrim().
 
 2015-08-13  Pavel Tisnovsky  <ptisnovs@redhat.com>

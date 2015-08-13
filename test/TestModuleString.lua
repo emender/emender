@@ -530,6 +530,106 @@ end
 
 
 --
+-- Test the behaviour of the following Emender function: string:rtrim().
+--
+function TestModuleString.testRtrimFunction11()
+    local str = "\n "
+    is_equal(str:rtrim(), "", "Test if rtrim() function works correctly")
+end
+
+
+
+--
+-- Test the behaviour of the following Emender function: string:rtrim().
+--
+function TestModuleString.testRtrimFunction12()
+    local str = " \n"
+    is_equal(str:rtrim(), "", "Test if rtrim() function works correctly")
+end
+
+
+
+--
+-- Test the behaviour of the following Emender function: string:rtrim().
+--
+function TestModuleString.testRtrimFunction13()
+    local str = "\t "
+    is_equal(str:rtrim(), "", "Test if rtrim() function works correctly")
+end
+
+
+
+--
+-- Test the behaviour of the following Emender function: string:rtrim().
+--
+function TestModuleString.testRtrimFunction14()
+    local str = " \t"
+    is_equal(str:rtrim(), "", "Test if rtrim() function works correctly")
+end
+
+
+
+--
+-- Test the behaviour of the following Emender function: string:rtrim().
+--
+function TestModuleString.testRtrimFunction15()
+    local str = "\n\t"
+    is_equal(str:rtrim(), "", "Test if rtrim() function works correctly")
+end
+
+
+
+--
+-- Test the behaviour of the following Emender function: string:rtrim().
+--
+function TestModuleString.testRtrimFunction16()
+    local str = " \n\t"
+    is_equal(str:rtrim(), "", "Test if rtrim() function works correctly")
+end
+
+
+
+--
+-- Test the behaviour of the following Emender function: string:rtrim().
+--
+function TestModuleString.testRtrimFunction17()
+    local str = "\n \t"
+    is_equal(str:rtrim(), "", "Test if rtrim() function works correctly")
+end
+
+
+
+--
+-- Test the behaviour of the following Emender function: string:rtrim().
+--
+function TestModuleString.testRtrimFunction18()
+    local str = "\n\t "
+    is_equal(str:rtrim(), "", "Test if rtrim() function works correctly")
+end
+
+
+
+--
+-- Test the behaviour of the following Emender function: string:rtrim().
+--
+function TestModuleString.testRtrimFunction19()
+    local str = " \n\t "
+    is_equal(str:rtrim(), "", "Test if rtrim() function works correctly")
+end
+
+
+
+--
+-- Test the behaviour of the following Emender function: string:rtrim().
+--
+function TestModuleString.testRtrimFunction20()
+    local str = " \n \t "
+    is_equal(str:rtrim(), "", "Test if rtrim() function works correctly")
+end
+
+
+
+--
 -- Test the behaviour of the following Emender function: string:trimString().
 --
 function TestModuleString.testTrimStringFunction01()
