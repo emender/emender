@@ -1892,6 +1892,123 @@ end
 
 
 --
+-- Verify that "%s*" matches " ".
+--
+function TestAssertionIsLike.testPositive203()
+    is_like("prefix@ ", "%s*", "positive test")
+end
+
+
+
+--
+-- Verify that "%s-" matches " ".
+--
+function TestAssertionIsLike.testPositive204()
+    is_like("prefix@ ", "%s-", "positive test")
+end
+
+
+
+--
+-- Verify that "%s?" matches " ".
+--
+function TestAssertionIsLike.testPositive205()
+    is_like("prefix@ ", "%s?", "positive test")
+end
+
+
+
+--
+-- Verify that "%s" matches "\t".
+--
+function TestAssertionIsLike.testPositive206()
+    is_like("prefix@\t", "%s", "positive test")
+end
+
+
+
+--
+-- Verify that "%s+" matches "\t".
+--
+function TestAssertionIsLike.testPositive207()
+    is_like("prefix@\t", "%s+", "positive test")
+end
+
+
+
+--
+-- Verify that "%s*" matches "\t".
+--
+function TestAssertionIsLike.testPositive208()
+    is_like("prefix@\t", "%s*", "positive test")
+end
+
+
+
+--
+-- Verify that "%s-" matches "\t".
+--
+function TestAssertionIsLike.testPositive209()
+    is_like("prefix@\t", "%s-", "positive test")
+end
+
+
+
+--
+-- Verify that "%s?" matches "\t".
+--
+function TestAssertionIsLike.testPositive210()
+    is_like("prefix@\t", "%s?", "positive test")
+end
+
+
+
+--
+-- Verify that "%s" matches "\t \t".
+--
+function TestAssertionIsLike.testPositive211()
+    is_like("prefix@\t \t", "%s", "positive test")
+end
+
+
+
+--
+-- Verify that "%s+" matches "\t \t".
+--
+function TestAssertionIsLike.testPositive212()
+    is_like("prefix@\t \t", "%s+", "positive test")
+end
+
+
+
+--
+-- Verify that "%s*" matches "\t \t".
+--
+function TestAssertionIsLike.testPositive213()
+    is_like("prefix@\t \t", "%s*", "positive test")
+end
+
+
+
+--
+-- Verify that "%s-" matches "\t \t".
+--
+function TestAssertionIsLike.testPositive214()
+    is_like("prefix@\t \t", "%s-", "positive test")
+end
+
+
+
+--
+-- Verify that "%s?" matches "\t \t".
+--
+function TestAssertionIsLike.testPositive215()
+    is_like("prefix@\t \t", "%s?", "positive test")
+end
+
+
+
+--
 -- Negative test - wrong number of parameters.
 --
 function TestAssertionIsLike.testNegative01()

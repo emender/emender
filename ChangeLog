@@ -1,6 +1,11 @@
 2015-08-14  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* test/TestAssertionIsLike.lua:
+	Tests for %s pattern classes.
+
+2015-08-14  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* test/TestAssertionIsLike.lua:
 	Tests for %z pattern classes.
 
 2015-08-14  Pavel Tisnovsky  <ptisnovs@redhat.com>
