@@ -1,3 +1,8 @@
+2015-08-14  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* test/TestAssertionIsLike.lua:
+	12 new tests for %c pattern class.
+
 2015-08-13  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* selfchecks/test_module_string.in:
