@@ -1829,6 +1829,69 @@ end
 
 
 --
+-- Verify that "%z" matches "\0".
+--
+function TestAssertionIsLike.testPositive196()
+    is_like("prefix@\0", "%z", "positive test")
+end
+
+
+
+--
+-- Verify that "%z+" matches "\0".
+--
+function TestAssertionIsLike.testPositive197()
+    is_like("prefix@\0", "%z+", "positive test")
+end
+
+
+
+--
+-- Verify that "%z*" matches "\0".
+--
+function TestAssertionIsLike.testPositive198()
+    is_like("prefix@\0", "%z*", "positive test")
+end
+
+
+
+--
+-- Verify that "%z-" matches "\0".
+--
+function TestAssertionIsLike.testPositive199()
+    is_like("prefix@\0", "%z-", "positive test")
+end
+
+
+
+--
+-- Verify that "%z?" matches "\0".
+--
+function TestAssertionIsLike.testPositive200()
+    is_like("prefix@\0", "%z?", "positive test")
+end
+
+
+
+--
+-- Verify that "%s" matches " ".
+--
+function TestAssertionIsLike.testPositive201()
+    is_like("prefix@ ", "%s", "positive test")
+end
+
+
+
+--
+-- Verify that "%s+" matches " ".
+--
+function TestAssertionIsLike.testPositive202()
+    is_like("prefix@ ", "%s+", "positive test")
+end
+
+
+
+--
 -- Negative test - wrong number of parameters.
 --
 function TestAssertionIsLike.testNegative01()
