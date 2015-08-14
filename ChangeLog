@@ -1,5 +1,10 @@
 2015-08-14  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* selfchecks/test_assertion_is_like.in:
+	Updated expected test results (new tests have been added).
+
+2015-08-14  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* test/TestAssertionIsLike.lua:
 	Tests for %s pattern classes.
 
