@@ -1,3 +1,9 @@
+2015-08-17  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* src/core:
+	Make sure the setup phase is not started when all required tools
+	are not installed.
+
 2015-08-14  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* selfchecks/test_assertion_is_like.in:

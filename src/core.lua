@@ -446,7 +446,7 @@ function core.runTest(scriptDirectory, filename, verboseOperation, testOptions, 
             -- to the standard output
             writeTestSuiteStart(io.stdout, testSuite, false)
 
-            if setupFunction then
+            if setupFunction and processRestOfTest then
                 currentTestFailure = false
                 writeSetupStart(io.stdout, false)
 
