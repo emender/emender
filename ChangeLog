@@ -1,3 +1,10 @@
+2015-08-18  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* test/TestRequires5.lua:
+	* test/TestRequires6.lua:
+	* test/TestRequires7.lua:
+	Fixed test names in comments.
+
 2015-08-17  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* src/core:

@@ -1,4 +1,4 @@
--- TestRequires2.lua - check if all required tools are available.
+-- TestRequires5.lua - check if all required tools are available.
 -- This test contains 'requires' metadata which has wrong type.
 --
 -- Copyright (C) 2014, 2015 Pavel Tisnovsky
