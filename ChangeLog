@@ -1,5 +1,10 @@
 2015-08-18  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* test/TestRequires8.lua:
+	New test: TestRequires8.
+
+2015-08-18  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* test/TestRequires5.lua:
 	* test/TestRequires6.lua:
 	* test/TestRequires7.lua:
