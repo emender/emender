@@ -1,5 +1,11 @@
 2015-08-20  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* test/TestRequiresB.lua:
+	* test/TestRequiresC.lua:
+	Two new tests: TestRequiresB and TestRequiresC.
+
+2015-08-20  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* test/TestRequires9.lua:
 	* test/TestRequiresA.lua:
 	Updated two tests: TestRequires9 and TestRequiresA.
