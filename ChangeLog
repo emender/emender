@@ -1,3 +1,11 @@
+2015-08-20  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* selfchecks/selfcheck.sh:
+	* selfchecks/unknown_cli_option_Q.in:
+	* selfchecks/unknown_cli_option_R.in:
+	* selfchecks/unknown_cli_option_S.in:
+	Three new selfchecks.
+
 2015-08-18  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* test/TestRequiresA.lua:

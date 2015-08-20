@@ -126,6 +126,10 @@ function runTestsWithUnknownCLIOptions {
     ../emend -N                  > unknown_cli_option_N.out
     ../emend -O                  > unknown_cli_option_O.out
     ../emend -P                  > unknown_cli_option_P.out
+    ../emend -Q                  > unknown_cli_option_Q.out
+    ../emend -R                  > unknown_cli_option_R.out
+    ../emend -S                  > unknown_cli_option_S.out
+    #        -T is correct option
 }
 
 
@@ -227,6 +231,7 @@ function runOtherTests {
      ../emend ../test/TestRequires5.lua        > test_requires5.out
      ../emend ../test/TestRequires6.lua        > test_requires6.out
      ../emend ../test/TestRequires7.lua        > test_requires7.out
+     ../emend ../test/TestRequires8.lua        > test_requires8.out
      ../emend ../test/TestExec.lua             > test_exec.out
 }
 
