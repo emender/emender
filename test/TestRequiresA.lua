@@ -1,6 +1,5 @@
 -- TestRequiresA.lua - check if all required tools are available.
--- This test contains 'requires' metadata with three basic tools
--- that are checked for its existence: 'ls', 'true' and 'cp'.
+-- This test contains 'requires' metadata with one non-existing tool.
 --
 -- Copyright (C) 2014, 2015 Pavel Tisnovsky
 --
