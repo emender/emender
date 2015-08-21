@@ -1,5 +1,15 @@
 2015-08-21  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* selfchecks/test_requires9.in:
+	* selfchecks/test_requiresA.in:
+	* selfchecks/test_requiresB.in:
+	* selfchecks/test_requiresC.in:
+	* selfchecks/test_requiresD.in:
+	* selfchecks/test_requiresE.in:
+	Added six expected test results.
+
+2015-08-21  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* test/TestRequiresK.lua:
 	* test/TestRequiresL.lua:
 	Two new tests: TestRequiresK and TestRequiresL.
