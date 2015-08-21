@@ -232,6 +232,12 @@ function runOtherTests {
      ../emend ../test/TestRequires6.lua        > test_requires6.out
      ../emend ../test/TestRequires7.lua        > test_requires7.out
      ../emend ../test/TestRequires8.lua        > test_requires8.out
+     ../emend ../test/TestRequires9.lua        > test_requires9.out
+     ../emend ../test/TestRequiresA.lua        > test_requiresA.out
+     ../emend ../test/TestRequiresB.lua        > test_requiresB.out
+     ../emend ../test/TestRequiresC.lua        > test_requiresC.out
+     ../emend ../test/TestRequiresD.lua        > test_requiresD.out
+     ../emend ../test/TestRequiresE.lua        > test_requiresE.out
      ../emend ../test/TestExec.lua             > test_exec.out
 }
 
