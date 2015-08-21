@@ -1,3 +1,10 @@
+2015-08-21  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* test/TestRequiresF.lua:
+	* test/TestRequiresG.lua:
+	* test/TestRequiresH.lua:
+	Three new tests: TestRequiresF, TestRequiresG and TestRequiresH.
+
 2015-08-20  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* test/TestRequiresD.lua:
