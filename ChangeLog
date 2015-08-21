@@ -1,5 +1,11 @@
 2015-08-21  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* test/TestRequiresI.lua:
+	* test/TestRequiresJ.lua:
+	Two new tests: TestRequiresI and TestRequiresJ.
+
+2015-08-21  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* test/TestRequiresF.lua:
 	* test/TestRequiresG.lua:
 	* test/TestRequiresH.lua:
