@@ -1,3 +1,12 @@
+2015-09-01  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* selfchecks/unknown_cli_option_U.in:
+	* selfchecks/unknown_cli_option_W.in:
+	* selfchecks/unknown_cli_option_X.in:
+	* selfchecks/unknown_cli_option_Y.in:
+	* selfchecks/unknown_cli_option_Z.in:
+	Added five expected test results.
+
 2015-08-21  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* selfchecks/selfcheck.sh:
