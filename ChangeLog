@@ -1,5 +1,10 @@
 2015-09-01  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* selfchecks/selfcheck.sh:
+	Added new tests to run.
+
+2015-09-01  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* selfchecks/unknown_cli_option_U.in:
 	* selfchecks/unknown_cli_option_W.in:
 	* selfchecks/unknown_cli_option_X.in:
