@@ -1,4 +1,4 @@
--- TestRequiresE.lua - check if all required tools are available.
+-- TestRequiresL.lua - check if all required tools are available.
 -- This test contains 'requires' metadata which has wrong type.
 --
 -- Copyright (C) 2014, 2015 Pavel Tisnovsky
@@ -18,7 +18,7 @@
 -- along with Emender.  If not, see <http://www.gnu.org/licenses/>.
 --
 
-TestRequiresE = {
+TestRequiresL = {
     -- required field
     metadata = {
         description = "Check that docunit core works correctly.",
@@ -37,8 +37,8 @@ TestRequiresE = {
 --
 -- Tear down function.
 --
-function TestRequiresE.tearDown()
-    pass("TestRequiresE.tearDown()")
+function TestRequiresL.tearDown()
+    pass("TestRequiresL.tearDown()")
 end
 
 
@@ -47,7 +47,7 @@ end
 -- Just a dummy test function that shoult always pass. This function is
 -- included here because we would like to have non-empty test.
 --
-function TestRequiresE.testA()
-    pass("TestRequiresE.testA()")
+function TestRequiresL.testA()
+    pass("TestRequiresL.testA()")
 end
 
