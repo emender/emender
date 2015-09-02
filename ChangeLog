@@ -1,3 +1,8 @@
+2015-09-02  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* selfchecks/test_module_string.in:
+	Updated test results for TestModuleString.lua.
+
 2015-09-01  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* test/TestModuleString.lua:
