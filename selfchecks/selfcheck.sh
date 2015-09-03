@@ -247,6 +247,7 @@ function runOtherTests {
      ../emend ../test/TestRequiresD.lua        > test_requiresD.out
      ../emend ../test/TestRequiresE.lua        > test_requiresE.out
      ../emend ../test/TestExec.lua             > test_exec.out
+     ../emend ../test/TestParameters.lua       > test_parameters.out
 }
 
 
