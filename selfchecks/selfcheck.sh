@@ -248,6 +248,8 @@ function runOtherTests {
      ../emend ../test/TestRequiresE.lua        > test_requiresE.out
      ../emend ../test/TestExec.lua             > test_exec.out
      ../emend ../test/TestParameters.lua       > test_parameters.out
+     ../emend --Xparam1=100 ../test/TestParameters.lua > test_parameters_1.out
+     ../emend --Xparam1=42  ../test/TestParameters.lua > test_parameters_2.out
 }
 
 
