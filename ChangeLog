@@ -1,6 +1,13 @@
 2015-09-03  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* selfchecks/selfcheck.sh:
+	* selfchecks/test_parameters_3.in:
+	* selfchecks/test_parameters_4.in:
+	Additional three new selfchecks for --Xparam=value CLI option.
+
+2015-09-03  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* selfchecks/selfcheck.sh:
 	* selfchecks/test_parameters.in:
 	* selfchecks/test_parameters_1.in:
 	* selfchecks/test_parameters_2.in:
