@@ -1,5 +1,11 @@
 2015-09-04  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* selfchecks/show_help_1.in:
+	* selfchecks/show_help_2.in:
+	Updated expected test results.
+
+2015-09-04  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* doc/man/man1/emend.1.pod:
 	* src/help.lua:
 	Added --X to the documentation and to the help.
