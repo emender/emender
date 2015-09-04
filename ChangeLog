@@ -1,5 +1,10 @@
 2015-09-04  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* src/common/getopt.lua:
+	Fixed typo in comments.
+
+2015-09-04  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* selfchecks/show_help_1.in:
 	* selfchecks/show_help_2.in:
 	Updated expected test results.

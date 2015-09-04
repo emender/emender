@@ -176,7 +176,7 @@ function getopt.getUnknownOptions(options)
          unknownOptions[knownOption] = nil
     end
 
-    -- all options that stars with "--X" are to be pass to the test
+    -- all options that starts with "--X" are to be passed to the test
     for optionName, optionValue in pairs(options) do
          -- check the first letter if it's equals to "X"
          local firstLetter = optionName:subs(1,1)
