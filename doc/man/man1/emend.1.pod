@@ -75,6 +75,10 @@ Displays the license and exits.
 
 Generates documentation for all Emender modules.
 
+=item B<--Xparam=value>
+
+Any parameter that is passed to the test.
+
 =back
 
 =head1 EXIT STATUS
