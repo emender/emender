@@ -1,5 +1,11 @@
 2015-09-07  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* selfchecks/test_parameters_7.in:
+	* selfchecks/test_parameters_8.in:
+	Added two new expected test results.
+
+2015-09-07  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* selfchecks/test_parameters_5.in:
 	* selfchecks/test_parameters_6.in:
 	Added two new expected test results.
