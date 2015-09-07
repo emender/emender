@@ -248,10 +248,14 @@ function runOtherTests {
      ../emend ../test/TestRequiresE.lua        > test_requiresE.out
      ../emend ../test/TestExec.lua             > test_exec.out
      ../emend ../test/TestParameters.lua       > test_parameters.out
-     ../emend --Xparam1=100      ../test/TestParameters.lua > test_parameters_1.out
-     ../emend --Xparam1=42       ../test/TestParameters.lua > test_parameters_2.out
-     ../emend --Xparam2=100      ../test/TestParameters.lua > test_parameters_3.out
-     ../emend --Xparam2=unknown  ../test/TestParameters.lua > test_parameters_4.out
+     ../emend --Xparam1=100                       ../test/TestParameters.lua > test_parameters_1.out
+     ../emend --Xparam1=42                        ../test/TestParameters.lua > test_parameters_2.out
+     ../emend --Xparam2=100                       ../test/TestParameters.lua > test_parameters_3.out
+     ../emend --Xparam2=unknown                   ../test/TestParameters.lua > test_parameters_4.out
+     ../emend --Xparam1=100 --Xparam2=42          ../test/TestParameters.lua > test_parameters_5.out
+     ../emend --Xparam1=100 --Xparam2=unknown     ../test/TestParameters.lua > test_parameters_6.out
+     ../emend --Xparam1=42  --Xparam2=42          ../test/TestParameters.lua > test_parameters_7.out
+     ../emend --Xparam1=42  --Xparam2=unknown     ../test/TestParameters.lua > test_parameters_8.out
 }
 
 
