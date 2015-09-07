@@ -1,3 +1,9 @@
+2015-09-07  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* selfchecks/test_parameters_5.in:
+	* selfchecks/test_parameters_6.in:
+	Added two new expected test results.
+
 2015-09-04  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* src/common/getopt.lua:
