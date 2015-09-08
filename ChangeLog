@@ -1,3 +1,8 @@
+2015-09-08  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* test/TestModuleString.lua:
+	TODO list for test for module String.
+
 2015-09-07  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* selfchecks/selfcheck.sh:

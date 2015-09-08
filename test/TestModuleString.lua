@@ -1327,4 +1327,12 @@ function TestModuleString.testLastIndexOf3()
 end
 
 
+-- TODO:
+-- string.alignLeft(str, width, indent, first_indent)
+-- string.alignRight(str, width, indent, first_indent)
+-- string.alignCenter(str, width, indent, first_indent)
+-- string.horizontalFill(left_str, right_str, width, filler)
+-- string.escapeHTML(str)
+-- string:split(separator)
+-- string:lastIndexOf(str)
 
