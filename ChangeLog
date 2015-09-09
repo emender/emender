@@ -1,6 +1,11 @@
 2015-09-09  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* test/TestModuleString.lua:
+	New test: TestModuleString.testAlignLeft2()
+
+2015-09-09  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* test/TestModuleString.lua:
 	New test: TestModuleString.testAlignLeft1()
 
 2015-09-08  Pavel Tisnovsky  <ptisnovs@redhat.com>
