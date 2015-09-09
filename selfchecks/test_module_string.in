@@ -9,6 +9,20 @@
   Tags:            BasicTest, ModuleTest
   Required tools:  
 
+  Test Case: testAlignLeft1
+
+    [ PASS ]  Test if alignLeft() function works correctly
+    [ PASS ]  Test if alignLeft() function works correctly
+    [ PASS ]  Test if alignLeft() function works correctly
+    [ PASS ]  Test if alignLeft() function works correctly
+
+  Test Case: testAlignLeft2
+
+    [ PASS ]  Test if alignLeft() function works correctly
+    [ PASS ]  Test if alignLeft() function works correctly
+    [ PASS ]  Test if alignLeft() function works correctly
+    [ PASS ]  Test if alignLeft() function works correctly
+
   Test Case: testEndsWithFunction01
 
     [ PASS ]  Test if endsWith() function works correctly
@@ -536,8 +550,8 @@
 
   Test Summary                                                            
 
-    Executed Test Cases: 129
-    Passed Test Cases:   129
+    Executed Test Cases: 131
+    Passed Test Cases:   131
     Failed Test Cases:   0
     Encountered Errors:  0
     Overall Result:      PASS
