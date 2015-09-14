@@ -406,6 +406,33 @@ end
 
 
 --
+-- Try to call test setup function.
+--
+function runTestSetupFunction(setupFunction, verboseOperation, processRestOfTest)
+    currentTestFailure = false
+    writeSetupStart(io.stdout, false)
+
+    if verboseOperation then
+        print("    SetUp:")
+    end
+    local status, message = pcall(setupFunction)
+    if status then
+        if verboseOperation then
+            print("        OK\n")
+        end
+    else
+        print("       " .. message)
+        return false
+    end
+    if currentTestFailure then
+        return false
+    end
+    return processRestOfTest
+end
+
+
+
+--
 -- Load and run one selected test.
 -- TODO: this function really needs to be refactored!
 --
@@ -447,24 +474,7 @@ function core.runTest(scriptDirectory, filename, verboseOperation, testOptions, 
             writeTestSuiteStart(io.stdout, testSuite, false)
 
             if setupFunction and processRestOfTest then
-                currentTestFailure = false
-                writeSetupStart(io.stdout, false)
-
-                if verboseOperation then
-                    print("    SetUp:")
-                end
-                local status, message = pcall(setupFunction)
-                if status then
-                    if verboseOperation then
-                        print("        OK\n")
-                    end
-                else
-                    print("       " .. message)
-                    processRestOfTest = false
-                end
-                if currentTestFailure then
-                    processRestOfTest = false
-                end
+                processRestOfTest = runTestSetupFunction(setupFunction, verboseOperation, processRestOfTest)
             end
             local passCnt = 0
             local failCnt = 0
