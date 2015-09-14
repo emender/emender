@@ -1,6 +1,11 @@
 2015-09-14  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* src/core.lua:
+	Refactoring in core module: fillInMethodInfo.
+
+2015-09-14  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* src/core.lua:
 	Change in core module: swapped arguments for runTestTearDownFunction.
 
 2015-09-14  Pavel Tisnovsky  <ptisnovs@redhat.com>

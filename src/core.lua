@@ -433,6 +433,20 @@ end
 
 
 --
+-- Fill in info about called test method and insert this info into methods table.
+--
+function fillInMethodInfo(methods, method, messages)
+    method.messages = table.copy(core.messages)
+    method.pass = filterMessages(method.messages, "PASS")
+    method.fail = filterMessages(method.messages, "FAIL")
+    method.info = filterMessages(method.messages, "INFO")
+    method.errors = filterMessages(method.messages, "ERROR")
+    table.insert(methods, method)
+end
+
+
+
+--
 -- Load and run one selected test.
 -- TODO: this function really needs to be refactored!
 --
@@ -510,12 +524,7 @@ function core.runTest(scriptDirectory, filename, verboseOperation, testOptions, 
                             method.result = "FAIL"
                         end
                     end
-                    method.messages = table.copy(core.messages)
-                    method.pass = filterMessages(method.messages, "PASS")
-                    method.fail = filterMessages(method.messages, "FAIL")
-                    method.info = filterMessages(method.messages, "INFO")
-                    method.errors = filterMessages(method.messages, "ERROR")
-                    table.insert(methods, method)
+                    fillInMethodInfo(methods, method, core.messages)
                 end
             end
             runTearDownFunction(tearDownFunction, verboseOperation)
