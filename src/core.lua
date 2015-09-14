@@ -386,7 +386,7 @@ end
 --
 -- Run tear down function (if it exists)
 --
-function runTearDownFunction(verboseOperation, tearDownFunction)
+function runTearDownFunction(tearDownFunction, verboseOperation)
     if tearDownFunction then
         writeTearDownStart(io.stdout, false)
         if verboseOperation then
@@ -518,7 +518,7 @@ function core.runTest(scriptDirectory, filename, verboseOperation, testOptions, 
                     table.insert(methods, method)
                 end
             end
-            runTearDownFunction(verboseOperation, tearDownFunction)
+            runTearDownFunction(tearDownFunction, verboseOperation)
 
             -- fill in all information about test results into testSuite data structure
             fillInTestResults(testSuite, passCnt, failCnt, errorCnt, methods)
