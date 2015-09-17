@@ -37,6 +37,34 @@
     [ PASS ]  Test if alignLeft() function works correctly
     [ PASS ]  Test if alignLeft() function works correctly
 
+  Test Case: testAlignLeft5
+
+    [ PASS ]  Test if alignLeft() function works correctly
+    [ PASS ]  Test if alignLeft() function works correctly
+    [ PASS ]  Test if alignLeft() function works correctly
+    [ PASS ]  Test if alignLeft() function works correctly
+
+  Test Case: testAlignLeft6
+
+    [ PASS ]  Test if alignLeft() function works correctly
+    [ PASS ]  Test if alignLeft() function works correctly
+    [ PASS ]  Test if alignLeft() function works correctly
+    [ PASS ]  Test if alignLeft() function works correctly
+
+  Test Case: testAlignLeft7
+
+    [ PASS ]  Test if alignLeft() function works correctly
+    [ PASS ]  Test if alignLeft() function works correctly
+    [ PASS ]  Test if alignLeft() function works correctly
+    [ PASS ]  Test if alignLeft() function works correctly
+
+  Test Case: testAlignLeft8
+
+    [ PASS ]  Test if alignLeft() function works correctly
+    [ PASS ]  Test if alignLeft() function works correctly
+    [ PASS ]  Test if alignLeft() function works correctly
+    [ PASS ]  Test if alignLeft() function works correctly
+
   Test Case: testEndsWithFunction01
 
     [ PASS ]  Test if endsWith() function works correctly
@@ -564,8 +592,8 @@
 
   Test Summary                                                            
 
-    Executed Test Cases: 133
-    Passed Test Cases:   133
+    Executed Test Cases: 137
+    Passed Test Cases:   137
     Failed Test Cases:   0
     Encountered Errors:  0
     Overall Result:      PASS
