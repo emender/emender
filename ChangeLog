@@ -1,5 +1,10 @@
 2015-09-17  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* test/TestModuleTable.lua:
+	Added four tests into TestModuleTable.
+
+2015-09-17  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* selfchecks/test_module_string.in:
 	Updated expected test results.
 

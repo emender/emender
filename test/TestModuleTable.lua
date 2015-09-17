@@ -146,3 +146,43 @@ function TestModuleTable.testContainsPositive4()
 end
 
 
+
+--
+-- Check the function table.hashTableSize().
+--
+function TestModuleTable.testHashTableSize1()
+    local tbl = {}
+    is_equal(table.hashTableSize(tbl), 0,    "Check table.hashTableSize().")
+end
+
+
+
+--
+-- Check the function table.hashTableSize().
+--
+function TestModuleTable.testHashTableSize2()
+    local tbl = {1, 2, 3, 4}
+    is_equal(table.hashTableSize(tbl), 4,    "Check table.hashTableSize().")
+end
+
+
+
+--
+-- Check the function table.hashTableSize().
+--
+function TestModuleTable.testHashTableSize3()
+    local tbl = {a=1, b=2, c=3, d=4}
+    is_equal(table.hashTableSize(tbl), 4,    "Check table.hashTableSize().")
+end
+
+
+
+--
+-- Check the function table.hashTableSize().
+--
+function TestModuleTable.testHashTableSize4()
+    local tbl = {a=1, b=2, c=3, d=4, e=nil}
+    is_equal(table.hashTableSize(tbl), 4,    "Check table.hashTableSize().")
+end
+
+
