@@ -57,6 +57,22 @@
     [ PASS ]  Check table.contains(3) for non empty table.
     [ PASS ]  Check table.contains(4) for non empty table.
 
+  Test Case: testHashTableSize1
+
+    [ PASS ]  Check table.hashTableSize().
+
+  Test Case: testHashTableSize2
+
+    [ PASS ]  Check table.hashTableSize().
+
+  Test Case: testHashTableSize3
+
+    [ PASS ]  Check table.hashTableSize().
+
+  Test Case: testHashTableSize4
+
+    [ PASS ]  Check table.hashTableSize().
+
   Test Case: testModuleExistence
 
     [ PASS ]  Check if global object with the name 'table' exists.
@@ -64,8 +80,8 @@
 
   Test Summary                                                            
 
-    Executed Test Cases: 8
-    Passed Test Cases:   8
+    Executed Test Cases: 12
+    Passed Test Cases:   12
     Failed Test Cases:   0
     Encountered Errors:  0
     Overall Result:      PASS
