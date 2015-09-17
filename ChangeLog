@@ -1,3 +1,8 @@
+2015-09-17  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* test/TestModuleString.lua:
+	Added four tests into TestModuleString.lua.
+
 2015-09-14  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* src/core.lua:
