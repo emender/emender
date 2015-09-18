@@ -1424,6 +1424,30 @@ end
 
 
 
+--
+-- Test the behaviour of the following Emender function: string:alignLeft().
+--
+function TestModuleString.testAlignLeft9()
+    is_equal("word word",    string.alignLeft("  word word", 100),    "Test if alignLeft() function works correctly")
+    is_equal("word word ",   string.alignLeft("  word word ", 100),   "Test if alignLeft() function works correctly")
+    is_equal("word word  ",  string.alignLeft("  word word  ", 100),  "Test if alignLeft() function works correctly")
+    is_equal("word word   ", string.alignLeft("  word word   ", 100), "Test if alignLeft() function works correctly")
+end
+
+
+
+--
+-- Test the behaviour of the following Emender function: string:alignLeft().
+--
+function TestModuleString.testAlignLeft10()
+    is_equal("          word word",    string.alignLeft("  word word", 100, 10),    "Test if alignLeft() function works correctly")
+    is_equal("          word word ",   string.alignLeft("  word word ", 100, 10),   "Test if alignLeft() function works correctly")
+    is_equal("          word word  ",  string.alignLeft("  word word  ", 100, 10),  "Test if alignLeft() function works correctly")
+    is_equal("          word word   ", string.alignLeft("  word word   ", 100, 10), "Test if alignLeft() function works correctly")
+end
+
+
+
 -- TODO:
 -- string.alignLeft(str, width, indent, first_indent)
 -- string.alignRight(str, width, indent, first_indent)
