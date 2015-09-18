@@ -1,4 +1,9 @@
-2015-09-17  Pavel Tisnovsky  <ptisnovs@redhat.com>
+2015-09-18  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* selfchecks/test_module_string.in:
+	Updated expected test results.
+
+2015-09-18  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* test/TestModuleString.lua:
 	Added testAlignLeft9 and testAlignLeft10.
