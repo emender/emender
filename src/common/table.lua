@@ -201,11 +201,75 @@ end
 -- @return converted table.
 function table.setValueToKey(tbl)
   local convertedTable = {}
-  
+
   for _, value in ipairs(tbl) do
     convertedTable[value] = true
   end
-  
+
   return convertedTable
 end
 
+
+
+--
+-- Appends two tables into one. The values in second table will be added
+-- at the end of the first table. This function works for tables which have keys
+-- from 1 to x without any spaces.
+--
+--  @param table1 table which will be extended
+--  @param table2 table which will be append to the table1
+--  @return table with values from both tables
+function table.appendTables(table1, table2)
+    -- If at least one of tables is nil then return nil.
+    if not table1 or not table2 then
+        return nil
+    end
+
+    -- Prepare variable for result.
+    local resultT = {}
+
+    -- Copy content of table1 because we dont want to change this variable.
+    for key, value in ipairs(table1) do
+        resultT[key] = value
+    end
+
+    -- Add items from table #2 to the end of table #1.
+    for i=1, #table2 do
+        resultT[#resultT+1] = table2[i]
+    end
+
+    -- Return table.
+    return resultT
+end
+
+
+--
+-- Joins two table into one. It can be used for tables with various keys.
+-- If there is the same key in the table1 and in the table2, the result
+-- table will contain only value from the table2.
+--
+-- @param table1 table which will be extended
+-- @param table2 table which items will be moved to the table1
+-- @return table with all values.
+function table.joinTables(table1, table2)
+    -- If at least one of tables is nil then return nil.
+    if not table1 or not table2 then
+        return nil
+    end
+
+    -- Prepare variable for result.
+    local resultT = {}
+
+    -- Copy content of the first table.
+    for key, value in pairs(table1) do
+        resultT[key] = value
+    end
+
+    -- Go through all key-value pairs and insert them to the table1.
+    for key, value in pairs(table2) do
+        resultT[key] = value
+    end
+
+    -- Return table.
+    return resultT
+end
