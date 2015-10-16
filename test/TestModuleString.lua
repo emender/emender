@@ -1472,6 +1472,30 @@ end
 
 
 
+--
+-- Test the behaviour of the following Emender function: string:alignLeft().
+--
+function TestModuleString.testAlignLeft13()
+    is_equal(" end-of-line",                              string.alignLeft("  end-of-line", 100, 1), "Test if alignLeft() function works correctly")
+    is_equal("          end-of-line",                     string.alignLeft("  end-of-line", 100, 10), "Test if alignLeft() function works correctly")
+    is_equal("                    end-of-line",           string.alignLeft("  end-of-line", 100, 20), "Test if alignLeft() function works correctly")
+    is_equal("                              end-of-line", string.alignLeft("  end-of-line", 100, 30), "Test if alignLeft() function works correctly")
+end
+
+
+
+--
+-- Test the behaviour of the following Emender function: string:alignLeft().
+--
+function TestModuleString.testAlignLeft14()
+    is_equal("end-of-line", string.alignLeft("  end-of-line", 100, -1), "Test if alignLeft() function works correctly")
+    is_equal("end-of-line", string.alignLeft("  end-of-line", 100, -10), "Test if alignLeft() function works correctly")
+    is_equal("end-of-line", string.alignLeft("  end-of-line", 100, -20), "Test if alignLeft() function works correctly")
+    is_equal("end-of-line", string.alignLeft("  end-of-line", 100, -30), "Test if alignLeft() function works correctly")
+end
+
+
+
 -- TODO:
 -- string.alignLeft(str, width, indent, first_indent)
 -- string.alignRight(str, width, indent, first_indent)
