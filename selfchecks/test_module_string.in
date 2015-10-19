@@ -37,6 +37,20 @@
     [ PASS ]  Test if alignLeft() function works correctly
     [ PASS ]  Test if alignLeft() function works correctly
 
+  Test Case: testAlignLeft13
+
+    [ PASS ]  Test if alignLeft() function works correctly
+    [ PASS ]  Test if alignLeft() function works correctly
+    [ PASS ]  Test if alignLeft() function works correctly
+    [ PASS ]  Test if alignLeft() function works correctly
+
+  Test Case: testAlignLeft14
+
+    [ PASS ]  Test if alignLeft() function works correctly
+    [ PASS ]  Test if alignLeft() function works correctly
+    [ PASS ]  Test if alignLeft() function works correctly
+    [ PASS ]  Test if alignLeft() function works correctly
+
   Test Case: testAlignLeft2
 
     [ PASS ]  Test if alignLeft() function works correctly
@@ -92,6 +106,28 @@
     [ PASS ]  Test if alignLeft() function works correctly
     [ PASS ]  Test if alignLeft() function works correctly
     [ PASS ]  Test if alignLeft() function works correctly
+
+  Test Case: testAlignRight1
+
+    [ PASS ]  Test if alignRight() function works correctly
+    [ PASS ]  Test if alignRight() function works correctly
+    [ PASS ]  Test if alignRight() function works correctly
+    [ PASS ]  Test if alignRight() function works correctly
+
+  Test Case: testAlignRight2
+
+    [ PASS ]  Test if alignRight() function works correctly
+    [ PASS ]  Test if alignRight() function works correctly
+    [ PASS ]  Test if alignRight() function works correctly
+    [ PASS ]  Test if alignRight() function works correctly
+    [ PASS ]  Test if alignRight() function works correctly
+
+  Test Case: testAlignRight3
+
+    [ PASS ]  Test if alignRight() function works correctly
+    [ PASS ]  Test if alignRight() function works correctly
+    [ PASS ]  Test if alignRight() function works correctly
+    [ PASS ]  Test if alignRight() function works correctly
 
   Test Case: testEndsWithFunction01
 
@@ -620,8 +656,8 @@
 
   Test Summary                                                            
 
-    Executed Test Cases: 141
-    Passed Test Cases:   141
+    Executed Test Cases: 146
+    Passed Test Cases:   146
     Failed Test Cases:   0
     Encountered Errors:  0
     Overall Result:      PASS

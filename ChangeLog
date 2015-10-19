@@ -1,3 +1,8 @@
+2015-10-19  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* selfchecks/test_module_string.in:
+	Updated expected test results.
+
 2015-09-18  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* selfchecks/test_module_string.in:
