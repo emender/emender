@@ -73,6 +73,14 @@
 
     [ PASS ]  Check table.hashTableSize().
 
+  Test Case: testHashTableSize5
+
+    [ PASS ]  Check table.hashTableSize().
+
+  Test Case: testHashTableSize6
+
+    [ PASS ]  Check table.hashTableSize().
+
   Test Case: testModuleExistence
 
     [ PASS ]  Check if global object with the name 'table' exists.
@@ -80,8 +88,8 @@
 
   Test Summary                                                            
 
-    Executed Test Cases: 12
-    Passed Test Cases:   12
+    Executed Test Cases: 14
+    Passed Test Cases:   14
     Failed Test Cases:   0
     Encountered Errors:  0
     Overall Result:      PASS
