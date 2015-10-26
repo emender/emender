@@ -129,6 +129,20 @@
     [ PASS ]  Test if alignRight() function works correctly
     [ PASS ]  Test if alignRight() function works correctly
 
+  Test Case: testAlignRight4
+
+    [ PASS ]  Test if alignRight() function works correctly
+    [ PASS ]  Test if alignRight() function works correctly
+    [ PASS ]  Test if alignRight() function works correctly
+    [ PASS ]  Test if alignRight() function works correctly
+
+  Test Case: testAlignRight5
+
+    [ PASS ]  Test if alignRight() function works correctly
+    [ PASS ]  Test if alignRight() function works correctly
+    [ PASS ]  Test if alignRight() function works correctly
+    [ PASS ]  Test if alignRight() function works correctly
+
   Test Case: testEndsWithFunction01
 
     [ PASS ]  Test if endsWith() function works correctly
@@ -656,8 +670,8 @@
 
   Test Summary                                                            
 
-    Executed Test Cases: 146
-    Passed Test Cases:   146
+    Executed Test Cases: 148
+    Passed Test Cases:   148
     Failed Test Cases:   0
     Encountered Errors:  0
     Overall Result:      PASS
