@@ -186,3 +186,23 @@ function TestModuleTable.testHashTableSize4()
 end
 
 
+
+--
+-- Check the function table.hashTableSize().
+--
+function TestModuleTable.testHashTableSize5()
+    local tbl = {1, 2, 3, 4, a=1, b=2, c=3, d=4}
+    is_equal(table.hashTableSize(tbl), 8,    "Check table.hashTableSize().")
+end
+
+
+
+--
+-- Check the function table.hashTableSize().
+--
+function TestModuleTable.testHashTableSize6()
+    local tbl = {1, 2, 3, 4, a=1, b=2, c=3, d=4, e=nil}
+    is_equal(table.hashTableSize(tbl), 8,    "Check table.hashTableSize().")
+end
+
+

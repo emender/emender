@@ -1,5 +1,10 @@
 2015-10-26  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* test/TestModuleTable.lua:
+	Two new tests: TestModuleTable.testHashTableSize5() and TestModuleTable.testHashTableSize6().
+
+2015-10-26  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* selfchecks/test_module_string.in:
 	Updated expected test results.
 
