@@ -1,3 +1,8 @@
+2015-10-26  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* test/TestModuleString.lua:
+	Two new tests: TestModuleString.testAlignRight4 and TestModuleString.testAlignRight5.
+
 2015-10-19  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* selfchecks/test_module_string.in:
