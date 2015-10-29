@@ -129,6 +129,7 @@ function writeLeftTab(fout, results, passedTests, failedTests)
 end
 
 
+
 --
 -- When the global variable named generateGraphsInHtmlOutput is set to true
 -- the flotr library (and all required libraries) should be loaded onto the HTML page.
@@ -298,7 +299,10 @@ end
 
 
 --
---
+-- Compute the statistics about passed, failed and errors.
+-- Return values (triple): passed tests in %
+--                         failed tests in %
+--                         errors in %
 --
 function computeSuitePercantages(testSuite)
     local passed = testSuite.passCount
@@ -310,6 +314,8 @@ function computeSuitePercantages(testSuite)
     local failPerc  = math.floor(100.0 * failed / total)
     local errorPerc = math.ceil(100.0 * errors / total)
 
+    -- after calling math.floor() twice and math.ceil() once,
+    -- the sum might not be 100%, so let's update one value by +-1
     if passPerc + failPerc + errorPerc > 100 then
         passPerc = passPerc - 1
     end
@@ -317,22 +323,25 @@ function computeSuitePercantages(testSuite)
         passPerc = passPerc + 1
     end
 
+    -- special case that might happen after two previous step
     if passPerc == 100 and failed > 0 then
         passPerc = passPerc - 1
         failPerc = failPerc + 1
     end
 
+    -- NaN checking
     if passPerc ~= passPerc   then passPerc = 0 end
     if failPerc ~= failPerc   then failPerc = 0 end
     if errorPerc ~= errorPerc then errorPerc = 0 end
 
+    -- we are done, return the computed triple
     return passPerc, failPerc, errorPerc
 end
 
 
 
 --
---
+-- Get and return tags associated with the test.
 --
 function getTags(testSuite)
     if type(testSuite.tags) == "table" then
@@ -357,7 +366,10 @@ end
 
 
 --
---
+-- Return tuple: icon name and status message for given test case.
+-- Only when total > 0 and fail == 0 and error == 0 'pass' icon is returned.
+-- When total == 0 then 'norun' icon is returned.
+-- Otherwise 'fail' icon is returned.
 --
 function getIconAndStatus(testCase)
     local pass   = testCase.pass
@@ -457,8 +469,10 @@ function htmlWriter.writeCaseStart(fout, testCase)
 ]])
 end
 
+
+
 --
---
+-- Display part of a string enclosed in ** ** as <strong>
 --
 function highlightMessage(message)
     local highlightStart = "<strong>"
