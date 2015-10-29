@@ -11,7 +11,7 @@
 2015-10-29  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* src/writers/htmlWriter.lua:
-	Updated comments in the module textWriter.
+	Updated comments in the module htmlWriter.
 
 2015-10-29  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
