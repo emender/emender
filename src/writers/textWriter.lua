@@ -23,27 +23,47 @@
 local textWriter = {
 }
 
+
+
+--
 -- Do nothing:
+--
 function textWriter.writeHeader(fout, results)
     return
 end
 
+
+
+--
 -- Write the report footer to the file:
+--
 function textWriter.writeFooter(fout, results)
     writeSummary(fout, results, false, true)
 end
 
+
+
+--
 -- Write the test suite header to the file:
+--
 function textWriter.writeSuiteStart(fout, testSuite)
     writeTestSuiteStart(fout, testSuite, false)
 end
 
+
+
+--
 -- Write the test suite footer to the file:
+--
 function textWriter.writeSuiteEnd(fout, testSuite)
     writeTestSuiteEnd(fout, testSuite, false)
 end
 
+
+
+--
 -- Write the test case header to the file:
+--
 function textWriter.writeCaseStart(fout, testCase)
     local name = testCase.name
     local result = determineTestResult(testCase.pass, testCase.fail, testCase.info, testCase.errors)
@@ -51,36 +71,60 @@ function textWriter.writeCaseStart(fout, testCase)
     fout:write(formatTestCaseTitle("Test Case: " .. name, string.upper(result)))
 end
 
+
+
+--
 -- Do nothing:
+--
 function textWriter.writeCaseEnd(fout, testCaseInfo)
     return
 end
 
+
+
+--
 -- Write the test result to the file:
+--
 function textWriter.writeTestPass(fout, testName, message)
     local explanation = message[2]
     writeTestPass(fout, testName, explanation, false)
 end
 
+
+
+--
 -- Write the test result to the file:
+--
 function textWriter.writeTestFail(fout, testName, message)
     local explanation = message[2]
     writeTestFail(fout, testName, explanation, false)
 end
 
+
+
+--
 -- Write the test result to the file:
+--
 function textWriter.writeTestInfo(fout, testName, message)
     local explanation = message[2]
     writeTestInfo(fout, testName, explanation, false)
 end
 
+
+
+--
 -- Write the test result to the file:
+--
 function textWriter.writeTestDebug(fout, testName, message)
     local explanation = message[2]
     writeTestDebug(fout, testName, explanation, false)
 end
 
+
+
+--
 -- Do nothing:
+--
 function textWriter.writeTestError(fout, testName, message)
     return
 end

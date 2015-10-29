@@ -1,3 +1,8 @@
+2015-10-29  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* src/writers/textWriter.lua:
+	Updated comments in the module textWriter.
+
 2015-10-26  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* selfchecks/test_module_table.in:
