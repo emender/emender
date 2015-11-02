@@ -1,6 +1,12 @@
 2015-11-02  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* selfchecks/selfcheck.sh:
+	* selfchecks/test_list_5.in:
+	Added new test: test_list_5 into Emender selfchecks.
+
+2015-11-02  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* selfchecks/selfcheck.sh:
 	* selfchecks/test_list_4.in:
 	Added new test: test_list_4 into Emender selfchecks.
 
