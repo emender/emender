@@ -52,6 +52,7 @@ function runTestsForBasicCLI {
     ../emend -l ../test/T*.lua             > test_list_4.out
     ../emend -l ../test/Test*.lua          > test_list_5.out
     ../emend -l ../test/Test1.?ua          > test_list_6.out
+    ../emend -l ../test/Test1.[a-z]ua      > test_list_7.out
     ../emend -G                            > show_gendoc_1.out
     ../emend --gendoc                      > show_gendoc_2.out
 }
