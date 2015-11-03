@@ -22,7 +22,7 @@ TestModuleString = {
         description = "Check the API for the Emender module 'string'.",
         authors = "Pavel Tisnovsky",
         emails = "ptisnovs@redhat.com",
-        changed = "2015-08-13",
+        changed = "2015-10-03",
         tags = {"BasicTest", "ModuleTest"},
     }
 }
@@ -1605,6 +1605,30 @@ function TestModuleString.testAlignRight9()
     is_equal("word ", string.alignRight("word ", -10),     "Test if alignRight() function works correctly")
     is_equal("word  ", string.alignRight("word  ", -10),   "Test if alignRight() function works correctly")
     is_equal("word   ", string.alignRight("word   ", -10), "Test if alignRight() function works correctly")
+end
+
+
+
+--
+-- Test the behaviour of the following Emender function: string:alignRight().
+--
+function TestModuleString.testAlignRight10()
+    is_equal("word", string.alignRight("word", -100),       "Test if alignRight() function works correctly")
+    is_equal("word ", string.alignRight("word ", -100),     "Test if alignRight() function works correctly")
+    is_equal("word  ", string.alignRight("word  ", -100),   "Test if alignRight() function works correctly")
+    is_equal("word   ", string.alignRight("word   ", -100), "Test if alignRight() function works correctly")
+end
+
+
+
+--
+-- Test the behaviour of the following Emender function: string:alignRight().
+--
+function TestModuleString.testAlignRight11()
+    is_equal("          word", string.alignRight("word", 10, 10),       "Test if alignRight() function works correctly")
+    is_equal("          word ", string.alignRight("word ", 10, 10),     "Test if alignRight() function works correctly")
+    is_equal("          word  ", string.alignRight("word  ", 10, 10),   "Test if alignRight() function works correctly")
+    is_equal("          word   ", string.alignRight("word   ", 10, 10), "Test if alignRight() function works correctly")
 end
 
 
