@@ -1657,6 +1657,18 @@ end
 
 
 
+--
+-- Test the behaviour of the following Emender function: string:alignRight().
+--
+function TestModuleString.testAlignRight14()
+    is_equal("                word", string.alignRight("word", 20, 10),       "Test if alignRight() function works correctly")
+    is_equal("               word ", string.alignRight("word ", 20, 10),     "Test if alignRight() function works correctly")
+    is_equal("              word  ", string.alignRight("word  ", 20, 10),   "Test if alignRight() function works correctly")
+    is_equal("             word   ", string.alignRight("word   ", 20, 10), "Test if alignRight() function works correctly")
+end
+
+
+
 
 -- TODO:
 -- string.alignRight(str, width, indent, first_indent)
