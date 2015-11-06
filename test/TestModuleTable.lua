@@ -257,3 +257,48 @@ function TestModuleTable.testTableCompare2()
     is_true(table.compare(tbl1, tbl2), "Check table.compare().")
 end
 
+
+
+
+--
+-- Check the function table.compare().
+--
+function TestModuleTable.testTableCompare3()
+    local tbl1 = {x=1, y=2}
+    local tbl2 = {x=1, y=2}
+    is_true(table.compare(tbl1, tbl2), "Check table.compare().")
+end
+
+
+
+--
+-- Check the function table.compare().
+--
+function TestModuleTable.testTableCompare4()
+    local tbl1 = {x=1, y=2, z=nil}
+    local tbl2 = {x=1, y=2}
+    is_true(table.compare(tbl1, tbl2), "Check table.compare().")
+end
+
+
+
+--
+-- Check the function table.compare().
+--
+function TestModuleTable.testTableCompare5()
+    local tbl1 = {x=1, y=2}
+    local tbl2 = {x=1, y=2, z=nil}
+    is_true(table.compare(tbl1, tbl2), "Check table.compare().")
+end
+
+
+
+--
+-- Check the function table.compare().
+--
+function TestModuleTable.testTableCompare6()
+    local tbl1 = {x=1, y=2, z=nil}
+    local tbl2 = {x=1, y=2, w=nil}
+    is_true(table.compare(tbl1, tbl2), "Check table.compare().")
+end
+
