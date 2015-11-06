@@ -235,3 +235,25 @@ function TestModuleTable.testHashTableSize9()
     is_equal(table.hashTableSize(tbl), 8,    "Check table.hashTableSize().")
 end
 
+
+
+--
+-- Check the function table.compare().
+--
+function TestModuleTable.testTableCompare1()
+    local tbl1 = {}
+    local tbl2 = {}
+    is_true(table.compare(tbl1, tbl2), "Check table.compare().")
+end
+
+
+
+--
+-- Check the function table.compare().
+--
+function TestModuleTable.testTableCompare2()
+    local tbl1 = {1, 2, 3, 4}
+    local tbl2 = {1, 2, 3, 4}
+    is_true(table.compare(tbl1, tbl2), "Check table.compare().")
+end
+
