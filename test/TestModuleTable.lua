@@ -206,3 +206,32 @@ function TestModuleTable.testHashTableSize6()
 end
 
 
+
+--
+-- Check the function table.hashTableSize().
+--
+function TestModuleTable.testHashTableSize7()
+    local tbl = {1, 2, 3, 4, a=1, b=2, c=3, d=4, e=nil, f=nil}
+    is_equal(table.hashTableSize(tbl), 8,    "Check table.hashTableSize().")
+end
+
+
+
+--
+-- Check the function table.hashTableSize().
+--
+function TestModuleTable.testHashTableSize8()
+    local tbl = {1, 2, 3, 4, a=1, b=2, c=3, d=4, e=nil, f=nil}
+    is_equal(table.hashTableSize(tbl), 8,    "Check table.hashTableSize().")
+end
+
+
+
+--
+-- Check the function table.hashTableSize().
+--
+function TestModuleTable.testHashTableSize9()
+    local tbl = {x=nil, 1, 2, 3, 4, a=1, b=2, c=3, d=4, e=nil, f=nil}
+    is_equal(table.hashTableSize(tbl), 8,    "Check table.hashTableSize().")
+end
+
