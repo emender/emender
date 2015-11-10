@@ -1661,9 +1661,9 @@ end
 -- Test the behaviour of the following Emender function: string:alignRight().
 --
 function TestModuleString.testAlignRight14()
-    is_equal("                word", string.alignRight("word", 20, 10),       "Test if alignRight() function works correctly")
-    is_equal("               word ", string.alignRight("word ", 20, 10),     "Test if alignRight() function works correctly")
-    is_equal("              word  ", string.alignRight("word  ", 20, 10),   "Test if alignRight() function works correctly")
+    is_equal("                word", string.alignRight("word", 20, 10),    "Test if alignRight() function works correctly")
+    is_equal("               word ", string.alignRight("word ", 20, 10),   "Test if alignRight() function works correctly")
+    is_equal("              word  ", string.alignRight("word  ", 20, 10),  "Test if alignRight() function works correctly")
     is_equal("             word   ", string.alignRight("word   ", 20, 10), "Test if alignRight() function works correctly")
 end
 
@@ -1674,9 +1674,9 @@ end
 -- Test the behaviour of the following Emender function: string:alignRight().
 --
 function TestModuleString.testAlignRight15()
-    is_equal("               word ", string.alignRight("word ", 20, 10),       "Test if alignRight() function works correctly")
-    is_equal("              word  ", string.alignRight("word  ", 20, 10),     "Test if alignRight() function works correctly")
-    is_equal("             word   ", string.alignRight("word   ", 20, 10),   "Test if alignRight() function works correctly")
+    is_equal("               word ", string.alignRight("word ", 20, 10),    "Test if alignRight() function works correctly")
+    is_equal("              word  ", string.alignRight("word  ", 20, 10),   "Test if alignRight() function works correctly")
+    is_equal("             word   ", string.alignRight("word   ", 20, 10),  "Test if alignRight() function works correctly")
     is_equal("            word    ", string.alignRight("word    ", 20, 10), "Test if alignRight() function works correctly")
 end
 
@@ -1686,9 +1686,9 @@ end
 -- Test the behaviour of the following Emender function: string:alignRight().
 --
 function TestModuleString.testAlignRight16()
-    is_equal("              word  ", string.alignRight("word  ", 20, 10),       "Test if alignRight() function works correctly")
-    is_equal("             word   ", string.alignRight("word   ", 20, 10),     "Test if alignRight() function works correctly")
-    is_equal("            word    ", string.alignRight("word    ", 20, 10),   "Test if alignRight() function works correctly")
+    is_equal("              word  ", string.alignRight("word  ", 20, 10),    "Test if alignRight() function works correctly")
+    is_equal("             word   ", string.alignRight("word   ", 20, 10),   "Test if alignRight() function works correctly")
+    is_equal("            word    ", string.alignRight("word    ", 20, 10),  "Test if alignRight() function works correctly")
     is_equal("           word     ", string.alignRight("word     ", 20, 10), "Test if alignRight() function works correctly")
 end
 
@@ -1697,7 +1697,6 @@ end
 
 
 -- TODO:
--- string.alignRight(str, width, indent, first_indent)
 -- string.alignCenter(str, width, indent, first_indent)
 -- string.horizontalFill(left_str, right_str, width, filler)
 -- string.escapeHTML(str)
