@@ -150,6 +150,17 @@ end
 
 
 --
+-- Print error message in case the given test could not be loaded.
+--
+function core.errorLoadingTest(testName, filename)
+    print("Test '" .. testName .. "' can't be loaded or there's name mismatch")
+    print("(test name is different from the name of test file).")
+    print("Please check the content of file " .. filename)
+end
+
+
+
+--
 -- Print informations about selected test, this function is called
 -- when -l/--list option is specified on the command line.
 --
@@ -168,9 +179,7 @@ function core.printTestInfo(testDirectory, filename, verboseOperation)
             end
         -- if the test could not be loaded
         else
-            print("Test '" .. testName .. "' can't be loaded or there's name mismatch")
-            print("(test name is different from the name of test file).")
-            print("Please check the content of file " .. filename)
+            core.errorLoadingTest(testName, filename)
         end
     end
 end
