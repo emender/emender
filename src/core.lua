@@ -135,6 +135,21 @@ end
 
 
 --
+-- Try to load the script that contains selected test
+-- when test directory is not provided, test is read
+-- from the current directory
+--
+function core.loadTestToGetMetadata(testDirectory, filename)
+    if testDirectory then
+        dofile(testDirectory .. "/" .. filename)
+    else
+        dofile(filename)
+    end
+end
+
+
+
+--
 -- Print informations about selected test, this function is called
 -- when -l/--list option is specified on the command line.
 --
@@ -142,12 +157,7 @@ function core.printTestInfo(testDirectory, filename, verboseOperation)
     local testName = core.updateTestSuiteName(filename)
     if testName then
         core.checkTestNameShadowing(testName)
-        -- try to load the script that contains selected test
-        if testDirectory then
-            dofile(testDirectory .. "/" .. filename)
-        else
-            dofile(filename)
-        end
+        core.loadTestToGetMetadata(testDirectory, filename)
         -- if test is properly loaded
         local test = _G[testName]
         -- if the test is properly loaded, read and print informations about it

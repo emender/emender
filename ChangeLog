@@ -1,3 +1,8 @@
+2015-11-12  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* src/core.lua:
+	Refactoring: core.loadTestToGetMetadata.
+
 2015-11-02  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* selfchecks/selfcheck.sh:
