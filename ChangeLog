@@ -1,5 +1,10 @@
 2015-11-12  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
+	* .gitignore:
+	Updated .gitignore file to be disable commiting temporary files.
+
+2015-11-12  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
 	* src/core.lua:
 	Refactoring: core.errorLoadingTest.
 

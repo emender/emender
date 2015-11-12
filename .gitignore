@@ -3,3 +3,6 @@
 selfchecks/*.property
 selfchecks/*.txt
 selfchecks/*.xml
+selfchecks/*.css
+selfchecks/bootstrap
+selfchecks/flotr
