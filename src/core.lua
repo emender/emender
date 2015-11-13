@@ -263,6 +263,20 @@ end
 
 
 --
+-- Fill in all required information in the testSuite record from
+-- existing metadata.
+--
+function fillInExistingTestMetadata(testSuite, metadata)
+    testSuite.description = metadata["description"] or "not set"
+    testSuite.authors = metadata["authors"] or "not set"
+    testSuite.emails = metadata["emails"] or "not set"
+    testSuite.modified = metadata["changed"] or "not set"
+    testSuite.tags = metadata["tags"] or "not set"
+end
+
+
+
+--
 -- Fill in all required information in the testSuite record from the metadata
 -- read from the test script.
 --
@@ -274,11 +288,7 @@ function fillInTestMetadata(testSuite, testSuiteName)
     local metadata = test["metadata"]
     -- if metadata exists
     if metadata then
-        testSuite.description = metadata["description"] or "not set"
-        testSuite.authors = metadata["authors"] or "not set"
-        testSuite.emails = metadata["emails"] or "not set"
-        testSuite.modified = metadata["changed"] or "not set"
-        testSuite.tags = metadata["tags"] or "not set"
+        fillInExistingTestMetadata(testSuite, metadata)
     else
         testSuite.description = "not set"
         testSuite.authors = "not set"
