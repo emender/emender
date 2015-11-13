@@ -277,6 +277,20 @@ end
 
 
 --
+-- Fill in all required information in the testSuite record from
+-- missing metadata.
+--
+function fillInMissingTestMetadata(testSuite)
+    testSuite.description = "not set"
+    testSuite.authors = "not set"
+    testSuite.emails = "not set"
+    testSuite.modified = "not set"
+    testSuite.tags = "not set"
+end
+
+
+
+--
 -- Fill in all required information in the testSuite record from the metadata
 -- read from the test script.
 --
@@ -290,11 +304,7 @@ function fillInTestMetadata(testSuite, testSuiteName)
     if metadata then
         fillInExistingTestMetadata(testSuite, metadata)
     else
-        testSuite.description = "not set"
-        testSuite.authors = "not set"
-        testSuite.emails = "not set"
-        testSuite.modified = "not set"
-        testSuite.tags = "not set"
+        fillInMissingTestMetadata(testSuite)
     end
     local requires = test["requires"]
     -- if requires field exists
