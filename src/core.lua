@@ -229,6 +229,18 @@ end
 
 
 --
+-- Print basic test results statistics.
+--
+function printTestResultStat(test)
+    print("", "PASS ", test.passCnt)
+    print("", "FAIL ", test.failCnt)
+    print("", "TOTAL", test.total)
+    print()
+end
+
+
+
+--
 -- Dump all test results (very useful for debug purposes).
 --
 function dumpTestResults()
@@ -244,10 +256,7 @@ function dumpTestResults()
             end
             print("", "", method.result)
         end
-        print("", "PASS ", test.passCnt)
-        print("", "FAIL ", test.failCnt)
-        print("", "TOTAL", test.total)
-        print()
+        printTestResultStat(test)
     end
 end
 
