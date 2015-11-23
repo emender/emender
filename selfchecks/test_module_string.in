@@ -9,6 +9,23 @@
   Tags:            BasicTest, ModuleTest
   Required tools:  
 
+  Test Case: testAlignCenter1
+
+    [ PASS ]  Test if alignCenter() function works correctly
+    [ PASS ]  Test if alignCenter() function works correctly
+    [ PASS ]  Test if alignCenter() function works correctly
+    [ PASS ]  Test if alignCenter() function works correctly
+    [ PASS ]  Test if alignCenter() function works correctly
+    [ PASS ]  Test if alignCenter() function works correctly
+    [ PASS ]  Test if alignCenter() function works correctly
+
+  Test Case: testAlignCenter2
+
+    [ PASS ]  Test if alignCenter() function works correctly
+    [ PASS ]  Test if alignCenter() function works correctly
+    [ PASS ]  Test if alignCenter() function works correctly
+    [ PASS ]  Test if alignCenter() function works correctly
+
   Test Case: testAlignLeft1
 
     [ PASS ]  Test if alignLeft() function works correctly
@@ -747,8 +764,8 @@
 
   Test Summary                                                            
 
-    Executed Test Cases: 159
-    Passed Test Cases:   159
+    Executed Test Cases: 161
+    Passed Test Cases:   161
     Failed Test Cases:   0
     Encountered Errors:  0
     Overall Result:      PASS
