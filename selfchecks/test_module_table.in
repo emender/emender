@@ -57,6 +57,16 @@
     [ PASS ]  Check table.contains(3) for non empty table.
     [ PASS ]  Check table.contains(4) for non empty table.
 
+  Test Case: testFunctionKeysOnArray
+
+    [ PASS ]  Check table.keys() on regular array
+    [ PASS ]  Check table.keys() on regular array
+    [ PASS ]  Check table.keys() on regular array
+
+  Test Case: testFunctionKeysOnEmptyTable
+
+    [ PASS ]  Check table.keys() on empty table
+
   Test Case: testHashTableSize1
 
     [ PASS ]  Check table.hashTableSize().
@@ -132,8 +142,8 @@
 
   Test Summary                                                            
 
-    Executed Test Cases: 25
-    Passed Test Cases:   25
+    Executed Test Cases: 27
+    Passed Test Cases:   27
     Failed Test Cases:   0
     Encountered Errors:  0
     Overall Result:      PASS
