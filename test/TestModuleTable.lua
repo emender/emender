@@ -336,3 +336,15 @@ end
 
 
 
+--
+-- Check the function table.keys().
+--
+function TestModuleTable.testFunctionKeysOnArray()
+    local tbl1 = {1}
+    is_equal(table.keys(tbl1), {1}, "Check table.keys() on regular array")
+    local tbl2 = {1, 2, 3}
+    is_equal(table.keys(tbl2), {1, 2, 3}, "Check table.keys() on regular array")
+    local tbl2 = {3, 2, 1}
+    is_equal(table.keys(tbl2), {1, 2, 3}, "Check table.keys() on regular array")
+end
+
