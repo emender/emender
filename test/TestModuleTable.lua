@@ -324,3 +324,15 @@ function TestModuleTable.testTableCompare8()
     is_true(table.compare(tbl1, tbl2), "Check table.compare().")
 end
 
+
+
+--
+-- Check the function table.keys().
+--
+function TestModuleTable.testFunctionKeysOnEmptyTable()
+    local tbl = {}
+    is_equal(table.keys(tbl), {}, "Check table.keys() on empty table")
+end
+
+
+
