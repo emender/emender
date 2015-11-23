@@ -1694,6 +1694,19 @@ end
 
 
 
+--
+-- Test the behaviour of the following Emender function: string:alignCenter().
+--
+function TestModuleString.testAlignCenter1()
+    is_equal("", string.alignCenter(""),       "Test if alignCenter() function works correctly")
+    -- 38x SPACE (std. width is 75 chars, so 75/2=37 + one space
+    is_equal("                                      ", string.alignCenter(" "),   "Test if alignCenter() function works correctly")
+    is_equal("                                      ", string.alignCenter(" "),   "Test if alignCenter() function works correctly")
+    -- 39x SPACE
+    is_equal("                                       ", string.alignCenter("  "),  "Test if alignCenter() function works correctly")
+    is_equal("                                       ", string.alignCenter("   "), "Test if alignCenter() function works correctly")
+end
+
 
 
 -- TODO:
