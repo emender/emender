@@ -26,6 +26,29 @@
     [ PASS ]  Test if alignCenter() function works correctly
     [ PASS ]  Test if alignCenter() function works correctly
 
+  Test Case: testAlignCenter3
+
+    [ PASS ]  Test if alignCenter() function works correctly
+    [ PASS ]  Test if alignCenter() function works correctly
+    [ PASS ]  Test if alignCenter() function works correctly
+    [ PASS ]  Test if alignCenter() function works correctly
+
+  Test Case: testAlignCenter4
+
+    [ PASS ]  Test if alignCenter() function works correctly
+    [ PASS ]  Test if alignCenter() function works correctly
+    [ PASS ]  Test if alignCenter() function works correctly
+
+  Test Case: testAlignCenter5
+
+    [ PASS ]  Test if alignCenter() function works correctly
+    [ PASS ]  Test if alignCenter() function works correctly
+    [ PASS ]  Test if alignCenter() function works correctly
+
+  Test Case: testAlignCenter6
+
+    [ PASS ]  Test if alignCenter() function works correctly
+
   Test Case: testAlignLeft1
 
     [ PASS ]  Test if alignLeft() function works correctly
@@ -764,8 +787,8 @@
 
   Test Summary                                                            
 
-    Executed Test Cases: 161
-    Passed Test Cases:   161
+    Executed Test Cases: 165
+    Passed Test Cases:   165
     Failed Test Cases:   0
     Encountered Errors:  0
     Overall Result:      PASS
