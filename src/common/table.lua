@@ -200,13 +200,17 @@ end
 -- @param tbl the table which should be converted.
 -- @return converted table.
 function table.setValueToKey(tbl)
-  local convertedTable = {}
+    if not tbl then
+        return nil
+    end
 
-  for _, value in ipairs(tbl) do
-    convertedTable[value] = true
-  end
+    local convertedTable = {}
 
-  return convertedTable
+    for _, value in ipairs(tbl) do
+        convertedTable[value] = true
+    end
+
+    return convertedTable
 end
 
 
