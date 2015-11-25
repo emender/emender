@@ -1726,6 +1726,31 @@ end
 
 
 
+--
+-- Test the behaviour of the following Emender function: string:alignCenter().
+--
+function TestModuleString.testAlignCenter3()
+    -- 37x SPACE (std. width is 75 chars, so 75/2=37)
+    is_equal("                                    * *", string.alignCenter("* *"),   "Test if alignCenter() function works correctly")
+    is_equal("                                    ** *", string.alignCenter("** *"),   "Test if alignCenter() function works correctly")
+    -- 36x SPACE (one less because of longer string that needs to be centered)
+    is_equal("                                   *** *", string.alignCenter("*** *"),  "Test if alignCenter() function works correctly")
+    is_equal("                                   **** *", string.alignCenter("**** *"), "Test if alignCenter() function works correctly")
+end
+
+
+
+--
+-- Test the behaviour of the following Emender function: string:alignCenter().
+--
+function TestModuleString.testAlignCenter4()
+    is_equal("", string.alignCenter("", 10),        "Test if alignCenter() function works correctly")
+    is_equal("      ", string.alignCenter(" ", 10), "Test if alignCenter() function works correctly")
+    is_equal("     *", string.alignCenter("*", 10), "Test if alignCenter() function works correctly")
+end
+
+
+
 -- TODO:
 -- string.alignCenter(str, width, indent, first_indent)
 -- string.horizontalFill(left_str, right_str, width, filler)
