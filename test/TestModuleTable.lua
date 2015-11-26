@@ -361,3 +361,13 @@ end
 
 
 
+--
+-- Check the function table.keys().
+--
+function TestModuleTable.testFunctionKeysOnDictionary2()
+    local tbl1 = {a=1, b=2}
+    local tbl1keys = table.keys(tbl1)
+    is_true(tbl1keys[1] == "a" or tbl1keys[2] == "a", "Check table.keys() on dictionary")
+    is_true(tbl1keys[1] == "b" or tbl1keys[2] == "b", "Check table.keys() on dictionary")
+end
+
