@@ -344,7 +344,20 @@ function TestModuleTable.testFunctionKeysOnArray()
     is_equal(table.keys(tbl1), {1}, "Check table.keys() on regular array")
     local tbl2 = {1, 2, 3}
     is_equal(table.keys(tbl2), {1, 2, 3}, "Check table.keys() on regular array")
-    local tbl2 = {3, 2, 1}
-    is_equal(table.keys(tbl2), {1, 2, 3}, "Check table.keys() on regular array")
+    local tbl3 = {3, 2, 1}
+    is_equal(table.keys(tbl3), {1, 2, 3}, "Check table.keys() on regular array")
 end
+
+
+
+--
+-- Check the function table.keys().
+--
+function TestModuleTable.testFunctionKeysOnDictionary1()
+    local tbl1 = {a=1}
+    local tbl1keys = table.keys(tbl1)
+    is_equal(tbl1keys[1], "a", "Check table.keys() on dictionary")
+end
+
+
 
