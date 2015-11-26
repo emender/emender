@@ -371,3 +371,20 @@ function TestModuleTable.testFunctionKeysOnDictionary2()
     is_true(tbl1keys[1] == "b" or tbl1keys[2] == "b", "Check table.keys() on dictionary")
 end
 
+
+
+--
+-- Check the function table.keys().
+--
+function TestModuleTable.testFunctionKeysOnDictionary3()
+    local tbl1 = {a=1, z=3, b=2, d=42, xyzzy="xyzzy"}
+    local tbl1keys = table.keys(tbl1)
+    for _,key in ipairs({"a", "b", "d", "z", "xyzzy"}) do
+        is_true(tbl1keys[1] == key or
+                tbl1keys[2] == key or
+                tbl1keys[3] == key or
+                tbl1keys[4] == key or
+                tbl1keys[5] == key, "Check table.keys() on dictionary")
+    end
+end
+
