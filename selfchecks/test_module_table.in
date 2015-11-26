@@ -63,6 +63,23 @@
     [ PASS ]  Check table.keys() on regular array
     [ PASS ]  Check table.keys() on regular array
 
+  Test Case: testFunctionKeysOnDictionary1
+
+    [ PASS ]  Check table.keys() on dictionary
+
+  Test Case: testFunctionKeysOnDictionary2
+
+    [ PASS ]  Check table.keys() on dictionary
+    [ PASS ]  Check table.keys() on dictionary
+
+  Test Case: testFunctionKeysOnDictionary3
+
+    [ PASS ]  Check table.keys() on dictionary
+    [ PASS ]  Check table.keys() on dictionary
+    [ PASS ]  Check table.keys() on dictionary
+    [ PASS ]  Check table.keys() on dictionary
+    [ PASS ]  Check table.keys() on dictionary
+
   Test Case: testFunctionKeysOnEmptyTable
 
     [ PASS ]  Check table.keys() on empty table
@@ -142,8 +159,8 @@
 
   Test Summary                                                            
 
-    Executed Test Cases: 27
-    Passed Test Cases:   27
+    Executed Test Cases: 30
+    Passed Test Cases:   30
     Failed Test Cases:   0
     Encountered Errors:  0
     Overall Result:      PASS
