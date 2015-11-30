@@ -431,3 +431,17 @@ function TestModuleTable.testFunctionAppendTables()
 end
 
 
+--
+-- Check the function table.joinTables()
+--
+function TestModuleTable.testFunctionJoinTables()
+    local tbl1 = {["foo"] = "xz", ["bar"] = 3, ["foobar"] = "text"}
+    local tbl2 = {["xxx"] = 5, ["xyz"] = "eee", ["zzz"] = "thelastone"}
+    local tbl3 = {["a"] = "first", ["xxx"] = "replace"}
+    
+    is_nil(table.joinTables(nil, nil), "Check table.joinTables(), both tables are nil.")
+    is_nil(table.joinTables(nil, tbl1), "Check table.joinTables(), the first argument is nil, the second is table.")
+    is_nil(table.joinTables(tbl1, nil), "Check table.joinTables(), the first argument is table, the second is nil.")
+    
+end
+

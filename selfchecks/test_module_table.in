@@ -73,6 +73,14 @@
     [ PASS ]  Check table.appendTables(), appending two tables - the
               empty one and the one with three items.
 
+  Test Case: testFunctionJoinTables
+
+    [ PASS ]  Check table.joinTables(), both tables are nil.
+    [ PASS ]  Check table.joinTables(), the first argument is nil, the
+              second is table.
+    [ PASS ]  Check table.joinTables(), the first argument is table, the
+              second is nil.
+
   Test Case: testFunctionKeysOnArray
 
     [ PASS ]  Check table.keys() on regular array
@@ -183,8 +191,8 @@
 
   Test Summary                                                            
 
-    Executed Test Cases: 32
-    Passed Test Cases:   32
+    Executed Test Cases: 33
+    Passed Test Cases:   33
     Failed Test Cases:   0
     Encountered Errors:  0
     Overall Result:      PASS
