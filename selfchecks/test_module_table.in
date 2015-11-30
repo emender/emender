@@ -57,6 +57,22 @@
     [ PASS ]  Check table.contains(3) for non empty table.
     [ PASS ]  Check table.contains(4) for non empty table.
 
+  Test Case: testFunctionAppendTables
+
+    [ PASS ]  Check table.appendTables(), one of the tables is nil.
+    [ PASS ]  Check table.appendTables(), one of the tables is nil.
+    [ PASS ]  Check table.appendTables(), both tables are nil.
+    [ PASS ]  Check table.appendTables(), appending two tables each with
+              three items.
+    [ PASS ]  Check table.appendTables(), appending two tables each with
+              three items.
+    [ PASS ]  Check table.appendTables(), appending two tables each with
+              three items.
+    [ PASS ]  Check table.appendTables(), appending two tables - the
+              empty one and the one with three items.
+    [ PASS ]  Check table.appendTables(), appending two tables - the
+              empty one and the one with three items.
+
   Test Case: testFunctionKeysOnArray
 
     [ PASS ]  Check table.keys() on regular array
@@ -167,8 +183,8 @@
 
   Test Summary                                                            
 
-    Executed Test Cases: 31
-    Passed Test Cases:   31
+    Executed Test Cases: 32
+    Passed Test Cases:   32
     Failed Test Cases:   0
     Encountered Errors:  0
     Overall Result:      PASS

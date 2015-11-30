@@ -406,3 +406,28 @@ function TestModuleTable.testFunctionSetValueToKey()
     is_true(help[4], "Check table.setValueToKey() on table with more items.")
     is_true(help["3e"], "Check table.setValueToKey() on table with more items.")
 end
+
+
+--
+-- Check the function table.appendTables().
+--
+function TestModuleTable.testFunctionAppendTables()
+    local tbl1 = {"foo", "bar", "foobar"}
+    local tbl2 = {"xxx", "xyz", "zzz"}
+
+    is_nil(table.appendTables(nil, tbl1), "Check table.appendTables(), one of the tables is nil.")
+    is_nil(table.appendTables(tbl1, nil), "Check table.appendTables(), one of the tables is nil.")
+    is_nil(table.appendTables(nil, nil), "Check table.appendTables(), both tables are nil.")
+
+    local help = table.appendTables(tbl1, tbl2)
+    is_equal(help[5], "xyz", "Check table.appendTables(), appending two tables each with three items.")
+    is_equal(help[1], "foo", "Check table.appendTables(), appending two tables each with three items.")
+    is_equal(help[6], "zzz", "Check table.appendTables(), appending two tables each with three items.")
+
+    help = table.appendTables({}, tbl1)
+    is_equal(help[2], "bar", "Check table.appendTables(), appending two tables - the empty one and the one with three items.")
+    is_nil(help[4], "Check table.appendTables(), appending two tables - the empty one and the one with three items.")
+
+end
+
+
