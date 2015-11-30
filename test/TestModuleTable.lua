@@ -388,3 +388,21 @@ function TestModuleTable.testFunctionKeysOnDictionary3()
     end
 end
 
+
+--
+-- Check the function table.setValueToKey().
+--
+function TestModuleTable.testFunctionSetValueToKey()
+    local help = nil
+
+    local tbl1 = {}
+    is_equal(table.setValueToKey(tbl1), {}, "Check table.setValueToKey() on empty table.")
+    local tbl2 = {"a"}
+    help = table.setValueToKey(tbl2)
+    is_true(help["a"], "Check table.setValueToKey() on table with one item.")
+    local tbl3 = {"c", 4, "3e"}
+    help = table.setValueToKey(tbl3)
+    is_true(help["c"], "Check table.setValueToKey() on table with more items.")
+    is_true(help[4], "Check table.setValueToKey() on table with more items.")
+    is_true(help["3e"], "Check table.setValueToKey() on table with more items.")
+end

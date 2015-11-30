@@ -84,6 +84,14 @@
 
     [ PASS ]  Check table.keys() on empty table
 
+  Test Case: testFunctionSetValueToKey
+
+    [ PASS ]  Check table.setValueToKey() on empty table.
+    [ PASS ]  Check table.setValueToKey() on table with one item.
+    [ PASS ]  Check table.setValueToKey() on table with more items.
+    [ PASS ]  Check table.setValueToKey() on table with more items.
+    [ PASS ]  Check table.setValueToKey() on table with more items.
+
   Test Case: testHashTableSize1
 
     [ PASS ]  Check table.hashTableSize().
@@ -159,8 +167,8 @@
 
   Test Summary                                                            
 
-    Executed Test Cases: 30
-    Passed Test Cases:   30
+    Executed Test Cases: 31
+    Passed Test Cases:   31
     Failed Test Cases:   0
     Encountered Errors:  0
     Overall Result:      PASS
