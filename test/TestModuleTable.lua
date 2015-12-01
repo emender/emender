@@ -426,8 +426,8 @@ function TestModuleTable.testFunctionAppendTables()
 
     help = table.appendTables({}, tbl1)
     is_equal(help[2], "bar", "Check table.appendTables(), appending two tables - the empty one and the one with three items.")
-    is_nil(help[4], "Check table.appendTables(), appending two tables - the empty one and the one with three items.")
-
+    help = table.appendTables(tbl1, {})
+    is_nil(help[4], "Check table.appendTables(), appending two tables - the one table with three items and the empty one.")
 end
 
 
@@ -443,5 +443,17 @@ function TestModuleTable.testFunctionJoinTables()
     is_nil(table.joinTables(nil, tbl1), "Check table.joinTables(), the first argument is nil, the second is table.")
     is_nil(table.joinTables(tbl1, nil), "Check table.joinTables(), the first argument is table, the second is nil.")
     
+    local help = table.joinTables(tbl1, tbl2)
+    is_equal(help["xxx"], 5, "Check table.joinTables(), joining two tables.")
+    is_equal(help["foo"], "xz", "Check table.joinTables(), joining two tables.")
+    
+    help = table.joinTables(tbl1, {})
+    is_equal(help["foobar"], "text", "Check table.joinTables(), the first argument is table, the second is empty table.")
+    
+    help = table.joinTables({}, tbl1)
+    is_equal(help["bar"], 3, "Check table.joinTables(), the first argument is empty table, the second is table.")
+
+    help = table.joinTables(tbl2, tbl3)
+    is_equal(help["xxx"], "replace", "Check table.joinTables(), joining two tables, both tables have one same key.")
 end
 

@@ -70,8 +70,8 @@
               three items.
     [ PASS ]  Check table.appendTables(), appending two tables - the
               empty one and the one with three items.
-    [ PASS ]  Check table.appendTables(), appending two tables - the
-              empty one and the one with three items.
+    [ PASS ]  Check table.appendTables(), appending two tables - the one
+              table with three items and the empty one.
 
   Test Case: testFunctionJoinTables
 
@@ -80,6 +80,14 @@
               second is table.
     [ PASS ]  Check table.joinTables(), the first argument is table, the
               second is nil.
+    [ PASS ]  Check table.joinTables(), joining two tables.
+    [ PASS ]  Check table.joinTables(), joining two tables.
+    [ PASS ]  Check table.joinTables(), the first argument is table, the
+              second is empty table.
+    [ PASS ]  Check table.joinTables(), the first argument is empty
+              table, the second is table.
+    [ PASS ]  Check table.joinTables(), joining two tables, both tables
+              have one same key.
 
   Test Case: testFunctionKeysOnArray
 
