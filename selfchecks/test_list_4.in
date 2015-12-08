@@ -1,13 +1,17 @@
 Test: Test100Failures1Info
 Test: Test100Failures1Pass
+Test: Test100Failures1Yap
 Test: Test100Infos1Fail
 Test: Test100Infos1Pass
+Test: Test100Infos1Yap
 Test: Test100Passes1Fail
 Test: Test100Passes1Info
+Test: Test100Passes1Yap
 Test: Test1Fail
 Test: Test1Info
 Test: Test1
 Test: Test1Pass
+Test: Test1Yap
 Test: Test2
 Test: TestAssertionFail
 Test: TestAssertionIsEmpty
