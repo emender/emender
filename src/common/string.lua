@@ -131,7 +131,7 @@ end
 --
 function string.trimString(str)
     local pattern = "[%p%s]*(%w.*)$"
-    
+
     -- make sure we don't get 'NPE'
     if not str then
         return nil
@@ -139,12 +139,12 @@ function string.trimString(str)
     if string.len(str) > 3 then
         local getOutput = str:gmatch(pattern)
         local output = getOutput()
-        if not output then 
+        if not output then
           return ""
         end
-        
+
         output = output:reverse()
-        
+
         -- Use the same pattern for the end of reversed string.
         getOutput = output:gmatch(pattern)
         output = getOutput()
@@ -320,3 +320,23 @@ function string:lastIndexOf(str)
         return i-1 end
 end
 
+
+
+--
+--- Function that create sha256 hash from given string.
+--
+--  @param str string from which the hash will be counted.
+--  @return sha256 hash
+function string.getHash(str)
+	-- If the function got nil or something else than string then return nil
+	if not str or type(str) ~= "string" then
+		return nil
+	end
+
+	-- Execute command and get sha256 hash.
+	local command = "echo -n " .. str .. " | sha256sum"
+	local sha256 = execCaptureOutputAsString(command)
+
+	-- Return the hash.
+	return string.trimString(sha256)
+end

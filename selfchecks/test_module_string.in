@@ -300,6 +300,12 @@
 
     [ PASS ]  Test if endsWith() function works correctly
 
+  Test Case: testGetHash
+
+    [ PASS ]  Test if getHash() function returns correct hash.
+    [ PASS ]  Test if getHash() function returns correct hash.
+    [ PASS ]  Test if getHash() function returns correct hash.
+
   Test Case: testLastIndexOf1
 
     [ PASS ]  Test if lastIndexOf() function works correctly
@@ -787,8 +793,8 @@
 
   Test Summary                                                            
 
-    Executed Test Cases: 165
-    Passed Test Cases:   165
+    Executed Test Cases: 166
+    Passed Test Cases:   166
     Failed Test Cases:   0
     Encountered Errors:  0
     Overall Result:      PASS
