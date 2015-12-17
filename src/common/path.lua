@@ -119,6 +119,67 @@ function path.file_exists(filename)
     return true
 end
 
+
+--
+--- Function that creates 'dirpath' directory.
+--
+--  @param dirpath - path to the directory (and its parents) which should be created
+--  @return true if directory is created, otherwise nil.
+function path.create_dir(dirpath)
+    -- If dirpath argument is nil or empty string or not string then return nil.
+    if not dirpath or dirpath:match("^$") or type(dirpath) ~= "string" then
+        return nil
+    end
+
+    -- If dir already exists then print information line and return true, because directory is there.
+    if path.directory_exists(dirpath) then
+        warn("Directory '" .. dirpath .. "' already exists.")
+        return true
+    end
+
+    -- Create directories according to dirpath - no error if already exists
+    local command = "mkdir -p " .. dirpath .. " 2>&1"
+    local output = execCaptureOutputAsString(command)
+
+    -- Check whether we have permission for creating dir
+    if output:match("Permission denied") then
+        warn("Emender does not have permissions for creating directory '" .. dirpath .. "'.")
+        return nil
+    end
+
+    return true
+end
+
+
+--
+--- Function that "removes" given directory. In fact, the directory is not removed but only moved to the tempdir.
+-- 	It's made this way because of safety.
+--
+--  @param dirpath path to the directory, which should be (re)moved
+--  @return true if everything is correct, otherwise nil
+function path.remove_dir(dirpath)
+	-- If the argument is nil or empty string or not string type then return nil.
+	if not dirpath or dirpath:match("^$") or type(dirpath) ~= "string" then
+		return nil
+	end
+
+	-- If directory does not exist, print the warning and return nil.
+	if not path.directory_exists(dirpath) then
+		print("Directory '" .. dirpath .. "' does not exist.")
+		return true
+	end
+
+	-- Create temporary directory.
+	local create_mktemp = "mktemp -d"
+    local tmpdir_name = execCaptureOutputAsString(create_mktemp)
+
+	-- Move directory which should be moved.
+	local move_dir = "mv -v " .. dirpath ..  " " .. tmpdir_name
+	execCaptureOutputAsString(move_dir)
+
+	return true
+end
+
+
 -- Export the module:
 return path
-

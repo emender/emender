@@ -93,6 +93,57 @@ function core.getTestFunction(testName, functionName)
 end
 
 
+--
+--- Return path to the current book work directory.
+--
+--  @return path to the directory, or nil if directory was not created.
+function getBookWorkingDirectory()
+    local emenderDir = getWorkingDirectory()
+    local bookPath = getCurrentDirectory()
+    local hashBookPath = string.getHash(bookPath)
+    local bookDirPath  = path.compose(emenderDir, hashBookPath)
+
+    -- Get temp dir for this test.
+    if not path.directory_exists(bookDirPath) then
+        if not path.create_dir(bookDirPath) then
+            warn("Directory '" .. bookDirPath .. "' was not created.")
+            return nil
+        end
+    end
+
+    return bookDirPath
+end
+
+
+--
+--- Remove working directory for curretly tested book.
+--
+function removeCurrentWorkingDir()
+    local currentDirectory = getCurrentDirectory()
+    local currentWorkingDir = getBookWorkingDirectory()
+
+    if path.directory_exists(currentWorkingDir) then
+        path.remove_dir(currentWorkingDir)
+    end
+end
+
+
+--
+--- Function that removes all directories in the emender working directory.
+--
+function core.removeBookWorkDirectories()
+    local emenderWorkDir = getWorkingDirectory()
+    local command = "find " .. emenderWorkDir .. " -maxdepth 1 -type d"
+    local dirTable = execCaptureOutputAsTable(command)
+
+    for _, directory in ipairs(dirTable) do
+        -- Remove the parent directory.
+        if not directory:match("^" .. emenderWorkDir .. "$") then
+            path.remove_dir(directory)
+        end
+    end
+end
+
 
 --
 -- Return reference to setUp() function if it exists.
@@ -223,7 +274,7 @@ end
 -- Called by the test machinery to mark the current test case failure.
 --
 function markTestFailure()
-    currentTestFailure = true 
+    currentTestFailure = true
 end
 
 
@@ -531,6 +582,9 @@ function core.runTest(scriptDirectory, filename, verboseOperation, testOptions, 
 
         if testFunctionNames or setupFunction or tearDownFunction then
 
+            -- Get working directory for currently checked book.
+            local bookTempDir = getBookWorkingDirectory()
+
             -- print an information about the test suite that are started
             -- to the standard output
             writeTestSuiteStart(io.stdout, testSuite, false)
@@ -788,4 +842,3 @@ end
 
 -- export module
 return core
-

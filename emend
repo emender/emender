@@ -67,7 +67,6 @@ function getScriptDirectory()
 end
 
 
-
 --
 -- Returns current directory. Note that this directory might be different
 -- that result of getScriptDirectory().
@@ -82,6 +81,41 @@ function getCurrentDirectory()
 end
 
 
+--
+-- Returns current temporary emender directory. This directory can be used
+-- for storing all temporary emender data.
+--
+function getWorkingDirectory()
+	local homePath = os.getenv("HOME")
+	local emenderDirName = ".cache/emender"
+
+	-- Check whether this user has home directory.
+	if path.directory_exists(homePath) then
+		local emenderDir = path.compose(homePath, emenderDirName)
+
+		-- Check whether temporary directory already exist or not.
+		if not path.directory_exists(emenderDir) then
+			path.create_dir(emenderDir)
+		end
+
+		-- Return path to the emender temporary directory.
+		return emenderDir
+	end
+end
+
+
+--
+-- Function that removes Emender working directory.
+--
+function removeEmenderWorkDirectory()
+    -- Get Emender temp directory.
+    local emenderWorkDir = getWorkingDirectory()
+
+    -- Check whether removing went well.
+    if not path.remove_dir(emenderWorkDir) then
+        warn("Directory name is not correct or the user does not have permissions to do that.")
+    end
+end
 
 --
 -- Alter the content of "package.path" to contain the relative path
@@ -328,6 +362,15 @@ function main(arg)
     elseif getopt.isTestListOptionUsed(options) then
         -- show list of tests to run if -l or --list option is specified on the command line
         core.performTestList(verboseOperations, colorOutput, testsToRun)
+    elseif getopt.isCleanAllWorkDirsFlagUsed(options) then
+        -- Only remove the emender working directory.
+        removeEmenderWorkDirectory()
+    elseif getopt.isCleanBookWorkDirsFlagUsed(options) then
+        -- Only remove all directories in emender working directory.
+        core.removeBookWorkDirectories()
+    elseif getopt.isCleanCurrentWorkDirFlagUsed(options) then
+        -- Remove only working directory for current book.
+        removeCurrentWorkingDir()
     elseif getopt.isGenDocFlagUsed(options) then
         -- user need to specify name of output file where the generated documentation
         -- will be stored (the -o option is used for two distinct operations)
@@ -350,4 +393,3 @@ function main(arg)
 end
 
 main(arg)
-

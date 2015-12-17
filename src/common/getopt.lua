@@ -1,5 +1,5 @@
 -- getopt.lua - module for handling command line options and flags.
--- 
+--
 -- This file is part of Emender.
 --
 -- Emender is free software: you can redistribute it and/or modify
@@ -158,6 +158,28 @@ function getopt.isGenDocFlagUsed(options)
 end
 
 
+--
+-- Check if --clean-current-workdir is used on the CLI.
+--
+function getopt.isCleanCurrentWorkDirFlagUsed(options)
+    return options["clean-current-workdir"]
+end
+
+--
+-- Check if --clean-emender-workdir is used on the CLI.
+--
+function getopt.isCleanAllWorkDirsFlagUsed(options)
+    return options["clean-emender-workdir"]
+end
+
+
+--
+-- Check if --clean-book-workdirs is used on the CLI.
+--
+function getopt.isCleanBookWorkDirsFlagUsed(options)
+    return options["clean-book-workdirs"]
+end
+
 
 --
 -- Returns table that would contain all unknown command line options.
@@ -166,7 +188,9 @@ function getopt.getUnknownOptions(options)
     local knownOptions = {"v", "verbose",   "l", "list",      "h", "help",
                           "V", "version",   "L", "license",   "c", "color",
                           "s", "summary",   "T", "trace",     "o", "output",
-                          "D", "debug",     "t", "tags",      "G", "gendoc"}
+                          "D", "debug",     "t", "tags",      "G", "gendoc",
+                          "clean-emender-workdir", "clean-book-workdirs",
+                          "clean-current-workdir"}
 
     -- we are going to modify table two times, so let's made a copy of it
     local unknownOptions = table.copy(options)
@@ -333,4 +357,3 @@ function getopt.checkForUnknownOptions(options)
 end
 
 return getopt
-
