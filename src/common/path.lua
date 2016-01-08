@@ -151,35 +151,38 @@ function path.create_dir(dirpath)
 end
 
 
+
 --
---- Function that "removes" given directory. In fact, the directory is not removed but only moved to the tempdir.
--- 	It's made this way because of safety.
+-- Function that "removes" given directory. In fact, the directory is not
+-- removed but only moved to the tempdir.  It's made this way because of
+-- safety.
 --
 --  @param dirpath path to the directory, which should be (re)moved
 --  @return true if everything is correct, otherwise nil
 function path.remove_dir(dirpath)
-	-- If the argument is nil or empty string or not string type then return nil.
-	if not dirpath or dirpath:match("^$") or type(dirpath) ~= "string" then
-		return nil
-	end
+    -- If the argument is nil or empty string or not string type then return nil.
+    if not dirpath or dirpath:match("^$") or type(dirpath) ~= "string" then
+        return nil
+    end
 
-	-- If directory does not exist, print the warning and return nil.
-	if not path.directory_exists(dirpath) then
-		print("Directory '" .. dirpath .. "' does not exist.")
-		return true
-	end
+    -- If directory does not exist, print the warning and return nil.
+    if not path.directory_exists(dirpath) then
+        print("Directory '" .. dirpath .. "' does not exist.")
+        return true
+    end
 
-	-- Create temporary directory.
-	local create_mktemp = "mktemp -d"
+    -- Create temporary directory.
+    local create_mktemp = "mktemp -d"
     local tmpdir_name = execCaptureOutputAsString(create_mktemp)
 
-	-- Move directory which should be moved.
-	local move_dir = "mv -v " .. dirpath ..  " " .. tmpdir_name
-	execCaptureOutputAsString(move_dir)
+    -- Move directory which should be moved.
+    local move_dir = "mv -v " .. dirpath ..  " " .. tmpdir_name
+    execCaptureOutputAsString(move_dir)
 
-	return true
+    return true
 end
 
 
 -- Export the module:
 return path
+
