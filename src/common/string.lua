@@ -340,3 +340,4 @@ function string.getHash(str)
 	-- Return the hash.
 	return string.trimString(sha256)
 end
+
