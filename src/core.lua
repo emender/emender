@@ -93,10 +93,12 @@ function core.getTestFunction(testName, functionName)
 end
 
 
+
 --
---- Return path to the current book work directory.
+-- Return path to the current book work directory.
 --
 --  @return path to the directory, or nil if directory was not created.
+--
 function getBookWorkingDirectory()
     local emenderDir = getWorkingDirectory()
     local bookPath = getCurrentDirectory()
@@ -115,8 +117,9 @@ function getBookWorkingDirectory()
 end
 
 
+
 --
---- Remove working directory for curretly tested book.
+-- Remove working directory for curretly tested book.
 --
 function removeCurrentWorkingDir()
     local currentDirectory = getCurrentDirectory()
@@ -128,8 +131,9 @@ function removeCurrentWorkingDir()
 end
 
 
+
 --
---- Function that removes all directories in the emender working directory.
+-- Function that removes all directories in the emender working directory.
 --
 function core.removeBookWorkDirectories()
     local emenderWorkDir = getWorkingDirectory()
@@ -143,6 +147,7 @@ function core.removeBookWorkDirectories()
         end
     end
 end
+
 
 
 --
