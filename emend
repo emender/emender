@@ -67,6 +67,7 @@ function getScriptDirectory()
 end
 
 
+
 --
 -- Returns current directory. Note that this directory might be different
 -- that result of getScriptDirectory().
@@ -81,27 +82,29 @@ function getCurrentDirectory()
 end
 
 
+
 --
 -- Returns current temporary emender directory. This directory can be used
 -- for storing all temporary emender data.
 --
 function getWorkingDirectory()
-	local homePath = os.getenv("HOME")
-	local emenderDirName = ".cache/emender"
+    local homePath = os.getenv("HOME")
+    local emenderDirName = ".cache/emender"
 
-	-- Check whether this user has home directory.
-	if path.directory_exists(homePath) then
-		local emenderDir = path.compose(homePath, emenderDirName)
+    -- Check whether this user has home directory.
+    if path.directory_exists(homePath) then
+        local emenderDir = path.compose(homePath, emenderDirName)
 
-		-- Check whether temporary directory already exist or not.
-		if not path.directory_exists(emenderDir) then
-			path.create_dir(emenderDir)
-		end
+        -- Check whether temporary directory already exist or not.
+        if not path.directory_exists(emenderDir) then
+            path.create_dir(emenderDir)
+        end
 
-		-- Return path to the emender temporary directory.
-		return emenderDir
-	end
+        -- Return path to the emender temporary directory.
+        return emenderDir
+    end
 end
+
 
 
 --
