@@ -110,3 +110,18 @@ end
 
 
 
+--
+-- Create the Book_Info object.
+--
+function createBookInfoInstance(theTest)
+    theTest.bookInfoInstance = theTest.docbookInstance:getInfoFile()
+
+    if not theTest.bookInfoInstance then
+        fail("Failed to create the Book_Info object. Ending now.")
+    else
+        yap("Book_Info object created.")
+    end
+end
+
+
+
