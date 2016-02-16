@@ -177,7 +177,7 @@ function is_not_missing(value, message)
     is_not_nil(value, message)
 end
 
-function is_string_not_empty(stringValue, message)
+function is_not_empty_string(stringValue, message)
     is_true(stringValue:trim() ~= "", message)
 end
 
