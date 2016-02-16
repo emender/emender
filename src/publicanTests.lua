@@ -49,3 +49,19 @@ end
 
 
 
+--
+-- Find the main file (name_of_the_book.xml).
+--
+function loadMainFile(theTest)
+    -- Find the main file
+    theTest.mainFile = theTest.publicanInstance:findMainFile()
+
+    if not theTest.mainFile then
+        fail("Failed to load/read main file.")
+    else
+        yap("Main file found: " .. theTest.mainFile)
+    end
+end
+
+
+
