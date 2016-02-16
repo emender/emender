@@ -173,3 +173,39 @@ function getOrgdiv()
     return actualTest.authInstance:orgdiv()
 end
 
+function is_not_missing(value, message)
+    is_not_nil(value, message)
+end
+
+function is_not_empty(stringValue, message)
+    is_true(stringValue:trim() ~= "", message)
+end
+
+function getBrandList()
+    return table.concat(actualTest.brands, ", ")
+end
+
+function checkBrand(brand)
+    return table.contains(actualTest.brands, brand)
+end
+
+function readXMLFile(filename)
+    return path.compose(actualTest.language, filename)
+end
+
+function readXMLContent(filename)
+    -- Compose the file name:
+    local file = readXMLFile(filename)
+
+    -- Create a local XML object:
+    return xml.create(file)
+end
+
+function getCurrentYear()
+    return os.date("%Y")
+end
+
+function isRedHatEmail(email)
+    return string.match(email, "%a+@redhat%.com")
+end
+
