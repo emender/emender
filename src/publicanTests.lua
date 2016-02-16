@@ -65,3 +65,33 @@ end
 
 
 
+--
+-- Create the DocBook object.
+--
+function createDocbookInstance(theTest)
+    theTest.docbookInstance = docbook.create(theTest.mainFile)
+
+    if not theTest.docbookInstance then
+        fail("Failed to create the DocBook object. Ending now.")
+    else
+        yap("Docbook object created.")
+    end
+end
+
+
+
+--
+-- Create the XML object.
+--
+function createXMLInstance(theTest)
+    theTest.xmlInstance = xml.create(theTest.mainFile)
+
+    if not theTest.xmlInstance then
+        fail("Failed to create the XML object. Ending now.")
+    else
+        yap("XML object created.")
+    end
+end
+
+
+
