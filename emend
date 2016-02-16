@@ -150,6 +150,7 @@ function loadCommonModules()
     require("src/config")
     require("src/testExporter")
     require("src/common/exec")
+    require("src/publicanTests")
 end
 
 
