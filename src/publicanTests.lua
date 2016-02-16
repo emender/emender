@@ -125,3 +125,18 @@ end
 
 
 
+--
+-- Create the Revision_History object.
+--
+function createRevisionHistoryInstance(theTest)
+    theTest.revisionHistoryInstance = theTest.docbookInstance:getRevHistory()
+
+    if not theTest.revisionHistoryInstance then
+        fail("Failed to create the Revision_History object. Ending now.")
+    else
+        yap("Revision History object created.")
+    end
+end
+
+
+
