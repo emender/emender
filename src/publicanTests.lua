@@ -95,3 +95,18 @@ end
 
 
 
+--
+-- Create the Author_Group object.
+--
+function createAuthorGroupInstance(theTest)
+    theTest.authInstance = theTest.docbookInstance:getAuthorGroup()
+
+    if not theTest.authInstance then
+        fail("Failed to create the Author_Group object. Ending now.")
+    else
+        yap("Author group object created.")
+    end
+end
+
+
+
