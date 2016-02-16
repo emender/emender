@@ -18,3 +18,18 @@
 
 
 
+--
+-- Load all libraries required by this test.
+--
+function loadAllPublicanLibraries()
+    dofile(getScriptDirectory() .. "lib/xml.lua")
+    dofile(getScriptDirectory() .. "lib/docbook.lua")
+    dofile(getScriptDirectory() .. "lib/publican.lua")
+    dofile(getScriptDirectory() .. "lib/authorgroup.lua")
+    dofile(getScriptDirectory() .. "lib/infofile.lua")
+    dofile(getScriptDirectory() .. "lib/revhistory.lua")
+    yap("All libraries loaded.")
+end
+
+
+
