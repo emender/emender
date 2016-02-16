@@ -140,3 +140,19 @@ end
 
 
 
+--
+-- Setup phase of the test.
+--
+function setupPublicanTest(theTest)
+    loadAllPublicanLibraries()
+    createPublicanInstance(theTest)
+    loadMainFile(theTest)
+    createDocbookInstance(theTest)
+    createXMLInstance(theTest)
+    createAuthorGroupInstance(theTest)
+    createBookInfoInstance(theTest)
+    createRevisionHistoryInstance(theTest)
+end
+
+
+
