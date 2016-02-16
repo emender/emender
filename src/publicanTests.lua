@@ -138,12 +138,13 @@ function createRevisionHistoryInstance(theTest)
     end
 end
 
-
+local actualTest = nil
 
 --
 -- Setup phase of the test.
 --
 function setupPublicanTest(theTest)
+    actualTest = theTest
     loadAllPublicanLibraries()
     createPublicanInstance(theTest)
     loadMainFile(theTest)
@@ -155,4 +156,20 @@ function setupPublicanTest(theTest)
 end
 
 
+
+function getDocumentTitle()
+    return actualTest.bookInfoInstance:documentTitle()
+end
+
+function getPublicanOption(name)
+    return actualTest.publicanInstance:getOption(name)
+end
+
+function getEmails()
+    return actualTest.authInstance:emails()
+end
+
+function getOrgdiv()
+    return actualTest.authInstance:orgdiv()
+end
 
