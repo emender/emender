@@ -33,3 +33,19 @@ end
 
 
 
+--
+-- Create the Publican object.
+--
+function createPublicanInstance(theTest)
+    -- Create the Publican object:
+    theTest.publicanInstance = publican.create("publican.cfg")
+
+    if not theTest.publicanInstance then
+        fail("Failed to create the Publican object. Ending now.")
+    else
+        yap("Publican object created.")
+    end
+end
+
+
+
