@@ -679,3 +679,35 @@ function yap(explanation)
     writeTestDebug(io.stdout, nil, explanation, colorOutput)
 end
 
+
+
+--
+-- Calls pass() when at least one match is found in the given list.
+-- warn() is called instead.
+--
+function matches_any(list, str, message)
+    for _,entry in ipairs(list) do
+        if string.match(entry, str) then
+            pass(message)
+            return
+        end
+    end
+    warn(message)
+end
+
+
+
+--
+-- Calls warn() when at least one match is found in the given list.
+-- info() is called instead.
+--
+function matches_none(list, str, message)
+    for _,entry in ipairs(list) do
+        if string.match(entry, str) then
+            warn(message)
+            return
+        end
+    end
+    pass(message)
+end
+
