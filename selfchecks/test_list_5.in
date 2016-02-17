@@ -26,6 +26,8 @@ Test: TestAssertionIsTrue
 Test: TestAssertionIsType
 Test: TestAssertionIsUnequal
 Test: TestAssertionIsUnlike
+Test: TestAssertionMatchesAny
+Test: TestAssertionMatchesNone
 Test: TestAssertionPass
 Test: TestAssertionWarn
 Test: TestColorInMessages
