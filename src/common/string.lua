@@ -334,7 +334,7 @@ function string.getHash(str)
 	end
 
 	-- Execute command and get sha256 hash.
-	local command = "echo -n " .. str .. " | sha256sum"
+	local command = "echo -n '" .. str .. "' | sha256sum"
 	local sha256 = execCaptureOutputAsString(command)
 
 	-- Return the hash.
