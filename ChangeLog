@@ -1,3 +1,13 @@
+2016-03-11  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* test_examples/AsciiDoc2Docbook50.sh:
+	Example script that converts books from AsciiDoc format to the DocBook 5.0.
+
+2016-03-11  Pavel Tisnovsky  <ptisnovs@redhat.com>
+
+	* test_examples/AsciiDoc2Docbook45.sh:
+	Example script that converts books from AsciiDoc format to the DocBook 4.5.
+
 2015-11-12  Pavel Tisnovsky  <ptisnovs@redhat.com>
 
 	* .gitignore:
