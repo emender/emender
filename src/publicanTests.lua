@@ -178,7 +178,11 @@ function is_not_missing(value, message)
 end
 
 function is_not_empty_string(stringValue, message)
-    is_true(stringValue:trim() ~= "", message)
+    if stringValue then
+        is_true(stringValue:trim() ~= "", message)
+    else
+        fail("Value is nil")
+    end
 end
 
 function getBrandList()
