@@ -151,12 +151,16 @@ function setupPublicanTest(theTest)
     actualTest = theTest
     loadAllPublicanLibraries()
     createPublicanInstance(theTest)
-    loadMainFile(theTest)
-    createDocbookInstance(theTest)
-    createXMLInstance(theTest)
-    createAuthorGroupInstance(theTest)
-    createBookInfoInstance(theTest)
-    createRevisionHistoryInstance(theTest)
+    if theTest.publicanInstance then
+        loadMainFile(theTest)
+        createDocbookInstance(theTest)
+        createXMLInstance(theTest)
+        createAuthorGroupInstance(theTest)
+        createBookInfoInstance(theTest)
+        createRevisionHistoryInstance(theTest)
+    else
+        warn("Can not initialize, skipping all other steps")
+    end
 end
 
 
