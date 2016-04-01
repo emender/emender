@@ -38,12 +38,16 @@ end
 --
 function createPublicanInstance(theTest)
     -- Create the Publican object:
-    theTest.publicanInstance = publican.create("publican.cfg")
+    if path.file_exists("publican.cfg") then
+        theTest.publicanInstance = publican.create("publican.cfg")
 
-    if not theTest.publicanInstance then
-        fail("Failed to create the Publican object. Ending now.")
+        if not theTest.publicanInstance then
+            fail("Failed to create the Publican object. Ending now.")
+        else
+            yap("Publican object created.")
+        end
     else
-        yap("Publican object created.")
+        fail("publican.cfg does not exist")
     end
 end
 
