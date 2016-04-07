@@ -197,7 +197,7 @@ function getopt.getUnknownOptions(options)
                           "V", "version",   "L", "license",   "c", "color",
                           "s", "summary",   "T", "trace",     "o", "output",
                           "D", "debug",     "t", "tags",      "G", "gendoc",
-                          "S", "service",
+                          "S", "service",   "N", "name",
                           "clean-emender-workdir", "clean-book-workdirs",
                           "clean-current-workdir"}
 
@@ -319,6 +319,21 @@ end
 function getopt.getServiceURL(arg)
     for i = 1, #arg-1 do
         if arg[i] == "-S" or arg[i] == "--service" then
+            return arg[i+1]
+        end
+    end
+
+    return nil
+end
+
+
+
+--
+-- Try to recognize job name
+--
+function getopt.getName(arg)
+    for i = 1, #arg-1 do
+        if arg[i] == "-N" or arg[i] == "--name" then
             return arg[i+1]
         end
     end
