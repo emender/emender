@@ -1,2 +1,2 @@
 The provided output file name 'out.X' has wrong extension 'X'.
-Supported extensions are: .txt, .html, .xml, .junit and .summary.
+Supported extensions are: .txt, .html, .xml, .junit, .json and .summary.
