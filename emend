@@ -37,6 +37,7 @@ local htmlWriter = nil
 local xmlWriter = nil
 local textWriter = nil
 local junitWriter = nil
+local jsonWriter = nil
 local summaryWriter = nil
 local textExporter = nil
 local debugMode = nil
