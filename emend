@@ -311,6 +311,16 @@ end
 
 
 --
+-- Call given service at the end of processing
+--
+function callService(URL, name)
+    local command = [[curl -X POST --header "Content-Type: application/json" -d '{"name":"]] .. name .. [["}' ]]  .. URL
+    os.execute(command)
+end
+
+
+
+--
 -- Entry point to the Emender
 --
 function main(arg)
@@ -338,6 +348,7 @@ function main(arg)
     local testOptions = getopt.getTestOptions(options)
 
     local debugMode = getopt.isDebugFlagUsed(options)
+    local useService = getopt.isServiceFlagUsed(options)
 
     -- enable trace mode if -T or --trace option is specified on the command line
     if tracingOn then
@@ -388,6 +399,13 @@ function main(arg)
     else
         -- run all selected tests and evaluate exit value
         local returnValue = core.runTests(verboseOperations, colorOutput, testsToRun, outputFiles, testOptions, tags, debugMode)
+        if useService then
+            local serviceURL = getopt.getServiceURL(arg)
+            local name = getopt.getName(arg)
+            if serviceURL then
+                callService(serviceURL, name)
+            end
+        end
         if returnValue then
             os.exit(0)
         else
