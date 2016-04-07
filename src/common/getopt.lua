@@ -159,6 +159,14 @@ end
 
 
 --
+-- Check if -S or --service is used on the CLI.
+--
+function getopt.isServiceFlagUsed(options)
+    return options["S"] or options["service"]
+end
+
+
+--
 -- Check if --clean-current-workdir is used on the CLI.
 --
 function getopt.isCleanCurrentWorkDirFlagUsed(options)
@@ -189,6 +197,7 @@ function getopt.getUnknownOptions(options)
                           "V", "version",   "L", "license",   "c", "color",
                           "s", "summary",   "T", "trace",     "o", "output",
                           "D", "debug",     "t", "tags",      "G", "gendoc",
+                          "S", "service",
                           "clean-emender-workdir", "clean-book-workdirs",
                           "clean-current-workdir"}
 
@@ -300,6 +309,21 @@ function getopt.getOutputFiles(arg)
     end
 
     return outputFiles
+end
+
+
+
+--
+-- Try to recognize service URL
+--
+function getopt.getServiceURL(arg)
+    for i = 1, #arg-1 do
+        if arg[i] == "-S" or arg[i] == "--service" then
+            return arg[i+1]
+        end
+    end
+
+    return nil
 end
 
 
