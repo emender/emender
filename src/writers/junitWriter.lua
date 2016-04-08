@@ -1,5 +1,5 @@
--- junitWriter.lua - a writer for the XML file format compatible with JUnit.
--- Copyright (C) 2014 Pavel Tisnovsky
+-- junitWriter.lua - a writer for the JUnit-compatible file format
+-- Copyright (C) 2014, 2015, 2016  Pavel Tisnovsky
 
 -- This file is part of Emender.
 
