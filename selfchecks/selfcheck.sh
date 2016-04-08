@@ -364,6 +364,12 @@ function runTestsWithSpecificOutput {
     ../emend -o test_output_format_junit2.junit ../test/Test[12].lua
     mv test_output_format_junit2.junit test_output_format_junit2.out
 
+    ../emend -o test_output_format_json.json ../test/Test1.lua
+    mv test_output_format_json.json test_output_format_json.out
+
+    ../emend -o test_output_format_json2.json ../test/Test[12].lua
+    mv test_output_format_json2.json test_output_format_json2.out
+
     ../emend -o test_output_format_html.html ../test/Test1.lua
     mv test_output_format_html.html test_output_format_html.out
 
