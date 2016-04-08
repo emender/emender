@@ -178,6 +178,7 @@ function loadModulesAndInitReferences()
     xmlWriter =         require("src/writers/xmlWriter")
     textWriter =        require("src/writers/textWriter")
     junitWriter =       require("src/writers/junitWriter")
+    jsonWriter =        require("src/writers/jsonWriter")
     summaryWriter =     require("src/writers/summaryWriter")
     checkTools =        require("src/checkTools")
 end
@@ -330,7 +331,7 @@ function main(arg)
     core.asserts = asserts
     core.writer = abstractWriter
 
-    abstractWriter.registerWriters(htmlWriter, xmlWriter, textWriter, junitWriter, summaryWriter)
+    abstractWriter.registerWriters(htmlWriter, xmlWriter, textWriter, junitWriter, jsonWriter, summaryWriter)
 
     local options = getopt.getopt(arg, "")
 
