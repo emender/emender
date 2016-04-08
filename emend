@@ -316,7 +316,9 @@ end
 -- Call given service at the end of processing
 --
 function callService(URL, name)
-    local command = [[curl -X POST --header "Content-Type: application/json" -d '{"name":"]] .. name .. [["}' ]]  .. URL
+    local fullURL = URL .. "/" .. name
+    fullURL = fullURL:gsub(" ", "+")
+    local command = [[curl -X POST --header "Content-Type: application/json" -d '@results.json' ]] .. fullURL
     os.execute(command)
 end
 
@@ -417,3 +419,4 @@ function main(arg)
 end
 
 main(arg)
+
