@@ -21,8 +21,27 @@
 -- Data structure that holds all exported variables and functions
 --
 local textWriter = {
-    firstItem = nil
+    firstTestCase = nil,
+    firstTestStep = nil
 }
+
+
+
+function textWriter.testStepSeparator(fout)
+    if not textWriter.firstTestStep then
+        fout:write(",\n")
+    end
+    textWriter.firstTestStep = false
+end
+
+
+
+function textWriter.testCaseSeparator(fout)
+    if not textWriter.firstTestCase then
+        fout:write(",\n")
+    end
+    textWriter.firstTestCase = false
+end
 
 
 
@@ -49,7 +68,8 @@ end
 --
 function textWriter.writeSuiteStart(fout, testSuite)
     local name = testSuite.name
-    fout:write("    '" .. name .. "': {\n")
+    fout:write("    \"" .. name .. "\": {\n")
+    textWriter.firstTestCase = true
 end
 
 
@@ -58,7 +78,7 @@ end
 -- Write the test suite footer to the file:
 --
 function textWriter.writeSuiteEnd(fout, testSuite)
-    fout:write("    }\n")
+    fout:write("\n    }\n")
 end
 
 
@@ -68,8 +88,9 @@ end
 --
 function textWriter.writeCaseStart(fout, testCase)
     local name = testCase.name
-    fout:write("        '" .. name .. "': [\n")
-    textWriter.firstItem = true
+    textWriter.testCaseSeparator(fout)
+    fout:write("        \"" .. name .. "\": [\n")
+    textWriter.firstTestStep = true
 end
 
 
@@ -79,27 +100,20 @@ end
 --
 function textWriter.writeCaseEnd(fout, testCaseInfo)
     fout:write("\n")
-    fout:write("        ]\n")
+    fout:write("        ]")
 end
 
 
-
-function textWriter.separator(fout)
-    if not textWriter.firstItem then
-        fout:write(",\n")
-    end
-    textWriter.firstItem = false
-end
 
 --
 -- Write the test result to the file:
 --
 function textWriter.writeTestPass(fout, testName, message)
     local explanation = message[2]
-    textWriter.separator(fout)
+    textWriter.testStepSeparator(fout)
     fout:write("            {\n")
-    fout:write("                'status':  'pass'\n")
-    fout:write("                'message': '" .. explanation .. "'\n")
+    fout:write("                \"status\":  \"pass\",\n")
+    fout:write("                \"message\": \"" .. explanation .. "\"\n")
     fout:write("            }")
 end
 
@@ -110,10 +124,10 @@ end
 --
 function textWriter.writeTestFail(fout, testName, message)
     local explanation = message[2]
-    textWriter.separator(fout)
+    textWriter.testStepSeparator(fout)
     fout:write("            {\n")
-    fout:write("                'status':  'fail'\n")
-    fout:write("                'message': '" .. explanation .. "'\n")
+    fout:write("                \"status\":  \"fail\",\n")
+    fout:write("                \"message\": \"" .. explanation .. "\"\n")
     fout:write("            }\n")
 end
 
@@ -124,10 +138,10 @@ end
 --
 function textWriter.writeTestInfo(fout, testName, message)
     local explanation = message[2]
-    textWriter.separator(fout)
+    textWriter.testStepSeparator(fout)
     fout:write("            {\n")
-    fout:write("                'status':  'info'\n")
-    fout:write("                'message': '" .. explanation .. "'\n")
+    fout:write("                \"status\":  \"info\",\n")
+    fout:write("                \"message\": \"" .. explanation .. "\"\n")
     fout:write("            }\n")
 end
 
@@ -138,10 +152,10 @@ end
 --
 function textWriter.writeTestDebug(fout, testName, message)
     local explanation = message[2]
-    textWriter.separator(fout)
+    textWriter.testStepSeparator(fout)
     fout:write("            {\n")
-    fout:write("                'status':  'debug'\n")
-    fout:write("                'message': '" .. explanation .. "'\n")
+    fout:write("                \"status\":  \"debug\",\n")
+    fout:write("                \"message\": \"" .. explanation .. "\"\n")
     fout:write("            }\n")
 end
 
