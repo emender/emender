@@ -1,0 +1,14 @@
+<testsuites>
+  <testsuite name="Test1">
+    <testcase name="testA" classname="testA">
+    </testcase>
+    <testcase name="testB" classname="testB">
+    </testcase>
+    <testcase name="testCallOtherFunction" classname="testCallOtherFunction">
+    </testcase>
+    <testcase name="testReadLocalValue" classname="testReadLocalValue">
+    </testcase>
+    <testcase name="testReadWriteLocalValue" classname="testReadWriteLocalValue">
+    </testcase>
+  </testsuite>
+</testsuites>
