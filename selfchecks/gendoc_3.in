@@ -23,6 +23,7 @@ Generating doc for the following source file:	../src/version.lua
 Generating doc for the following source file:	../src/writers/abstractWriter.lua
 Generating doc for the following source file:	../src/writers/commonTextWriter.lua
 Generating doc for the following source file:	../src/writers/htmlWriter.lua
+Generating doc for the following source file:	../src/writers/jsonWriter.lua
 Generating doc for the following source file:	../src/writers/junitWriter.lua
 Generating doc for the following source file:	../src/writers/summaryWriter.lua
 Generating doc for the following source file:	../src/writers/textWriter.lua
