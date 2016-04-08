@@ -1,5 +1,5 @@
 -- textWriter.lua - a writer for the plain text file format
--- Copyright (C) 2014 Pavel Tisnovsky, Jaromir Hradilek
+-- Copyright (C) 2014, 2015, 2016  Pavel Tisnovsky, Jaromir Hradilek
 
 -- This file is part of Emender.
 
@@ -22,8 +22,18 @@
 --
 local textWriter = {
     firstTestCase = nil,
-    firstTestStep = nil
+    firstTestStep = nil,
+    firstTestInSuite =nil
 }
+
+
+
+function textWriter.testSeparator(fout)
+    if not textWriter.firstTestInSuite then
+        fout:write(",\n")
+    end
+    textWriter.firstTestInSuite = false
+end
 
 
 
@@ -50,6 +60,7 @@ end
 --
 function textWriter.writeHeader(fout, results)
     fout:write('{\n')
+    textWriter.firstTestInSuite = true
 end
 
 
@@ -58,7 +69,7 @@ end
 -- Write the report footer to the file:
 --
 function textWriter.writeFooter(fout, results)
-    fout:write('}\n')
+    fout:write('\n}\n')
 end
 
 
@@ -68,6 +79,7 @@ end
 --
 function textWriter.writeSuiteStart(fout, testSuite)
     local name = testSuite.name
+    textWriter.testSeparator(fout)
     fout:write("    \"" .. name .. "\": {\n")
     textWriter.firstTestCase = true
 end
@@ -78,7 +90,7 @@ end
 -- Write the test suite footer to the file:
 --
 function textWriter.writeSuiteEnd(fout, testSuite)
-    fout:write("\n    }\n")
+    fout:write("\n    }")
 end
 
 
@@ -128,7 +140,7 @@ function textWriter.writeTestFail(fout, testName, message)
     fout:write("            {\n")
     fout:write("                \"status\":  \"fail\",\n")
     fout:write("                \"message\": \"" .. explanation .. "\"\n")
-    fout:write("            }\n")
+    fout:write("            }")
 end
 
 
@@ -142,7 +154,7 @@ function textWriter.writeTestInfo(fout, testName, message)
     fout:write("            {\n")
     fout:write("                \"status\":  \"info\",\n")
     fout:write("                \"message\": \"" .. explanation .. "\"\n")
-    fout:write("            }\n")
+    fout:write("            }")
 end
 
 
@@ -156,7 +168,7 @@ function textWriter.writeTestDebug(fout, testName, message)
     fout:write("            {\n")
     fout:write("                \"status\":  \"debug\",\n")
     fout:write("                \"message\": \"" .. explanation .. "\"\n")
-    fout:write("            }\n")
+    fout:write("            }")
 end
 
 
