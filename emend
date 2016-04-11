@@ -2,7 +2,7 @@
 
 -- Entry point to the Emender tool.
 --
--- Copyright (C) 2014, 2015 Pavel Tisnovsky
+-- Copyright (C) 2014, 2015, 2016  Pavel Tisnovsky
 --
 -- This file is part of Emender.
 --
@@ -393,10 +393,13 @@ function main(arg)
     else
         local serviceURL = getopt.getServiceURL(arg)
         local jobName = getopt.getName(arg)
-        -- run all selected tests and evaluate exit value
+        -- call REST API service when new job is to be started
         service.jobStarted(useService, serviceURL, jobName)
+        -- run all selected tests and evaluate exit value
         local returnValue = core.runTests(verboseOperations, colorOutput, testsToRun, outputFiles, testOptions, tags, debugMode)
+        -- call REST API service when new job has been finished
         service.jobFinished(useService, serviceURL, jobName)
+        -- call REST API service with test results
         service.jobResults(useService, serviceURL, jobName)
         if returnValue then
             os.exit(0)
