@@ -36,6 +36,13 @@ end
 
 
 
+function service.callCurlWithResults(fullURL)
+    local command = [[curl -X POST --header "Content-Type: application/json" -d '@results.json' ]] .. fullURL
+    os.execute(command)
+end
+
+
+
 --
 -- Function to call REST API service when job has been started.
 --
@@ -71,6 +78,9 @@ function service.jobResults(useService, URL, name)
     if not useService then
        return
     end
+    local fullURL = URL .. "/" .. service.jobResultsCommand .. "/" .. name
+    fullURL = fullURL:gsub(" ", "+")
+    service.callCurlWithResults(fullURL)
 end
 
 
