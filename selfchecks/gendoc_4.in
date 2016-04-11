@@ -17,6 +17,7 @@ Generating doc for the following source file:	../src/license.lua
 Generating doc for the following source file:	../src/publicanTests.lua
 Generating doc for the following source file:	../src/selftest/luaVersionChecker.lua
 Generating doc for the following source file:	../src/selftest/toolsChecker.lua
+Generating doc for the following source file:	../src/service.lua
 Generating doc for the following source file:	../src/testExporter.lua
 Generating doc for the following source file:	../src/testInfo.lua
 Generating doc for the following source file:	../src/version.lua
