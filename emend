@@ -41,6 +41,7 @@ local jsonWriter = nil
 local summaryWriter = nil
 local textExporter = nil
 local debugMode = nil
+local service = nil
 
 
 
@@ -181,6 +182,7 @@ function loadModulesAndInitReferences()
     jsonWriter =        require("src/writers/jsonWriter")
     summaryWriter =     require("src/writers/summaryWriter")
     checkTools =        require("src/checkTools")
+    service =           require("src/service")
 end
 
 
@@ -313,18 +315,6 @@ end
 
 
 --
--- Call given service at the end of processing
---
-function callService(URL, name)
-    local fullURL = URL .. "/" .. name
-    fullURL = fullURL:gsub(" ", "+")
-    local command = [[curl -X POST --header "Content-Type: application/json" -d '@results.json' ]] .. fullURL
-    os.execute(command)
-end
-
-
-
---
 -- Entry point to the Emender
 --
 function main(arg)
@@ -401,15 +391,13 @@ function main(arg)
         -- on the command line and the -o filename option is used as well
         gendoc.generateDocForWholeEmender(getScriptDirectory(), colorOutput, outputFiles)
     else
+        local serviceURL = getopt.getServiceURL(arg)
+        local jobName = getopt.getName(arg)
         -- run all selected tests and evaluate exit value
+        service.jobStarted(useService, serviceURL, jobName)
         local returnValue = core.runTests(verboseOperations, colorOutput, testsToRun, outputFiles, testOptions, tags, debugMode)
-        if useService then
-            local serviceURL = getopt.getServiceURL(arg)
-            local name = getopt.getName(arg)
-            if serviceURL then
-                callService(serviceURL, name)
-            end
-        end
+        service.jobFinished(useService, serviceURL, jobName)
+        service.jobResults(useService, serviceURL, jobName)
         if returnValue then
             os.exit(0)
         else
