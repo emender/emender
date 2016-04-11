@@ -22,14 +22,30 @@
 -- Module name
 --
 local service = {
+    jobStartedCommand = "job-started",
+    jobFinishedCommand = "job-finished",
+    jobResultsCommand = "job-results"
 }
+
+
+
+function service.callCurl(fullURL)
+    local command = [[curl -X POST --header "Content-Type: application/json" ]] .. fullURL
+    os.execute(command)
+end
 
 
 
 --
 -- Function to call REST API service when job has been started.
 --
-function service.jobStarted()
+function service.jobStarted(useService, URL, name)
+    if not useService then
+       return
+    end
+    local fullURL = URL .. "/" .. service.jobStartedCommand .. "/" .. name
+    fullURL = fullURL:gsub(" ", "+")
+    service.callCurl(fullURL)
 end
 
 
@@ -37,7 +53,24 @@ end
 --
 -- Function to call REST API service when job has been finished.
 --
-function service.jobStarted()
+function service.jobFinished(useService, URL, name)
+    if not useService then
+       return
+    end
+    local fullURL = URL .. "/" .. service.jobFinishedCommand .. "/" .. name
+    fullURL = fullURL:gsub(" ", "+")
+    service.callCurl(fullURL)
+end
+
+
+
+--
+-- Function to call REST API service when job has been finished.
+--
+function service.jobResults(useService, URL, name)
+    if not useService then
+       return
+    end
 end
 
 
