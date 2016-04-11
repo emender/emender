@@ -29,16 +29,22 @@ local service = {
 
 
 
-function service.callCurl(fullURL)
-    local command = [[curl -X POST --header "Content-Type: application/json" ]] .. fullURL
+function service.callCurlWithParams(fullURL, params)
+    fullURL = fullURL:gsub(" ", "+")
+    local command = [[curl -X POST --header "Content-Type: application/json" ]] .. params .. " " .. fullURL
     os.execute(command)
 end
 
 
 
+function service.callCurl(fullURL)
+    service.callCurlWithParams(fullURL, "")
+end
+
+
+
 function service.callCurlWithResults(fullURL)
-    local command = [[curl -X POST --header "Content-Type: application/json" -d '@results.json' ]] .. fullURL
-    os.execute(command)
+    service.callCurlWithParams(fullURL, "-d '@results.json' ")
 end
 
 
@@ -51,7 +57,6 @@ function service.jobStarted(useService, URL, name)
        return
     end
     local fullURL = URL .. "/" .. service.jobStartedCommand .. "/" .. name
-    fullURL = fullURL:gsub(" ", "+")
     service.callCurl(fullURL)
 end
 
@@ -65,7 +70,6 @@ function service.jobFinished(useService, URL, name)
        return
     end
     local fullURL = URL .. "/" .. service.jobFinishedCommand .. "/" .. name
-    fullURL = fullURL:gsub(" ", "+")
     service.callCurl(fullURL)
 end
 
@@ -79,7 +83,6 @@ function service.jobResults(useService, URL, name)
        return
     end
     local fullURL = URL .. "/" .. service.jobResultsCommand .. "/" .. name
-    fullURL = fullURL:gsub(" ", "+")
     service.callCurlWithResults(fullURL)
 end
 
