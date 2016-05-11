@@ -55,6 +55,7 @@ function runTestsForBasicCLI {
     ../emend -l ../test/Test1.[a-z]ua      > test_list_7.out
     ../emend -G                            > show_gendoc_1.out
     ../emend --gendoc                      > show_gendoc_2.out
+    ../emend              ../test/TestJobName.lua > test_job_name_0.out
     ../emend -N xyzzy     ../test/TestJobName.lua > test_job_name_1.out
     ../emend --name xyzzy ../test/TestJobName.lua > test_job_name_2.out
     ../emend -N 42        ../test/TestJobName.lua > test_job_name_3.out
