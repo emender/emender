@@ -69,6 +69,13 @@ function runTestsForBasicCLI {
     ../emend --git-repo 42    ../test/TestGitRepo.lua > test_git_repo_4.out
     ../emend -g ""            ../test/TestGitRepo.lua > test_git_repo_5.out
     ../emend --git-repo ""    ../test/TestGitRepo.lua > test_git_repo_6.out
+    ../emend                  ../test/TestGitBranch.lua > test_git_branch_0.out
+    ../emend -b xyzzy         ../test/TestGitBranch.lua > test_git_branch_1.out
+    ../emend --branch xyzzy   ../test/TestGitBranch.lua > test_git_branch_2.out
+    ../emend -b 42            ../test/TestGitBranch.lua > test_git_branch_3.out
+    ../emend --branch 42      ../test/TestGitBranch.lua > test_git_branch_4.out
+    ../emend -b ""            ../test/TestGitBranch.lua > test_git_branch_5.out
+    ../emend --branch ""      ../test/TestGitBranch.lua > test_git_branch_6.out
 }
 
 
