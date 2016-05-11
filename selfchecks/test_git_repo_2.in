@@ -12,22 +12,22 @@
 
   Test Case: testGitRepo
 
-    [ FAIL ]  GIT repo is not set!
+    [ PASS ]  GIT repo: xyzzy
 
   Test Summary                                                            
 
     Executed Test Cases: 1
-    Passed Test Cases:   0
-    Failed Test Cases:   1
+    Passed Test Cases:   1
+    Failed Test Cases:   0
     Encountered Errors:  0
-    Overall Result:      FAIL
+    Overall Result:      PASS
 
 ---------------------------------------------------------------------------
                                :: Summary ::
 ---------------------------------------------------------------------------
 
   Executed Tests: 1
-  Passed Tests:   0
-  Failed Tests:   1
-  Overall Result: FAIL
+  Passed Tests:   1
+  Failed Tests:   0
+  Overall Result: PASS
 

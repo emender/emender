@@ -44,6 +44,8 @@ local debugMode = nil
 local service = nil
 serviceURL = nil
 jobName = nil
+gitRepo = nil
+gitBranch = nil
 
 
 
@@ -348,6 +350,8 @@ function main(arg)
 
     serviceURL = getopt.getServiceURL(arg)
     jobName = getopt.getName(arg)
+    gitRepo = getopt.getGitRepository(arg)
+    gitBranch = getopt.getGitBranch(arg)
 
     -- enable trace mode if -T or --trace option is specified on the command line
     if tracingOn then
