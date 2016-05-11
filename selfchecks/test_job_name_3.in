@@ -1,0 +1,32 @@
+---------------------------------------------------------------------------
+                             :: TestJobName ::
+---------------------------------------------------------------------------
+
+  Description:     Check that -N and --name CLI options work correctly.
+  Authors:         Pavel Tisnovsky
+  Emails:          ptisnovs@redhat.com
+  Last Modified:   2016-05-11
+  Tags:            BasicTest, SmokeTest
+  Required tools:  
+
+  Test Case: testJobName
+
+    [ PASS ]  Job name: 42
+
+  Test Summary                                                            
+
+    Executed Test Cases: 1
+    Passed Test Cases:   1
+    Failed Test Cases:   0
+    Encountered Errors:  0
+    Overall Result:      PASS
+
+---------------------------------------------------------------------------
+                               :: Summary ::
+---------------------------------------------------------------------------
+
+  Executed Tests: 1
+  Passed Tests:   1
+  Failed Tests:   0
+  Overall Result: PASS
+

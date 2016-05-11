@@ -57,6 +57,10 @@ function runTestsForBasicCLI {
     ../emend --gendoc                      > show_gendoc_2.out
     ../emend -N xyzzy     ../test/TestJobName.lua > test_job_name_1.out
     ../emend --name xyzzy ../test/TestJobName.lua > test_job_name_2.out
+    ../emend -N 42        ../test/TestJobName.lua > test_job_name_3.out
+    ../emend --name 42    ../test/TestJobName.lua > test_job_name_4.out
+    ../emend -N ""        ../test/TestJobName.lua > test_job_name_5.out
+    ../emend --name ""    ../test/TestJobName.lua > test_job_name_6.out
 }
 
 
