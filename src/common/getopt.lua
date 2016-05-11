@@ -198,7 +198,7 @@ function getopt.getUnknownOptions(options)
                           "s", "summary",   "T", "trace",     "o", "output",
                           "D", "debug",     "t", "tags",      "G", "gendoc",
                           "S", "service",   "N", "name",
-                          "j", "job-url",   "g", "gitrepo",   "b", "branch",
+                          "j", "job-url",   "g", "git-repo",  "b", "branch",
                           "clean-emender-workdir", "clean-book-workdirs",
                           "clean-current-workdir"}
 
@@ -343,6 +343,33 @@ end
 --
 function getopt.getName(arg)
     return getOptionParameter(arg, "-N", "--name")
+end
+
+
+
+--
+-- Try to recognize job URL
+--
+function getopt.getJobURL(arg)
+    return getOptionParameter(arg, "-j", "--job-url")
+end
+
+
+
+--
+-- Try to recognize Git repository
+--
+function getopt.getGitRepository(arg)
+    return getOptionParameter(arg, "-g", "--git-repo")
+end
+
+
+
+--
+-- Try to recognize Git branch
+--
+function getopt.getGitBranch(arg)
+    return getOptionParameter(arg, "-b", "--branch")
 end
 
 
