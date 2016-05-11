@@ -42,6 +42,8 @@ local summaryWriter = nil
 local textExporter = nil
 local debugMode = nil
 local service = nil
+local serviceURL = nil
+local jobName = nil
 
 
 
@@ -344,6 +346,9 @@ function main(arg)
     local debugMode = getopt.isDebugFlagUsed(options)
     local useService = getopt.isServiceFlagUsed(options)
 
+    serviceURL = getopt.getServiceURL(arg)
+    jobName = getopt.getName(arg)
+
     -- enable trace mode if -T or --trace option is specified on the command line
     if tracingOn then
         tracer.enable()
@@ -391,8 +396,6 @@ function main(arg)
         -- on the command line and the -o filename option is used as well
         gendoc.generateDocForWholeEmender(getScriptDirectory(), colorOutput, outputFiles)
     else
-        local serviceURL = getopt.getServiceURL(arg)
-        local jobName = getopt.getName(arg)
         -- call REST API service when new job is to be started
         service.jobStarted(useService, serviceURL, jobName)
         -- run all selected tests and evaluate exit value
