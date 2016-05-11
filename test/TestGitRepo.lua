@@ -31,8 +31,8 @@ TestGitRepo = {
 -- Comment bound to the function TestGitRepo.testA().
 --
 function TestGitRepo.testGitRepo()
-    if GitRepo then
-        pass("GIT repo: " .. GitRepo)
+    if gitRepo then
+        pass("GIT repo: " .. gitRepo)
     else
         fail("GIT repo is not set!")
     end
