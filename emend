@@ -42,8 +42,8 @@ local summaryWriter = nil
 local textExporter = nil
 local debugMode = nil
 local service = nil
-local serviceURL = nil
-local jobName = nil
+serviceURL = nil
+jobName = nil
 
 
 
