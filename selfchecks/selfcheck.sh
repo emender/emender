@@ -55,13 +55,20 @@ function runTestsForBasicCLI {
     ../emend -l ../test/Test1.[a-z]ua      > test_list_7.out
     ../emend -G                            > show_gendoc_1.out
     ../emend --gendoc                      > show_gendoc_2.out
-    ../emend              ../test/TestJobName.lua > test_job_name_0.out
-    ../emend -N xyzzy     ../test/TestJobName.lua > test_job_name_1.out
-    ../emend --name xyzzy ../test/TestJobName.lua > test_job_name_2.out
-    ../emend -N 42        ../test/TestJobName.lua > test_job_name_3.out
-    ../emend --name 42    ../test/TestJobName.lua > test_job_name_4.out
-    ../emend -N ""        ../test/TestJobName.lua > test_job_name_5.out
-    ../emend --name ""    ../test/TestJobName.lua > test_job_name_6.out
+    ../emend                  ../test/TestJobName.lua > test_job_name_0.out
+    ../emend -N xyzzy         ../test/TestJobName.lua > test_job_name_1.out
+    ../emend --name xyzzy     ../test/TestJobName.lua > test_job_name_2.out
+    ../emend -N 42            ../test/TestJobName.lua > test_job_name_3.out
+    ../emend --name 42        ../test/TestJobName.lua > test_job_name_4.out
+    ../emend -N ""            ../test/TestJobName.lua > test_job_name_5.out
+    ../emend --name ""        ../test/TestJobName.lua > test_job_name_6.out
+    ../emend                  ../test/TestGitRepo.lua > test_git_repo_0.out
+    ../emend -g xyzzy         ../test/TestGitRepo.lua > test_git_repo_1.out
+    ../emend --git-repo xyzzy ../test/TestGitRepo.lua > test_git_repo_2.out
+    ../emend -g 42            ../test/TestGitRepo.lua > test_git_repo_3.out
+    ../emend --git-repo 42    ../test/TestGitRepo.lua > test_git_repo_4.out
+    ../emend -g ""            ../test/TestGitRepo.lua > test_git_repo_5.out
+    ../emend --git-repo ""    ../test/TestGitRepo.lua > test_git_repo_6.out
 }
 
 

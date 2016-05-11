@@ -40,6 +40,7 @@ Test: TestFileOperationSlurp
 Test: TestFileOperationSlurpTable
 Test: TestFileOperationSpit
 Test: TestFileOperationSpitTable
+Test: TestGitRepo
 Test: TestJobName
 Test: TestManPages
 Test: TestModuleAsserts
