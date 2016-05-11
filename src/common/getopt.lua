@@ -198,6 +198,7 @@ function getopt.getUnknownOptions(options)
                           "s", "summary",   "T", "trace",     "o", "output",
                           "D", "debug",     "t", "tags",      "G", "gendoc",
                           "S", "service",   "N", "name",
+                          "j", "job-url",   "g", "gitrepo",   "b", "branch",
                           "clean-emender-workdir", "clean-book-workdirs",
                           "clean-current-workdir"}
 
