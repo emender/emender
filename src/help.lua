@@ -1,6 +1,6 @@
 -- Module with implementation of function to show help (usage).
 --
--- Copyright (C) 2014, 2015 Pavel Tisnovsky
+-- Copyright (C) 2014, 2015, 2016  Pavel Tisnovsky
 --
 -- This file is part of Emender.
 --
@@ -51,6 +51,9 @@ Usage: emend [-clsvDT] [-o FILE] [-t TAG...] [FILE...]
 -G, --gendoc        generator documentation for Emender API
 -N, --name          provide job name (used for calling the service)
 -S, --service URL   call given service and send to it test results
+-j, --job-url       job URL specification (optional)
+-g, --git-repo      GIT repo specification (optional)
+-b, --branch        GIT branch specification (optional)
     --Xparam=value  any parameter that is passed to the test
 ]])
 end
