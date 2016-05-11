@@ -75,6 +75,22 @@ Displays the license and exits.
 
 Generates documentation for all Emender modules.
 
+=item B<-N>, B<--name>
+
+Specification for job name.
+
+=item B<-j>, B<--job-url>
+
+Specification for job URL.
+
+=item B<-g>, B<--git-repo>
+
+Specification for GIT repository.
+
+=item B<-b>, B<--branch>
+
+Specification for GIT branch.
+
 =item B<--Xparam=value>
 
 Any parameter that is passed to the test.
