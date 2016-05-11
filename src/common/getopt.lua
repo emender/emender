@@ -315,11 +315,11 @@ end
 
 
 --
--- Try to recognize service URL
+-- Try to read CLI option parameter for given short name or long name
 --
-function getopt.getServiceURL(arg)
+function getOptionParameter(arg, shortName, longName)
     for i = 1, #arg-1 do
-        if arg[i] == "-S" or arg[i] == "--service" then
+        if arg[i] == shortName or arg[i] == longName then
             return arg[i+1]
         end
     end
@@ -330,16 +330,19 @@ end
 
 
 --
+-- Try to recognize service URL
+--
+function getopt.getServiceURL(arg)
+    return getOptionParameter(arg, "-S", "--service")
+end
+
+
+
+--
 -- Try to recognize job name
 --
 function getopt.getName(arg)
-    for i = 1, #arg-1 do
-        if arg[i] == "-N" or arg[i] == "--name" then
-            return arg[i+1]
-        end
-    end
-
-    return nil
+    return getOptionParameter(arg, "-N", "--name")
 end
 
 
