@@ -19,7 +19,7 @@
 TestGitBranch = {
     -- required field
     metadata = {
-        description = "Check that -g and --git-branch CLI options work correctly.",
+        description = "Check that -b and --git-branch CLI options work correctly.",
         authors = "Pavel Tisnovsky",
         emails = "ptisnovs@redhat.com",
         changed = "2016-05-11",
