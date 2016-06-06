@@ -6,3 +6,5 @@ selfchecks/*.xml
 selfchecks/*.css
 selfchecks/bootstrap
 selfchecks/flotr
+bootstrap/
+flotr/
