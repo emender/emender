@@ -91,6 +91,10 @@ Specification for GIT repository.
 
 Specification for GIT branch.
 
+=item B<-f>, B<--front-page>
+
+URL to Emender front page (optional, will be used in test reports).
+
 =item B<--Xparam=value>
 
 Any parameter that is passed to the test.
