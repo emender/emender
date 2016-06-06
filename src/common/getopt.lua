@@ -197,7 +197,7 @@ function getopt.getUnknownOptions(options)
                           "V", "version",   "L", "license",   "c", "color",
                           "s", "summary",   "T", "trace",     "o", "output",
                           "D", "debug",     "t", "tags",      "G", "gendoc",
-                          "S", "service",   "N", "name",
+                          "S", "service",   "N", "name",      "f", "front-page",
                           "j", "job-url",   "g", "git-repo",  "b", "branch",
                           "clean-emender-workdir", "clean-book-workdirs",
                           "clean-current-workdir"}
@@ -370,6 +370,15 @@ end
 --
 function getopt.getGitBranch(arg)
     return getOptionParameter(arg, "-b", "--branch")
+end
+
+
+
+--
+-- Try to recognize Emender front page
+--
+function getopt.getFrontPage(arg)
+    return getOptionParameter(arg, "-f", "--front-page")
 end
 
 
