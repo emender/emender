@@ -32,9 +32,9 @@ TestJobURL = {
 --
 function TestJobURL.testJobURL()
     if jobURL then
-        pass("Job name: " .. jobURL)
+        pass("Job URL: " .. jobURL)
     else
-        fail("Job name is not set!")
+        fail("Job URL is not set!")
     end
 end
 
