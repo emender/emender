@@ -357,7 +357,8 @@ function writeComment(comment, type, fout)
     if type == "txt" then
         fout:write(comment .. "\n\n")
     elseif type == "html" then
-        fout:write("<div class='doc'><pre class='plaintext'>" .. comment .. "</pre></div>\n")
+        local c = comment:gsub("&", "&amp;"):gsub("<", "&lt;"):gsub(">", "&gt;")
+        fout:write("<div class='doc'><pre class='plaintext'>" .. c .. "</pre></div>\n")
     end
 end
 
