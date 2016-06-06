@@ -2,7 +2,7 @@
                             :: TestGitBranch ::
 ---------------------------------------------------------------------------
 
-  Description:     Check that -g and --git-branch CLI options work
+  Description:     Check that -b and --git-branch CLI options work
                    correctly.
   Authors:         Pavel Tisnovsky
   Emails:          ptisnovs@redhat.com
