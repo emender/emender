@@ -377,7 +377,7 @@ end
 --
 -- Try to recognize Emender front page
 --
-function getopt.getFrontPage(arg)
+function getopt.getFrontPageURL(arg)
     return getOptionParameter(arg, "-f", "--front-page")
 end
 
