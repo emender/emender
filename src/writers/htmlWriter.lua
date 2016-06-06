@@ -168,6 +168,24 @@ end
 
 
 --
+-- Returns text and href with text used as second part of job title.
+--
+function getNameAndURL()
+    if jobName then
+        local docName = jobName2docName(jobName)
+        if jobURL then
+            return "<a href='" .. jobURL .. "'>" .. docName .. "</a>"
+        else
+            return docName
+        end
+    else
+        return ""
+    end
+end
+
+
+
+--
 -- Write HTML header and the first part of HTML body, including tablist on the left side.
 --
 function htmlWriter.writeHeader(fout, results)
@@ -175,6 +193,7 @@ function htmlWriter.writeHeader(fout, results)
     local failedTests = results.failedTests
     local allTests = passedTests + failedTests
     local title = getTitle()
+    local nameAndURL = getNameAndURL()
     fout:write([[
 <html>
 <head>
@@ -193,7 +212,7 @@ function htmlWriter.writeHeader(fout, results)
       <div class="col-md-12 column">
         <div class="emender-header">
           <div class="page-header">
-            <h3>]] .. title .. [[</h3>
+            <h3>]] .. title .. nameAndURL .. [[</h3>
           </div>
 ]] .. getOverallResults(allTests, failedTests) ..
 [[        </div><!--emender-header-->
