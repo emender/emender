@@ -20,5 +20,6 @@ Usage: emend [-clsvDT] [-o FILE] [-t TAG...] [FILE...]
 -j, --job-url       job URL specification (optional)
 -g, --git-repo      GIT repo specification (optional)
 -b, --branch        GIT branch specification (optional)
+-f, --front-page    URL to Emender front page (optional, will be used in test reports)
     --Xparam=value  any parameter that is passed to the test
 
