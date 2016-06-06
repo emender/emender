@@ -168,15 +168,28 @@ end
 
 
 --
+-- Transforms job name to document/guide name
+--
+function jobName2docName(jobName)
+    local name = jobName:gsub(" %(test%)$", "")
+    name = name:gsub("^doc%-", "")
+    name = name:gsub("_", " ")
+    name = name:gsub("%-", " ")
+    return name
+end
+
+
+
+--
 -- Returns text and href with text used as second part of job title.
 --
 function getNameAndURL()
     if jobName then
         local docName = jobName2docName(jobName)
         if jobURL then
-            return "<a href='" .. jobURL .. "'>" .. docName .. "</a>"
+            return " &ndash; " .. "<a href='" .. jobURL .. "'>" .. docName .. "</a>"
         else
-            return docName
+            return " &ndash; " .. docName
         end
     else
         return ""
