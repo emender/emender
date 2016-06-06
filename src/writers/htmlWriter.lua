@@ -155,12 +155,26 @@ end
 
 
 --
+-- Returns text or href with text used as Emender title.
+--
+function getTitle()
+    if frontPageURL then
+        return "<a href='" .. frontPageURL .. "'>Emender Test Suite</a>"
+    else
+        return "Emender Test Suite"
+    end
+end
+
+
+
+--
 -- Write HTML header and the first part of HTML body, including tablist on the left side.
 --
 function htmlWriter.writeHeader(fout, results)
     local passedTests = results.passedTests
     local failedTests = results.failedTests
     local allTests = passedTests + failedTests
+    local title = getTitle()
     fout:write([[
 <html>
 <head>
@@ -179,7 +193,7 @@ function htmlWriter.writeHeader(fout, results)
       <div class="col-md-12 column">
         <div class="emender-header">
           <div class="page-header">
-            <h3>Emender Test Suite</h3>
+            <h3>]] .. title .. [[</h3>
           </div>
 ]] .. getOverallResults(allTests, failedTests) ..
 [[        </div><!--emender-header-->
