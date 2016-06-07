@@ -19,20 +19,24 @@
     [ PASS ]  Check that param2 is not nil
     [ PASS ]  Check that param1=='unknown'
 
+  Test Case: testParameterNamedDictionary
+
+    [ FAIL ]  Check that parameter dictionary is not nil
+
   Test Summary                                                            
 
-    Executed Test Cases: 2
+    Executed Test Cases: 3
     Passed Test Cases:   2
-    Failed Test Cases:   0
+    Failed Test Cases:   1
     Encountered Errors:  0
-    Overall Result:      PASS
+    Overall Result:      FAIL
 
 ---------------------------------------------------------------------------
                                :: Summary ::
 ---------------------------------------------------------------------------
 
   Executed Tests: 1
-  Passed Tests:   1
-  Failed Tests:   0
-  Overall Result: PASS
+  Passed Tests:   0
+  Failed Tests:   1
+  Overall Result: FAIL
 
