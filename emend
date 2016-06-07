@@ -403,6 +403,9 @@ function main(arg)
             -- generate Emender documentation if -G or --gendoc option is specified
             -- on the command line and the -o filename option is used as well
             gendoc.generateDocForWholeEmender(getScriptDirectory(), colorOutput, outputFiles)
+        else
+            -- generate documentation for selected test(s)
+            gendoc.generateDocForSelectedTests(testsToRun, colorOutput, outputFiles)
         end
     else
         -- call REST API service when new job is to be started

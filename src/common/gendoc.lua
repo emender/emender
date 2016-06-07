@@ -466,6 +466,31 @@ end
 
 
 
+--
+-- Generate simple documentation for selected tests
+--
+function gendoc.generateDocForSelectedTests(testsToRun, colorOutput, outputFiles)
+    openOutputFiles(outputFiles)
+
+    generateHeader(outputFiles)
+
+    generateTableOfContent(outputFiles, sourceList)
+
+    -- process each source file separatelly
+    for _, sourceFile in ipairs(testsToRun) do
+        -- "emend" is special case, because name of this script does not end with ".lua"
+        if sourceFile:endsWith(".lua") or sourceFile:endsWith("emend") then
+            generateDocForOneSourceFile(sourceFile, colorOutput, outputFiles)
+        end
+    end
+
+    generateFooter(outputFiles)
+
+    closeOutputFiles(outputFiles)
+end
+
+
+
 -- Export the module:
 return gendoc
 
