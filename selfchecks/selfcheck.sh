@@ -83,6 +83,8 @@ function runTestsForBasicCLI {
     ../emend --branch 42        ../test/TestGitBranch.lua > test_git_branch_4.out
     ../emend -b ""              ../test/TestGitBranch.lua > test_git_branch_5.out
     ../emend --branch ""        ../test/TestGitBranch.lua > test_git_branch_6.out
+    ../emend -b "x y"           ../test/TestGitBranch.lua > test_git_branch_7.out
+    ../emend --branch "x y"     ../test/TestGitBranch.lua > test_git_branch_8.out
 
     ../emend                    ../test/TestFrontPageURL.lua > test_front_page_url_0.out
     ../emend -f xyzzy           ../test/TestFrontPageURL.lua > test_front_page_url_1.out
