@@ -41,3 +41,10 @@ function TestParameters.testParam2()
     end
 end
 
+function TestParameters.testParameterNamedDictionary()
+    is_not_nil(TestParameters.dictionary, "Check that parameter dictionary is not nil") 
+    if TestParameters.dictionary then
+        is_equal(TestParameters.dictionary, "http://url.to.dictionary/zg", "Check that dictionary=='http://url.to.dictionary/zg'") 
+    end
+end
+
