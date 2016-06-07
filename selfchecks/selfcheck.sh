@@ -93,6 +93,8 @@ function runTestsForBasicCLI {
     ../emend --front-page 42    ../test/TestFrontPageURL.lua > test_front_page_url_4.out
     ../emend -f ""              ../test/TestFrontPageURL.lua > test_front_page_url_5.out
     ../emend --front-page ""    ../test/TestFrontPageURL.lua > test_front_page_url_6.out
+    ../emend -f "x y"           ../test/TestFrontPageURL.lua > test_front_page_url_7.out
+    ../emend --front-page "x y" ../test/TestFrontPageURL.lua > test_front_page_url_8.out
 
     ../emend                    ../test/TestJobURL.lua > test_job_url_0.out
     ../emend -j xyzzy           ../test/TestJobURL.lua > test_job_url_1.out
