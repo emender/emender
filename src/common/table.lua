@@ -1,6 +1,7 @@
 --
+-- Copyright (C) 2014, 2015, 2016  Pavel Tisnovsky, Jaromir Hradilek
+--
 -- This file is part of Emender.
--- Copyright (C) 2014 Pavel Tisnovsky, Jaromir Hradilek
 --
 -- Emender is free software: you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
@@ -23,6 +24,7 @@
 function table.contains(table, element)
     -- loop over all table items
     for i = 1, #table do
+        -- test if we found given element in the table
         if table[i] == element then
             return true
         end
@@ -33,7 +35,8 @@ end
 
 
 --
--- Compute table size for hash tables (not necessarry for arrays)
+-- Compute table size for hash tables (not necessarry for arrays).
+-- This function works in all cases, so it's better to use it instead of # operator.
 --
 function table.hashTableSize(table)
     i = 0
@@ -48,8 +51,9 @@ end
 
 --
 -- Make a shallow copy of the given table.
--- (the behaviour is very different from the simple
--- assignment local table1=table2)
+-- The behaviour is very different from the simple
+-- assignment local table1=table2, especially if
+-- the table content is to be altered later.
 --
 function table.copy(src)
     local dest = {}
@@ -63,7 +67,8 @@ end
 
 --
 -- Performs a "deep" comparison of items stored in a table.
--- (please note that this algorithm needs to be recursive)
+-- Please note that this algorithm needs to be recursive, because
+-- table item could be another table and so on.
 --
 function table.compare(src, dst)
     -- 1st step - we would need to know type of source and destination
@@ -186,20 +191,23 @@ end
 
 
 --
--- Returns true if table does not exists or if its empty.
+-- Returns true if table does not exists or if its empty, false otherwise.
 --
 function table.isEmpty(tbl)
     -- if tbl == nil then return true as well
     return not tbl or next(tbl) == nil
 end
 
+
+
 --
--- Function which converts table from {[1]="a", [2]="b", etc.}
--- to {[a]=true. [b]=true, etc.}. Just because of speed
--- of finding items.
+-- Function which converts table from the structure {[1]="a", [2]="b", etc.}
+-- into the structure {[a]=true. [b]=true, etc.}. Just because of speed
+-- of finding items laters (resulting table could be used as a set).
 -- @param tbl the table which should be converted.
 -- @return converted table.
 function table.setValueToKey(tbl)
+    -- check if table exists
     if not tbl then
         return nil
     end
@@ -247,6 +255,7 @@ function table.appendTables(table1, table2)
 end
 
 
+
 --
 -- Joins two table into one. It can be used for tables with various keys.
 -- If there is the same key in the table1 and in the table2, the result
@@ -277,3 +286,4 @@ function table.joinTables(table1, table2)
     -- Return table.
     return resultT
 end
+
