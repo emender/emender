@@ -103,6 +103,8 @@ function runTestsForBasicCLI {
     ../emend --job-url 42       ../test/TestJobURL.lua > test_job_url_4.out
     ../emend -j ""              ../test/TestJobURL.lua > test_job_url_5.out
     ../emend --job-url ""       ../test/TestJobURL.lua > test_job_url_6.out
+    ../emend -j "x y"           ../test/TestJobURL.lua > test_job_url_7.out
+    ../emend --job-url "x y"    ../test/TestJobURL.lua > test_job_url_8.out
 }
 
 
