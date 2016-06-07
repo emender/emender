@@ -1,5 +1,6 @@
 -- tracer.lua - a module that could be used for tracing program flow.a 
--- Copyright (C) 2014 Pavel Tisnovsky
+--
+-- Copyright (C) 2014, 2015, 2016  Pavel Tisnovsky
 --
 -- This file is part of Emender.
 --
@@ -18,6 +19,7 @@
 
 
 
+-- module structure definition
 local tracer = {
     level=0,
     pcall_level=0
@@ -34,6 +36,7 @@ function tracer.updateTraceLevel(debugInfo, event)
         tracer.level = tracer.level + 1
     else
         tracer.level = tracer.level - 1
+        -- be sure we don't reindent too much
         if tracer.level < 0 then
             tracer.level = 0
         end
@@ -49,6 +52,7 @@ end
 --
 function tracer.handlePcall(debugInfo, event)
     if debugInfo.what == "C" and debugInfo.name == "pcall" then
+        -- decision between calling a function or returning from the function
         if event == "call" then
             tracer.pcall_level = tracer.level
         else
@@ -70,7 +74,7 @@ end
 
 
 --
--- Format information about C function call.
+-- Format information about C (native) function call.
 --
 function tracer.formatCCall(event, debugInfo)
     return event .. " " .. (debugInfo.name or "(unknown C)") .. " [" .. debugInfo.what .. "]"
@@ -132,5 +136,7 @@ function tracer.enable()
 end
 
 
+
+-- export all variables and functions
 return tracer
 
