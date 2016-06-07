@@ -56,12 +56,16 @@ function runTestsForBasicCLI {
     ../emend -G                            > show_gendoc_1.out
     ../emend --gendoc                      > show_gendoc_2.out
     ../emend                    ../test/TestJobName.lua > test_job_name_0.out
+
     ../emend -N xyzzy           ../test/TestJobName.lua > test_job_name_1.out
     ../emend --name xyzzy       ../test/TestJobName.lua > test_job_name_2.out
     ../emend -N 42              ../test/TestJobName.lua > test_job_name_3.out
     ../emend --name 42          ../test/TestJobName.lua > test_job_name_4.out
     ../emend -N ""              ../test/TestJobName.lua > test_job_name_5.out
     ../emend --name ""          ../test/TestJobName.lua > test_job_name_6.out
+    ../emend -N "x y"            ../test/TestJobName.lua > test_job_name_7.out
+    ../emend --name "x y"        ../test/TestJobName.lua > test_job_name_8.out
+
     ../emend                    ../test/TestGitRepo.lua > test_git_repo_0.out
     ../emend -g xyzzy           ../test/TestGitRepo.lua > test_git_repo_1.out
     ../emend --git-repo xyzzy   ../test/TestGitRepo.lua > test_git_repo_2.out
@@ -69,6 +73,7 @@ function runTestsForBasicCLI {
     ../emend --git-repo 42      ../test/TestGitRepo.lua > test_git_repo_4.out
     ../emend -g ""              ../test/TestGitRepo.lua > test_git_repo_5.out
     ../emend --git-repo ""      ../test/TestGitRepo.lua > test_git_repo_6.out
+
     ../emend                    ../test/TestGitBranch.lua > test_git_branch_0.out
     ../emend -b xyzzy           ../test/TestGitBranch.lua > test_git_branch_1.out
     ../emend --branch xyzzy     ../test/TestGitBranch.lua > test_git_branch_2.out
@@ -76,6 +81,7 @@ function runTestsForBasicCLI {
     ../emend --branch 42        ../test/TestGitBranch.lua > test_git_branch_4.out
     ../emend -b ""              ../test/TestGitBranch.lua > test_git_branch_5.out
     ../emend --branch ""        ../test/TestGitBranch.lua > test_git_branch_6.out
+
     ../emend                    ../test/TestFrontPageURL.lua > test_front_page_url_0.out
     ../emend -f xyzzy           ../test/TestFrontPageURL.lua > test_front_page_url_1.out
     ../emend --front-page xyzzy ../test/TestFrontPageURL.lua > test_front_page_url_2.out
@@ -83,6 +89,7 @@ function runTestsForBasicCLI {
     ../emend --front-page 42    ../test/TestFrontPageURL.lua > test_front_page_url_4.out
     ../emend -f ""              ../test/TestFrontPageURL.lua > test_front_page_url_5.out
     ../emend --front-page ""    ../test/TestFrontPageURL.lua > test_front_page_url_6.out
+
     ../emend                    ../test/TestJobURL.lua > test_job_url_0.out
     ../emend -j xyzzy           ../test/TestJobURL.lua > test_job_url_1.out
     ../emend --job-url xyzzy    ../test/TestJobURL.lua > test_job_url_2.out
