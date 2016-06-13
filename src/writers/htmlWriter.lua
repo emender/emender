@@ -228,6 +228,7 @@ function htmlWriter.writeHeader(fout, results)
             <h3>]] .. title .. nameAndURL .. [[</h3>
           </div>
 ]] .. getOverallResults(allTests, failedTests) ..
+[[ <br/>Last built: ]] .. os.date("%c") ..
 [[        </div><!--emender-header-->
         <div class="tabbable" id="tabs-1">
           <ul class="nav nav-pills">
