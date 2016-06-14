@@ -47,6 +47,7 @@ jobName = nil
 gitRepo = nil
 gitBranch = nil
 frontPageURL = nil
+changeLogURL = nil
 
 
 
@@ -355,6 +356,7 @@ function main(arg)
     gitBranch    = getopt.getGitBranch(arg)
     frontPageURL = getopt.getFrontPageURL(arg)
     jobURL       = getopt.getJobURL(arg)
+    changeLogURL = getopt.getChangeLogURL(arg)
 
     -- enable trace mode if -T or --trace option is specified on the command line
     if tracingOn then
