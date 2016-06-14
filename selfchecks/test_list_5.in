@@ -30,6 +30,7 @@ Test: TestAssertionMatchesAny
 Test: TestAssertionMatchesNone
 Test: TestAssertionPass
 Test: TestAssertionWarn
+Test: TestChangeLogURL
 Test: TestColorInMessages
 Test: TestComments
 Test: TestDebug
