@@ -31,8 +31,8 @@ TestChangeLogURL = {
 -- Comment bound to the function TestChangeLogURL.testA().
 --
 function TestChangeLogURL.testChangeLogURL()
-    if ChangeLogURL then
-        pass("ChangeLog URL: " .. ChangeLogURL)
+    if changeLogURL then
+        pass("ChangeLog URL: " .. changeLogURL)
     else
         fail("ChangeLog URL is not set!")
     end

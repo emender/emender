@@ -105,6 +105,16 @@ function runTestsForBasicCLI {
     ../emend --job-url ""       ../test/TestJobURL.lua > test_job_url_6.out
     ../emend -j "x y"           ../test/TestJobURL.lua > test_job_url_7.out
     ../emend --job-url "x y"    ../test/TestJobURL.lua > test_job_url_8.out
+
+    ../emend                        ../test/TestChangeLogURL.lua > test_changelog_url_0.out
+    ../emend -C xyzzy               ../test/TestChangeLogURL.lua > test_changelog_url_1.out
+    ../emend --changelog-url xyzzy  ../test/TestChangeLogURL.lua > test_changelog_url_2.out
+    ../emend -C 42                  ../test/TestChangeLogURL.lua > test_changelog_url_3.out
+    ../emend --changelog-url 42     ../test/TestChangeLogURL.lua > test_changelog_url_4.out
+    ../emend -C ""                  ../test/TestChangeLogURL.lua > test_changelog_url_5.out
+    ../emend --changelog-url ""     ../test/TestChangeLogURL.lua > test_changelog_url_6.out
+    ../emend -C "x y"               ../test/TestChangeLogURL.lua > test_changelog_url_7.out
+    ../emend --changelog-url "x y"  ../test/TestChangeLogURL.lua > test_changelog_url_8.out
 }
 
 
