@@ -200,7 +200,8 @@ function getopt.getUnknownOptions(options)
                           "S", "service",   "N", "name",      "f", "front-page",
                           "j", "job-url",   "g", "git-repo",  "b", "branch",
                           "clean-emender-workdir", "clean-book-workdirs",
-                          "clean-current-workdir"}
+                          "clean-current-workdir",
+                          "C", "changelog-url"}
 
     -- we are going to modify table two times, so let's made a copy of it
     local unknownOptions = table.copy(options)
@@ -325,6 +326,15 @@ function getOptionParameter(arg, shortName, longName)
     end
 
     return nil
+end
+
+
+
+--
+-- Try to recognize ChangeLog URL
+--
+function getopt.getChangeLogURL(arg)
+    return getOptionParameter(arg, "-C", "--changelog-url")
 end
 
 
