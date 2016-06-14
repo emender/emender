@@ -21,5 +21,6 @@ Usage: emend [-clsvDT] [-o FILE] [-t TAG...] [FILE...]
 -g, --git-repo      GIT repo specification (optional)
 -b, --branch        GIT branch specification (optional)
 -f, --front-page    URL to Emender front page (optional, will be used in test reports)
+-C, --changelog-url URL to ChangeLog (optional, will be used in test reports)
     --Xparam=value  any parameter that is passed to the test
 
