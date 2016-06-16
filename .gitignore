@@ -8,3 +8,5 @@ selfchecks/bootstrap
 selfchecks/flotr
 bootstrap/
 flotr/
+*.html
+*.css
