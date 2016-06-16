@@ -199,6 +199,19 @@ end
 
 
 --
+-- Add link to ChangeLog into the HTML page.
+--
+function changeLogPart()
+    if changeLogURL then
+        return "<br /><a href='" .. changeLogURL .."'>ChangeLog</a>"
+    else
+        return ""
+    end
+end
+
+
+
+--
 -- Write HTML header and the first part of HTML body, including tablist on the left side.
 --
 function htmlWriter.writeHeader(fout, results)
@@ -229,6 +242,7 @@ function htmlWriter.writeHeader(fout, results)
           </div>
 ]] .. getOverallResults(allTests, failedTests) ..
 [[ <br/>Last built: ]] .. os.date("%c") ..
+changeLogPart() ..
 [[        </div><!--emender-header-->
         <div class="tabbable" id="tabs-1">
           <ul class="nav nav-pills">
