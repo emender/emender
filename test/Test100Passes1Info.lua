@@ -31,25 +31,25 @@ Test100Passes1Info = {
 
 
 --
--- This function calls pass() 100 times and info() only once.
+-- This function calls pass() 100 times and warn() only once.
 --
 function Test100Passes1Info.testA()
     -- call pass() 100 times
     for i = 1, 100 do
         pass("Pass#" .. i)
     end
-    -- call info() once
-    info("Info message")
+    -- call warn() once
+    warn("Info message")
 end
 
 
 
 --
--- This function calls info() once and pass() 100 times.
+-- This function calls warn() once and pass() 100 times.
 --
 function Test100Passes1Info.testB()
-    -- call info() once
-    info("Info message")
+    -- call warn() once
+    warn("Info message")
     -- call pass() 100 times
     for i = 1, 100 do
         pass("Pass#" .. i)
@@ -59,15 +59,15 @@ end
 
 
 --
--- This function pass() 50 times, then info() once and then pass() 50 times.
+-- This function pass() 50 times, then warn() once and then pass() 50 times.
 --
 function Test100Passes1Info.testC()
     -- call pass() 50 times
     for i = 1, 50 do
         pass("Pass#" .. i)
     end
-    -- call info() once
-    info("Info message")
+    -- call warn() once
+    warn("Info message")
     -- call pass() 50 times
     for i = 1, 50 do
         pass("Pass#" .. (i+50))
