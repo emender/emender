@@ -194,6 +194,20 @@ end
 
 
 --
+-- Called for each link() function.
+-- This function calls functions with the same name that should exist for all registered writers.
+--
+function abstractWriter.writeTestLink(testName, message, url)
+    -- loop over all registered writers
+    for _, outputFileStruct in pairs(abstractWriter.outputFileStructs) do
+        local writer, fout = abstractWriter.getWriterAndFout(outputFileStruct)
+        writer.writeTestLink(fout, testName, message, url)
+    end
+end
+
+
+
+--
 -- Called for each debug() function.
 -- This function calls functions with the same name that should exist for all registered writers.
 --

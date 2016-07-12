@@ -129,6 +129,15 @@ end
 
 
 --
+-- Do nothing:
+--
+function summaryWriter.writeTestLink(fout, testName, message, url)
+    return
+end
+
+
+
+--
 -- Setup color output or no color output.
 --
 function summaryWriter.setColorOutput(colorOutput)

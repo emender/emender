@@ -124,6 +124,16 @@ end
 --
 -- Write the test tag with the result attribute set to 'info' to the file:
 --
+function junitWriter.writeTestLink(fout, testName, message, url)
+    -- do nothing
+    return
+end
+
+
+
+--
+-- Write the test tag with the result attribute set to 'info' to the file:
+--
 function junitWriter.writeTestDebug(fout, testName, message)
     -- do nothing
     return

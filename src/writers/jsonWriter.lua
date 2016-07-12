@@ -162,6 +162,21 @@ end
 --
 -- Write the test result to the file:
 --
+function textWriter.writeTestLink(fout, testName, message,  url)
+    local explanation = message[2]
+    textWriter.testStepSeparator(fout)
+    fout:write("            {\n")
+    fout:write("                \"status\":  \"link\",\n")
+    fout:write("                \"message\": \"" .. explanation .. "\",\n")
+    fout:write("                \"url\": \"" .. url .. "\"\n")
+    fout:write("            }")
+end
+
+
+
+--
+-- Write the test result to the file:
+--
 function textWriter.writeTestDebug(fout, testName, message)
     local explanation = message[2]
     textWriter.testStepSeparator(fout)
