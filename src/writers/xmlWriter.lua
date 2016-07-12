@@ -28,11 +28,15 @@ local xmlWriter = {
 --
 -- Write the result of a single test function to the file:
 --
-function xmlWriter.writeTestResult(fout, result, explanation)
+function xmlWriter.writeTestResult(fout, result, explanation, url)
     -- get rid of all unwanted special HTML/XML characters
     -- -> use corresponding HTML/XML entities instead
     local escapedHTML = explanation:escapeHTML()
-    fout:write('      <test result="' .. result .. '">' .. escapedHTML .. '</test>\n')
+    if not url then
+        fout:write('      <test result="' .. result .. '">' .. escapedHTML .. '</test>\n')
+    else
+        fout:write('      <test result="' .. result .. '"><link url="' .. url .. '">' .. escapedHTML .. '</link></test>\n')
+    end
 end
 
 
@@ -158,6 +162,16 @@ end
 function xmlWriter.writeTestInfo(fout, testName, message)
     local explanation = message[2]
     xmlWriter.writeTestResult(fout, 'info', explanation)
+end
+
+
+
+--
+-- Write the test tag with the result attribute set to 'link' to the file:
+--
+function xmlWriter.writeTestLink(fout, testName, message, url)
+    local explanation = message[2]
+    xmlWriter.writeTestResult(fout, 'link', explanation, url)
 end
 
 

@@ -636,6 +636,26 @@ end
 --
 -- Write the test result to the HTML file.
 --
+function writeTestMessageWithURL(fout, message, url)
+    local msgStatus = message[1]
+    local explanation = message[2]
+    -- get rid of all unwanted special HTML characters
+    -- -> use corresponding HTML entities instead
+    local escapedHTML = highlightMessage(explanation:escapeHTML())
+    local class = msgStatus:lower()
+    fout:write([[
+                        <tr>
+                          <td class="result ]] .. class .. [[">]] .. msgStatus .. [[</td>
+                          <td><a href=']] .. url .. [['>]] .. escapedHTML .. [[</a></td>
+                        </tr>
+]])
+end
+
+
+
+--
+-- Write the test result to the HTML file.
+--
 function htmlWriter.writeTestPass(fout, testName, message)
     writeTestMessage(fout, message)
 end
@@ -674,6 +694,15 @@ end
 --
 function htmlWriter.writeTestError(fout, testName, message)
     writeTestMessage(fout, message)
+end
+
+
+
+--
+-- Write the test result to the HTML file.
+--
+function htmlWriter.writeTestLink(fout, testName, message, url)
+    writeTestMessageWithURL(fout, message, url)
 end
 
 
