@@ -68,10 +68,12 @@ td {
 .pass { color: #5cb85c; }
 .fail { color: #d9534f; }
 .info { color: #f0ad4e; }
+.link { color: #4eadf0; }
 .norun { color: gray; }
 .pass,
 .fail,
-.info {
+.info,
+.link {
   font-weight: bold;
 }
 .nav-pills .bullet {
