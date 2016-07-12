@@ -276,6 +276,16 @@ end
 
 
 --
+-- This function could be call from the test machinery
+-- to register message with the link.
+--
+function registerLinkMessage(message, url)
+    table.insert(core.messages, {"LINK", message, url})
+end
+
+
+
+--
 -- Called by the test machinery to mark the current test case failure.
 --
 function markTestFailure()

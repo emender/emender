@@ -102,12 +102,15 @@ function exportResults(outputFiles, colorOutput, selectedWriter, results)
             for _,message in ipairs(testCase.messages) do
                 local status = message[1]
                 local messageText = message[2]
+                local url = message[3]
                 if status == "PASS" then
                     selectedWriter.writeTestPass(testName, message, colorOutput)
                 elseif status == "FAIL" then
                     selectedWriter.writeTestFail(testName, message, colorOutput)
                 elseif status == "INFO" then
                     selectedWriter.writeTestInfo(testName, message, colorOutput)
+                elseif status == "LINK" then
+                    selectedWriter.writeTestLink(testName, message, url, colorOutput)
                 elseif status == "ERROR" then
                     if messageText then
                         selectedWriter.writeTestError(testName, message, colorOutput)
