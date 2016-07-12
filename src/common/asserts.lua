@@ -682,6 +682,45 @@ end
 
 
 --
+-- Show link (messsage+URL)
+--
+function link(message, url)
+    -- Verify that <message> is specified:
+    if message == nil then
+        -- if parameters are missing or incorrect, error should be reported immediately
+        report_error_in_test_structure("Message is a required argument.")
+        return
+    end
+
+    -- Verify that <url> is specified:
+    if url == nil then
+        -- if parameters are missing or incorrect, error should be reported immediately
+        report_error_in_test_structure("Url is a required argument.")
+        return
+    end
+
+    -- Verify that <message> is a string:
+    if type(message) ~= "string" then
+        -- if parameters are missing or incorrect, error should be reported immediately
+        report_error_in_test_structure("Message must be a string.")
+        return
+    end
+
+    -- Verify that <url> is a string:
+    if type(url) ~= "string" then
+        -- if parameters are missing or incorrect, error should be reported immediately
+        report_error_in_test_structure("Url must be a string.")
+        return
+    end
+
+    -- test structure is ok, let register status with its message
+    writeTestLink(io.stdout, nil, message, url, colorOutput)
+    registerLinkMessage(message, url)
+end
+
+
+
+--
 -- Calls pass() when at least one match is found in the given list.
 -- warn() is called instead.
 --
