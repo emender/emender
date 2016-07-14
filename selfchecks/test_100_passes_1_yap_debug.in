@@ -1,0 +1,340 @@
+---------------------------------------------------------------------------
+                          :: Test100Passes1Yap ::
+---------------------------------------------------------------------------
+
+  Description:     Check that graphs are rendered correctly.
+  Authors:         Pavel Tisnovsky
+  Emails:          ptisnovs@redhat.com
+  Last Modified:   2015-12-08
+  Tags:            BasicTest, SmokeTest
+  Required tools:  
+
+  Test Case: testA
+
+    [ PASS ]  Pass#1
+    [ PASS ]  Pass#2
+    [ PASS ]  Pass#3
+    [ PASS ]  Pass#4
+    [ PASS ]  Pass#5
+    [ PASS ]  Pass#6
+    [ PASS ]  Pass#7
+    [ PASS ]  Pass#8
+    [ PASS ]  Pass#9
+    [ PASS ]  Pass#10
+    [ PASS ]  Pass#11
+    [ PASS ]  Pass#12
+    [ PASS ]  Pass#13
+    [ PASS ]  Pass#14
+    [ PASS ]  Pass#15
+    [ PASS ]  Pass#16
+    [ PASS ]  Pass#17
+    [ PASS ]  Pass#18
+    [ PASS ]  Pass#19
+    [ PASS ]  Pass#20
+    [ PASS ]  Pass#21
+    [ PASS ]  Pass#22
+    [ PASS ]  Pass#23
+    [ PASS ]  Pass#24
+    [ PASS ]  Pass#25
+    [ PASS ]  Pass#26
+    [ PASS ]  Pass#27
+    [ PASS ]  Pass#28
+    [ PASS ]  Pass#29
+    [ PASS ]  Pass#30
+    [ PASS ]  Pass#31
+    [ PASS ]  Pass#32
+    [ PASS ]  Pass#33
+    [ PASS ]  Pass#34
+    [ PASS ]  Pass#35
+    [ PASS ]  Pass#36
+    [ PASS ]  Pass#37
+    [ PASS ]  Pass#38
+    [ PASS ]  Pass#39
+    [ PASS ]  Pass#40
+    [ PASS ]  Pass#41
+    [ PASS ]  Pass#42
+    [ PASS ]  Pass#43
+    [ PASS ]  Pass#44
+    [ PASS ]  Pass#45
+    [ PASS ]  Pass#46
+    [ PASS ]  Pass#47
+    [ PASS ]  Pass#48
+    [ PASS ]  Pass#49
+    [ PASS ]  Pass#50
+    [ PASS ]  Pass#51
+    [ PASS ]  Pass#52
+    [ PASS ]  Pass#53
+    [ PASS ]  Pass#54
+    [ PASS ]  Pass#55
+    [ PASS ]  Pass#56
+    [ PASS ]  Pass#57
+    [ PASS ]  Pass#58
+    [ PASS ]  Pass#59
+    [ PASS ]  Pass#60
+    [ PASS ]  Pass#61
+    [ PASS ]  Pass#62
+    [ PASS ]  Pass#63
+    [ PASS ]  Pass#64
+    [ PASS ]  Pass#65
+    [ PASS ]  Pass#66
+    [ PASS ]  Pass#67
+    [ PASS ]  Pass#68
+    [ PASS ]  Pass#69
+    [ PASS ]  Pass#70
+    [ PASS ]  Pass#71
+    [ PASS ]  Pass#72
+    [ PASS ]  Pass#73
+    [ PASS ]  Pass#74
+    [ PASS ]  Pass#75
+    [ PASS ]  Pass#76
+    [ PASS ]  Pass#77
+    [ PASS ]  Pass#78
+    [ PASS ]  Pass#79
+    [ PASS ]  Pass#80
+    [ PASS ]  Pass#81
+    [ PASS ]  Pass#82
+    [ PASS ]  Pass#83
+    [ PASS ]  Pass#84
+    [ PASS ]  Pass#85
+    [ PASS ]  Pass#86
+    [ PASS ]  Pass#87
+    [ PASS ]  Pass#88
+    [ PASS ]  Pass#89
+    [ PASS ]  Pass#90
+    [ PASS ]  Pass#91
+    [ PASS ]  Pass#92
+    [ PASS ]  Pass#93
+    [ PASS ]  Pass#94
+    [ PASS ]  Pass#95
+    [ PASS ]  Pass#96
+    [ PASS ]  Pass#97
+    [ PASS ]  Pass#98
+    [ PASS ]  Pass#99
+    [ PASS ]  Pass#100
+    [ DEBUG ]  yap message
+
+  Test Case: testB
+
+    [ DEBUG ]  yap message
+    [ PASS ]  Pass#1
+    [ PASS ]  Pass#2
+    [ PASS ]  Pass#3
+    [ PASS ]  Pass#4
+    [ PASS ]  Pass#5
+    [ PASS ]  Pass#6
+    [ PASS ]  Pass#7
+    [ PASS ]  Pass#8
+    [ PASS ]  Pass#9
+    [ PASS ]  Pass#10
+    [ PASS ]  Pass#11
+    [ PASS ]  Pass#12
+    [ PASS ]  Pass#13
+    [ PASS ]  Pass#14
+    [ PASS ]  Pass#15
+    [ PASS ]  Pass#16
+    [ PASS ]  Pass#17
+    [ PASS ]  Pass#18
+    [ PASS ]  Pass#19
+    [ PASS ]  Pass#20
+    [ PASS ]  Pass#21
+    [ PASS ]  Pass#22
+    [ PASS ]  Pass#23
+    [ PASS ]  Pass#24
+    [ PASS ]  Pass#25
+    [ PASS ]  Pass#26
+    [ PASS ]  Pass#27
+    [ PASS ]  Pass#28
+    [ PASS ]  Pass#29
+    [ PASS ]  Pass#30
+    [ PASS ]  Pass#31
+    [ PASS ]  Pass#32
+    [ PASS ]  Pass#33
+    [ PASS ]  Pass#34
+    [ PASS ]  Pass#35
+    [ PASS ]  Pass#36
+    [ PASS ]  Pass#37
+    [ PASS ]  Pass#38
+    [ PASS ]  Pass#39
+    [ PASS ]  Pass#40
+    [ PASS ]  Pass#41
+    [ PASS ]  Pass#42
+    [ PASS ]  Pass#43
+    [ PASS ]  Pass#44
+    [ PASS ]  Pass#45
+    [ PASS ]  Pass#46
+    [ PASS ]  Pass#47
+    [ PASS ]  Pass#48
+    [ PASS ]  Pass#49
+    [ PASS ]  Pass#50
+    [ PASS ]  Pass#51
+    [ PASS ]  Pass#52
+    [ PASS ]  Pass#53
+    [ PASS ]  Pass#54
+    [ PASS ]  Pass#55
+    [ PASS ]  Pass#56
+    [ PASS ]  Pass#57
+    [ PASS ]  Pass#58
+    [ PASS ]  Pass#59
+    [ PASS ]  Pass#60
+    [ PASS ]  Pass#61
+    [ PASS ]  Pass#62
+    [ PASS ]  Pass#63
+    [ PASS ]  Pass#64
+    [ PASS ]  Pass#65
+    [ PASS ]  Pass#66
+    [ PASS ]  Pass#67
+    [ PASS ]  Pass#68
+    [ PASS ]  Pass#69
+    [ PASS ]  Pass#70
+    [ PASS ]  Pass#71
+    [ PASS ]  Pass#72
+    [ PASS ]  Pass#73
+    [ PASS ]  Pass#74
+    [ PASS ]  Pass#75
+    [ PASS ]  Pass#76
+    [ PASS ]  Pass#77
+    [ PASS ]  Pass#78
+    [ PASS ]  Pass#79
+    [ PASS ]  Pass#80
+    [ PASS ]  Pass#81
+    [ PASS ]  Pass#82
+    [ PASS ]  Pass#83
+    [ PASS ]  Pass#84
+    [ PASS ]  Pass#85
+    [ PASS ]  Pass#86
+    [ PASS ]  Pass#87
+    [ PASS ]  Pass#88
+    [ PASS ]  Pass#89
+    [ PASS ]  Pass#90
+    [ PASS ]  Pass#91
+    [ PASS ]  Pass#92
+    [ PASS ]  Pass#93
+    [ PASS ]  Pass#94
+    [ PASS ]  Pass#95
+    [ PASS ]  Pass#96
+    [ PASS ]  Pass#97
+    [ PASS ]  Pass#98
+    [ PASS ]  Pass#99
+    [ PASS ]  Pass#100
+
+  Test Case: testC
+
+    [ PASS ]  Pass#1
+    [ PASS ]  Pass#2
+    [ PASS ]  Pass#3
+    [ PASS ]  Pass#4
+    [ PASS ]  Pass#5
+    [ PASS ]  Pass#6
+    [ PASS ]  Pass#7
+    [ PASS ]  Pass#8
+    [ PASS ]  Pass#9
+    [ PASS ]  Pass#10
+    [ PASS ]  Pass#11
+    [ PASS ]  Pass#12
+    [ PASS ]  Pass#13
+    [ PASS ]  Pass#14
+    [ PASS ]  Pass#15
+    [ PASS ]  Pass#16
+    [ PASS ]  Pass#17
+    [ PASS ]  Pass#18
+    [ PASS ]  Pass#19
+    [ PASS ]  Pass#20
+    [ PASS ]  Pass#21
+    [ PASS ]  Pass#22
+    [ PASS ]  Pass#23
+    [ PASS ]  Pass#24
+    [ PASS ]  Pass#25
+    [ PASS ]  Pass#26
+    [ PASS ]  Pass#27
+    [ PASS ]  Pass#28
+    [ PASS ]  Pass#29
+    [ PASS ]  Pass#30
+    [ PASS ]  Pass#31
+    [ PASS ]  Pass#32
+    [ PASS ]  Pass#33
+    [ PASS ]  Pass#34
+    [ PASS ]  Pass#35
+    [ PASS ]  Pass#36
+    [ PASS ]  Pass#37
+    [ PASS ]  Pass#38
+    [ PASS ]  Pass#39
+    [ PASS ]  Pass#40
+    [ PASS ]  Pass#41
+    [ PASS ]  Pass#42
+    [ PASS ]  Pass#43
+    [ PASS ]  Pass#44
+    [ PASS ]  Pass#45
+    [ PASS ]  Pass#46
+    [ PASS ]  Pass#47
+    [ PASS ]  Pass#48
+    [ PASS ]  Pass#49
+    [ PASS ]  Pass#50
+    [ DEBUG ]  yap message
+    [ PASS ]  Pass#51
+    [ PASS ]  Pass#52
+    [ PASS ]  Pass#53
+    [ PASS ]  Pass#54
+    [ PASS ]  Pass#55
+    [ PASS ]  Pass#56
+    [ PASS ]  Pass#57
+    [ PASS ]  Pass#58
+    [ PASS ]  Pass#59
+    [ PASS ]  Pass#60
+    [ PASS ]  Pass#61
+    [ PASS ]  Pass#62
+    [ PASS ]  Pass#63
+    [ PASS ]  Pass#64
+    [ PASS ]  Pass#65
+    [ PASS ]  Pass#66
+    [ PASS ]  Pass#67
+    [ PASS ]  Pass#68
+    [ PASS ]  Pass#69
+    [ PASS ]  Pass#70
+    [ PASS ]  Pass#71
+    [ PASS ]  Pass#72
+    [ PASS ]  Pass#73
+    [ PASS ]  Pass#74
+    [ PASS ]  Pass#75
+    [ PASS ]  Pass#76
+    [ PASS ]  Pass#77
+    [ PASS ]  Pass#78
+    [ PASS ]  Pass#79
+    [ PASS ]  Pass#80
+    [ PASS ]  Pass#81
+    [ PASS ]  Pass#82
+    [ PASS ]  Pass#83
+    [ PASS ]  Pass#84
+    [ PASS ]  Pass#85
+    [ PASS ]  Pass#86
+    [ PASS ]  Pass#87
+    [ PASS ]  Pass#88
+    [ PASS ]  Pass#89
+    [ PASS ]  Pass#90
+    [ PASS ]  Pass#91
+    [ PASS ]  Pass#92
+    [ PASS ]  Pass#93
+    [ PASS ]  Pass#94
+    [ PASS ]  Pass#95
+    [ PASS ]  Pass#96
+    [ PASS ]  Pass#97
+    [ PASS ]  Pass#98
+    [ PASS ]  Pass#99
+    [ PASS ]  Pass#100
+
+  Test Summary                                                            
+
+    Executed Test Cases: 3
+    Passed Test Cases:   3
+    Failed Test Cases:   0
+    Encountered Errors:  0
+    Overall Result:      PASS
+
+---------------------------------------------------------------------------
+                               :: Summary ::
+---------------------------------------------------------------------------
+
+  Executed Tests: 1
+  Passed Tests:   1
+  Failed Tests:   0
+  Overall Result: PASS
+
