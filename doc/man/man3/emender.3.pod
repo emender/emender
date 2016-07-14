@@ -344,6 +344,14 @@ Replace I<message> with a short message. For example:
 
   warn("The sentence does not start with a capital letter")
 
+=item B<yap>(I<message>)
+
+Logs message in the debug mode.
+
+=item B<link>(I<message>, I<link>)
+
+Adds link to the generated test output.
+
 =back
 
 =head2 Helper Methods
