@@ -222,29 +222,31 @@ function runTestsWithBadOutputFormat {
 
 # Run Emender with some example tests with known output
 function runTestExamples {
-     ../emend ../test/TestEmpty.lua             > test_empty.out
-     ../emend ../test/TestSetUp.lua             > test_setup.out
-     ../emend ../test/TestSetUpOnly.lua         > test_setup_only.out
-     ../emend ../test/TestSetUpTearDown.lua     > test_setup_teardown.out
-     ../emend ../test/TestSetUpTearDownOnly.lua > test_setup_teardown_only.out
-     ../emend ../test/TestSetUpFailure.lua      > test_setup_failure.out
-     ../emend ../test/TestSetUpOnlyFailure.lua  > test_setup_only_failure.out
-     ../emend ../test/TestTearDown.lua          > test_teardown.out
-     ../emend ../test/TestTearDownOnly.lua      > test_teardown_only.out
-     ../emend ../test/TestPassFail.lua          > test_pass_fail.out
-     ../emend ../test/Test100Passes1Fail.lua    > test_100_passes_1_fail.out
-     ../emend ../test/Test100Passes1Info.lua    > test_100_passes_1_info.out
-     ../emend ../test/Test100Passes1Link.lua    > test_100_passes_1_link.out
-     ../emend ../test/Test100Passes1Yap.lua     > test_100_passes_1_yap.out
-     ../emend -D ../test/Test100Passes1Yap.lua  > test_100_passes_1_yap_debug.out
-     ../emend ../test/Test100Failures1Pass.lua  > test_100_failures_1_pass.out
-     ../emend ../test/Test100Failures1Info.lua  > test_100_failures_1_info.out
-     ../emend ../test/Test100Failures1Link.lua  > test_100_failures_1_link.out
-     ../emend ../test/Test100Infos1Pass.lua     > test_100_infos_1_pass.out
-     ../emend ../test/Test100Infos1Fail.lua     > test_100_infos_1_fail.out
-     ../emend ../test/Test1Pass.lua             > test_1_pass.out
-     ../emend ../test/Test1Fail.lua             > test_1_fail.out
-     ../emend ../test/Test1Info.lua             > test_1_info.out
+     ../emend ../test/TestEmpty.lua              > test_empty.out
+     ../emend ../test/TestSetUp.lua              > test_setup.out
+     ../emend ../test/TestSetUpOnly.lua          > test_setup_only.out
+     ../emend ../test/TestSetUpTearDown.lua      > test_setup_teardown.out
+     ../emend ../test/TestSetUpTearDownOnly.lua  > test_setup_teardown_only.out
+     ../emend ../test/TestSetUpFailure.lua       > test_setup_failure.out
+     ../emend ../test/TestSetUpOnlyFailure.lua   > test_setup_only_failure.out
+     ../emend ../test/TestTearDown.lua           > test_teardown.out
+     ../emend ../test/TestTearDownOnly.lua       > test_teardown_only.out
+     ../emend ../test/TestPassFail.lua           > test_pass_fail.out
+     ../emend ../test/Test100Passes1Fail.lua     > test_100_passes_1_fail.out
+     ../emend ../test/Test100Passes1Info.lua     > test_100_passes_1_info.out
+     ../emend ../test/Test100Passes1Link.lua     > test_100_passes_1_link.out
+     ../emend ../test/Test100Passes1Yap.lua      > test_100_passes_1_yap.out
+     ../emend -D ../test/Test100Passes1Yap.lua   > test_100_passes_1_yap_debug.out
+     ../emend ../test/Test100Failures1Pass.lua   > test_100_failures_1_pass.out
+     ../emend ../test/Test100Failures1Info.lua   > test_100_failures_1_info.out
+     ../emend ../test/Test100Failures1Link.lua   > test_100_failures_1_link.out
+     ../emend ../test/Test100Failures1Yap.lua    > test_100_failures_1_yap.out
+     ../emend -D ../test/Test100Failures1Yap.lua > test_100_failures_1_yap_debug.out
+     ../emend ../test/Test100Infos1Pass.lua      > test_100_infos_1_pass.out
+     ../emend ../test/Test100Infos1Fail.lua      > test_100_infos_1_fail.out
+     ../emend ../test/Test1Pass.lua              > test_1_pass.out
+     ../emend ../test/Test1Fail.lua              > test_1_fail.out
+     ../emend ../test/Test1Info.lua              > test_1_info.out
 }
 
 
