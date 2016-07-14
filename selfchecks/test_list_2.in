@@ -3,11 +3,14 @@ Test: Test100Failures1Link
 Test: Test100Failures1Pass
 Test: Test100Failures1Yap
 Test: Test100Infos1Fail
+Test: Test100Infos1Link
 Test: Test100Infos1Pass
 Test: Test100Infos1Yap
 Test: Test100Links1Fail
 Test: Test100Links1Info
 Test: Test100Links1Pass
+Test: Test100Links1Yap
 Test: Test100Passes1Fail
 Test: Test100Passes1Info
+Test: Test100Passes1Link
 Test: Test100Passes1Yap

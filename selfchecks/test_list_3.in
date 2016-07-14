@@ -11,6 +11,7 @@ Test: TestAssertionIsTrue
 Test: TestAssertionIsType
 Test: TestAssertionIsUnequal
 Test: TestAssertionIsUnlike
+Test: TestAssertionLink
 Test: TestAssertionMatchesAny
 Test: TestAssertionMatchesNone
 Test: TestAssertionPass
