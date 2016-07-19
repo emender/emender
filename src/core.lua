@@ -810,6 +810,7 @@ function core.runTests(verboseOperation, colorOutput, testsToRun, outputFiles, t
                     core.results.passedTests = core.results.passedTests + 1
                 else
                     core.results.failedTests = core.results.failedTests + 1
+                    returnValue = false
                 end
             end
         end
@@ -830,6 +831,7 @@ function core.runTests(verboseOperation, colorOutput, testsToRun, outputFiles, t
                         core.results.passedTests = core.results.passedTests + 1
                     else
                         core.results.failedTests = core.results.failedTests + 1
+                        returnValue = false
                     end
                 end
             end
