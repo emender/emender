@@ -60,6 +60,10 @@ end
 --
 function textWriter.writeHeader(fout, results)
     fout:write('{\n')
+    fout:write('    "metadata" : {\n')
+    fout:write('        "name":"' .. jobName .. '"\n')
+    fout:write('    },\n')
+    fout:write('    "results" : {\n')
     textWriter.firstTestInSuite = true
 end
 
@@ -69,7 +73,8 @@ end
 -- Write the report footer to the file:
 --
 function textWriter.writeFooter(fout, results)
-    fout:write('\n}\n')
+    fout:write('\n    }\n')
+    fout:write('}\n')
 end
 
 
@@ -80,7 +85,7 @@ end
 function textWriter.writeSuiteStart(fout, testSuite)
     local name = testSuite.name
     textWriter.testSeparator(fout)
-    fout:write("    \"" .. name .. "\": {\n")
+    fout:write("        \"" .. name .. "\": {\n")
     textWriter.firstTestCase = true
 end
 
@@ -90,7 +95,7 @@ end
 -- Write the test suite footer to the file:
 --
 function textWriter.writeSuiteEnd(fout, testSuite)
-    fout:write("\n    }")
+    fout:write("\n        }")
 end
 
 
@@ -101,7 +106,7 @@ end
 function textWriter.writeCaseStart(fout, testCase)
     local name = testCase.name
     textWriter.testCaseSeparator(fout)
-    fout:write("        \"" .. name .. "\": [\n")
+    fout:write("            \"" .. name .. "\": [\n")
     textWriter.firstTestStep = true
 end
 
@@ -112,7 +117,7 @@ end
 --
 function textWriter.writeCaseEnd(fout, testCaseInfo)
     fout:write("\n")
-    fout:write("        ]")
+    fout:write("            ]")
 end
 
 
@@ -123,10 +128,10 @@ end
 function textWriter.writeTestPass(fout, testName, message)
     local explanation = message[2]
     textWriter.testStepSeparator(fout)
-    fout:write("            {\n")
-    fout:write("                \"status\":  \"pass\",\n")
-    fout:write("                \"message\": \"" .. explanation .. "\"\n")
-    fout:write("            }")
+    fout:write("                {\n")
+    fout:write("                    \"status\":  \"pass\",\n")
+    fout:write("                    \"message\": \"" .. explanation .. "\"\n")
+    fout:write("                }")
 end
 
 
@@ -137,10 +142,10 @@ end
 function textWriter.writeTestFail(fout, testName, message)
     local explanation = message[2]
     textWriter.testStepSeparator(fout)
-    fout:write("            {\n")
-    fout:write("                \"status\":  \"fail\",\n")
-    fout:write("                \"message\": \"" .. explanation .. "\"\n")
-    fout:write("            }")
+    fout:write("                {\n")
+    fout:write("                    \"status\":  \"fail\",\n")
+    fout:write("                    \"message\": \"" .. explanation .. "\"\n")
+    fout:write("                }")
 end
 
 
@@ -151,10 +156,10 @@ end
 function textWriter.writeTestInfo(fout, testName, message)
     local explanation = message[2]
     textWriter.testStepSeparator(fout)
-    fout:write("            {\n")
-    fout:write("                \"status\":  \"info\",\n")
-    fout:write("                \"message\": \"" .. explanation .. "\"\n")
-    fout:write("            }")
+    fout:write("                {\n")
+    fout:write("                    \"status\":  \"info\",\n")
+    fout:write("                    \"message\": \"" .. explanation .. "\"\n")
+    fout:write("                }")
 end
 
 
@@ -165,11 +170,11 @@ end
 function textWriter.writeTestLink(fout, testName, message,  url)
     local explanation = message[2]
     textWriter.testStepSeparator(fout)
-    fout:write("            {\n")
-    fout:write("                \"status\":  \"link\",\n")
-    fout:write("                \"message\": \"" .. explanation .. "\",\n")
-    fout:write("                \"url\": \"" .. url .. "\"\n")
-    fout:write("            }")
+    fout:write("                {\n")
+    fout:write("                    \"status\":  \"link\",\n")
+    fout:write("                    \"message\": \"" .. explanation .. "\",\n")
+    fout:write("                    \"url\": \"" .. url .. "\"\n")
+    fout:write("                }")
 end
 
 
@@ -180,10 +185,10 @@ end
 function textWriter.writeTestDebug(fout, testName, message)
     local explanation = message[2]
     textWriter.testStepSeparator(fout)
-    fout:write("            {\n")
-    fout:write("                \"status\":  \"debug\",\n")
-    fout:write("                \"message\": \"" .. explanation .. "\"\n")
-    fout:write("            }")
+    fout:write("                {\n")
+    fout:write("                    \"status\":  \"debug\",\n")
+    fout:write("                    \"message\": \"" .. explanation .. "\"\n")
+    fout:write("                }")
 end
 
 
