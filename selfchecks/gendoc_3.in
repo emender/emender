@@ -26,6 +26,7 @@ Generating doc for the following source file:	../src/writers/commonTextWriter.lu
 Generating doc for the following source file:	../src/writers/htmlWriter.lua
 Generating doc for the following source file:	../src/writers/jsonWriter.lua
 Generating doc for the following source file:	../src/writers/junitWriter.lua
+Generating doc for the following source file:	../src/writers/messageWriter.lua
 Generating doc for the following source file:	../src/writers/summaryWriter.lua
 Generating doc for the following source file:	../src/writers/textWriter.lua
 Generating doc for the following source file:	../src/writers/xmlWriter.lua

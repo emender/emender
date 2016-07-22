@@ -1,2 +1,2 @@
 The provided output file name 'out.doc' has wrong extension 'doc'.
-Supported extensions are: .txt, .html, .xml, .junit, .json and .summary.
+Supported extensions are: .txt, .html, .xml, .junit, .json, .summary, and .message.

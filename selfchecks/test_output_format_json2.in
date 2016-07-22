@@ -1,74 +1,79 @@
 {
-    "Test1": {
-        "testA": [
-            {
-                "status":  "pass",
-                "message": "The function Test1.testA() is called properly."
-            }
-        ],
-        "testB": [
-            {
-                "status":  "pass",
-                "message": "The function Test1.testB() is called properly."
-            }
-        ],
-        "testCallOtherFunction": [
-            {
-                "status":  "pass",
-                "message": "The function Test1.xyzzy() is called from another function."
-            }
-        ],
-        "testReadLocalValue": [
-            {
-                "status":  "pass",
-                "message": "Local variable bind to the test has the value 42"
-            }
-        ],
-        "testReadWriteLocalValue": [
-            {
-                "status":  "pass",
-                "message": "Old value is properly set to 42"
-            },
-            {
-                "status":  "pass",
-                "message": "New value is properly set to 42"
-            }
-        ]
+    "metadata" : {
+        "name":"unknown"
     },
-    "Test2": {
-        "testA": [
-            {
-                "status":  "pass",
-                "message": "The function Test2.testA() is called properly."
-            }
-        ],
-        "testB": [
-            {
-                "status":  "pass",
-                "message": "The function Test2.testB() is called properly."
-            }
-        ],
-        "testCallOtherFunction": [
-            {
-                "status":  "pass",
-                "message": "The function Test2.xyzzy() is called from another function."
-            }
-        ],
-        "testReadLocalValue": [
-            {
-                "status":  "pass",
-                "message": "Local variable bind to the test has the value 42"
-            }
-        ],
-        "testReadWriteLocalValue": [
-            {
-                "status":  "pass",
-                "message": "Old value is properly set to 42"
-            },
-            {
-                "status":  "pass",
-                "message": "New value is properly set to 42"
-            }
-        ]
+    "results" : {
+        "Test1": {
+            "testA": [
+                {
+                    "status":  "pass",
+                    "message": "The function Test1.testA() is called properly."
+                }
+            ],
+            "testB": [
+                {
+                    "status":  "pass",
+                    "message": "The function Test1.testB() is called properly."
+                }
+            ],
+            "testCallOtherFunction": [
+                {
+                    "status":  "pass",
+                    "message": "The function Test1.xyzzy() is called from another function."
+                }
+            ],
+            "testReadLocalValue": [
+                {
+                    "status":  "pass",
+                    "message": "Local variable bind to the test has the value 42"
+                }
+            ],
+            "testReadWriteLocalValue": [
+                {
+                    "status":  "pass",
+                    "message": "Old value is properly set to 42"
+                },
+                {
+                    "status":  "pass",
+                    "message": "New value is properly set to 42"
+                }
+            ]
+        },
+        "Test2": {
+            "testA": [
+                {
+                    "status":  "pass",
+                    "message": "The function Test2.testA() is called properly."
+                }
+            ],
+            "testB": [
+                {
+                    "status":  "pass",
+                    "message": "The function Test2.testB() is called properly."
+                }
+            ],
+            "testCallOtherFunction": [
+                {
+                    "status":  "pass",
+                    "message": "The function Test2.xyzzy() is called from another function."
+                }
+            ],
+            "testReadLocalValue": [
+                {
+                    "status":  "pass",
+                    "message": "Local variable bind to the test has the value 42"
+                }
+            ],
+            "testReadWriteLocalValue": [
+                {
+                    "status":  "pass",
+                    "message": "Old value is properly set to 42"
+                },
+                {
+                    "status":  "pass",
+                    "message": "New value is properly set to 42"
+                }
+            ]
+        }
     }
 }
