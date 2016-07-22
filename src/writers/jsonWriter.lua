@@ -61,7 +61,7 @@ end
 function textWriter.writeHeader(fout, results)
     fout:write('{\n')
     fout:write('    "metadata" : {\n')
-    fout:write('        "name":"' .. jobName .. '"\n')
+    fout:write('        "name":"' .. (jobName or "unknown") .. '"\n')
     fout:write('    },\n')
     fout:write('    "results" : {\n')
     textWriter.firstTestInSuite = true
