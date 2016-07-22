@@ -39,6 +39,7 @@ local textWriter = nil
 local junitWriter = nil
 local jsonWriter = nil
 local summaryWriter = nil
+local messageWriter = nil
 local textExporter = nil
 local debugMode = nil
 local service = nil
@@ -187,6 +188,7 @@ function loadModulesAndInitReferences()
     junitWriter =       require("src/writers/junitWriter")
     jsonWriter =        require("src/writers/jsonWriter")
     summaryWriter =     require("src/writers/summaryWriter")
+    messageWriter =     require("src/writers/messageWriter")
     checkTools =        require("src/checkTools")
     service =           require("src/service")
 end
@@ -329,7 +331,7 @@ function main(arg)
     core.asserts = asserts
     core.writer = abstractWriter
 
-    abstractWriter.registerWriters(htmlWriter, xmlWriter, textWriter, junitWriter, jsonWriter, summaryWriter)
+    abstractWriter.registerWriters(htmlWriter, xmlWriter, textWriter, junitWriter, jsonWriter, summaryWriter, messageWriter)
 
     local options = getopt.getopt(arg, "")
 
