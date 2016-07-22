@@ -282,13 +282,14 @@ end
 --
 -- Function that registers all writers.
 --
-function abstractWriter.registerWriters(htmlWriter, xmlWriter, textWriter, junitWriter, jsonWriter, summaryWriter)
+function abstractWriter.registerWriters(htmlWriter, xmlWriter, textWriter, junitWriter, jsonWriter, summaryWriter, messageWriter)
     abstractWriter.writers["html"] = htmlWriter
     abstractWriter.writers["xml"] = xmlWriter
     abstractWriter.writers["txt"] = textWriter
     abstractWriter.writers["junit"] = junitWriter
     abstractWriter.writers["json"] = jsonWriter
     abstractWriter.writers["summary"] = summaryWriter
+    abstractWriter.writers["message"] = messageWriter
 end
 
 
