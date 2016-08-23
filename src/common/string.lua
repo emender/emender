@@ -341,3 +341,18 @@ function string.getHash(str)
 	return string.trimString(sha256)
 end
 
+function string.splitAt(str, separator)
+    if str then
+        local separatorIndex = str:find(":")
+        local firstPart = str:subs(1, separatorIndex-1)
+        local secondPart = str:subs(1+separatorIndex)
+        return firstPart, secondPart
+    else
+        return nil, nil
+    end
+end
+
+function string.isEmpty(str)
+    return str == ""
+end
+
