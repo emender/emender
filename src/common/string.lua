@@ -323,7 +323,7 @@ end
 
 
 --
---- Function that create sha256 hash from given string.
+-- Function that create sha256 hash from given string.
 --
 --  @param str string from which the hash will be counted.
 --  @return sha256 hash
@@ -341,6 +341,12 @@ function string.getHash(str)
 	return string.trimString(sha256)
 end
 
+
+
+--
+-- Split the string at the separator provided in the second parameter.
+-- If there are more separators found in the string, just the first one is used.
+--
 function string.splitAt(str, separator)
     if str then
         local separatorIndex = str:find(":")
@@ -352,6 +358,11 @@ function string.splitAt(str, separator)
     end
 end
 
+
+
+--
+-- Returns true if and only if the given parameter is empty string. False is returned instead.
+--
 function string.isEmpty(str)
     return str == ""
 end
