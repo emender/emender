@@ -1,0 +1,135 @@
+#!/bin/bash
+
+
+
+#
+# Setup function
+#
+function setup {
+    export TERM=linux
+}
+
+
+
+#
+# If the content directory is not set by the Jenkins, set it to the default value.
+#
+function update_content_directory {
+    if [ -z "$MD_CONTENT_DIRECTORY" ]
+    then
+        MD_CONTENT_DIRECTORY="./"
+    fi
+}
+
+
+
+#
+# Try to read book format from the metadata.ini file. If the file does not exist or format
+# (markup) is not specified, let's assume the format is 'docbook'.
+#
+function read_book_format {
+    if [ -f "$1/metadata.ini" ]
+    then
+        markup=`sed -n 's/markup\s*=\s*\([a-zA-Z]*\)/\1/p' $1/metadata.ini 2> /dev/null`
+        if [ ! -z $markup ]
+        then
+            BOOK_FORMAT=$markup
+        else
+            BOOK_FORMAT="docbook"
+        fi
+    else
+        BOOK_FORMAT="docbook"
+    fi
+}
+
+
+
+#
+# Print information before the Emender is started
+#
+function print_info {
+    echo "*** Emender ***"
+    echo "Job name:          ${JOB_NAME}"
+    echo "Job URL:           ${JOB_URL}"
+    echo "Content directory: ${MD_CONTENT_DIRECTORY}"
+    echo "Other arguments:   $@"
+    echo "Book format:       $BOOK_FORMAT"
+}
+
+
+
+#
+# Convert AsciiBook book into Publican (DocBook) directory structure.
+#
+function convert_asciidoc_to_docbook {
+    # cleanup
+    rm -rf en-US
+    rm -f publican.cfg
+
+    pushd $1 > /dev/null
+
+    # convert the master.adoc file to DocBook 4.5 format
+    export JAVA_HOME=/usr/lib/jvm/java-1.7.0-openjdk/
+    asciidoctor -d book -b docbook45 -a nolang -r asciidoctor-diagram $2.adoc
+
+    # prepare stub for Publican book
+    publican create --name $2
+
+    # try to convert special character to proper apostrophe
+    sed -i.backup "s/&#8217;/'/" $2.xml
+
+    # move the master.xml to the right place
+    mv $2.xml $2/en-US/$2.xml
+
+    # put the resulting DocBook into the common place
+    mv $2/publican.cfg ../
+    mv $2/* ../
+    rm -rf $2
+
+    echo $1 > /dev/null
+    popd
+}
+
+
+
+#
+# Add common content to the tested book
+#
+function add_common_content {
+    mkdir -p en-US/Common_Content
+    cp ~/emender-rhel/test/Legal_Notice.xml en-US/Common_Content
+    cp ~/emender-rhel/test/Conventions.xml en-US/Common_Content
+    cp ~/emender-rhel/test/Feedback.xml en-US/Common_Content
+    cp ~/emender-rhel/test/Program_Listing.xml en-US/Common_Content
+}
+
+
+
+setup
+update_content_directory
+read_book_format $MD_CONTENT_DIRECTORY
+print_info $@
+
+if [ $BOOK_FORMAT == "asciidoc" ]
+then
+    convert_asciidoc_to_docbook ${MD_CONTENT_DIRECTORY} master
+fi
+
+add_common_content
+
+rm -f results.*
+
+TESTS=*.lua
+#TESTS=TestWritingStyle.lua
+#TESTS=CustomerPortalRequirements.lua
+#TESTS=TestPackages.lua
+#TESTS=TestLinks.lua
+
+emend -f Emender_page -c -t Release -t WritingStyle test/${TESTS} -o results.xml -o results.junit -o results.txt -o results.html -o results.json -o results.summary -o results.message -N "${JOB_NAME}" -j "${JOB_URL}" -C ChangeLog_page $@
+
+RESULT=$?
+echo "Result code: ${RESULT}"
+echo "Test result summary: $(cat results.message)"
+cp results.junit junit.xml
+#exit ${RESULT}
+
