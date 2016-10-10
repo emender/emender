@@ -306,6 +306,14 @@
     [ PASS ]  Test if getHash() function returns correct hash.
     [ PASS ]  Test if getHash() function returns correct hash.
 
+  Test Case: testIsEmpty
+
+    [ PASS ]  Test if the function String.isEmpty() is correct
+    [ PASS ]  Test if the function String.isEmpty() is correct
+    [ PASS ]  Test if the function String.isEmpty() is correct
+    [ PASS ]  Test if the function String.isEmpty() is correct
+    [ PASS ]  Test if the function String.isEmpty() is correct
+
   Test Case: testLastIndexOf1
 
     [ PASS ]  Test if lastIndexOf() function works correctly
@@ -484,6 +492,16 @@
   Test Case: testRtrimFunction20
 
     [ PASS ]  Test if rtrim() function works correctly
+
+  Test Case: testSplitAt
+
+    [ PASS ]  Check the first value returned by function string.splitAt()
+    [ PASS ]  Check second value returned by function string.splitAt()
+
+  Test Case: testSplitAt2
+
+    [ PASS ]  Check the first value returned by function string.splitAt()
+    [ PASS ]  Check second value returned by function string.splitAt()
 
   Test Case: testStartsWithFunction01
 
@@ -793,8 +811,8 @@
 
   Test Summary                                                            
 
-    Executed Test Cases: 166
-    Passed Test Cases:   166
+    Executed Test Cases: 169
+    Passed Test Cases:   169
     Failed Test Cases:   0
     Encountered Errors:  0
     Overall Result:      PASS
