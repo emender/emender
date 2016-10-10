@@ -1770,6 +1770,7 @@ function TestModuleString.testAlignCenter6()
 end
 
 
+
 --
 -- Test the behaviour of the following Emender function: string.getHash().
 --
@@ -1778,6 +1779,22 @@ function TestModuleString.testGetHash()
     is_equal("4acf0b39d9c4766709a3689f553ac01ab550545ffa4544dfc0b2cea82fba02a3", string.getHash("testString"), "Test if getHash() function returns correct hash.")
     is_equal("cee06415bd13a5c222a581bea8c083360c9fa9a5b2ab54a3541c63c40c8ad117", string.getHash("/home/user/books/testing"), "Test if getHash() function returns correct hash.")
 end
+
+
+
+--
+-- Test the behaviour of the following Emender function: string.isEmpty().
+--
+function TestModuleString.testIsEmpty()
+    is_true(string.isEmpty(""), "Test if the function String.isEmpty() is correct")
+    -- string with just one space
+    is_false(string.isEmpty(" "), "Test if the function String.isEmpty() is correct")
+    is_false(string.isEmpty("  "), "Test if the function String.isEmpty() is correct")
+    is_false(string.isEmpty("not empty"), "Test if the function String.isEmpty() is correct")
+    -- very long string
+    is_false(string.isEmpty("cee06415bd13a5c222a581bea8c083360c9fa9a5b2ab54a3541c63c40c8ad117"), "Test if the function String.isEmpty() is correct")
+end
+
 
 
 
