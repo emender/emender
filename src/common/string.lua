@@ -348,8 +348,9 @@ end
 -- If there are more separators found in the string, just the first one is used.
 --
 function string.splitAt(str, separator)
+    local sep = separator or ":"
     if str then
-        local separatorIndex = str:find(":")
+        local separatorIndex = str:find(sep)
         local firstPart = str:subs(1, separatorIndex-1)
         local secondPart = str:subs(1+separatorIndex)
         return firstPart, secondPart
