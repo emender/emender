@@ -19,6 +19,7 @@
 EMENDER_PAGE=http://jenkinscat.gsslab.pnq.redhat.com:6502/emender
 EMENDER_CHANGELOG=https://mojo.redhat.com/docs/DOC-1083484
 PATH_TO_TESTS=~/emender-rhel/test/
+CHECK_METADATA_INI_FIRST=0
 
 
 
@@ -49,18 +50,35 @@ function update_content_directory {
 # (markup) is not specified, let's assume the format is 'docbook'.
 #
 function read_book_format {
-    if [ -f "$1/metadata.ini" ]
+    if [[ $CHECK_METADATA_INI_FIRST -eq 1 ]]
     then
-        markup=`sed -n 's/markup\s*=\s*\([a-zA-Z]*\)/\1/p' $1/metadata.ini 2> /dev/null`
-        if [ ! -z $markup ]
+        if [ -f "$1/metadata.ini" ]
         then
-            BOOK_FORMAT=$markup
+            markup=`sed -n 's/markup\s*=\s*\([a-zA-Z]*\)/\1/p' $1/metadata.ini 2> /dev/null`
+            if [ ! -z $markup ]
+            then
+                BOOK_FORMAT=$markup
+            else
+                echo "Can not read $1/metadata.ini, please check repository structure"
+                BOOK_FORMAT="docbook"
+            fi
         else
-            echo "Can not read $1/metadata.ini, please check repository structure"
-            BOOK_FORMAT="docbook"
+            echo "Can not read the following file: find $1/metadata.ini, fallbacking..."
+            if [ -f "$1/master.adoc" ]
+            then
+                echo "Found master.adoc, this guide is written in AsciiDoc"
+                BOOK_FORMAT="asciidoc"
+            elif [ -f "$1/publican.cfg" ]
+            then
+                echo "Found publican.cfg, this guide is written in DocBook"
+                BOOK_FORMAT="docbook"
+            else
+                echo "Can't decide the format..."
+                BOOK_FORMAT="unknown"
+            fi
         fi
     else
-        echo "Can not read the following file: find $1/metadata.ini, fallbacking..."
+        echo "Skipped checking $1/metadata.ini..."
         if [ -f "$1/master.adoc" ]
         then
             echo "Found master.adoc, this guide is written in AsciiDoc"
@@ -70,8 +88,8 @@ function read_book_format {
             echo "Found publican.cfg, this guide is written in DocBook"
             BOOK_FORMAT="docbook"
         else
-            echo "Can't decide the format, let's use DocBook"
-            BOOK_FORMAT="docbook"
+            echo "Can't decide the format..."
+            BOOK_FORMAT="unknown"
         fi
     fi
 }
@@ -102,7 +120,7 @@ function check_basic_directory_structure {
     echo "Checking directory structure"
     check_file publican.cfg
     check_directory en-US
-    check_file en-US/Book_Info.xml
+    #check_file en-US/Book_Info.xml
 }
 
 
