@@ -77,6 +77,35 @@ function read_book_format {
 
 
 
+function check_file {
+    if [ -f $1 ]
+    then
+        echo "file $1 present"
+    else
+        echo "file $1 can not be found"
+        exit 1
+    fi
+}
+
+function check_directory {
+    if [ -d $1 ]
+    then
+        echo "directory $1 present"
+    else
+        echo "directory $1 can not be found"
+        exit 1
+    fi
+}
+
+function check_basic_directory_structure {
+    echo "Checking directory structure"
+    check_file publican.cfg
+    check_directory en-US
+    check_file en-US/Book_Info.xml
+}
+
+
+
 #
 # Print information before the Emender is started
 #
@@ -147,6 +176,8 @@ if [ $BOOK_FORMAT == "asciidoc" ]
 then
     convert_asciidoc_to_docbook ${MD_CONTENT_DIRECTORY} master
 fi
+
+check_basic_directory_structure
 
 add_common_content
 
