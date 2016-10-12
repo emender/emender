@@ -124,6 +124,9 @@ function read_book_format {
 
 
 
+#
+# Check if the specified file exists. If not, error is reported and script ends with exit code=1
+#
 function check_file {
     if [ -f $1 ]
     then
@@ -134,6 +137,11 @@ function check_file {
     fi
 }
 
+
+
+#
+# Check if the specified directory exists. If not, error is reported and script ends with exit code=1
+#
 function check_directory {
     if [ -d $1 ]
     then
@@ -144,11 +152,16 @@ function check_directory {
     fi
 }
 
+
+
+#
+# Check the basic directory structure of the tested guide.
+#
 function check_basic_directory_structure {
     echo "Checking directory structure"
     check_file publican.cfg
     check_directory en-US
-    #check_file en-US/Book_Info.xml
+    #check_file en-US/Book_Info.xml # does not have to exist, primary file can be specified in publican.cfg
 }
 
 
