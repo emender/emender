@@ -15,6 +15,12 @@
 # with this program. If not, see <http://www.gnu.org/licenses/>.
 
 
+# Common configuration options
+EMENDER_PAGE=http://jenkinscat.gsslab.pnq.redhat.com:6502/emender
+EMENDER_CHANGELOG=https://mojo.redhat.com/docs/DOC-1083484
+PATH_TO_TESTS=~/emender-rhel/test/
+
+
 
 #
 # Setup function
