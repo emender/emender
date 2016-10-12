@@ -175,6 +175,22 @@ function convert_asciidoc_to_docbook {
 
 
 
+function update_docbook_repo {
+    if [ "$1" == "./" ]
+    then
+        echo "Content is stored in ./ (book model, not library model)"
+    else
+        echo "Updating docbook repository"
+        # cleanup
+        rm -rf en-US
+        rm -f publican.cfg
+        cp -r "$1/en-US" ./
+        cp "$1/publican.cfg" ./
+    fi
+}
+
+
+
 #
 # Add common content to the tested book
 #
@@ -196,11 +212,16 @@ print_info $@
 if [ $BOOK_FORMAT == "asciidoc" ]
 then
     convert_asciidoc_to_docbook "${MD_CONTENT_DIRECTORY}" master "`pwd`"
+    add_common_content
+fi
+
+if [ $BOOK_FORMAT == "docbook" ]
+then
+    update_docbook_repo "$MD_CONTENT_DIRECTORY"
 fi
 
 check_basic_directory_structure
 
-add_common_content
 
 rm -f results.*
 
