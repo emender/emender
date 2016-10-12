@@ -55,10 +55,23 @@ function read_book_format {
         then
             BOOK_FORMAT=$markup
         else
+            echo "Can not read $1/metadata.ini, please check repository structure"
             BOOK_FORMAT="docbook"
         fi
     else
-        BOOK_FORMAT="docbook"
+        echo "Can not read the following file: find $1/metadata.ini, fallbacking..."
+        if [ -f "$1/master.adoc" ]
+        then
+            echo "Found master.adoc, this guide is written in AsciiDoc"
+            BOOK_FORMAT="asciidoc"
+        elif [ -f "$1/publican.cfg" ]
+        then
+            echo "Found publican.cfg, this guide is written in DocBook"
+            BOOK_FORMAT="docbook"
+        else
+            echo "Can't decide the format, let's use DocBook"
+            BOOK_FORMAT="docbook"
+        fi
     fi
 }
 
