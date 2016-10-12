@@ -27,6 +27,7 @@ PATH_TO_TESTS=~/emender-rhel/test/
 #
 function setup {
     export TERM=linux
+    export JAVA_HOME=/usr/lib/jvm/java-1.7.0-openjdk/
 }
 
 
