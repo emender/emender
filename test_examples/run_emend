@@ -124,6 +124,7 @@ function print_info {
 # Convert AsciiBook book into Publican (DocBook) directory structure.
 #
 function convert_asciidoc_to_docbook {
+    echo "Converting Asciidoc->DocBook"
     # cleanup
     rm -rf en-US
     rm -f publican.cfg
@@ -131,25 +132,26 @@ function convert_asciidoc_to_docbook {
     pushd $1 > /dev/null
 
     # convert the master.adoc file to DocBook 4.5 format
-    export JAVA_HOME=/usr/lib/jvm/java-1.7.0-openjdk/
-    asciidoctor -d book -b docbook45 -a nolang -r asciidoctor-diagram $2.adoc
+    asciidoctor -d book -b docbook45 -a nolang -r asciidoctor-diagram "$2.adoc"
 
     # prepare stub for Publican book
-    publican create --name $2
+    publican create --name "$2"
 
     # try to convert special character to proper apostrophe
-    sed -i.backup "s/&#8217;/'/" $2.xml
+    sed -i.backup "s/&#8217;/'/" "$2.xml"
 
     # move the master.xml to the right place
-    mv $2.xml $2/en-US/$2.xml
+    mv "$2.xml" "$2/en-US/$2.xml"
 
     # put the resulting DocBook into the common place
-    mv $2/publican.cfg ../
-    mv $2/* ../
-    rm -rf $2
+    echo "Moving document tree into the following directory $3"
+    mv "$2/publican.cfg" "$3/"
+    mv "$2/en-US" "$3"
 
-    echo $1 > /dev/null
-    popd
+    # cleanup the directory created by "publican create"
+    rm -rf "$2"
+
+    popd > /dev/null
 }
 
 
@@ -174,7 +176,7 @@ print_info $@
 
 if [ $BOOK_FORMAT == "asciidoc" ]
 then
-    convert_asciidoc_to_docbook ${MD_CONTENT_DIRECTORY} master
+    convert_asciidoc_to_docbook "${MD_CONTENT_DIRECTORY}" master "`pwd`"
 fi
 
 check_basic_directory_structure
