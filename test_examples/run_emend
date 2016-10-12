@@ -185,13 +185,24 @@ add_common_content
 
 rm -f results.*
 
-TESTS=*.lua
 #TESTS=TestWritingStyle.lua
 #TESTS=CustomerPortalRequirements.lua
 #TESTS=TestPackages.lua
 #TESTS=TestLinks.lua
 
-emend -f Emender_page -c -t Release -t WritingStyle test/${TESTS} -o results.xml -o results.junit -o results.txt -o results.html -o results.json -o results.summary -o results.message -N "${JOB_NAME}" -j "${JOB_URL}" -C ChangeLog_page $@
+if [ $BOOK_FORMAT == "docbook" ]
+then
+    TESTS=${PATH_TO_TESTS}/*.lua
+elif [ $BOOK_FORMAT == "asciidoc" ]
+then
+    TESTS="${PATH_TO_TESTS}/CustomerPortalRequirements.lua ${PATH_TO_TESTS}/GuideStatistic.lua ${PATH_TO_TESTS}/TestLinks.lua ${PATH_TO_TESTS}/TestWritingStyle.lua"
+else
+    TESTS=${PATH_TO_TESTS}/TestLinks.lua
+fi
+
+echo "Tests to run: ${TESTS}"
+
+emend -f Emender_page -c -t Release -t WritingStyle ${TESTS} -o results.xml -o results.junit -o results.txt -o results.html -o results.json -o results.summary -o results.message -N "${JOB_NAME}" -j "${JOB_URL}" -C ChangeLog_page $@
 
 RESULT=$?
 echo "Result code: ${RESULT}"
