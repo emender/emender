@@ -327,7 +327,7 @@ fi
 
 echo "Tests to run: ${TESTS}"
 
-emend -f Emender_page -c -t Release -t WritingStyle ${TESTS} -o results.xml -o results.junit -o results.txt -o results.html -o results.json -o results.summary -o results.message -N "${JOB_NAME}" -j "${JOB_URL}" -C ChangeLog_page $@
+~/emender/emend -f ${EMENDER_PAGE} -c -t Release -t WritingStyle ${TESTS} -o results.xml -o results.junit -o results.txt -o results.html -o results.json -o results.summary -o results.message -N "${JOB_NAME}" -j "${JOB_URL}" -C ${EMENDER_CHANGELOG} $@
 
 RESULT=$?
 echo "Result code: ${RESULT}"
