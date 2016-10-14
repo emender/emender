@@ -16,8 +16,8 @@
 
 
 # Common configuration options
-EMENDER_PAGE=http://jenkinscat.gsslab.pnq.redhat.com:6502/emender
-EMENDER_CHANGELOG=https://mojo.redhat.com/docs/DOC-1083484
+EMENDER_PAGE=http://url.to.emender.page/emender
+EMENDER_CHANGELOG=http://url.to.changelog
 PATH_TO_TESTS=~/emender-rhel/test/
 
 # Should the format be read from the metadata.ini or should we read content of directory
@@ -48,6 +48,50 @@ then
     CYAN=""
     RESET=""
 fi
+
+
+
+#
+# Print a message using green color for a font.
+# Parameters: $@ - message to print
+#
+function msg_ok()
+{
+    echo "${GREEN}$@${RESET}"
+}
+
+
+
+#
+# Print a message using red color for a font.
+# Parameters: $@ - message to print
+#
+function msg_error()
+{
+    echo "${RED}$@${RESET}"
+}
+
+
+
+#
+# Print a message using blue color for a font.
+# Parameters: $@ - message to print
+#
+function msg_test_step()
+{
+    echo "${BLUE}$@${RESET}"
+}
+
+
+
+#
+# Print a message using magenta color for a font.
+# Parameters: $@ - message to print
+#
+function msg_info()
+{
+    echo "${MAGENTA}$@${RESET}"
+}
 
 
 
