@@ -24,7 +24,7 @@ PATH_TO_TESTS=~/emender-rhel/test/
 CHECK_METADATA_INI_FIRST=0
 
 # Whether to use colorized output
-USE_COLOR_LOG=0
+USE_COLOR_LOG=1
 
 
 
@@ -99,6 +99,7 @@ function msg_info()
 # Setup function
 #
 function setup {
+    msg_test_step "setup"
     export TERM=linux
     export JAVA_HOME=/usr/lib/jvm/java-1.7.0-openjdk/
 }
@@ -109,6 +110,7 @@ function setup {
 # If the content directory is not set by the Jenkins, set it to the default value.
 #
 function update_content_directory {
+    msg_test_step "update_content_directory"
     if [ -z "$MD_CONTENT_DIRECTORY" ]
     then
         MD_CONTENT_DIRECTORY="./"
@@ -122,6 +124,7 @@ function update_content_directory {
 # (markup) is not specified, let's assume the format is 'docbook'.
 #
 function read_book_format {
+    msg_test_step "read_book_data"
     if [[ $CHECK_METADATA_INI_FIRST -eq 1 ]]
     then
         if [ -f "$1/metadata.ini" ]
@@ -172,6 +175,7 @@ function read_book_format {
 # Check if the specified file exists. If not, error is reported and script ends with exit code=1
 #
 function check_file {
+    msg_test_step "check_file"
     if [ -f $1 ]
     then
         echo "file $1 present"
@@ -187,6 +191,7 @@ function check_file {
 # Check if the specified directory exists. If not, error is reported and script ends with exit code=1
 #
 function check_directory {
+    msg_test_step "check_directory"
     if [ -d $1 ]
     then
         echo "directory $1 present"
@@ -202,6 +207,7 @@ function check_directory {
 # Check the basic directory structure of the tested guide.
 #
 function check_basic_directory_structure {
+    msg_test_step "check_basic_directory_structure"
     echo "Checking directory structure"
     check_file publican.cfg
     check_directory en-US
@@ -214,6 +220,7 @@ function check_basic_directory_structure {
 # Print information before the Emender is started
 #
 function print_info {
+    msg_test_step "print_info"
     echo "*** Emender ***"
     echo "Job name:          ${JOB_NAME}"
     echo "Job URL:           ${JOB_URL}"
@@ -228,6 +235,7 @@ function print_info {
 # Convert AsciiBook book into Publican (DocBook) directory structure.
 #
 function convert_asciidoc_to_docbook {
+    msg_test_step "convert_asciidoc_to_docbook"
     echo "Converting Asciidoc->DocBook"
     # cleanup
     rm -rf en-US
@@ -261,6 +269,7 @@ function convert_asciidoc_to_docbook {
 
 
 function update_docbook_repo {
+    msg_test_step "update_docbook_repo"
     if [ "$1" == "./" ]
     then
         echo "Content is stored in ./ (book model, not library model)"
@@ -280,6 +289,7 @@ function update_docbook_repo {
 # Add common content to the tested book
 #
 function add_common_content {
+    msg_test_step "add_common_content"
     mkdir -p en-US/Common_Content
     cp ~/emender-rhel/test/Legal_Notice.xml en-US/Common_Content
     cp ~/emender-rhel/test/Conventions.xml en-US/Common_Content
