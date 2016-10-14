@@ -1812,6 +1812,17 @@ end
 -- Test the behaviour of the following Emender function: string.splitAt().
 --
 function TestModuleString.testSplitAt2()
+    local part1, part2 = string.splitAt("first second", " ")
+    is_equal(part1, "first", "Check the first value returned by function string.splitAt()")
+    is_equal(part2, "second", "Check second value returned by function string.splitAt()")
+end
+
+
+
+--
+-- Test the behaviour of the following Emender function: string.splitAt().
+--
+function TestModuleString.testSplitAt3()
     local part1, part2 = string.splitAt("first:second")
     is_equal(part1, "first", "Check the first value returned by function string.splitAt()")
     is_equal(part2, "second", "Check second value returned by function string.splitAt()")
