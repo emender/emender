@@ -36,6 +36,13 @@ local logger = {
     }
 }
 
+
+
+--
+-- Read the proper terminal control sequences by using the 'tput' command.
+-- We need to be on the safe side because different terminals could have
+-- different control codes.
+--
 function readTputControlSequence(code)
     local handle = io.popen("tput " .. code)
     local result = handle:read("*a")
@@ -43,6 +50,11 @@ function readTputControlSequence(code)
     return result
 end
 
+
+
+--
+-- If the function is called it turns on the color output
+--
 function logger.setColorOutput(colorOutput)
     if colorOutput then
         logger.codes.bold          = readTputControlSequence("bold")
@@ -56,17 +68,34 @@ function logger.setColorOutput(colorOutput)
     end
 end
 
+
+
+--
+-- Standard logger message
+--
 function logger.log(message)
     print(message)
 end
 
+
+
+--
+-- Standard warning message
+--
 function logger.warning(message)
     print(message)
 end
 
+
+
+--
+-- Standard error message
+--
 function logger.error(message)
     print(message)
 end
+
+
 
 return logger
 
