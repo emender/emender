@@ -224,12 +224,16 @@ function check_basic_directory_structure {
 #
 function print_info {
     msg_test_step "print_info"
-    echo "*** Emender ***"
-    echo "Job name:          ${JOB_NAME}"
-    echo "Job URL:           ${JOB_URL}"
-    echo "Content directory: ${MD_CONTENT_DIRECTORY}"
-    echo "Other arguments:   $@"
-    echo "Book format:       $BOOK_FORMAT"
+    msg_info "*** Emender ***"
+    msg_info "Job name:           " ${JOB_NAME}
+    msg_info "Job URL:            " ${JOB_URL}
+    msg_info "Content directory:  " ${MD_CONTENT_DIRECTORY}
+    msg_info "Other arguments:    " $@
+    msg_info "CWD:                " `pwd`
+    msg_info "Book format:        " $BOOK_FORMAT
+    msg_info "Emender front page: " ${EMENDER_PAGE}
+    msg_info "Emender changelog:  " ${EMENDER_CHANGELOG}
+    msg_info "Path to tests:      " ${PATH_TO_TESTS}
 }
 
 
