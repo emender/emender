@@ -30,19 +30,24 @@ USE_COLOR_LOG=1
 
 # Terminal color codes
 # - can be disabled by the parameter USE_COLOR_LOG
-BLACK="[0;30m"
-RED="[0;31m"
-GREEN="[0;32m"
-BLUE="[0;34m"
-MAGENTA="[0;35m"
-CYAN="[0;36m"
-RESET="[0m"
+if [ $USE_COLOR_LOG -eq 1 ]
+then
+    BLACK="`tput -T linux sgr0`"
+    RED="`tput -T linux setaf 1`"
+    GREEN="`tput -T linux setaf 2`"
+    YELLOW="`tput -T linux setaf 3`"
+    BLUE="`tput -T linux setaf 4`"
+    MAGENTA="`tput -T linux setaf 5`"
+    CYAN="`tput -T linux setaf 6`"
+    RESET="`tput -T linux sgr0`"
+fi
 
 if [ $USE_COLOR_LOG -eq 0 ]
 then
     BLACK=""
     RED=""
     GREEN=""
+    YELLOW=""
     BLUE=""
     MAGENTA=""
     CYAN=""
