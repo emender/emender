@@ -334,12 +334,12 @@ rm -f results.*
 
 if [ $BOOK_FORMAT == "docbook" ]
 then
-    TESTS=${PATH_TO_TESTS}/*.lua
+    TESTS=${PATH_TO_TESTS}*.lua
 elif [ $BOOK_FORMAT == "asciidoc" ]
 then
-    TESTS="${PATH_TO_TESTS}/CustomerPortalRequirements.lua ${PATH_TO_TESTS}/GuideStatistic.lua ${PATH_TO_TESTS}/TestLinks.lua ${PATH_TO_TESTS}/TestWritingStyle.lua"
+    TESTS="${PATH_TO_TESTS}CustomerPortalRequirements.lua ${PATH_TO_TESTS}GuideStatistic.lua ${PATH_TO_TESTS}TestLinks.lua ${PATH_TO_TESTS}TestWritingStyle.lua"
 else
-    TESTS=${PATH_TO_TESTS}/TestLinks.lua
+    TESTS=${PATH_TO_TESTS}TestLinks.lua
 fi
 
 msg_info "Tests to run: " ${TESTS}
