@@ -79,7 +79,7 @@ function msg_error()
 #
 function msg_test_step()
 {
-    echo "${BLUE}$@${RESET}"
+    echo "Step: ${BLUE}$@${RESET}"
 }
 
 
@@ -90,7 +90,7 @@ function msg_test_step()
 #
 function msg_info()
 {
-    echo "${MAGENTA}$@${RESET}"
+    echo "$1 ${MAGENTA}$2${RESET}"
 }
 
 
@@ -102,6 +102,8 @@ function setup {
     msg_test_step "setup"
     export TERM=linux
     export JAVA_HOME=/usr/lib/jvm/java-1.7.0-openjdk/
+    msg_info "TERM set to " $TERM
+    msg_info "JAVA_HOME set to " $JAVA_HOME
 }
 
 
@@ -113,6 +115,7 @@ function update_content_directory {
     msg_test_step "update_content_directory"
     if [ -z "$MD_CONTENT_DIRECTORY" ]
     then
+        msg_error "MD_CONTENT_DIRECTORY not set, using default ./"
         MD_CONTENT_DIRECTORY="./"
     fi
 }
@@ -134,36 +137,36 @@ function read_book_format {
             then
                 BOOK_FORMAT=$markup
             else
-                echo "Can not read $1/metadata.ini, please check repository structure"
+                msg_error "Can not read $1/metadata.ini, please check repository structure"
                 BOOK_FORMAT="docbook"
             fi
         else
             echo "Can not read the following file: find $1/metadata.ini, fallbacking..."
             if [ -f "$1/master.adoc" ]
             then
-                echo "Found master.adoc, this guide is written in AsciiDoc"
+                msg_ok "Found master.adoc, this guide is written in AsciiDoc"
                 BOOK_FORMAT="asciidoc"
             elif [ -f "$1/publican.cfg" ]
             then
-                echo "Found publican.cfg, this guide is written in DocBook"
+                msg_ok "Found publican.cfg, this guide is written in DocBook"
                 BOOK_FORMAT="docbook"
             else
-                echo "Can't decide the format..."
+                msg_error "Can't decide the format..."
                 BOOK_FORMAT="unknown"
             fi
         fi
     else
-        echo "Skipped checking $1/metadata.ini..."
+        msg_info "Skipped checking " "$1/metadata.ini"
         if [ -f "$1/master.adoc" ]
         then
-            echo "Found master.adoc, this guide is written in AsciiDoc"
+            msg_ok "Found master.adoc, this guide is written in AsciiDoc"
             BOOK_FORMAT="asciidoc"
         elif [ -f "$1/publican.cfg" ]
         then
-            echo "Found publican.cfg, this guide is written in DocBook"
+            msg_ok "Found publican.cfg, this guide is written in DocBook"
             BOOK_FORMAT="docbook"
         else
-            echo "Can't decide the format..."
+            msg_error "Can't decide the format..."
             BOOK_FORMAT="unknown"
         fi
     fi
@@ -178,9 +181,9 @@ function check_file {
     msg_test_step "check_file"
     if [ -f $1 ]
     then
-        echo "file $1 present"
+        msg_ok "file $1 present"
     else
-        echo "file $1 can not be found"
+        msg_error "file $1 can not be found"
         exit 1
     fi
 }
@@ -194,9 +197,9 @@ function check_directory {
     msg_test_step "check_directory"
     if [ -d $1 ]
     then
-        echo "directory $1 present"
+        msg_ok "directory $1 present"
     else
-        echo "directory $1 can not be found"
+        msg_error "directory $1 can not be found"
         exit 1
     fi
 }
@@ -208,7 +211,7 @@ function check_directory {
 #
 function check_basic_directory_structure {
     msg_test_step "check_basic_directory_structure"
-    echo "Checking directory structure"
+    msg_info "Checking directory structure"
     check_file publican.cfg
     check_directory en-US
     #check_file en-US/Book_Info.xml # does not have to exist, primary file can be specified in publican.cfg
@@ -236,7 +239,7 @@ function print_info {
 #
 function convert_asciidoc_to_docbook {
     msg_test_step "convert_asciidoc_to_docbook"
-    echo "Converting Asciidoc->DocBook"
+    msg_info "Converting Asciidoc->DocBook"
     # cleanup
     rm -rf en-US
     rm -f publican.cfg
@@ -256,7 +259,7 @@ function convert_asciidoc_to_docbook {
     mv "$2.xml" "$2/en-US/$2.xml"
 
     # put the resulting DocBook into the common place
-    echo "Moving document tree into the following directory $3"
+    msg_info "Moving document tree into the following directory " "$3"
     mv "$2/publican.cfg" "$3/"
     mv "$2/en-US" "$3"
 
@@ -272,9 +275,9 @@ function update_docbook_repo {
     msg_test_step "update_docbook_repo"
     if [ "$1" == "./" ]
     then
-        echo "Content is stored in ./ (book model, not library model)"
+        msg_info "Content is stored in ./ (book model, not library model)"
     else
-        echo "Updating docbook repository"
+        msg_info "Updating docbook repository"
         # cleanup
         rm -rf en-US
         rm -f publican.cfg
@@ -335,7 +338,7 @@ else
     TESTS=${PATH_TO_TESTS}/TestLinks.lua
 fi
 
-echo "Tests to run: ${TESTS}"
+msg_info "Tests to run: " ${TESTS}
 
 ~/emender/emend -f ${EMENDER_PAGE} -c -t Release -t WritingStyle ${TESTS} -o results.xml -o results.junit -o results.txt -o results.html -o results.json -o results.summary -o results.message -N "${JOB_NAME}" -j "${JOB_URL}" -C ${EMENDER_CHANGELOG} $@
 
