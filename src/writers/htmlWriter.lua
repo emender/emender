@@ -273,6 +273,23 @@ end
 
 
 
+function getDisplayableTestCaseName(testCase)
+    if not testCase then
+        return "(not set)"
+    elseif not testCase.name then
+        return "(not set)"
+    else
+        local name = testCase.name
+        if name:startsWith("test") then
+            return string.sub(name:gsub("_", " "), 1+string.len("test"))
+        else
+            return name:gsub("_", " ")
+        end
+    end
+end
+
+
+
 --
 -- Write the test suite "header" to the HTML file.
 --
@@ -506,7 +523,7 @@ function htmlWriter.writeCaseStart(fout, testCase)
                 <div class="col-xs-12 col-sm-6 col-lg-4 tab-body-cell">
                   <div class="panel panel-default">
                     <div class="panel-heading">
-                      <h5><span class="bullet ]] .. icon .. [[" title="]] .. testStatus .. [[">&bull;</span> ]] .. testCase.name .. [[</h5>
+                      <h5><span class="bullet ]] .. icon .. [[" title="]] .. testStatus .. [[">&bull;</span> ]] .. getDisplayableTestCaseName(testCase) .. [[</h5>
                       <div class="progress" title="Success: ]] ..passPerc .. [[%; Info: ]]..infoPerc..[[%; Failure: ]]..failPerc ..[[%">
                         <div class="progress-bar progress-bar-success" style="width: ]] .. passPerc .. [[%">
                           ]] .. passPerc .. [[%
