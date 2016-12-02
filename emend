@@ -206,6 +206,7 @@ function storeModuleIntoGlobalTable()
     _G["tracer"] = tracer
     _G["path"] = path
     _G["checkTools"] = checkTools
+    _G["gendoc"] = gendoc
 end
 
 
