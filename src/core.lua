@@ -519,7 +519,7 @@ function loadTestDocumentation(core, scriptDirectory, filename, verboseOperation
     -- parse documentation for each test function
     local doc = {}
     for _, testFunction in ipairs(testFunctions) do
-        local functionDoc = generateDocForOneFunction(testSuiteName, testFunction, testSource, "---")
+        local functionDoc = generateDocForOneFunction(testSuiteName, testFunction, testSource, "---", true)
         doc[testFunction] = functionDoc
     end
     return doc

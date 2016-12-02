@@ -78,7 +78,7 @@ end
 --
 -- Generate documentation for one selected function for the given test.
 --
-function generateDocForOneFunction(testName, testFunction, testSource, prefix)
+function generateDocForOneFunction(testName, testFunction, testSource, prefix, silentMode)
 
     -- be sure everything is ok
     if not _G or not _G[testName] or not _G[testName][testFunction] then
@@ -108,7 +108,9 @@ function generateDocForOneFunction(testName, testFunction, testSource, prefix)
     end
 
     local comment = getComment(testSource, line, prefix)
-    print("", testFunction .. ":", comment)
+    if not silentMode then
+        print("", testFunction .. ":", comment)
+    end
     return comment
 end
 
