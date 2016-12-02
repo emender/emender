@@ -9,4 +9,4 @@ selfchecks/flotr
 bootstrap/
 flotr/
 *.html
-*.css
+/yoanna.css
