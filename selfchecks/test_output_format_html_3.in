@@ -99,6 +99,7 @@
                   <div class="panel panel-default">
                     <div class="panel-heading">
                       <h5><span class="bullet pass" title="Test case passed">&bull;</span> A</h5>
+                      <div>(not commented)</div>
                       <div class="progress" title="Success: 100%; Info: 0%; Failure: 0%">
                         <div class="progress-bar progress-bar-success" style="width: 100%">
                           100%
@@ -132,6 +133,7 @@
                   <div class="panel panel-default">
                     <div class="panel-heading">
                       <h5><span class="bullet pass" title="Test case passed">&bull;</span> B</h5>
+                      <div>(not commented)</div>
                       <div class="progress" title="Success: 100%; Info: 0%; Failure: 0%">
                         <div class="progress-bar progress-bar-success" style="width: 100%">
                           100%
@@ -165,6 +167,7 @@
                   <div class="panel panel-default">
                     <div class="panel-heading">
                       <h5><span class="bullet pass" title="Test case passed">&bull;</span> CallOtherFunction</h5>
+                      <div>(not commented)</div>
                       <div class="progress" title="Success: 100%; Info: 0%; Failure: 0%">
                         <div class="progress-bar progress-bar-success" style="width: 100%">
                           100%
@@ -199,6 +202,7 @@
                   <div class="panel panel-default">
                     <div class="panel-heading">
                       <h5><span class="bullet pass" title="Test case passed">&bull;</span> ReadLocalValue</h5>
+                      <div>(not commented)</div>
                       <div class="progress" title="Success: 100%; Info: 0%; Failure: 0%">
                         <div class="progress-bar progress-bar-success" style="width: 100%">
                           100%
@@ -232,6 +236,7 @@
                   <div class="panel panel-default">
                     <div class="panel-heading">
                       <h5><span class="bullet pass" title="Test case passed">&bull;</span> ReadWriteLocalValue</h5>
+                      <div>(not commented)</div>
                       <div class="progress" title="Success: 100%; Info: 0%; Failure: 0%">
                         <div class="progress-bar progress-bar-success" style="width: 100%">
                           100%
