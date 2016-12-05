@@ -475,6 +475,11 @@ function runGenDocTests {
     rm doc.html
     ../emend --gendoc -o doc.html > gendoc_4.out
     rm doc.html
+    ../emend -o test_test_documentation.html ../test/TestDocComments.lua
+    mv test_test_documentation.html test_test_documentation.out
+
+    sed -i 's/name="date" content=".*"/name="date" content=""/' test_test_documentation.out
+    sed -i 's/Last built: ... ... [ 0-9][0-9] [0-9][0-9]:[0-9][0-9]:[0-9][0-9] 2[0-9][0-9][0-9]/Last built: Tue Jun 14 11:22:33 2016/' test_test_documentation.out
 }
 
 
