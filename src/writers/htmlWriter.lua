@@ -524,6 +524,7 @@ function htmlWriter.writeCaseStart(fout, testCase)
                   <div class="panel panel-default">
                     <div class="panel-heading">
                       <h5><span class="bullet ]] .. icon .. [[" title="]] .. testStatus .. [[">&bull;</span> ]] .. getDisplayableTestCaseName(testCase) .. [[</h5>
+                      <div>]] .. testCase.docString .. [[</div>
                       <div class="progress" title="Success: ]] ..passPerc .. [[%; Info: ]]..infoPerc..[[%; Failure: ]]..failPerc ..[[%">
                         <div class="progress-bar progress-bar-success" style="width: ]] .. passPerc .. [[%">
                           ]] .. passPerc .. [[%

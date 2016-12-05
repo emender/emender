@@ -1,5 +1,5 @@
 -- Module with implementation of Emender core functionality.
--- Copyright (C) 2014, 2015 Pavel Tisnovsky
+-- Copyright (C) 2014, 2015, 2016  Pavel Tisnovsky
 --
 -- This file is part of Emender.
 --
@@ -498,6 +498,36 @@ end
 
 
 --
+-- Load and parse test documentation
+--
+function loadTestDocumentation(core, scriptDirectory, filename, verboseOperation, testSuiteName)
+    local testFunctions = testInfo.getListOfTestFunctionNames(testSuiteName)
+
+    -- simple check if at least one function is specified in the test
+    if not testFunctions or #testFunctions==0 then
+        return {}
+    end
+
+    -- read whole source file and store it in a table (line-by-line)
+    local testSource = nil
+    if scriptDirectory then
+        testSource = slurpTable(scriptDirectory .. "test/" .. filename)
+    else
+        testSource = slurpTable(filename)
+    end
+
+    -- parse documentation for each test function
+    local doc = {}
+    for _, testFunction in ipairs(testFunctions) do
+        local functionDoc = generateDocForOneFunction(testSuiteName, testFunction, testSource, "---", true)
+        doc[testFunction] = functionDoc
+    end
+    return doc
+end
+
+
+
+--
 -- Run tear down function (if it exists)
 --
 function runTearDownFunction(tearDownFunction, verboseOperation)
@@ -572,6 +602,7 @@ function core.runTest(scriptDirectory, filename, verboseOperation, testOptions, 
         core.checkTestNameShadowing(testSuiteName)
 
         loadTestScript(scriptDirectory, filename, verboseOperation, testSuiteName)
+        local docStrings = loadTestDocumentation(core, scriptDirectory, filename, verboseOperation, testSuiteName)
 
         fillInTestMetadata(testSuite, testSuiteName)
 
@@ -615,6 +646,7 @@ function core.runTest(scriptDirectory, filename, verboseOperation, testOptions, 
                 for i,testFunctionName in ipairs(testFunctionNames) do
                     local method = {}
                     method.name = testFunctionName
+                    method.docString = docStrings[testFunctionName] or ""
 
                     core.messages = {}
                     method.result = nil

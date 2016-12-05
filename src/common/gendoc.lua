@@ -1,6 +1,6 @@
 -- Documentation generation module.
 --
--- Copyright (C) 2014, 2015  Pavel Tisnovsky
+-- Copyright (C) 2014, 2015, 2016  Pavel Tisnovsky
 
 -- This file is part of Emender.
 
@@ -24,10 +24,12 @@ local gendoc = {
 
 --
 -- Get comment that would be read up to the given line.
--- All comment lines should start with "--"
+-- All comment lines should start with "--" or with given prefix
 -- Comments are read in the opposite direction: from the function definition 'higher'.
 --
-function getComment(testSource, endLine)
+function getComment(testSource, endLine, prefix)
+    local commentPrefix = prefix or "--"
+
     -- comment lines should END just before the line containing function name
     local i = endLine - 1
 
@@ -46,13 +48,13 @@ function getComment(testSource, endLine)
         -- check for nil
         assert(line)
 
-        local commentLine = line:startsWith("--")
+        local commentLine = line:startsWith(commentPrefix)
         assert(commentLine ~= nil)
 
         -- insert comment line _before_ previous comment lines
         -- (because we read comments from the end to the beginning)
         if commentLine then
-            local x = line:subs(3):trim()
+            local x = line:subs(1+commentPrefix:len()):trim()
             output = x .. "\n" .. output
         end
 
@@ -76,7 +78,7 @@ end
 --
 -- Generate documentation for one selected function for the given test.
 --
-function generateDocForOneFunction(testName, testFunction, testSource)
+function generateDocForOneFunction(testName, testFunction, testSource, prefix, silentMode)
 
     -- be sure everything is ok
     if not _G or not _G[testName] or not _G[testName][testFunction] then
@@ -105,8 +107,11 @@ function generateDocForOneFunction(testName, testFunction, testSource)
         return
     end
 
-    local comment = getComment(testSource, line)
-    print("", testFunction .. ":", comment)
+    local comment = getComment(testSource, line, prefix)
+    if not silentMode then
+        print("", testFunction .. ":", comment)
+    end
+    return comment
 end
 
 

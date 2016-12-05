@@ -43,6 +43,7 @@ Test: TestChangeLogURL
 Test: TestColorInMessages
 Test: TestComments
 Test: TestDebug
+Test: TestDocComments
 Test: TestEmpty
 Test: TestEscapingHTML
 Test: TestExec
