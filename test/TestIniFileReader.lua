@@ -28,7 +28,7 @@ TestIniFileReader = {
 }
 
 function TestIniFileReader.testIniFile1()
-    local data = iniFileReader.readIni("test/ini1.ini")
+    local data = iniFileReader.readIni(getScriptDirectory() .. "test/ini1.ini")
     is_not_nil(data.section, "Check if returned table contains expected section")
     if data.section then
         is_not_nil(data.section.name, "Check if returned table contains expected section")
@@ -39,7 +39,7 @@ function TestIniFileReader.testIniFile1()
 end
 
 function TestIniFileReader.testIniFile2()
-    local data = iniFileReader.readIni("test/ini2.ini")
+    local data = iniFileReader.readIni(getScriptDirectory() .. "test/ini2.ini")
     is_not_nil(data.section, "Check if returned table contains expected section")
     if data.section then
         is_not_nil(data.section.name1, "Check the line name1=value1")
@@ -52,7 +52,7 @@ function TestIniFileReader.testIniFile2()
 end
 
 function TestIniFileReader.testIniFile3()
-    local data = iniFileReader.readIni("test/ini3.ini")
+    local data = iniFileReader.readIni(getScriptDirectory() .. "test/ini3.ini")
 
     is_not_nil(data.section1, "Check if returned table contains expected section [section1]")
     is_not_nil(data.section2, "Check if returned table contains expected section [section2]")
