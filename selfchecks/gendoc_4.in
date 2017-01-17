@@ -5,6 +5,7 @@ Generating doc for the following source file:	../src/common/exec.lua
 Generating doc for the following source file:	../src/common/fileio.lua
 Generating doc for the following source file:	../src/common/gendoc.lua
 Generating doc for the following source file:	../src/common/getopt.lua
+Generating doc for the following source file:	../src/common/iniFileReader.lua
 Generating doc for the following source file:	../src/common/logger.lua
 Generating doc for the following source file:	../src/common/path.lua
 Generating doc for the following source file:	../src/common/string.lua
