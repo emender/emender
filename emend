@@ -43,6 +43,7 @@ local messageWriter = nil
 local textExporter = nil
 local debugMode = nil
 local service = nil
+local iniFileReader = nil
 serviceURL = nil
 jobName = nil
 gitRepo = nil
@@ -191,6 +192,7 @@ function loadModulesAndInitReferences()
     messageWriter =     require("src/writers/messageWriter")
     checkTools =        require("src/checkTools")
     service =           require("src/service")
+    iniFileReader =     require("src/common/iniFileReader")
 end
 
 
@@ -207,6 +209,7 @@ function storeModuleIntoGlobalTable()
     _G["path"] = path
     _G["checkTools"] = checkTools
     _G["gendoc"] = gendoc
+    _G["iniFileReader"] = iniFileReader
 end
 
 
