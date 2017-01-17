@@ -1,0 +1,61 @@
+---------------------------------------------------------------------------
+                          :: TestIniFileReader ::
+---------------------------------------------------------------------------
+
+  Description:     Check the module iniFileReader.
+  Authors:         Pavel Tisnovsky
+  Emails:          ptisnovs@redhat.com
+  Last Modified:   2017-01-17
+  Tags:            BasicTest, SmokeTest
+  Required tools:  
+
+  Test Case: testIniFile1
+
+    [ PASS ]  Check if returned table contains expected section
+    [ PASS ]  Check if returned table contains expected section
+    [ PASS ]  Check if INI entry is contained in parsed INI file
+
+  Test Case: testIniFile2
+
+    [ PASS ]  Check if returned table contains expected section
+    [ PASS ]  Check the line name1=value1
+    [ PASS ]  Check the line name2=value2
+    [ PASS ]  Check the line name1=value1
+    [ PASS ]  Check the line name2=value2
+
+  Test Case: testIniFile3
+
+    [ PASS ]  Check if returned table contains expected section
+              [section1]
+    [ PASS ]  Check if returned table contains expected section
+              [section2]
+    [ PASS ]  Check the line name1=value1
+    [ PASS ]  Check the line name2=value2
+    [ PASS ]  Check the line name1=value1
+    [ PASS ]  Check the line name2=value2
+    [ PASS ]  Check the line name1=value1
+    [ PASS ]  Check the line name2=value2
+    [ PASS ]  Check the line name1=value1
+    [ PASS ]  Check the line name2=value2
+
+  Test Case: testMissingIniFile
+
+    [ PASS ]  Read structure must be empty
+
+  Test Summary                                                            
+
+    Executed Test Cases: 4
+    Passed Test Cases:   4
+    Failed Test Cases:   0
+    Encountered Errors:  0
+    Overall Result:      PASS
+
+---------------------------------------------------------------------------
+                               :: Summary ::
+---------------------------------------------------------------------------
+
+  Executed Tests: 1
+  Passed Tests:   1
+  Failed Tests:   0
+  Overall Result: PASS
+

@@ -295,6 +295,7 @@ function runTestsModules {
      ../emend ../test/TestModuleTracer.lua  > test_module_tracer.out
      ../emend ../test/TestPathCompose.lua   > test_module_path_compose.out
      ../emend ../test/TestPathCompose.lua   > test_module_path_compose.out
+     ../emend ../test/TestIniFileReader.lua > test_ini_file_reader.out
 }
 
 
