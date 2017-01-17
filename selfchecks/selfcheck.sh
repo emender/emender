@@ -331,7 +331,7 @@ function runOtherTests {
      ../emend --Xparam1=42  --Xparam2=42          ../test/TestParameters.lua > test_parameters_7.out
      ../emend --Xparam1=42  --Xparam2=unknown     ../test/TestParameters.lua > test_parameters_8.out
      pushd ini
-     ../../emend --Xparam1=42  --Xparam2=x        ../../test/TestParameters.lua > ../test_parameters_9.out
+     ../../emend --Xparam1=42  --Xparam2=x        ../../test/TestParameters.lua | tail -n +2 > ../test_parameters_9.out
      popd
 }
 
