@@ -27,9 +27,6 @@ TestIniFileReader = {
     },
 }
 
---
--- Comment bound to the function Test2.testA().
---
 function TestIniFileReader.testIniFile1()
     local data = iniFileReader.readIni("test/ini1.ini")
     is_not_nil(data.section, "Check if returned table contains expected section")
@@ -39,5 +36,10 @@ function TestIniFileReader.testIniFile1()
     else
         fail("INI was not read properly")
     end
+end
+
+function TestIniFileReader.testMissingIniFile()
+    local data = iniFileReader.readIni("test/missing.ini")
+    is_empty(data, "Read structure must be empty")
 end
 
