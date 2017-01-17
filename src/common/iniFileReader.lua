@@ -44,5 +44,34 @@ end
 
 
 
+--
+-- Returns section name.
+--
+function iniFileReader.getSectionName(line)
+    return line:sub(2, line:len()-1)
+end
+
+
+
+--
+-- Returns INI entry as tuple: entry name + entry value
+--
+function iniFileReader.getIniEntry(line)
+    local entryName, entryValue = iniFileReader.isIniEntry(line)
+
+    -- perform conversion for 'known' values
+    if entryValue == "true" then
+        entryValue = true
+    elseif entryValue == "false" or entryValue == "nil" then
+        entryValue = false
+    elseif tonumber(entryValue) then
+        entryValue = tonumber(entryValue)
+    end
+
+    return entryName, entryValue
+end
+
+
+
 return iniFileReader
 
