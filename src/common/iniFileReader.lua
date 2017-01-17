@@ -20,5 +20,29 @@
 local iniFileReader = {
 }
 
+local iniEntryName = "[%w_-]+"
+local iniEntryValue = ".+"
+local iniEntryPattern = "^(" .. iniEntryName .. ")%s-=%s-(" .. iniEntryValue .. ")$"
+
+
+
+--
+-- Returns true only if line contains section header enclosed in []
+--
+function iniFileReader.isIniSection(line)
+    return line:sub(1,1) == "[" and line:sub(line:len()) == "]"
+end
+
+
+
+--
+-- Returns true only if line contains one entry (key+value pair)
+--
+function iniFileReader.isIniEntry(line)
+    return line:match(iniEntryPattern)
+end
+
+
+
 return iniFileReader
 
