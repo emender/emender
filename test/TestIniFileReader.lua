@@ -38,6 +38,19 @@ function TestIniFileReader.testIniFile1()
     end
 end
 
+function TestIniFileReader.testIniFile2()
+    local data = iniFileReader.readIni("test/ini2.ini")
+    is_not_nil(data.section, "Check if returned table contains expected section")
+    if data.section then
+        is_not_nil(data.section.name1, "Check the line name1=value1")
+        is_not_nil(data.section.name2, "Check the line name2=value2")
+        is_equal(data.section.name1, "value1", "Check the line name1=value1")
+        is_equal(data.section.name2, "value2", "Check the line name2=value2")
+    else
+        fail("INI was not read properly")
+    end
+end
+
 function TestIniFileReader.testMissingIniFile()
     local data = iniFileReader.readIni("test/missing.ini")
     is_empty(data, "Read structure must be empty")
