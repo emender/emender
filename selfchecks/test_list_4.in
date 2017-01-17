@@ -54,6 +54,7 @@ Test: TestFileOperationSpitTable
 Test: TestFrontPageURL
 Test: TestGitBranch
 Test: TestGitRepo
+Test: TestIniFileReader
 Test: TestJobName
 Test: TestJobURL
 Test: TestManPages
