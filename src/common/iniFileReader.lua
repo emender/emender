@@ -80,6 +80,10 @@ function iniFileReader.readIni(filename)
     local parsedIni = {}
     local currentSection = nil
 
+    if not path.file_exists(filename) then
+        return parsedIni
+    end
+
     for line in io.lines(filename) do
         if iniFileReader.isIniSection(line) then
             currentSection = iniFileReader.getSectionName(line)
