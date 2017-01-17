@@ -73,5 +73,37 @@ end
 
 
 
+--
+-- Read and parse the whole INI file
+--
+function iniFileReader.readIni(filename)
+    local parsedIni = {}
+    local currentSection = nil
+
+    for line in io.lines(filename) do
+        if iniFileReader.isIniSection(line) then
+            currentSection = iniFileReader.getSectionName(line)
+            parsedIni[currentSection] = {}
+        elseif iniFileReader.isIniEntry(line) then
+            local entryName, entryValue = iniFileReader.getIniEntry(line)
+            parsedIni[currentSection][entryName] = entryValue
+        end
+    end
+
+    return parsedIni
+end
+
+
+
+-- How to use this module:
+--local t = readIni("config.ini")
+--
+--for sectionName, sectionEntries in pairs(t) do
+--   print(sectionName)
+--   for entryName, entryValue in pairs(sectionEntries) do
+--       print("    ", entryName, entryValue)
+--   end
+--end
+
 return iniFileReader
 
