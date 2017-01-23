@@ -326,6 +326,23 @@ end
 
 
 
+function readIniFileOptions(testOptions, currentDirectory)
+    local filename = currentDirectory .. "emender.ini"
+    local ini = iniFileReader.readIni(filename)
+    if next(ini) then
+        print("Reading test options from the file " .. filename)
+        if ini.emender then
+            for entryName,entryValue in pairs(ini.emender) do
+                testOptions[entryName] = entryValue
+            end
+        else
+            print("The INI file does not contain section [emender], skipping")
+        end
+    end
+end
+
+
+
 --
 -- Entry point to the Emender
 --
@@ -352,6 +369,7 @@ function main(arg)
 
     local outputFiles = getopt.recognizeOutputFormats(outputFileNames)
     local testOptions = getopt.getTestOptions(options)
+    readIniFileOptions(testOptions, getCurrentDirectory())
 
     local debugMode = getopt.isDebugFlagUsed(options)
     local useService = getopt.isServiceFlagUsed(options)
