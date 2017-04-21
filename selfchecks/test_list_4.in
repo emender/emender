@@ -14,6 +14,7 @@ Test: Test100Passes1Fail
 Test: Test100Passes1Info
 Test: Test100Passes1Link
 Test: Test100Passes1Yap
+Test: Test1FailLink
 Test: Test1Fail
 Test: Test1Info
 Test: Test1Link
