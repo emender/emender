@@ -267,6 +267,16 @@ end
 
 --
 -- This function could be call from the test machinery
+-- to register message about failing of any part of test case.
+--
+function registerFailLinkMessage(message, url)
+    table.insert(core.messages, {"FAIL", message, url})
+end
+
+
+
+--
+-- This function could be call from the test machinery
 -- to register message with information text.
 --
 function registerInfoMessage(message)
