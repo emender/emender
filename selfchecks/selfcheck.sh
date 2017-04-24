@@ -247,6 +247,7 @@ function runTestExamples {
      ../emend ../test/Test1Pass.lua              > test_1_pass.out
      ../emend ../test/Test1Fail.lua              > test_1_fail.out
      ../emend ../test/Test1Info.lua              > test_1_info.out
+     ../emend ../test/Test1FailLink.lua          > test_1_fail_link.out
 }
 
 
