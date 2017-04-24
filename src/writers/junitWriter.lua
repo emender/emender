@@ -112,6 +112,16 @@ end
 
 
 --
+-- Write the test tag with the result attribute set to 'fail' to the file:
+--
+function junitWriter.writeTestFailLink(fout, testName, message, url)
+    local explanation = message[2]
+    writeErrorMessage(fout, url .. ": " .. explanation)
+end
+
+
+
+--
 -- Write the test tag with the result attribute set to 'info' to the file:
 --
 function junitWriter.writeTestInfo(fout, testName, message)
