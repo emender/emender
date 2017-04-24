@@ -105,8 +105,10 @@ function exportResults(outputFiles, colorOutput, selectedWriter, results)
                 local url = message[3]
                 if status == "PASS" then
                     selectedWriter.writeTestPass(testName, message, colorOutput)
-                elseif status == "FAIL" then
+                elseif status == "FAIL" and not url then
                     selectedWriter.writeTestFail(testName, message, colorOutput)
+                elseif status == "FAIL" and url then
+                    selectedWriter.writeTestFailLink(testName, message, url, colorOutput)
                 elseif status == "INFO" then
                     selectedWriter.writeTestInfo(testName, message, colorOutput)
                 elseif status == "LINK" then
