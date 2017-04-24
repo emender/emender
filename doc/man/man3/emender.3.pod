@@ -334,6 +334,12 @@ Replace I<explanation> with a short description of the test. For example:
 
   fail("The value is not on the list of allowed values")
 
+=item B<fail>(I<message>, I<link>)
+
+Adds info about the broken link to the generated test output.
+
+  fail("this link does not work", "http://test.org")
+
 =item B<warn>(I<message>)
 
 The C<warn()> function logs a message without reporting the test as
