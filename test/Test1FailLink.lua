@@ -34,7 +34,7 @@ Test1FailLink = {
 -- This function calls Link() once.
 --
 function Test1FailLink.test()
-    fail("results", "https://github.com/emender/")
+    fail("failure text", "https://github.com/emender/")
     pass("Pass#1")
 end
 
