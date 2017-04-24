@@ -102,6 +102,15 @@ end
 --
 -- Do nothing:
 --
+function messageWriter.writeTestFailLink(fout, testName, message, url)
+    return
+end
+
+
+
+--
+-- Do nothing:
+--
 function messageWriter.writeTestInfo(fout, testName, message)
     return
 end

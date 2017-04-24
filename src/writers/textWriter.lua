@@ -105,6 +105,16 @@ end
 --
 -- Write the test result to the file:
 --
+function textWriter.writeTestFailLink(fout, testName, message, url)
+    local explanation = message[2]
+    writeTestFail(fout, testName, url .. " " .. explanation, false)
+end
+
+
+
+--
+-- Write the test result to the file:
+--
 function textWriter.writeTestInfo(fout, testName, message)
     local explanation = message[2]
     writeTestInfo(fout, testName, explanation, false)

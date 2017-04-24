@@ -157,6 +157,16 @@ end
 
 
 --
+-- Write the test tag with the result attribute set to 'fail' to the file:
+--
+function xmlWriter.writeTestFailLink(fout, testName, message, url)
+    local explanation = message[2]
+    xmlWriter.writeTestResult(fout, 'fail', url .. ":" .. explanation)
+end
+
+
+
+--
 -- Write the test tag with the result attribute set to 'info' to the file:
 --
 function xmlWriter.writeTestInfo(fout, testName, message)
