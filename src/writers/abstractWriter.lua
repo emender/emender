@@ -1,5 +1,5 @@
 -- abstractWriter.lua - module that provides cooperation of all registered writers.
--- Copyright (C) 2014 Pavel Tisnovsky
+-- Copyright (C) 2014 - 2017 Pavel Tisnovsky
 
 -- This file is part of Emender.
 
@@ -174,6 +174,20 @@ function abstractWriter.writeTestFail(testName, message)
     for _, outputFileStruct in pairs(abstractWriter.outputFileStructs) do
         local writer, fout = abstractWriter.getWriterAndFout(outputFileStruct)
         writer.writeTestFail(fout, testName, message)
+    end
+end
+
+
+
+--
+-- Called for each failLink() function.
+-- This function calls functions with the same name that should exist for all registered writers.
+--
+function abstractWriter.writeTestFailLink(testName, message, url)
+    -- loop over all registered writers
+    for _, outputFileStruct in pairs(abstractWriter.outputFileStructs) do
+        local writer, fout = abstractWriter.getWriterAndFout(outputFileStruct)
+        writer.writeTestFailLink(fout, testName, message, url)
     end
 end
 
