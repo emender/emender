@@ -596,7 +596,7 @@ end
 -- @param explanation Short description of the test, must be of type string.
 --                    Test structure error is reported if the type is not a string.
 --
-function fail(explanation)
+function fail(explanation, url)
     -- Verify that <explanation> is specified:
     if explanation == nil then
         -- if parameters are missing or incorrect, error should be reported immediately
@@ -612,8 +612,14 @@ function fail(explanation)
     end
 
     -- test structure is ok, let register status with its message
-    writeTestFail(io.stdout, nil, explanation, colorOutput)
-    registerFailMessage(explanation)
+    if not url then
+        writeTestFail(io.stdout, nil, explanation, colorOutput)
+        registerFailMessage(explanation)
+    else
+        writeTestFailLink(io.stdout, nil, explanation, url, colorOutput)
+        registerFailLinkMessage(explanation, url)
+    end
+
     -- test harness needs to be informed that the test fail
     markTestFailure()
 end
