@@ -654,19 +654,35 @@ end
 --
 -- Write the test result to the HTML file.
 --
-function writeTestMessageWithURL(fout, message, url)
+-- If useUrlInHref is set to true, the output will be:
+--    <a href='url'>url</a> message
+--
+-- If useUrlInHref is set to false or nil, the output will be:
+--    <a href='url'>message</a>
+--
+--
+function writeTestMessageWithURL(fout, message, url, useUrlInHref)
     local msgStatus = message[1]
     local explanation = message[2]
     -- get rid of all unwanted special HTML characters
     -- -> use corresponding HTML entities instead
     local escapedHTML = highlightMessage(explanation:escapeHTML())
     local class = msgStatus:lower()
-    fout:write([[
-                        <tr>
-                          <td class="result ]] .. class .. [[">]] .. msgStatus .. [[</td>
-                          <td><a href=']] .. url .. [['>]] .. escapedHTML .. [[</a></td>
-                        </tr>
-]])
+    if useUrlInHref then
+        fout:write([[
+                            <tr>
+                              <td class="result ]] .. class .. [[">]] .. msgStatus .. [[</td>
+                              <td><a href=']] .. url .. [['>]] .. url .. [[</a> ]] .. escapedHTML .. [[</td>
+                            </tr>
+        ]])
+    else
+        fout:write([[
+                            <tr>
+                              <td class="result ]] .. class .. [[">]] .. msgStatus .. [[</td>
+                              <td><a href=']] .. url .. [['>]] .. escapedHTML .. [[</a></td>
+                            </tr>
+        ]])
+    end
 end
 
 
@@ -685,6 +701,15 @@ end
 --
 function htmlWriter.writeTestFail(fout, testName, message)
     writeTestMessage(fout, message)
+end
+
+
+
+--
+-- Write the test result to the HTML file.
+--
+function htmlWriter.writeTestFailLink(fout, testName, message, url)
+    writeTestMessageWithURL(fout, message, url, true)
 end
 
 
