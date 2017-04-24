@@ -1,5 +1,5 @@
 -- commonTextWriter.lua - support for terminal output (using colors if possible).
--- Copyright (C) 2015, 2016  Jaromir Hradilek, Pavel Tisnovsky
+-- Copyright (C) 2015 - 2017  Jaromir Hradilek, Pavel Tisnovsky
 
 -- This file is part of Emender.
 
@@ -271,6 +271,10 @@ end
 
 function writeTestFail(fout, testName, explanation, colorOutput)
     fout:write(formatTestResult('fail', explanation, colorOutput))
+end
+
+function writeTestFailLink(fout, testName, message, url, colorOutput)
+    fout:write(formatTestResult('fail', url .. " " .. message, colorOutput))
 end
 
 function writeTestInfo(fout, testName, explanation, colorOutput)
