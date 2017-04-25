@@ -425,7 +425,7 @@ end
 --
 -- Pass all test options given on the command line to the test.
 --
-function addTestOptions(testSuiteName, testOptions)
+function addTestOptions(testSuiteName, testOptions, verboseOperation)
     -- no test options specified? we are done then
     if not testOptions or next(testOptions) == nil then
         return
@@ -442,6 +442,7 @@ function addTestOptions(testSuiteName, testOptions)
     for name, value in pairs(testOptions) do
         test[name] = value
     end
+    test.verboseOperation = verboseOperation
 end
 
 
@@ -630,7 +631,7 @@ function core.runTest(scriptDirectory, filename, verboseOperation, testOptions, 
             processRestOfTest = false
         end
 
-        addTestOptions(testSuiteName, testOptions)
+        addTestOptions(testSuiteName, testOptions, verboseOperation)
 
         local setupFunction = core.getSetupFunction(testSuiteName)
         local tearDownFunction = core.getTearDownFunction(testSuiteName)
