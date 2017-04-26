@@ -287,6 +287,16 @@ end
 
 --
 -- This function could be call from the test machinery
+-- to register message with information text.
+--
+function registerInfoLinkMessage(message)
+    table.insert(core.messages, {"INFO", message, url})
+end
+
+
+
+--
+-- This function could be call from the test machinery
 -- to register message with the link.
 --
 function registerLinkMessage(message, url)
