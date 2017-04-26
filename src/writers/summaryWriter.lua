@@ -1,5 +1,5 @@
 -- summaryWriter.lua - a writer for the very simple summary plain text file format
--- Copyright (C) 2014 Pavel Tisnovsky
+-- Copyright (C) 2014 - 2017  Pavel Tisnovsky
 
 -- This file is part of Emender.
 
@@ -114,6 +114,15 @@ end
 -- Do nothing:
 --
 function summaryWriter.writeTestInfo(fout, testName, message)
+    return
+end
+
+
+
+--
+-- Do nothing:
+--
+function summaryWriter.writeTestInfoLink(fout, testName, message, url)
     return
 end
 

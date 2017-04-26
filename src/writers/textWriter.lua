@@ -1,5 +1,5 @@
 -- textWriter.lua - a writer for the plain text file format
--- Copyright (C) 2014 Pavel Tisnovsky, Jaromir Hradilek
+-- Copyright (C) 2014 - 2017  Pavel Tisnovsky, Jaromir Hradilek
 
 -- This file is part of Emender.
 
@@ -118,6 +118,16 @@ end
 function textWriter.writeTestInfo(fout, testName, message)
     local explanation = message[2]
     writeTestInfo(fout, testName, explanation, false)
+end
+
+
+
+--
+-- Write the test result to the file:
+--
+function textWriter.writeTestInfoLink(fout, testName, message, url)
+    local explanation = message[2]
+    writeTestInfo(fout, testName, url .. " " .. explanation, false)
 end
 
 

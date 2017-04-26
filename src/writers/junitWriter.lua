@@ -1,5 +1,5 @@
 -- junitWriter.lua - a writer for the JUnit-compatible file format
--- Copyright (C) 2014, 2015, 2016  Pavel Tisnovsky
+-- Copyright (C) 2014, 2015, 2016, 2017  Pavel Tisnovsky
 
 -- This file is part of Emender.
 
@@ -125,6 +125,16 @@ end
 -- Write the test tag with the result attribute set to 'info' to the file:
 --
 function junitWriter.writeTestInfo(fout, testName, message)
+    -- do nothing
+    return
+end
+
+
+
+--
+-- Write the test tag with the result attribute set to 'info' to the file:
+--
+function junitWriter.writeTestInfoLink(fout, testName, message, url)
     -- do nothing
     return
 end

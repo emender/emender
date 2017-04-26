@@ -1,5 +1,5 @@
 -- xmlWriter.lua - a writer for the XML file format
--- Copyright (C) 2014 Jaromir Hradilek, Pavel Tisnovsky
+-- Copyright (C) 2014 - 2017  Jaromir Hradilek, Pavel Tisnovsky
 
 -- This file is part of Emender.
 
@@ -172,6 +172,16 @@ end
 function xmlWriter.writeTestInfo(fout, testName, message)
     local explanation = message[2]
     xmlWriter.writeTestResult(fout, 'info', explanation)
+end
+
+
+
+--
+-- Write the test tag with the result attribute set to 'info' to the file:
+--
+function xmlWriter.writeTestInfoLink(fout, testName, message, url)
+    local explanation = message[2]
+    xmlWriter.writeTestResult(fout, 'info', url .. ":" .. explanation)
 end
 
 
