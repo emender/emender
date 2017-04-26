@@ -726,6 +726,15 @@ end
 --
 -- Write the test result to the HTML file.
 --
+function htmlWriter.writeTestInfoLink(fout, testName, message, url)
+    writeTestMessageWithURL(fout, message, url, true)
+end
+
+
+
+--
+-- Write the test result to the HTML file.
+--
 function htmlWriter.writeTestDebug(fout, testName, message)
     writeTestMessage(fout, message)
 end
