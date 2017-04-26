@@ -638,7 +638,7 @@ end
 -- @param explanation Short description of the test, must be of type string.
 --                    Test structure error is reported if the type is not a string.
 --
-function warn(explanation)
+function warn(explanation, url)
     -- Verify that <explanation> is specified:
     if explanation == nil then
         -- if parameters are missing or incorrect, error should be reported immediately
@@ -654,8 +654,13 @@ function warn(explanation)
     end
 
     -- test structure is ok, let register status with its message
-    writeTestInfo(io.stdout, nil, explanation, colorOutput)
-    registerInfoMessage(explanation)
+    if not url then
+        writeTestInfo(io.stdout, nil, explanation, colorOutput)
+        registerInfoMessage(explanation)
+    else
+        writeTestInfoLink(io.stdout, nil, explanation, url, colorOutput)
+        registerInfoLinkMessage(explanation, url)
+    end
 end
 
 
