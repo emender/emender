@@ -281,6 +281,10 @@ function writeTestInfo(fout, testName, explanation, colorOutput)
     fout:write(formatTestResult('info', explanation, colorOutput))
 end
 
+function writeTestInfoLink(fout, testName, message, url, colorOutput)
+    fout:write(formatTestResult('info', url .. " " .. message, colorOutput))
+end
+
 function writeTestLink(fout, testName, message, url, colorOutput)
     fout:write(formatTestResult('link', message.. " [" .. url .. "]", colorOutput))
 end

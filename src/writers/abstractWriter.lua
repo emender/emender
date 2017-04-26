@@ -208,6 +208,20 @@ end
 
 
 --
+-- Called for each infoLink() function.
+-- This function calls functions with the same name that should exist for all registered writers.
+--
+function abstractWriter.writeTestInfoLink(testName, message, url)
+    -- loop over all registered writers
+    for _, outputFileStruct in pairs(abstractWriter.outputFileStructs) do
+        local writer, fout = abstractWriter.getWriterAndFout(outputFileStruct)
+        writer.writeTestInfoLink(fout, testName, message, url)
+    end
+end
+
+
+
+--
 -- Called for each link() function.
 -- This function calls functions with the same name that should exist for all registered writers.
 --
