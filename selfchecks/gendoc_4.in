@@ -1,6 +1,7 @@
 Generating doc for the following source file:	../emend
 Generating doc for the following source file:	../src/checkTools.lua
 Generating doc for the following source file:	../src/common/asserts.lua
+Generating doc for the following source file:	../src/common/dkjson.lua
 Generating doc for the following source file:	../src/common/exec.lua
 Generating doc for the following source file:	../src/common/fileio.lua
 Generating doc for the following source file:	../src/common/gendoc.lua
