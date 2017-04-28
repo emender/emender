@@ -193,6 +193,7 @@ function loadModulesAndInitReferences()
     checkTools =        require("src/checkTools")
     service =           require("src/service")
     iniFileReader =     require("src/common/iniFileReader")
+    json =              require("src/common/dkjson")
 end
 
 
@@ -210,6 +211,7 @@ function storeModuleIntoGlobalTable()
     _G["checkTools"] = checkTools
     _G["gendoc"] = gendoc
     _G["iniFileReader"] = iniFileReader
+    _G["json"] = json
 end
 
 
