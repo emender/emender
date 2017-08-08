@@ -279,7 +279,7 @@ function getDisplayableTestCaseName(testCase)
     elseif not testCase.name then
         return "(not set)"
     else
-        local name = testCase.name
+        local name = testCase.displayName
         if name:startsWith("test") then
             return string.sub(name:gsub("_", " "), 1+string.len("test"))
         else
