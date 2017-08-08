@@ -619,6 +619,9 @@ function displayName(name)
     if name:startsWith("test") then
         name = name:sub(1+string.len("test"))
     end
+    if name == "" then
+        return "(no test name)"
+    end
     -- Replace 'CamelCaseTestName' to 'Camel Case Test Name'
     -- It should work only for tests with letters, not digits!
     if name:find("%A+") then  -- any non-letter?
