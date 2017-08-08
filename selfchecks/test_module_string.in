@@ -9,7 +9,7 @@
   Tags:            BasicTest, ModuleTest
   Required tools:  
 
-  Test Case: testAlignCenter1
+  Test Case: AlignCenter1
 
     [ PASS ]  Test if alignCenter() function works correctly
     [ PASS ]  Test if alignCenter() function works correctly
@@ -19,191 +19,191 @@
     [ PASS ]  Test if alignCenter() function works correctly
     [ PASS ]  Test if alignCenter() function works correctly
 
-  Test Case: testAlignCenter2
+  Test Case: AlignCenter2
 
     [ PASS ]  Test if alignCenter() function works correctly
     [ PASS ]  Test if alignCenter() function works correctly
     [ PASS ]  Test if alignCenter() function works correctly
     [ PASS ]  Test if alignCenter() function works correctly
 
-  Test Case: testAlignCenter3
+  Test Case: AlignCenter3
 
     [ PASS ]  Test if alignCenter() function works correctly
     [ PASS ]  Test if alignCenter() function works correctly
     [ PASS ]  Test if alignCenter() function works correctly
     [ PASS ]  Test if alignCenter() function works correctly
 
-  Test Case: testAlignCenter4
+  Test Case: AlignCenter4
 
     [ PASS ]  Test if alignCenter() function works correctly
     [ PASS ]  Test if alignCenter() function works correctly
     [ PASS ]  Test if alignCenter() function works correctly
 
-  Test Case: testAlignCenter5
+  Test Case: AlignCenter5
 
     [ PASS ]  Test if alignCenter() function works correctly
     [ PASS ]  Test if alignCenter() function works correctly
     [ PASS ]  Test if alignCenter() function works correctly
 
-  Test Case: testAlignCenter6
+  Test Case: AlignCenter6
 
     [ PASS ]  Test if alignCenter() function works correctly
 
-  Test Case: testAlignLeft1
+  Test Case: AlignLeft1
 
     [ PASS ]  Test if alignLeft() function works correctly
     [ PASS ]  Test if alignLeft() function works correctly
     [ PASS ]  Test if alignLeft() function works correctly
     [ PASS ]  Test if alignLeft() function works correctly
 
-  Test Case: testAlignLeft10
+  Test Case: AlignLeft10
 
     [ PASS ]  Test if alignLeft() function works correctly
     [ PASS ]  Test if alignLeft() function works correctly
     [ PASS ]  Test if alignLeft() function works correctly
     [ PASS ]  Test if alignLeft() function works correctly
 
-  Test Case: testAlignLeft11
+  Test Case: AlignLeft11
 
     [ PASS ]  Test if alignLeft() function works correctly
     [ PASS ]  Test if alignLeft() function works correctly
     [ PASS ]  Test if alignLeft() function works correctly
     [ PASS ]  Test if alignLeft() function works correctly
 
-  Test Case: testAlignLeft12
+  Test Case: AlignLeft12
 
     [ PASS ]  Test if alignLeft() function works correctly
     [ PASS ]  Test if alignLeft() function works correctly
     [ PASS ]  Test if alignLeft() function works correctly
     [ PASS ]  Test if alignLeft() function works correctly
 
-  Test Case: testAlignLeft13
+  Test Case: AlignLeft13
 
     [ PASS ]  Test if alignLeft() function works correctly
     [ PASS ]  Test if alignLeft() function works correctly
     [ PASS ]  Test if alignLeft() function works correctly
     [ PASS ]  Test if alignLeft() function works correctly
 
-  Test Case: testAlignLeft14
+  Test Case: AlignLeft14
 
     [ PASS ]  Test if alignLeft() function works correctly
     [ PASS ]  Test if alignLeft() function works correctly
     [ PASS ]  Test if alignLeft() function works correctly
     [ PASS ]  Test if alignLeft() function works correctly
 
-  Test Case: testAlignLeft2
+  Test Case: AlignLeft2
 
     [ PASS ]  Test if alignLeft() function works correctly
     [ PASS ]  Test if alignLeft() function works correctly
     [ PASS ]  Test if alignLeft() function works correctly
     [ PASS ]  Test if alignLeft() function works correctly
 
-  Test Case: testAlignLeft3
+  Test Case: AlignLeft3
 
     [ PASS ]  Test if alignLeft() function works correctly
     [ PASS ]  Test if alignLeft() function works correctly
     [ PASS ]  Test if alignLeft() function works correctly
     [ PASS ]  Test if alignLeft() function works correctly
 
-  Test Case: testAlignLeft4
+  Test Case: AlignLeft4
 
     [ PASS ]  Test if alignLeft() function works correctly
     [ PASS ]  Test if alignLeft() function works correctly
     [ PASS ]  Test if alignLeft() function works correctly
     [ PASS ]  Test if alignLeft() function works correctly
 
-  Test Case: testAlignLeft5
+  Test Case: AlignLeft5
 
     [ PASS ]  Test if alignLeft() function works correctly
     [ PASS ]  Test if alignLeft() function works correctly
     [ PASS ]  Test if alignLeft() function works correctly
     [ PASS ]  Test if alignLeft() function works correctly
 
-  Test Case: testAlignLeft6
+  Test Case: AlignLeft6
 
     [ PASS ]  Test if alignLeft() function works correctly
     [ PASS ]  Test if alignLeft() function works correctly
     [ PASS ]  Test if alignLeft() function works correctly
     [ PASS ]  Test if alignLeft() function works correctly
 
-  Test Case: testAlignLeft7
+  Test Case: AlignLeft7
 
     [ PASS ]  Test if alignLeft() function works correctly
     [ PASS ]  Test if alignLeft() function works correctly
     [ PASS ]  Test if alignLeft() function works correctly
     [ PASS ]  Test if alignLeft() function works correctly
 
-  Test Case: testAlignLeft8
+  Test Case: AlignLeft8
 
     [ PASS ]  Test if alignLeft() function works correctly
     [ PASS ]  Test if alignLeft() function works correctly
     [ PASS ]  Test if alignLeft() function works correctly
     [ PASS ]  Test if alignLeft() function works correctly
 
-  Test Case: testAlignLeft9
+  Test Case: AlignLeft9
 
     [ PASS ]  Test if alignLeft() function works correctly
     [ PASS ]  Test if alignLeft() function works correctly
     [ PASS ]  Test if alignLeft() function works correctly
     [ PASS ]  Test if alignLeft() function works correctly
 
-  Test Case: testAlignRight1
+  Test Case: AlignRight1
 
     [ PASS ]  Test if alignRight() function works correctly
     [ PASS ]  Test if alignRight() function works correctly
     [ PASS ]  Test if alignRight() function works correctly
     [ PASS ]  Test if alignRight() function works correctly
 
-  Test Case: testAlignRight10
+  Test Case: AlignRight10
 
     [ PASS ]  Test if alignRight() function works correctly
     [ PASS ]  Test if alignRight() function works correctly
     [ PASS ]  Test if alignRight() function works correctly
     [ PASS ]  Test if alignRight() function works correctly
 
-  Test Case: testAlignRight11
+  Test Case: AlignRight11
 
     [ PASS ]  Test if alignRight() function works correctly
     [ PASS ]  Test if alignRight() function works correctly
     [ PASS ]  Test if alignRight() function works correctly
     [ PASS ]  Test if alignRight() function works correctly
 
-  Test Case: testAlignRight12
+  Test Case: AlignRight12
 
     [ PASS ]  Test if alignRight() function works correctly
     [ PASS ]  Test if alignRight() function works correctly
     [ PASS ]  Test if alignRight() function works correctly
     [ PASS ]  Test if alignRight() function works correctly
 
-  Test Case: testAlignRight13
+  Test Case: AlignRight13
 
     [ PASS ]  Test if alignRight() function works correctly
     [ PASS ]  Test if alignRight() function works correctly
     [ PASS ]  Test if alignRight() function works correctly
     [ PASS ]  Test if alignRight() function works correctly
 
-  Test Case: testAlignRight14
+  Test Case: AlignRight14
 
     [ PASS ]  Test if alignRight() function works correctly
     [ PASS ]  Test if alignRight() function works correctly
     [ PASS ]  Test if alignRight() function works correctly
     [ PASS ]  Test if alignRight() function works correctly
 
-  Test Case: testAlignRight15
+  Test Case: AlignRight15
 
     [ PASS ]  Test if alignRight() function works correctly
     [ PASS ]  Test if alignRight() function works correctly
     [ PASS ]  Test if alignRight() function works correctly
     [ PASS ]  Test if alignRight() function works correctly
 
-  Test Case: testAlignRight16
+  Test Case: AlignRight16
 
     [ PASS ]  Test if alignRight() function works correctly
     [ PASS ]  Test if alignRight() function works correctly
     [ PASS ]  Test if alignRight() function works correctly
     [ PASS ]  Test if alignRight() function works correctly
 
-  Test Case: testAlignRight2
+  Test Case: AlignRight2
 
     [ PASS ]  Test if alignRight() function works correctly
     [ PASS ]  Test if alignRight() function works correctly
@@ -211,102 +211,102 @@
     [ PASS ]  Test if alignRight() function works correctly
     [ PASS ]  Test if alignRight() function works correctly
 
-  Test Case: testAlignRight3
+  Test Case: AlignRight3
 
     [ PASS ]  Test if alignRight() function works correctly
     [ PASS ]  Test if alignRight() function works correctly
     [ PASS ]  Test if alignRight() function works correctly
     [ PASS ]  Test if alignRight() function works correctly
 
-  Test Case: testAlignRight4
+  Test Case: AlignRight4
 
     [ PASS ]  Test if alignRight() function works correctly
     [ PASS ]  Test if alignRight() function works correctly
     [ PASS ]  Test if alignRight() function works correctly
     [ PASS ]  Test if alignRight() function works correctly
 
-  Test Case: testAlignRight5
+  Test Case: AlignRight5
 
     [ PASS ]  Test if alignRight() function works correctly
     [ PASS ]  Test if alignRight() function works correctly
     [ PASS ]  Test if alignRight() function works correctly
     [ PASS ]  Test if alignRight() function works correctly
 
-  Test Case: testAlignRight6
+  Test Case: AlignRight6
 
     [ PASS ]  Test if alignRight() function works correctly
     [ PASS ]  Test if alignRight() function works correctly
     [ PASS ]  Test if alignRight() function works correctly
     [ PASS ]  Test if alignRight() function works correctly
 
-  Test Case: testAlignRight7
+  Test Case: AlignRight7
 
     [ PASS ]  Test if alignRight() function works correctly
     [ PASS ]  Test if alignRight() function works correctly
     [ PASS ]  Test if alignRight() function works correctly
     [ PASS ]  Test if alignRight() function works correctly
 
-  Test Case: testAlignRight8
+  Test Case: AlignRight8
 
     [ PASS ]  Test if alignRight() function works correctly
     [ PASS ]  Test if alignRight() function works correctly
     [ PASS ]  Test if alignRight() function works correctly
     [ PASS ]  Test if alignRight() function works correctly
 
-  Test Case: testAlignRight9
+  Test Case: AlignRight9
 
     [ PASS ]  Test if alignRight() function works correctly
     [ PASS ]  Test if alignRight() function works correctly
     [ PASS ]  Test if alignRight() function works correctly
     [ PASS ]  Test if alignRight() function works correctly
 
-  Test Case: testEndsWithFunction01
+  Test Case: EndsWithFunction01
 
     [ PASS ]  Test if endsWith() function works correctly
 
-  Test Case: testEndsWithFunction02
+  Test Case: EndsWithFunction02
 
     [ PASS ]  Test if endsWith() function works correctly
 
-  Test Case: testEndsWithFunction03
+  Test Case: EndsWithFunction03
 
     [ PASS ]  Test if endsWith() function works correctly
 
-  Test Case: testEndsWithFunction04
+  Test Case: EndsWithFunction04
 
     [ PASS ]  Test if endsWith() function works correctly
 
-  Test Case: testEndsWithFunction05
+  Test Case: EndsWithFunction05
 
     [ PASS ]  Test if endsWith() function works correctly
 
-  Test Case: testEndsWithFunction06
+  Test Case: EndsWithFunction06
 
     [ PASS ]  Test if endsWith() function works correctly
 
-  Test Case: testEndsWithFunction07
+  Test Case: EndsWithFunction07
 
     [ PASS ]  Test if endsWith() function works correctly
 
-  Test Case: testEndsWithFunction08
+  Test Case: EndsWithFunction08
 
     [ PASS ]  Test if endsWith() function works correctly
 
-  Test Case: testEndsWithFunction09
+  Test Case: EndsWithFunction09
 
     [ PASS ]  Test if endsWith() function works correctly
 
-  Test Case: testEndsWithFunction10
+  Test Case: EndsWithFunction10
 
     [ PASS ]  Test if endsWith() function works correctly
 
-  Test Case: testGetHash
+  Test Case: Get Hash
 
     [ PASS ]  Test if getHash() function returns correct hash.
     [ PASS ]  Test if getHash() function returns correct hash.
     [ PASS ]  Test if getHash() function returns correct hash.
 
-  Test Case: testIsEmpty
+  Test Case: Is Empty
 
     [ PASS ]  Test if the function String.isEmpty() is correct
     [ PASS ]  Test if the function String.isEmpty() is correct
@@ -314,7 +314,7 @@
     [ PASS ]  Test if the function String.isEmpty() is correct
     [ PASS ]  Test if the function String.isEmpty() is correct
 
-  Test Case: testLastIndexOf1
+  Test Case: LastIndexOf1
 
     [ PASS ]  Test if lastIndexOf() function works correctly
     [ PASS ]  Test if lastIndexOf() function works correctly
@@ -323,494 +323,494 @@
     [ PASS ]  Test if lastIndexOf() function works correctly
     [ PASS ]  Test if lastIndexOf() function works correctly
 
-  Test Case: testLastIndexOf2
+  Test Case: LastIndexOf2
 
     [ PASS ]  Test if lastIndexOf() function works correctly
 
-  Test Case: testLastIndexOf3
+  Test Case: LastIndexOf3
 
     [ PASS ]  Test if lastIndexOf() function works correctly
     [ PASS ]  Test if lastIndexOf() function works correctly
     [ PASS ]  Test if lastIndexOf() function works correctly
 
-  Test Case: testLtrimFunction01
+  Test Case: LtrimFunction01
 
     [ PASS ]  Test if ltrim() function works correctly
 
-  Test Case: testLtrimFunction02
+  Test Case: LtrimFunction02
 
     [ PASS ]  Test if ltrim() function works correctly
 
-  Test Case: testLtrimFunction03
+  Test Case: LtrimFunction03
 
     [ PASS ]  Test if ltrim() function works correctly
 
-  Test Case: testLtrimFunction04
+  Test Case: LtrimFunction04
 
     [ PASS ]  Test if ltrim() function works correctly
 
-  Test Case: testLtrimFunction05
+  Test Case: LtrimFunction05
 
     [ PASS ]  Test if ltrim() function works correctly
 
-  Test Case: testLtrimFunction06
+  Test Case: LtrimFunction06
 
     [ PASS ]  Test if ltrim() function works correctly
 
-  Test Case: testLtrimFunction07
+  Test Case: LtrimFunction07
 
     [ PASS ]  Test if ltrim() function works correctly
 
-  Test Case: testLtrimFunction08
+  Test Case: LtrimFunction08
 
     [ PASS ]  Test if ltrim() function works correctly
 
-  Test Case: testLtrimFunction09
+  Test Case: LtrimFunction09
 
     [ PASS ]  Test if ltrim() function works correctly
 
-  Test Case: testLtrimFunction10
+  Test Case: LtrimFunction10
 
     [ PASS ]  Test if ltrim() function works correctly
 
-  Test Case: testLtrimFunction11
+  Test Case: LtrimFunction11
 
     [ PASS ]  Test if ltrim() function works correctly
 
-  Test Case: testLtrimFunction12
+  Test Case: LtrimFunction12
 
     [ PASS ]  Test if ltrim() function works correctly
 
-  Test Case: testLtrimFunction13
+  Test Case: LtrimFunction13
 
     [ PASS ]  Test if ltrim() function works correctly
 
-  Test Case: testLtrimFunction14
+  Test Case: LtrimFunction14
 
     [ PASS ]  Test if ltrim() function works correctly
 
-  Test Case: testLtrimFunction15
+  Test Case: LtrimFunction15
 
     [ PASS ]  Test if ltrim() function works correctly
 
-  Test Case: testLtrimFunction16
+  Test Case: LtrimFunction16
 
     [ PASS ]  Test if ltrim() function works correctly
 
-  Test Case: testLtrimFunction17
+  Test Case: LtrimFunction17
 
     [ PASS ]  Test if ltrim() function works correctly
 
-  Test Case: testLtrimFunction18
+  Test Case: LtrimFunction18
 
     [ PASS ]  Test if ltrim() function works correctly
 
-  Test Case: testLtrimFunction19
+  Test Case: LtrimFunction19
 
     [ PASS ]  Test if ltrim() function works correctly
 
-  Test Case: testLtrimFunction20
+  Test Case: LtrimFunction20
 
     [ PASS ]  Test if ltrim() function works correctly
 
-  Test Case: testRtrimFunction01
+  Test Case: RtrimFunction01
 
     [ PASS ]  Test if rtrim() function works correctly
 
-  Test Case: testRtrimFunction02
+  Test Case: RtrimFunction02
 
     [ PASS ]  Test if rtrim() function works correctly
 
-  Test Case: testRtrimFunction03
+  Test Case: RtrimFunction03
 
     [ PASS ]  Test if rtrim() function works correctly
 
-  Test Case: testRtrimFunction04
+  Test Case: RtrimFunction04
 
     [ PASS ]  Test if rtrim() function works correctly
 
-  Test Case: testRtrimFunction05
+  Test Case: RtrimFunction05
 
     [ PASS ]  Test if rtrim() function works correctly
 
-  Test Case: testRtrimFunction06
+  Test Case: RtrimFunction06
 
     [ PASS ]  Test if rtrim() function works correctly
 
-  Test Case: testRtrimFunction07
+  Test Case: RtrimFunction07
 
     [ PASS ]  Test if rtrim() function works correctly
 
-  Test Case: testRtrimFunction08
+  Test Case: RtrimFunction08
 
     [ PASS ]  Test if rtrim() function works correctly
 
-  Test Case: testRtrimFunction09
+  Test Case: RtrimFunction09
 
     [ PASS ]  Test if rtrim() function works correctly
 
-  Test Case: testRtrimFunction10
+  Test Case: RtrimFunction10
 
     [ PASS ]  Test if rtrim() function works correctly
 
-  Test Case: testRtrimFunction11
+  Test Case: RtrimFunction11
 
     [ PASS ]  Test if rtrim() function works correctly
 
-  Test Case: testRtrimFunction12
+  Test Case: RtrimFunction12
 
     [ PASS ]  Test if rtrim() function works correctly
 
-  Test Case: testRtrimFunction13
+  Test Case: RtrimFunction13
 
     [ PASS ]  Test if rtrim() function works correctly
 
-  Test Case: testRtrimFunction14
+  Test Case: RtrimFunction14
 
     [ PASS ]  Test if rtrim() function works correctly
 
-  Test Case: testRtrimFunction15
+  Test Case: RtrimFunction15
 
     [ PASS ]  Test if rtrim() function works correctly
 
-  Test Case: testRtrimFunction16
+  Test Case: RtrimFunction16
 
     [ PASS ]  Test if rtrim() function works correctly
 
-  Test Case: testRtrimFunction17
+  Test Case: RtrimFunction17
 
     [ PASS ]  Test if rtrim() function works correctly
 
-  Test Case: testRtrimFunction18
+  Test Case: RtrimFunction18
 
     [ PASS ]  Test if rtrim() function works correctly
 
-  Test Case: testRtrimFunction19
+  Test Case: RtrimFunction19
 
     [ PASS ]  Test if rtrim() function works correctly
 
-  Test Case: testRtrimFunction20
+  Test Case: RtrimFunction20
 
     [ PASS ]  Test if rtrim() function works correctly
 
-  Test Case: testSplitAt
+  Test Case: Split At
 
     [ PASS ]  Check the first value returned by function string.splitAt()
     [ PASS ]  Check second value returned by function string.splitAt()
 
-  Test Case: testSplitAt2
+  Test Case: SplitAt2
 
     [ PASS ]  Check the first value returned by function string.splitAt()
     [ PASS ]  Check second value returned by function string.splitAt()
 
-  Test Case: testSplitAt3
+  Test Case: SplitAt3
 
     [ PASS ]  Check the first value returned by function string.splitAt()
     [ PASS ]  Check second value returned by function string.splitAt()
 
-  Test Case: testStartsWithFunction01
+  Test Case: StartsWithFunction01
 
     [ PASS ]  Test if startsWith() function works correctly
 
-  Test Case: testStartsWithFunction02
+  Test Case: StartsWithFunction02
 
     [ PASS ]  Test if startsWith() function works correctly
 
-  Test Case: testStartsWithFunction03
+  Test Case: StartsWithFunction03
 
     [ PASS ]  Test if startsWith() function works correctly
 
-  Test Case: testStartsWithFunction04
+  Test Case: StartsWithFunction04
 
     [ PASS ]  Test if startsWith() function works correctly
 
-  Test Case: testStartsWithFunction05
+  Test Case: StartsWithFunction05
 
     [ PASS ]  Test if startsWith() function works correctly
 
-  Test Case: testStartsWithFunction06
+  Test Case: StartsWithFunction06
 
     [ PASS ]  Test if startsWith() function works correctly
 
-  Test Case: testStartsWithFunction07
+  Test Case: StartsWithFunction07
 
     [ PASS ]  Test if startsWith() function works correctly
 
-  Test Case: testStartsWithFunction08
+  Test Case: StartsWithFunction08
 
     [ PASS ]  Test if startsWith() function works correctly
 
-  Test Case: testStartsWithFunction09
+  Test Case: StartsWithFunction09
 
     [ PASS ]  Test if startsWith() function works correctly
 
-  Test Case: testStartsWithFunction10
+  Test Case: StartsWithFunction10
 
     [ PASS ]  Test if startsWith() function works correctly
 
-  Test Case: testStartsWithFunction11
+  Test Case: StartsWithFunction11
 
     [ PASS ]  Test if startsWith() function works correctly
 
-  Test Case: testStartsWithFunction12
+  Test Case: StartsWithFunction12
 
     [ PASS ]  Test if startsWith() function works correctly
 
-  Test Case: testStartsWithFunction13
+  Test Case: StartsWithFunction13
 
     [ PASS ]  Test if startsWith() function works correctly
 
-  Test Case: testStartsWithFunction14
+  Test Case: StartsWithFunction14
 
     [ PASS ]  Test if startsWith() function works correctly
 
-  Test Case: testStartsWithFunction15
+  Test Case: StartsWithFunction15
 
     [ PASS ]  Test if startsWith() function works correctly
 
-  Test Case: testStartsWithFunction16
+  Test Case: StartsWithFunction16
 
     [ PASS ]  Test if startsWith() function works correctly
 
-  Test Case: testStartsWithFunction17
+  Test Case: StartsWithFunction17
 
     [ PASS ]  Test if startsWith() function works correctly
 
-  Test Case: testStartsWithFunction18
+  Test Case: StartsWithFunction18
 
     [ PASS ]  Test if startsWith() function works correctly
 
-  Test Case: testStartsWithFunction19
+  Test Case: StartsWithFunction19
 
     [ PASS ]  Test if startsWith() function works correctly
 
-  Test Case: testStartsWithFunction20
+  Test Case: StartsWithFunction20
 
     [ PASS ]  Test if startsWith() function works correctly
 
-  Test Case: testStartsWithFunction21
+  Test Case: StartsWithFunction21
 
     [ PASS ]  Test if startsWith() function works correctly
 
-  Test Case: testStartsWithFunction22
+  Test Case: StartsWithFunction22
 
     [ PASS ]  Test if startsWith() function works correctly
 
-  Test Case: testStartsWithFunction23
+  Test Case: StartsWithFunction23
 
     [ PASS ]  Test if startsWith() function works correctly
 
-  Test Case: testSubsFunction01
+  Test Case: SubsFunction01
 
     [ PASS ]  Test if subs() function works correctly
 
-  Test Case: testSubsFunction02
+  Test Case: SubsFunction02
 
     [ PASS ]  Test if subs() function works correctly
 
-  Test Case: testSubsFunction03
+  Test Case: SubsFunction03
 
     [ PASS ]  Test if subs() function works correctly
 
-  Test Case: testSubsFunction04
+  Test Case: SubsFunction04
 
     [ PASS ]  Test if subs() function works correctly
 
-  Test Case: testSubsFunction05
+  Test Case: SubsFunction05
 
     [ PASS ]  Test if subs() function works correctly
 
-  Test Case: testSubsFunction06
+  Test Case: SubsFunction06
 
     [ PASS ]  Test if subs() function works correctly
 
-  Test Case: testSubstringFunction01
+  Test Case: SubstringFunction01
 
     [ PASS ]  Test if substring() function works correctly
 
-  Test Case: testSubstringFunction02
+  Test Case: SubstringFunction02
 
     [ PASS ]  Test if substring() function works correctly
 
-  Test Case: testSubstringFunction03
+  Test Case: SubstringFunction03
 
     [ PASS ]  Test if substring() function works correctly
 
-  Test Case: testSubstringFunction04
+  Test Case: SubstringFunction04
 
     [ PASS ]  Test if substring() function works correctly
 
-  Test Case: testSubstringFunction05
+  Test Case: SubstringFunction05
 
     [ PASS ]  Test if substring() function works correctly
 
-  Test Case: testSubstringFunction06
+  Test Case: SubstringFunction06
 
     [ PASS ]  Test if substring() function works correctly
 
-  Test Case: testTrimFunction01
+  Test Case: TrimFunction01
 
     [ PASS ]  Test if trim() function works correctly
 
-  Test Case: testTrimFunction02
+  Test Case: TrimFunction02
 
     [ PASS ]  Test if trim() function works correctly
 
-  Test Case: testTrimFunction03
+  Test Case: TrimFunction03
 
     [ PASS ]  Test if trim() function works correctly
 
-  Test Case: testTrimFunction04
+  Test Case: TrimFunction04
 
     [ PASS ]  Test if trim() function works correctly
 
-  Test Case: testTrimFunction05
+  Test Case: TrimFunction05
 
     [ PASS ]  Test if trim() function works correctly
 
-  Test Case: testTrimFunction06
+  Test Case: TrimFunction06
 
     [ PASS ]  Test if trim() function works correctly
 
-  Test Case: testTrimFunction07
+  Test Case: TrimFunction07
 
     [ PASS ]  Test if trim() function works correctly
 
-  Test Case: testTrimFunction08
+  Test Case: TrimFunction08
 
     [ PASS ]  Test if trim() function works correctly
 
-  Test Case: testTrimFunction09
+  Test Case: TrimFunction09
 
     [ PASS ]  Test if trim() function works correctly
 
-  Test Case: testTrimFunction10
+  Test Case: TrimFunction10
 
     [ PASS ]  Test if trim() function works correctly
 
-  Test Case: testTrimFunction11
+  Test Case: TrimFunction11
 
     [ PASS ]  Test if trim() function works correctly
 
-  Test Case: testTrimFunction12
+  Test Case: TrimFunction12
 
     [ PASS ]  Test if trim() function works correctly
 
-  Test Case: testTrimFunction13
+  Test Case: TrimFunction13
 
     [ PASS ]  Test if trim() function works correctly
 
-  Test Case: testTrimFunction14
+  Test Case: TrimFunction14
 
     [ PASS ]  Test if trim() function works correctly
 
-  Test Case: testTrimFunction15
+  Test Case: TrimFunction15
 
     [ PASS ]  Test if trim() function works correctly
 
-  Test Case: testTrimFunction16
+  Test Case: TrimFunction16
 
     [ PASS ]  Test if trim() function works correctly
 
-  Test Case: testTrimFunction17
+  Test Case: TrimFunction17
 
     [ PASS ]  Test if trim() function works correctly
 
-  Test Case: testTrimFunction18
+  Test Case: TrimFunction18
 
     [ PASS ]  Test if trim() function works correctly
 
-  Test Case: testTrimFunction19
+  Test Case: TrimFunction19
 
     [ PASS ]  Test if trim() function works correctly
 
-  Test Case: testTrimFunction20
+  Test Case: TrimFunction20
 
     [ PASS ]  Test if trim() function works correctly
 
-  Test Case: testTrimStringFunction01
+  Test Case: TrimStringFunction01
 
     [ INFO ]  Original string: Hello world!
     [ INFO ]  Trimmed string:  Hello world
     [ PASS ]  Test if trimString() function works correctly
 
-  Test Case: testTrimStringFunction02
+  Test Case: TrimStringFunction02
 
     [ PASS ]  Test if trimString() function works correctly
 
-  Test Case: testTrimStringFunction03
+  Test Case: TrimStringFunction03
 
     [ PASS ]  Test if trimString() function works correctly
 
-  Test Case: testTrimStringFunction04
+  Test Case: TrimStringFunction04
 
     [ PASS ]  Test if trimString() function works correctly
 
-  Test Case: testTrimStringFunction05
+  Test Case: TrimStringFunction05
 
     [ PASS ]  Test if trimString() function works correctly
 
-  Test Case: testTrimStringFunction06
+  Test Case: TrimStringFunction06
 
     [ PASS ]  Test if trimString() function works correctly
 
-  Test Case: testTrimStringFunction07
+  Test Case: TrimStringFunction07
 
     [ PASS ]  Test if trimString() function works correctly
 
-  Test Case: testTrimStringFunction08
+  Test Case: TrimStringFunction08
 
     [ PASS ]  Test if trimString() function works correctly
 
-  Test Case: testTrimStringFunction09
+  Test Case: TrimStringFunction09
 
     [ PASS ]  Test if trimString() function works correctly
 
-  Test Case: testTrimStringFunction10
+  Test Case: TrimStringFunction10
 
     [ PASS ]  Test if trimString() function works correctly
 
-  Test Case: testTrimStringFunction11
+  Test Case: TrimStringFunction11
 
     [ PASS ]  Test if trimString() function works correctly
 
-  Test Case: testTrimStringFunction12
+  Test Case: TrimStringFunction12
 
     [ PASS ]  Test if trimString() function works correctly
 
-  Test Case: testTrimStringFunction13
+  Test Case: TrimStringFunction13
 
     [ PASS ]  Test if trimString() function works correctly
 
-  Test Case: testTrimStringFunction14
+  Test Case: TrimStringFunction14
 
     [ PASS ]  Test if trimString() function works correctly
 
-  Test Case: testTrimStringFunction15
+  Test Case: TrimStringFunction15
 
     [ PASS ]  Test if trimString() function works correctly
 
-  Test Case: testTrimStringFunction16
+  Test Case: TrimStringFunction16
 
     [ PASS ]  Test if trimString() function works correctly
 
-  Test Case: testTrimStringFunction17
+  Test Case: TrimStringFunction17
 
     [ PASS ]  Test if trimString() function works correctly
 
-  Test Case: testTrimStringFunction18
+  Test Case: TrimStringFunction18
 
     [ PASS ]  Test if trimString() function works correctly
 
-  Test Case: testTrimStringFunction19
+  Test Case: TrimStringFunction19
 
     [ PASS ]  Test if trimString() function works correctly
 
-  Test Case: testTrimStringFunction20
+  Test Case: TrimStringFunction20
 
     [ PASS ]  Test if trimString() function works correctly
 
-  Test Case: testTrimStringFunction21
+  Test Case: TrimStringFunction21
 
     [ PASS ]  Test if trimString() function works correctly
 

@@ -13,13 +13,13 @@ Checking existence of command 'podlint': OK
   Test setup
 
 
-  Test Case: testExistence
+  Test Case: Existence
 
     [ FAIL ]  Manual page exists: doc/man/man1/emend.1.pod
     [ FAIL ]  Manual page exists: doc/man/man3/emender.3.pod
     [ FAIL ]  Manual page exists: doc/man/man5/emender_xml.5.pod
 
-  Test Case: testValidity
+  Test Case: Validity
 
     [ FAIL ]  Manual page is valid: doc/man/man1/emend.1.pod
     [ FAIL ]  Manual page is valid: doc/man/man3/emender.3.pod

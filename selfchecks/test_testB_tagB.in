@@ -9,7 +9,7 @@
   Tags:            tagB
   Required tools:  
 
-  Test Case: test1
+  Test Case: 1
 
     [ PASS ]  The function TestTagB.test1() is called properly.
 

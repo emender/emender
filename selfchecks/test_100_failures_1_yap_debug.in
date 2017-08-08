@@ -9,7 +9,7 @@
   Tags:            BasicTest, SmokeTest
   Required tools:  
 
-  Test Case: testA
+  Test Case: A
 
     [ FAIL ]  Fail#1
     [ FAIL ]  Fail#2
@@ -113,7 +113,7 @@
     [ FAIL ]  Fail#100
     [ DEBUG ]  Yap
 
-  Test Case: testB
+  Test Case: B
 
     [ DEBUG ]  Yap
     [ FAIL ]  Fail#1
@@ -217,7 +217,7 @@
     [ FAIL ]  Fail#99
     [ FAIL ]  Fail#100
 
-  Test Case: testC
+  Test Case: C
 
     [ FAIL ]  Fail#1
     [ FAIL ]  Fail#2
@@ -321,7 +321,7 @@
     [ FAIL ]  Fail#99
     [ FAIL ]  Fail#100
 
-  Test Case: testD
+  Test Case: D
 
     [ FAIL ]  Fail#1
     [ DEBUG ]  Yap
@@ -425,7 +425,7 @@
     [ FAIL ]  Fail#98
     [ FAIL ]  Fail#99
 
-  Test Case: testE
+  Test Case: E
 
     [ FAIL ]  Fail#1
     [ FAIL ]  Fail#2
@@ -529,7 +529,7 @@
     [ DEBUG ]  Yap
     [ FAIL ]  Fail#100
 
-  Test Case: testF
+  Test Case: F
 
     [ FAIL ]  Fail#1
     [ FAIL ]  Fail#2
@@ -633,7 +633,7 @@
     [ FAIL ]  Fail#97
     [ FAIL ]  Fail#98
 
-  Test Case: testG
+  Test Case: G
 
     [ FAIL ]  Fail#1
     [ FAIL ]  Fail#2
@@ -737,7 +737,7 @@
     [ FAIL ]  Fail#96
     [ FAIL ]  Fail#97
 
-  Test Case: testH
+  Test Case: H
 
     [ FAIL ]  Fail#1
     [ FAIL ]  Fail#2
@@ -841,7 +841,7 @@
     [ FAIL ]  Fail#99
     [ FAIL ]  Fail#100
 
-  Test Case: testI
+  Test Case: I
 
     [ FAIL ]  Fail#1
     [ FAIL ]  Fail#2

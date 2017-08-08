@@ -9,7 +9,7 @@
   Tags:            BasicTest, ModuleTest
   Required tools:  
 
-  Test Case: testModuleExistence
+  Test Case: Module Existence
 
     [ PASS ]  Check if global object with the name 'tracer' exists.
     [ PASS ]  Check if object with the name 'tracer' has correct type

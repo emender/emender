@@ -13,7 +13,7 @@
 
     [ PASS ]  TestRequires9.setUp()
 
-  Test Case: testA
+  Test Case: A
 
     [ PASS ]  TestRequires9.testA()
 

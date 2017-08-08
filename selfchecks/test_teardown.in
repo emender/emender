@@ -9,11 +9,11 @@
   Tags:            BasicTest
   Required tools:  
 
-  Test Case: testA
+  Test Case: A
 
     [ PASS ]  TestTearDown.testA()
 
-  Test Case: testB
+  Test Case: B
 
     [ PASS ]  TestTearDown.testB()
 

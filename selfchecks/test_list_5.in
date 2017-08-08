@@ -113,5 +113,4 @@ Test: TestTagBTagC
 Test: TestTagC
 Test: TestTearDown
 Test: TestTearDownOnly
-Test: TestUnderscoreInNames
 Test: TestWithoutFunctions

@@ -10,131 +10,131 @@
   Tags:            BasicTest, SmokeTest
   Required tools:  
 
-  Test Case: testNegative01
+  Test Case: Negative01
 
     ../test/TestAssertionIsNotEmpty.lua:123: Test structure error: Table must be a table.
 
-  Test Case: testNegative02
+  Test Case: Negative02
 
     ../test/TestAssertionIsNotEmpty.lua:132: Test structure error: Table is a required argument.
 
-  Test Case: testNegative03
+  Test Case: Negative03
 
     [ FAIL ]  (expected) table is empty
 
-  Test Case: testNegative04
+  Test Case: Negative04
 
     ../test/TestAssertionIsNotEmpty.lua:150: Test structure error: Table is a required argument.
 
-  Test Case: testNegative05
+  Test Case: Negative05
 
     ../test/TestAssertionIsNotEmpty.lua:159: Test structure error: Table must be a table.
 
-  Test Case: testNegative06
+  Test Case: Negative06
 
     ../test/TestAssertionIsNotEmpty.lua:168: Test structure error: Table must be a table.
 
-  Test Case: testNegative07
+  Test Case: Negative07
 
     ../test/TestAssertionIsNotEmpty.lua:177: Test structure error: Table must be a table.
 
-  Test Case: testNegative08
+  Test Case: Negative08
 
     ../test/TestAssertionIsNotEmpty.lua:186: Test structure error: Table must be a table.
 
-  Test Case: testNegative09
+  Test Case: Negative09
 
     ../test/TestAssertionIsNotEmpty.lua:195: Test structure error: Table must be a table.
 
-  Test Case: testNegative10
+  Test Case: Negative10
 
     ../test/TestAssertionIsNotEmpty.lua:209: Test structure error: Table must be a table.
 
-  Test Case: testNegative11
+  Test Case: Negative11
 
     ../test/TestAssertionIsNotEmpty.lua:227: Test structure error: Table must be a table.
 
-  Test Case: testNegative12
+  Test Case: Negative12
 
     ../test/TestAssertionIsNotEmpty.lua:241: Test structure error: Table must be a table.
 
-  Test Case: testNegative13
+  Test Case: Negative13
 
     ../test/TestAssertionIsNotEmpty.lua:250: Test structure error: Explanation is a required argument.
 
-  Test Case: testNegative14
+  Test Case: Negative14
 
     ../test/TestAssertionIsNotEmpty.lua:259: Test structure error: Explanation must be a string.
 
-  Test Case: testNegative15
+  Test Case: Negative15
 
     ../test/TestAssertionIsNotEmpty.lua:268: Test structure error: Explanation must be a string.
 
-  Test Case: testNegative16
+  Test Case: Negative16
 
     ../test/TestAssertionIsNotEmpty.lua:277: Test structure error: Explanation must be a string.
 
-  Test Case: testNegative17
+  Test Case: Negative17
 
     ../test/TestAssertionIsNotEmpty.lua:286: Test structure error: Explanation must be a string.
 
-  Test Case: testNegative18
+  Test Case: Negative18
 
     ../test/TestAssertionIsNotEmpty.lua:295: Test structure error: Explanation must be a string.
 
-  Test Case: testNegative19
+  Test Case: Negative19
 
     ../test/TestAssertionIsNotEmpty.lua:304: Test structure error: Explanation must be a string.
 
-  Test Case: testNegative20
+  Test Case: Negative20
 
     ../test/TestAssertionIsNotEmpty.lua:313: Test structure error: Explanation must be a string.
 
-  Test Case: testNegative21
+  Test Case: Negative21
 
     ../test/TestAssertionIsNotEmpty.lua:327: Test structure error: Explanation must be a string.
 
-  Test Case: testNegative22
+  Test Case: Negative22
 
     ../test/TestAssertionIsNotEmpty.lua:345: Test structure error: Explanation must be a string.
 
-  Test Case: testNegative23
+  Test Case: Negative23
 
     ../test/TestAssertionIsNotEmpty.lua:359: Test structure error: Explanation must be a string.
 
-  Test Case: testPositive01
+  Test Case: Positive01
 
     [ PASS ]  table is not empty
 
-  Test Case: testPositive02
+  Test Case: Positive02
 
     [ PASS ]  nested table is not empty
 
-  Test Case: testPositive03
+  Test Case: Positive03
 
     [ PASS ]  nested table is not empty
 
-  Test Case: testPositive04
+  Test Case: Positive04
 
     [ PASS ]  nested table is not empty
 
-  Test Case: testPositive05
+  Test Case: Positive05
 
     [ PASS ]  this table is not empty
 
-  Test Case: testPositive06
+  Test Case: Positive06
 
     [ PASS ]  this table is not empty
 
-  Test Case: testPositive07
+  Test Case: Positive07
 
     [ PASS ]  table is not empty
 
-  Test Case: testPositive08
+  Test Case: Positive08
 
     [ PASS ]  nested table is not empty
 
-  Test Case: testPositive09
+  Test Case: Positive09
 
     [ PASS ]  hash table is not empty
 

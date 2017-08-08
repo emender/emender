@@ -9,39 +9,39 @@
   Tags:            BasicTest, SmokeTest
   Required tools:  
 
-  Test Case: test01
+  Test Case: 01
 
     [ PASS ]  No colors.
 
-  Test Case: test02
+  Test Case: 02
 
     [ PASS ]  One **emphasized** word.
 
-  Test Case: test03
+  Test Case: 03
 
     [ PASS ]  Two **emphasized** colored **words**.
 
-  Test Case: test04
+  Test Case: 04
 
     [ PASS ]  Do **you** want **to** see **many** colorized **words**?
 
-  Test Case: test05
+  Test Case: 05
 
     [ PASS ]  Package **xorg-x11-drv-*** not found.
 
-  Test Case: test06
+  Test Case: 06
 
     [ PASS ]  Package **xorg-x11-drv-*** not **found**.
 
-  Test Case: test07
+  Test Case: 07
 
     [ PASS ]  >>> Five stars: ***** <<<
 
-  Test Case: test08
+  Test Case: 08
 
     [ PASS ]  >>> Six stars: ****** <<<
 
-  Test Case: test09
+  Test Case: 09
 
     [ PASS ]  >>> Seven stars: ******* <<<
 

@@ -9,22 +9,22 @@
   Tags:            BasicTest, ModuleTest
   Required tools:  
 
-  Test Case: testFunctionSlurp
+  Test Case: Function Slurp
 
     [ PASS ]  Check if global object with the name 'slurp' exists.
     [ PASS ]  Check if object with the name 'slurp' has correct type
 
-  Test Case: testFunctionSlurpTable
+  Test Case: Function Slurp Table
 
     [ PASS ]  Check if global object with the name 'slurpTable' exists.
     [ PASS ]  Check if object with the name 'slurpTable' has correct type
 
-  Test Case: testFunctionSpit
+  Test Case: Function Spit
 
     [ PASS ]  Check if global object with the name 'spit' exists.
     [ PASS ]  Check if object with the name 'spit' has correct type
 
-  Test Case: testFunctionSpitTable
+  Test Case: Function Spit Table
 
     [ PASS ]  Check if global object with the name 'spitTable' exists.
     [ PASS ]  Check if object with the name 'spitTable' has correct type

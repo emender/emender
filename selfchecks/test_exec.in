@@ -9,32 +9,32 @@
   Tags:            BasicTest, SmokeTest
   Required tools:  
 
-  Test Case: test1
+  Test Case: 1
 
     [ PASS ]  Check if standard output of 'echo' command is correctly
               captured
 
-  Test Case: test2
+  Test Case: 2
 
     [ PASS ]  Check if standard output of 'echo' command is correctly
               captured
 
-  Test Case: test3
+  Test Case: 3
 
     [ PASS ]  Check if standard output of 'echo' command is correctly
               captured
 
-  Test Case: test4
+  Test Case: 4
 
     [ PASS ]  Check if standard output of 'echo' command is correctly
               captured
 
-  Test Case: test5
+  Test Case: 5
 
     [ PASS ]  Check if standard output of 'echo' command is correctly
               captured
 
-  Test Case: test6
+  Test Case: 6
 
     [ PASS ]  Check if standard output of 'echo' command is correctly
               captured
@@ -43,12 +43,12 @@
     [ PASS ]  Check if standard output of 'echo' command is correctly
               captured
 
-  Test Case: test7
+  Test Case: 7
 
     [ PASS ]  Check if standard output of none command is correctly
               captured
 
-  Test Case: test8
+  Test Case: 8
 
     [ PASS ]  Check if standard output of none command is correctly
               captured

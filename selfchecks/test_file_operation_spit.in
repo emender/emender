@@ -9,43 +9,43 @@
   Tags:            BasicTest, FileIO
   Required tools:  
 
-  Test Case: testSpit01
+  Test Case: Spit01
 
     [ PASS ]  delete01.txt file should be writable
 
-  Test Case: testSpit02
+  Test Case: Spit02
 
     [ PASS ]  ./delete02.txt file should be writable
 
-  Test Case: testSpit03
+  Test Case: Spit03
 
     [ PASS ]  ./././delete03.txt file should be writable
 
-  Test Case: testSpit04
+  Test Case: Spit04
 
     [ PASS ]  /delete.txt file should not be writable
 
-  Test Case: testSpit05
+  Test Case: Spit05
 
     [ PASS ]  '' file should not be writable
 
-  Test Case: testSpit06
+  Test Case: Spit06
 
     [ PASS ]  '/' file should not be writable
 
-  Test Case: testSpit07
+  Test Case: Spit07
 
     [ PASS ]  '//' file should not be writable
 
-  Test Case: testSpit08
+  Test Case: Spit08
 
     [ PASS ]  './' file should not be writable
 
-  Test Case: testSpit09
+  Test Case: Spit09
 
     [ PASS ]  '/./' file should not be writable
 
-  Test Case: testSpit10
+  Test Case: Spit10
 
     [ PASS ]  '/proc/kcore' file should not be writable
 

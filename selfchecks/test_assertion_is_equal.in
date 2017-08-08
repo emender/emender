@@ -9,235 +9,235 @@
   Tags:            BasicTest
   Required tools:  
 
-  Test Case: testNegative01
+  Test Case: Negative01
 
     [ FAIL ]  (expected) negative equality test
 
-  Test Case: testNegative02
+  Test Case: Negative02
 
     [ FAIL ]  (expected) negative equality test
 
-  Test Case: testNegative03
+  Test Case: Negative03
 
     [ FAIL ]  (expected) integers are not the same
 
-  Test Case: testNegative04
+  Test Case: Negative04
 
     [ FAIL ]  (expected) integers are not the same
 
-  Test Case: testNegative05
+  Test Case: Negative05
 
     [ FAIL ]  (expected) strings are not the same
 
-  Test Case: testNegative06
+  Test Case: Negative06
 
     [ FAIL ]  (expected) strings are not the same
 
-  Test Case: testNegative07
+  Test Case: Negative07
 
     [ FAIL ]  (expected) strings are not the same
 
-  Test Case: testNegative08
+  Test Case: Negative08
 
     ../test/TestAssertionIsEqual.lua:318: Test structure error: Current value a required argument.
 
-  Test Case: testNegative09
+  Test Case: Negative09
 
     ../test/TestAssertionIsEqual.lua:328: Test structure error: Expected value is a required argument.
 
-  Test Case: testNegative10
+  Test Case: Negative10
 
     ../src/common/asserts.lua:194: Test structure error: Explanation is a required argument.
 
-  Test Case: testNegative11
+  Test Case: Negative11
 
     ../test/TestAssertionIsEqual.lua:348: Test structure error: Current value a required argument.
 
-  Test Case: testNegative12
+  Test Case: Negative12
 
     [ FAIL ]  negative equality test: two tables
 
-  Test Case: testNegative13
+  Test Case: Negative13
 
     [ FAIL ]  negative equality test: two tables, items are integers
 
-  Test Case: testNegative14
+  Test Case: Negative14
 
     [ FAIL ]  negative equality test: two tables, items are integers
 
-  Test Case: testNegative15
+  Test Case: Negative15
 
     [ FAIL ]  negative equality test: two tables, items are strings
 
-  Test Case: testNegative16
+  Test Case: Negative16
 
     [ FAIL ]  negative equality test: two nested tables
 
-  Test Case: testNegative17
+  Test Case: Negative17
 
     [ FAIL ]  negative equality test: two deeply nested tables
 
-  Test Case: testNegative18
+  Test Case: Negative18
 
     [ FAIL ]  negative equality test: two deeply nested tables
 
-  Test Case: testNegative19
+  Test Case: Negative19
 
     [ FAIL ]  negative equality test: two hash tables
 
-  Test Case: testNegative20
+  Test Case: Negative20
 
     [ FAIL ]  negative equality test: two hash tables
 
-  Test Case: testNegative21
+  Test Case: Negative21
 
     [ FAIL ]  negative equality test: two nested hash tables
 
-  Test Case: testNegative22
+  Test Case: Negative22
 
     [ FAIL ]  negative equality test: comparison of integer with boolean
 
-  Test Case: testNegative23
+  Test Case: Negative23
 
     [ FAIL ]  negative equality test: comparison of integer with boolean
 
-  Test Case: testNegative24
+  Test Case: Negative24
 
     [ FAIL ]  negative equality test: comparison of boolean with integer
 
-  Test Case: testNegative25
+  Test Case: Negative25
 
     [ FAIL ]  negative equality test: comparison of boolean with integer
 
-  Test Case: testNegative26
+  Test Case: Negative26
 
     [ FAIL ]  negative equality test: comparison of string with boolean
 
-  Test Case: testNegative27
+  Test Case: Negative27
 
     [ FAIL ]  negative equality test: comparison of string with boolean
 
-  Test Case: testNegative28
+  Test Case: Negative28
 
     [ FAIL ]  negative equality test: comparison of boolean with string
 
-  Test Case: testNegative29
+  Test Case: Negative29
 
     [ FAIL ]  negative equality test: comparison of boolean with string
 
-  Test Case: testNegative30
+  Test Case: Negative30
 
     [ FAIL ]  negative equality test: comparison of table with boolean
 
-  Test Case: testNegative31
+  Test Case: Negative31
 
     [ FAIL ]  negative equality test: comparison of table with boolean
 
-  Test Case: testNegative32
+  Test Case: Negative32
 
     [ FAIL ]  negative equality test: comparison of boolean with table
 
-  Test Case: testNegative33
+  Test Case: Negative33
 
     [ FAIL ]  negative equality test: comparison of boolean with table
 
-  Test Case: testNegative34
+  Test Case: Negative34
 
     [ FAIL ]  negative equality test: comparison of table with boolean
 
-  Test Case: testNegative35
+  Test Case: Negative35
 
     [ FAIL ]  negative equality test: comparison of table with boolean
 
-  Test Case: testNegative36
+  Test Case: Negative36
 
     [ FAIL ]  negative equality test: comparison of boolean with table
 
-  Test Case: testNegative37
+  Test Case: Negative37
 
     [ FAIL ]  negative equality test: comparison of boolean with table
 
-  Test Case: testNegative38
+  Test Case: Negative38
 
     [ FAIL ]  negative equality test: comparison of table with string
 
-  Test Case: testNegative39
+  Test Case: Negative39
 
     [ FAIL ]  negative equality test: comparison of table with number
 
-  Test Case: testNegative40
+  Test Case: Negative40
 
     [ FAIL ]  negative equality test: comparison of string with table
 
-  Test Case: testNegative41
+  Test Case: Negative41
 
     [ FAIL ]  negative equality test: comparison of number with table
 
-  Test Case: testPositive01
+  Test Case: Positive01
 
     [ PASS ]  positive equality test:two booleans
 
-  Test Case: testPositive02
+  Test Case: Positive02
 
     [ PASS ]  positive equality test:two booleans
 
-  Test Case: testPositive03
+  Test Case: Positive03
 
     [ PASS ]  positive equality test: two integers
 
-  Test Case: testPositive04
+  Test Case: Positive04
 
     [ PASS ]  positive equality test: two floats
 
-  Test Case: testPositive05
+  Test Case: Positive05
 
     [ PASS ]  positive equality test: two empty strings
 
-  Test Case: testPositive06
+  Test Case: Positive06
 
     [ PASS ]  positive equality test: two strings
 
-  Test Case: testPositive07
+  Test Case: Positive07
 
     [ PASS ]  positive equality test: two strings
 
-  Test Case: testPositive08
+  Test Case: Positive08
 
     [ PASS ]  positive equality test: two empty tables
 
-  Test Case: testPositive09
+  Test Case: Positive09
 
     [ PASS ]  positive equality test: two tables, items are integers
 
-  Test Case: testPositive10
+  Test Case: Positive10
 
     [ PASS ]  positive equality test: two tables, items are integers
 
-  Test Case: testPositive11
+  Test Case: Positive11
 
     [ PASS ]  positive equality test: two tables, items are strings
 
-  Test Case: testPositive12
+  Test Case: Positive12
 
     [ PASS ]  positive equality test: two nested tables
 
-  Test Case: testPositive13
+  Test Case: Positive13
 
     [ PASS ]  positive equality test: two deeply nested tables
 
-  Test Case: testPositive14
+  Test Case: Positive14
 
     [ PASS ]  positive equality test: two deeply nested tables
 
-  Test Case: testPositive15
+  Test Case: Positive15
 
     [ PASS ]  positive equality test: two hash tables
 
-  Test Case: testPositive16
+  Test Case: Positive16
 
     [ PASS ]  positive equality test: two hash tables
 
-  Test Case: testPositive17
+  Test Case: Positive17
 
     [ PASS ]  positive equality test: two nested hash tables
 

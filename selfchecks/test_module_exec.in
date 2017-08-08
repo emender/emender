@@ -9,14 +9,14 @@
   Tags:            BasicTest, ModuleTest
   Required tools:  
 
-  Test Case: testFunctionExecCaptureOutputAsString
+  Test Case: Function Exec Capture Output As String
 
     [ PASS ]  Check if global object with the name
               'execCaptureOutputAsString' exists.
     [ PASS ]  Check if object with the name 'execCaptureOutputAsString'
               has correct type
 
-  Test Case: testFunctionExecCaptureOutputAsTable
+  Test Case: Function Exec Capture Output As Table
 
     [ PASS ]  Check if global object with the name
               'execCaptureOutputAsTable' exists.

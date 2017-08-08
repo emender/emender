@@ -9,155 +9,155 @@
   Tags:            BasicTest
   Required tools:  
 
-  Test Case: testNegative01
+  Test Case: Negative01
 
     ../test/TestAssertionIsNotType.lua:125: Test structure error: Type is a required argument.
 
-  Test Case: testNegative02
+  Test Case: Negative02
 
     ../test/TestAssertionIsNotType.lua:129: Test structure error: Type is a required argument.
 
-  Test Case: testNegative03
+  Test Case: Negative03
 
     ../test/TestAssertionIsNotType.lua:133: Test structure error: Type is a required argument.
 
-  Test Case: testNegative04
+  Test Case: Negative04
 
     ../test/TestAssertionIsNotType.lua:137: Test structure error: Type is a required argument.
 
-  Test Case: testNegative05
+  Test Case: Negative05
 
     ../src/common/asserts.lua:419: Test structure error: Explanation is a required argument.
 
-  Test Case: testNegative06
+  Test Case: Negative06
 
     ../src/common/asserts.lua:419: Test structure error: Explanation is a required argument.
 
-  Test Case: testNegative07
+  Test Case: Negative07
 
     [ FAIL ]  negative test
 
-  Test Case: testNegative08
+  Test Case: Negative08
 
     [ FAIL ]  negative test
 
-  Test Case: testNegative09
+  Test Case: Negative09
 
     [ FAIL ]  negative test
 
-  Test Case: testNegative10
+  Test Case: Negative10
 
     [ FAIL ]  negative test
 
-  Test Case: testNegative11
+  Test Case: Negative11
 
     [ FAIL ]  negative test
 
-  Test Case: testNegative12
+  Test Case: Negative12
 
     [ FAIL ]  negative test
 
-  Test Case: testNegative13
+  Test Case: Negative13
 
     [ FAIL ]  negative test
 
-  Test Case: testNegative14
+  Test Case: Negative14
 
     ../test/TestAssertionIsNotType.lua:178: Test structure error: Expected type must be a string.
 
-  Test Case: testPositive01
+  Test Case: Positive01
 
     [ PASS ]  positive test
 
-  Test Case: testPositive02
+  Test Case: Positive02
 
     [ PASS ]  positive test
 
-  Test Case: testPositive03
+  Test Case: Positive03
 
     [ PASS ]  positive test
 
-  Test Case: testPositive04
+  Test Case: Positive04
 
     [ PASS ]  positive test
 
-  Test Case: testPositive05
+  Test Case: Positive05
 
     [ PASS ]  positive test
 
-  Test Case: testPositive06
+  Test Case: Positive06
 
     [ PASS ]  positive test
 
-  Test Case: testPositive07
+  Test Case: Positive07
 
     [ PASS ]  positive test
 
-  Test Case: testPositive08
+  Test Case: Positive08
 
     [ PASS ]  positive test
 
-  Test Case: testPositive09
+  Test Case: Positive09
 
     [ PASS ]  positive test
 
-  Test Case: testPositive10
+  Test Case: Positive10
 
     [ PASS ]  positive test
 
-  Test Case: testPositive11
+  Test Case: Positive11
 
     [ PASS ]  positive test
 
-  Test Case: testPositive12
+  Test Case: Positive12
 
     [ PASS ]  positive test
 
-  Test Case: testPositive13
+  Test Case: Positive13
 
     [ PASS ]  positive test
 
-  Test Case: testPositive14
+  Test Case: Positive14
 
     [ PASS ]  positive test
 
-  Test Case: testPositive15
+  Test Case: Positive15
 
     [ PASS ]  positive test
 
-  Test Case: testPositive16
+  Test Case: Positive16
 
     [ PASS ]  positive test
 
-  Test Case: testPositive17
+  Test Case: Positive17
 
     [ PASS ]  positive test
 
-  Test Case: testPositive18
+  Test Case: Positive18
 
     [ PASS ]  positive test
 
-  Test Case: testPositive19
+  Test Case: Positive19
 
     [ PASS ]  positive test
 
-  Test Case: testPositive20
+  Test Case: Positive20
 
     [ PASS ]  positive test
 
-  Test Case: testPositive21
+  Test Case: Positive21
 
     [ PASS ]  positive test
 
-  Test Case: testPositive22
+  Test Case: Positive22
 
     [ PASS ]  positive test
 
-  Test Case: testPositive23
+  Test Case: Positive23
 
     [ PASS ]  positive test
 
-  Test Case: testPositive24
+  Test Case: Positive24
 
     [ PASS ]  positive test
 

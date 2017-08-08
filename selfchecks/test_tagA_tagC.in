@@ -9,7 +9,7 @@
   Tags:            tagA
   Required tools:  
 
-  Test Case: test1
+  Test Case: 1
 
     [ PASS ]  The function TestTagA.test1() is called properly.
 
@@ -32,7 +32,7 @@
   Tags:            tagA, tagB
   Required tools:  
 
-  Test Case: test1
+  Test Case: 1
 
     [ PASS ]  The function TestTagATagB.test1() is called properly.
 
@@ -55,7 +55,7 @@
   Tags:            tagA, tagB, tagC
   Required tools:  
 
-  Test Case: test1
+  Test Case: 1
 
     [ PASS ]  The function TestTagATagBTagC.test1() is called properly.
 
@@ -78,7 +78,7 @@
   Tags:            tagA, tagC
   Required tools:  
 
-  Test Case: test1
+  Test Case: 1
 
     [ PASS ]  The function TestTagATagC.test1() is called properly.
 
@@ -101,7 +101,7 @@
   Tags:            tagB, tagC
   Required tools:  
 
-  Test Case: test1
+  Test Case: 1
 
     [ PASS ]  The function TestTagBTagC.test1() is called properly.
 
@@ -124,7 +124,7 @@
   Tags:            tagC
   Required tools:  
 
-  Test Case: test1
+  Test Case: 1
 
     [ PASS ]  The function TestTagC.test1() is called properly.
 

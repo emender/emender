@@ -9,7 +9,7 @@
   Tags:            BasicTest, ModuleTest
   Required tools:  
 
-  Test Case: testFunctionReportError
+  Test Case: Function Report Error
 
     [ PASS ]  Check if global object with the name
               'readTputControlSequence' exists.

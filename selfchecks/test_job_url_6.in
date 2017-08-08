@@ -10,7 +10,7 @@
   Tags:            BasicTest, SmokeTest
   Required tools:  
 
-  Test Case: testJobURL
+  Test Case: Job URL
 
     [ PASS ]  Job URL: 
 

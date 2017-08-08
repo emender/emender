@@ -9,7 +9,7 @@
   Tags:            BasicTest, ModuleTest
   Required tools:  
 
-  Test Case: testObjectGetopt
+  Test Case: Object Getopt
 
     [ PASS ]  Check if global object with the name 'getopt' exists.
     [ PASS ]  Check if object with the name 'getopt' has correct type

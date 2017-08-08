@@ -9,67 +9,67 @@
   Tags:            BasicTest, SmokeTest
   Required tools:  
 
-  Test Case: testNegative01
+  Test Case: Negative01
 
     ../test/TestAssertionWarn.lua:54: Test structure error: Explanation is a required argument.
 
-  Test Case: testNegative02
+  Test Case: Negative02
 
     ../test/TestAssertionWarn.lua:63: Test structure error: Explanation is a required argument.
 
-  Test Case: testNegative03
+  Test Case: Negative03
 
     ../test/TestAssertionWarn.lua:72: Test structure error: Explanation must be a string.
 
-  Test Case: testNegative04
+  Test Case: Negative04
 
     ../test/TestAssertionWarn.lua:82: Test structure error: Explanation must be a string.
 
-  Test Case: testNegative05
+  Test Case: Negative05
 
     ../test/TestAssertionWarn.lua:91: Test structure error: Explanation must be a string.
 
-  Test Case: testNegative06
+  Test Case: Negative06
 
     ../test/TestAssertionWarn.lua:100: Test structure error: Explanation must be a string.
 
-  Test Case: testNegative07
+  Test Case: Negative07
 
     ../test/TestAssertionWarn.lua:109: Test structure error: Explanation must be a string.
 
-  Test Case: testNegative08
+  Test Case: Negative08
 
     ../test/TestAssertionWarn.lua:118: Test structure error: Explanation must be a string.
 
-  Test Case: testNegative09
+  Test Case: Negative09
 
     ../test/TestAssertionWarn.lua:127: Test structure error: Explanation must be a string.
 
-  Test Case: testNegative10
+  Test Case: Negative10
 
     ../test/TestAssertionWarn.lua:143: Test structure error: Explanation must be a string.
 
-  Test Case: testNegative11
+  Test Case: Negative11
 
     ../test/TestAssertionWarn.lua:152: Test structure error: Explanation must be a string.
 
-  Test Case: testNegative12
+  Test Case: Negative12
 
     ../test/TestAssertionWarn.lua:166: Test structure error: Explanation must be a string.
 
-  Test Case: testNegative13
+  Test Case: Negative13
 
     ../test/TestAssertionWarn.lua:184: Test structure error: Explanation must be a string.
 
-  Test Case: testNegative14
+  Test Case: Negative14
 
     ../test/TestAssertionWarn.lua:198: Test structure error: Explanation must be a string.
 
-  Test Case: testPositive01
+  Test Case: Positive01
 
     [ INFO ]  The warn() function expects a string as its argument.
 
-  Test Case: testPositive02
+  Test Case: Positive02
 
     [ INFO ]
 

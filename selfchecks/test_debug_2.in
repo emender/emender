@@ -9,16 +9,16 @@
   Tags:            BasicTest, SmokeTest
   Required tools:  
 
-  Test Case: test1
+  Test Case: 1
 
     [ DEBUG ]  Info#1
 
-  Test Case: test2
+  Test Case: 2
 
     [ DEBUG ]  Info#1
     [ PASS ]  OK
 
-  Test Case: test3
+  Test Case: 3
 
     [ DEBUG ]  Info#1
     [ FAIL ]  Error

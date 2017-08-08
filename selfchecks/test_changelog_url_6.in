@@ -10,7 +10,7 @@
   Tags:            BasicTest, SmokeTest
   Required tools:  
 
-  Test Case: testChangeLogURL
+  Test Case: Change Log URL
 
     [ PASS ]  ChangeLog URL: 
 

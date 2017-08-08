@@ -9,47 +9,47 @@
   Tags:            BasicTest, ModuleTest
   Required tools:  
 
-  Test Case: testContainsNegative1
+  Test Case: ContainsNegative1
 
     [ PASS ]  Check table.contains(nil) for non empty table.
     [ PASS ]  Check table.contains(0) for non empty table.
     [ PASS ]  Check table.contains("xyzzy") for non empty table.
     [ PASS ]  Check table.contains({}) for non empty table.
 
-  Test Case: testContainsNegative2
+  Test Case: ContainsNegative2
 
     [ PASS ]  Check table.contains(nil) for non empty table.
     [ PASS ]  Check table.contains(42) for non empty table.
     [ PASS ]  Check table.contains("xyzzy") for non empty table.
     [ PASS ]  Check table.contains({}) for non empty table.
 
-  Test Case: testContainsOnEmptyTable
+  Test Case: Contains On Empty Table
 
     [ PASS ]  Check table.contains(nil) for empty table.
     [ PASS ]  Check table.contains(42) for empty table.
     [ PASS ]  Check table.contains("xyzzy") for empty table.
     [ PASS ]  Check table.contains({}) for empty table.
 
-  Test Case: testContainsPositive1
+  Test Case: ContainsPositive1
 
     [ PASS ]  Check table.contains(42) for non empty table.
     [ PASS ]  Check table.contains(1) for non empty table.
     [ PASS ]  Check table.contains(2) for non empty table.
     [ PASS ]  Check table.contains(3) for non empty table.
 
-  Test Case: testContainsPositive2
+  Test Case: ContainsPositive2
 
     [ PASS ]  Check table.contains("x") for non empty table.
     [ PASS ]  Check table.contains("y") for non empty table.
     [ PASS ]  Check table.contains("xyzzy") for non empty table.
 
-  Test Case: testContainsPositive3
+  Test Case: ContainsPositive3
 
     [ PASS ]  Check table.contains(nil) for non empty table.
     [ PASS ]  Check table.contains("x") for non empty table.
     [ PASS ]  Check table.contains("y") for non empty table.
 
-  Test Case: testContainsPositive4
+  Test Case: ContainsPositive4
 
     [ PASS ]  Check table.contains(nil) for non empty table.
     [ PASS ]  Check table.contains(1) for non empty table.
@@ -57,7 +57,7 @@
     [ PASS ]  Check table.contains(3) for non empty table.
     [ PASS ]  Check table.contains(4) for non empty table.
 
-  Test Case: testFunctionAppendTables
+  Test Case: Function Append Tables
 
     [ PASS ]  Check table.appendTables(), one of the tables is nil.
     [ PASS ]  Check table.appendTables(), one of the tables is nil.
@@ -73,7 +73,7 @@
     [ PASS ]  Check table.appendTables(), appending two tables - the one
               table with three items and the empty one.
 
-  Test Case: testFunctionJoinTables
+  Test Case: Function Join Tables
 
     [ PASS ]  Check table.joinTables(), both tables are nil.
     [ PASS ]  Check table.joinTables(), the first argument is nil, the
@@ -89,22 +89,22 @@
     [ PASS ]  Check table.joinTables(), joining two tables, both tables
               have one same key.
 
-  Test Case: testFunctionKeysOnArray
+  Test Case: Function Keys On Array
 
     [ PASS ]  Check table.keys() on regular array
     [ PASS ]  Check table.keys() on regular array
     [ PASS ]  Check table.keys() on regular array
 
-  Test Case: testFunctionKeysOnDictionary1
+  Test Case: FunctionKeysOnDictionary1
 
     [ PASS ]  Check table.keys() on dictionary
 
-  Test Case: testFunctionKeysOnDictionary2
+  Test Case: FunctionKeysOnDictionary2
 
     [ PASS ]  Check table.keys() on dictionary
     [ PASS ]  Check table.keys() on dictionary
 
-  Test Case: testFunctionKeysOnDictionary3
+  Test Case: FunctionKeysOnDictionary3
 
     [ PASS ]  Check table.keys() on dictionary
     [ PASS ]  Check table.keys() on dictionary
@@ -112,11 +112,11 @@
     [ PASS ]  Check table.keys() on dictionary
     [ PASS ]  Check table.keys() on dictionary
 
-  Test Case: testFunctionKeysOnEmptyTable
+  Test Case: Function Keys On Empty Table
 
     [ PASS ]  Check table.keys() on empty table
 
-  Test Case: testFunctionSetValueToKey
+  Test Case: Function Set Value To Key
 
     [ PASS ]  Check table.setValueToKey() on empty table.
     [ PASS ]  Check table.setValueToKey() on table with one item.
@@ -124,76 +124,76 @@
     [ PASS ]  Check table.setValueToKey() on table with more items.
     [ PASS ]  Check table.setValueToKey() on table with more items.
 
-  Test Case: testHashTableSize1
+  Test Case: HashTableSize1
 
     [ PASS ]  Check table.hashTableSize().
 
-  Test Case: testHashTableSize2
+  Test Case: HashTableSize2
 
     [ PASS ]  Check table.hashTableSize().
 
-  Test Case: testHashTableSize3
+  Test Case: HashTableSize3
 
     [ PASS ]  Check table.hashTableSize().
 
-  Test Case: testHashTableSize4
+  Test Case: HashTableSize4
 
     [ PASS ]  Check table.hashTableSize().
 
-  Test Case: testHashTableSize5
+  Test Case: HashTableSize5
 
     [ PASS ]  Check table.hashTableSize().
 
-  Test Case: testHashTableSize6
+  Test Case: HashTableSize6
 
     [ PASS ]  Check table.hashTableSize().
 
-  Test Case: testHashTableSize7
+  Test Case: HashTableSize7
 
     [ PASS ]  Check table.hashTableSize().
 
-  Test Case: testHashTableSize8
+  Test Case: HashTableSize8
 
     [ PASS ]  Check table.hashTableSize().
 
-  Test Case: testHashTableSize9
+  Test Case: HashTableSize9
 
     [ PASS ]  Check table.hashTableSize().
 
-  Test Case: testModuleExistence
+  Test Case: Module Existence
 
     [ PASS ]  Check if global object with the name 'table' exists.
     [ PASS ]  Check if object with the name 'table' has correct type
 
-  Test Case: testTableCompare1
+  Test Case: TableCompare1
 
     [ PASS ]  Check table.compare().
 
-  Test Case: testTableCompare2
+  Test Case: TableCompare2
 
     [ PASS ]  Check table.compare().
 
-  Test Case: testTableCompare3
+  Test Case: TableCompare3
 
     [ PASS ]  Check table.compare().
 
-  Test Case: testTableCompare4
+  Test Case: TableCompare4
 
     [ PASS ]  Check table.compare().
 
-  Test Case: testTableCompare5
+  Test Case: TableCompare5
 
     [ PASS ]  Check table.compare().
 
-  Test Case: testTableCompare6
+  Test Case: TableCompare6
 
     [ PASS ]  Check table.compare().
 
-  Test Case: testTableCompare7
+  Test Case: TableCompare7
 
     [ PASS ]  Check table.compare().
 
-  Test Case: testTableCompare8
+  Test Case: TableCompare8
 
     [ PASS ]  Check table.compare().
 

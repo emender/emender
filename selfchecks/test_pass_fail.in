@@ -9,43 +9,43 @@
   Tags:            XMLcheck, BasicTest, SmokeTest
   Required tools:  
 
-  Test Case: test1fail
+  Test Case: 1fail
 
     [ FAIL ]  1st fail
 
-  Test Case: test1pass
+  Test Case: 1pass
 
     [ PASS ]  1st pass
 
-  Test Case: test2fails
+  Test Case: 2fails
 
     [ FAIL ]  1st fail
     [ FAIL ]  2nd fail
 
-  Test Case: test2passes
+  Test Case: 2passes
 
     [ PASS ]  1st pass
     [ PASS ]  2nd pass
 
-  Test Case: test3fails
+  Test Case: 3fails
 
     [ FAIL ]  fail #1
     [ FAIL ]  fail #2
     [ FAIL ]  fail #3
 
-  Test Case: test3passes
+  Test Case: 3passes
 
     [ PASS ]  pass #1
     [ PASS ]  pass #2
     [ PASS ]  pass #3
 
-  Test Case: testFailFailPass
+  Test Case: Fail Fail Pass
 
     [ FAIL ]  test failed!!!
     [ FAIL ]  test failed!!!
     [ PASS ]  test passed!!!
 
-  Test Case: testMixed
+  Test Case: Mixed
 
     [ PASS ]  pass #1
     [ FAIL ]  fail #1
@@ -54,13 +54,13 @@
     [ PASS ]  pass #3
     [ FAIL ]  fail #3
 
-  Test Case: testPassFailFail
+  Test Case: Pass Fail Fail
 
     [ PASS ]  test passed!!!
     [ FAIL ]  test failed!!!
     [ FAIL ]  test failed!!!
 
-  Test Case: testPassFailPass
+  Test Case: Pass Fail Pass
 
     [ PASS ]  test passed!!!
     [ FAIL ]  test failed!!!

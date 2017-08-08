@@ -9,7 +9,7 @@
   Tags:            BasicTest, SmokeTest
   Required tools:  
 
-  Test Case: testA
+  Test Case: A
 
     [ PASS ]  Pass#1
     [ PASS ]  Pass#2
@@ -113,7 +113,7 @@
     [ PASS ]  Pass#100
     [ LINK ]  Link [https://github.com/emender/]
 
-  Test Case: testB
+  Test Case: B
 
     [ LINK ]  Link [https://github.com/emender/]
     [ PASS ]  Pass#1
@@ -217,7 +217,7 @@
     [ PASS ]  Pass#99
     [ PASS ]  Pass#100
 
-  Test Case: testC
+  Test Case: C
 
     [ PASS ]  Pass#1
     [ PASS ]  Pass#2

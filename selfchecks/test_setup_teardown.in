@@ -13,11 +13,11 @@
 
 	setUp() function called
 
-  Test Case: testA
+  Test Case: A
 
 	TestSetUpTearDown.testA()
 
-  Test Case: testB
+  Test Case: B
 
 	TestSetUpTearDown.testB()
 

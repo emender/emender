@@ -9,207 +9,207 @@
   Tags:            BasicTest
   Required tools:  
 
-  Test Case: testNegative01
+  Test Case: Negative01
 
     ../test/TestAssertionIsType.lua:70: Test structure error: Type is a required argument.
 
-  Test Case: testNegative02
+  Test Case: Negative02
 
     ../test/TestAssertionIsType.lua:74: Test structure error: Type is a required argument.
 
-  Test Case: testNegative03
+  Test Case: Negative03
 
     ../test/TestAssertionIsType.lua:78: Test structure error: Type is a required argument.
 
-  Test Case: testNegative04
+  Test Case: Negative04
 
     ../test/TestAssertionIsType.lua:82: Test structure error: Type is a required argument.
 
-  Test Case: testNegative05
+  Test Case: Negative05
 
     ../src/common/asserts.lua:381: Test structure error: Explanation is a required argument.
 
-  Test Case: testNegative06
+  Test Case: Negative06
 
     ../src/common/asserts.lua:381: Test structure error: Explanation is a required argument.
 
-  Test Case: testNegative07
+  Test Case: Negative07
 
     [ FAIL ]  negative test
 
-  Test Case: testNegative08
+  Test Case: Negative08
 
     [ FAIL ]  negative test
 
-  Test Case: testNegative09
+  Test Case: Negative09
 
     [ FAIL ]  negative test
 
-  Test Case: testNegative10
+  Test Case: Negative10
 
     [ FAIL ]  negative test
 
-  Test Case: testNegative11
+  Test Case: Negative11
 
     [ FAIL ]  negative test
 
-  Test Case: testNegative12
+  Test Case: Negative12
 
     [ FAIL ]  negative test
 
-  Test Case: testNegative13
+  Test Case: Negative13
 
     [ FAIL ]  negative test
 
-  Test Case: testNegative14
+  Test Case: Negative14
 
     [ FAIL ]  negative test
 
-  Test Case: testNegative15
+  Test Case: Negative15
 
     [ FAIL ]  negative test
 
-  Test Case: testNegative16
+  Test Case: Negative16
 
     [ FAIL ]  negative test
 
-  Test Case: testNegative17
+  Test Case: Negative17
 
     [ FAIL ]  negative test
 
-  Test Case: testNegative18
+  Test Case: Negative18
 
     [ FAIL ]  negative test
 
-  Test Case: testNegative19
+  Test Case: Negative19
 
     [ FAIL ]  negative test
 
-  Test Case: testNegative20
+  Test Case: Negative20
 
     [ FAIL ]  negative test
 
-  Test Case: testNegative21
+  Test Case: Negative21
 
     [ FAIL ]  negative test
 
-  Test Case: testNegative22
+  Test Case: Negative22
 
     [ FAIL ]  negative test
 
-  Test Case: testNegative23
+  Test Case: Negative23
 
     [ FAIL ]  negative test
 
-  Test Case: testNegative24
+  Test Case: Negative24
 
     [ FAIL ]  negative test
 
-  Test Case: testNegative25
+  Test Case: Negative25
 
     [ FAIL ]  negative test
 
-  Test Case: testNegative26
+  Test Case: Negative26
 
     [ FAIL ]  negative test
 
-  Test Case: testNegative27
+  Test Case: Negative27
 
     [ FAIL ]  negative test
 
-  Test Case: testNegative28
+  Test Case: Negative28
 
     [ FAIL ]  negative test
 
-  Test Case: testNegative29
+  Test Case: Negative29
 
     [ FAIL ]  negative test
 
-  Test Case: testNegative30
+  Test Case: Negative30
 
     [ FAIL ]  negative test
 
-  Test Case: testNegative31
+  Test Case: Negative31
 
     ../test/TestAssertionIsType.lua:190: Test structure error: Expected type must be a string.
 
-  Test Case: testNegative32
+  Test Case: Negative32
 
     ../src/common/asserts.lua:381: Test structure error: Explanation is a required argument.
 
-  Test Case: testNegative33
+  Test Case: Negative33
 
     ../src/common/asserts.lua:381: Test structure error: Explanation must be a string.
 
-  Test Case: testNegative34
+  Test Case: Negative34
 
     ../src/common/asserts.lua:381: Test structure error: Explanation must be a string.
 
-  Test Case: testNegative35
+  Test Case: Negative35
 
     ../src/common/asserts.lua:381: Test structure error: Explanation must be a string.
 
-  Test Case: testNegative36
+  Test Case: Negative36
 
     ../src/common/asserts.lua:381: Test structure error: Explanation must be a string.
 
-  Test Case: testNegative37
+  Test Case: Negative37
 
     ../src/common/asserts.lua:381: Test structure error: Explanation must be a string.
 
-  Test Case: testNegative38
+  Test Case: Negative38
 
     ../src/common/asserts.lua:381: Test structure error: Explanation must be a string.
 
-  Test Case: testNegative39
+  Test Case: Negative39
 
     ../src/common/asserts.lua:381: Test structure error: Explanation must be a string.
 
-  Test Case: testNegative40
+  Test Case: Negative40
 
     ../src/common/asserts.lua:381: Test structure error: Explanation must be a string.
 
-  Test Case: testNegative41
+  Test Case: Negative41
 
     ../src/common/asserts.lua:381: Test structure error: Explanation must be a string.
 
-  Test Case: testNegative42
+  Test Case: Negative42
 
     ../src/common/asserts.lua:381: Test structure error: Explanation must be a string.
 
-  Test Case: testPositive1
+  Test Case: Positive1
 
     [ PASS ]  positive test
 
-  Test Case: testPositive2
+  Test Case: Positive2
 
     [ PASS ]  positive test
 
-  Test Case: testPositive3
+  Test Case: Positive3
 
     [ PASS ]  positive test
 
-  Test Case: testPositive4
+  Test Case: Positive4
 
     [ PASS ]  positive test
 
-  Test Case: testPositive5
+  Test Case: Positive5
 
     [ PASS ]  positive test
 
-  Test Case: testPositive6
+  Test Case: Positive6
 
     [ PASS ]  positive test
 
-  Test Case: testPositive7
+  Test Case: Positive7
 
     [ PASS ]  positive test
 
-  Test Case: testPositive8
+  Test Case: Positive8
 
     [ PASS ]  positive test
 
-  Test Case: testPositive9
+  Test Case: Positive9
 
     [ PASS ]  positive test
 

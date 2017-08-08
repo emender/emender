@@ -10,7 +10,7 @@
   Tags:            BasicTest, SmokeTest
   Required tools:  
 
-  Test Case: testFrontPageURL
+  Test Case: Front Page URL
 
     [ FAIL ]  Front page URL is not set!
 

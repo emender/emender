@@ -13,11 +13,11 @@
 
     [ PASS ]  setUp() function properly called.
 
-  Test Case: testA
+  Test Case: A
 
     [ PASS ]  TestSetUp.testA() function properly called.
 
-  Test Case: testB
+  Test Case: B
 
     [ PASS ]  TestSetUp.testB() function properly called.
 

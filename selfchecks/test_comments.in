@@ -9,35 +9,35 @@
   Tags:            BasicTest, SmokeTest
   Required tools:  
 
-  Test Case: testA
+  Test Case: A
 
     [ PASS ]  The function TestComments.testA() is called properly.
 
-  Test Case: testB
+  Test Case: B
 
     [ PASS ]  The function TestComments.testB() is called properly.
 
-  Test Case: testC
+  Test Case: C
 
     [ PASS ]  The function TestComments.testC() is called properly.
 
-  Test Case: testD
+  Test Case: D
 
     [ PASS ]  The function TestComments.testD() is called properly.
 
-  Test Case: testE
+  Test Case: E
 
     [ PASS ]  The function TestComments.testE() is called properly.
 
-  Test Case: testF
+  Test Case: F
 
     [ PASS ]  The function TestComments.testF() is called properly.
 
-  Test Case: testG
+  Test Case: G
 
     [ PASS ]  The function TestComments.testG() is called properly.
 
-  Test Case: testH
+  Test Case: H
 
     [ PASS ]  The function TestComments.testH() is called properly.
 

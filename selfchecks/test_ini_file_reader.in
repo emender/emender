@@ -9,13 +9,13 @@
   Tags:            BasicTest, SmokeTest
   Required tools:  
 
-  Test Case: testIniFile1
+  Test Case: IniFile1
 
     [ PASS ]  Check if returned table contains expected section
     [ PASS ]  Check if returned table contains expected section
     [ PASS ]  Check if INI entry is contained in parsed INI file
 
-  Test Case: testIniFile2
+  Test Case: IniFile2
 
     [ PASS ]  Check if returned table contains expected section
     [ PASS ]  Check the line name1=value1
@@ -23,7 +23,7 @@
     [ PASS ]  Check the line name1=value1
     [ PASS ]  Check the line name2=value2
 
-  Test Case: testIniFile3
+  Test Case: IniFile3
 
     [ PASS ]  Check if returned table contains expected section
               [section1]
@@ -38,7 +38,7 @@
     [ PASS ]  Check the line name1=value1
     [ PASS ]  Check the line name2=value2
 
-  Test Case: testMissingIniFile
+  Test Case: Missing Ini File
 
     [ PASS ]  Read structure must be empty
 

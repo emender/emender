@@ -9,92 +9,92 @@
   Tags:            BasicTest, ModuleTest
   Required tools:  
 
-  Test Case: testFunctionFail
+  Test Case: Function Fail
 
     [ PASS ]  Check if global object with the name 'fail' exists.
     [ PASS ]  Check if object with the name 'fail' has correct type
 
-  Test Case: testFunctionIsEmpty
+  Test Case: Function Is Empty
 
     [ PASS ]  Check if global object with the name 'is_empty' exists.
     [ PASS ]  Check if object with the name 'is_empty' has correct type
 
-  Test Case: testFunctionIsEqual
+  Test Case: Function Is Equal
 
     [ PASS ]  Check if global object with the name 'is_equal' exists.
     [ PASS ]  Check if object with the name 'is_equal' has correct type
 
-  Test Case: testFunctionIsFalse
+  Test Case: Function Is False
 
     [ PASS ]  Check if global object with the name 'is_false' exists.
     [ PASS ]  Check if object with the name 'is_false' has correct type
 
-  Test Case: testFunctionIsLike
+  Test Case: Function Is Like
 
     [ PASS ]  Check if global object with the name 'is_like' exists.
     [ PASS ]  Check if object with the name 'is_like' has correct type
 
-  Test Case: testFunctionIsNil
+  Test Case: Function Is Nil
 
     [ PASS ]  Check if global object with the name 'is_nil' exists.
     [ PASS ]  Check if object with the name 'is_nil' has correct type
 
-  Test Case: testFunctionIsNotEmpty
+  Test Case: Function Is Not Empty
 
     [ PASS ]  Check if global object with the name 'is_not_empty' exists.
     [ PASS ]  Check if object with the name 'is_not_empty' has correct
               type
 
-  Test Case: testFunctionIsNotNil
+  Test Case: Function Is Not Nil
 
     [ PASS ]  Check if global object with the name 'is_not_nil' exists.
     [ PASS ]  Check if object with the name 'is_not_nil' has correct type
 
-  Test Case: testFunctionIsNotType
+  Test Case: Function Is Not Type
 
     [ PASS ]  Check if global object with the name 'is_not_type' exists.
     [ PASS ]  Check if object with the name 'is_not_type' has correct
               type
 
-  Test Case: testFunctionIsTrue
+  Test Case: Function Is True
 
     [ PASS ]  Check if global object with the name 'is_true' exists.
     [ PASS ]  Check if object with the name 'is_true' has correct type
 
-  Test Case: testFunctionIsType
+  Test Case: Function Is Type
 
     [ PASS ]  Check if global object with the name 'is_type' exists.
     [ PASS ]  Check if object with the name 'is_type' has correct type
 
-  Test Case: testFunctionIsUnequal
+  Test Case: Function Is Unequal
 
     [ PASS ]  Check if global object with the name 'is_unequal' exists.
     [ PASS ]  Check if object with the name 'is_unequal' has correct type
 
-  Test Case: testFunctionIsUnlike
+  Test Case: Function Is Unlike
 
     [ PASS ]  Check if global object with the name 'is_unlike' exists.
     [ PASS ]  Check if object with the name 'is_unlike' has correct type
 
-  Test Case: testFunctionPass
+  Test Case: Function Pass
 
     [ PASS ]  Check if global object with the name 'pass' exists.
     [ PASS ]  Check if object with the name 'pass' has correct type
 
-  Test Case: testFunctionReportError
+  Test Case: Function Report Error
 
     [ PASS ]  Check if global object with the name 'report_error' exists.
     [ PASS ]  Check if object with the name 'report_error' has correct
               type
 
-  Test Case: testFunctionReportErrorInTestStructure
+  Test Case: Function Report Error In Test Structure
 
     [ PASS ]  Check if global object with the name
               'report_error_in_test_structure' exists.
     [ PASS ]  Check if object with the name
               'report_error_in_test_structure' has correct type
 
-  Test Case: testFunctionWarn
+  Test Case: Function Warn
 
     [ PASS ]  Check if global object with the name 'warn' exists.
     [ PASS ]  Check if object with the name 'warn' has correct type

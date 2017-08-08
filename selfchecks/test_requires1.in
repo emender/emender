@@ -12,7 +12,7 @@ Checking existence of command 'cp': OK
   Tags:            BasicTest, SmokeTest, RequireMetadataTest
   Required tools:  ls, true, cp
 
-  Test Case: testA
+  Test Case: A
 
     [ PASS ]  TestRequires1.testA()
 

@@ -9,37 +9,37 @@
   Tags:            BasicTest, SmokeTest
   Required tools:  
 
-  Test Case: testAbsolutePath
+  Test Case: Absolute Path
 
     [ PASS ]  The method returns an absolute path: '/usr/local/bin/emend'
 
-  Test Case: testEmptyString
+  Test Case: Empty String
 
     [ PASS ]  The method returns nil: 'nil'
 
-  Test Case: testNil
+  Test Case: Nil
 
     [ PASS ]  The method returns nil: 'nil'
 
-  Test Case: testRelativePath
+  Test Case: Relative Path
 
     [ PASS ]  The method returns a relative path: '~/.local/bin/emend'
 
-  Test Case: testRootDirectory
+  Test Case: Root Directory
 
     [ PASS ]  The method returns the root directory: '/'
 
-  Test Case: testTrailingSlashes
+  Test Case: Trailing Slashes
 
     [ PASS ]  The method strips trailing forward slashes:
               '/usr/local/bin/emend'
 
-  Test Case: testTrailingSpaces
+  Test Case: Trailing Spaces
 
     [ PASS ]  The method strips leading and trailing spaces:
               '/usr/local/bin/emend'
 
-  Test Case: testWhiteSpace
+  Test Case: White Space
 
     [ PASS ]  The method returns nil: 'nil'
 

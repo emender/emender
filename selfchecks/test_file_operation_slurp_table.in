@@ -9,43 +9,43 @@
   Tags:            BasicTest, FileIO
   Required tools:  
 
-  Test Case: testSlurpTable01
+  Test Case: SlurpTable01
 
     [ PASS ]  /etc/passwd file should be readable
 
-  Test Case: testSlurpTable02
+  Test Case: SlurpTable02
 
     [ PASS ]  /etc/group file should be readable
 
-  Test Case: testSlurpTable03
+  Test Case: SlurpTable03
 
     [ PASS ]  /etc/fstab file should be readable
 
-  Test Case: testSlurpTable04
+  Test Case: SlurpTable04
 
     [ PASS ]  /etc/issue file should be readable
 
-  Test Case: testSlurpTable05
+  Test Case: SlurpTable05
 
     [ PASS ]  /foo/bar/baz file can't be readable
 
-  Test Case: testSlurpTable06
+  Test Case: SlurpTable06
 
     [ PASS ]  file can't be readable
 
-  Test Case: testSlurpTable07
+  Test Case: SlurpTable07
 
     [ PASS ]  ? file can't be readable
 
-  Test Case: testSlurpTable08
+  Test Case: SlurpTable08
 
     [ PASS ]  * file can't be readable
 
-  Test Case: testSlurpTable09
+  Test Case: SlurpTable09
 
     [ PASS ]  : file can't be readable
 
-  Test Case: testSlurpTable10
+  Test Case: SlurpTable10
 
     [ PASS ]  /proc/kcore file can't be readable
 

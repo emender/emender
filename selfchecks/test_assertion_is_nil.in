@@ -9,119 +9,119 @@
   Tags:            BasicTest, SmokeTest
   Required tools:  
 
-  Test Case: testNegative01
+  Test Case: Negative01
 
     ../test/TestAssertionIsNil.lua:53: Test structure error: Explanation is a required argument.
 
-  Test Case: testNegative02
+  Test Case: Negative02
 
     ../test/TestAssertionIsNil.lua:62: Test structure error: Explanation is a required argument.
 
-  Test Case: testNegative03
+  Test Case: Negative03
 
     [ FAIL ]  (expected) true is not nil
 
-  Test Case: testNegative04
+  Test Case: Negative04
 
     [ FAIL ]  (expected) false is not nil
 
-  Test Case: testNegative05
+  Test Case: Negative05
 
     [ FAIL ]  (expected) zero is not nil
 
-  Test Case: testNegative06
+  Test Case: Negative06
 
     [ FAIL ]  (expected) string is not nil
 
-  Test Case: testNegative07
+  Test Case: Negative07
 
     [ FAIL ]  (expected) table is not nil
 
-  Test Case: testNegative08
+  Test Case: Negative08
 
     [ FAIL ]  (expected) table is not nil
 
-  Test Case: testNegative09
+  Test Case: Negative09
 
     [ FAIL ]  (expected) nested table is not nil
 
-  Test Case: testNegative10
+  Test Case: Negative10
 
     [ FAIL ]  (expected) hash table is not nil
 
-  Test Case: testNegative11
+  Test Case: Negative11
 
     [ FAIL ]  (expected) function is definitely not nil
 
-  Test Case: testNegative12
+  Test Case: Negative12
 
     [ FAIL ]  (expected) function is definitely not nil
 
-  Test Case: testNegative13
+  Test Case: Negative13
 
     [ FAIL ]  (expected) closure is definitely not nil
 
-  Test Case: testNegative14
+  Test Case: Negative14
 
     [ FAIL ]  (expected) coroutine is definitely not nil
 
-  Test Case: testNegative15
+  Test Case: Negative15
 
     [ FAIL ]  (expected) nested table is not nil
 
-  Test Case: testNegative16
+  Test Case: Negative16
 
     [ FAIL ]  (expected) deeply nested table is not nil
 
-  Test Case: testNegative17
+  Test Case: Negative17
 
     ../test/TestAssertionIsNil.lua:223: Test structure error: Explanation is a required argument.
 
-  Test Case: testNegative18
+  Test Case: Negative18
 
     ../test/TestAssertionIsNil.lua:232: Test structure error: Explanation must be a string.
 
-  Test Case: testNegative19
+  Test Case: Negative19
 
     ../test/TestAssertionIsNil.lua:241: Test structure error: Explanation must be a string.
 
-  Test Case: testNegative20
+  Test Case: Negative20
 
     ../test/TestAssertionIsNil.lua:250: Test structure error: Explanation must be a string.
 
-  Test Case: testNegative21
+  Test Case: Negative21
 
     ../test/TestAssertionIsNil.lua:259: Test structure error: Explanation must be a string.
 
-  Test Case: testNegative22
+  Test Case: Negative22
 
     ../test/TestAssertionIsNil.lua:268: Test structure error: Explanation must be a string.
 
-  Test Case: testNegative23
+  Test Case: Negative23
 
     ../test/TestAssertionIsNil.lua:277: Test structure error: Explanation must be a string.
 
-  Test Case: testNegative24
+  Test Case: Negative24
 
     ../test/TestAssertionIsNil.lua:286: Test structure error: Explanation must be a string.
 
-  Test Case: testNegative25
+  Test Case: Negative25
 
     ../test/TestAssertionIsNil.lua:300: Test structure error: Explanation must be a string.
 
-  Test Case: testNegative26
+  Test Case: Negative26
 
     ../test/TestAssertionIsNil.lua:318: Test structure error: Explanation must be a string.
 
-  Test Case: testNegative27
+  Test Case: Negative27
 
     ../test/TestAssertionIsNil.lua:332: Test structure error: Explanation must be a string.
 
-  Test Case: testPositive01
+  Test Case: Positive01
 
     [ PASS ]  nil is still nil
 
-  Test Case: testPositive02
+  Test Case: Positive02
 
     [ PASS ]
 

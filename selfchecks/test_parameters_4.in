@@ -9,16 +9,16 @@
   Tags:            BasicTest, SmokeTest
   Required tools:  
 
-  Test Case: testParam1
+  Test Case: Param1
 
     [ FAIL ]  Check that param1 is not nil
 
-  Test Case: testParam2
+  Test Case: Param2
 
     [ PASS ]  Check that param2 is not nil
     [ PASS ]  Check that param1=='unknown'
 
-  Test Case: testParameterNamedDictionary
+  Test Case: Parameter Named Dictionary
 
     [ FAIL ]  Check that parameter dictionary is not nil
 

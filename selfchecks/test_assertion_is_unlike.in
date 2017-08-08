@@ -9,467 +9,467 @@
   Tags:            BasicTest
   Required tools:  
 
-  Test Case: testNegative01
+  Test Case: Negative01
 
     ../test/TestAssertionIsUnlike.lua:446: Test structure error: Current value is a required argument.
 
-  Test Case: testNegative02
+  Test Case: Negative02
 
     ../test/TestAssertionIsUnlike.lua:455: Test structure error: Current value is a required argument.
 
-  Test Case: testNegative03
+  Test Case: Negative03
 
     ../test/TestAssertionIsUnlike.lua:464: Test structure error: Pattern is a required argument.
 
-  Test Case: testNegative04
+  Test Case: Negative04
 
     ../test/TestAssertionIsUnlike.lua:473: Test structure error: Pattern is a required argument.
 
-  Test Case: testNegative05
+  Test Case: Negative05
 
     ../src/common/asserts.lua:343: Test structure error: Explanation is a required argument.
 
-  Test Case: testNegative06
+  Test Case: Negative06
 
     ../src/common/asserts.lua:343: Test structure error: Explanation is a required argument.
 
-  Test Case: testNegative07
+  Test Case: Negative07
 
     ../test/TestAssertionIsUnlike.lua:500: Test structure error: Current value is a required argument.
 
-  Test Case: testNegative08
+  Test Case: Negative08
 
     [ FAIL ]  (expected) negative test
 
-  Test Case: testNegative09
+  Test Case: Negative09
 
     [ FAIL ]  (expected) negative test
 
-  Test Case: testNegative10
+  Test Case: Negative10
 
     [ FAIL ]  (expected) negative test
 
-  Test Case: testNegative11
+  Test Case: Negative11
 
     [ FAIL ]  (expected) negative test
 
-  Test Case: testNegative12
+  Test Case: Negative12
 
     [ FAIL ]  (expected) negative test
 
-  Test Case: testNegative13
+  Test Case: Negative13
 
     [ FAIL ]  (expected) negative test
 
-  Test Case: testNegative14
+  Test Case: Negative14
 
     ../test/TestAssertionIsUnlike.lua:562: Test structure error: Current value type must be a string.
 
-  Test Case: testNegative15
+  Test Case: Negative15
 
     ../test/TestAssertionIsUnlike.lua:571: Test structure error: Current value type must be a string.
 
-  Test Case: testNegative16
+  Test Case: Negative16
 
     ../test/TestAssertionIsUnlike.lua:580: Test structure error: Current value type must be a string.
 
-  Test Case: testNegative17
+  Test Case: Negative17
 
     ../test/TestAssertionIsUnlike.lua:596: Test structure error: Current value type must be a string.
 
-  Test Case: testNegative18
+  Test Case: Negative18
 
     ../test/TestAssertionIsUnlike.lua:605: Test structure error: Current value type must be a string.
 
-  Test Case: testNegative19
+  Test Case: Negative19
 
     ../test/TestAssertionIsUnlike.lua:619: Test structure error: Current value type must be a string.
 
-  Test Case: testNegative20
+  Test Case: Negative20
 
     ../test/TestAssertionIsUnlike.lua:637: Test structure error: Current value type must be a string.
 
-  Test Case: testNegative21
+  Test Case: Negative21
 
     ../test/TestAssertionIsUnlike.lua:651: Test structure error: Current value type must be a string.
 
-  Test Case: testPositive01
+  Test Case: Positive01
 
     [ PASS ]  positive test
 
-  Test Case: testPositive02
+  Test Case: Positive02
 
     [ PASS ]  positive test
 
-  Test Case: testPositive03
+  Test Case: Positive03
 
     [ PASS ]  positive test
 
-  Test Case: testPositive04
+  Test Case: Positive04
 
     [ PASS ]  positive test
 
-  Test Case: testPositive05
+  Test Case: Positive05
 
     [ PASS ]  positive test
 
-  Test Case: testPositive06
+  Test Case: Positive06
 
     [ PASS ]  positive test
 
-  Test Case: testPositive07
+  Test Case: Positive07
 
     [ PASS ]  positive test
 
-  Test Case: testPositive08
+  Test Case: Positive08
 
     [ PASS ]  positive test
 
-  Test Case: testPositive09
+  Test Case: Positive09
 
     [ PASS ]  positive test
 
-  Test Case: testPositive10
+  Test Case: Positive10
 
     [ PASS ]  positive test
 
-  Test Case: testPositive11
+  Test Case: Positive11
 
     [ PASS ]  positive test
 
-  Test Case: testPositive12
+  Test Case: Positive12
 
     [ PASS ]  positive test
 
-  Test Case: testPositive13
+  Test Case: Positive13
 
     [ PASS ]  positive test
 
-  Test Case: testPositive14
+  Test Case: Positive14
 
     [ PASS ]  positive test
 
-  Test Case: testPositive15
+  Test Case: Positive15
 
     [ PASS ]  positive test
 
-  Test Case: testPositive16
+  Test Case: Positive16
 
     [ PASS ]  positive test
 
-  Test Case: testPositive17
+  Test Case: Positive17
 
     [ PASS ]  positive test
 
-  Test Case: testPositive18
+  Test Case: Positive18
 
     [ PASS ]  positive test
 
-  Test Case: testPositive19
+  Test Case: Positive19
 
     [ PASS ]  positive test
 
-  Test Case: testPositive20
+  Test Case: Positive20
 
     [ PASS ]  positive test
 
-  Test Case: testPositive21
+  Test Case: Positive21
 
     [ PASS ]  positive test
 
-  Test Case: testPositive22
+  Test Case: Positive22
 
     [ PASS ]  positive test
 
-  Test Case: testPositive23
+  Test Case: Positive23
 
     [ PASS ]  positive test
 
-  Test Case: testPositive24
+  Test Case: Positive24
 
     [ PASS ]  positive test
 
-  Test Case: testPositive25
+  Test Case: Positive25
 
     [ PASS ]  positive test
 
-  Test Case: testPositive26
+  Test Case: Positive26
 
     [ PASS ]  positive test
 
-  Test Case: testPositive27
+  Test Case: Positive27
 
     [ PASS ]  positive test
 
-  Test Case: testPositive28
+  Test Case: Positive28
 
     [ PASS ]  positive test
 
-  Test Case: testPositive29
+  Test Case: Positive29
 
     [ PASS ]  positive test
 
-  Test Case: testPositive30
+  Test Case: Positive30
 
     [ PASS ]  positive test
 
-  Test Case: testPositive31
+  Test Case: Positive31
 
     [ PASS ]  positive test
 
-  Test Case: testPositive32
+  Test Case: Positive32
 
     [ PASS ]  positive test
 
-  Test Case: testPositive33
+  Test Case: Positive33
 
     [ PASS ]  positive test
 
-  Test Case: testPositive34
+  Test Case: Positive34
 
     [ PASS ]  positive test
 
-  Test Case: testPositive35
+  Test Case: Positive35
 
     [ PASS ]  positive test
 
-  Test Case: testPositive36
+  Test Case: Positive36
 
     [ PASS ]  positive test
 
-  Test Case: testPositive37
+  Test Case: Positive37
 
     [ PASS ]  positive test
 
-  Test Case: testPositive38
+  Test Case: Positive38
 
     [ PASS ]  positive test
 
-  Test Case: testPositive39
+  Test Case: Positive39
 
     [ PASS ]  positive test
 
-  Test Case: testPositive40
+  Test Case: Positive40
 
     [ PASS ]  positive test
 
-  Test Case: testPositive41
+  Test Case: Positive41
 
     [ PASS ]  positive test
 
-  Test Case: testPositive42
+  Test Case: Positive42
 
     [ PASS ]  positive test
 
-  Test Case: testPositive43
+  Test Case: Positive43
 
     [ PASS ]  positive test
 
-  Test Case: testPositive44
+  Test Case: Positive44
 
     [ PASS ]  positive test
 
-  Test Case: testPositive45
+  Test Case: Positive45
 
     [ PASS ]  positive test
 
-  Test Case: testPositive46
+  Test Case: Positive46
 
     [ PASS ]  positive test
 
-  Test Case: testPositive47
+  Test Case: Positive47
 
     [ PASS ]  positive test
 
-  Test Case: testPositive48
+  Test Case: Positive48
 
     [ PASS ]  positive test
 
-  Test Case: testPositive49
+  Test Case: Positive49
 
     [ PASS ]  positive test
 
-  Test Case: testPositive50
+  Test Case: Positive50
 
     [ PASS ]  positive test
 
-  Test Case: testPositive51
+  Test Case: Positive51
 
     [ PASS ]  positive test
 
-  Test Case: testPositive52
+  Test Case: Positive52
 
     [ PASS ]  positive test
 
-  Test Case: testPositive53
+  Test Case: Positive53
 
     [ PASS ]  positive test
 
-  Test Case: testPositive54
+  Test Case: Positive54
 
     [ PASS ]  positive test
 
-  Test Case: testPositive55
+  Test Case: Positive55
 
     [ PASS ]  positive test
 
-  Test Case: testPositive56
+  Test Case: Positive56
 
     [ PASS ]  positive test
 
-  Test Case: testPositive57
+  Test Case: Positive57
 
     [ PASS ]  positive test
 
-  Test Case: testPositive58
+  Test Case: Positive58
 
     [ PASS ]  positive test
 
-  Test Case: testPositive59
+  Test Case: Positive59
 
     [ PASS ]  positive test
 
-  Test Case: testPositive60
+  Test Case: Positive60
 
     [ PASS ]  positive test
 
-  Test Case: testPositive61
+  Test Case: Positive61
 
     [ PASS ]  positive test
 
-  Test Case: testPositive62
+  Test Case: Positive62
 
     [ PASS ]  positive test
 
-  Test Case: testPositive63
+  Test Case: Positive63
 
     [ PASS ]  positive test
 
-  Test Case: testPositive64
+  Test Case: Positive64
 
     [ PASS ]  positive test
 
-  Test Case: testPositive65
+  Test Case: Positive65
 
     [ PASS ]  positive test
 
-  Test Case: testPositive66
+  Test Case: Positive66
 
     [ PASS ]  positive test
 
-  Test Case: testPositive67
+  Test Case: Positive67
 
     [ PASS ]  positive test
 
-  Test Case: testPositive68
+  Test Case: Positive68
 
     [ PASS ]  positive test
 
-  Test Case: testPositive69
+  Test Case: Positive69
 
     [ PASS ]  positive test
 
-  Test Case: testPositive70
+  Test Case: Positive70
 
     [ PASS ]  positive test
 
-  Test Case: testPositive71
+  Test Case: Positive71
 
     [ PASS ]  positive test
 
-  Test Case: testPositive72
+  Test Case: Positive72
 
     [ PASS ]  positive test
 
-  Test Case: testPositive73
+  Test Case: Positive73
 
     [ PASS ]  positive test
 
-  Test Case: testPositive74
+  Test Case: Positive74
 
     [ PASS ]  positive test
 
-  Test Case: testPositive75
+  Test Case: Positive75
 
     [ PASS ]  positive test
 
-  Test Case: testPositive76
+  Test Case: Positive76
 
     [ PASS ]  positive test
 
-  Test Case: testPositive77
+  Test Case: Positive77
 
     [ PASS ]  positive test
 
-  Test Case: testPositive78
+  Test Case: Positive78
 
     [ PASS ]  positive test
 
-  Test Case: testPositive79
+  Test Case: Positive79
 
     [ PASS ]  positive test
 
-  Test Case: testPositive80
+  Test Case: Positive80
 
     [ PASS ]  positive test
 
-  Test Case: testPositive81
+  Test Case: Positive81
 
     [ PASS ]  positive test
 
-  Test Case: testPositive82
+  Test Case: Positive82
 
     [ PASS ]  positive test
 
-  Test Case: testPositive83
+  Test Case: Positive83
 
     [ PASS ]  positive test
 
-  Test Case: testPositive84
+  Test Case: Positive84
 
     [ PASS ]  positive test
 
-  Test Case: testPositive85
+  Test Case: Positive85
 
     [ PASS ]  positive test
 
-  Test Case: testPositive86
+  Test Case: Positive86
 
     [ PASS ]  positive test
 
-  Test Case: testPositive87
+  Test Case: Positive87
 
     [ PASS ]  positive test
 
-  Test Case: testPositive88
+  Test Case: Positive88
 
     [ PASS ]  positive test
 
-  Test Case: testPositive89
+  Test Case: Positive89
 
     [ PASS ]  positive test
 
-  Test Case: testPositive90
+  Test Case: Positive90
 
     [ PASS ]  positive test
 
-  Test Case: testPositive91
+  Test Case: Positive91
 
     [ PASS ]  positive test
 
-  Test Case: testPositive92
+  Test Case: Positive92
 
     [ PASS ]  positive test
 
-  Test Case: testPositive93
+  Test Case: Positive93
 
     [ PASS ]  positive test
 
-  Test Case: testPositive94
+  Test Case: Positive94
 
     [ PASS ]  positive test
 
-  Test Case: testPositive95
+  Test Case: Positive95
 
     [ PASS ]  positive test
 

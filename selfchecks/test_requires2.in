@@ -9,7 +9,7 @@
   Tags:            BasicTest, SmokeTest, RequireMetadataTest
   Required tools:  
 
-  Test Case: testA
+  Test Case: A
 
     [ PASS ]  TestRequires2.testA()
 

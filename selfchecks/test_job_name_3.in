@@ -9,7 +9,7 @@
   Tags:            BasicTest, SmokeTest
   Required tools:  
 
-  Test Case: testJobName
+  Test Case: Job Name
 
     [ PASS ]  Job name: 42
 

@@ -166,7 +166,7 @@
                 <div class="col-xs-12 col-sm-6 col-lg-4 tab-body-cell">
                   <div class="panel panel-default">
                     <div class="panel-heading">
-                      <h5><span class="bullet pass" title="Test case passed">&bull;</span> CallOtherFunction</h5>
+                      <h5><span class="bullet pass" title="Test case passed">&bull;</span> Call Other Function</h5>
                       <div>(not commented)</div>
                       <div class="progress" title="Success: 100%; Info: 0%; Failure: 0%">
                         <div class="progress-bar progress-bar-success" style="width: 100%">
@@ -201,7 +201,7 @@
                 <div class="col-xs-12 col-sm-6 col-lg-4 tab-body-cell">
                   <div class="panel panel-default">
                     <div class="panel-heading">
-                      <h5><span class="bullet pass" title="Test case passed">&bull;</span> ReadLocalValue</h5>
+                      <h5><span class="bullet pass" title="Test case passed">&bull;</span> Read Local Value</h5>
                       <div>(not commented)</div>
                       <div class="progress" title="Success: 100%; Info: 0%; Failure: 0%">
                         <div class="progress-bar progress-bar-success" style="width: 100%">
@@ -235,7 +235,7 @@
                 <div class="col-xs-12 col-sm-6 col-lg-4 tab-body-cell">
                   <div class="panel panel-default">
                     <div class="panel-heading">
-                      <h5><span class="bullet pass" title="Test case passed">&bull;</span> ReadWriteLocalValue</h5>
+                      <h5><span class="bullet pass" title="Test case passed">&bull;</span> Read Write Local Value</h5>
                       <div>(not commented)</div>
                       <div class="progress" title="Success: 100%; Info: 0%; Failure: 0%">
                         <div class="progress-bar progress-bar-success" style="width: 100%">

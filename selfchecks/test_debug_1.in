@@ -9,14 +9,14 @@
   Tags:            BasicTest, SmokeTest
   Required tools:  
 
-  Test Case: test1
+  Test Case: 1
 
 
-  Test Case: test2
+  Test Case: 2
 
     [ PASS ]  OK
 
-  Test Case: test3
+  Test Case: 3
 
     [ FAIL ]  Error
 

@@ -10,7 +10,7 @@
   Tags:            BasicTest, SmokeTest
   Required tools:  
 
-  Test Case: testGitRepo
+  Test Case: Git Repo
 
     [ FAIL ]  GIT repo is not set!
 

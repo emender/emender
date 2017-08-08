@@ -10,7 +10,7 @@
   Tags:            BasicTest, SmokeTest
   Required tools:  
 
-  Test Case: testGitBranch
+  Test Case: Git Branch
 
     [ PASS ]  GIT branch: 42
 
