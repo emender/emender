@@ -37,7 +37,7 @@ function checkForAllTools(testSuite, testSuiteName)
     -- if the test does not exist, print error message and skip
     -- all other processing
     if not test then
-        print("Test structure error: test are not loaded properly")
+        print("Test structure error: test " .. testSuiteName .. " are not loaded properly")
         return false
     end
 
