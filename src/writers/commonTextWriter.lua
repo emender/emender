@@ -213,7 +213,7 @@ function writeTestSuiteEnd(fout, testSuite, colorOutput)
 end
 
 function writeCaseStart(fout, testCase, colorOutput)
-    local name = testCase.name
+    local name = testCase.displayName
 
     if colorOutput then
         local colorReset = _G["logger"].codes.reset
