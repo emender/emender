@@ -612,6 +612,25 @@ end
 
 
 --
+-- Convert test suite name to displayable format by adding spaces
+-- between words
+--
+function displayName(name)
+    if name:startsWith("test") then
+        name = name:sub(1+string.len("test"))
+    end
+    -- Replace 'CamelCaseTestName' to 'Camel Case Test Name'
+    -- It should work only for tests with letters, not digits!
+    if name:find("%A+") then  -- any non-letter?
+        return name
+    else
+        return name:gsub("[A-Z][a-z]+", "%1 "):trim()
+    end
+end
+
+
+
+--
 -- Load and run one selected test.
 -- TODO: this function really needs to be refactored!
 --
@@ -620,6 +639,7 @@ function core.runTest(scriptDirectory, filename, verboseOperation, testOptions, 
     if testSuiteName then
         local testSuite = {}
         testSuite.name = testSuiteName
+        testSuite.displayName = displayName(testSuiteName)
         core.checkTestNameShadowing(testSuiteName)
 
         loadTestScript(scriptDirectory, filename, verboseOperation, testSuiteName)
@@ -667,6 +687,7 @@ function core.runTest(scriptDirectory, filename, verboseOperation, testOptions, 
                 for i,testFunctionName in ipairs(testFunctionNames) do
                     local method = {}
                     method.name = testFunctionName
+                    method.displayName = displayName(testFunctionName)
                     method.docString = docStrings[testFunctionName] or ""
 
                     core.messages = {}
