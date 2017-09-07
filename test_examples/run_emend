@@ -280,6 +280,16 @@ function convert_asciidoc_to_docbook {
 
 
 
+function list_of_included_files {
+    msg_test_step "generating list of included files"
+    pushd $1 > /dev/null
+    asciidoctor -I ~/asciidoctor -r 'echo_include_processor' "$2.adoc"
+    asciidoctor -I ~/asciidoctor -r 'echo_include_processor' "$2.adoc" > "$3"/results.includes
+    popd > /dev/null
+    msg_ok "done"
+}
+
+
 function update_docbook_repo {
     msg_test_step "update_docbook_repo"
     if [ "$1" == "./" ]
@@ -316,9 +326,13 @@ update_content_directory
 read_book_format $MD_CONTENT_DIRECTORY
 print_info $@
 
+rm -f results.*
+
 if [ $BOOK_FORMAT == "asciidoc" ]
 then
+    echo "asciidoc" > results.format
     convert_asciidoc_to_docbook "${MD_CONTENT_DIRECTORY}" master "`pwd`"
+    list_of_included_files "${MD_CONTENT_DIRECTORY}" master "`pwd`"
     add_common_content
 fi
 
@@ -329,8 +343,6 @@ fi
 
 check_basic_directory_structure
 
-
-rm -f results.*
 
 #TESTS=TestWritingStyle.lua
 #TESTS=CustomerPortalRequirements.lua
