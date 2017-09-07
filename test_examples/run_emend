@@ -328,16 +328,28 @@ print_info $@
 
 rm -f results.*
 
+echo "`pwd`" > results.cwd
+echo ${MD_CONTENT_DIRECTORY} > results.master
+
 if [ $BOOK_FORMAT == "asciidoc" ]
 then
     echo "asciidoc" > results.format
     convert_asciidoc_to_docbook "${MD_CONTENT_DIRECTORY}" master "`pwd`"
     list_of_included_files "${MD_CONTENT_DIRECTORY}" master "`pwd`"
     add_common_content
+else
+    echo "docbook" > results.format
 fi
 
 if [ $BOOK_FORMAT == "docbook" ]
 then
+    if [ -d "en-US/Common_Content" ]
+    then
+        msg_ok "Common_Content directory exists"
+    else
+        msg_info "Common_Content directory does not exist, creating"
+        add_common_content
+    fi
     update_docbook_repo "$MD_CONTENT_DIRECTORY"
 fi
 
