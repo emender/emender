@@ -110,9 +110,9 @@ function writeLeftTab(fout, results, passedTests, failedTests)
         end
         fout:write("              <a data-toggle=\"tab\" href=\"#test" .. i .. "\">\n")
         if failed then
-            fout:write("                <h4><span class=\"nowrap\"><span class=\"bullet fail\" title=\"Test failed\">&bull;</span> " .. testSuite.name .. "</span></span></h4>\n")
+            fout:write("                <h4><span class=\"nowrap\"><span class=\"bullet fail\" title=\"Test failed\">&bull;</span> " .. testSuite.displayName .. "</span></span></h4>\n")
         else
-            fout:write("                <h4><span class=\"nowrap\"><span class=\"bullet pass\" title=\"Test passed\">&bull;</span> " .. testSuite.name .. "</span></span></h4>\n")
+            fout:write("                <h4><span class=\"nowrap\"><span class=\"bullet pass\" title=\"Test passed\">&bull;</span> " .. testSuite.displayName .. "</span></span></h4>\n")
         end
         fout:write("                <p>" .. testSuite.description .. "</p>\n")
         fout:write("              </a>\n")
