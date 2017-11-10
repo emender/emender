@@ -107,6 +107,7 @@ function setup {
     msg_test_step "setup"
     export TERM=linux
     export JAVA_HOME=/usr/lib/jvm/java-1.7.0-openjdk/
+    msg_info "Running on " `hostname`
     msg_info "TERM set to " $TERM
     msg_info "JAVA_HOME set to " $JAVA_HOME
 }
