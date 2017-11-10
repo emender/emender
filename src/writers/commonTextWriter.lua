@@ -165,7 +165,7 @@ function determineTestResult(passed, failed, infos, errors)
 end
 
 function writeTestSuiteStart(fout, testSuite, colorOutput)
-    local name = testSuite.name
+    local name = testSuite.displayName
     local description = testSuite.description
     local authors = testSuite.authors
     local emails = testSuite.emails
