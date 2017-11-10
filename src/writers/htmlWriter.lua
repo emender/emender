@@ -313,7 +313,7 @@ function htmlWriter.writeSuiteStart(fout, testSuite)
     fout:write([[
               <div class="row">
                 <div class="col-md-12 summary">
-                  <h4>Summary for ]] .. testSuite.name .. [[</h4>
+                  <h4>Summary for ]] .. testSuite.displayName .. [[</h4>
                   <div class="col-md-8 summary-bars">
                     <table>
                       <tr>
@@ -367,7 +367,7 @@ function htmlWriter.writeSuiteStart(fout, testSuite)
                   </div><!--metadata-->
                 </div><!--summary-->
               </div><!--row-->
-              <h4>Test Results for ]] .. testSuite.name .. [[</h4>
+              <h4>Test Results for ]] .. testSuite.displayName .. [[</h4>
               <div class="row">
 ]])
 
