@@ -61,7 +61,7 @@ install: $(MANS)
 	@echo "Installing manual pages:"
 	$(call install_mans,$(MANS),$(mandir),644)
 	@echo "Installing the executable file:"
-	printf "#!/bin/bash\nlua $(datadir)/emend \"\$$@\"" > $(bindir)/emend && chmod 755 $(bindir)/emend
+	printf "#!/bin/sh\nlua5.4 $(datadir)/emend \"\$$@\"" > $(bindir)/emend && chmod 755 $(bindir)/emend
 
 .PHONY: uninstall
 uninstall:
