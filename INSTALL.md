@@ -51,3 +51,26 @@ th value of the "prefix" variable on the command line. For example, to
 uninstall Emender from the ~/.local/ directory, type:
 
     make prefix=$HOME/.local uninstall
+
+Container
+---------
+
+You can run Emender as a container. You can either build your own container
+based on the `Containerfile` configuration or use a prebuilt container
+available from Quay.io. The container bundles all necessary dependencies.
+
+The following instructions assume that the Podman tool is available on your
+system. If you use Docker instead of Podman, replace `podman` with `docker`
+in the commands.
+
+* Run a prebuilt container:
+
+    ```
+    $ podman run -it -v .:/mnt:Z quay.io/msuchane/emender:latest emend
+    ```
+
+* Build the container locally:
+
+    ```
+    $ podman build -f Containerfile --tag=emender
+    ```
