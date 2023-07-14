@@ -15,12 +15,14 @@ RUN make install
 
 # Store the installed emender program in a separate container without build tools
 FROM alpine:latest
+RUN apk update
+RUN apk add lua5.4 libxml2-utils xmlstarlet ncurses curl
 COPY --from=builder /usr/local/bin/emend /usr/local/bin/emend
 COPY --from=builder /usr/local/share/doc/emender /usr/local/share/doc/emender
 COPY --from=builder /usr/local/share/emender /usr/local/share/emender
 COPY --from=builder /usr/local/share/man /usr/local/share/man
-RUN apk update
-RUN apk add lua5.4 libxml2-utils xmlstarlet ncurses curl
+# Alpine doesn't have a generic lua binary. Specify the version
+RUN sed -i s/lua/lua5.4/ /usr/local/bin/emend
 # When running this container interactively, use `-v .:/mnt:Z`
 # to mount the current directory in the host to the container working dir.
 VOLUME ["/mnt"]
