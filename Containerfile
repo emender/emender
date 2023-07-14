@@ -23,7 +23,7 @@ RUN cp slaxdom.lua /usr/local/share/lua/5.4/slaxdom.lua
 # Store the installed emender program in a separate container without build tools
 FROM alpine:latest
 RUN apk update
-RUN apk add lua5.4 libxml2-utils xmlstarlet ncurses curl
+RUN apk add lua5.4 libxml2-utils xmlstarlet sqlite ncurses curl
 COPY --from=builder /usr/local/bin/emend /usr/local/bin/emend
 COPY --from=builder /usr/local/share/doc/emender /usr/local/share/doc/emender
 COPY --from=builder /usr/local/share/emender /usr/local/share/emender
